@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review — Assessment Stress Test (internal)</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+  <link rel="stylesheet" href="/stress-test/ast.css">
+</head>
+<body>
+  <header class="ast-header">
+    <div class="ast-header__inner">
+      <a class="ast-brand" href="/stress-test/review/"><span class="ast-brand__mark">S</span><span class="ast-brand__text"><strong>Stress Test · Review</strong><span>Internal · Dalia only</span></span></a>
+      <div class="ast-header__right"><a href="#" id="nav-list">Queue</a> &nbsp;·&nbsp; <a href="#" id="nav-stats">Numbers</a> &nbsp;·&nbsp; <a href="#" id="nav-settings">Settings</a> &nbsp;·&nbsp; <a href="#" id="logout">Sign out</a></div>
+    </div>
+  </header>
+
+  <main class="ast-main ast-main--wide">
+    <div id="login" hidden>
+      <h1 class="ast-h2">Review token</h1>
+      <p class="ast-p ast-muted ast-small" style="margin-top:8px">Stored only in this browser. The server compares a hash.</p>
+      <div class="ast-field"><input class="ast-input" id="tok" type="password" placeholder="ast_…"></div>
+      <div class="ast-actions"><button class="tsa-btn tsa-btn--primary" id="tokgo">Open review</button></div>
+      <p class="ast-error" id="tokerr" hidden></p>
+    </div>
+
+    <div id="list" hidden>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px">
+        <h1 class="ast-h2">Queue</h1>
+        <span class="ast-note" id="list-note"></span>
+      </div>
+      <table class="ast-table" id="tbl"><thead><tr><th>When</th><th>Teacher</th><th>Subject · grade</th><th>Status</th><th>Purchase</th><th>Source</th><th>Finding</th><th>Channel</th></tr></thead><tbody></tbody></table>
+    </div>
+
+    <div id="stats" hidden>
+      <h1 class="ast-h2">Numbers</h1>
+      <p class="ast-p ast-muted ast-small" style="margin-top:8px">The one that matters: free finding viewed → paid. Everything else is context.</p>
+      <div class="ast-stats" id="stat-cards"></div>
+      <h2 class="ast-h3" style="margin-top:32px">Which finding types teachers value</h2>
+      <table class="ast-table" id="ftbl"><thead><tr><th>Type</th><th>n</th><th>Surprised</th><th>Would change</th><th>Would use again</th><th>Paid</th></tr></thead><tbody></tbody></table>
+      <h2 class="ast-h3" style="margin-top:32px">Events</h2>
+      <table class="ast-table" id="etbl"><thead><tr><th>Event</th><th>Count</th><th>Sessions</th></tr></thead><tbody></tbody></table>
+    </div>
+
+    <div id="settings" hidden>
+      <h1 class="ast-h2">Settings</h1>
+      <div class="ast-field"><label class="ast-label" for="s-stripe">Stripe Payment Link for the $49 Stress Test<small>Leave empty to use the “send me the payment link” request flow instead. Create one in Stripe → Payment Links: one-time, $49, name “Assessment Stress Test — complete”. The page appends client_reference_id=&lt;submission id&gt; so you can match payments.</small></label><input class="ast-input" id="s-stripe" placeholder="https://buy.stripe.com/…"></div>
+      <div class="ast-field"><label class="ast-label" for="s-model">Model for machine drafts<small>Default claude-sonnet-4-5. Change if the API rejects it.</small></label><input class="ast-input" id="s-model" placeholder="claude-sonnet-4-5"></div>
+      <div class="ast-field"><label class="ast-label">Anthropic API key<small>Best: set the ANTHROPIC_API_KEY secret in Supabase → Edge Functions → Secrets. Fallback: paste here (stored service-role-only in ast_settings). Current source: <strong id="s-keysrc">…</strong></small></label><input class="ast-input" id="s-key" type="password" placeholder="sk-ant-… (leave blank to keep)"></div>
+      <label class="ast-check"><input type="checkbox" id="s-auto"> <span><strong>Auto-release free findings without review.</strong> Off by default. Turn on only after you trust the drafts.</span></label>
+      <div class="ast-actions"><button class="tsa-btn tsa-btn--primary" id="s-save">Save settings</button><span class="ast-note" id="s-msg"></span></div>
+    </div>
+
+    <div id="detail" hidden>
+      <p><a href="#" id="back">← Queue</a></p>
+      <div class="ast-review">
+        <div>
+          <div class="ast-panel">
+            <span class="ast-mono">Teacher & context</span>
+            <dl class="ast-kv" id="d-kv" style="margin-top:12px"></dl>
+          </div>
+          <div class="ast-panel">
+            <span class="ast-mono">The assessment</span>
+            <p id="d-file" style="margin-top:8px"></p>
+            <div class="ast-pre" id="d-text" style="margin-top:8px"></div>
+          </div>
+          <div class="ast-panel">
+            <span class="ast-mono">Status & actions</span>
+            <dl class="ast-kv" id="d-status" style="margin-top:12px"></dl>
+            <div class="ast-actions" id="d-actions"></div>
+            <p class="ast-note" id="d-msg" style="margin-top:8px"></p>
+          </div>
+          <div class="ast-panel">
+            <span class="ast-mono">Purchase</span>
+            <dl class="ast-kv" id="d-purchase" style="margin-top:12px"></dl>
+            <div class="ast-field"><input class="ast-input" id="d-payref" placeholder="Stripe payment id / note"></div>
+            <div class="ast-actions"><button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="d-paid">Mark paid</button><button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="d-refund">Mark refunded</button></div>
+          </div>
+          <div class="ast-panel">
+            <span class="ast-mono">Teacher feedback</span>
+            <dl class="ast-kv" id="d-fb" style="margin-top:12px"></dl>
+          </div>
+        </div>
+        <div>
+          <div class="ast-panel">
+            <span class="ast-mono">Machine draft</span>
+            <p class="ast-note" id="d-draftmeta" style="margin-top:6px"></p>
+            <div id="d-draft-summary" style="margin-top:12px"></div>
+            <div id="d-findings"></div>
+            <div class="ast-actions">
+              <button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="d-redraft">Re-run machine draft</button>
+              <button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="d-addfinding">Add a finding by hand</button>
+              <button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="d-save">Save edits</button>
+            </div>
+          </div>
+          <div class="ast-panel">
+            <span class="ast-mono">Reviewer notes (private)</span>
+            <textarea class="ast-textarea" id="d-notes" style="margin-top:8px;min-height:80px"></textarea>
+          </div>
+          <div class="ast-panel">
+            <span class="ast-mono">Complete Stress Test (paid report)</span>
+            <p class="ast-note" style="margin-top:6px">HTML or plain paragraphs. Rendered on the teacher’s result page inside the paper document. Use &lt;h3&gt; for item headings.</p>
+            <textarea class="ast-textarea ast-textarea--tall" id="d-full" style="margin-top:8px"></textarea>
+            <div class="ast-actions"><button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="d-fullsave">Save draft</button><button class="tsa-btn tsa-btn--primary tsa-btn--sm" id="d-fulldeliver">Publish complete report to teacher</button></div>
+          </div>
+          <div class="ast-panel">
+            <span class="ast-mono">Preview (what the teacher will see)</span>
+            <div id="d-preview"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/stress-test/ast.js"></script>
+  <script>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      var esc = AST.esc;
+      var TOKEN = null; try { TOKEN = localStorage.getItem("ast_admin"); } catch (_) {}
+      var views = ["login", "list", "stats", "settings", "detail"];
+      function show(v) { views.forEach(function (k) { $(k).hidden = k !== v; }); }
+      function api(body) {
+        return fetch(AST.FN + "/ast-admin", { method: "POST", headers: { "content-type": "application/json", "x-ast-admin": TOKEN || "" }, body: JSON.stringify(body) })
+          .then(async function (r) { var j = await r.json().catch(function () { return {}; }); if (r.status === 401) { throw new Error("unauthorized"); } if (!r.ok) throw new Error(j.error || r.status); return j; });
+      }
+      var FIELDS = ["item_ref", "item_quote", "finding_type", "strength", "trying_to_measure", "actually_evidences", "why_it_matters", "stronger_version", "what_did_not_change", "why_better_evidence", "teacher_cost"];
+      var TYPES = Object.keys(AST.TYPE_LABEL);
+
+      // ── login ──
+      $("tokgo").onclick = function () { TOKEN = $("tok").value.trim(); try { localStorage.setItem("ast_admin", TOKEN); } catch (_) {} loadList(); };
+      $("logout").onclick = function (e) { e.preventDefault(); TOKEN = null; try { localStorage.removeItem("ast_admin"); } catch (_) {} show("login"); };
+      $("nav-list").onclick = function (e) { e.preventDefault(); loadList(); };
+      $("nav-stats").onclick = function (e) { e.preventDefault(); loadStats(); };
+      $("nav-settings").onclick = function (e) { e.preventDefault(); loadSettings(); };
+      $("back").onclick = function (e) { e.preventDefault(); loadList(); };
+
+      function fail(e) { if (String(e.message) === "unauthorized") { show("login"); $("tokerr").textContent = "That token was not accepted."; $("tokerr").hidden = false; } else { alert("Error: " + e.message); } }
+
+      // ── list ──
+      function loadList() {
+        api({ action: "list" }).then(function (j) {
+          var tb = $("tbl").querySelector("tbody"); tb.innerHTML = "";
+          var pending = 0;
+          j.rows.forEach(function (r) {
+            var needs = ["received", "draft_ready", "draft_failed", "drafting", "approved"].indexOf(r.status) > -1;
+            if (needs) pending++;
+            var tr = document.createElement("tr");
+            tr.innerHTML = "<td>" + esc(AST.fmtDate(r.created_at)) + '</td><td><a data-id="' + r.id + '">' + esc(r.teacher_name || r.email) + "</a><br><span class='ast-note'>" + esc(r.email) + "</span></td><td>" + esc(r.subject) + " · " + esc(r.grade) + "</td><td><span class='ast-status " + (needs ? "ast-status--warn" : r.status === "delivered" ? "ast-status--live" : "") + "'>" + esc(r.status) + (r.full_delivered_at ? " · full sent" : "") + (r.result_viewed_at ? " · viewed" : "") + (r.feedback_at ? " · feedback" : "") + "</span></td><td><span class='ast-status " + (r.purchase_status === "paid" ? "ast-status--live" : r.purchase_status === "requested" ? "ast-status--warn" : "") + "'>" + esc(r.purchase_status) + (r.purchase_for ? " · " + r.purchase_for : "") + "</span></td><td>" + esc(r.source_kind) + " · " + esc(r.copyright_bucket) + "</td><td>" + esc(AST.TYPE_LABEL[r.finding_type] || "") + "</td><td>" + esc(r.channel || "") + "</td>";
+            tr.querySelector("a").onclick = function (e) { e.preventDefault(); openDetail(r.id); };
+            tb.appendChild(tr);
+          });
+          $("list-note").textContent = j.rows.length + " submissions · " + pending + " need you";
+          show("list");
+        }).catch(fail);
+      }
+
+      // ── stats ──
+      function loadStats() {
+        api({ action: "stats" }).then(function (j) {
+          var f = j.funnel || {}, c = j.conversion || {};
+          var cards = [["Landing sessions", f.landing_sessions], ["Submit page", f.submit_page_sessions], ["Submissions", f.submissions], ["Findings delivered", f.free_findings_delivered], ["Findings viewed", f.free_findings_viewed], ["Purchase intent", f.purchase_intent], ["Requested link", f.purchase_requested], ["Paid", f.paid], ["Full reports sent", f.full_reports_delivered], ["Would use again", f.would_use_again], ["Viewed → paid %", c.pct_viewed_to_paid == null ? "—" : c.pct_viewed_to_paid + "%"], ["Viewed → intent %", c.pct_viewed_to_intent == null ? "—" : c.pct_viewed_to_intent + "%"]];
+          $("stat-cards").innerHTML = cards.map(function (x) { return '<div class="ast-stat"><b>' + esc(x[1] == null ? "0" : x[1]) + "</b><span>" + esc(x[0]) + "</span></div>"; }).join("");
+          $("ftbl").querySelector("tbody").innerHTML = (j.finding_value || []).map(function (r) { return "<tr><td>" + esc(AST.TYPE_LABEL[r.finding_type] || r.finding_type) + "</td><td>" + r.n + "</td><td>" + r.surprised + "</td><td>" + r.would_change + "</td><td>" + r.would_use_again + "</td><td>" + r.paid + "</td></tr>"; }).join("") || "<tr><td colspan=6 class='ast-note'>Nothing delivered yet.</td></tr>";
+          $("etbl").querySelector("tbody").innerHTML = (j.events || []).map(function (r) { return "<tr><td>" + esc(r.event) + "</td><td>" + r.n + "</td><td>" + r.sessions + "</td></tr>"; }).join("") || "<tr><td colspan=3 class='ast-note'>No events yet.</td></tr>";
+          show("stats");
+        }).catch(fail);
+      }
+
+      // ── settings ──
+      function loadSettings() {
+        api({ action: "settings_get" }).then(function (s) {
+          $("s-stripe").value = s.stripe_payment_link || ""; $("s-model").value = s.anthropic_model || ""; $("s-auto").checked = s.auto_release_free_finding === "true";
+          $("s-keysrc").textContent = s.anthropic_key_source === "secret" ? "edge-function secret" : s.anthropic_key_source === "settings" ? "pasted key (ast_settings)" : "MISSING — drafts will fail until set";
+          $("s-key").value = ""; show("settings");
+        }).catch(fail);
+      }
+      $("s-save").onclick = function () {
+        var body = { action: "settings_set", stripe_payment_link: $("s-stripe").value, anthropic_model: $("s-model").value, auto_release_free_finding: $("s-auto").checked ? "true" : "false" };
+        if ($("s-key").value.trim()) body.anthropic_api_key = $("s-key").value.trim();
+        api(body).then(function () { $("s-msg").textContent = "Saved."; loadSettings(); }).catch(fail);
+      };
+
+      // ── detail ──
+      var cur = null, curId = null;
+      function openDetail(id) {
+        api({ action: "get", id: id }).then(function (j) { cur = j; curId = id; renderDetail(); show("detail"); window.scrollTo(0, 0); }).catch(fail);
+      }
+      function kv(pairs) { return pairs.filter(function (p) { return p[1] != null && p[1] !== ""; }).map(function (p) { return "<dt>" + esc(p[0]) + "</dt><dd>" + esc(p[1]) + "</dd>"; }).join(""); }
+      function resultLink() { return location.origin + "/stress-test/result/?t=" + cur.sub.access_token; }
+      function mailto(kind) {
+        var s = cur.sub, name = s.teacher_name ? s.teacher_name.split(" ")[0] : "there";
+        var subj, body;
+        if (kind === "free") {
+          subj = "Your Assessment Stress Test finding is ready";
+          body = "Hi " + name + ",\n\nI read your " + s.grade + " " + s.subject.toLowerCase() + " assessment. Your free finding is here:\n\n" + resultLink() + "\n\nIt covers one item — the one I thought you were least likely to have noticed. If I misread what you were trying to measure, tell me and I'll redo it.\n\nDalia\nThe Sovereign Academy · thesovereign.academy/stress-test";
+        } else if (kind === "paylink") {
+          subj = "Payment link for your complete Assessment Stress Test";
+          body = "Hi " + name + ",\n\nThank you for asking for the complete Stress Test of your " + s.subject.toLowerCase() + " assessment. Here is the payment link ($49, one-time):\n\n[PASTE STRIPE LINK]?client_reference_id=" + s.id + "\n\nThe complete report will appear on your result page within three school days of payment:\n" + resultLink() + "\n\nDalia";
+        } else {
+          subj = "Your complete Assessment Stress Test is ready";
+          body = "Hi " + name + ",\n\nYour complete Stress Test is now on your result page, under the free finding:\n\n" + resultLink() + "\n\nI'd value two minutes of your honest feedback at the bottom of that page.\n\nDalia";
+        }
+        return "mailto:" + encodeURIComponent(s.email) + "?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
+      }
+      function renderDetail() {
+        var s = cur.sub;
+        $("d-kv").innerHTML = kv([["Name", s.teacher_name], ["Email", s.email], ["Subject", s.subject], ["Grade", s.grade], ["Intended", s.intended_understanding], ["Least confident", s.least_confident], ["Their worry", s.worry_text], ["Origin", s.copyright_bucket], ["Channel", (s.channel || "") + (s.cohort ? " · " + s.cohort : "")], ["Submitted", new Date(s.created_at).toLocaleString()]]);
+        $("d-file").innerHTML = cur.file_url ? '<a href="' + esc(cur.file_url) + '" target="_blank" rel="noopener">Open uploaded ' + esc(s.source_kind) + " (" + Math.round((s.file_bytes || 0) / 1024) + " KB, link valid 15 min)</a>" : "<span class='ast-note'>Pasted text</span>";
+        $("d-text").textContent = s.assessment_text || "(no pasted text)";
+        $("d-status").innerHTML = kv([["Status", s.status], ["Drafted", s.drafted_at && new Date(s.drafted_at).toLocaleString()], ["Delivered", s.delivered_at && new Date(s.delivered_at).toLocaleString()], ["Viewed", s.result_viewed_at && new Date(s.result_viewed_at).toLocaleString()], ["Result link", resultLink()], ["Draft error", s.draft_error]]);
+        var acts = $("d-actions"); acts.innerHTML = "";
+        function btn(label, cls, fn) { var b = document.createElement("button"); b.className = "tsa-btn tsa-btn--" + cls + " tsa-btn--sm"; b.textContent = label; b.onclick = fn; acts.appendChild(b); return b; }
+        function alink(label, href) { var a = document.createElement("a"); a.className = "tsa-btn tsa-btn--secondary tsa-btn--sm"; a.textContent = label; a.href = href; acts.appendChild(a); }
+        if (s.status !== "delivered" && s.status !== "withdrawn") btn("Approve & release free finding", "primary", approveDeliver);
+        if (s.status === "delivered") { alink("Email teacher: finding ready", mailto("free")); btn("Un-release (back to draft)", "secondary", function () { api({ action: "status", id: curId, status: "draft_ready" }).then(function () { openDetail(curId); }); }); }
+        if (s.purchase_status === "requested") alink("Email teacher: payment link", mailto("paylink"));
+        if (s.full_delivered_at) alink("Email teacher: full report ready", mailto("full"));
+        if (s.status !== "withdrawn") btn("Withdraw & delete material", "secondary", function () { if (confirm("Delete the assessment text/file and analysis for this teacher? Keeps only a stub row for counting. This cannot be undone.")) api({ action: "withdraw", id: curId }).then(function () { openDetail(curId); }).catch(fail); });
+        $("d-purchase").innerHTML = kv([["Status", s.purchase_status], ["For", s.purchase_for], ["Clicked", s.purchase_clicked_at && new Date(s.purchase_clicked_at).toLocaleString()], ["Requested", s.purchase_requested_at && new Date(s.purchase_requested_at).toLocaleString()], ["Their note", s.purchase_note], ["Paid", s.paid_at && new Date(s.paid_at).toLocaleString()], ["Ref", s.payment_ref]]);
+        var fb = s.feedback || {};
+        $("d-fb").innerHTML = s.feedback ? kv([["On", fb.on], ["Surprising", fb.surprising], ["Would change", fb.would_change], ["Would use again", fb.would_use_again], ["Comment", fb.comment], ["When", new Date(s.feedback_at).toLocaleString()]]) : "<dd class='ast-note'>None yet.</dd>";
+        $("d-notes").value = s.review_notes || "";
+        $("d-full").value = s.full_report_html || "";
+        renderDraft();
+      }
+      var working = null; // {findings:[], free_index, draft}
+      function renderDraft() {
+        var s = cur.sub, d = s.draft || {};
+        working = { findings: JSON.parse(JSON.stringify(s.full_findings || d.findings || [])), free_index: -1, draft: d };
+        if (s.free_finding) { working.free_index = working.findings.findIndex(function (f) { return f.item_ref === s.free_finding.item_ref && f.finding_type === s.free_finding.finding_type; }); if (working.free_index < 0) { working.findings.unshift(s.free_finding); working.free_index = 0; } }
+        else if (typeof d.free_finding_index === "number") working.free_index = d.free_finding_index;
+        $("d-draftmeta").textContent = d.generated_at ? "Generated " + new Date(d.generated_at).toLocaleString() + " · " + (d.model || "") + " · items seen: " + (d.items_seen || "?") : (s.draft_error ? "No draft: " + s.draft_error : "No draft yet.");
+        $("d-draft-summary").innerHTML = d.intended_measure ? '<div class="ast-callout"><span class="ast-mono">Intended measure (as read)</span><p class="ast-small">' + esc(d.intended_measure) + '</p><span class="ast-mono" style="margin-top:10px">Overall read</span><p class="ast-small">' + esc(d.overall_read) + "</p>" + (d.least_confident_response ? '<span class="ast-mono" style="margin-top:10px">On their least-confident item</span><p class="ast-small">' + esc(d.least_confident_response) + "</p>" : "") + (d.no_strong_evidence ? '<span class="ast-mono" style="margin-top:10px">Model says: no strong evidence</span><p class="ast-small">' + esc(d.no_strong_evidence_note) + "</p>" : "") + (d.reviewer_notes ? '<span class="ast-mono" style="margin-top:10px">Notes for reviewer</span><p class="ast-small">' + esc(d.reviewer_notes) + "</p>" : "") + "</div>" : "";
+        renderFindingsEditor();
+      }
+      function renderFindingsEditor() {
+        var box = $("d-findings"); box.innerHTML = "";
+        working.findings.forEach(function (f, i) {
+          var div = document.createElement("div"); div.className = "ast-finding-edit" + (i === working.free_index ? " is-free" : "");
+          var h = '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><label class="ast-radio"><input type="radio" name="free" ' + (i === working.free_index ? "checked" : "") + '> Release this one as the free finding</label><button class="tsa-btn tsa-btn--secondary tsa-btn--sm" data-del="' + i + '">Remove</button></div>';
+          FIELDS.forEach(function (k) {
+            var label = k.replace(/_/g, " ");
+            if (k === "finding_type") h += '<div class="ast-field"><label class="ast-label">' + label + '</label><select class="ast-select" data-k="' + k + '">' + TYPES.map(function (t) { return '<option value="' + t + '"' + (f[k] === t ? " selected" : "") + ">" + esc(AST.TYPE_LABEL[t]) + "</option>"; }).join("") + "</select></div>";
+            else if (k === "strength") h += '<div class="ast-field"><label class="ast-label">' + label + '</label><select class="ast-select" data-k="' + k + '">' + ["strong", "moderate", "weak"].map(function (t) { return '<option value="' + t + '"' + (f[k] === t ? " selected" : "") + ">" + t + "</option>"; }).join("") + "</select></div>";
+            else if (k === "item_ref" || k === "teacher_cost") h += '<div class="ast-field"><label class="ast-label">' + label + '</label><input class="ast-input" data-k="' + k + '" value="' + esc(f[k] || "") + '"></div>';
+            else h += '<div class="ast-field"><label class="ast-label">' + label + '</label><textarea class="ast-textarea" data-k="' + k + '">' + esc(f[k] || "") + "</textarea></div>";
+          });
+          div.innerHTML = h;
+          div.querySelector("input[name=free]").onchange = function () { working.free_index = i; syncFromEditor(); renderFindingsEditor(); };
+          div.querySelector("[data-del]").onclick = function () { syncFromEditor(); working.findings.splice(i, 1); if (working.free_index === i) working.free_index = -1; else if (working.free_index > i) working.free_index--; renderFindingsEditor(); };
+          box.appendChild(div);
+        });
+        if (!working.findings.length) box.innerHTML = '<p class="ast-note" style="margin-top:12px">No findings. Releasing with none selected sends the teacher a “no strong evidence of a problem” result using the draft’s note above.</p>';
+        renderPreview();
+      }
+      function syncFromEditor() {
+        var blocks = $("d-findings").querySelectorAll(".ast-finding-edit");
+        blocks.forEach(function (b, i) { FIELDS.forEach(function (k) { var el = b.querySelector("[data-k=" + k + "]"); if (el) working.findings[i][k] = el.value; }); });
+      }
+      function renderPreview() {
+        syncFromEditor();
+        var f = working.free_index >= 0 ? working.findings[working.free_index] : null;
+        $("d-preview").innerHTML = f ? AST.renderFinding(f, { eyebrow: "Free finding · 1 of " + working.findings.length }) : AST.renderClean((working.draft && working.draft.no_strong_evidence_note) || "", { eyebrow: "Free finding" });
+      }
+      $("d-findings").addEventListener("input", function () { renderPreview(); });
+      $("d-addfinding").onclick = function () { syncFromEditor(); working.findings.push({ item_ref: "Question ", item_quote: "", finding_type: "shortcut_available", strength: "moderate", trying_to_measure: "", actually_evidences: "", why_it_matters: "", stronger_version: "", what_did_not_change: "", why_better_evidence: "", teacher_cost: "same" }); renderFindingsEditor(); };
+      function savePayload() {
+        syncFromEditor();
+        return { full_findings: working.findings, free_finding: working.free_index >= 0 ? working.findings[working.free_index] : null, review_notes: $("d-notes").value };
+      }
+      $("d-save").onclick = function () { var p = savePayload(); p.action = "save"; p.id = curId; api(p).then(function () { $("d-msg").textContent = "Saved."; }).catch(fail); };
+      function approveDeliver() {
+        var p = savePayload();
+        if (!p.free_finding && !confirm("No free finding selected. Release a ‘no strong evidence of a problem’ result?")) return;
+        api({ action: "save", id: curId, full_findings: p.full_findings, free_finding: p.free_finding, review_notes: p.review_notes })
+          .then(function () { return api({ action: "status", id: curId, status: "delivered", free_finding: p.free_finding, full_findings: p.full_findings }); })
+          .then(function () { openDetail(curId); }).catch(fail);
+      }
+      $("d-redraft").onclick = function () { $("d-msg").textContent = "Drafting… (30–90 s)"; $("d-redraft").disabled = true; api({ action: "draft", id: curId }).then(function () { $("d-redraft").disabled = false; openDetail(curId); }).catch(function (e) { $("d-redraft").disabled = false; fail(e); }); };
+      $("d-paid").onclick = function () { api({ action: "purchase", id: curId, purchase_status: "paid", payment_ref: $("d-payref").value }).then(function () { openDetail(curId); }).catch(fail); };
+      $("d-refund").onclick = function () { api({ action: "purchase", id: curId, purchase_status: "refunded" }).then(function () { openDetail(curId); }).catch(fail); };
+      $("d-fullsave").onclick = function () { api({ action: "save", id: curId, full_report_html: $("d-full").value }).then(function () { $("d-msg").textContent = "Full report draft saved."; }).catch(fail); };
+      $("d-fulldeliver").onclick = function () { if (!$("d-full").value.trim()) return alert("The report is empty."); if (!confirm("Publish the complete report to the teacher's result page?")) return; api({ action: "full_delivered", id: curId, full_report_html: $("d-full").value }).then(function () { openDetail(curId); }).catch(fail); };
+
+      if (TOKEN) loadList(); else show("login");
+    })();
+  </script>
+</body>
+</html>

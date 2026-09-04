@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit an assessment — Assessment Stress Test | The Sovereign Academy</title>
+  <meta name="description" content="Submit one quiz, test, or exit ticket. One finding is free. No student work, no student names.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+  <link rel="stylesheet" href="/stress-test/ast.css">
+</head>
+<body>
+  <a class="tsa-skip-link" href="#main">Skip to content</a>
+  <header class="ast-header">
+    <div class="ast-header__inner">
+      <a class="ast-brand" href="/stress-test/" aria-label="Assessment Stress Test, The Sovereign Academy">
+        <span class="ast-brand__mark">S</span>
+        <span class="ast-brand__text"><strong>Assessment Stress Test</strong><span>The Sovereign Academy</span></span>
+      </a>
+      <div class="ast-header__right"><a href="/stress-test/">About the Stress Test</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="ast-main">
+    <div id="form-view">
+      <span class="tsa-section-tag">Step 1 of 1 · about three minutes</span>
+      <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.5rem)">Submit one assessment</h1>
+      <p class="ast-lede">We ask only for what a useful finding needs. One finding is free, no credit card required. A teacher reviews every analysis before it reaches you — expect it within one school day.</p>
+
+      <div class="ast-callout ast-callout--stop" style="margin-top:24px">
+        <span class="ast-mono">Before you upload</span>
+        <p class="ast-p ast-small">Please <strong>do not include student names, student work, grades, or any other student information.</strong> We analyse the assessment itself, never student responses. If student information arrives, we delete the file without analysing it and let you know.</p>
+      </div>
+
+      <form id="f" novalidate>
+        <div class="ast-row">
+          <div class="ast-field">
+            <label class="ast-label" for="subject">Subject</label>
+            <select class="ast-select" id="subject" name="subject" required>
+              <option value="">Choose…</option>
+              <option>Mathematics</option><option>Science</option><option>English / Language Arts</option><option>History / Social Studies</option>
+              <option>World Languages</option><option>Computer Science</option><option>Economics / Personal Finance</option><option>Other</option>
+            </select>
+          </div>
+          <div class="ast-field">
+            <label class="ast-label" for="grade">Grade or course</label>
+            <input class="ast-input" id="grade" name="grade" placeholder="e.g. Grade 7, Algebra 1, AP Biology" required>
+          </div>
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label" for="intended">What are students supposed to understand?<small>In your words. This is the standard we test the assessment against, so be as specific as you can.</small></label>
+          <textarea class="ast-textarea" id="intended" name="intended_understanding" required placeholder="e.g. That a proportional relationship means y is always the same multiple of x — not just that the numbers go up together."></textarea>
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label">The assessment<small>Paste the questions, or attach a PDF or image. Word or Google Docs: export as PDF, or paste the text. Answer keys are welcome.</small></label>
+          <div class="ast-tabs" role="tablist">
+            <button type="button" class="ast-tab" role="tab" id="tab-text" aria-selected="true">Paste text</button>
+            <button type="button" class="ast-tab" role="tab" id="tab-file" aria-selected="false">Attach a file</button>
+          </div>
+          <div id="pane-text" style="margin-top:12px">
+            <textarea class="ast-textarea ast-textarea--tall" id="atext" name="assessment_text" placeholder="1. Which of the following tables shows a proportional relationship? …"></textarea>
+          </div>
+          <div id="pane-file" hidden style="margin-top:12px">
+            <label class="ast-drop" id="drop" for="file">
+              <span class="ast-p">Drop a PDF, PNG, or JPG here, or <u>choose a file</u>.</span>
+              <span class="ast-note" style="display:block;margin-top:6px">Up to 15 MB.</span>
+              <span class="ast-drop__name" id="fname"></span>
+              <input type="file" id="file" name="file" accept="application/pdf,image/png,image/jpeg,image/webp">
+            </label>
+          </div>
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label" for="least">Which question are you least confident about? <span class="ast-muted" style="font-weight:400">(optional)</span></label>
+          <input class="ast-input" id="least" name="least_confident" placeholder="e.g. Question 7 — I think students get it right without knowing why">
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label" for="worry">What worries you about this assessment, if anything? <span class="ast-muted" style="font-weight:400">(optional)</span></label>
+          <textarea class="ast-textarea" id="worry" name="worry_text" style="min-height:80px" placeholder="In your own words."></textarea>
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label">Where did this assessment come from?<small>This decides how we may use it beyond your own finding. Publisher material is analysed for you only and never reused.</small></label>
+          <div class="ast-radio-row">
+            <label class="ast-radio"><input type="radio" name="copyright_bucket" value="teacher" required> I wrote it</label>
+            <label class="ast-radio"><input type="radio" name="copyright_bucket" value="district"> District or department assessment</label>
+            <label class="ast-radio"><input type="radio" name="copyright_bucket" value="publisher"> Publisher or textbook material</label>
+          </div>
+        </div>
+
+        <div class="ast-row">
+          <div class="ast-field">
+            <label class="ast-label" for="email">Email<small>Only used to tell you when your finding is ready.</small></label>
+            <input class="ast-input" id="email" name="email" type="email" required placeholder="you@school.org" autocomplete="email">
+          </div>
+          <div class="ast-field">
+            <label class="ast-label" for="tname">Name <span class="ast-muted" style="font-weight:400">(optional)</span></label>
+            <input class="ast-input" id="tname" name="teacher_name" placeholder="So we can address you properly" autocomplete="name">
+          </div>
+        </div>
+
+        <label class="ast-check"><input type="checkbox" id="c1" required> <span>This contains <strong>no student names, student work, grades, or other student information.</strong></span></label>
+        <label class="ast-check"><input type="checkbox" id="c2" required> <span>I have the right to share this material for analysis. I understand the finding is for me, is not shared with my school without my written permission, is not used to train any model, and that I can ask for the material to be deleted at any time.</span></label>
+
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <input type="hidden" name="channel" id="channel"><input type="hidden" name="cohort" id="cohort" value="cohort-1">
+
+        <p class="ast-error" id="err" role="alert" hidden></p>
+        <div class="ast-actions">
+          <button class="tsa-btn tsa-btn--primary tsa-btn--lg" type="submit" id="go">Send for a free finding</button>
+          <span class="ast-note">Reviewed by a teacher. Nothing is automatic-published.</span>
+        </div>
+      </form>
+    </div>
+
+    <div id="done-view" hidden>
+      <span class="tsa-section-tag">Received</span>
+      <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.5rem)">Thank you. Your assessment is in the queue.</h1>
+      <p class="ast-lede">A teacher will read it and you’ll receive an email from <strong>dalia@thesovereign.academy</strong> within one school day with a link to your finding.</p>
+      <div class="ast-callout" style="margin-top:24px">
+        <span class="ast-mono">Your result link</span>
+        <p class="ast-p ast-small">Bookmark this — it goes live the moment your finding is approved:</p>
+        <p class="ast-p" style="margin-top:8px;word-break:break-all"><a id="rlink" href="#"></a></p>
+      </div>
+      <p class="ast-p ast-muted ast-small" style="margin-top:24px">If anything in what you sent should not have been included, reply to that email and we will delete it.</p>
+    </div>
+  </main>
+
+  <footer class="ast-footer">
+    <div class="ast-footer__inner">
+      <span>A Sovereign Academy property</span>
+      <span><a href="mailto:dalia@thesovereign.academy">dalia@thesovereign.academy</a> · <a href="/legal/disclaimer/">Disclaimer</a></span>
+    </div>
+  </footer>
+
+  <script src="/stress-test/ast.js"></script>
+  <script>
+    (function () {
+      AST.track("submit_view");
+      document.getElementById("channel").value = AST.channel || "";
+      var started = false;
+      var form = document.getElementById("f");
+      form.addEventListener("input", function () { if (!started) { started = true; AST.track("submit_start"); } }, { once: false });
+
+      // tabs
+      var tabT = document.getElementById("tab-text"), tabF = document.getElementById("tab-file");
+      var paneT = document.getElementById("pane-text"), paneF = document.getElementById("pane-file");
+      function pick(which) {
+        var t = which === "text";
+        tabT.setAttribute("aria-selected", t); tabF.setAttribute("aria-selected", !t);
+        paneT.hidden = !t; paneF.hidden = t;
+      }
+      tabT.onclick = function () { pick("text"); }; tabF.onclick = function () { pick("file"); };
+
+      // file drop
+      var drop = document.getElementById("drop"), file = document.getElementById("file"), fname = document.getElementById("fname");
+      function showName() { fname.textContent = file.files[0] ? file.files[0].name + " · " + Math.round(file.files[0].size / 1024) + " KB" : ""; }
+      file.addEventListener("change", showName);
+      ["dragenter", "dragover"].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.add("is-over"); }); });
+      ["dragleave", "drop"].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.remove("is-over"); }); });
+      drop.addEventListener("drop", function (ev) { if (ev.dataTransfer.files.length) { file.files = ev.dataTransfer.files; showName(); } });
+
+      var err = document.getElementById("err"), go = document.getElementById("go");
+      function fail(msg) { err.textContent = msg; err.hidden = false; err.scrollIntoView({ block: "center" }); go.disabled = false; go.textContent = "Send for a free finding"; }
+
+      form.addEventListener("submit", async function (ev) {
+        ev.preventDefault();
+        err.hidden = true;
+        var fd = new FormData(form);
+        var text = (fd.get("assessment_text") || "").trim();
+        var f = file.files[0];
+        var problems = [];
+        if (!fd.get("subject")) problems.push("Choose a subject.");
+        if (!(fd.get("grade") || "").trim()) problems.push("Enter the grade or course.");
+        if ((fd.get("intended_understanding") || "").trim().length < 20) problems.push("Tell us what students are supposed to understand (a sentence or two).");
+        if (!f && text.length < 80) problems.push("Paste the assessment text (at least a few questions) or attach a file.");
+        if (f && f.size > 15 * 1024 * 1024) problems.push("The file is larger than 15 MB.");
+        if (f && !/^(application\/pdf|image\/(png|jpeg|webp))$/.test(f.type)) problems.push("Attach a PDF, PNG, JPG, or WebP.");
+        if (!fd.get("copyright_bucket")) problems.push("Tell us where the assessment came from.");
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((fd.get("email") || "").trim())) problems.push("Enter a working email address.");
+        if (!document.getElementById("c1").checked || !document.getElementById("c2").checked) problems.push("Please confirm both statements.");
+        if (problems.length) return fail(problems.join(" "));
+        fd.set("confirm_no_student_data", "yes"); fd.set("confirm_rights", "yes");
+        if (!f) fd.delete("file");
+
+        go.disabled = true; go.textContent = "Sending…";
+        try {
+          var res = await fetch(AST.FN + "/ast-submit", { method: "POST", body: fd });
+          var j = await res.json().catch(function () { return {}; });
+          if (!res.ok || !j.ok) { AST.track("submit_error", { status: res.status }); return fail(j.error || "Something went wrong sending your assessment. Please try again."); }
+          AST.track("submit_success", { kind: f ? f.type : "text" }, j.id);
+          var link = location.origin + "/stress-test/result/?t=" + j.token;
+          var a = document.getElementById("rlink"); a.href = link; a.textContent = link;
+          document.getElementById("form-view").hidden = true;
+          document.getElementById("done-view").hidden = false;
+          window.scrollTo(0, 0);
+        } catch (e) {
+          AST.track("submit_error", { network: true });
+          fail("We couldn’t reach the server. Check your connection and try again — nothing was lost, your form is still filled in.");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

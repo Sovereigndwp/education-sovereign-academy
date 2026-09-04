@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your finding — Assessment Stress Test | The Sovereign Academy</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+  <link rel="stylesheet" href="/stress-test/ast.css">
+</head>
+<body>
+  <a class="tsa-skip-link" href="#main">Skip to content</a>
+  <header class="ast-header">
+    <div class="ast-header__inner">
+      <a class="ast-brand" href="/stress-test/" aria-label="Assessment Stress Test, The Sovereign Academy">
+        <span class="ast-brand__mark">S</span>
+        <span class="ast-brand__text"><strong>Assessment Stress Test</strong><span>The Sovereign Academy</span></span>
+      </a>
+      <div class="ast-header__right"><a href="javascript:window.print()" class="ast-no-print">Print / save as PDF</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="ast-main">
+    <div id="loading"><p class="ast-p ast-muted">Loading your finding…</p></div>
+
+    <div id="notfound" hidden>
+      <h1 class="ast-h1" style="font-size:2rem">We can’t find that link.</h1>
+      <p class="ast-lede">Check the address from your confirmation email, or <a href="/stress-test/submit/">submit an assessment</a>.</p>
+    </div>
+
+    <div id="pending" hidden>
+      <span class="tsa-section-tag">In review</span>
+      <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.5rem)">Your finding isn’t ready yet.</h1>
+      <p class="ast-lede">A teacher is reading your assessment. You’ll get an email from dalia@thesovereign.academy when this page goes live — usually within one school day.</p>
+      <dl class="ast-kv" style="margin-top:24px"><dt>Submitted</dt><dd id="p-date"></dd><dt>Subject</dt><dd id="p-subj"></dd></dl>
+    </div>
+
+    <div id="withdrawn" hidden>
+      <h1 class="ast-h1" style="font-size:2rem">This submission was withdrawn.</h1>
+      <p class="ast-lede">The material and its analysis have been deleted at your request.</p>
+    </div>
+
+    <div id="ready" hidden>
+      <span class="tsa-section-tag">Your free finding is ready</span>
+      <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.6rem)" id="r-title">One question worth a closer look.</h1>
+      <p class="ast-lede" id="r-lede"></p>
+
+      <section style="margin-top:24px">
+        <div class="ast-callout">
+          <span class="ast-mono">What we understood you to be measuring</span>
+          <p class="ast-p ast-small" id="r-measure"></p>
+          <p class="ast-p ast-small ast-muted" style="margin-top:8px">If that isn’t what you meant, reply to your email — the finding is only as good as this sentence.</p>
+        </div>
+      </section>
+
+      <div id="r-doc"></div>
+
+      <section id="r-least" hidden style="margin-top:32px">
+        <h2 class="ast-h3">About the question you were least confident in</h2>
+        <p class="ast-p" id="r-least-text" style="margin-top:8px"></p>
+      </section>
+
+      <!-- the transaction being tested -->
+      <section class="ast-offer" id="offer">
+        <span class="tsa-section-tag" id="offer-tag">This is one of several things we noticed</span>
+        <div class="ast-offer__cols">
+          <div>
+            <h2 class="ast-h2" style="margin-top:8px">The complete Stress Test of this assessment</h2>
+            <p class="ast-p" style="margin-top:10px" id="offer-lede">Every item read the same way, so you know what the whole assessment gives you evidence of — before you give it again.</p>
+            <ul class="ast-list">
+              <li>Every finding on this assessment, not just one — each with a stronger version you can use as-is and a note on what did not change</li>
+              <li>An evidence map: item by item, what a correct answer actually tells you</li>
+              <li>Where a wrong model produces the right answer, and which wrong answers reveal what to reteach</li>
+              <li>A short ranked list of what to change first, with the teacher-time cost of each change stated honestly</li>
+              <li>Written by a teacher, machine-assisted, delivered within three school days as a document you can keep</li>
+            </ul>
+          </div>
+          <div>
+            <div class="ast-price">$49<small>One assessment · one price · no subscription</small></div>
+            <div class="ast-actions" style="margin-top:16px">
+              <button class="tsa-btn tsa-btn--primary tsa-btn--lg" id="buy">Get the complete Stress Test</button>
+            </div>
+            <p class="ast-note" style="margin-top:10px">Secure card payment. If the finding above wasn’t worth your time, don’t buy this.</p>
+          </div>
+        </div>
+
+        <div id="request-view" hidden style="margin-top:24px;padding-top:24px;border-top:1px solid var(--tsa-border)">
+          <p class="ast-p"><strong>Almost there.</strong> Tell us one thing and Dalia will send a payment link by email within one school day.</p>
+          <div class="ast-field">
+            <label class="ast-label">Is this for you, or for a department?</label>
+            <div class="ast-radio-row">
+              <label class="ast-radio"><input type="radio" name="pfor" value="self" checked> For my own class</label>
+              <label class="ast-radio"><input type="radio" name="pfor" value="department"> For my department or school</label>
+            </div>
+          </div>
+          <div class="ast-field">
+            <label class="ast-label" for="pnote">Anything we should know? <span class="ast-muted" style="font-weight:400">(optional)</span></label>
+            <textarea class="ast-textarea" id="pnote" style="min-height:70px" placeholder="e.g. I have three more unit tests like this one."></textarea>
+          </div>
+          <div class="ast-actions"><button class="tsa-btn tsa-btn--primary" id="req">Send me the payment link</button></div>
+        </div>
+        <div id="requested-view" hidden style="margin-top:24px;padding-top:24px;border-top:1px solid var(--tsa-border)">
+          <p class="ast-p"><strong>Got it.</strong> Dalia will email a payment link within one school day. The complete Stress Test follows within three school days of payment.</p>
+        </div>
+        <div id="paid-view" hidden style="margin-top:24px;padding-top:24px;border-top:1px solid var(--tsa-border)">
+          <p class="ast-p"><strong>Payment received — thank you.</strong> Your complete Stress Test is being written and will appear on this page, with an email, within three school days.</p>
+        </div>
+      </section>
+
+      <section id="full" hidden style="margin-top:48px">
+        <span class="tsa-section-tag">The complete Stress Test</span>
+        <div id="full-body" class="ast-doc" style="margin-top:16px"></div>
+      </section>
+
+      <!-- feedback -->
+      <section class="ast-section ast-fb" id="fb">
+        <h2 class="ast-h2">Two minutes of your honesty, please</h2>
+        <p class="ast-p ast-muted ast-small" style="margin-top:8px">This is an early experiment. What you say here shapes what we build — or whether we build it at all.</p>
+        <form id="fbf">
+          <div class="ast-fb-q"><span>Was anything in this analysis surprising?</span>
+            <div class="ast-radio-row"><label class="ast-radio"><input type="radio" name="surprising" value="yes"> Yes</label><label class="ast-radio"><input type="radio" name="surprising" value="no"> No</label><label class="ast-radio"><input type="radio" name="surprising" value="unsure"> Not sure</label></div></div>
+          <div class="ast-fb-q"><span>Would this cause you to change the assessment?</span>
+            <div class="ast-radio-row"><label class="ast-radio"><input type="radio" name="would_change" value="yes"> Yes</label><label class="ast-radio"><input type="radio" name="would_change" value="no"> No</label><label class="ast-radio"><input type="radio" name="would_change" value="unsure"> Not sure</label></div></div>
+          <div class="ast-fb-q"><span>Would you use this before giving another important assessment?</span>
+            <div class="ast-radio-row"><label class="ast-radio"><input type="radio" name="would_use_again" value="yes"> Yes</label><label class="ast-radio"><input type="radio" name="would_use_again" value="no"> No</label><label class="ast-radio"><input type="radio" name="would_use_again" value="unsure"> Not sure</label></div></div>
+          <div class="ast-field"><label class="ast-label" for="fbc">Anything else — what was useful, what wasn’t, what you’d pay for?</label><textarea class="ast-textarea" id="fbc" style="min-height:90px"></textarea></div>
+          <p class="ast-error" id="fberr" hidden></p>
+          <div class="ast-actions"><button class="tsa-btn tsa-btn--secondary" type="submit" id="fbgo">Send feedback</button></div>
+        </form>
+        <p class="ast-p" id="fbdone" hidden><strong>Thank you.</strong> Read, not just recorded.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="ast-footer">
+    <div class="ast-footer__inner">
+      <span>A Sovereign Academy property</span>
+      <span><a href="mailto:dalia@thesovereign.academy">dalia@thesovereign.academy</a> · <a href="/legal/disclaimer/">Disclaimer</a></span>
+    </div>
+  </footer>
+
+  <script src="/stress-test/ast.js"></script>
+  <script>
+    (function () {
+      var t = new URLSearchParams(location.search).get("t") || "";
+      var $ = function (id) { return document.getElementById(id); };
+      function show(id) { ["loading", "notfound", "pending", "withdrawn", "ready"].forEach(function (k) { $(k).hidden = k !== id; }); }
+      var data = null;
+
+      function post(body) {
+        body.t = t;
+        return fetch(AST.FN + "/ast-teacher", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }).then(function (r) { return r.json(); });
+      }
+
+      function renderPurchase() {
+        var ps = data.purchase_status;
+        $("request-view").hidden = true; $("requested-view").hidden = true; $("paid-view").hidden = true;
+        $("buy").hidden = false;
+        if (ps === "requested") { $("requested-view").hidden = false; $("buy").hidden = true; }
+        if (ps === "paid") { $("paid-view").hidden = false; $("buy").hidden = true; }
+        if (data.full_delivered_at) { $("paid-view").hidden = true; }
+      }
+
+      function render() {
+        if (data.status === "withdrawn") return show("withdrawn");
+        if (data.status !== "delivered") {
+          $("p-date").textContent = AST.fmtDate(data.submitted_at);
+          $("p-subj").textContent = (data.subject || "") + " · " + (data.grade || "");
+          return show("pending");
+        }
+        AST.track("result_view", null, data.id);
+        var f = data.free_finding;
+        $("r-measure").textContent = data.intended_measure || data.intended_understanding || "";
+        if (f) {
+          $("r-title").textContent = "One question worth a closer look.";
+          $("r-lede").textContent = "We read your " + (data.subject || "").toLowerCase() + " assessment for " + (data.grade || "") + " and chose the one finding you were least likely to have noticed. " + (data.overall_read || "");
+          $("r-doc").innerHTML = AST.renderFinding(f, { eyebrow: "Free finding · " + (data.findings_total ? "1 of " + data.findings_total : "1") });
+          var n = data.findings_total || 0;
+          $("offer-tag").textContent = n > 1 ? "This is one of " + n + " things we noticed" : "This is the one finding, but not the whole picture";
+        } else {
+          $("r-title").textContent = "We don’t see strong evidence of a problem here.";
+          $("r-lede").textContent = data.overall_read || "";
+          $("r-doc").innerHTML = AST.renderClean(data.no_strong_evidence_note || "", { eyebrow: "Free finding" });
+          $("offer-tag").textContent = "Want the item-by-item evidence map anyway?";
+          $("offer-lede").textContent = "A clean result on the one item we chose isn’t a guarantee about the rest. The complete Stress Test reads every item and tells you, plainly, which ones are sound.";
+        }
+        if (data.least_confident && data.least_confident_response) {
+          $("r-least").hidden = false;
+          $("r-least-text").textContent = data.least_confident_response;
+        }
+        renderPurchase();
+        if (data.full_report_html) {
+          $("full").hidden = false;
+          $("full-body").innerHTML = data.full_report_html;
+          AST.track("full_report_view", null, data.id);
+        }
+        if (data.feedback_given) { $("fbf").hidden = true; $("fbdone").hidden = false; }
+        show("ready");
+      }
+
+      fetch(AST.FN + "/ast-teacher?t=" + encodeURIComponent(t))
+        .then(function (r) { if (!r.ok) throw new Error("nf"); return r.json(); })
+        .then(function (j) { data = j; render(); })
+        .catch(function () { show("notfound"); });
+
+      // purchase path: Stripe Payment Link if configured, else a firm request.
+      $("buy").addEventListener("click", function () {
+        AST.track("purchase_click", { stripe: Boolean(data.stripe_link) }, data.id);
+        post({ action: "purchase_click" });
+        if (data.stripe_link) {
+          var url = data.stripe_link + (data.stripe_link.indexOf("?") > -1 ? "&" : "?") + "client_reference_id=" + encodeURIComponent(data.id);
+          location.href = url;
+        } else {
+          $("request-view").hidden = false; $("buy").hidden = true;
+          $("request-view").scrollIntoView({ block: "center", behavior: "smooth" });
+        }
+      });
+      $("req").addEventListener("click", function () {
+        var pfor = (document.querySelector('input[name=pfor]:checked') || {}).value || "self";
+        $("req").disabled = true;
+        post({ action: "purchase_request", purchase_for: pfor, note: $("pnote").value }).then(function () {
+          AST.track("purchase_request", { for: pfor }, data.id);
+          data.purchase_status = "requested"; renderPurchase();
+        }).catch(function () { $("req").disabled = false; });
+      });
+
+      // feedback
+      $("fbf").addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var v = function (n) { var el = document.querySelector('input[name=' + n + ']:checked'); return el ? el.value : null; };
+        var body = { action: "feedback", surprising: v("surprising"), would_change: v("would_change"), would_use_again: v("would_use_again"), comment: $("fbc").value };
+        if (!body.surprising && !body.would_change && !body.would_use_again && !body.comment.trim()) { $("fberr").textContent = "Answer at least one question."; $("fberr").hidden = false; return; }
+        $("fbgo").disabled = true;
+        post(body).then(function () { AST.track("feedback_submit", { surprising: body.surprising, would_change: body.would_change, would_use_again: body.would_use_again }, data.id); $("fbf").hidden = true; $("fbdone").hidden = false; })
+          .catch(function () { $("fbgo").disabled = false; $("fberr").textContent = "Couldn’t send. Try again."; $("fberr").hidden = false; });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment Stress Test — Does your assessment measure understanding, or just the right answer? | The Sovereign Academy</title>
+  <meta name="description" content="Upload a quiz, test, or exit ticket. We stress-test it for questions that may hide misconceptions, reward shortcuts, or give you more confidence than the evidence supports. One finding is free.">
+  <meta property="og:title" content="Assessment Stress Test — The Sovereign Academy">
+  <meta property="og:description" content="Does your assessment measure understanding — or just the right answer? One finding is free. No credit card required.">
+  <meta name="robots" content="index,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+  <link rel="stylesheet" href="/stress-test/ast.css">
+</head>
+<body>
+  <a class="tsa-skip-link" href="#main">Skip to content</a>
+  <header class="ast-header">
+    <div class="ast-header__inner">
+      <a class="ast-brand" href="/stress-test/" aria-label="Assessment Stress Test, The Sovereign Academy">
+        <span class="ast-brand__mark">S</span>
+        <span class="ast-brand__text"><strong>Assessment Stress Test</strong><span>The Sovereign Academy</span></span>
+      </a>
+      <div class="ast-header__right"><a href="/">thesovereign.academy</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="ast-main">
+    <section>
+      <span class="tsa-section-tag">For teachers · one assessment at a time</span>
+      <h1 class="ast-h1">Does your assessment measure understanding — <em>or just the right answer?</em></h1>
+      <p class="ast-lede">Upload a quiz, test, or exit ticket. We’ll stress-test it for questions that may hide misconceptions, reward shortcuts, or give you more confidence than the evidence supports.</p>
+      <div class="ast-actions">
+        <a class="tsa-btn tsa-btn--primary tsa-btn--lg" href="/stress-test/submit/" id="cta-top">Stress-test one assessment</a>
+        <span class="ast-note">One finding is free. No credit card required.</span>
+      </div>
+    </section>
+
+    <section class="ast-section">
+      <h2 class="ast-h2">A score can look precise while measuring the wrong thing.</h2>
+      <p class="ast-p" style="margin-top:12px">A student can reach the right answer by recognising a familiar pattern, by following a rehearsed procedure, or by reasoning from a wrong model that happens to land on the correct number. The score is the same in every case. The evidence is not.</p>
+      <p class="ast-p">The Stress Test asks one question of every item: <strong>if a student gets this right, what do you actually know?</strong> We look for:</p>
+      <ul class="ast-list">
+        <li>Questions that can be answered correctly without the intended understanding</li>
+        <li>Wrong models that produce the right answer — the false positive a score can’t see</li>
+        <li>Wrong-answer choices that reveal little about what to reteach</li>
+        <li>Items measuring something other than what you meant to measure</li>
+        <li>Places where a small change would make student reasoning visible</li>
+      </ul>
+      <p class="ast-p ast-muted" style="margin-top:16px">And when an item is sound, we say so. A stress test that always finds a crack is worthless.</p>
+    </section>
+
+    <section class="ast-section">
+      <span class="tsa-section-tag">Example finding</span>
+      <p class="ast-p ast-muted ast-small" style="margin-top:8px">What one free finding looks like. Built from a Grade 7 proportional-relationships quiz written for this example.</p>
+      <div id="example"></div>
+    </section>
+
+    <section class="ast-section">
+      <h2 class="ast-h2">How it works</h2>
+      <ol class="ast-steps">
+        <li><div><strong>Submit one assessment you already use.</strong> Paste the text or attach a PDF. Tell us what students are supposed to understand. About three minutes.</div></li>
+        <li><div><strong>A teacher reads it.</strong> The analysis is machine-assisted and reviewed by Dalia Platt, a former high-school mathematics teacher, before anything reaches you. Expect it within one school day.</div></li>
+        <li><div><strong>You get one concrete finding, free.</strong> The item, what it’s trying to measure, what it may actually give evidence of, why that matters, and a stronger version you can use tomorrow — with a statement of what did not change.</div></li>
+        <li><div><strong>If you want the rest,</strong> the complete Stress Test of that assessment is $49. One assessment, one price. No subscription.</div></li>
+      </ol>
+      <div class="ast-actions">
+        <a class="tsa-btn tsa-btn--primary" href="/stress-test/submit/" id="cta-mid">Stress-test one assessment</a>
+      </div>
+    </section>
+
+    <section class="ast-section">
+      <h2 class="ast-h2">What we never do</h2>
+      <ul class="ast-list">
+        <li><strong>No student work, no student names.</strong> We analyse the assessment, never student responses. The upload form says so, and we delete anything that arrives with student information.</li>
+        <li><strong>The result belongs to you.</strong> We do not share it with your school, department, or anyone else without your written permission.</li>
+        <li><strong>No training on your material.</strong> Your assessment is used to produce your finding and nothing else. You can ask for it to be deleted at any time.</li>
+        <li><strong>No scores.</strong> Each finding is a named professional judgment with its reason attached, not a number we can’t defend.</li>
+      </ul>
+      <p class="ast-p ast-muted ast-small" style="margin-top:16px">The goal isn’t a harder test. It’s better evidence of what students actually understand.</p>
+    </section>
+  </main>
+
+  <footer class="ast-footer">
+    <div class="ast-footer__inner">
+      <span>A Sovereign Academy property</span>
+      <span><a href="mailto:dalia@thesovereign.academy">dalia@thesovereign.academy</a> · <a href="/legal/disclaimer/">Disclaimer</a></span>
+    </div>
+  </footer>
+
+  <script src="/stress-test/ast.js"></script>
+  <script>
+    (function () {
+      AST.track("landing_view");
+      document.querySelectorAll("#cta-top, #cta-mid").forEach(function (a) {
+        a.addEventListener("click", function () { AST.track("cta_click", { where: a.id }); });
+      });
+      document.getElementById("example").innerHTML = AST.renderFinding({
+        item_ref: "Question 3",
+        item_quote: "The equation y = 4x represents a proportional relationship. What is the constant of proportionality?\n   A) 4     B) x     C) y     D) 0",
+        finding_type: "right_answer_wrong_model",
+        strength: "strong",
+        trying_to_measure: "Whether students understand the constant of proportionality as the multiplier that links every x to its y — the reason the relationship is proportional at all.",
+        actually_evidences: "Whether a student can locate the number in an equation. Three of the four choices aren’t numbers, so the item is answerable by elimination with no idea what the constant does.",
+        why_it_matters: "A student who believes “the constant is whatever number appears in the equation” answers A and is marked as understanding. So does a student who believes it is the amount y goes up by each time. Both models are wrong in ways that will surface the moment the relationship is given as a table or a graph instead of an equation — but this item can’t tell them apart from a student who understands. The score is the same; the evidence is not.",
+        stronger_version: "Question 3. The table shows a proportional relationship.\n   x:  2    5    8\n   y:  8   20   32\nWhat is the constant of proportionality? Show how you found it, and explain what it tells you about how y is related to x.",
+        what_did_not_change: "Same topic, same grade level, same relationship (y = 4x), same position in the quiz, still one short item.",
+        why_better_evidence: "The number 4 is no longer written anywhere. A student who divides any y by its x gets 4 and can say why; a student who takes the first y gets 8; a student who takes the difference between y-values gets 12. Each wrong answer now names the model behind it, so a wrong answer tells you what to reteach — and a right answer with the explanation is evidence of the understanding you meant to measure.",
+        teacher_cost: "Slightly more: the explanation takes about ten seconds to read per paper. The number itself still grades at a glance.",
+      }, { eyebrow: "Example · free finding" });
+    })();
+  </script>
+</body>
+</html>
