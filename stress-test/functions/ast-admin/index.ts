@@ -75,7 +75,7 @@ Deno.serve(async (req: Request) => {
         const st = String(b.status);
         const patch: Record<string, unknown> = { status: st };
         if (st === "approved") patch.approved_at = now;
-        if (st === "delivered") { patch.approved_at = patch.approved_at ?? now; patch.delivered_at = now; }
+        if (st === "delivered") { patch.approved_at = patch.approved_at ?? now; patch.delivered_at = now; patch.draft_error = null; }
         if ("free_finding" in b) patch.free_finding = b.free_finding;
         if ("full_findings" in b) patch.full_findings = b.full_findings;
         await db(`ast_submissions?id=eq.${id}`, { method: "PATCH", body: patch, prefer: "return=minimal" });

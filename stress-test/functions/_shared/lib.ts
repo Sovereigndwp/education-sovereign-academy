@@ -60,7 +60,7 @@ export async function setSetting(key: string, value: string) {
 export async function storagePut(path: string, bytes: Uint8Array, mime: string) {
   const res = await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path}`, {
     method: "POST",
-    headers: { Authorization: `Bearer ${SERVICE_KEY}`, "Content-Type": mime, "x-upsert": "true" },
+    headers: { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}`, "Content-Type": mime, "x-upsert": "true" },
     body: new Blob([bytes as BlobPart], { type: mime }),
   });
   if (!res.ok) throw new Error(`storage put ${path} → ${res.status}: ${(await res.text()).slice(0, 300)}`);
@@ -68,7 +68,7 @@ export async function storagePut(path: string, bytes: Uint8Array, mime: string) 
 
 export async function storageGet(path: string): Promise<Uint8Array> {
   const res = await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path}`, {
-    headers: { Authorization: `Bearer ${SERVICE_KEY}` },
+    headers: { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}` },
   });
   if (!res.ok) throw new Error(`storage get ${path} → ${res.status}`);
   return new Uint8Array(await res.arrayBuffer());
@@ -77,7 +77,7 @@ export async function storageGet(path: string): Promise<Uint8Array> {
 export async function storageDelete(path: string) {
   await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}`, {
     method: "DELETE",
-    headers: { Authorization: `Bearer ${SERVICE_KEY}`, "Content-Type": "application/json" },
+    headers: { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({ prefixes: [path] }),
   });
 }
@@ -85,7 +85,7 @@ export async function storageDelete(path: string) {
 export async function storageSignedUrl(path: string, seconds = 900): Promise<string | null> {
   const res = await fetch(`${SUPABASE_URL}/storage/v1/object/sign/${BUCKET}/${path}`, {
     method: "POST",
-    headers: { Authorization: `Bearer ${SERVICE_KEY}`, "Content-Type": "application/json" },
+    headers: { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({ expiresIn: seconds }),
   });
   if (!res.ok) return null;
