@@ -48,7 +48,7 @@
       <h1 class="ast-h2">Settings</h1>
       <div class="ast-field"><label class="ast-label" for="s-stripe">Stripe Payment Link for the $49 Stress Test<small>Leave empty to use the “send me the payment link” request flow instead. Create one in Stripe → Payment Links: one-time, $49, name “Assessment Stress Test — complete”. The page appends client_reference_id=&lt;submission id&gt; so you can match payments.</small></label><input class="ast-input" id="s-stripe" placeholder="https://buy.stripe.com/…"></div>
       <div class="ast-field"><label class="ast-label" for="s-model">Model for machine drafts<small>Default claude-sonnet-4-5. Change if the API rejects it.</small></label><input class="ast-input" id="s-model" placeholder="claude-sonnet-4-5"></div>
-      <div class="ast-field"><label class="ast-label">Anthropic API key<small>Best: set the ANTHROPIC_API_KEY secret in Supabase → Edge Functions → Secrets. Fallback: paste here (stored service-role-only in ast_settings). Current source: <strong id="s-keysrc">…</strong></small></label><input class="ast-input" id="s-key" type="password" placeholder="sk-ant-… (leave blank to keep)"></div>
+      <div class="ast-field"><label class="ast-label">Anthropic credential<small>Read only from the ANTHROPIC_API_KEY edge-function secret (Supabase → Edge Functions → Secrets). It is never stored in the database or entered here.</small></label><p class="ast-p ast-small" id="s-keysrc">…</p></div>
       <label class="ast-check"><input type="checkbox" id="s-auto"> <span><strong>Auto-release free findings without review.</strong> Off by default. Turn on only after you trust the drafts.</span></label>
       <div class="ast-actions"><button class="tsa-btn tsa-btn--primary" id="s-save">Save settings</button><span class="ast-note" id="s-msg"></span></div>
     </div>
@@ -173,13 +173,12 @@
       function loadSettings() {
         api({ action: "settings_get" }).then(function (s) {
           $("s-stripe").value = s.stripe_payment_link || ""; $("s-model").value = s.anthropic_model || ""; $("s-auto").checked = s.auto_release_free_finding === "true";
-          $("s-keysrc").textContent = s.anthropic_key_source === "secret" ? "edge-function secret" : s.anthropic_key_source === "settings" ? "pasted key (ast_settings)" : "MISSING — drafts will fail until set";
-          $("s-key").value = ""; show("settings");
+          $("s-keysrc").textContent = s.anthropic_configured ? "Anthropic configured — machine drafts enabled." : "Not configured — machine drafts are disabled until the secret is set.";
+          show("settings");
         }).catch(fail);
       }
       $("s-save").onclick = function () {
         var body = { action: "settings_set", stripe_payment_link: $("s-stripe").value, anthropic_model: $("s-model").value, auto_release_free_finding: $("s-auto").checked ? "true" : "false" };
-        if ($("s-key").value.trim()) body.anthropic_api_key = $("s-key").value.trim();
         api(body).then(function () { $("s-msg").textContent = "Saved."; loadSettings(); }).catch(fail);
       };
 

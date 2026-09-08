@@ -141,11 +141,11 @@ Deno.serve(async (req: Request) => {
         const keys = ["stripe_payment_link", "anthropic_model", "auto_release_free_finding"];
         const out: Record<string, string | null> = {};
         for (const k of keys) out[k] = await getSetting(k);
-        out.anthropic_key_source = Deno.env.get("ANTHROPIC_API_KEY") ? "secret" : (await getSetting("anthropic_api_key")) ? "settings" : "missing";
-        return json(out);
+        // Boolean only: the credential itself never leaves the server.
+        return json({ ...out, anthropic_configured: Boolean(Deno.env.get("ANTHROPIC_API_KEY")) });
       }
       case "settings_set": {
-        const allowed = ["stripe_payment_link", "anthropic_model", "auto_release_free_finding", "anthropic_api_key"];
+        const allowed = ["stripe_payment_link", "anthropic_model", "auto_release_free_finding"];
         for (const k of allowed) if (typeof b[k] === "string") await setSetting(k, String(b[k]).trim());
         return json({ ok: true });
       }

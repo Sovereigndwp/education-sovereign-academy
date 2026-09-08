@@ -116,13 +116,15 @@ function userPrompt(sub: Record<string, unknown>): string {
   return lines.join("\n");
 }
 
-async function apiKey(): Promise<string | null> {
-  return Deno.env.get("ANTHROPIC_API_KEY") ?? (await getSetting("anthropic_api_key"));
+/** The provider credential is read from the server-side environment only (edge-function secret).
+ *  There is deliberately no database or UI fallback: provider keys never live in application tables. */
+function apiKey(): string | null {
+  return Deno.env.get("ANTHROPIC_API_KEY") ?? null;
 }
 
 export async function runAnalysis(sub: Record<string, unknown>): Promise<Draft> {
-  const key = await apiKey();
-  if (!key) throw new Error("No ANTHROPIC_API_KEY configured (set the edge-function secret, or paste a key in Review → Settings).");
+  const key = apiKey();
+  if (!key) throw new Error("Model generation is disabled: the ANTHROPIC_API_KEY edge-function secret is not set. Add it in Supabase → Edge Functions → Secrets, then use Re-run machine draft.");
   const model = (await getSetting("anthropic_model")) || "claude-sonnet-4-5";
 
   const content: unknown[] = [];

@@ -42,9 +42,9 @@ finding (one click, or flip `auto_release_free_finding` when the drafts earn tru
 ## Setup — two things only Dalia can do
 
 1. **Anthropic API key.** Supabase → Edge Functions → Secrets → `ANTHROPIC_API_KEY`.
-   (Fallback: paste it in Review → Settings; stored service-role-only in `ast_settings`.)
+   This is the only place the credential can live: there is no database or UI fallback by design.
    Until set, submissions still land; drafts fail with a clear message; *Re-run machine draft*
-   works once the key exists.
+   works once the secret exists. Review → Settings shows only whether it is configured.
 2. **Stripe Payment Link** (optional but recommended): Stripe → Payment Links → one-time $49,
    "Assessment Stress Test — complete". Paste the URL in Review → Settings.
 
