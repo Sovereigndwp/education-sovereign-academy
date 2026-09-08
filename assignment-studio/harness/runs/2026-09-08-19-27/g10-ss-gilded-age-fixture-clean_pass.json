@@ -1,0 +1,122 @@
+{
+  "id": "g10-ss-gilded-age",
+  "fixture": {
+    "file": "fixtures/support-clean-pass.md",
+    "mode": "support",
+    "kind": "clean_pass",
+    "why": "Documents untouched; vocabulary glossed beside the text; sourcing table and a planning table that structure but do not answer; item 2 and item 4 still require the student's own inference; POV weighting and the two-paragraph product kept; same six rubric points.",
+    "expected": {
+      "preservation": "PASS",
+      "usefulness": "USEFUL",
+      "adversarial": [
+        "WEAKENED",
+        "UNDERMINED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "all findings kind=held; no block/review severity",
+      "usefulness": "editing none/minor; grading same; improves_original true",
+      "adversarial": "a Support version of a take-home document analysis is expected to be shortcut-able; the verdict is recorded to calibrate the adversarial audit, not to fail the fixture"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:28:15.820Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "PASS",
+      "findings": [
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The learning target requires students to understand that 'Historical sources are arguments made by people with positions' and to 'weigh evidence by sourcing and point of view.' The transformed version preserves this entirely: students must still source both documents (Part A Q1), extract contrasting causal explanations (Part A Q2), analyze word choice for attitude (Part A Q3), explain why each author wrote as they did given their position (Part A Q4), and construct an argument that accounts for conflicting sources while contextualizing with outside development (Part B). The vocabulary glosses ('administration of wealth = how money is managed and used') do not give away the sourcing, causal explanations, or the analytical work—they only reduce language barrier.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The contract requires: 'Source each document (author, date, audience, purpose); extract and contrast each author's causal explanation; read word choice for attitude; explain why each author would write as they did given their position; construct an argument that accounts for conflicting sources and contextualizes them with a specific development.' Every element remains: Q1 requires sourcing (table format instead of 'one line each' is a formatting adaptation); Q2 requires extracting and contrasting causal explanations ('where each author says that gap came from'); Q3 requires reading word choice for attitude; Q4 requires explaining why each wrote as they did given their position; Part B requires constructing an argument accounting for both documents with explicit POV weighting and outside d",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The contract specifies 'Part A: four short answers with correct sourcing and a contrast of the two causal explanations, a word/phrase from each with explanation, and a purpose statement for each author. Part B: two paragraphs with a position covering both documents, at least one piece of evidence from each, explicit weighting by point of view, and one accurate outside development.' The transformed version requires exactly this: Part A has four questions producing sourcing (Q1 table), contrasted causal explanations (Q2), word/phrase with explanation (Q3), and purpose/position explanation (Q4). Part B explicitly requires 'two paragraphs' with all specified elements. The planning table is an organizational scaffold that does not substitute for the required evidence—students must still produce",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All constraints met: '45 minutes' stated in header; 'paper' format preserved (tables and fill-ins work on paper); 'two-paragraph response' explicitly required in Part B instructions ('Now write two paragraphs'); 'graded on the stated 6-point rubric' reproduced verbatim; 'the documents may not be changed' — both documents are identical word-for-word to the original, with only vocabulary glosses added below each (permitted vocabulary support under MAY ADAPT).",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All factual and historical content preserved accurately. Documents unchanged. Vocabulary glosses are accurate: 'administration of wealth' correctly glossed as 'how money is managed and used'; 'deplored' as 'regretted, disapproved of'; 'ermine of the bench' as 'the robes of judges (i.e., the courts)'; 'the fruits of the toil' as 'what people's work produces.' Examples in planning table (Homestead strike 1892, Pullman strike 1894, 1893 depression, farm debt, growth of trusts) are historically accurate and appropriate to the period.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "PASS. All contract elements held. The transformation adds vocabulary support (glosses for period-specific and academic language), converts response formats to tables and fill-in-the-blank structures, and provides an optional planning table for Part B—all permitted adaptations under SUPPORT mode. No element of the learning target, required thinking, or required evidence has been removed, weakened, substituted, or given away. Students must still perform all sourcing, extract and contrast causal explanations, analyze word choice, explain authorial purpose from position, and construct a two-paragraph argument with POV weighting and outside contextualization. The planning table structures but does not answer the Part B requirements. Documents unchanged per teacher constraint. All factual conten"
+    },
+    "usefulness": {
+      "verdict": "USEFUL",
+      "clarity": 3,
+      "feasibility": 3,
+      "editing_required": "none",
+      "grading_burden": "same",
+      "improves_original": true,
+      "notes": [
+        "The sourcing table in Part A.1 is clearer to complete than the original's 'one line each' instruction — students know exactly where to write.",
+        "The vocabulary glosses ('Words to know') after each document save class time that would otherwise go to clarifying terms like 'ermine of the bench' or 'squalor.'",
+        "The planning table before Part B.5 organizes the four required elements visibly; students can check they have all parts before drafting, reducing incomplete responses.",
+        "Grading burden remains the same: the table in A.1 yields the same information as three lines; the planning table is not graded and produces the same two-paragraph response."
+      ],
+      "ignored_validity_notes": [
+        "The planning table in Part B explicitly lists the four scoring elements (position, evidence from each document, point of view weighting, outside development), which could function as a checklist rather than requiring students to synthesize the rubric themselves — this may reduce the cognitive demand of planning, though the writing task itself remains unchanged."
+      ]
+    },
+    "adversarial": {
+      "verdict": "UNDERMINED",
+      "cheapest_path": "The student photographs both documents and the assignment sheet, pastes them into an AI chat, and asks: 'Fill in the table in Part A, answer questions 2-4, then fill in the planning table and write the two paragraphs for Part B. Make it sound like a 10th grader wrote it.' The student copies all answers onto the paper and hands it in. Total time: 5-8 minutes of copying.",
+      "steps": [
+        "Photograph or copy-paste the two documents and all questions",
+        "Prompt AI: 'Answer all these questions about these documents. Fill in the sourcing table, answer the questions about where the gap came from, identify words showing attitude, explain why each author wrote their document, then fill in the planning table and write two paragraphs answering the question. Make it sound like a high school student.'",
+        "Copy the AI's table entries, short answers, planning table, and paragraphs onto the paper",
+        "Hand in"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing. The planning table is visible on the hand-in but was filled by AI, not by the student's thinking. The table does not force any choice or commitment that would expose hollow work—it simply organizes what the AI already generated. No element requires the student to do the sourcing, contrasting, word analysis, or argument construction themselves.",
+      "what_is_bypassed": "All required thinking: sourcing the documents (author, date, audience, purpose); extracting and contrasting causal explanations; reading word choice for attitude; explaining why each author would write as they did given their position; constructing an argument that accounts for conflicting sources and contextualizes them. The student never engages with the documents' arguments, never weighs evidence by point of view, never constructs their own historical reasoning.",
+      "repair_hint": "Add a 3-minute in-class checkpoint before Part B: the teacher calls on 8 students at random to state aloud (1) their position in one sentence, and (2) which outside development they will use. Students write these on a sign-in sheet with their name before beginning Part B. This forces a committed choice that the final paragraphs must match, making it visible if the student generates the argument afterward.",
+      "independent_check": false,
+      "independent_check_what": ""
+    }
+  },
+  "verdicts": {
+    "preservation": "PASS",
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED"
+  }
+}

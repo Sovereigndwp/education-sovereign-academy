@@ -1,0 +1,34 @@
+# Author's Point of View — Evidence Paragraph
+
+**Grade 8 English Language Arts · Informational Text · One class period**
+
+Read the passage. Then complete the task below.
+
+---
+
+### The Bridge on Mill Street
+
+The Mill Street bridge is ninety-one years old, and for most of those years nobody thought about it at all. It carried farm trucks, then school buses, then the commuters who now cross it twice a day without looking down. Last spring an inspection report gave it a rating of "poor," and the town council scheduled a vote on whether to repair it or replace it with a wider concrete span.
+
+The case for replacement is simple, and the council's engineer made it in eleven minutes. The steel is tired. The deck is narrow enough that two delivery vans cannot pass without one of them slowing to a crawl. Repair would cost about two-thirds of what a new bridge costs and would buy, in the engineer's estimate, twenty more years. A new bridge would last seventy-five.
+
+What the engineer did not mention is that the Mill Street bridge is the only place in town where you can stand over moving water. Children drop leaves from the upstream rail and run across to watch them come out the other side. Every graduating class since 1974 has taken its photograph on it. The wider concrete span in the proposal has no sidewalk on the upstream side at all.
+
+None of this appears in the inspection report, because inspection reports measure steel. They do not measure what a town does on a bridge, or what it would stop doing if the bridge became a road that happens to cross a river. The council will vote in March. The numbers are on one side. I am not sure the numbers are the only thing that should be counted.
+
+---
+
+### Task
+
+In one well-developed paragraph (8–12 sentences), answer this question:
+
+**What is the author's point of view on replacing the Mill Street bridge, and how does the author respond to the opposing case?**
+
+Your paragraph must:
+
+- State the author's point of view in your own words (do not just say "the author is against it").
+- Quote or closely paraphrase **two** pieces of textual evidence that reveal the author's point of view.
+- For each piece of evidence, explain **how** it shows the author's position (word choice, contrast, placement, or what the author chooses to include).
+- Explain how the author **acknowledges and responds to** the engineer's case for replacement.
+
+**Scoring (4-point rubric):** Point of view clearly stated and accurate (1) · Two relevant pieces of evidence (1) · Explanation connects each piece of evidence to the point of view (1) · Accurately describes how the author handles the opposing view (1).

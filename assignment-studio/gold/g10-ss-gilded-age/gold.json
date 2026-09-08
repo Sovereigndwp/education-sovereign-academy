@@ -1,0 +1,188 @@
+{
+  "id": "g10-ss-gilded-age",
+  "cell": {
+    "grade": "Grade 10",
+    "subject": "History / Social Studies",
+    "archetype": "primary-source comparison + argument (sourcing, POV, contextualization)"
+  },
+  "title": "Two Views of Wealth in the Gilded Age — Document Analysis",
+  "license": "Task original (CC-BY 4.0 The Sovereign Academy). Excerpts are public-domain primary sources: Andrew Carnegie, 'Wealth', North American Review vol. 148 no. 391, June 1889; Preamble to the Omaha Platform, People's Party national convention, Omaha, 4 July 1892. Both excerpts were checked against published primary-source transcriptions by the owner on 2026-09-08; ellipses mark omissions.",
+  "answer_key": {
+    "1": "Doc 1: Andrew Carnegie, 1889, educated/elite readers of a national review (and, implicitly, fellow industrialists). Doc 2: People's Party (Populist) convention, 1892, farmers, laborers, and voters — a platform is a public appeal.",
+    "2": "Doc 1: the gap is the natural, beneficial by-product of industrial progress ('civilization'); Doc 2: the gap is produced by injustice and corruption — fortunes are 'stolen' through a captured government.",
+    "3": "Doc 1 examples: 'not to be deplored, but welcomed', 'irregularity' (a neutral word for inequality), 'highly beneficial'. Doc 2 examples: 'stolen', 'colossal', 'despise the Republic', 'tramps and millionaires' (pairing implies one produces the other).",
+    "4": "Carnegie: a steel magnate justifying his own fortune while proposing that the rich administer wealth for the public good (the 'Gospel of Wealth'); Populists: a party of indebted farmers and workers seeking government action (railroad regulation, silver, income tax) — the platform's purpose is to indict the system.",
+    "5": "Any defensible position that uses both documents, weighs each by POV (Carnegie's self-interest; the platform's political purpose), and connects to a period development accurately (e.g. Homestead 1892, Pullman 1894, Panic of 1893, trusts / Sherman Act 1890, farm debt and deflation)."
+  },
+  "contract": {
+    "learning_target": "Historical sources are arguments made by people with positions: the same fact (the wealth gap) is explained differently depending on the author's interests and audience, and a historian weighs evidence by sourcing and point of view before using it to answer a question about the period.",
+    "required_thinking": "Source each document (author, date, audience, purpose); extract and contrast each author's causal explanation; read word choice for attitude; explain why each author would write as they did given their position; construct an argument that accounts for conflicting sources and contextualizes them with a specific development from the period.",
+    "required_evidence": "Part A: four short answers with correct sourcing and a contrast of the two causal explanations, a word/phrase from each with explanation, and a purpose statement for each author. Part B: two paragraphs with a position covering both documents, at least one piece of evidence from each, explicit weighting by point of view, and one accurate outside development.",
+    "teacher_constraints": "45 minutes; paper; two-paragraph response; graded on the stated 6-point rubric; the documents may not be changed."
+  },
+  "notes_for_reviewer": "The construct is sourcing + point of view + contextualization with contradictory evidence. Item 4 and rubric point 4 (POV used to weigh evidence) are the difficult parts. Support may scaffold sourcing (a HIPP-style table) but may not answer item 2 or pre-label the authors' positions. Documents are a hard constraint: no version may paraphrase, shorten further, or 'simplify' the excerpts — only gloss vocabulary beside them. Correctness gate: any outside-development example the engine adds must be historically accurate and dated correctly.",
+  "mode_boundaries": {
+    "support": {
+      "pass_looks_like": [
+        "A sourcing table (Who / When / To whom / Why) per document that the student fills in; vocabulary glosses (ermine of the bench = judges; squalor; administration of wealth) placed beside the text, not replacing it.",
+        "Part B broken into a plan (position → Doc 1 evidence + weight → Doc 2 evidence + weight → outside development) before the two paragraphs; paragraphs still required.",
+        "A list of candidate outside developments with dates is acceptable (recall support), provided the student still has to choose and connect one.",
+        "Plainer question wording; same six rubric points."
+      ],
+      "violation_looks_like": [
+        "Stating in directions that Carnegie defends wealth and the Populists attack it (answers item 2 and 4).",
+        "Excerpts paraphrased into modern English or cut down.",
+        "Part B reduced to one paragraph or a graphic organiser as the final product when the rubric scores organization and clarity of a two-paragraph response.",
+        "Removal of the POV-weighting requirement."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "UNDERMINED",
+          "SURVIVES"
+        ],
+        "note": "A Support version is not expected to resist AI; adversarial verdict is recorded, not judged, unless it triggers a repair that then breaks preservation."
+      }
+    },
+    "advanced": {
+      "pass_looks_like": [
+        "Ambiguity introduced: 'Carnegie and the Populists agree on more than they admit — argue for or against, using the documents.'",
+        "Reliability as an interacting variable: which document is better evidence of what ordinary Americans believed, and why is that a different question from which author is right?",
+        "Transfer: predict how each author would explain the Panic of 1893, and what in the text supports the prediction.",
+        "Same documents; may compress Part A into two questions and deepen Part B; rubric mapping stated."
+      ],
+      "violation_looks_like": [
+        "A third and fourth document added with the same questions.",
+        "Longer response requirement with no new intellectual demand.",
+        "Drift into a research essay or unrelated era."
+      ],
+      "expected_statuses": {
+        "learning_target": [
+          "PRESERVED",
+          "INTENTIONALLY_EXTENDED"
+        ],
+        "required_thinking": "INTENTIONALLY_EXTENDED",
+        "required_evidence": [
+          "INTENTIONALLY_EXTENDED",
+          "PRESERVED"
+        ],
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "SURVIVES",
+          "UNDERMINED"
+        ],
+        "note": "Advanced is judged on depth; adversarial recorded."
+      }
+    },
+    "visible": {
+      "pass_looks_like": [
+        "Before reading Doc 2: 'Predict — will a farmers' party explain the wealth gap the same way Carnegie does? What makes you think so?' — then compare after.",
+        "In Part B, the student states which document they gave LESS weight and the one reason; and names one piece of evidence they decided not to use and why.",
+        "A two-line verification: 'Re-read your outside development. Write its year. Does it fall between 1877 and 1900?'",
+        "Rubric unchanged; additions read, not scored."
+      ],
+      "violation_looks_like": [
+        "Timed in-class handwriting or oral defence as the verification mechanism.",
+        "Reflection longer than the argument.",
+        "'AI-proof' or 'AI-resistant' claims.",
+        "Extra grading that doubles the read time per paper."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "teacher_constraints": "PRESERVED",
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "SURVIVES",
+          "WEAKENED"
+        ],
+        "note": "Visible must not come back UNDERMINED after its one repair cycle; if it does, that is a finding about the mode, not the case."
+      }
+    }
+  },
+  "fixtures": [
+    {
+      "file": "fixtures/support-clean-pass.md",
+      "mode": "support",
+      "kind": "clean_pass",
+      "why": "Documents untouched; vocabulary glossed beside the text; sourcing table and a planning table that structure but do not answer; item 2 and item 4 still require the student's own inference; POV weighting and the two-paragraph product kept; same six rubric points.",
+      "expected": {
+        "preservation": "PASS",
+        "usefulness": "USEFUL",
+        "adversarial": [
+          "WEAKENED",
+          "UNDERMINED"
+        ]
+      },
+      "expected_evidence": {
+        "preservation": "all findings kind=held; no block/review severity",
+        "usefulness": "editing none/minor; grading same; improves_original true",
+        "adversarial": "a Support version of a take-home document analysis is expected to be shortcut-able; the verdict is recorded to calibrate the adversarial audit, not to fail the fixture"
+      }
+    }
+  ],
+  "provenance": {
+    "doc1": {
+      "source": "Andrew Carnegie, 'Wealth', North American Review, June 1889",
+      "status": "checked against published primary-source transcription",
+      "checked_by": "owner",
+      "checked_on": "2026-09-08"
+    },
+    "doc2": {
+      "source": "Preamble, Omaha Platform, People's Party, 4 July 1892",
+      "status": "checked against published primary-source transcription",
+      "checked_by": "owner",
+      "checked_on": "2026-09-08"
+    }
+  }
+}

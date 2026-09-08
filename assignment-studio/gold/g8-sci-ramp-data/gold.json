@@ -1,0 +1,178 @@
+{
+  "id": "g8-sci-ramp-data",
+  "cell": {
+    "grade": "Grade 8",
+    "subject": "Science",
+    "archetype": "data interpretation + CER (MS-PS3-1 / MS-PS3-5)"
+  },
+  "title": "Ramp Height and Cart Speed — Data Analysis (CER)",
+  "license": "Original; data constructed to be consistent with v ≈ k·√h (ideal v = √(2gh) with modest, roughly constant fractional loss to friction). CC-BY 4.0 The Sovereign Academy.",
+  "answer_key": {
+    "1": "Averages: 10 cm → 1.30; 20 cm → 1.84; 30 cm → 2.25; 40 cm → 2.60 m/s.",
+    "2": "Curve rising and flattening (concave down), not a straight line through the origin.",
+    "3": "Speed increases with release height, but less than proportionally (doubling height does not double speed).",
+    "4": "10→20 cm: 1.30→1.84 (×≈1.4, not ×2); 20→40 cm: 1.84→2.60 (×≈1.4, not ×2).",
+    "5": "Higher release → more gravitational potential energy (GPE ∝ height) → more of it is transferred to kinetic energy at the bottom (in an ideal, frictionless model all of it; in the real cart a roughly constant fraction is lost to friction and air resistance). Because KE depends on speed squared, doubling the energy multiplies speed by about √2 ≈ 1.4, not 2. (Grade-8 acceptable: 'the energy doubles but the speed does not, because kinetic energy grows faster than speed'.)",
+    "6": "Disagree. Pattern shows ×≈1.4 per doubling; 80 cm ≈ 2.60 × 1.4 ≈ 3.7 m/s, not 5.2.",
+    "7": "≈ 2.9 m/s by extrapolation just beyond the measured range (accept 2.85–2.95 with a method: √(50/40)·2.60 ≈ 2.91, or extending a smooth curve; a straight-line extension giving ≈2.95 is acceptable if the student notes the curve is flattening). Credit the stated method and the acknowledgement that 50 cm lies outside the data."
+  },
+  "contract": {
+    "learning_target": "Releasing the cart from higher up gives it more gravitational potential energy, which is transferred to kinetic energy on the way down (all of it in an ideal frictionless model; most of it in the real cart). Because kinetic energy depends on speed squared, speed grows roughly with the square root of release height — it increases with height but not proportionally to it.",
+    "required_thinking": "Compute and graph averages; identify a non-linear pattern from the numbers (compare ratios, not just 'it goes up'); construct a claim supported by specific data; explain the pattern with an energy-transfer model; use the pattern to evaluate a proportional-reasoning misconception and to extrapolate a prediction just beyond the measured range, stating the method.",
+    "required_evidence": "Correct averages; a labelled graph; a claim sentence; at least two quoted data comparisons including the two doublings; reasoning that names GPE→KE transfer and the speed-squared relationship in some grade-appropriate form; an explicit disagreement with the 'twice as fast' claim backed by the ×1.4 pattern; a prediction near 2.9 m/s for 50 cm with a stated method (extrapolation).",
+    "teacher_constraints": "30 minutes; paper; graph sketched by hand; CER format for Part 2."
+  },
+  "notes_for_reviewer": "The difficult part is item 6 — recognising that the data contradict proportional reasoning. Item 7 is extrapolation (50 cm is beyond the measured 10–40 cm), and the method matters more than the number. A Support version that changes the data to be linear, or tells students 'notice speed does not double', has removed the construct. Items 1–2 are procedural on purpose; Support may reduce them (e.g. pre-fill two of four averages) without touching the CER. Correctness gate: any regenerated numbers must be recomputed and stay consistent with the √h pattern; any energy statement must not claim all GPE becomes KE in the real cart without naming the ideal model.",
+  "mode_boundaries": {
+    "support": {
+      "pass_looks_like": [
+        "Averages partially pre-filled (e.g. 10 cm and 30 cm) so students still practise the computation but spend time on the CER; graph axes pre-drawn and scaled.",
+        "CER sentence frames that structure ('When the height went from ___ to ___, the speed went from ___ to ___, which is ___ times as fast') without supplying the ×1.4 conclusion.",
+        "Vocabulary glossed: potential energy, kinetic energy, photogate, proportional.",
+        "Item 6 kept as an evaluation of the student's claim; item 7 kept as an extrapolation with a stated method."
+      ],
+      "violation_looks_like": [
+        "Data altered to a linear pattern, or the table extended to include 50 cm or 80 cm (answers to 6/7 placed in the data).",
+        "Directions that state the relationship ('Speed increases by about 1.4 times each time height doubles').",
+        "Item 6 reduced to yes/no with no explanation, or item 5 reduced to 'name two kinds of energy'.",
+        "Any average recomputed incorrectly."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "UNDERMINED",
+          "SURVIVES"
+        ],
+        "note": "A Support version is not expected to resist AI; adversarial verdict is recorded, not judged, unless it triggers a repair that then breaks preservation."
+      }
+    },
+    "advanced": {
+      "pass_looks_like": [
+        "Students derive the multiplicative rule themselves and test it (does 10→40 give ×2? 1.30×2 = 2.60 ✓) then generalise: 'what height gives 3.0 m/s?'.",
+        "Interacting variable: a second cart with twice the mass — predict and justify (same speed, more energy) — with the prerequisite GPE/KE ideas still central.",
+        "Ask what the data would look like with no friction and why the measured speeds fall short of the ideal; or ask for the trial spread as evidence quality.",
+        "Fewer procedural items; averages may be given."
+      ],
+      "violation_looks_like": [
+        "Adding four more heights to average.",
+        "Requiring the formula v = √(2gh) with no reasoning (recall substituted for reasoning).",
+        "Drift into unrelated topics (momentum, circuits)."
+      ],
+      "expected_statuses": {
+        "learning_target": [
+          "PRESERVED",
+          "INTENTIONALLY_EXTENDED"
+        ],
+        "required_thinking": "INTENTIONALLY_EXTENDED",
+        "required_evidence": [
+          "INTENTIONALLY_EXTENDED",
+          "PRESERVED"
+        ],
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "SURVIVES",
+          "UNDERMINED"
+        ],
+        "note": "Advanced is judged on depth; adversarial recorded."
+      }
+    },
+    "visible": {
+      "pass_looks_like": [
+        "Prediction before computing: 'Before you average anything, predict: if height doubles, does speed double? Circle yes/no.' Then item 6 asks the student to compare with their prediction.",
+        "Item 7 requires showing the method (ratio, curve extension, or √ rule) — the method is what is graded, the number is checked; the student should note that 50 cm is outside the measured range.",
+        "A two-line verification: 'Check your 50 cm prediction against the 40 cm and 30 cm values — does it sit where the curve says it should?'",
+        "Personalised input acceptable: each student is assigned one 'mystery height' (45, 55, 60 cm) from a list with a teacher key."
+      ],
+      "violation_looks_like": [
+        "A lab-notebook style log of every step.",
+        "'Do this in class with no devices' as the verification mechanism.",
+        "Any AI-proof claim.",
+        "Grading burden doubled (e.g. a full explanation for every one of 12 averages)."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "teacher_constraints": "PRESERVED",
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "SURVIVES",
+          "WEAKENED"
+        ],
+        "note": "Visible must not come back UNDERMINED after its one repair cycle; if it does, that is a finding about the mode, not the case."
+      }
+    }
+  },
+  "fixtures": [
+    {
+      "file": "fixtures/visible-apparent-resistance-bypassable.md",
+      "mode": "visible",
+      "kind": "apparent_ai_resistance_bypassable",
+      "why": "Personalised height, 'in your own words', 'do not copy the textbook', and an honesty signature look like AI-resistance. None of it changes the cheapest path: photograph the sheet, tell the AI your digit, ask for a 13-year-old's voice. The signal is undermined; the only thing that would have helped (a prediction before computing, a two-line in-class verification) is absent. Also a mode violation: the honesty statement is 'inconvenience confused with validity'.",
+      "expected": {
+        "preservation": [
+          "REVIEW",
+          "BLOCK"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": "UNDERMINED"
+      },
+      "expected_evidence": {
+        "adversarial": "cheapest_path mentions pasting/photographing the table and supplying the personal digit; cost trivial or low; repair_hint proposes a prediction-before-data or in-class verification, not detection",
+        "preservation": "note on the MUST-NOT 'confuse inconvenience with assessment validity' / 'claim to be AI-proof'"
+      }
+    }
+  ]
+}

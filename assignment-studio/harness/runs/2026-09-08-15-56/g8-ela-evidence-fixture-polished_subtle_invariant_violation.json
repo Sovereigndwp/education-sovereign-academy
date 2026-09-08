@@ -1,0 +1,107 @@
+{
+  "id": "g8-ela-evidence",
+  "fixture": {
+    "file": "fixtures/support-polished-violation.md",
+    "mode": "support",
+    "kind": "polished_subtle_invariant_violation",
+    "why": "Clean, well-scaffolded, keeps the passage and the rubric — but Step 1 states the author's position for the student and Step 2 pre-selects candidate evidence (three of five options are the answer). The construct — inferring an unstated position from technique and selecting evidence that reveals it — is done by the worksheet. required_thinking and 'give away reasoning being assessed' are violated.",
+    "expected": {
+      "preservation": "BLOCK",
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "UNDERMINED",
+        "WEAKENED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "finding on required_thinking (or learning_target) kind=exceeded severity=block quoting Step 1 'The author believes the town should think carefully…' and/or Step 2's evidence bank",
+      "usefulness": "should still look usable — this is the point: usefulness and validity must be judged separately"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T15:58:39.818Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-06-v1",
+    "preservation": {
+      "verdict": "BLOCK",
+      "findings": [
+        {
+          "invariant": "required_thinking",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 1 states: 'The author believes the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out.' This directly provides the inference that students are required to make themselves. The original requires students to 'Infer an unstated-but-signalled position from the text' and 'State the author's point of view in your own words (do not just say \"the author is against it\").' The transformed version gives away the position before asking students to state it.",
+          "severity": "block"
+        },
+        {
+          "invariant": "required_thinking",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 2 provides a multiple-choice selection of quotations, removing the requirement to 'select evidence that reveals the position (not merely mentions the topic).' The original requires students to identify which textual evidence reveals point of view; the transformed version pre-selects five options, doing the discrimination work for them. Note that 'The steel is tired' and 'A new bridge would last seventy-five' are from the engineer's case, not evidence of the author's position—including these as options suggests students need only pick any two, not identify which ones actually reveal the author's view.",
+          "severity": "block"
+        },
+        {
+          "invariant": "required_thinking",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 3 provides sentence frames ('The author includes this because it shows ______') that do not require students to 'explain the mechanism by which each piece of evidence signals the position (word choice, framing/selected detail, contrast, inclusion/omission, placement).' The original requires naming a specific technique; the transformed version allows generic completion without identifying HOW the technique works.",
+          "severity": "block"
+        },
+        {
+          "invariant": "required_thinking",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 4 states: 'The engineer's case for replacement is that the bridge is old and narrow, and a new bridge would last longer.' This summarizes the opposing case for students, removing the requirement to 'describe how the author treats the counter-case (acknowledge, concede, respond).' Students must only fill in a sentence frame rather than identify and describe the author's treatment of the opposition.",
+          "severity": "block"
+        },
+        {
+          "invariant": "must_not_give_away_reasoning",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "The transformation violates the rule 'give away reasoning being assessed.' Step 1 explicitly states the author's position that students are supposed to infer. Steps 2-4 provide the analytical framework and content, leaving only mechanical sentence completion. The original assesses whether students can infer position, select revealing evidence, and explain mechanisms; the transformed version provides these elements and assesses only whether students can copy and complete frames.",
+          "severity": "block"
+        }
+      ],
+      "summary": "BLOCK. The transformed version systematically removes the core analytical work. It states the author's position (which students must infer), pre-selects evidence options (which students must identify), provides generic explanation frames without requiring technique identification, and summarizes the opposing case. These changes convert an inference and analysis task into a sentence-completion exercise, violating multiple MUST PRESERVE elements and the prohibition against giving away assessed reasoning."
+    },
+    "usefulness": {
+      "verdict": "NOT_USEFUL",
+      "clarity": 2,
+      "feasibility": 1,
+      "editing_required": "substantial",
+      "grading_burden": "same",
+      "improves_original": false,
+      "notes": [
+        "Step 2 provides five pre-selected quotations, but three of them do NOT reveal the author's point of view (e.g., 'The steel is tired' and 'A new bridge would last seventy-five' are neutral facts from the engineer's case). A student could select two wrong quotations and still fill the boxes, defeating the learning target of 'select evidence that reveals the position.'",
+        "Step 1 gives away the author's position in the prompt ('the bridge matters to the town in ways the engineer's report leaves out'), eliminating the required thinking to 'infer an unstated-but-signalled position.' Students now copy rather than infer.",
+        "Step 3 sentence stem 'The author includes this because it shows ______' does not prompt the required mechanism (word choice, framing, contrast, placement, inclusion/omission). A student can write 'it shows the bridge is important' without naming a technique.",
+        "Feasibility issue: Steps 1–5 require students to write in five separate locations, then 'copy your five sentences...into one paragraph' in Step 5. This doubles the writing task and does not fit a single class period for struggling writers (the Support mode target).",
+        "The rubric remains identical but the scaffolding does not ensure students meet it—pre-selected evidence includes wrong answers, and the stems do not require technique-naming, so a 4/4 under this version would not match a 4/4 under the original."
+      ]
+    },
+    "adversarial": {
+      "verdict": "UNDERMINED",
+      "cheapest_path": "The student photographs the worksheet, pastes it into an AI chat, and asks: 'Fill in all the blanks in this worksheet. Use simple 8th grade language.' The AI completes all five fill-in-the-blank sentences. The student copies these sentences into a paragraph, adds a generic closing sentence ('In conclusion, the author makes us think about what matters.'), and hands it in. Total time: 3-4 minutes.",
+      "steps": [
+        "Photograph or screenshot the worksheet",
+        "Paste into ChatGPT/Claude with prompt: 'Fill in all the blanks. Use 8th grade language.'",
+        "Copy the AI's completed sentences",
+        "Paste them together as a paragraph",
+        "Add one closing sentence",
+        "Hand in"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing meaningful survives. The evidence selection is from a multiple-choice list (no inference required). The 'explain how' blanks accept any plausible completion without requiring the student to identify the technique. The author's position is pre-stated in Step 1's instructions. The opposing case summary is provided in Step 4. An AI can complete all blanks with generic, credit-earning responses without the student reading the passage or doing any of the required thinking.",
+      "what_is_bypassed": "All required thinking is bypassed: (1) inferring the unstated position from the text — the position is given in Step 1's instructions; (2) selecting evidence that reveals the position — the evidence is in a multiple-choice list; (3) explaining the mechanism by which evidence signals position — the blanks accept any plausible explanation without requiring technique identification; (4) describing how the author treats the counter-case — the counter-case is summarized in Step 4's instructions. The student never identifies word choice, framing, contrast, inclusion/omission, or placement as required by the learning contract.",
+      "repair_hint": "Remove Step 1's pre-statement of the author's position. In Step 2, require students to find and copy their own two quotations from the passage (no multiple choice). In Step 3, require students to name which technique each piece of evidence uses (word choice/framing/contrast/inclusion-omission/placement) before explaining it. Remove Step 4's summary of the engineer's case — require students to identify it themselves."
+    }
+  },
+  "verdicts": {
+    "preservation": "BLOCK",
+    "usefulness": "NOT_USEFUL",
+    "adversarial": "UNDERMINED"
+  }
+}

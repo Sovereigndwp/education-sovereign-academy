@@ -1,0 +1,170 @@
+{
+  "id": "g8-ela-evidence",
+  "fixture": {
+    "file": "fixtures/support-polished-violation.md",
+    "mode": "support",
+    "kind": "polished_subtle_invariant_violation",
+    "why": "Clean, well-scaffolded, keeps the passage and the rubric — but Step 1 states the author's position for the student and Step 2 pre-selects candidate evidence (three of five options are the answer). The construct — inferring an unstated position from technique and selecting evidence that reveals it — is done by the worksheet. required_thinking and 'give away reasoning being assessed' are violated.",
+    "expected": {
+      "preservation": "BLOCK",
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "UNDERMINED",
+        "WEAKENED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "finding on required_thinking (or learning_target) kind=exceeded severity=block quoting Step 1 'The author believes the town should think carefully…' and/or Step 2's evidence bank",
+      "usefulness": "should still look usable — this is the point: usefulness and validity must be judged separately"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:32:42.322Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "BLOCK",
+      "findings": [
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 1 states the author's position explicitly: 'The author believes the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out.' The contract requires students to 'Infer an unstated-but-signalled position from the text' — this inference is now given away in the directions.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 2 provides a multiple-choice list of five pre-selected quotations. The contract requires students to 'select evidence that reveals the position (not merely mentions the topic)' — the selection work is now done for them. Students choose from a curated list rather than searching the full text and judging relevance.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "must_not",
+          "rule": "give away reasoning being assessed",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "Step 1 gives away the assessed reasoning: 'The author believes the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out.' This is the inference students are supposed to construct from textual evidence.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "must_not",
+          "rule": "substitute recall for analysis/application",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "Step 2 converts evidence selection from analysis (judging which textual details reveal the unstated position) into recall (recognizing pre-identified quotations from a list of five). The contract explicitly requires 'select evidence that reveals the position (not merely mentions the topic)' — this selection judgment is the analysis being assessed.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 3 asks students to 'finish the sentence: The author includes this because it shows ______.' The contract requires 'explain the mechanism by which each piece of evidence signals the position (word choice, framing/selected detail, contrast, inclusion/omission, placement).' The transformed version does not require students to name a technique or explain a mechanism — only to complete a sentence about what the evidence 'shows.'",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "The contract requires 'an explanation for each that names a technique (word choice, framing/selected detail, contrast, inclusion/omission, placement).' Step 3 does not require students to name any technique — the sentence stem 'The author includes this because it shows' does not prompt identification of word choice, framing, contrast, placement, or inclusion/omission as mechanisms.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The learning target about how point of view is revealed through authorial choices remains the conceptual frame, though the student work required to demonstrate understanding of it has been weakened.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "One class period maintained; single paragraph format maintained (Step 5: 'Copy your five sentences from Steps 1–4 into one paragraph. Add a closing sentence'); same 4-point rubric stated verbatim.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The passage is unchanged; vocabulary support is accurate; the engineer's case is accurately summarized in Step 4.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "BLOCK: The transformation violates four instructional-preservation rules. (1) Step 1 explicitly states the author's position that students are required to infer: 'The author believes the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out.' (2) Step 2 provides a multiple-choice list of five quotations, converting evidence selection from analysis (judging which details reveal an unstated position) into recognition (choosing from pre-identified options). (3) Step 3 does not require students to name the technique/mechanism by which evidence signals position — the contract explicitly requires 'explain the mechanism by which each piece of evidence signals the position (word choice, framing/selected detail, cont"
+    },
+    "usefulness": {
+      "verdict": "USEFUL",
+      "clarity": 2,
+      "feasibility": 2,
+      "editing_required": "minor",
+      "grading_burden": "same",
+      "improves_original": true,
+      "notes": [
+        "Step 1 gives away the author's point of view in the prompt itself ('the author believes the town should think carefully...'), which contradicts the instruction to write it 'in your own words.' Either remove that model sentence or change the instruction to 'Rewrite this point of view in your own words.'",
+        "Step 2 includes 'deplored' in the vocabulary list but the word never appears in the passage or assignment—remove it.",
+        "Step 5 asks students to 'Copy your five sentences from Steps 1–4' but Steps 1–4 produce only four sentence frames (one from Step 1, two explanations from Step 3, one from Step 4). Either clarify the count or adjust the instruction to 'Copy your sentences from Steps 1–4 and add transitions as needed.'",
+        "The phrase '(read it in full on the attached page)' in the passage section suggests the passage is on a separate page, but layout is unclear—confirm whether this is a two-page handout or revise to 'Read the passage below.'"
+      ],
+      "ignored_validity_notes": [
+        "Step 1 provides the author's point of view directly in the prompt, which may remove the interpretive work the original required.",
+        "Step 2 pre-selects five evidence options, three of which are strong matches and two of which are neutral/opposing-view quotes, which narrows the evidence-selection task significantly compared to the open passage in the original.",
+        "The scaffolding may reduce the cognitive demand of synthesizing a position from the full passage, as students now match rather than construct."
+      ]
+    },
+    "adversarial": {
+      "verdict": "UNDERMINED",
+      "cheapest_path": "The student pastes the passage and the five fill-in-the-blank prompts into an AI chat, asks it to complete each sentence, copies the AI's answers into the boxes/blanks on the worksheet, then copies those five sentences plus an AI-generated closing sentence into paragraph form.",
+      "steps": [
+        "Paste the passage and Step 1 prompt into AI: 'Complete this sentence based on the passage: The author believes ______________.'",
+        "Copy AI's completion into Step 1 blank",
+        "Ask AI: 'Which two of these five sentences best show the author's point of view?' and paste the five options",
+        "Copy AI's two choices into the Evidence 1 and Evidence 2 boxes",
+        "Paste Step 3 prompt into AI: 'For each of these two pieces of evidence, complete: The author includes this because it shows ____________.'",
+        "Copy AI's two completions into Step 3",
+        "Paste Step 4 prompt into AI: 'Complete: The author responds to the engineer's case by ______________.'",
+        "Copy AI's completion into Step 4"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing. The scaffolding that was meant to support struggling students instead creates a perfect template for AI completion. The student never infers the position (Step 1 gives it away), never selects evidence (Step 2 provides a multiple-choice list), never explains the mechanism (Step 3 is a fill-in-the-blank that AI completes instantly), and never analyzes how the counter-case is handled (Step 4 summarizes the engineer's case and provides another fill-in-the-blank).",
+      "what_is_bypassed": "All required thinking: inferring an unstated position from the text (the position is stated in Step 1's preamble); selecting evidence that reveals the position (reduced to choosing from five pre-selected sentences); explaining the mechanism by which evidence signals the position (reduced to sentence completion); describing how the author treats the counter-case (the counter-case is summarized for the student, then they fill in a blank).",
+      "repair_hint": "Remove the statement of the author's position from Step 1's preamble ('The author believes the town should think carefully...') — make the student infer and state it. In Step 2, remove the pre-selected list of five sentences; require the student to find and copy two quotations from the passage themselves. Before Step 5, add: 'Meet with the teacher: bring your four completed sentences from Steps 1-4. Be ready to explain aloud why your Step 2 evidence shows the position you stated in Step 1.'",
+      "independent_check": false,
+      "independent_check_what": ""
+    }
+  },
+  "verdicts": {
+    "preservation": "BLOCK",
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "g5-math-fractions",
+  "t": "36d1c2dc896ff99a61e7f336da404d7f",
+  "inferred": {
+    "learning_target": "Students must understand that fractions with different denominators can be compared and combined by finding equivalent fractions with a common denominator.",
+    "required_evidence": "Written comparison symbols with justification method shown (Part A); step-by-step computation with simplified answers (Parts B and C); written explanation of the error and correct solution (Part D). All work must be shown as stated in the header and individual items.",
+    "required_thinking": "Students must find common denominators to compare fractions (items 1–3), perform operations on fractions with unlike denominators showing each conversion step (items 4–8), and analyze an error by identifying the misconception and correcting it (item 9).",
+    "teacher_constraints": "25 minutes. All work must be shown. Answers in simplest form (Part B). Item 7 answer must be a mixed number."
+  },
+  "gold": {
+    "learning_target": "Fractions can only be added or subtracted when the parts are the same size, so adding or subtracting unlike fractions requires reasoning with equivalent fractions (a common denominator). Comparing unlike fractions can legitimately use equivalent fractions, a benchmark such as 1/2, or a visual model — the denominator names the size of the parts, and any valid strategy must respect that.",
+    "required_thinking": "Items 1–3: choose a valid comparison strategy (equivalent fractions, benchmark, or visual model), execute it, and show the reasoning that supports the symbol. Items 4–8: construct equivalent fractions with a common denominator, then combine or compare like-sized parts and simplify or regroup to a mixed number where required; word problems require deciding whether the situation is join or compare before operating. Item 9: diagnose why adding denominators produces a wrong-sized part and state the reason, not just the corrected answer.",
+    "required_evidence": "Items 1–3: the correct symbol plus visible reasoning in any valid form (equivalent fractions written out, a labelled picture, or an explicit benchmark comparison). Items 4–8: the equivalent fractions written out, the operation performed on like-sized parts, and a simplified answer (a mixed number for 6 and 7). Item 9: a stated reason for the error and the correct sum.",
+    "teacher_constraints": "25 minutes; paper; students show all work; answers in simplest form; nine items across four parts."
+  },
+  "original_markdown": "# Fractions with Unlike Denominators — Practice and Problems\n\n**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**\n\nName: ______________________  Date: ______________\n\n### Part A — Compare\n\nFor each pair, write `<`, `>`, or `=`. Then show how you know (a common denominator, a picture, or a benchmark like ½).\n\n1. 3/4 ___ 5/8\n\n2. 2/3 ___ 7/12\n\n3. 5/6 ___ 8/9\n\n### Part B — Add and subtract\n\nShow every step. Answers in simplest form.\n\n4. 1/2 + 1/3 = ______\n\n5. 5/6 − 1/4 = ______\n\n6. 2 1/3 + 1 3/4 = ______\n\n### Part C — Word problems\n\n7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.\n\n8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.\n\n### Part D — Find the mistake\n\n9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer."
+}
