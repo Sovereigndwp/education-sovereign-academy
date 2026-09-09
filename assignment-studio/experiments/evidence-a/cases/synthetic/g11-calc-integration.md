@@ -1,0 +1,39 @@
+# Techniques of Integration — Quiz 4
+
+**Honors Calculus · 40 minutes · No calculator · No notes · Closed book**
+
+Name: ______________________  Date: ______________
+
+### Part A — Evaluate
+
+Evaluate each integral. Next to your answer, name in one phrase the technique you chose.
+
+1. $\displaystyle \int x e^{2x}\,dx$
+
+2. $\displaystyle \int \frac{3x+1}{x^{2}+x-6}\,dx$
+
+3. $\displaystyle \int \sin^{3}x\,\cos^{2}x\,dx$
+
+4. $\displaystyle \int \frac{x}{\sqrt{9-x^{2}}}\,dx$
+
+### Part B — Choose the method, do not evaluate
+
+For each integral, name the technique you would use and write the substitution, decomposition or
+identity it depends on. **Do not carry out the integration.**
+
+5. (a) $\displaystyle \int \frac{x^{2}}{\sqrt{x^{2}+4}}\,dx$
+   (b) $\displaystyle \int \ln x\,dx$
+   (c) $\displaystyle \int \frac{1}{x^{2}-9}\,dx$
+
+### Part C — Find the mistake
+
+6. A student writes:
+
+   $$\int x\cos(x^{2})\,dx \;=\; \frac{x\sin(x^{2})}{2x} \;+\; C$$
+
+   The answer is wrong. Say which step does not follow and give the correct antiderivative.
+
+### Part D — Build one
+
+7. Write an integral that requires integration by parts **exactly twice**, and say in one sentence how you
+   know twice is required and once is not.

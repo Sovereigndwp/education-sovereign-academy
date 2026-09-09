@@ -1,0 +1,32 @@
+{
+  "_note": "Owner-derived claim sets. Each claim is decomposed from the OWNER-WRITTEN gold contract (gold.json `contract` and `notes_for_reviewer`, as she corrected them on 2026-09-08) into the claim-level unit Track 3 uses and Assignment Studio dropped. The decomposition is mine; the substance is hers. Calculus is the exception and is machine-authored throughout — see cases/synthetic/PROVENANCE.md. She has NOT confirmed these; until she does, the claim-reconstruction number measures agreement with a decomposition of her contract, not with her.",
+  "g5-math-fractions": [
+    { "id": "G5C1", "claim_type": "conceptual", "statement": "Chooses a valid strategy for comparing two unlike fractions — equivalent fractions, a benchmark such as one half, or a visual model — executes it, and shows the reasoning that supports the symbol.", "items": ["1", "2", "3"] },
+    { "id": "G5C2", "claim_type": "procedural", "statement": "Constructs equivalent fractions with a common denominator, combines or compares like-sized parts, and simplifies or regroups to a mixed number where the item requires it.", "items": ["4", "5", "6", "7", "8"] },
+    { "id": "G5C3", "claim_type": "diagnostic", "statement": "States why adding denominators produces a wrong-sized part, and gives the correct sum.", "items": ["9"] }
+  ],
+  "g8-ela-evidence": [
+    { "id": "E1", "claim_type": "conceptual", "statement": "Infers the author's unstated position on replacing the Mill Street bridge from the text's choices rather than from any sentence that states it.", "items": ["paragraph"] },
+    { "id": "E2", "claim_type": "application", "statement": "Selects two pieces of evidence that reveal the position and names the technique by which each signals it — word choice, framing or selected detail, contrast, inclusion or omission, placement.", "items": ["paragraph"] },
+    { "id": "E3", "claim_type": "conceptual", "statement": "Describes how the author acknowledges the engineer's opposing case and answers it.", "items": ["paragraph"] }
+  ],
+  "g8-sci-ramp-data": [
+    { "id": "S1c", "claim_type": "procedural", "statement": "Computes the average speed for each release height and produces a graph of speed against height with both axes labelled with units.", "items": ["1", "2"] },
+    { "id": "S2c", "claim_type": "application", "statement": "States a claim about how speed relates to release height and supports it with at least two specific quoted comparisons from the table, including both doublings.", "items": ["3", "4"] },
+    { "id": "S3c", "claim_type": "conceptual", "statement": "Explains the pattern using gravitational potential energy transferring to kinetic energy, in a grade-appropriate form.", "items": ["5"] },
+    { "id": "S4c", "claim_type": "diagnostic", "statement": "Recognises that the data contradict proportional reasoning and disagrees with the 'twice as fast' claim, citing the pattern in the numbers.", "items": ["6"] },
+    { "id": "S5c", "claim_type": "application", "statement": "Extrapolates a prediction just beyond the measured range and states the method used to get it.", "items": ["7"] }
+  ],
+  "g10-ss-gilded-age": [
+    { "id": "H1", "claim_type": "procedural", "statement": "Sources each document — author, year, and the audience the author was most likely trying to reach.", "items": ["1"] },
+    { "id": "H2", "claim_type": "conceptual", "statement": "Contrasts the two authors' causal explanations of the same fact, and reads a chosen word or phrase from each for the author's attitude.", "items": ["2", "3"] },
+    { "id": "H3", "claim_type": "application", "statement": "Explains why each author would write as they did given their position in 1889–1892.", "items": ["4"] },
+    { "id": "H4", "claim_type": "application", "statement": "Constructs an argument that addresses both documents, weights their evidence explicitly by point of view, and connects one accurate outside development from the period.", "items": ["5"] }
+  ],
+  "g11-calc-integration": [
+    { "id": "K1", "claim_type": "procedural", "statement": "Executes the chosen integration technique correctly on a single integrand, without a calculator or notes.", "items": ["1", "2", "3", "4"] },
+    { "id": "K2", "claim_type": "conceptual", "statement": "Selects an appropriate integration technique for an integrand and names the substitution, decomposition or identity it depends on, without computing the integral.", "items": ["1", "2", "3", "4", "5a", "5b", "5c"] },
+    { "id": "K3", "claim_type": "diagnostic", "statement": "Locates the invalid step in an incorrect antiderivative and produces the correct one.", "items": ["6"] },
+    { "id": "K4", "claim_type": "conceptual", "statement": "Constructs an integral that meets a structural constraint — requiring integration by parts exactly twice — and justifies why twice and not once.", "items": ["7"] }
+  ]
+}

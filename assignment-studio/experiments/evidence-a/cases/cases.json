@@ -1,0 +1,61 @@
+{
+  "_note": "Case set for Experiment A. `source` is a path relative to assignment-studio/. Conditions are DECLARED — the engine never infers them. Cases sharing a `text_id` use identical assessment text; only the declared conditions or the confirmed claim set differ, which is what makes the paired-context comparison a controlled one.",
+  "cases": [
+    { "id": "S1-g5-supervised", "cell": "sound / supervised", "text_id": "g5-math-fractions", "source": "gold/g5-math-fractions/assignment.md",
+      "subject": "Mathematics", "grade": "Grade 5", "claims": "g5-math-fractions",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["paper", "pencil"], "purpose": "summative", "time_minutes": 25, "when_in_sequence": "end of Unit 4", "novelty_note": "Students have practised this kind of item; these particular numbers and problems are new to them." } },
+
+    { "id": "S2-g8ela-supervised", "cell": "sound / supervised", "text_id": "g8-ela-evidence", "source": "gold/g8-ela-evidence/assignment.md",
+      "subject": "English Language Arts", "grade": "Grade 8", "claims": "g8-ela-evidence",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["the passage", "paper"], "purpose": "summative", "time_minutes": 45, "when_in_sequence": "end of the informational-text unit", "novelty_note": "The passage is new to the students; the paragraph structure and rubric are familiar." } },
+
+    { "id": "S3-g8sci-supervised", "cell": "sound / supervised", "text_id": "g8-sci-ramp-data", "source": "gold/g8-sci-ramp-data/assignment.md",
+      "subject": "Physical Science", "grade": "Grade 8", "claims": "g8-sci-ramp-data",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["calculator", "paper", "ruler"], "purpose": "summative", "time_minutes": 30, "when_in_sequence": "end of the energy unit", "novelty_note": "The class collected this data together; the analysis questions are new." } },
+
+    { "id": "S4-g10ss-supervised", "cell": "sound / supervised", "text_id": "g10-ss-gilded-age", "source": "gold/g10-ss-gilded-age/assignment.md",
+      "subject": "U.S. History", "grade": "Grade 10", "claims": "g10-ss-gilded-age",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["the two documents", "paper"], "purpose": "summative", "time_minutes": 45, "when_in_sequence": "end of the industrialization unit", "novelty_note": "Students have done sourcing practice on other documents; these two excerpts are new to them." } },
+
+    { "id": "S5-calc-supervised", "cell": "sound / supervised", "text_id": "g11-calc-integration", "source": "experiments/evidence-a/cases/synthetic/g11-calc-integration.md",
+      "subject": "Mathematics", "grade": "Honors Calculus (Grade 11-12)", "claims": "g11-calc-integration",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["none - closed book, no calculator"], "purpose": "summative", "time_minutes": 40, "when_in_sequence": "after the techniques-of-integration sequence", "novelty_note": "Students have practised each technique; these integrands are new to them." } },
+
+    { "id": "X1-g5-takehome", "cell": "paired context", "pair_with": "S1-g5-supervised", "text_id": "g5-math-fractions", "source": "gold/g5-math-fractions/assignment.md",
+      "subject": "Mathematics", "grade": "Grade 5", "claims": "g5-math-fractions",
+      "conditions": { "supervision": "unsupervised", "collaboration": "individual", "ai_policy": "permitted", "resources": ["anything at home", "internet", "AI assistant"], "purpose": "summative", "time_minutes": null, "when_in_sequence": "sent home over a week at the end of Unit 4", "novelty_note": "Students have practised this kind of item; these particular numbers and problems are new to them." } },
+
+    { "id": "X2-g10ss-takehome", "cell": "paired context", "pair_with": "S4-g10ss-supervised", "text_id": "g10-ss-gilded-age", "source": "gold/g10-ss-gilded-age/assignment.md",
+      "subject": "U.S. History", "grade": "Grade 10", "claims": "g10-ss-gilded-age",
+      "conditions": { "supervision": "unsupervised", "collaboration": "individual", "ai_policy": "permitted", "resources": ["anything at home", "internet", "AI assistant"], "purpose": "summative", "time_minutes": null, "when_in_sequence": "sent home over a week at the end of the industrialization unit", "novelty_note": "Students have done sourcing practice on other documents; these two excerpts are new to them." } },
+
+    { "id": "X3-calc-takehome", "cell": "paired context", "pair_with": "S5-calc-supervised", "text_id": "g11-calc-integration", "source": "experiments/evidence-a/cases/synthetic/g11-calc-integration.md",
+      "subject": "Mathematics", "grade": "Honors Calculus (Grade 11-12)", "claims": "g11-calc-integration",
+      "conditions": { "supervision": "unsupervised", "collaboration": "individual", "ai_policy": "permitted", "resources": ["anything at home", "internet", "AI assistant", "CAS"], "purpose": "summative", "time_minutes": null, "when_in_sequence": "sent home over a weekend after the techniques-of-integration sequence", "novelty_note": "Students have practised each technique; these integrands are new to them." } },
+
+    { "id": "P1-g5-no-diagnose", "cell": "planted gap / no item", "text_id": "g5-P1", "source": "experiments/evidence-a/cases/synthetic/g5-P1-no-diagnose.md",
+      "subject": "Mathematics", "grade": "Grade 5", "claims": "g5-math-fractions",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["paper", "pencil"], "purpose": "summative", "time_minutes": 25, "when_in_sequence": "end of Unit 4", "novelty_note": "Students have practised this kind of item; these particular numbers and problems are new to them." },
+      "teacher_note": "I need to know they can say WHY adding the denominators is wrong, not just that it is. That is the thing I reteach every year." },
+
+    { "id": "P2-g5-selected-response", "cell": "planted gap / narrowed", "text_id": "g5-P2", "source": "experiments/evidence-a/cases/synthetic/g5-P2-selected-response.md",
+      "subject": "Mathematics", "grade": "Grade 5", "claims": "g5-math-fractions",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["paper", "pencil"], "purpose": "summative", "time_minutes": 25, "when_in_sequence": "end of Unit 4", "novelty_note": "Students have practised this kind of item; these particular numbers and problems are new to them." } },
+
+    { "id": "P3-g8sci-no-item6", "cell": "planted gap / no item", "text_id": "g8sci-P3", "source": "experiments/evidence-a/cases/synthetic/g8sci-P3-no-item6.md",
+      "subject": "Physical Science", "grade": "Grade 8", "claims": "g8-sci-ramp-data",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["calculator", "paper", "ruler"], "purpose": "summative", "time_minutes": 30, "when_in_sequence": "end of the energy unit", "novelty_note": "The class collected this data together; the analysis questions are new." },
+      "teacher_note": "The whole point of this unit is that they stop assuming everything is proportional. I need to see that." },
+
+    { "id": "P4-g10ss-scoped-out", "cell": "false-positive control", "text_id": "g10-ss-gilded-age", "source": "gold/g10-ss-gilded-age/assignment.md",
+      "subject": "U.S. History", "grade": "Grade 10", "claims": "g10-ss-gilded-age", "claims_subset": ["H4"],
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["the two documents", "paper"], "purpose": "summative", "time_minutes": 45, "when_in_sequence": "end of the industrialization unit", "novelty_note": "Students have done sourcing practice on other documents; these two excerpts are new to them." },
+      "teacher_note": "Sourcing and point of view are assessed on the unit test the week before. On this one I only care about the argument in Part B. Parts A1-A4 are warm-up so they have the material in front of them; I do not grade them for evidence." },
+
+    { "id": "V1-g5-over-verified", "cell": "over-verified", "text_id": "g5-oververified", "source": "gold/g5-math-fractions/fixtures/visible-valid-excessive-burden.md",
+      "subject": "Mathematics", "grade": "Grade 5", "claims": "g5-math-fractions",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["paper", "pencil"], "purpose": "summative", "time_minutes": 25, "when_in_sequence": "end of Unit 4", "novelty_note": "Students have practised this kind of item; these particular numbers and problems are new to them." } }
+  ],
+  "stability": { "case_id": "S1-g5-supervised", "runs": 5 },
+  "reconstruction_cases": ["S1-g5-supervised", "S2-g8ela-supervised", "S3-g8sci-supervised", "S4-g10ss-supervised", "S5-calc-supervised"]
+}

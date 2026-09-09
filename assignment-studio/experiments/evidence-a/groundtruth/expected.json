@@ -1,0 +1,80 @@
+{
+  "_note": "Pre-registered claim-level ground truth. Written and committed BEFORE any model was called; the git history is the proof. `verdict` may list alternatives where two readings are both defensible — that is deliberate, not hedging, and each alternative is justified in `why`. `intervention` is scored SEPARATELY from verdict: a claim can legitimately be LIMITED and still warrant no intervention. Restraint is the target behaviour, not blindness.",
+  "cases": {
+    "S1-g5-supervised": { "claims": [
+      { "claim_id": "G5C1", "verdict": ["KEEP"], "intervention": false, "why": "Items 1-3 require the symbol AND the reasoning that supports it, in any of three legitimate forms, produced under supervision on numbers the students have not seen. The claim is carried whole." },
+      { "claim_id": "G5C2", "verdict": ["KEEP"], "intervention": false, "why": "Five items, work shown, including the two that force regrouping to a mixed number. Supervised and fresh." },
+      { "claim_id": "G5C3", "verdict": ["KEEP"], "intervention": false, "why": "Item 9 demands the stated reason, not just the corrected sum — the owner's gold record calls it the highest-evidence item." }
+    ] },
+    "S2-g8ela-supervised": { "claims": [
+      { "claim_id": "E1", "verdict": ["KEEP"], "intervention": false, "why": "The passage never states the position, so the paragraph cannot be written without inferring it. Supervised, new passage." },
+      { "claim_id": "E2", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "Two pieces of evidence with a named technique each is exactly what the rubric demands, so KEEP is right; LIMITED is defensible because two instances is a thin sample of a five-technique repertoire. Either way no intervention: the narrowing is the teacher's deliberate scope for one paragraph." },
+      { "claim_id": "E3", "verdict": ["KEEP"], "intervention": false, "why": "Rubric point 4 requires it explicitly and the passage contains the engineer's case to be answered." }
+    ] },
+    "S3-g8sci-supervised": { "claims": [
+      { "claim_id": "S1c", "verdict": ["KEEP"], "intervention": false, "why": "Averages and a labelled graph are directly observable products, produced in class." },
+      { "claim_id": "S2c", "verdict": ["KEEP"], "intervention": false, "why": "Item 4 names both doublings, so the quoted comparisons are compelled rather than optional." },
+      { "claim_id": "S3c", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "Item 5 is open explanation, the weakest response form in the primitive set — but under supervision it is a real observation, and the energy vocabulary is compelled by the prompt. LIMITED is defensible on response form; an intervention is not warranted because the class period already carries it." },
+      { "claim_id": "S4c", "verdict": ["KEEP"], "intervention": false, "why": "Item 6 is built to separate proportional reasoning from the actual pattern; the owner's gold record names it the difficult part." },
+      { "claim_id": "S5c", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "One extrapolation item with the method demanded. LIMITED is defensible on a single observation; no intervention, because a second item buys little and the period is full." }
+    ] },
+    "S4-g10ss-supervised": { "claims": [
+      { "claim_id": "H1", "verdict": ["KEEP"], "intervention": false, "why": "Item 1 asks for author, year and audience on both documents, in the room." },
+      { "claim_id": "H2", "verdict": ["KEEP"], "intervention": false, "why": "Items 2 and 3 compel both the causal contrast and the word-level attitude reading." },
+      { "claim_id": "H3", "verdict": ["KEEP"], "intervention": false, "why": "Item 4 asks the POV question directly, of both authors." },
+      { "claim_id": "H4", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "The rubric compels position, evidence from each document, explicit POV weighting and an outside development. KEEP is right. LIMITED is defensible because one extended argument is a single observation of a composite claim — but the correct response is to name that, not to add a second essay to a 45-minute period." }
+    ] },
+    "S5-calc-supervised": { "claims": [
+      { "claim_id": "K1", "verdict": ["KEEP"], "intervention": false, "why": "Four integrals worked closed-book, no calculator, fresh integrands." },
+      { "claim_id": "K2", "verdict": ["KEEP"], "intervention": false, "why": "Part B asks for method selection with the substitution named and explicitly forbids evaluating, and Part A demands the technique be named alongside each answer. Method selection is separated from execution by design. This is the case that most directly tests whether the engine can leave a well-built assessment alone." },
+      { "claim_id": "K3", "verdict": ["KEEP"], "intervention": false, "why": "Item 6 requires locating the invalid step and producing the correct antiderivative — a Diagnose item in all but name." },
+      { "claim_id": "K4", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "Item 7 is a Generate item with a structural constraint and a justification. LIMITED is defensible on a single instance; no intervention warranted in a 40-minute quiz." }
+    ] },
+
+    "X1-g5-takehome": { "claims": [
+      { "claim_id": "G5C1", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "Unsupervised with AI permitted: nothing submitted is an independent observation, and a fraction comparison with shown work is trivially producible. A cheap supervised check exists, so this is not NO_CHEAP_CHECK." },
+      { "claim_id": "G5C2", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "Same conditions; the arithmetic and the shown steps are the easiest thing in the whole case set to delegate." },
+      { "claim_id": "G5C3", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "A stated reason is prose, which is the most delegable response form there is once it leaves the room." }
+    ] },
+    "X2-g10ss-takehome": { "claims": [
+      { "claim_id": "H1", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "Sourcing two well-known published documents is a lookup." },
+      { "claim_id": "H2", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "Both documents are in the prompt; the contrast and the attitude reading are producible from the text alone." },
+      { "claim_id": "H3", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "The POV question is answerable from general knowledge of Carnegie and the Populists." },
+      { "claim_id": "H4", "verdict": ["NOT_SUPPORTED", "NO_CHEAP_CHECK"], "intervention": null, "why": "Both are correct answers and the experiment wants to see which it gives. The composite argument claim is the LC-8 class from the ontology stress test: no short supervised item reaches sustained argument with POV weighting and outside context. NOT_SUPPORTED with a partial check is defensible; NO_CHEAP_CHECK is the more honest answer. Intervention is not scored on this claim because it depends on which verdict it gives." }
+    ] },
+    "X3-calc-takehome": { "claims": [
+      { "claim_id": "K1", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "A CAS produces all four antiderivatives; unsupervised, nothing is observed." },
+      { "claim_id": "K2", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "Naming the technique is if anything easier to delegate than executing it." },
+      { "claim_id": "K3", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "Error diagnosis on a supplied worked solution is fully producible from the prompt." },
+      { "claim_id": "K4", "verdict": ["NOT_SUPPORTED", "NO_CHEAP_CHECK"], "intervention": null, "why": "A constructed example with a structural justification is delegable; whether a short supervised item reaches the same claim is a genuine judgment call." }
+    ] },
+
+    "P1-g5-no-diagnose": { "claims": [
+      { "claim_id": "G5C1", "verdict": ["KEEP"], "intervention": false, "why": "Untouched by the planted deletion. A false gap here is a manufactured problem." },
+      { "claim_id": "G5C2", "verdict": ["KEEP"], "intervention": false, "why": "Untouched. A false gap here is a manufactured problem." },
+      { "claim_id": "G5C3", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "PLANTED: item 9 is deleted, and the teacher's note states this claim explicitly. No item in the assessment reaches it. A Diagnose item is the obvious minimum and costs about two minutes." }
+    ] },
+    "P2-g5-selected-response": { "claims": [
+      { "claim_id": "G5C1", "verdict": ["LIMITED"], "intervention": true, "why": "PLANTED: Part A now collects a circled symbol and explicitly forbids work. Recognition of which fraction is larger survives; choosing and executing a strategy does not, and three items with three options carry a real guess rate. The narrower inference must be named." },
+      { "claim_id": "G5C2", "verdict": ["KEEP"], "intervention": false, "why": "Untouched." },
+      { "claim_id": "G5C3", "verdict": ["KEEP"], "intervention": false, "why": "Untouched." }
+    ] },
+    "P3-g8sci-no-item6": { "claims": [
+      { "claim_id": "S1c", "verdict": ["KEEP"], "intervention": false, "why": "Untouched." },
+      { "claim_id": "S2c", "verdict": ["KEEP"], "intervention": false, "why": "Untouched." },
+      { "claim_id": "S3c", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "Untouched; same reasoning as S3." },
+      { "claim_id": "S4c", "verdict": ["NOT_SUPPORTED"], "intervention": true, "why": "PLANTED: item 6 is deleted. Item 7 is extrapolation, not misconception separation — a student can extrapolate correctly while still believing the relationship is proportional. A Predict or Classify item reaches it in two minutes." },
+      { "claim_id": "S5c", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "Untouched, now item 6." }
+    ] },
+    "P4-g10ss-scoped-out": { "claims": [
+      { "claim_id": "H4", "verdict": ["KEEP", "LIMITED"], "intervention": false, "why": "The teacher has scoped this assessment to the argument only. H4 is carried by Part B under supervision. The real test is the CONTROL below: sourcing and POV are assessed elsewhere and must not be reported as gaps in this assessment." }
+    ], "control": { "no_unexpected_claims": true, "why": "Reporting a gap for sourcing, word-choice attitude or POV here would be a false positive — the teacher has said where those are assessed. Any claim returned beyond H4 counts as a manufactured problem." } },
+
+    "V1-g5-over-verified": { "claims": [
+      { "claim_id": "G5C1", "verdict": ["KEEP"], "intervention": false, "why": "This version already carries prediction, solution and explanation boxes per item plus a reflection and a five-minute conference. The evidence is there several times over." },
+      { "claim_id": "G5C2", "verdict": ["KEEP"], "intervention": false, "why": "Same." },
+      { "claim_id": "G5C3", "verdict": ["KEEP"], "intervention": false, "why": "Same." }
+    ], "control": { "zero_interventions": true, "expect_over_verified_note": true, "why": "The decisive test of F4. Any proposal on this case is a straight failure. Naming the disproportion — that the conference and reflection cost more than they buy — is the desired extra behaviour, recorded as a bonus signal rather than as pass/fail." }
+    }
+  }
+}
