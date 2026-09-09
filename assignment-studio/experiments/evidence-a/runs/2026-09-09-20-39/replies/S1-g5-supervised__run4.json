@@ -1,0 +1,117 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Q1: 3/4 ___ 5/8, write <,>,= and show how you know",
+          "elicits": "Student chooses a comparison strategy (common denominator, benchmark, or visual model), executes it, and writes reasoning that justifies the symbol chosen."
+        },
+        {
+          "item": "Q2: 2/3 ___ 7/12, write <,>,= and show how you know",
+          "elicits": "Same strategy-choice-and-justify move on a pair where a half-benchmark alone does not resolve the comparison, forcing a finer strategy."
+        },
+        {
+          "item": "Q3: 5/6 ___ 8/9, write <,>,= and show how you know",
+          "elicits": "Same strategy-choice-and-justify move on a pair where both fractions are close to one whole, testing whether the student can still execute and justify a valid strategy rather than guess."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can choose a valid strategy for comparing two unlike fractions, carry it out, and produce reasoning that supports the resulting symbol, on numbers the student could not have prepared in advance.",
+      "does_not_support": [
+        "Does not show the student can compare more than two fractions at once or order a set of fractions.",
+        "Does not show the strategy transfers to fractions embedded in a word-problem context, since all three items are presented as bare symbolic comparisons.",
+        "Does not distinguish G5C1 from G5C2: a student who reaches the right symbol via a memorized common-denominator routine here is not yet shown to also compute sums and differences correctly, which is the separate procedural claim.",
+        "Does not establish retention beyond this single end-of-unit sitting."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The comparison and its written justification are produced on paper, individually, under in-class supervision with AI prohibited and enforced, so the work observed is the student's own in real time."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 1-3 already require the student to choose, execute, and justify a comparison strategy on fresh numbers under independent conditions; this reaches the claim as stated, so no additional observation is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Q4: 1/2 + 1/3 = ___",
+          "elicits": "Construction of a common denominator and addition of the resulting like-sized parts, with no regrouping required."
+        },
+        {
+          "item": "Q5: 5/6 - 1/4 = ___",
+          "elicits": "Construction of a common denominator, subtraction of like-sized parts, and expression of the result in simplest form."
+        },
+        {
+          "item": "Q6: 2 1/3 + 1 3/4 = ___",
+          "elicits": "Common-denominator construction across mixed numbers, combining like-sized parts, and regrouping an improper fractional part into a mixed number."
+        },
+        {
+          "item": "Q7 (Maya word problem): 3/4 mile + 5/6 mile",
+          "elicits": "Translating a context into a fraction addition, constructing a common denominator, and regrouping the sum into a mixed-number answer as the problem requires."
+        },
+        {
+          "item": "Q8 (Jonah word problem): 2/3 cup - 1/4 cup",
+          "elicits": "Translating a context into a fraction subtraction and constructing a common denominator to find how much more is needed."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can construct common denominators, combine or compare the resulting like-sized parts, and simplify or regroup to a mixed number where required, across both bare computations and one-step word problems, on numbers the student could not have prepared in advance.",
+      "does_not_support": [
+        "Does not show fluency under a tighter time budget than the 25 minutes given here, since no item isolates speed.",
+        "Does not show the procedure holds up in a multi-step or multi-operation word problem beyond the one-step contexts in Q7-Q8.",
+        "Does not by itself show the student understands why the procedure works conceptually; that inference belongs to G5C1, not this procedural claim.",
+        "A correct final answer with incomplete shown steps on Q4-Q8 does not distinguish a correct method from a memorized shortcut, so partial-credit scoring should weight the shown steps, not just the final answer."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Every item requires every step shown on paper under individual, proctored, AI-prohibited conditions, so the computation observed must be the student's own."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 4-8 already exercise common-denominator construction, combination, simplification, and regrouping across both computation and word-problem forms under independent conditions; this reaches the claim as stated, so no additional observation is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Q9: A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.",
+          "elicits": "Locating the specific error (combining numerators and denominators directly instead of finding like-sized parts), stating the reason it produces a wrong-sized part, and repairing it with the correct sum."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can identify why adding denominators directly produces a wrong-sized part for this specific error pattern and can supply the correct sum, under independent, novel, claim-targeted conditions.",
+      "does_not_support": [
+        "Does not show the student would avoid this same error unprompted in their own original computation; that inference belongs to G5C2's own-work items, not this diagnose-and-repair item.",
+        "Does not show the student can diagnose a different fraction-addition error (e.g., adding numerators but forgetting to convert to a common denominator only partway, or an error in a subtraction or mixed-number regrouping context), since only one error pattern is presented.",
+        "With only one item carrying this claim, there is no redundancy: an atypical response (e.g., a blank or off-target explanation) leaves the teacher with no second observation to check against.",
+        "Does not indicate whether the explanation would hold up in a less scaffolded item where the incorrect solution is not already labeled as a 'student' error to be found."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation and corrected answer are written by hand, individually, under supervision with AI prohibited and enforced, so the diagnostic reasoning observed is the student's own."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Q9 already requires the student to name the specific mechanism of the error (unlike-sized parts) and supply the correct sum on a fresh number pair under independent conditions; this reaches the claim as stated, so no additional observation is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, 25-minute proctored in-class summative assessment, individual work, AI prohibited and enforced, paper and pencil only; item format practised in advance but these specific numbers and problems were not seen beforehand.",
+  "reviewer_notes": "All three claims are carried by items that meet the independent, novel, and claim-targeted conditions as declared: proctored, individual, AI-prohibited-and-enforced administration with fresh numbers. G5C1 (Part A, items 1-3) and G5C2 (Part B-C, items 4-8) each have multiple items reaching the full claim as stated. G5C3 (Part D, item 9) is carried by a single well-targeted diagnose-and-repair item; it reaches the claim as stated but has no redundancy, which is worth the teacher's awareness even though it does not on its own justify adding another item to this assessment. No interventions are proposed."
+}

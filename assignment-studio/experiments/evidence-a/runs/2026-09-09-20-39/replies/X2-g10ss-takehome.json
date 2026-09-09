@@ -1,0 +1,150 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "Part A #1: For each document, identify the author, the year, and the audience the author was most likely trying to reach.",
+          "elicits": "Retrieving explicit author/date metadata from the document headers and inferring the most likely intended audience from the text's content, register, and publication venue."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This item can confirm only that a response naming an author, year, and a plausible intended audience for each document was submitted; it does not establish that the student, rather than an AI assistant or another person, retrieved or inferred that information.",
+      "does_not_support": [
+        "Does not support that the student can independently locate authorial and publication metadata in a source, since the metadata sits in the document header and any assistant could copy it.",
+        "Does not support that the student, rather than an AI assistant consulted at home, performed the audience inference, since AI policy is permitted and the work is unsupervised.",
+        "Is easily mistaken for demonstrated sourcing competence (H1) when it may instead reflect an AI-generated audience analysis; the two are indistinguishable from the submitted text alone.",
+        "Does not support that the student can source an unfamiliar document under any time constraint, since time is unstated and internet/AI lookup are both available."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "The item can be completed end to end by pasting the document into an AI assistant and transcribing its answer, with nothing in the submission distinguishing that from independent work."
+      },
+      "gap_statement": "We cannot tell from this assessment, as administered, whether the student or an available AI assistant performed the sourcing identification in Part A #1.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Transfer",
+        "item_text": "Read this short excerpt: \"The trusts have made possible the marvelous cheapening of products... I hold that the corporation is the origin of nearly all our great progress.\" — John D. Rockefeller, interview, 1899. Identify the author, the year, and the audience the author was most likely trying to reach. One line each.",
+        "variant_rule": "Swap in any new short (2-4 sentence) primary-source excerpt with a clear author line, date, and register cues suggesting an audience; keep the three-part prompt (author/year/audience) fixed; rotate the source and era each period so no two periods see the same excerpt; never reuse Document 1, Document 2, or any excerpt already sourced in class.",
+        "conditions": "proctored_in_class, individual, no resources, novel excerpt not previously seen",
+        "sufficiency_line": "A response counts as evidence when it names the correct author and year and gives an audience inference tied to a specific textual or contextual cue rather than a generic guess.",
+        "student_minutes": 4,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "Part A #2: In one sentence each, state how Document 1 and Document 2 explain where the wealth gap came from.",
+          "elicits": "Extracting each author's stated causal mechanism for wealth inequality and articulating the contrast between the two."
+        },
+        {
+          "item": "Part A #3: Choose one word or phrase from each document that shows the author's attitude toward great fortunes and explain what it reveals.",
+          "elicits": "Identifying connotative diction in each excerpt and linking the word choice to the author's attitude or tone."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This item can confirm only that a submitted response names a plausible causal explanation for each document and identifies a plausible attitude-revealing word or phrase for each; it does not establish that the student performed that contrast and close reading unassisted.",
+      "does_not_support": [
+        "Does not support that the student can independently distinguish two authors' causal claims about the same fact, since an AI assistant can extract and contrast this directly from the pasted text.",
+        "Does not support that the student can perform close reading of diction for tone or attitude without assistance, since this short literary-analysis move is one AI assistants produce fluently.",
+        "Is easily mistaken for demonstrated conceptual mastery of contrasting point of view (H2) when a fluent, well-organized answer may instead reflect an AI paraphrase of the passages.",
+        "Does not support that the student can perform this contrast without a model or scaffold present, since the full text of both documents and open resources are available throughout."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Both the causal-contrast and diction analysis can be produced end to end by an AI assistant from the pasted excerpts, and the response would be indistinguishable from independent student work."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student or an available AI assistant performed the causal contrast and diction analysis in Part A #2-3.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Transfer",
+        "item_text": "Excerpt A (a railroad company report, 1894): \"The distress in our industry follows directly from over-expansion of credit and reckless speculation by investors seeking quick returns.\" Excerpt B (a farmers' alliance newspaper, 1894): \"The distress among working families follows directly from a currency starved by the gold standard, which robs honest labor of the money it has earned.\" In one sentence each, state how Excerpt A and Excerpt B explain the same fact (economic distress in 1894) differently. Then choose one word or phrase from each that reveals the author's attitude, and say in one line what it reveals.",
+        "variant_rule": "Use any new pair of short (2-3 sentence) excerpts describing the same fact from two differing points of view within the unit; keep the two-part prompt (causal contrast, then one diction cue each) fixed; rotate the topic and era each period; never reuse the Carnegie/Populist pair or any excerpt already discussed in class.",
+        "conditions": "proctored_in_class, individual, no resources, novel excerpt pair",
+        "sufficiency_line": "A response counts as evidence when it states a distinct causal claim for each excerpt, not a restatement of the shared fact, and names a specific word or phrase tied to a stated attitude for both excerpts.",
+        "student_minutes": 4,
+        "scoring_seconds": 40
+      }
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "Part A #4: Why might Carnegie have written Document 1? Why might a farmers' and workers' party have written Document 2? Use what you know about each author's position in 1889-1892.",
+          "elicits": "Connecting an author's known social or economic position to a plausible motive for the document's content (contextualization)."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This item can confirm only that a submitted response links each author's known position to a plausible motive for the document; it does not establish that the student made that connection unassisted.",
+      "does_not_support": [
+        "Does not support that the student can contextualize a document using outside knowledge of an author's position without assistance, since an AI assistant given the author names and excerpt can generate this contextualization directly.",
+        "Does not support recall of the relevant historical background (Carnegie's wealth, the Populist movement) independent of look-up, since both internet and AI are permitted resources.",
+        "Is easily mistaken for demonstrated application of contextualization (H3) when a plausible-sounding answer may be entirely AI-generated from the author names alone.",
+        "Does not support that the student can perform this reasoning without the chance to revise or regenerate the answer repeatedly over the week the assignment is out."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Inferring motive from a stated position is exactly the kind of factual-synthesis task an AI assistant performs unprompted from the author names, with nothing in the response to distinguish it from independent reasoning."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student or an available AI assistant performed the contextualization reasoning in Part A #4.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Predict",
+        "item_text": "Here is one sentence identifying a new person's position: \"This writer was a tenant farmer in Nebraska in 1891, deeply in debt to a local bank for seed and equipment.\" Before reading anything else else, predict in one sentence what this person would most likely say about the growing gap between rich and poor, and give one line naming the specific feature of their position that led you to that prediction.",
+        "variant_rule": "Swap in any new one-line position description drawn from the industrialization unit (mill worker, railroad executive, immigrant laborer, small-town banker, etc.) not previously discussed in class; keep the predict-then-justify structure fixed; require the one-line reason to name a specific feature of the position (debt, ownership, wage dependence), not a generic 'because of their job.'",
+        "conditions": "proctored_in_class, individual, no resources, novel position not previously discussed",
+        "sufficiency_line": "A response counts as evidence when the prediction is consistent with the stated position and the one-line reason names the specific feature of that position driving the predicted view.",
+        "student_minutes": 2,
+        "scoring_seconds": 20
+      }
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "Part B #5: Write a two-paragraph response that takes a position addressing both documents, uses evidence from each, weighs each author's point of view, and connects one outside development from the period.",
+          "elicits": "Sustained synthesis: constructing an extended, thesis-driven written argument that integrates evidence from multiple sources, explicit source evaluation by point of view, and accurate outside contextual knowledge."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This item can confirm only that a two-paragraph response meeting the stated structural requirements (a position, evidence from each document, point-of-view weighting language, and an outside development) was submitted; it does not establish that the student constructed that argument.",
+      "does_not_support": [
+        "Does not support that the student can construct a multi-document, point-of-view-weighted argument unassisted, since this is precisely the extended-writing task current AI assistants perform fluently and undetectably from the same prompt and excerpts.",
+        "Does not support accurate independent recall of an outside development (trusts, Homestead or Pullman strikes, farm debt, the 1893 depression), since both AI assistance and open internet lookup are permitted.",
+        "Is easily mistaken for demonstrated sustained argumentative synthesis (H4) when a well-organized, well-evidenced essay may be substantially or entirely AI-authored.",
+        "Does not support that the student can produce this argument within any bounded time or without iterative regeneration and editing, since time is unstated and the task is worked at home over a week."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "The full essay — thesis, dual-document evidence use, point-of-view weighting language, and outside connection — is a single well-specified prompt an AI assistant can produce in one pass, and nothing about the submission format can distinguish that from student authorship."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student or an available AI assistant constructed the argument, weighed the sources, or supplied the outside connection in Part B.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "Sustained multi-document argument construction — holding a thesis, weighing two sources explicitly by point of view, and integrating an accurate outside development — cannot be reduced to a short item without removing the very synthesis being assessed; any short version would hand the student a scaffold (a ready-made thesis, or only one source) that pre-digests the judgment H4 asks for, so it would test a narrower skill instead of this one.",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Declared conditions: unsupervised, individual, AI assistance and open internet explicitly permitted, summative purpose, sent home over one week at the end of the industrialization unit; time unstated. Students had prior sourcing practice on other documents, but the two excerpts used here are new to them, so novelty is not in question — independence is.",
+  "reviewer_notes": "All four claims fail the INDEPENDENT condition for the same reason: every item, in both Part A and Part B, is produced unsupervised with AI explicitly permitted, so no observation in this instrument — however well the item is written — can be attributed to the student rather than to an available assistant. This is a condition problem, not a task-design problem: the documents are genuinely novel, the questions are well-targeted to their claims, and the argument prompt in Part B is a well-built version of the extended-synthesis task H4 asks for. H1-H3 each admit a short, proctored, one-item check that would close their evidentiary gap cheaply without touching the take-home assessment. H4's demand — sustained, weighted, multi-document synthesis with an outside connection — has no short independent analogue; shortening it would test something narrower than H4, not H4 itself, so no additional item is proposed for it and the gap is named instead."
+}

@@ -1,0 +1,171 @@
+{
+  "claims": [
+    {
+      "claim_id": "S1c",
+      "items": [
+        {
+          "item": "Item 1 — compute average speed for each of the four heights from three trials, entering results in the table.",
+          "elicits": "Correctly averaging three trial measurements per height and recording the value to the specified precision (nearest hundredth)."
+        },
+        {
+          "item": "Item 2 — sketch a graph of average speed (y) vs release height (x), axes labeled with units.",
+          "elicits": "Choosing axes, plotting the four computed points from the student's own table, and labeling both axes with correct units."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can correctly average repeated trial measurements and construct a unit-labeled graph of the resulting data, produced individually under supervision with no AI or outside help.",
+      "does_not_support": [
+        "Does not confirm the student understands why averaging repeated trials is done (to reduce the effect of measurement variation), only that the arithmetic can be executed correctly.",
+        "Does not assess whether the graph's scale or point placement is accurate beyond the claim's own requirement of labeled axes with units — a student could earn full credit for labeling while plotting points imprecisely.",
+        "Because the raw trial data (though not the questions) was already shared with the whole class before this test, the four averages are, in principle, computable and memorizable outside class; this item cannot rule out a student arriving with pre-computed values, even though the graph still requires fresh, in-the-room construction.",
+        "Does not test the student's ability to organize and graph data presented in an unfamiliar format (e.g., data not already arranged in a labeled table)."
+      ],
+      "delegation": {
+        "answer": "partly",
+        "reason": "The raw data (though not the test questions) was shared with the class in advance, so the four averages in item 1 could in principle be pre-computed and transcribed rather than calculated live, while the graph in item 2 still requires fresh, in-room construction."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 1–2 already require both parts of the claim — computed averages and a unit-labeled graph — to be produced live under supervision; reproducing four short pre-computed numbers from memory would not remove the need to construct the graph itself, so no further observation is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "S2c",
+      "items": [
+        {
+          "item": "Item 3 — write one sentence stating how speed relates to release height.",
+          "elicits": "Producing a concise relational claim connecting the two variables in the student's own words."
+        },
+        {
+          "item": "Item 4 — cite at least two specific numbers from the table, including what happens to speed from 10→20cm and 20→40cm.",
+          "elicits": "Locating and quoting the correct speed values for the two specified doubling comparisons and connecting them explicitly to the claim."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can state a relationship between speed and release height and support it with the two specific doubling comparisons the claim requires, produced individually under supervision.",
+      "does_not_support": [
+        "Does not show the student can independently select which comparisons are most informative, since the item names the two required comparisons (10→20cm, 20→40cm) rather than asking the student to choose.",
+        "Does not by itself confirm the student recognizes these comparisons contradict proportional ('doubling') reasoning — that judgment is not required by this item's wording (see S4c).",
+        "Does not assess whether the claim sentence (item 3) and the cited evidence (item 4) are logically consistent with each other beyond both being individually correct.",
+        "Adjacent claim risk: a correct claim-and-evidence pairing here can be mistaken for evidence of S4c's diagnostic disagreement, when no explicit disagreement or verdict is elicited."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The claim sentence and the specific comparison values must be composed and located from the student's own completed table during the proctored, AI-restricted session, leaving no path to outside authorship."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Item 4 already requires exactly the two doubling comparisons the claim specifies, alongside item 3's relational claim, so the claim as stated is fully carried; no further observation is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "S3c",
+      "items": [
+        {
+          "item": "Item 5 — explain why the relationship looks the way it does, using gravitational potential energy and kinetic energy.",
+          "elicits": "Producing a written explanation that names the GPE→KE energy transformation and connects it to the observed increase in speed with height."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can produce a grade-appropriate written explanation connecting gravitational potential energy converting to kinetic energy to the observed speed-height pattern, under supervision with no outside help.",
+      "does_not_support": [
+        "Does not distinguish a live, reasoned explanation from a memorized stock phrase (e.g., 'PE converts to KE'), since the item is a free-standing 'explain why' rather than a one-line reason embedded inside a verification primitive.",
+        "Scoring is language-load dependent: a fluent writer with a shaky grasp of the concept and a weaker writer with a solid grasp can be scored inconsistently, and this format is hardest for multilingual learners.",
+        "Does not test whether the student can apply the same GPE→KE idea to a new scenario the student has not already analyzed (no transfer check).",
+        "Adjacent claim risk: a response that also notes the speeds 'don't double' could be mistakenly credited toward S4c's diagnostic disagreement, which this item does not itself require or score."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, AI-restricted administration requires the explanation to be written live in the room, leaving no path to outside authorship even though the format itself carries the known scoring-validity risks noted above."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The item already elicits a written explanation using the required vocabulary tied to the observed pattern, matching the claim's own modest 'grade-appropriate form' scope; the format's prose/language-load limitations are a scoring-consistency matter captured above, not a missing-evidence gap.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "S4c",
+      "items": [
+        {
+          "item": "Item 3 — claim sentence about the height–speed relationship.",
+          "elicits": "A general relational statement; does not require characterizing the relationship as proportional or non-proportional."
+        },
+        {
+          "item": "Item 4 — cite the 10→20cm and 20→40cm comparisons.",
+          "elicits": "Accurate citation of the specified speed values; does not require a stated verdict on whether these values show doubling or contradict it."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "What the assessment as written actually supports is that the student can state a general relationship between height and speed and accurately cite the two specified comparison values; it does not confirm the student recognizes those values contradict proportional ('twice as fast') reasoning or can state disagreement with that specific claim, since no item presents it for evaluation.",
+      "supports": "A teacher may conclude the student can state a relationship between height and speed and correctly cite the required comparison values from the table.",
+      "does_not_support": [
+        "Does not confirm the student recognizes that the cited comparisons show a non-proportional (non-doubling) pattern, since no item asks for that explicit verdict.",
+        "Does not confirm the student can identify or refute the specific misconception named in the claim ('twice as fast'), since that claim is never presented to the student to evaluate.",
+        "Adjacent claim risk: a correct, general claim-and-evidence response to items 3–4 (S2c) could be misread by a teacher as evidence of the diagnostic recognition S4c requires, when the two are distinct cognitive demands — descriptive versus evaluative.",
+        "No selected-response guess-rate applies here since all items are constructed-response, but the absence of an explicit prompt means even a fully correct implicit understanding may go unrecorded and unscored."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "What little bears on this claim (items 3–4) requires accurately locating and transcribing real trial data under supervision, though it does not by itself demonstrate the diagnostic judgment the claim requires."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student recognizes that the data contradict proportional ('twice as fast') reasoning or can explicitly disagree with that claim, since no item presents that claim for the student to evaluate or asks for a verdict on proportionality.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Diagnose",
+        "item_text": "A classmate looks at the table and says: 'Since 20 cm is double 10 cm, the speed should also be about double.' Using the actual average speeds from your table, is your classmate correct? Answer yes or no, and explain using the numbers.",
+        "variant_rule": "What may change each period/version: which in-range height pair is named (e.g., 10→20cm, 10→40cm, or 20→40cm) and the classmate's exact wording. What must stay fixed: the requirement that the student cite the actual measured values (not just restate the claim) and give an explicit yes/no verdict. How the key changes: the correct verdict is always 'no, not doubled' for any true doubling pair in this data set. What to avoid: naming a height pair where the ratio has not been checked against the actual averages, since the key depends on the real data showing less-than-double growth.",
+        "conditions": "Proctored, individual, no AI or notes, calculator permitted — same conditions as the main assessment; given as a short supervised add-on in the same sitting.",
+        "sufficiency_line": "A response counts as evidence if it gives an explicit 'no' (or equivalent) verdict AND cites the actual speed values to show the increase is less than double, rather than only restating or agreeing with the claim.",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "S5c",
+      "items": [
+        {
+          "item": "Item 6 — predict the average speed at 50cm release height and explain how the prediction was made.",
+          "elicits": "Producing a numeric extrapolation just beyond the measured range and stating the method/reasoning used to arrive at it."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can extrapolate a numeric prediction just beyond the tested range and state the method used to arrive at it, produced individually under supervision.",
+      "does_not_support": [
+        "Does not confirm the stated extrapolation method correctly accounts for the non-proportional trend visible in the data — a student using a naive linear/proportional method would still satisfy this item's literal wording, so a correct-looking prediction should not be read as confirming S4c's non-proportional recognition.",
+        "Does not assess extrapolation further outside the measured range, where prediction reliability declines further; the claim itself only requires 'just beyond,' so this is a scope boundary, not a defect.",
+        "Does not require a numerically precise 'correct' answer — the claim asks only for a stated method, so this item should not be read as testing quantitative calculation accuracy.",
+        "Adjacent claim risk: a well-reasoned method statement here could be conflated with S3c's conceptual explanation, though the two ask for different things — a prediction method versus an energy-based causal account."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The prediction and its stated method depend on the student's own completed table and must be produced live during the proctored, AI-restricted session."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Item 6 already requires both a numeric extrapolation beyond the tested range and a stated method, matching the claim fully; no further observation is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual, AI prohibited and enforced; only calculator, paper, and ruler permitted; summative, 30 minutes, administered at the end of the energy unit. The raw data table was collected by the whole class together in advance, but the analysis questions (items 1–6) are new to the students.",
+  "reviewer_notes": "Four of the five claims (S1c, S2c, S3c, S5c) are directly and fully carried by items matched to their scope under the declared conditions. S4c is the exception: the instrument gathers the comparison numbers a diagnostic judgment would rest on (items 3–4) but never presents the 'twice as fast' claim for the student to evaluate or asks for an explicit verdict on proportionality, so the central goal the teacher names for this unit is not directly captured. Because the raw trial data (not the questions) was shared with the class before the test, item 1's arithmetic is the one sub-task where out-of-class pre-computation is plausible; this is noted under S1c but does not change its verdict since the graph still requires fresh, in-room production."
+}

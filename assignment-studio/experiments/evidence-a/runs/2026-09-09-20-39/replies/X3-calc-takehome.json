@@ -1,0 +1,174 @@
+{
+  "claims": [
+    {
+      "claim_id": "K1",
+      "items": [
+        {
+          "item": "1: Integral of x e^(2x) dx",
+          "elicits": "Setting up and carrying out integration by parts (choosing u and dv) to reach a final antiderivative, plus naming the technique in one phrase."
+        },
+        {
+          "item": "2: Integral of (3x+1)/(x^2+x-6) dx",
+          "elicits": "Factoring the denominator, decomposing into partial fractions, integrating each term, and naming the technique."
+        },
+        {
+          "item": "3: Integral of sin^3(x) cos^2(x) dx",
+          "elicits": "Applying a Pythagorean identity to split off one factor, substituting, and integrating the resulting polynomial, plus naming the technique."
+        },
+        {
+          "item": "4: Integral of x/sqrt(9-x^2) dx",
+          "elicits": "Recognizing and executing a direct u-substitution (u = 9-x^2) to a final antiderivative, plus naming the technique."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude that a written response naming a technique and giving a correct antiderivative for each of the four integrands was submitted under the student's name; the conditions do not let that computation be attributed to the student's own unaided execution.",
+      "does_not_support": [
+        "Whether the student, without a CAS or AI assistant, can execute integration by parts, partial fractions, trig-identity reduction, or u-substitution -- the core of K1 -- since all four integrands are directly solvable by any permitted tool over an open weekend.",
+        "Whether the technique label written next to each answer reflects the student's own selection reasoning (the K2 skill) rather than a label copied alongside a tool-generated solution.",
+        "Whether any visible working is the student's own execution versus a transcribed tool output the student did not independently verify.",
+        "Any observation of process -- which steps were attempted, in what order, with what false starts -- since only final answers are collected."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Every integrand can be entered into a CAS or AI assistant and returned as a formatted antiderivative with a plausible technique label in seconds, and the take-home, AI-permitted condition places no barrier between the student and that tool."
+      },
+      "gap_statement": "We cannot tell from this assessment, as administered, whether the named student can execute any of these integration techniques unaided, because the take-home setting with AI and CAS explicitly permitted removes the only condition (independent production) that would let a correct answer be attributed to the student.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "In class, closed book: Evaluate the integral of (2x-1)e^x dx. Show your final antiderivative.",
+        "variant_rule": "Vary the coefficient and sign inside the polynomial-times-exponential factor each period (e.g., x e^(2x) -> (2x-1)e^x -> (x+3)e^(4x)); keep the technique fixed as integration by parts on a linear-times-exponential integrand so the claim being checked does not shift; avoid reusing the exact take-home integrand or a leading coefficient of 1 that trivializes the by-parts choice.",
+        "conditions": "In-class, proctored_in_class, closed book, no calculator, no notes, no device, individual, at the start of the next class period.",
+        "sufficiency_line": "A response counts as evidence when it shows the by-parts setup (the chosen u and dv) and arrives at a correct antiderivative, produced in the room without a calculator, notes, or device.",
+        "student_minutes": 3,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "K2",
+      "items": [
+        {
+          "item": "5(a): Integral of x^2/sqrt(x^2+4) dx -- name method only",
+          "elicits": "Naming trigonometric substitution and stating the specific substitution (x = 2 tan(theta)) without carrying out integration."
+        },
+        {
+          "item": "5(b): Integral of ln(x) dx -- name method only",
+          "elicits": "Naming integration by parts and stating the u, dv choice (u = ln x) without carrying out integration."
+        },
+        {
+          "item": "5(c): Integral of 1/(x^2-9) dx -- name method only",
+          "elicits": "Naming partial fractions and stating the factorization/decomposition of 1/(x^2-9) without carrying out integration."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude that a plausible technique name and substitution, decomposition, or identity was written down for each of the three Part B integrands; the conditions do not let that selection reasoning be attributed to the student working unaided.",
+      "does_not_support": [
+        "Whether the student can select a technique for an integrand not already answered for them by an AI assistant asked the identical question.",
+        "Whether the student's naming of the substitution or identity reflects understanding of why that structural feature triggers that technique, versus transcription of a tool's answer.",
+        "The distinction between K2 (selecting without computing) and K1 (executing), since neither Part A nor Part B is independently produced here and so cannot be cross-checked against each other as evidence of the student's own reasoning.",
+        "Whether the student could perform this selection under any time pressure, since the extended weekend removes that constraint entirely."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "The three Part B integrands are exactly the kind of 'which method' question an AI assistant answers instantly and correctly by pattern-matching the integrand's form, and nothing in the unsupervised take-home condition prevents that."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, independently, can look at an unfamiliar integrand and name the technique and the specific substitution or decomposition it depends on, because the take-home, AI-permitted condition allows that selection to be produced by an assistant rather than the student.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Classify",
+        "item_text": "In class: Here are three integrals. For each, state only the technique you would use and the substitution, decomposition, or identity it depends on -- do not evaluate. (a) integral of x/(x^2+4)^(3/2) dx  (b) integral of x^2 ln(x) dx  (c) integral of 1/(x^2+6x+5) dx",
+        "variant_rule": "Keep the three structural categories fixed (trig substitution, by-parts, partial fractions) so the same three decision points are probed each period; vary the specific integrand within each category (different radical, different polynomial power, different factorable quadratic); avoid reusing any integrand from the take-home Part B or a form identical to a worked in-class example.",
+        "conditions": "In-class, proctored_in_class, closed book, no notes, no device, individual, at the start of class before any discussion of the take-home quiz.",
+        "sufficiency_line": "A response counts as evidence when it names a technique and states the specific substitution, decomposition, or identity (not just the technique name) for at least two of the three items, without computing.",
+        "student_minutes": 4,
+        "scoring_seconds": 45
+      }
+    },
+    {
+      "claim_id": "K3",
+      "items": [
+        {
+          "item": "6: Faulty solution to integral of x cos(x^2) dx",
+          "elicits": "Identifying the specific invalid algebraic move (dividing by a non-constant factor 2x instead of correctly reversing the chain rule) and supplying the correct antiderivative, (1/2) sin(x^2) + C."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude that a submission naming an invalid step and giving a corrected antiderivative for this one faulty solution exists; the conditions do not let that diagnosis be attributed to the student's own, independent error analysis.",
+      "does_not_support": [
+        "Whether the student can locate an unfamiliar invalid step without an AI assistant, which will name the specific fallacy (treating a variable factor as a constant divisor) as readily as it will supply an answer.",
+        "Whether the student's explanation of which step does not follow reflects the student's own reasoning versus a copied explanation, since this is a single-item, take-home, unproctored response.",
+        "Whether this diagnostic skill transfers to a differently structured invalid step (e.g., a mis-applied by-parts or a mis-simplified partial fraction) rather than only this one instance.",
+        "General error-finding under any time constraint, since the weekend window removes time pressure entirely."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Pasting the faulty line and asking what is wrong with it is a textbook AI-assistant task, and the unsupervised take-home condition places no obstacle between the student and that assistant."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, unaided, can locate an invalid step in an unfamiliar incorrect antiderivative and repair it, because the take-home, AI-permitted condition allows the diagnosis itself to be produced by a tool rather than the student.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Diagnose",
+        "item_text": "In class: A student writes: integral of 2x/(x^2+1) dx = ln(x^2+1)/(2x) + C. This is wrong. State which step does not follow, and give the correct antiderivative.",
+        "variant_rule": "Keep the error type fixed (an illegitimate division by the differentiated factor tacked on after a correct u-substitution numerator match) so the same misconception is probed; vary the specific function family (log, arctan, exponential) each period; avoid reusing the sin(x^2) example from the take-home.",
+        "conditions": "In-class, proctored_in_class, closed book, no notes, no device, individual.",
+        "sufficiency_line": "A response counts as evidence when it names the specific illegal step (not just 'it's wrong') and supplies a correct antiderivative.",
+        "student_minutes": 3,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "K4",
+      "items": [
+        {
+          "item": "7: Construct an integral requiring by-parts exactly twice, with justification",
+          "elicits": "Constructing an integrand whose antiderivative genuinely requires two, and only two, applications of integration by parts, and stating in one sentence the structural feature (e.g., a polynomial factor that reaches degree zero after two differentiations) that forces exactly two."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude that a submission containing an integral requiring by-parts twice, plus a one-sentence justification, exists; the conditions do not let that construction and reasoning be attributed to the student working unaided.",
+      "does_not_support": [
+        "Whether the student can generate such an example without an AI assistant, which can produce a textbook pattern (e.g., x^2 e^x or x^2 sin x) and its justification on request.",
+        "Whether the one-sentence justification demonstrates the student's own understanding of why the degree-reduction pattern requires exactly two applications, versus a fluent tool-authored explanation the student did not construct.",
+        "Whether the student could reject a plausible-but-wrong construction (one that actually needs three applications, or reduces to a solvable equation instead) -- this single open-ended item does not probe that boundary.",
+        "Transfer to constructing an example under a different structural constraint (e.g., requiring by-parts followed by partial fractions), since only the 'exactly twice' constraint is tested."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Constructing a canonical 'requires integration by parts exactly twice' example and justifying it is a well-known, easily AI-generated request, and the take-home, AI-permitted condition supplies no barrier to obtaining it."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student can, independently, construct an integral meeting a stated structural constraint and justify that constraint, because the unsupervised, AI-permitted take-home condition allows both the construction and its justification to be supplied by a tool.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Generate",
+        "item_text": "In class: Write an integral that requires integration by parts exactly three times (not two, not four), and say in one sentence how you know three applications are required.",
+        "variant_rule": "Keep the constraint type fixed (a specific integer number of by-parts applications) but change the required count each period (three, then four, then two with a different function family) so a memorized take-home answer does not transfer directly; also require a function family not used in the take-home version (e.g., x^3 e^x rather than x^2 e^(2x)); avoid accepting a construction identical in form to the take-home Part D example.",
+        "conditions": "In-class, proctored_in_class, closed book, no notes, no device, individual.",
+        "sufficiency_line": "A response counts as evidence when the constructed integral genuinely requires the stated number of by-parts applications (verified by the teacher working it) and the one-sentence justification names the specific feature (e.g., polynomial degree) controlling that count.",
+        "student_minutes": 4,
+        "scoring_seconds": 60
+      }
+    }
+  ],
+  "conditions_echo": "Unsupervised, individual, AI-permitted (anything at home, internet, an AI assistant, CAS), summative, time not stated, sent home over a weekend after the techniques-of-integration sequence; the teacher states the integrands themselves are new to the students.",
+  "reviewer_notes": "All four claims fail on the independence condition alone, and that failure is total and uniform: 'unsupervised' with AI and CAS explicitly permitted never satisfies independence regardless of how novel or well-targeted an item is, so any_independent_observation is false for every claim here. This is not a criticism of the item design -- Parts A through D map cleanly, one part per claim, onto K1 through K4, and Part B in particular does real work isolating selection (K2) from execution (K1) by explicitly forbidding computation. Each part would produce independent evidence for its claim if administered proctored_in_class or observed_live instead. The gap is entirely a condition-of-administration gap: the same four item shapes, kept exactly as written, would each need only a short supervised companion check to close it."
+}

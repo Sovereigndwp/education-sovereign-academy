@@ -1,0 +1,150 @@
+{
+  "claims": [
+    {
+      "claim_id": "K1",
+      "items": [
+        {
+          "item": "1. ∫ x e^{2x} dx — evaluate and name the technique.",
+          "elicits": "Correct execution of integration by parts (choosing u and dv, applying the formula, integrating the remaining term) to a verified antiderivative."
+        },
+        {
+          "item": "2. ∫ (3x+1)/(x²+x−6) dx — evaluate and name the technique.",
+          "elicits": "Correct partial-fraction decomposition (factoring the denominator, solving for coefficients) and integration of each resulting term."
+        },
+        {
+          "item": "3. ∫ sin³x cos²x dx — evaluate and name the technique.",
+          "elicits": "Correct use of the Pythagorean identity to isolate a substitutable factor, then execution of u-substitution to a verified antiderivative."
+        },
+        {
+          "item": "4. ∫ x/√(9−x²) dx — evaluate and name the technique.",
+          "elicits": "Correct execution of a substitution (u = 9−x²) to a verified antiderivative — note this integrand is solvable by direct algebraic substitution and does not force true trigonometric substitution."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, under closed-book, no-calculator, proctored conditions, the student can correctly execute at least four distinct integration techniques (by parts, partial fractions, trig-power reduction, and substitution) on integrands not seen in advance.",
+      "does_not_support": [
+        "Does not separate execution ability from technique-selection ability: if a student names the wrong technique, the item cannot tell whether the resulting error is a selection failure or an execution failure — that clean separation is what Part B (K2) is for.",
+        "Does not establish execution ability on integrands requiring more than one technique in combination, or on technique types not sampled here (item 4 is solvable by a direct algebraic substitution and does not require true trigonometric substitution).",
+        "Does not establish fluency or speed beyond a single instance of each technique — one correct instance does not rule out an isolated slip that would recur under different numbers.",
+        "Does not support retention beyond this sitting; this is one observation in time, not a trend."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The evaluation is done in the room with no calculator, notes, or AI, so producing a correct, fully worked antiderivative requires the student's own execution of the technique."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "K1 is already carried by four varied, novel, individually-executed items under full supervision; adding another execution item would buy little given the claim is already directly and broadly sampled.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "K2",
+      "items": [
+        {
+          "item": "5(a) ∫ x²/√(x²+4) dx — name the technique and the substitution/identity; do not evaluate.",
+          "elicits": "Selection of trigonometric substitution and a correctly stated substitution (e.g. x = 2 tan θ) without carrying out the integration."
+        },
+        {
+          "item": "5(b) ∫ ln x dx — name the technique and the decomposition; do not evaluate.",
+          "elicits": "Selection of integration by parts and a correctly stated decomposition (u = ln x, dv = dx) without computing."
+        },
+        {
+          "item": "5(c) ∫ 1/(x²−9) dx — name the technique and the decomposition; do not evaluate.",
+          "elicits": "Selection of partial fractions and a correctly stated decomposition of the denominator without computing."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, under the declared conditions, the student can select an appropriate technique and state the substitution, decomposition, or identity it depends on for at least three distinct integrand types, independent of whether they can carry out the computation.",
+      "does_not_support": [
+        "Does not support whether the student can then correctly carry out the selected technique to a finished antiderivative — that is K1's evidence, gathered separately in Part A.",
+        "Does not support selection ability on integrands that admit more than one workable technique, or that require a preliminary algebraic step before the technique becomes visible — the three integrands here each cue their technique fairly directly.",
+        "Does not support selection speed or selection under the added load of also computing the result, since Part B removes computation entirely.",
+        "Does not distinguish a student who recognizes the correct technique from one who pattern-matches the integral's family to a memorized label without understanding why the substitution works."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "With no notes, calculator, or AI available in the room, naming the correct substitution or decomposition for an unseen integrand requires the student's own recognition, not recall of a worked example."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "K2 is already isolated cleanly from execution and sampled across three technique families under full supervision; the claim is fully carried as stated.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "K3",
+      "items": [
+        {
+          "item": "6. Find the mistake in ∫ x cos(x²) dx = x sin(x²)/(2x) + C.",
+          "elicits": "Locating the specific invalid step (an incorrect reversal of the chain rule/algebraic slip) in a given flawed antiderivative and producing the correct antiderivative in its place."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Locates and repairs one specific category of invalid step (an algebraic/chain-rule reversal error) in one incorrect antiderivative; does not establish that the student can do this across other error categories (e.g. a sign error, a mis-set substitution, an omitted term in integration by parts, or a misapplied identity).",
+      "supports": "A teacher may conclude that the student can locate and correct this one class of invalid step in an unfamiliar flawed antiderivative under full supervision.",
+      "does_not_support": [
+        "Does not support diagnostic ability on other categories of invalid step (sign errors, mis-set substitution bounds, an omitted term in integration by parts, a misapplied identity) since only one error type is sampled.",
+        "Does not support the student's ability to produce a correct antiderivative unprompted, from scratch, without a flawed scaffold to react to — that is K1's evidence.",
+        "Does not distinguish a student who truly locates the faulty reasoning from one who simply redoes the problem correctly from the start and never engages with the given (wrong) line.",
+        "Does not support diagnostic performance on a second or third attempt — one item is one data point, not a stable measure of the skill."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The item is completed in the room with no calculator, notes, or AI, so identifying the flawed step and supplying a repaired antiderivative reflects the student's own diagnostic reasoning."
+      },
+      "gap_statement": "We cannot tell from a single error-diagnosis item whether the student's diagnostic skill generalizes to invalid-step categories other than the one type tested here.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Diagnose",
+        "item_text": "A student writes: ∫ x sec²x dx = x tan x + C. Say which step does not follow and give the correct antiderivative.",
+        "variant_rule": "Keep the two-part response fixed (name the specific step that fails; supply the correct antiderivative); rotate the technique and error category each time it is used (e.g. an omitted term in integration by parts, a partial-fraction sign error, a mis-set substitution bound) so the specific flawed line was not seen in advance and no two administrations share an error type; the flawed line contains exactly one invalid step.",
+        "conditions": "proctored_in_class, individual, closed book, no calculator, AI prohibited and enforced — identical to the quiz's own conditions.",
+        "sufficiency_line": "A response counts as evidence if it names the step that fails (e.g. 'the −∫tan x dx term from integration by parts was dropped') and supplies an antiderivative correct for the by-parts decomposition used, regardless of final formatting.",
+        "student_minutes": 3,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "K4",
+      "items": [
+        {
+          "item": "7. Write an integral that requires integration by parts exactly twice, and say in one sentence how you know twice is required and once is not.",
+          "elicits": "Construction of an original integrand satisfying a stated structural constraint (exactly two applications of by-parts) and a one-line statement of the feature that forces a second application."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can construct, from scratch and under full supervision, an integrand that genuinely requires two applications of integration by parts, and can name in one line why one application is insufficient.",
+      "does_not_support": [
+        "Does not support whether the student can carry out the two by-parts applications correctly on their own construction — the item explicitly does not ask them to evaluate it.",
+        "Does not support construction ability against a different structural constraint (e.g. exactly three applications, or a constraint combining two techniques) — only the 'exactly twice' case is sampled.",
+        "Does not rule out a memorized stock example (e.g. x²eˣ, a common textbook illustration) submitted with a rehearsed justification rather than reasoning done in the moment — the one-sentence justification cannot fully distinguish the two.",
+        "Does not support the claim under time pressure at the end of a 40-minute closed-book quiz, where a rushed or incomplete justification may understate understanding rather than reveal its absence."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "No notes, calculator, or AI are available in the room, so the constructed integral and its justification are the student's own, even though a memorized stock example remains a residual risk noted separately."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The single construct-and-justify item maps directly onto both parts of K4 (construction under a stated constraint, and justification of the count) and is produced under full supervision with no outside resources; the residual risk of a memorized stock example is a depth concern, not a missing observation, and does not warrant a second item for a claim this narrow.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "proctored_in_class, individual, AI prohibited_and_enforced, closed book, no calculator, summative, 40 minutes, administered immediately after the techniques-of-integration sequence; the integrands themselves are new to the students though the techniques have been practiced.",
+  "reviewer_notes": "The assessment's four parts map one-to-one onto the four claims (Part A→K1, Part B→K2, Part C→K3, Part D→K4), and because the whole quiz is proctored with AI prohibited and enforced and no notes or calculator, independence holds for every item without needing to be argued part by part. K1, K2 and K4 are each carried by items that match the claim's stated action directly and, for K1 and K2, across enough varied integrand types to reach the whole claim. K3 is the one place sampling is thin: a diagnostic claim is carried by a single item testing a single error category, which is a real but modest and easily named narrowing, not a defect in the item itself."
+}

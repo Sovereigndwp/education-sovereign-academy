@@ -1,0 +1,117 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "#1 Compare 3/4 ___ 5/8, show how you know",
+          "elicits": "Choose one comparison strategy (common denominator, benchmark, or picture), execute it, and write reasoning tied to the chosen symbol."
+        },
+        {
+          "item": "#2 Compare 2/3 ___ 7/12, show how you know",
+          "elicits": "Same strategy-choice-and-justify move on a pair better suited to a common-denominator approach."
+        },
+        {
+          "item": "#3 Compare 5/6 ___ 8/9, show how you know",
+          "elicits": "Same strategy-choice-and-justify move on a pair suited to either common denominator or a benchmark-to-1 approach."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, working alone under supervision with novel number pairs, the student can select a valid strategy (common denominator, benchmark, or visual model), execute it correctly, and produce reasoning that supports the comparison symbol chosen, for two-fraction comparisons of this general difficulty.",
+      "does_not_support": [
+        "Does not confirm the student can use multiple different strategies flexibly (equivalent fractions, benchmark, and visual model) \u2014 answering all three items with the same method, such as common denominator every time, still fully satisfies what is asked, so strategy flexibility itself is not established.",
+        "Does not extend to comparing more than two fractions at once, or comparing a fraction to a decimal or percent.",
+        "Adjacent claim risk: when a student's chosen strategy is 'find a common denominator,' the same written work also demonstrates the procedural construction G5C2 targets \u2014 strong Part A performance should not be read as separately confirming G5C2 fluency, which Part B/C already carries on its own.",
+        "Only three comparison pairs are sampled, so the evidence does not establish how reliably the strategy generalizes to a wider range of denominator relationships (e.g., denominators with no small common multiple)."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The comparison symbol and the supporting reasoning are produced on paper, in the room, under enforced AI prohibition, so the work must originate with the student."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 1-3 already require the student to choose a strategy, execute it, and show reasoning tied to the chosen symbol, under supervised, novel-number conditions \u2014 that is the evidence the claim calls for, and it is already produced.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "#4 1/2 + 1/3 =",
+          "elicits": "Construct a common denominator for two unlike fractions and combine the like-sized parts."
+        },
+        {
+          "item": "#5 5/6 - 1/4 =",
+          "elicits": "Construct a common denominator and combine (subtract) like-sized parts, simplifying the result."
+        },
+        {
+          "item": "#6 2 1/3 + 1 3/4 =",
+          "elicits": "Construct a common denominator for mixed numbers, combine parts, and regroup the improper result into a mixed number."
+        },
+        {
+          "item": "#7 Maya word problem (3/4 mi + 5/6 mi)",
+          "elicits": "Translate a word problem into an unlike-denominator addition, execute it, and express the answer as a mixed number as instructed."
+        },
+        {
+          "item": "#8 Jonah recipe word problem (2/3 cup - 1/4 cup)",
+          "elicits": "Translate a word problem into an unlike-denominator subtraction and execute it to a simplified answer."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, working alone under supervision with novel numbers, the student can construct common denominators for unlike fractions, correctly combine the like-sized parts by addition or subtraction, and simplify or regroup the result to a mixed number where the item requires it, across both isolated computation and one-step word-problem contexts.",
+      "does_not_support": [
+        "Does not test subtraction that requires regrouping a whole number into a fraction (e.g., 3 1/4 - 1 3/4), a distinct sub-procedure not sampled anywhere in this assessment.",
+        "Does not test combining three or more unlike fractions, or denominators without a small common multiple, so the evidence does not extend to more demanding versions of the same procedure.",
+        "Single sitting only \u2014 does not establish that the procedure is retained or reproducible on a different day or under time pressure different from this 25-minute window.",
+        "Adjacent claim risk: strong Part B/C performance demonstrates the addition/subtraction algorithm, not the comparison-and-justify move G5C1 targets, and should not be read as also covering G5C1."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The multi-step common-denominator work is produced on paper, in the room, under enforced AI prohibition, with no calculator, so it reflects the student's own procedure."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 4-8 already require constructing common denominators, combining parts, and simplifying or regrouping to a mixed number, across five separate problems in both isolated and word-problem form \u2014 that is the whole claim, already carried.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "#9 Find the mistake: a student added 1/2 + 1/4 and got 2/6; explain the error and give the correct answer",
+          "elicits": "Diagnose an unfamiliar incorrect solution: name why adding denominators produces a wrong-sized part, then repair it by executing the correct addition."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, working alone under supervision, the student can identify the 'added the denominators' error, state in their own words why it produces a wrong-sized part rather than a valid fraction, and independently produce the correct sum.",
+      "does_not_support": [
+        "Tests only one instance of the error, with one fraction pair (1/2 + 1/4) \u2014 does not establish whether the student would name the same mechanism with different denominators or with a subtraction-analog version of the same error.",
+        "Hands the student an already-wrong answer to critique rather than asking them to solve a blank problem from scratch, so it does not by itself confirm the student would avoid making this error unprompted in their own original work \u2014 Part B's items 4-6 are what speak to that.",
+        "If scoring credits any correct-sounding phrase (e.g., 'you need a common denominator') without checking that the stated reason actually names the wrong-sized-part mechanism, a procedural-recipe answer could be credited as if it were the targeted diagnostic reasoning.",
+        "Adjacent claim risk: the 'show the correct answer' portion of this item also produces a procedural addition observation that overlaps with G5C2 \u2014 a correct final sum here should not be double-counted as separate evidence of G5C2's broader fluency, which Part B/C already carries."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation and repair are written on paper, in the room, under enforced AI prohibition, so they reflect the student's own diagnosis."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Item 9 is already a Diagnose-style item that puts the exact error named in the claim in front of the student and requires both the explanation and the repair \u2014 this is the evidence the claim asks for, and adding another instance would only raise scoring cost without closing a real gap.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual, AI prohibited and enforced, paper/pencil only, summative, 25 minutes, end of Unit 4; the item forms were practiced but these numbers and problems are new to the students, so every item that maps to a claim counts as independent, novel evidence.",
+  "reviewer_notes": "The assessment maps cleanly onto the three claims by section: Part A carries G5C1 (compare-and-justify), Parts B and C carry G5C2 (construct/combine/simplify), and Part D's find-the-mistake item carries G5C3 (diagnose the added-denominators error). Under the declared conditions all nine items function as independent, novel, claim-targeted evidence, and all three claims are judged fully carried as the teacher stated them; no additional observation is proposed for any claim."
+}

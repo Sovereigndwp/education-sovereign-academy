@@ -1,0 +1,149 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Part A, #1: 3/4 ___ 5/8, show how you know",
+          "elicits": "choosing one comparison strategy (common denominator, benchmark, or picture), executing it, and recording the reasoning that supports the chosen symbol"
+        },
+        {
+          "item": "Part A, #2: 2/3 ___ 7/12, show how you know",
+          "elicits": "choosing one comparison strategy, executing it, and recording the reasoning that supports the chosen symbol"
+        },
+        {
+          "item": "Part A, #3: 5/6 ___ 8/9, show how you know",
+          "elicits": "choosing one comparison strategy, executing it, and recording the reasoning that supports the chosen symbol"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under supervised, novel conditions, a teacher may conclude that a student who completes Part A correctly can choose a valid strategy, execute it, and produce reasoning tied to the comparison symbol for unlike fractions with denominators such as 4, 6, 8, 9, and 12.",
+      "does_not_support": [
+        "Does not establish that the student can use all three listed strategy types (equivalent fractions, a benchmark, and a visual model) individually \u2014 only that the student can produce at least one valid strategy per item.",
+        "If the teacher grades only the symbol and not the written reasoning, a correct symbol could reflect a 1-in-3 guess among <, >, = rather than valid reasoning; the evidentiary value depends on the reasoning actually being scored.",
+        "Does not support the procedural fluency claimed in G5C2 (constructing and combining like-sized parts in an addition/subtraction context) even though the same equivalent-fraction mechanics are used here.",
+        "Does not support performance on comparisons involving denominators outside this small, familiar set, or under different time pressure."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, AI-prohibited administration with novel numbers and required written reasoning makes it hard to submit a valid strategy-plus-justification without the student actually performing the comparison."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The three comparison items already require the student to choose a strategy, execute it, and show reasoning tied to the symbol, under supervised and novel conditions; this carries the claim as written, so an additional observation would not add distinguishing evidence.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Part B, #4: 1/2 + 1/3",
+          "elicits": "constructing a common denominator for two unlike fractions and executing the addition of the like-sized parts (result is already in simplest form; no reduction step is required)"
+        },
+        {
+          "item": "Part B, #5: 5/6 - 1/4",
+          "elicits": "constructing a common denominator and executing the subtraction of like-sized parts (result is already in simplest form)"
+        },
+        {
+          "item": "Part B, #6: 2 1/3 + 1 3/4",
+          "elicits": "constructing common denominators for the fractional parts of two mixed numbers, adding them, and regrouping a fractional part exceeding one whole into the whole-number place"
+        },
+        {
+          "item": "Part C, #7: Maya's mileage word problem",
+          "elicits": "translating a word problem into a fraction-addition expression, constructing a common denominator, computing the sum, and expressing the result as a mixed number"
+        },
+        {
+          "item": "Part C, #8: Jonah's flour word problem",
+          "elicits": "translating a word problem into a fraction-subtraction expression, constructing a common denominator, and computing the difference (result is already in simplest form)"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "The evidence supports constructing common denominators, combining or comparing the resulting like-sized parts, and regrouping a sum exceeding one whole into a mixed number. It does not support the 'simplifies to lowest terms' half of the claim, because none of the five numeric answers in Parts B and C (5/6, 7/12, 4 1/12, 1 7/12, 5/12) is a fraction that shares a common factor needing reduction \u2014 every computed result is already in simplest form before any regrouping.",
+      "supports": "Under supervised, novel conditions, a teacher may conclude that a student who completes Parts B and C correctly can construct common denominators, combine or compare like-sized parts, and regroup a fractional sum exceeding one whole into a mixed number.",
+      "does_not_support": [
+        "Does not support that the student can reduce a non-mixed-number result to lowest terms when numerator and denominator share a common factor, since no item's answer requires that step with these particular numbers.",
+        "Does not support the comparison-and-justify skill in G5C1, even though the same common-denominator mechanics are used.",
+        "Does not support the diagnostic/explanatory skill in G5C3 \u2014 correctly executing the procedure shows the student avoided the denominator-adding shortcut, but not that the student can say why it is wrong.",
+        "Does not support fluency with denominator pairs outside this set (2, 3, 4, 6, 8, 9, 12), such as pairs with no small common multiple."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, AI-prohibited administration with novel numbers and a 'show every step' requirement makes the multi-step common-denominator procedure hard to produce without the student actually executing it."
+      },
+      "gap_statement": "We cannot tell from this assessment whether students can reduce a computed sum or difference to lowest terms, since none of the five numeric items in Parts B and C produces an answer that needs reducing beyond regrouping into a mixed number.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "1/6 + 1/3 = ______  Show every step. Write your answer in simplest form.",
+        "variant_rule": "Keep the operation (addition of two unlike fractions) and the instruction to give the answer in simplest form; change the two denominators/numerators each form so that the common-denominator sum always shares a factor with the denominator and must be reduced (e.g., 1/6+1/3, 1/10+3/10... choose pairs where the sum is reducible); never reuse a denominator pair already appearing in Parts A, B, or C; avoid pairs whose sum is already in lowest terms or is a whole number.",
+        "conditions": "proctored_in_class, individual, AI prohibited, paper/pencil, administered as one additional item in the same supervised sitting.",
+        "sufficiency_line": "Counts as evidence if the student shows the common-denominator conversion, computes the unreduced sum, and reduces it to lowest terms as a final step, not just an unreduced correct sum.",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Part B, #4: 1/2 + 1/3",
+          "elicits": "producing the correct sum through a valid common-denominator method (implicitly not through adding denominators), with no request to explain why a denominator-adding method would be wrong"
+        },
+        {
+          "item": "Part B, #5: 5/6 - 1/4",
+          "elicits": "producing the correct difference through a valid method, with no explanatory component"
+        },
+        {
+          "item": "Part B, #6: 2 1/3 + 1 3/4",
+          "elicits": "producing the correct sum through a valid method, with no explanatory component"
+        },
+        {
+          "item": "Part C, #7: Maya's mileage word problem",
+          "elicits": "producing the correct sum through a valid method in a word-problem context, with no explanatory component"
+        },
+        {
+          "item": "Part C, #8: Jonah's flour word problem",
+          "elicits": "producing the correct difference through a valid method in a word-problem context, with no explanatory component"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Items 4-8 show that a student who answers correctly arrived at the sum or difference through a valid method rather than through denominator-adding (the 'gives the correct sum' half of the claim). No item asks the student to evaluate, explain, or repair a denominator-adding error, so nothing in the assessment reaches the 'states why adding denominators produces a wrong-sized part' half -- the explanatory core of this claim and the piece the teacher specifically names as what she needs and reteaches every year.",
+      "supports": "Under supervised, novel conditions, a teacher may conclude only that a student who computes Parts B and C correctly reached the sum through a valid method rather than through denominator-adding; the assessment supports nothing about whether that student can state why the denominator-adding shortcut is wrong.",
+      "does_not_support": [
+        "Does not support that students can state why adding denominators produces a wrong-sized part -- no item asks for this explanation anywhere in the assessment.",
+        "Does not support that students would recognize a denominator-adding error if shown one; producing a correct answer by a different route is not evidence of being able to diagnose that specific wrong method.",
+        "Should not be double-counted as evidence for this claim beyond what it already counts for G5C2 -- crediting the same correct computations toward both claims would treat computation as if it were explanation.",
+        "The absence of a denominator-added-looking wrong answer (e.g., 2/5-style) on Parts B/C is not proof the student ever considered that method, only that they did not produce it."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The correct-sum portion is produced under supervision with work shown and is not delegable, but the assessment collects no response at all for the explanatory half of the claim, so there is nothing there to delegate or protect."
+      },
+      "gap_statement": "We cannot tell from this assessment whether students can state why adding denominators produces a wrong-sized part, since no item asks them to evaluate or repair a denominator-adding error -- the only evidence collected is that they can reach a correct sum by a different, valid method.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Diagnose",
+        "item_text": "A student solved this problem: 1/3 + 1/4 = 2/7. Explain in one sentence why this method gives a wrong-sized part. Then write the correct sum.",
+        "variant_rule": "Keep the format fixed -- a worked example that adds numerators and denominators straight across, a required one-sentence explanation, plus the correct sum; vary the two denominators each form and never reuse a denominator pair already appearing in Parts A, B, or C; keep the erroneous method identical (straight-across addition) so the misconception probed does not change; a response that only states 'it's wrong' without naming why the parts are differently sized does not count.",
+        "conditions": "proctored_in_class, individual, AI prohibited, paper/pencil, administered as one additional item in the same supervised sitting or as a short supervised add-on immediately following the test.",
+        "sufficiency_line": "Counts as evidence if the one-sentence explanation names that the denominators represent differently sized parts so the number of parts cannot simply be added, and the correct sum is also supplied via a valid method.",
+        "student_minutes": 3,
+        "scoring_seconds": 20
+      }
+    }
+  ],
+  "conditions_echo": "proctored_in_class, individual, AI prohibited_and_enforced, paper/pencil only, summative, 25 minutes, end of Unit 4; problem numbers are novel to the students per the teacher's note.",
+  "reviewer_notes": "G5C1 is fully carried by Part A under the declared supervised conditions. G5C2 is carried for constructing common denominators, combining/comparing parts, and regrouping into a mixed number, but the specific numbers used never require reducing a fraction to lowest terms, which is a closable, low-cost gap. G5C3 is the notable finding: the assessment never presents the denominator-adding error for the student to diagnose, so it produces evidence only for the 'gives the correct sum' half of that claim and none for the explanatory half the teacher says is the actual point of the claim and what she reteaches every year."
+}

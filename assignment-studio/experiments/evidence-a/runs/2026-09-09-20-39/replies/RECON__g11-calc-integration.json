@@ -1,0 +1,87 @@
+{
+  "reading_a": {
+    "label": "The target is technique selection and structural reasoning about which method fits which integrand, with computed answers serving as corroboration rather than the primary evidence.",
+    "claims": [
+      {
+        "id": "A1",
+        "statement": "Selects and names, in one phrase, the applicable integration technique for each integrand and backs the choice with a computed antiderivative.",
+        "claim_type": "conceptual",
+        "quoted_verb": "name in one phrase the technique you chose",
+        "items": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "id": "A2",
+        "statement": "States the technique and writes out the exact substitution, decomposition, or identity it depends on, without performing the integration itself.",
+        "claim_type": "representational",
+        "quoted_verb": "name the technique you would use and write the substitution, decomposition or identity it depends on ... Do not carry out the integration",
+        "items": [
+          "5a",
+          "5b",
+          "5c"
+        ]
+      },
+      {
+        "id": "A3",
+        "statement": "Locates the specific step in a given worked solution that does not follow from a valid rule, and supplies the correct antiderivative in its place.",
+        "claim_type": "diagnostic",
+        "quoted_verb": "say which step does not follow",
+        "items": [
+          "6"
+        ]
+      },
+      {
+        "id": "A4",
+        "statement": "Determines, from the structure of a self-chosen integrand, how many successive applications of integration by parts are required and justifies that count.",
+        "claim_type": "conceptual",
+        "quoted_verb": "say in one sentence how you know twice is required and once is not",
+        "items": [
+          "7"
+        ]
+      }
+    ]
+  },
+  "reading_b": {
+    "label": "The target is successful computation of a correct antiderivative using the right technique, with technique-naming and structural talk serving as labels attached to computed or constructed work rather than the primary evidence.",
+    "claims": [
+      {
+        "id": "B1",
+        "statement": "Evaluates each integral to a correct, fully simplified antiderivative using integration by parts, partial fractions, trig-power reduction, or trig substitution as the integrand requires.",
+        "claim_type": "procedural",
+        "quoted_verb": "Evaluate each integral",
+        "items": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "id": "B2",
+        "statement": "Repairs a flawed antiderivative by producing a correct, verifiable one in its place, independent of how the flawed step is described.",
+        "claim_type": "procedural",
+        "quoted_verb": "give the correct antiderivative",
+        "items": [
+          "6"
+        ]
+      },
+      {
+        "id": "B3",
+        "statement": "Constructs an original integral that actually requires two successive integration-by-parts applications, so the construction itself must be executable, not merely asserted.",
+        "claim_type": "application",
+        "quoted_verb": "Write an integral that requires integration by parts exactly twice",
+        "items": [
+          "7"
+        ]
+      }
+    ]
+  },
+  "material_difference": "Under Reading A, a correctly named technique with the correct substitution or decomposition written out (Parts B and D, where execution is explicitly withheld) already satisfies the claim, so a computational slip in Part A's final answer would not by itself defeat it; under Reading B only a correctly evaluated antiderivative counts as evidence, so a right technique paired with a wrong final answer in Part A would mean the claim was not met, and Part B's method-only items would carry little independent evidential weight of their own.",
+  "left_out_question": "Item 6 requires checking a proposed antiderivative against the chain rule to see where the reversal fails before a step can be named as wrong -- is that differentiation-verification skill something this quiz intends to certify as part of the integration-technique claim, or is it a prerequisite already certified in an earlier derivatives assessment, so that item 6 should be read as testing only error-location within integration and not chain-rule fluency itself?",
+  "preferred": "reading_a",
+  "preferred_reason": "Three of the four parts (B, C, D) are built to withhold or bypass full computation -- naming a method without evaluating it, locating a broken step, and justifying a count without solving anything -- which shows the design deliberately isolates technique selection and reasoning from execution rather than treating execution as the point."
+}

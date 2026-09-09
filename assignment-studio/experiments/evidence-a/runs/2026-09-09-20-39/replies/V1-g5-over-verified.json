@@ -1,0 +1,125 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Item 1 (3/4 ___ 5/8)",
+          "elicits": "Chooses and executes a comparison strategy (equivalent fractions, a benchmark, or a visual model) and writes the reasoning that supports the inequality symbol."
+        },
+        {
+          "item": "Item 2 (2/3 ___ 7/12)",
+          "elicits": "Same move as item 1 on a second unlike-denominator pair, forcing the strategy to generalize rather than match one memorized case."
+        },
+        {
+          "item": "Item 3 (5/6 ___ 8/9)",
+          "elicits": "Same move on a closer pair, where a coarse benchmark (e.g. 'both near 1') is less discriminating, pressing the student toward equivalent fractions or a finer visual model."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can choose and execute a valid strategy for comparing two unlike fractions and can explain, in writing, the reasoning behind the resulting symbol, on numbers not seen in advance, under supervision.",
+      "does_not_support": [
+        "Does not show the student can compare without the prediction-then-solve scaffold present on every item, since no unscaffolded comparison is asked for.",
+        "Does not indicate whether the strategy generalizes to more than two fractions, to fractions greater than one, or to negative values.",
+        "Cannot separate a correct symbol reached by a shaky or partly-guessed strategy from one reached by genuine reasoning, since the explanation is self-produced at the same sitting as the answer rather than checked independently.",
+        "Could be mistaken for evidence of computational fluency or of G5C2, which items 1-3 never require, since no addition or subtraction occurs in Part A."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, AI prohibited and enforced, paper-and-pencil, on numbers not available in advance leaves no channel for the written strategy-and-reasoning to be produced without the student doing the comparison."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 1-3 already produce independent, novel, claim-targeted observations of the whole claim - strategy choice, execution, and reasoning together - so there is nothing this claim is missing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The mandatory 'Prediction' box adds no evidence beyond the 'Solution' box on a two-fraction comparison item, because predicting which fraction is larger IS the task - there is no separate calculation step for the prediction to precede. The prediction column costs writing time on three items without buying additional evidence for this claim.",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Item 4 (1/2 + 1/3)",
+          "elicits": "Builds a common-denominator equivalent for each fraction and adds the like-sized parts; the sum is already in lowest terms, so no simplification step is required or observed."
+        },
+        {
+          "item": "Item 5 (5/6 - 1/4)",
+          "elicits": "Builds a common-denominator equivalent for each fraction and subtracts the like-sized parts; again the result is already in lowest terms."
+        },
+        {
+          "item": "Item 6 (2 1/3 + 1 3/4)",
+          "elicits": "Converts mixed numbers to common-denominator equivalents, combines them, and regroups an improper fractional part into an additional whole (carrying) to report a mixed number."
+        },
+        {
+          "item": "Item 7 (Maya word problem)",
+          "elicits": "Applies common-denominator addition inside a word-problem context and converts the resulting improper fraction into a mixed number, as the item explicitly instructs."
+        },
+        {
+          "item": "Item 8 (Jonah word problem)",
+          "elicits": "Applies common-denominator subtraction inside a word-problem context to find a missing amount; the result is already in lowest terms."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Supports constructing common-denominator equivalents, combining like-sized parts, and regrouping an improper sum into a mixed number (items 6 and 7). Does not support simplifying a sum to lowest terms, because every computed result in items 4-8 (5/6, 7/12, 1/12 remainder, 7/12, 5/12) is already in lowest terms and never requires reduction.",
+      "supports": "A teacher may conclude that the student can construct common-denominator equivalents, combine like-sized parts to add or subtract unlike fractions including inside word problems, and regroup an improper result into a mixed number, on numbers not seen in advance, under supervision.",
+      "does_not_support": [
+        "Does not show the student can reduce a fraction sum to lowest terms, since no item in this assessment produces a sum that needs reducing (see narrower_inference).",
+        "Does not measure fluency or speed, since each item carries an untimed prediction-and-explanation scaffold inside the same 25-minute block.",
+        "Could be mistaken for evidence of G5C1, since the 'Explain every step' box invites a why-narrative, but this claim is carried by correct execution, not by the quality of the justification.",
+        "Does not indicate whether the procedure holds with more than two addends or with both addends greater than one."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, AI prohibited and enforced, paper-and-pencil, novel numbers leave no channel for the written computation to be produced without the student executing the procedure."
+      },
+      "gap_statement": "We cannot tell from items 4-8 whether the student can simplify a fraction sum to lowest terms, since none of the computed sums in this assessment requires reduction.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "Items 4, 5, and 8 are purely procedural and already fully evidenced by the 'Solution' box alone; the required full-sentence 'Explain every step' box and the separate 'Prediction' box add writing and scoring load without adding evidence this claim needs, since G5C2 is carried by correct execution rather than by narrated justification.",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "Compute: 1/6 + 1/3 = ______ . Write your answer in simplest form.",
+        "variant_rule": "Keep the operation (addition of two proper fractions with unlike denominators) and the common-denominator method fixed. Vary the fraction pair each period so the computed sum shares a common factor with its denominator (e.g. 1/6+1/3, 1/4+1/12, 2/9+1/18) - the key is always the reduced fraction, never the raw common-denominator sum. Avoid any pair whose sum is already in lowest terms.",
+        "conditions": "Same conditions as the rest of the assessment: proctored in class, individual, AI prohibited and enforced, paper and pencil, numbers not shown to students in advance.",
+        "sufficiency_line": "A response counts as evidence if the student reaches the correct common-denominator sum and reports it reduced to lowest terms without a separate prompt to simplify.",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Item 9 (Find the mistake: 1/2 + 1/4 = 2/6)",
+          "elicits": "Identifies that the shown error comes from adding the denominators instead of finding a common denominator (naming why the part is the wrong size) and computes the correct sum."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can state why adding denominators produces a wrong-sized part in an unfamiliar incorrect solution and can produce the correct sum, under supervision, on an error instance not seen in advance.",
+      "does_not_support": [
+        "Tests only one error instance (adding denominators on one specific fraction pair); does not show the student can diagnose other common fraction errors, such as subtracting without first converting to equivalent fractions.",
+        "Does not establish that the student could produce this diagnosis unprompted, outside the 'Explain what the student did wrong' framing that names the task for them.",
+        "A correct final sum alone would not be evidence of the diagnosis; credit for this claim depends on the written explanation actually naming the denominator error, not just on the corrected answer.",
+        "Could be mistaken for additional evidence of G5C2's procedural fluency, since the item also asks for 'the correct answer,' but a correct sum here is confirmatory, not the primary evidence for this diagnostic claim."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, AI prohibited and enforced, paper-and-pencil, on an error instance the teacher states is new to students leaves no channel for the diagnosis to be produced without the student doing the reasoning."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Item 9 already produces an independent, novel, claim-targeted observation of the whole claim - naming the error and giving the correct sum - and the post-grading conference adds a further live check on top of that; nothing further is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The written diagnostic item already fully carries this claim under supervised conditions. The post-grading conference asking the student to re-explain item 9 aloud is a second independent check layered on top of a claim that the written item alone already evidences completely - it is not harmful, but it is more verification than this claim requires.",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 mathematics, end of Unit 4, summative. Proctored in class, individual work, AI prohibited and enforced, paper and pencil only, 25 minutes. Item types have been practised; the specific numbers and problems are new to students, per the teacher's declaration.",
+  "reviewer_notes": "The one-page reflection ('how your thinking about fractions changed... include at least one item where your prediction was wrong') is a self-report about the assignment as a whole. It does not map to G5C1, G5C2, or G5C3 individually and so is not independent evidence for any of them - it is a process artifact, not a score-bearing observation, and that is fine as long as it is not read as evidence for a specific claim. Structurally, the instrument asks for a prediction, a full solution, and a complete-sentence-or-labelled-picture explanation on all nine items plus a one-page reflection, inside a declared 25-minute window; that is a heavy writing load relative to the three claims it needs to carry, several of which (items 4, 5, 8 especially) are fully evidenced by the solution alone. None of this weakens what the assessment already proves under its supervised conditions - the observations that exist are sound - it simply means most of this instrument's verification machinery is doing more work than these three claims require, with one exception: no item anywhere requires reducing a fraction sum to lowest terms, which is a real, narrow gap in G5C2 despite the surrounding over-collection."
+}

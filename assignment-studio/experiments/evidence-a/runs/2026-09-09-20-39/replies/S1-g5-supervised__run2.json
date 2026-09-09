@@ -1,0 +1,125 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1. Compare 3/4 ___ 5/8, then show how you know (common denominator, picture, or benchmark).",
+          "elicits": "Chooses one of the three offered strategies, executes it for a pair where both fractions sit on the same side of one half but at different distances from it, and writes reasoning that supports the chosen symbol."
+        },
+        {
+          "item": "2. Compare 2/3 ___ 7/12, then show how you know.",
+          "elicits": "Chooses and executes a strategy for a pair where one fraction (7/12) sits close to one half, forcing a finer comparison than a coarse benchmark check, and writes supporting reasoning."
+        },
+        {
+          "item": "3. Compare 5/6 ___ 8/9, then show how you know.",
+          "elicits": "Chooses and executes a strategy for a pair close to one whole, where a distance-from-one or common-denominator approach is needed, and writes supporting reasoning."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, under supervision and with unseen numbers, a student can choose a valid strategy (common denominator, benchmark, or picture), execute it correctly for unlike-denominator pairs of varying difficulty, and produce reasoning that supports the comparison symbol.",
+      "does_not_support": [
+        "Does not show whether a student can name or select a comparison strategy without the strategy options being listed in the prompt itself, since the item stem names all three acceptable methods.",
+        "Does not extend to comparing more than two fractions at once, fractions greater than one, or fractions against decimals.",
+        "A correct symbol with thin or missing reasoning underneath should not be read as mastery; among the three symbol options a bare symbol carries a real guess rate, so only symbol-plus-scored-reasoning together count as evidence.",
+        "Says nothing about performance outside a time-boxed, single-sitting summative setting, such as retention over time."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Handwritten reasoning produced live under enforced no-AI supervision with numbers the student has not seen before cannot be produced without the student doing the comparison and justification directly."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Part A already elicits strategy choice, execution, and supporting reasoning across three novel pairs of increasing difficulty under supervision; this is enough evidence for the claim as the teacher stated it, and adding another comparison item would buy little.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4. 1/2 + 1/3 = ______",
+          "elicits": "Constructs a common denominator for two unlike-denominator fractions and adds the like-sized parts."
+        },
+        {
+          "item": "5. 5/6 - 1/4 = ______",
+          "elicits": "Constructs a common denominator for two unlike-denominator fractions and subtracts the like-sized parts."
+        },
+        {
+          "item": "6. 2 1/3 + 1 3/4 = ______",
+          "elicits": "Constructs common denominators for two mixed numbers, adds them, and regroups an improper fraction part into a whole number to produce a mixed number."
+        },
+        {
+          "item": "7. Maya word problem: distances of 3/4 mile and 5/6 mile combined.",
+          "elicits": "Sets up an addition of two unlike-denominator fractions from a word-problem context, combines them, and regroups the result into a mixed number."
+        },
+        {
+          "item": "8. Jonah word problem: needs 2/3 cup, has 1/4 cup.",
+          "elicits": "Sets up a subtraction of two unlike-denominator fractions from a word-problem context and combines them to find a difference."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Students can construct a common denominator, combine or compare the resulting like-sized parts, and regroup an improper-fraction sum into a mixed number - but this assessment does not show they can simplify a combined result to lowest terms when reduction is required, since none of the five items produces an answer that needs reducing beyond what regrouping already supplies.",
+      "supports": "A teacher may conclude that a student can build a common denominator for two unlike-denominator fractions or mixed numbers, correctly add or subtract the resulting like-sized parts, and regroup an improper fraction into a mixed number, across bare-number and one-step word-problem forms, under supervision.",
+      "does_not_support": [
+        "Does not show whether a student can reduce a combined fraction to lowest terms, since the correct answer for every item in Parts B and C is already in simplest form once any regrouping is done.",
+        "Does not extend to subtraction of mixed numbers requiring borrowing from the whole-number part, since no item needs that.",
+        "Does not show fluency with three or more addends, or with denominator pairs whose least common denominator is not simply one of the two given denominators or their product.",
+        "'Show every step' plus a correct final answer does not by itself rule out a memorized shortcut that happens to work for these denominator pairs; the intermediate steps must actually be scored, not just the final answer."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Multi-step handwritten work produced live in the room, with numbers unseen in advance and no permitted resource beyond paper and pencil, cannot be generated externally or copied under enforced supervision."
+      },
+      "gap_statement": "We cannot tell from this assessment whether a student who correctly combines unlike-denominator fractions can also reduce the result to lowest terms, because the correct answer for no item requires a reduction step.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "10. Add: 1/6 + 1/3 = ______. Write your answer in simplest form.",
+        "variant_rule": "Keep it a single two-fraction addition or subtraction with unlike denominators, matching the format of item 4. The one thing that must change is that the sum or difference is NOT already in lowest terms (unlike items 4-8, where every result was already reduced) - e.g. 1/6 + 1/3 = 3/6, which must be reduced to 1/2. Keep the result under one whole so this does not also retest the regrouping-to-mixed-number skill already covered by items 6 and 7. Avoid any pair whose sum or difference is already in simplest form.",
+        "conditions": "Appended to the same proctored, individual, paper-and-pencil session, with AI prohibited and enforced, using numbers not seen on the practiced version.",
+        "sufficiency_line": "A response counts as evidence only if it shows the unreduced common-denominator sum and then reduces it to lowest terms (e.g. 3/6 reduced to 1/2, not left as 3/6 or reduced incorrectly).",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.",
+          "elicits": "Locates and names the specific error (adding denominators changes the size of the parts) and repairs it by computing the correct sum via a valid common-denominator method."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that a student can, when shown a specific denominator-adding error in an addition problem, state why it produces a wrong-sized part and supply the correct sum.",
+      "does_not_support": [
+        "Does not show whether a student would recognize or repair the same denominator-adding error if it appeared in a subtraction problem or inside a word problem rather than as a bare presented error.",
+        "Does not show that a student can generate correct work from a blank page without an error already in front of them to react to; that is a separate skill already covered by Part B.",
+        "A correct repaired sum paired with a vague or memorized explanation (e.g. 'you need common denominators') should not be read as full mastery unless the explanation is scored for naming the controlling feature - that adding denominators changes the size of the pieces, not just the count of pieces.",
+        "Says nothing about whether this particular student is prone to making this error themself, only whether they can recognize and fix it when it is placed in front of them."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation and repaired sum must be handwritten live in the room under enforced no-AI supervision, so producing a credible answer requires the student to actually diagnose and fix the shown error."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The single diagnose item already requires both a named reason and a corrected sum in the addition context the claim specifically describes; broadening to subtraction or other error types would test a claim the teacher did not make here.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, summative: proctored_in_class, individual, AI prohibited_and_enforced, paper and pencil only, 25 minutes; the item types were practiced beforehand but these specific numbers and problems were not seen in advance.",
+  "reviewer_notes": "All three claims sit on the same proctored, novel-number instrument, so independence and novelty hold assessment-wide; what differs claim by claim is whether the items reach the full claim as stated. G5C1 and G5C3 are matched closely to the claim wording. G5C2 is carried for the common-denominator/combine/regroup chain but not for simplifying to lowest terms, because the correct answer for no item happens to require a reduction step - this is a property of the specific numbers chosen, not of the item design, and is fixable with one appended item."
+}

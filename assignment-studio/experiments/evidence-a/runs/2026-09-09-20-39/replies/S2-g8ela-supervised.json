@@ -1,0 +1,93 @@
+{
+  "claims": [
+    {
+      "claim_id": "E1",
+      "items": [
+        {
+          "item": "Point-of-view sentence embedded in the evidence paragraph (rubric point 1)",
+          "elicits": "The student states, in their own original wording, what the author's implicit position is on replacing the bridge, without copying a sentence that already announces it."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that a student who earns point 1 can state the author's unstated position in original wording, produced individually, proctored, AI-free, and on a passage the student has not seen before, and that no sentence in the passage simply announces the position for them to copy.",
+      "does_not_support": [
+        "This passage happens to contain no sentence that flatly states a position, so the item never tests the specific discrimination named in the claim (inferring from choices versus lifting a stated sentence) against a genuine stated-position decoy.",
+        "Point 1 is graded on accuracy of the stated position alone; a correct position paired with weak or generic evidence in points 2-3 would still earn this point, so it does not by itself confirm the inference was well-reasoned rather than a plausible genre guess (children, old bridge, nostalgia).",
+        "Does not isolate inference quality from paragraph-writing fluency: an accurate inference stated unclearly could lose the point for reasons unrelated to the inference itself.",
+        "Adjacent claim this is most likely mistaken for: general comprehension of what the passage is about (repair vs. replace), rather than specifically inferring the author's own stance from rhetorical choices."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The paragraph is handwritten in class under direct proctoring with AI prohibited and enforced and only the passage and paper present, so there is no device or channel through which the position statement could be produced by anyone or anything other than the student."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The position is not stated anywhere in the passage, so accurately restating it in original wording already requires synthesizing the selected details and omissions the claim is about; a position not genuinely inferred this way would be unlikely to survive the evidence-and-technique requirements graded in the same response.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "E2",
+      "items": [
+        {
+          "item": "Evidence-and-technique portion of the paragraph (rubric points 2-3): two quoted or paraphrased details, each with an explanation of how it signals position",
+          "elicits": "The student picks two specific details from the passage and, for each, explains how that detail (through word choice, contrast, placement, or what the author chose to include) points to the author's position."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that a student who earns points 2 and 3 can locate two relevant, text-specific details and offer some account of how each signals the author's position, produced individually on a novel passage under supervision.",
+      "does_not_support": [
+        "The written rubric's point 3 ('explanation connects each piece of evidence to the point of view') does not itself require that the named technique be accurate or even present, so an explanation that argues relevance without correctly naming or approximating a technique category could still earn the point as written.",
+        "Nothing requires the two techniques cited to differ, so full marks do not confirm the student can distinguish between techniques; two picks from the same category (e.g., two 'selected detail' choices) score the same as two different ones.",
+        "Does not test whether the student can reject a detail that looks relevant but does not actually reveal position (e.g., a plain factual detail about the bridge's age) — discrimination against a decoy is untested.",
+        "Adjacent claim this is most likely mistaken for: general 'supports a claim with a quote,' which is a lower bar than identifying the specific rhetorical mechanism by which that quote signals position."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Selecting and explaining the two pieces of evidence happens inside the same handwritten, proctored, AI-free response as the rest of the paragraph, so there is no channel for it to be produced other than by the student in the room."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The task prompt itself directs students to name how each piece of evidence works (word choice, contrast, placement, or inclusion), and the full response is visible to the teacher at grading time; the looseness in the rubric's point-3 wording is a scoring-guidance matter the teacher can apply consistently, not a gap in what the item elicits, so no new observation is needed to close it.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "E3",
+      "items": [
+        {
+          "item": "Opposing-case sentence(s) in the paragraph (rubric point 4)",
+          "elicits": "The student identifies where the author concedes the engineer's case for replacement and describes how the author answers or complicates that case."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that a student who earns point 4 can, for this passage, identify the author's acknowledgment of the engineer's case and describe how the author responds to it, produced individually and proctored on a passage seen for the first time.",
+      "does_not_support": [
+        "The passage marks the concession with an explicit transition ('What the engineer did not mention is...'), so this item does not show whether the student can find an acknowledge-and-respond move when it is not signposted by a clear transitional phrase.",
+        "Rubric point 4 is a single combined point covering both 'acknowledges' and 'answers'; a response that only restates the engineer's case without describing the author's rebuttal (or the reverse) is not distinguished from one that does both, so partial performance on the two halves is not separately visible.",
+        "The claim is scoped to this passage's structure; the item says nothing about whether the student could perform the same acknowledge-and-respond recognition in a different passage or genre, since no transfer form is included.",
+        "Adjacent claim this is most likely mistaken for: summarizing the opposing argument alone, without describing how the author answers it."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Describing the acknowledgment-and-response move is written by hand inside the same proctored, AI-free, individual response as the rest of the paragraph, so it cannot be produced by anyone other than the student in the room."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The prompt explicitly requires describing both the acknowledgment and the response to the engineer's case, and rubric point 4 checks exactly that within the same proctored, novel-passage response, so the claim as the teacher stated it is already carried without adding anything.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Proctored, individual, in-class paragraph on a passage new to students; AI prohibited and enforced; only the passage and paper permitted; 45 minutes; summative; end of the informational-text unit; paragraph structure and rubric are familiar, the passage content is not.",
+  "reviewer_notes": "All three claims are carried by one paragraph response scored analytically against the 4-point rubric (point 1 to E1, points 2-3 to E2, point 4 to E3); because AI is prohibited and enforced and no device is present under proctored, individual, paper-only conditions, delegation is structurally excluded rather than merely policy-excluded. The passage is well built for E1 and E3: no sentence states the author's position outright, and the concession-and-response move is present and gradable. The one soft spot found is E2, where the written rubric point 3 does not itself gate on correct technique-naming the way the task prompt does; this is flagged as a scoring-guidance note for the teacher, not an evidentiary gap, since the full paragraph is available for the teacher to check against the prompt's own instruction at grading time."
+}

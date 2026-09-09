@@ -1,0 +1,126 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "Part A, Q1 \u2014 for each document, name the author, the year, and the audience the author was most likely trying to reach, one line each.",
+          "elicits": "Transcribes the author and year already printed in the document heading; infers and states a plausible target audience from the document's content and tone."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can correctly identify a document's stated author and date and can infer a plausible target audience for an unseen primary-source excerpt, under supervised, individual, no-AI conditions.",
+      "does_not_support": [
+        "Does not show the student can determine authorship or date from internal evidence alone \u2014 both are printed in the document heading here, so only the audience judgment is genuinely inferential.",
+        "Does not show sourcing transfers to a document presented without an accompanying paired excerpt, since both documents here are pre-selected and pre-paired for the student.",
+        "Could be mistaken for evidence of H3 (explaining the author's motive) \u2014 Q1 asks who wrote it and for whom, not why the author took that position.",
+        "Does not establish any reliability judgment (whether the audience or authorship should raise or lower trust in the document's claims) \u2014 that weighing is only required later, in H4's Part B."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervision and the AI prohibition remove outside production, and the document is unseen in advance, so the audience inference must be made live in the room."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The document headings give attribution the way real primary sources are normally archived; the item's genuine inferential load is the audience judgment, and that is fully exercised here, so nothing further is needed.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "Part A, Q2 \u2014 one sentence each on how Document 1 and how Document 2 explain the origin of the wealth gap.",
+          "elicits": "Extracts and paraphrases each document's stated cause for the wealth gap, producing two parallel explanatory statements a reader can compare."
+        },
+        {
+          "item": "Part A, Q3 \u2014 choose one word or phrase from each document and explain what it reveals about the author's attitude toward great fortunes.",
+          "elicits": "Selects a specific lexical item from the text and states, in a sentence, what its connotation signals about the author's stance."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "The evidence supports that the student can accurately state each document's stated cause of the wealth gap in isolation, and can point to word-choice evidence of attitude; it does not establish that the student explicitly recognizes or articulates the contrast between the two causal accounts, since Q2 asks for two separate one-sentence statements rather than a single comparative judgment.",
+      "supports": "A teacher may conclude the student can accurately extract each document's stated cause for the shared fact of the wealth gap and can identify a specific word or phrase as evidence of the author's attitude, under supervised conditions on an unseen document pair.",
+      "does_not_support": [
+        "Does not require the student to state the contrast in a single comparative sentence; a student could produce two accurate, isolated paraphrases without ever explicitly characterizing how the two causal stories differ.",
+        "Could be mistaken for evidence of H3 \u2014 reading a word for attitude (Q3) is not the same as explaining why the author held that attitude given their position, which is what H3 requires.",
+        "Does not show the student can locate causal explanations that are stated less starkly than these two; both documents are openly rhetorical and editorial, which makes the causal claims unusually easy to spot.",
+        "Does not by itself establish point-of-view weighting \u2014 noticing an attitude in a word choice is not the same as using that attitude to discount or credit the document's evidentiary weight, which is only required later in Part B."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The documents are unseen in advance and the room is proctored with AI prohibited, so the paraphrase and the word-choice judgment must be produced live from the actual text."
+      },
+      "gap_statement": "We cannot tell from Q2 alone whether the student explicitly recognized the two causal accounts as different, or only produced two independently accurate summaries that happen to differ.",
+      "intervention_warranted": false,
+      "why_no_intervention": "The two causal accounts are rhetorically opposed enough \u2014 natural, beneficial progress versus corrupt theft \u2014 that any pair of accurate, distinct answers already reveals the contrast to a reader; requiring a further explicit comparison sentence would mostly test synthesis writing rather than add new signal about whether the difference was grasped, so this narrow gap is not worth closing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "Part A, Q4 \u2014 explain why Carnegie, and why a farmers' and workers' party, would write as they did, given their position in 1889-1892.",
+          "elicits": "Applies prior knowledge of each author's social and economic position to state a plausible motive for that specific document's stance."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can generate a plausible, position-grounded motive for why each author wrote as they did, applying background knowledge of each author's 1889-1892 circumstances to an unseen document, under supervised conditions.",
+      "does_not_support": [
+        "Does not distinguish a motive newly reasoned from the document's content from a motive recited from previously taught background facts about Carnegie or the Populists \u2014 the question can be answered largely from memorized context.",
+        "Could be mistaken for evidence of H2's attitude reading (Q3) \u2014 Q4 asks why the author held the position, not what a specific word choice reveals about it.",
+        "Does not show the student can infer an author's position when that position is not already common classroom knowledge; both authors here are the unit's canonical, heavily-taught examples.",
+        "Does not require the explanation to cite specific textual details from Document 1 or 2, since a correct answer can be built entirely from outside knowledge of each author's circumstances."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Position facts may be memorized, but connecting them to explain why this specific, unseen document reads as it does must be reasoned in the room, under supervision with AI prohibited."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Q4 requires the student to connect known background position to this specific, unseen document in the moment; that connection is the application move the claim names, and it is fully exercised under supervision.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "Part B, Q5 \u2014 a two-paragraph argument taking a position on progress versus systemic failure, using both documents, weighting evidence by point of view, and connecting one outside development from the period.",
+          "elicits": "Constructs a document-grounded argument: states a position, selects supporting evidence from each document, explicitly discounts or credits each document's claim according to the author's point of view, and links an accurate outside historical development to that position."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can construct a two-document argument that takes a position, uses evidence from both documents, weighs that evidence by point of view, and connects it to an accurate outside development, when explicitly directed to include each of those components, under supervised, individual, no-AI conditions on unseen documents.",
+      "does_not_support": [
+        "Does not show the student can independently decide that a strong argument needs point-of-view weighting and an outside connection \u2014 both are named as required bullets in the prompt, so the item tests execution of named components rather than the judgment to include them unprompted.",
+        "Does not isolate historical-thinking skill from general essay organization \u2014 one of the six rubric points (organization and clarity) rewards writing quality that is not itself part of H4.",
+        "Could be mistaken for evidence of H2 \u2014 using point of view to weight evidence in Part B is a distinct, higher-stakes act than noticing attitude through word choice in Q3, and a student could do one without the other.",
+        "Does not show the student can select their own outside development from open recall; the prompt supplies a short list of examples (trusts, strikes, farm debt, the depression) that narrows the search space."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The specific pairing of textual evidence, point-of-view weighting, and outside connection must be assembled live, since the documents are unseen in advance and the room is proctored with AI prohibited."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The Part B prompt maps to all four components of H4 and is produced live, individually, under supervision on unseen documents; the checklist format mirrors how document-based argument rubrics are normally presented to students, so it does not undercut the evidence.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual, AI prohibited and enforced, 45 minutes, open only to the two provided documents and paper, summative, given at the end of the industrialization unit; students have practiced the sourcing routine before but these two documents are new to them.",
+  "reviewer_notes": "The four Part A sub-questions and the Part B argument map closely, almost one-to-one, onto H1 through H4, and supervision plus document novelty jointly rule out unsupervised delegation for all of them, so no additional observation is proposed for any claim. The one soft spot is H2: Q2 asks for two separate explanatory sentences rather than one explicit comparative statement, so the item verifies accurate parallel identification more directly than it verifies the relational act of contrasting; given how sharply the two documents' causal stories oppose each other, this is judged not worth closing with an added item. H3 necessarily leans on background knowledge of Carnegie and the Populists that was very likely taught before this assessment; that is inherent to an application claim phrased around known historical positions, not a fixable flaw in this instrument."
+}

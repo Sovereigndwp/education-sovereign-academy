@@ -1,0 +1,117 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1. 3/4 ___ 5/8, show how you know",
+          "elicits": "Choose a comparison strategy (common denominator or visual model \u2014 benchmark of one-half does not discriminate this pair), execute it correctly on unfamiliar numbers, and write reasoning that supports the chosen symbol."
+        },
+        {
+          "item": "2. 2/3 ___ 7/12, show how you know",
+          "elicits": "Choose and execute a valid comparison strategy on a new pair, and justify the resulting symbol."
+        },
+        {
+          "item": "3. 5/6 ___ 8/9, show how you know",
+          "elicits": "Choose and execute a valid comparison strategy on a third new pair, and justify the resulting symbol."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, working alone under supervision with no outside resources, this student can choose a workable strategy, execute it correctly on unlike fractions with unfamiliar numbers, and produce reasoning that justifies the resulting comparison symbol.",
+      "does_not_support": [
+        "Does not confirm the student can use a one-half benchmark as a standalone deciding strategy: all three pairs here have both fractions on the same side of one-half, so a student who reaches for benchmark alone cannot finish any of the three without a second method.",
+        "Does not confirm comparison ability with less-friendly denominators (e.g., large coprime pairs) or with more than two fractions at once.",
+        "Could be mistaken for G5C2 mastery when a student solves via common denominator here \u2014 this reasoning line checks the comparison decision, not fluency with the construction procedure, which Part B verifies separately.",
+        "Does not confirm the skill holds outside a 25-minute proctored summative window, e.g., under different time pressure or stakes."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The comparison and its justification are produced on paper, individually, in class, under enforced AI prohibition, so nothing in the response chain leaves the room for outside or machine production."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 1-3 already require the student to choose, execute, and justify a comparison strategy on three unfamiliar unlike-fraction pairs under full supervision; this already produces the evidence the claim asks for.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4. 1/2 + 1/3 =",
+          "elicits": "Construct a common denominator, add like-sized parts, and simplify to lowest terms."
+        },
+        {
+          "item": "5. 5/6 - 1/4 =",
+          "elicits": "Construct a common denominator, subtract like-sized parts, and simplify to lowest terms."
+        },
+        {
+          "item": "6. 2 1/3 + 1 3/4 =",
+          "elicits": "Convert mixed numbers, find a common denominator, add, and regroup an improper fraction into a simplified mixed number."
+        },
+        {
+          "item": "7. Maya's mileage word problem",
+          "elicits": "Translate a context into a fraction addition, execute the common-denominator addition, and express the result as a mixed number."
+        },
+        {
+          "item": "8. Jonah's flour word problem",
+          "elicits": "Translate a context into a fraction subtraction and execute the common-denominator subtraction to find the remaining amount."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that this student can construct equivalent fractions with a common denominator, combine or compare the like-sized parts, and simplify or regroup to a mixed number where required, in both bare computation and word-problem form, under supervised, resource-restricted, individual conditions with unfamiliar numbers.",
+      "does_not_support": [
+        "Does not confirm the procedure holds with larger or less-friendly denominators than the 2, 3, 4, 6, 8, 9, 12 used here (e.g., two large coprime denominators).",
+        "Does not confirm conceptual understanding of why the common-denominator procedure works \u2014 that is what G5C1's reasoning line and G5C3's diagnostic line test separately; a student could execute this correctly while holding a shaky mental model.",
+        "Could be mistaken for G5C3 mastery: correct execution on items 4-6 does not mean the student would catch an 'add-the-denominators' error if they made it themselves \u2014 only item 9 tests that.",
+        "Five items in a shared 25-minute window is enough to see the procedure, not enough to rule out an isolated slip as evidence of a durable gap."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The computation steps are shown on paper in real time under direct supervision with AI prohibited and enforced, leaving no channel for the work to be produced by anyone or anything other than the student."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Items 4-8 already require constructing common denominators, combining like-sized parts, and simplifying or regrouping to a mixed number across five unfamiliar bare-computation and word-problem instances under full supervision; this already produces the evidence for the claim.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9. Find the mistake: 1/2 + 1/4 = 2/6",
+          "elicits": "Locate the specific error (adding the denominators instead of finding a common one), state why it produces a wrong-sized part, and compute the correct sum."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that this student can identify that adding denominators directly produces a wrong-sized unit and can supply the correct sum for this specific error pattern, under supervised, individual, resource-restricted conditions.",
+      "does_not_support": [
+        "Does not confirm the student can identify or explain other common fraction-operation errors (e.g., subtracting without a common denominator, mis-regrouping a mixed number) \u2014 only this one 'add the denominators' error is tested.",
+        "Does not confirm the student would avoid this error unprompted in their own work; diagnosing a given error is not the same as never producing it, which is the closer evidence already shown in items 4-6.",
+        "The written explanation adds a language-production load; a correct numeric repair paired with a thin or garbled written explanation should not, by itself, be read as absence of the underlying concept, particularly for multilingual learners.",
+        "Based on a single instance, so it does not confirm the explanation generalizes to a fresh instance of this same error with different numbers."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The error diagnosis and correction are written on the spot, individually, under supervision with AI enforcement, so no outside source could have produced this response in place of the student."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Item 9 already places the student in front of this exact incorrect solution and asks for the explanation and the correct sum under full supervision; that is precisely the observation the claim calls for.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, summative; proctored in class, individual, paper/pencil only, AI prohibited and enforced, 25 minutes; item type previously practised, but these specific numbers and problems are new to the students.",
+  "reviewer_notes": "All three claims are already fully carried by items on this form under the declared proctored, individual, AI-enforced conditions; no additional observation is proposed for any claim. One design nuance worth the teacher's awareness, though it does not warrant an intervention: in Part A, all three fraction pairs sit on the same side of one-half, so the 'benchmark' option named in the instructions cannot by itself resolve any of the three comparisons there \u2014 students are effectively choosing between a common-denominator or visual-model strategy, not a benchmark strategy, on this particular form. That does not narrow G5C1, since the claim is satisfied by any one valid strategy, but it means benchmark-strategy use specifically is not exercised in isolation on this instance of the assessment."
+}

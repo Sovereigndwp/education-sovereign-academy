@@ -1,0 +1,137 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Item 1 (Part A): 3/4 __ 5/8, circle symbol, no work",
+          "elicits": "Selecting the correct comparison symbol from three options with no work shown or required."
+        },
+        {
+          "item": "Item 2 (Part A): 2/3 __ 7/12, circle symbol, no work",
+          "elicits": "Selecting the correct comparison symbol from three options with no work shown or required."
+        },
+        {
+          "item": "Item 3 (Part A): 5/6 __ 8/9, circle symbol, no work",
+          "elicits": "Selecting the correct comparison symbol from three options with no work shown or required."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Students can select the correct comparison symbol for pairs of unlike fractions, with no evidence of the strategy used to get there.",
+      "supports": "Under these conditions, a teacher may conclude that a student can correctly judge the relative size of two unlike fractions and mark the right symbol.",
+      "does_not_support": [
+        "Whether the student chose and executed a valid strategy (equivalent fractions, a benchmark such as one half, or a visual model), since Part A explicitly instructs 'Do not show work.'",
+        "Whether the student's reasoning actually supports the symbol, as the claim requires — no reasoning is collected anywhere for comparison items.",
+        "Guess-rate caveat: with three options (<, >, =) and no work required, a correct circle on any single item could reflect a 1-in-3 guess rather than genuine comparison skill.",
+        "Could be mistaken for full evidence of G5C1 (strategy execution and reasoning), when the item design captures only the endpoint judgment, not the process the claim names."
+      ],
+      "delegation": {
+        "answer": "partly",
+        "reason": "Because no work is required, a correct symbol could come from genuine comparison reasoning or from a lucky guess, and the item cannot tell the two apart, though guessing all three correctly by chance is unlikely."
+      },
+      "gap_statement": "We cannot tell from this assessment whether students can choose and execute a valid comparison strategy or explain why it supports the symbol, since Part A withholds work and no other item requires a justified fraction comparison.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Predict",
+        "item_text": "Compare 4/9 and 5/8 without finding a common denominator. Circle >, <, or =. Then write ONE sentence explaining how you know, using a benchmark (like one half) or equivalent fractions.",
+        "variant_rule": "Keep one fraction below one half and the other above one half (or another shared property that makes a benchmark or equivalent-fraction shortcut genuinely available); change the specific fractions each period; avoid pairs that only yield to cross-multiplication with no shortcut, since the point is to surface a nameable strategy.",
+        "conditions": "Proctored in class, individual, paper/pencil only, AI prohibited and enforced -- same conditions as the rest of the assessment; fractions not seen previously.",
+        "sufficiency_line": "A response counts as evidence if the symbol is correct AND the one-line reason names the actual controlling feature used (e.g., 'both are close to one half' or 'same numerator so fewer, bigger pieces'), not just a restated answer.",
+        "student_minutes": 2,
+        "scoring_seconds": 20
+      }
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Item 4: 1/2 + 1/3",
+          "elicits": "Constructing a common denominator for two unlike fractions and combining the like-sized parts (result already in lowest terms, so no reduction is required)."
+        },
+        {
+          "item": "Item 5: 5/6 - 1/4",
+          "elicits": "Constructing a common denominator and combining like-sized parts by subtraction (result already in lowest terms)."
+        },
+        {
+          "item": "Item 6: 2 1/3 + 1 3/4",
+          "elicits": "Constructing common denominators for two mixed numbers, combining whole and fractional parts, and regrouping an improper fractional part into a whole (mixed-number regrouping)."
+        },
+        {
+          "item": "Item 7 (word problem): 3/4 + 5/6 mile",
+          "elicits": "Applying the common-denominator addition procedure inside a word-problem context and converting an improper result to a mixed number."
+        },
+        {
+          "item": "Item 8 (word problem): 2/3 - 1/4 cup",
+          "elicits": "Applying the common-denominator subtraction procedure inside a word-problem context (result already in lowest terms, no regrouping or reduction required)."
+        },
+        {
+          "item": "Item 9 (secondary bearing): correct sum for 1/2 + 1/4 after error repair",
+          "elicits": "Re-executing the common-denominator addition procedure to produce a corrected sum (reinforces the combine step only; result already in lowest terms)."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Students can construct a common denominator for unlike fractions (including mixed numbers), combine the resulting like-sized parts by addition or subtraction, and regroup an improper fractional part into a mixed number -- but not shown: reducing a sum or difference to lowest terms when the raw result is not already in simplest form, since every computed answer across the assessment already lands in lowest terms.",
+      "supports": "A teacher may conclude that a student can construct common denominators for unlike fractions and mixed numbers, combine like-sized parts by addition or subtraction, and regroup an improper fraction into a mixed number, under supervised, individual, resource-limited conditions with new numbers.",
+      "does_not_support": [
+        "Whether the student can reduce a sum or difference to lowest terms when the raw result is not already in simplest form -- across items 4, 5, 6, 7, 8 and 9 every computed answer is already fully reduced, so the 'simplifies' component of the claim is never actually triggered despite the instruction 'answers in simplest form.'",
+        "Whether the student can compare (rather than combine) like-sized parts, the other half of the 'combines or compares' language -- that is exercised only in Part A, without work shown (see G5C1).",
+        "Nothing here distinguishes a student who checks for and reduces common factors from one who has never learned to, since no answer requires that check.",
+        "Could be mistaken for full evidence that students can 'simplify fractions,' a sub-skill this instrument names in the claim but never actually probes."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Every item requires every step shown on paper under direct supervision with AI prohibited, so a correct multi-step written solution is very difficult to produce without actually performing the common-denominator and combination work."
+      },
+      "gap_statement": "We cannot tell from this assessment whether students can reduce a computed sum or difference to lowest terms, since none of the six items bearing on this claim produce a result that is not already in simplest form.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Classify",
+        "item_text": "Three students already added or subtracted fractions and got these answers: 4/8, 5/9, 6/10. Circle the ones that are NOT written in simplest form, then rewrite each circled one in simplest form.",
+        "variant_rule": "Include at least one answer already in simplest form as a distractor and at least two reducible fractions with different common factors (e.g., one reducible by 2, one by 3); change the specific fractions each period; keep denominators within the range already practised (through 12).",
+        "conditions": "Proctored in class, individual, paper/pencil only, AI prohibited and enforced -- same conditions as the rest of the assessment; fractions not seen previously.",
+        "sufficiency_line": "A response counts as evidence if the student correctly identifies every non-simplest fraction AND rewrites each in true lowest terms, not just a smaller-looking but still reducible form.",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Item 9 (Part D): student added 1/2 + 1/4 and got 2/6; explain the error and show the correct answer",
+          "elicits": "Identifying and naming the specific misconception in an unfamiliar incorrect solution (adding denominators as well as numerators) and executing the correct common-denominator procedure to repair it."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that a student can recognize the 'add the denominators' error in an unfamiliar incorrect solution and produce the correct sum via proper common-denominator addition, under supervised, individual, resource-limited conditions with a new instance of this error.",
+      "does_not_support": [
+        "Whether the student's written explanation names the conceptual reason (that adding denominators changes the size of the piece being counted) rather than only a procedural fix such as 'should have found a common denominator' -- the item invites but does not force the size-based reasoning the claim's wording specifies.",
+        "Whether the student would catch this same error type presented in a different guise (e.g., inside a word problem, or in a subtraction rather than an addition).",
+        "Whether this exact error is absent from the student's own unprompted computation elsewhere on the test -- this item tests recognition in someone else's work, not the presence or absence of the error in the student's own spontaneous work.",
+        "Could be mistaken for a guarantee that the student would never make this error themselves under different conditions, when it only shows they can diagnose it when it is presented to them."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The item requires a written explanation plus a full corrected computation on paper under direct supervision with AI prohibited, which is difficult to produce convincingly without actually locating and repairing the error."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "This claim is already carried directly: item 9 is a Diagnose item matching the claim almost verbatim (locate the adding-denominators error, give the correct sum), run under supervised, individual, novel conditions with AI excluded. Adding another item would duplicate existing verification without buying additional evidence.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual, AI prohibited and enforced, paper and pencil only, summative, 25 minutes, end of Unit 4; the item types have been practised but these specific numbers and problems are new to students.",
+  "reviewer_notes": "Parts B, C and D produce strong independent, novel, claim-targeted evidence for G5C2 and G5C3, with 'show every step' and the Diagnose item doing real work. The two substantive design gaps both come from the same pattern -- a sub-skill is named in a claim and implied by an instruction, but no item actually forces it to appear: Part A's 'Do not show work' forecloses the strategy-and-reasoning half of G5C1 even though the symbol judgment is well covered, and every computed answer across Parts B, C and D already happens to be in lowest terms, so 'simplifies' in G5C2 is instructed for but never tested. Both are named, bounded, and each gets exactly one short supervised add-on; nothing else in the instrument needs to change."
+}

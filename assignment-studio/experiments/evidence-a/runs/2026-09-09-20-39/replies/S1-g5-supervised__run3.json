@@ -1,0 +1,125 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1: 3/4 ___ 5/8, with 'show how you know'",
+          "elicits": "produces a correct comparison symbol via a self-chosen method (e.g., rewriting both to eighths) and writes a one-line reason tying the method to the symbol chosen"
+        },
+        {
+          "item": "2: 2/3 ___ 7/12, with 'show how you know'",
+          "elicits": "produces a correct comparison symbol via a self-chosen method (e.g., rewriting to twelfths) and states the reasoning behind it"
+        },
+        {
+          "item": "3: 5/6 ___ 8/9, with 'show how you know'",
+          "elicits": "produces a correct comparison symbol via a self-chosen method (common denominator of 18, or a 'distance from one whole' benchmark) and states the reasoning behind it"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude that, working alone under supervision on number pairs she has not seen before, the student can select a valid comparison method (common denominator, benchmark, or picture), carry it out correctly, and give a stated reason consistent with the symbol chosen.",
+      "does_not_support": [
+        "Does not show the student can add or subtract unlike fractions -- that is evidenced separately by G5C2's Part B/C items, not by a comparison task.",
+        "Does not show the student can diagnose or repair another student's comparison error -- adjacent to G5C3, which targets an addition error specifically.",
+        "Does not distinguish a student who flexibly picks the most efficient strategy (e.g., a benchmark shortcut) from one who defaults to a common-denominator computation every time, since on all three pairs a common-denominator approach works about as well as any benchmark shortcut.",
+        "Does not extend to comparing more than two fractions at once or ordering a set of fractions."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The symbol and its written justification are produced by hand, on unfamiliar number pairs, in the room under enforced no-AI conditions, leaving no channel for an outside solver to have supplied them."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "The three comparison items already require a chosen strategy, its execution, and reasoning tied to the symbol, on numbers the student could not have prepared for -- this already produces the evidence for the claim as stated, and I would not change it.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4: 1/2 + 1/3 = ______",
+          "elicits": "builds a common denominator (sixths), adds the like-sized parts, and reports the sum"
+        },
+        {
+          "item": "5: 5/6 - 1/4 = ______",
+          "elicits": "builds a common denominator (twelfths), subtracts the like-sized parts, and reports the difference"
+        },
+        {
+          "item": "6: 2 1/3 + 1 3/4 = ______",
+          "elicits": "builds a common denominator across two mixed numbers, adds the fractional and whole parts, and regroups an improper fractional part (13/12) into the whole-number total"
+        },
+        {
+          "item": "7 (Maya word problem): 3/4 mile + 5/6 mile",
+          "elicits": "translates a word problem into an unlike-denominator addition, executes it, and reports the total as a mixed number as instructed"
+        },
+        {
+          "item": "8 (Jonah word problem): needs 2/3 cup, has 1/4 cup",
+          "elicits": "translates a word problem into an unlike-denominator subtraction and executes it to find the amount still needed"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Evidences that the student can build a common denominator, add or subtract the resulting like-sized parts, and regroup an improper fraction into a mixed number when the sum exceeds one whole. Does not evidence the 'simplifies' component of the claim: in every one of items 4-8, the computed answer already lands in lowest terms, so no item ever requires the student to recognize and reduce a non-simplest fraction.",
+      "supports": "The teacher may conclude the student can find a common denominator, combine or compare the resulting like-sized parts, and regroup to a mixed number when required, on unfamiliar numbers, working alone under supervision.",
+      "does_not_support": [
+        "Does not show whether the student can recognize a computed fraction that is not in lowest terms and reduce it -- no item's correct answer requires that step.",
+        "Does not show whether the student can judge which of two fractions is larger without computing -- that is G5C1's comparison-strategy claim.",
+        "Does not show whether the student can identify or explain why a specific wrong procedure, like adding denominators, fails -- that is G5C3's diagnostic claim.",
+        "Does not show whether the procedure transfers to three or more addends, or to denominators without a small shared multiple."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Each computation is shown step by step, by hand, in the room under enforced no-AI conditions on fresh numbers, leaving no channel for an outside solver to have produced the steps."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student can recognize a non-simplest fraction and reduce it to lowest terms, since none of items 4 through 8 produce a computed answer that requires simplification.",
+      "intervention_warranted": true,
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "1/4 + 1/12 = ______  (show your steps and write the answer in simplest form)",
+        "variant_rule": "Keep it a two-term, unlike-denominator addition where one denominator is a multiple of the other so the common denominator is immediate; choose the two numerators so the raw sum shares a common factor greater than one with that denominator, i.e., the un-simplified result must need reducing. Vary the specific fractions per form/period (e.g., 1/6+1/12, 1/3+1/6) so the exact numbers were not seen in advance; keep 'the final answer must be reduced to lowest terms' fixed as the tested feature across variants.",
+        "conditions": "Same as the main assessment: proctored in class, individual, paper and pencil only, AI prohibited and enforced.",
+        "sufficiency_line": "A response counts as evidence if the student finds the correct common denominator, computes the correct sum, and writes it in lowest terms (e.g., 4/12 reduced to 1/3) rather than leaving a reducible fraction as the final answer.",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9: A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.",
+          "elicits": "locates the flaw in an unfamiliar incorrect solution (adding the denominators together, which produces parts of the wrong size) and repairs it by computing the correct sum via a common denominator"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude that the student can locate why adding the denominators produces a wrong-sized part in this specific incorrect solution, and can supply the correct sum, working alone under supervision on an error they have not seen before.",
+      "does_not_support": [
+        "Does not show whether the student would commit or avoid this error unprompted, in their own independent work -- only that they can spot and fix it once it is placed in front of them.",
+        "Does not, by itself, guarantee that credit is restricted to naming the controlling feature (that adding denominators changes the size of the parts) rather than general explanation quality or writing fluency -- that depends on how the response is scored.",
+        "Does not extend to other wrong-sized-part errors, such as subtracting denominators or adding only numerators over a mismatched denominator.",
+        "Does not show fluency with the correct addition procedure in a fresh, non-diagnostic context -- that is evidenced separately by G5C2's Part B/C computation items."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The diagnosis and corrected sum are handwritten in the room under enforced no-AI conditions on an error instance the student has not seen before, leaving no route for an outside source to have supplied the explanation."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Item 9 already puts a fresh, unfamiliar incorrect solution in front of the student and requires both the diagnosis and the corrected sum, produced under supervision with no outside help -- this already produces the evidence for the claim as stated, and I would not change it.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "proctored_in_class, individual, AI prohibited_and_enforced, paper/pencil only, summative, 25 minutes, end of Unit 4; item type practised in advance but these specific numbers and problems are new to the student.",
+  "reviewer_notes": "All three claims are evidenced independently under the declared supervised, no-AI, paper-and-pencil conditions, so delegation is 'no' throughout. G5C1 and G5C3 are already fully carried by the existing items and are left unchanged. G5C2 has one specific, fixable gap: no item's correct answer ever requires reducing to lowest terms, so the 'simplifies' portion of that procedural claim is untested; one small added item closes it without touching the rest of the assessment."
+}

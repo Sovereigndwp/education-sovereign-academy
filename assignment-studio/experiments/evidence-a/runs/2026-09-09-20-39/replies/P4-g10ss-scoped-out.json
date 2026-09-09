@@ -1,0 +1,35 @@
+{
+  "claims": [
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "Part B / Question 5 - two-paragraph argument on whether the rich-poor gap was the natural price of progress or evidence the system had failed",
+          "elicits": "the student takes and defends a position that accounts for both documents, cites at least one piece of evidence from each, explicitly states how each author's point of view affects how much weight their claim is given, and connects the documents to one specific outside development from the period"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude, from a response produced individually, in the room, under enforced no-AI conditions, on two documents the student had never seen before, that the student can build an argument that accounts for both documents, explicitly weighs their evidence by point of view, and connects the exchange to an accurate outside development from the period.",
+      "does_not_support": [
+        "Does not confirm the student can accurately identify the sourcing elements (author, date, audience) for these documents on their own - Part A carries that move but the teacher does not grade it, and sourcing/point-of-view recognition itself was already assessed on the prior unit test.",
+        "Does not show the student can supply an accurate outside development from unprompted recall - the prompt lists four candidate developments (trusts, Homestead/Pullman, farm debt, the 1893 depression), so the response shows the student can connect a development accurately, not that they could retrieve one with no options offered.",
+        "Does not generalize beyond this document pair - a single essay on the Carnegie/Omaha Platform excerpts does not indicate the student would weigh evidence by point of view as well on a different pair of documents or a different unit's content.",
+        "A well-written point-of-view sentence here is evidence of using bias to weigh an argument, not of the separate skill of detecting bias in the first place - that adjacent claim is what the unit test in the prior week is already responsible for."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, AI use prohibited and enforced, with only the two printed documents and paper available, removes every channel through which the argument could be produced by anyone or anything other than the student in the room."
+      },
+      "gap_statement": "",
+      "intervention_warranted": false,
+      "why_no_intervention": "Part B already produces, in one item, an independent, novel, claim-targeted observation that reaches all three parts of H4 as the teacher stated it (both documents, explicit point-of-view weighting, an outside development) - there is nothing left uncovered by this assessment for this claim to justify adding another check.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "H4 judged under: proctored_in_class, individual, AI prohibited_and_enforced, resources limited to the two documents and paper, summative, 45 minutes, end of the industrialization unit. The two excerpts were novel to students; sourcing and point-of-view recognition were separately assessed on the unit test the week before; Part A (Q1-4) is ungraded warm-up and was not treated as evidence for H4, per the teacher's own framing.",
+  "reviewer_notes": "Only H4 was submitted for audit. Part A was excluded from the evidence base because the teacher does not grade it and has assigned sourcing/point-of-view assessment to the prior unit test - that scoping is taken as given, not treated as a gap in this assessment. The single Part B task maps cleanly onto every component named in H4 without redundant items, so this claim needed no additional observation."
+}
