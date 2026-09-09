@@ -1,0 +1,113 @@
+{
+  "id": "g10-ss-gilded-age",
+  "fixture": {
+    "file": "fixtures/support-clean-pass.md",
+    "mode": "support",
+    "kind": "clean_pass",
+    "why": "Documents untouched; vocabulary glossed beside the text; sourcing table and a planning table that structure but do not answer; item 2 and item 4 still require the student's own inference; POV weighting and the two-paragraph product kept; same six rubric points.",
+    "expected": {
+      "preservation": "PASS",
+      "usefulness": "USEFUL",
+      "adversarial": [
+        "WEAKENED",
+        "UNDERMINED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "all findings kind=held; no block/review severity",
+      "usefulness": "editing none/minor; grading same; improves_original true",
+      "adversarial": "a Support version of a take-home document analysis is expected to be shortcut-able; the verdict is recorded to calibrate the adversarial audit, not to fail the fixture"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T15:57:32.266Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-06-v1",
+    "preservation": {
+      "verdict": "PASS",
+      "findings": [
+        {
+          "invariant": "learning_target",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The transformed version preserves the core target intact: students must still source documents (Part A Q1 table), extract and contrast causal explanations (Part A Q2), analyze word choice for attitude (Part A Q3), explain why each author would write as they did given position (Part A Q4), and construct an argument accounting for conflicting sources with POV weighting and outside development (Part B with planning scaffold). The learning target—that sources are arguments requiring POV analysis before use—remains the measured outcome.",
+          "severity": "note"
+        },
+        {
+          "invariant": "required_thinking",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All cognitive demands preserved: sourcing (Q1 table requires author/date/audience); extracting and contrasting causal explanations (Q2 'where each author says that gap came from'); reading word choice for attitude (Q3 unchanged); explaining why each would write as they did given position (Q4 unchanged); constructing argument with POV weighting and contextualization (Part B requirements identical, planning table structures but does not perform the thinking). The table in Q1 and planning grid in Part B are organizational scaffolds that do not reduce the reasoning required.",
+          "severity": "note"
+        },
+        {
+          "invariant": "required_evidence",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "Part A still requires four short answers with correct sourcing (Q1 table), contrast of causal explanations (Q2), word/phrase with explanation (Q3), and purpose statement (Q4). Part B still requires 'two paragraphs' with position covering both documents, 'at least one piece of evidence from each,' 'explain how the point of view of each author affects how much weight you give their claim,' and 'at least one specific development from the period.' The planning table is labeled 'not graded' and does not substitute for the paragraph requirement.",
+          "severity": "note"
+        },
+        {
+          "invariant": "teacher_constraints",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All constraints held: 45 minutes stated; paper format implied; 'two paragraphs' explicitly required in Part B instructions; '6 points' rubric identical and stated; documents unchanged (identical text for both Carnegie and Populist excerpts).",
+          "severity": "note"
+        },
+        {
+          "invariant": "correctness",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "Vocabulary glosses are accurate: 'administration of wealth' correctly glossed as 'how money is managed and used'; 'deplored' as 'regretted, disapproved of'; 'ermine of the bench' as 'the robes of judges'; 'fruits of the toil' as 'what people's work produces.' Examples in planning table (Homestead 1892, Pullman 1894, 1893 depression) are factually correct. No mathematical content to verify.",
+          "severity": "note"
+        },
+        {
+          "invariant": "must_not_give_away_reasoning",
+          "permission": "must_not",
+          "kind": "held",
+          "evidence": "The planning table in Part B lists the required components (position, evidence from each with POV weighting, outside development) but does not provide the reasoning: students must still determine their position, select which evidence, decide how POV affects weight, and choose which development connects. The table structures the task but does not walk the analytical path. Vocabulary glosses clarify archaic terms ('ermine of the bench') but do not interpret the documents' arguments or attitudes.",
+          "severity": "note"
+        }
+      ],
+      "summary": "PASS. The transformed version preserves all core learning targets and required thinking. The sourcing table (Q1), planning grid (Part B), and vocabulary glosses are permitted scaffolds that organize response format and reduce language burden without performing the historical reasoning being assessed. Students must still source documents, contrast causal explanations, analyze word choice for attitude, explain authorial purpose from position, and construct an argument that weighs conflicting sources by POV and contextualizes with outside knowledge. The two-paragraph requirement, rubric, documents, and all cognitive demands remain intact."
+    },
+    "usefulness": {
+      "verdict": "USEFUL",
+      "clarity": 3,
+      "feasibility": 3,
+      "editing_required": "none",
+      "grading_burden": "same",
+      "improves_original": true,
+      "notes": [
+        "Vocabulary glosses for both documents directly address access barriers without changing the texts (as required by teacher constraints).",
+        "Part A Question 1 table format makes sourcing concrete and reduces ambiguity about what 'one line each' means—teacher can scan three cells per document instead of parsing prose.",
+        "Part A Questions 2–4 add fill-in-the-blank structures that scaffold without changing the cognitive demand—students still must extract and contrast causal explanations.",
+        "Part B planning table explicitly maps the rubric requirements to writing slots, making the task visible before drafting—reduces working memory load for struggling writers without lowering the bar.",
+        "Grading burden unchanged: teacher still checks 4 short answers + 2 paragraphs against the same 6-point rubric; table formats make student responses faster to locate and score."
+      ]
+    },
+    "adversarial": {
+      "verdict": "WEAKENED",
+      "cheapest_path": "The student photographs the sheet, pastes the documents and questions into an AI chat, and asks: 'Fill in the table and blanks for Part A, then write the two paragraphs for Part B. Use simple language like a 10th grader would write.' The planning table is either left blank (not graded) or filled by AI. The student copies the AI output onto the paper.",
+      "steps": [
+        "Photograph or type the two documents and all questions",
+        "Paste into ChatGPT/Claude with prompt: 'Answer these history questions. Fill the table and blanks in Part A. For Part B, write two paragraphs following the rubric. Write like a 10th grader, not too formal.'",
+        "Copy the AI's table entries onto the paper",
+        "Copy the AI's one-sentence explanations into the blanks",
+        "Copy the AI's word choices and explanations",
+        "Copy the AI's two paragraphs (the planning table can be left blank since it's marked 'not graded')",
+        "Hand in the completed paper"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing survives with certainty. The hand-in will contain correct sourcing, contrasting explanations, word analysis, purpose statements, and a two-paragraph argument with point-of-view weighting and outside development—all six rubric points—but none of this evidence proves the student did the required thinking. The planning table ('not graded') could expose hollow work if left blank, but a student can either fill it with AI output or leave it blank and claim they 'planned mentally.' The structured format (table, fill-in-blanks, planning grid) makes the assignment easier to paste into AI and easier for AI to complete correctly.",
+      "what_is_bypassed": "All required thinking is bypassed: the student does not source the documents themselves, does not extract or contrast the causal explanations, does not read for word choice or attitude, does not explain authorial purpose from position, and does not construct an argument weighing conflicting sources. The scaffolding that was meant to support struggling students instead creates a paint-by-numbers template that AI fills perfectly. The 'plan first' table, marked as not graded, has no enforcement mechanism.",
+      "repair_hint": "Make the planning table graded (0.5–1 point) and require it to be completed before Part B, OR require one element that must come from the student's own earlier work: 'In your second paragraph, explain whether your position in Part B is closer to Document 1 or Document 2, and why you weighted the evidence that way' (forces reference to their own stated position), OR add one prediction question before reading: 'Before reading: Who do you think would be MORE critical of wealth gaps in 1890—a wealthy industrialist or a farmers' political party? Why?' (creates a commitment the student must reconcile)."
+    }
+  },
+  "verdicts": {
+    "preservation": "PASS",
+    "usefulness": "USEFUL",
+    "adversarial": "WEAKENED"
+  }
+}

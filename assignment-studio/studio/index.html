@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Studio — The Sovereign Academy</title>
+  <meta name="description" content="Bring an assignment you already trust. Assignment Studio adapts it for the students in front of you while protecting what you intended them to learn.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+  <link rel="stylesheet" href="/assignment-studio/as.css">
+</head>
+<body>
+  <a class="tsa-skip-link" href="#main">Skip to content</a>
+  <header class="ast-header">
+    <div class="ast-header__inner">
+      <a class="ast-brand" href="/assignment-studio/" aria-label="Assignment Studio, The Sovereign Academy">
+        <span class="ast-brand__mark">S</span>
+        <span class="ast-brand__text"><strong>Assignment Studio</strong><span>The Sovereign Academy</span></span>
+      </a>
+      <div class="ast-header__right"><span id="pilot-tag"></span> <a href="/assignment-studio/">About</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="ast-main ast-main--wide">
+    <nav class="as-steps as-no-print" aria-label="Progress">
+      <span class="as-step" data-step="upload">1 · Upload</span>
+      <span class="as-step" data-step="contract">2 · Learning Contract</span>
+      <span class="as-step" data-step="mode">3 · Choose a version</span>
+      <span class="as-step" data-step="result">4 · Original vs new</span>
+    </nav>
+
+    <!-- ══ 1 · UPLOAD ══════════════════════════════════════════════════════ -->
+    <section class="as-view" id="v-upload">
+      <span class="tsa-section-tag" style="margin-top:24px">Step 1 · about two minutes</span>
+      <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.5rem)">Bring an assignment you already trust</h1>
+      <p class="ast-lede">We'll read it, tell you what we think it asks students to learn, think, and show — and you correct us before anything changes.</p>
+
+      <div class="ast-callout ast-callout--stop" style="margin-top:24px">
+        <span class="ast-mono">Before you upload</span>
+        <p class="ast-p ast-small"><strong>No student names, student work, or grades.</strong> Assignment Studio works on the assignment itself, never on students. Nothing you upload is shared with your school; nothing is used to train models.</p>
+      </div>
+
+      <div id="recent-wrap" hidden style="margin-top:20px">
+        <span class="ast-mono">Your recent assignments on this device</span>
+        <div class="as-versions" id="recent"></div>
+      </div>
+
+      <form id="f-upload" novalidate>
+        <div class="ast-row">
+          <div class="ast-field">
+            <label class="ast-label" for="subject">Subject</label>
+            <select class="ast-select" id="subject" name="subject" required>
+              <option value="">Choose…</option>
+              <option>Mathematics</option><option>Science</option><option>English / Language Arts</option><option>History / Social Studies</option>
+              <option>World Languages</option><option>Computer Science</option><option>Economics / Personal Finance</option><option>Other</option>
+            </select>
+          </div>
+          <div class="ast-field">
+            <label class="ast-label" for="grade">Grade or course</label>
+            <input class="ast-input" id="grade" name="grade" placeholder="e.g. Grade 5, Grade 8, World History 10" required>
+          </div>
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label">The assignment<small>Attach a Word file, PDF, or photo — or paste the text. Answer keys and rubrics are welcome and help us protect what matters.</small></label>
+          <div class="ast-drop" id="drop">
+            <input type="file" id="file" name="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf,image/png,image/jpeg,image/webp">
+            <button type="button" class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="pick">Choose a file</button>
+            <span class="ast-note" style="margin-left:10px">.docx · PDF · PNG · JPG · up to 15 MB</span>
+            <div class="ast-drop__name" id="fname"></div>
+          </div>
+          <textarea class="ast-textarea ast-textarea--tall" id="atext" name="assignment_text" placeholder="…or paste the assignment here." style="margin-top:12px"></textarea>
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label" for="notes">What should students learn from this? <span class="ast-muted" style="font-weight:400">(optional, in your words)</span><small>One sentence helps us read your intent instead of guessing it.</small></label>
+          <textarea class="ast-textarea" id="notes" name="teacher_notes" style="min-height:80px" placeholder="e.g. That a fraction is bigger when the pieces are bigger, not when the number on the bottom is bigger."></textarea>
+        </div>
+
+        <div class="ast-field">
+          <label class="ast-label">Where did this assignment come from?</label>
+          <div class="ast-radio-row">
+            <label class="ast-radio"><input type="radio" name="copyright_bucket" value="teacher" checked> I wrote it (or my team did)</label>
+            <label class="ast-radio"><input type="radio" name="copyright_bucket" value="district"> My district / open resource</label>
+            <label class="ast-radio"><input type="radio" name="copyright_bucket" value="publisher"> A publisher's material</label>
+          </div>
+          <p class="ast-note" style="margin-top:8px">Publisher material is adapted for your classroom use only.</p>
+        </div>
+
+        <label class="ast-check"><input type="checkbox" id="c1"> <span>This contains <strong>no student names, student work, or grades</strong>.</span></label>
+        <label class="ast-check"><input type="checkbox" id="c2"> <span>I have the right to adapt this material for my students.</span></label>
+
+        <div class="ast-field">
+          <label class="ast-label" for="email">Email <span class="ast-muted" style="font-weight:400">(optional)</span><small>Only if you want the link to this assignment sent to you. Otherwise nothing is collected.</small></label>
+          <input class="ast-input" id="email" name="email" type="email" autocomplete="email">
+        </div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
+        <p class="ast-error" id="u-err" hidden></p>
+        <div class="ast-actions">
+          <button class="tsa-btn tsa-btn--primary tsa-btn--lg" type="submit" id="u-go">Read my assignment</button>
+          <span class="ast-note">Takes 20–40 seconds. Nothing is changed yet.</span>
+        </div>
+        <div class="as-busy" id="u-busy" hidden>Reading the assignment and drafting its Learning Contract…</div>
+      </form>
+    </section>
+
+    <!-- ══ 2 · LEARNING CONTRACT ═══════════════════════════════════════════ -->
+    <section class="as-view" id="v-contract" hidden>
+      <span class="tsa-section-tag" style="margin-top:24px">Step 2 · confirm or correct</span>
+      <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.5rem)">Here is what we think this assignment asks of students</h1>
+      <p class="ast-lede">Edit anything that isn't what you meant. What you confirm here governs every version we make — we protect these four things and nothing changes them without showing you.</p>
+
+      <div class="as-contract" id="contract">
+        <div class="as-contract__row"><div class="as-contract__k">Learning target<small>What students must understand.</small></div><textarea class="ast-textarea" id="lc-learning_target"></textarea></div>
+        <div class="as-contract__row"><div class="as-contract__k">Required thinking<small>What they must actually do cognitively.</small></div><textarea class="ast-textarea" id="lc-required_thinking"></textarea></div>
+        <div class="as-contract__row"><div class="as-contract__k">Required evidence<small>What must appear in the work for you to know it happened.</small></div><textarea class="ast-textarea" id="lc-required_evidence"></textarea></div>
+        <div class="as-contract__row"><div class="as-contract__k">Teacher constraints<small>Time, format, grading, curriculum — add anything we missed.</small></div><textarea class="ast-textarea" id="lc-teacher_constraints" placeholder="e.g. One class period. Must stay on one page. I grade with the same 4-point rubric for every version."></textarea></div>
+      </div>
+      <p class="ast-note" style="margin-top:10px" id="lc-note"></p>
+
+      <details style="margin-top:24px">
+        <summary class="ast-mono" style="cursor:pointer">The original, as we read it (<span id="lc-items"></span> items)</summary>
+        <article class="ast-doc"><div class="as-md" id="lc-original"></div></article>
+        <p class="ast-note" style="margin-top:8px">If we misread something, fix it after the first version — the editor is on the next screen — or go back and paste the text.</p>
+      </details>
+
+      <p class="ast-error" id="lc-err" hidden></p>
+      <div class="ast-actions">
+        <button class="tsa-btn tsa-btn--primary tsa-btn--lg" id="lc-confirm">Confirm — this is what I meant</button>
+        <button class="tsa-btn tsa-btn--secondary" id="lc-back">Start over</button>
+      </div>
+    </section>
+
+    <!-- ══ 3 · MODE ════════════════════════════════════════════════════════ -->
+    <section class="as-view" id="v-mode" hidden>
+      <span class="tsa-section-tag" style="margin-top:24px">Step 3 · choose a version</span>
+      <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.5rem)">What do the students in front of you need?</h1>
+      <p class="ast-lede">Pick one now; you can make the others afterwards from the same assignment.</p>
+      <p class="ast-note" id="m-carried" style="margin-top:10px">◆ Your confirmed Learning Contract carries forward — nothing needs re-uploading or re-confirming.</p>
+
+      <div class="as-modes" role="group" aria-label="Transformation mode">
+        <button type="button" class="as-mode" data-mode="support" aria-pressed="false"><strong>Support</strong><span>Improve access without making the intellectual task easier.</span></button>
+        <button type="button" class="as-mode" data-mode="advanced" aria-pressed="false"><strong>Advanced</strong><span>Deepen the same learning rather than adding more work.</span></button>
+        <button type="button" class="as-mode" data-mode="visible" aria-pressed="false"><strong>Make Thinking More Visible</strong><span>Make reasoning observable without adding unreasonable grading.</span></button>
+      </div>
+
+      <div id="m-opts" hidden>
+        <div class="ast-field">
+          <label class="ast-label">Anything specific? <span class="ast-muted" style="font-weight:400">(optional)</span><small id="m-opts-hint"></small></label>
+          <div class="as-checks" id="m-checks"></div>
+        </div>
+        <div class="ast-field" id="m-needs-wrap" hidden>
+          <label class="ast-label" for="m-needs">Classroom needs or barriers, in your own words <span class="ast-muted" style="font-weight:400">(optional)</span><small>What gets in the way for your class as a whole — “directions are too long”, “they need a place to organise the steps”, “the vocabulary is the barrier, not the math”. Describe the need, never a student.</small></label>
+          <textarea class="ast-textarea" id="m-needs" style="min-height:80px"></textarea>
+        </div>
+        <div class="ast-field">
+          <label class="ast-label" for="m-constraints">Classroom constraints for this version <span class="ast-muted" style="font-weight:400">(optional)</span><small>Your words. “I can't grade anything extra.” “45 minutes.” “Must fit one page.”</small></label>
+          <textarea class="ast-textarea" id="m-constraints" style="min-height:70px"></textarea>
+        </div>
+      </div>
+
+      <p class="ast-error" id="m-err" hidden></p>
+      <div class="ast-actions">
+        <button class="tsa-btn tsa-btn--primary tsa-btn--lg" id="m-go" disabled>Transform</button>
+        <button class="tsa-btn tsa-btn--secondary" id="m-back">Back to the Learning Contract</button>
+      </div>
+      <div class="as-busy" id="m-busy" hidden>Making the version and checking it against your Learning Contract… 30–60 seconds.</div>
+    </section>
+
+    <!-- ══ 4 · RESULT ══════════════════════════════════════════════════════ -->
+    <section class="as-view" id="v-result" hidden>
+      <div class="as-no-print">
+        <span class="tsa-section-tag" style="margin-top:24px">Step 4 · original beside the new version</span>
+        <h1 class="ast-h1" style="font-size:clamp(1.8rem,4vw,2.5rem)" id="r-title"></h1>
+        <p class="ast-lede" id="r-lede"></p>
+        <div class="as-versions" id="r-tabs" role="tablist" aria-label="Versions"></div>
+      </div>
+
+      <div class="ast-callout ast-callout--stop as-no-print" id="r-block" hidden style="margin-top:16px">
+        <span class="ast-mono">Not preserved — read before using</span>
+        <p class="ast-p ast-small" id="r-block-text"></p>
+      </div>
+
+      <!-- the reveal -->
+      <div class="as-compare">
+        <div class="as-print-hide">
+          <div class="as-compare__label">Your original</div>
+          <article class="ast-doc"><div class="as-md" id="r-original"></div></article>
+        </div>
+        <div>
+          <div class="as-compare__label"><span id="r-mode-label"></span> version <span id="r-edited-flag" class="ast-muted" hidden>· edited by you</span></div>
+          <article class="ast-doc">
+            <div class="as-md" id="r-new"></div>
+            <textarea class="ast-textarea as-edit" id="r-editor" hidden aria-label="Edit the new version"></textarea>
+          </article>
+          <div class="ast-actions as-no-print" style="margin-top:12px">
+            <button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="r-edit">Edit</button>
+            <button class="tsa-btn tsa-btn--primary tsa-btn--sm" id="r-save" hidden>Save my edits</button>
+            <button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="r-cancel" hidden>Cancel</button>
+            <button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="r-docx">Download Word</button>
+            <button class="tsa-btn tsa-btn--secondary tsa-btn--sm" id="r-print">Print / PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- the receipt -->
+      <section class="as-receipt as-no-print" aria-label="What changed, what we protected, what to check">
+        <div class="as-receipt__head"><span class="tsa-section-tag">The receipt</span><span class="ast-note" id="r-workload"></span></div>
+        <div class="as-trace">
+          <div class="as-trace__col"><h3>What we changed · and why</h3><ul id="r-changed"></ul></div>
+          <div class="as-trace__col"><h3>What we protected</h3><ul id="r-protected"></ul><div class="as-status" id="r-status"></div></div>
+          <div class="as-trace__col as-trace__col--check"><h3>Check this before you use it</h3><ul id="r-check"></ul></div>
+        </div>
+        <div class="ast-callout" style="margin-top:12px" id="r-tnotes-wrap"><span class="ast-mono">Notes for you</span><div class="as-md ast-small" id="r-tnotes"></div></div>
+        <div class="as-status" id="r-audit"></div>
+      </section>
+
+      <!-- two questions, one send -->
+      <section class="as-card as-fb as-no-print" id="r-fb">
+        <span class="tsa-section-tag">Two quick questions</span>
+        <p class="ast-p ast-muted ast-small" style="margin-top:8px">Your answers are stored with this version and are how the studio learns your judgment.</p>
+        <div class="as-fb-q"><span>Would you use this version?</span>
+          <div class="ast-radio-row">
+            <label class="ast-radio"><input type="radio" name="usev" value="yes_as_is"> Yes, as is</label>
+            <label class="ast-radio"><input type="radio" name="usev" value="yes_with_changes"> Yes, with changes</label>
+            <label class="ast-radio"><input type="radio" name="usev" value="no"> No</label>
+          </div>
+          <div class="ast-field" id="r-usec-wrap" hidden style="margin-top:10px">
+            <label class="ast-label" for="r-usec">What would you change, or what stops you? <span class="ast-muted" style="font-weight:400">(optional)</span></label>
+            <textarea class="ast-textarea" id="r-usec" style="min-height:70px"></textarea>
+          </div>
+        </div>
+        <div class="as-fb-q"><span>Did this version change something students need to know, think through, or demonstrate that you wanted preserved?</span>
+          <div class="ast-radio-row">
+            <label class="ast-radio"><input type="radio" name="pres" value="no"> No</label>
+            <label class="ast-radio"><input type="radio" name="pres" value="yes"> Yes</label>
+          </div>
+          <div class="ast-field" id="r-corr-wrap" hidden style="margin-top:10px">
+            <label class="ast-label" for="r-corr">What did we change that you wanted kept?<small>Your words. This is the most useful thing you can tell us.</small></label>
+            <textarea class="ast-textarea" id="r-corr" style="min-height:80px"></textarea>
+          </div>
+        </div>
+        <div class="ast-actions" style="margin-top:14px"><button class="tsa-btn tsa-btn--primary" id="r-fb-go">Send</button><span class="ast-note" id="r-fb-done" hidden>Thank you — recorded against this version.</span></div>
+      </section>
+
+      <!-- next -->
+      <section class="ast-section as-no-print" id="r-set">
+        <span class="tsa-section-tag">Next · your classroom set</span>
+        <h2 class="ast-h2" style="margin-top:8px">One assignment, one confirmed intent, different routes through it</h2>
+        <p class="ast-p ast-muted ast-small" style="margin-top:8px">Every version is made from the Learning Contract you already confirmed — no re-upload, no re-confirm. One version is a complete use; make more only if your class needs them.</p>
+        <div class="as-status" id="r-set-rows"></div>
+        <div class="ast-actions">
+          <button class="tsa-btn tsa-btn--secondary" id="r-set-docx" hidden>Download classroom set (Word)</button>
+          <button class="tsa-btn tsa-btn--secondary" id="r-another">Transform another assignment</button>
+          <span class="ast-note" id="r-set-note"></span>
+        </div>
+        <p class="ast-note" style="margin-top:18px"><a href="#" id="r-used">I used this version with students</a> · This page is private to you at this link · <a href="#" id="r-withdraw">Delete this assignment and everything made from it</a></p>
+        <p class="ast-note" id="r-msg"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="ast-footer as-no-print">
+    <div class="ast-footer__inner"><span>© 2026 The Sovereign Academy LLC</span><span>Assignment Studio · no student data, ever</span><a href="/legal/disclaimer/">Disclaimer</a></div>
+  </footer>
+
+  <script src="/assignment-studio/as.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+  <script>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var S = { t: null, a: null, versions: [], cur: null, mode: null };
+    var SUPPORTS = {
+      support: [["chunk_directions","Chunk multi-step directions"],["reduce_language_load","Reduce language load that isn't the point"],["vocabulary_support","Gloss key vocabulary (without giving away answers)"],["visual_organization","Add visual organization (tables, boxes, space to work)"],["worked_example","Add a worked example on a different case"],["checkpoints","Add self-check points between steps"],["alternate_response","Allow an alternate response format (when format isn't assessed)"],["fewer_items_same_demand","Fewer items, same demand per item"],["reduce_direction_reading","Reduce unnecessary reading in directions"],["more_workspace","Give more workspace"],["scaffold_process","Scaffold the process without supplying the reasoning"]],
+      advanced: [["abstraction","Push toward generalization / abstraction"],["transfer","Require transfer to a new context"],["justification","Require justification of method, not just answer"],["comparison","Compare competing approaches or interpretations"],["interacting_variables","Introduce interacting variables / ambiguity"],["counterexamples","Ask for counterexamples or limits of a rule"],["strategic_choice","Require a strategic choice between methods, with justification"],["same_length","Keep it the same length as the original"]],
+      visible: [["prediction","Ask for a prediction before solving"],["explain_choice","Ask students to explain a choice they made"],["error_analysis","Add a brief error-analysis item"],["personalize_inputs","Personalize inputs (each student uses their own value/example)"],["verification","Add a two-line verification of the result"],["process_evidence","Ask for lightweight process evidence (plan, draft line, sketch)"],["no_extra_grading","No additional grading time"]]
+    };
+    var HINT = { support: "These are constraints on the transformation for the whole class — never claims about a student. This is not an IEP/504 modification and is not presented as one.", advanced: "Depth, not volume. We will not simply add questions.", visible: "We add the smallest observable reasoning moves. Nothing here is “AI-proof”, and we don't pretend otherwise." };
+
+    // ── navigation ──
+    function show(view) {
+      ["upload","contract","mode","result"].forEach(function (v) {
+        $("v-" + v).hidden = v !== view;
+        var st = document.querySelector('.as-step[data-step="' + v + '"]');
+        st.removeAttribute("aria-current"); st.classList.remove("is-done");
+      });
+      var order = ["upload","contract","mode","result"], idx = order.indexOf(view);
+      order.forEach(function (v, i) { var st = document.querySelector('.as-step[data-step="' + v + '"]'); if (i < idx) st.classList.add("is-done"); if (i === idx) st.setAttribute("aria-current", "step"); });
+      window.scrollTo({ top: 0 });
+      AS.track("view_" + view, null, S.a && S.a.id);
+    }
+    function setUrl() { if (S.t) history.replaceState(null, "", location.pathname + "?t=" + S.t + (AS.pilotId() ? "&pilot=" + encodeURIComponent(AS.pilotId()) : "")); }
+    var p = AS.pilotId(); if (p) $("pilot-tag").textContent = "Pilot · " + p + " ·";
+
+    // ── 1 upload ──
+    var recent = AS.recent();
+    if (recent.length) { $("recent-wrap").hidden = false; $("recent").innerHTML = recent.map(function (r) { return '<a class="tsa-btn tsa-btn--secondary tsa-btn--sm" href="?t=' + AS.esc(r.t) + '">' + AS.esc(r.title || "Untitled") + " · " + AS.fmtDate(r.at) + "</a>"; }).join(""); }
+    $("pick").addEventListener("click", function () { $("file").click(); });
+    var drop = $("drop");
+    ["dragenter","dragover"].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.add("is-over"); }); });
+    ["dragleave","drop"].forEach(function (e) { drop.addEventListener(e, function (ev) { ev.preventDefault(); drop.classList.remove("is-over"); }); });
+    drop.addEventListener("drop", function (ev) { if (ev.dataTransfer.files.length) { $("file").files = ev.dataTransfer.files; onFile(); } });
+    $("file").addEventListener("change", onFile);
+    var docxText = "";
+    function onFile() {
+      var f = $("file").files[0]; docxText = "";
+      $("fname").textContent = f ? f.name + " (" + Math.round(f.size / 1024) + " KB)" : "";
+      if (f && /\.docx$/i.test(f.name)) {
+        $("fname").textContent += " · reading Word file…";
+        loadMammoth().then(function () {
+          return f.arrayBuffer().then(function (buf) { return window.mammoth.convertToMarkdown({ arrayBuffer: buf }); });
+        }).then(function (res) { docxText = res.value || ""; $("fname").textContent = f.name + " · " + (docxText.length ? "read " + docxText.split(/\s+/).length + " words" : "no text found — paste the text below"); })
+          .catch(function () { $("fname").textContent = f.name + " · could not read the Word file here — paste the text below"; });
+      }
+    }
+    function loadMammoth() {
+      if (window.mammoth) return Promise.resolve();
+      return new Promise(function (res, rej) { var s = document.createElement("script"); s.src = "https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    }
+    $("f-upload").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var err = [];
+      if (!$("subject").value) err.push("Choose a subject.");
+      if (!$("grade").value.trim()) err.push("Enter a grade or course.");
+      var f = $("file").files[0];
+      var text = $("atext").value.trim() || docxText;
+      if (!f && text.length < 40) err.push("Attach a file or paste the assignment.");
+      if (!$("c1").checked) err.push("Confirm there is no student data.");
+      if (!$("c2").checked) err.push("Confirm you may adapt this material.");
+      $("u-err").hidden = !err.length; $("u-err").textContent = err.join(" ");
+      if (err.length) return;
+      var fd = new FormData();
+      fd.append("subject", $("subject").value); fd.append("grade", $("grade").value.trim());
+      fd.append("teacher_notes", $("notes").value.trim()); fd.append("assignment_text", text);
+      fd.append("copyright_bucket", document.querySelector('input[name=copyright_bucket]:checked').value);
+      fd.append("confirm_no_student_data", "yes"); fd.append("confirm_rights", "yes");
+      fd.append("email", $("email").value.trim());
+      fd.append("teacher_key", AS.teacherKey() || ""); fd.append("pilot_id", AS.pilotId() || ""); fd.append("channel", AS.channel || "");
+      if (f) fd.append("file", f);
+      $("u-go").disabled = true; $("u-busy").hidden = false;
+      AS.track("upload_submit", { has_file: Boolean(f), subject: $("subject").value });
+      AS.upload(fd).then(function (j) {
+        $("u-go").disabled = false; $("u-busy").hidden = true;
+        if (j.error) { $("u-err").hidden = false; $("u-err").textContent = j.error; if (j.t) { S.t = j.t; setUrl(); } return; }
+        S.t = j.t; S.a = j.assignment; S.versions = []; setUrl(); AS.rememberToken(S.t, S.a.title);
+        AS.track("contract_inferred", { items: S.a.item_count }, S.a.id);
+        renderContract(); show("contract");
+      }).catch(function () { $("u-go").disabled = false; $("u-busy").hidden = true; $("u-err").hidden = false; $("u-err").textContent = "Could not reach the studio. Check your connection and try again."; });
+    });
+
+    // ── 2 contract ──
+    var FIELDS = ["learning_target","required_thinking","required_evidence","teacher_constraints"];
+    function renderContract() {
+      var c = S.a.contract_confirmed || S.a.contract_inferred || {};
+      FIELDS.forEach(function (f) { var el = $("lc-" + f); el.value = c[f] || ""; el.classList.remove("is-edited"); el.oninput = function () { el.classList.toggle("is-edited", el.value.trim() !== ((S.a.contract_inferred || {})[f] || "").trim()); }; });
+      $("lc-items").textContent = S.a.item_count || "?";
+      $("lc-original").innerHTML = AS.md(S.a.original_markdown || "");
+      $("lc-note").textContent = S.a.contract_confirmed ? "Confirmed " + AS.fmtDate(S.a.contract_confirmed_at) + (S.a.contract_corrected ? " (with your corrections)." : ".") + " Edit and confirm again to change it." : "Drafted by the engine from your assignment" + (S.a.teacher_notes ? " and your note." : ".");
+    }
+    $("lc-confirm").addEventListener("click", function () {
+      var c = {}; FIELDS.forEach(function (f) { c[f] = $("lc-" + f).value.trim(); });
+      var missing = FIELDS.filter(function (f) { return f !== "teacher_constraints" && !c[f]; });
+      $("lc-err").hidden = !missing.length; if (missing.length) { $("lc-err").textContent = "Learning target, required thinking, and required evidence can't be empty."; return; }
+      $("lc-confirm").disabled = true;
+      AS.api({ t: S.t, action: "confirm_contract", contract: c }).then(function (j) {
+        $("lc-confirm").disabled = false;
+        if (j.error) { $("lc-err").hidden = false; $("lc-err").textContent = j.error; return; }
+        S.a.contract_confirmed = c; S.a.contract_corrected = j.corrected; S.a.contract_confirmed_at = new Date().toISOString();
+        AS.track(j.corrected ? "contract_corrected" : "contract_confirmed", { fields: (j.corrections || []).map(function (x) { return x.field; }) }, S.a.id);
+        renderMode(); show("mode");
+      });
+    });
+    $("lc-back").addEventListener("click", function () { S = { t: null, a: null, versions: [], cur: null, mode: null }; history.replaceState(null, "", location.pathname); show("upload"); });
+
+    // ── 3 mode ──
+    function renderMode() {
+      S.mode = null; $("m-go").disabled = true; $("m-opts").hidden = true;
+      document.querySelectorAll(".as-mode").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+      $("m-constraints").value = ""; $("m-needs").value = ""; $("m-needs-wrap").hidden = true;
+    }
+    function preselectMode(mode) { var b = document.querySelector('.as-mode[data-mode="' + mode + '"]'); if (b) b.click(); }
+    document.querySelectorAll(".as-mode").forEach(function (b) {
+      b.addEventListener("click", function () {
+        S.mode = b.dataset.mode;
+        document.querySelectorAll(".as-mode").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        $("m-checks").innerHTML = SUPPORTS[S.mode].map(function (s) { return '<label class="ast-check"><input type="checkbox" value="' + s[0] + '"> <span>' + AS.esc(s[1]) + "</span></label>"; }).join("");
+        $("m-opts-hint").textContent = HINT[S.mode]; $("m-opts").hidden = false; $("m-go").disabled = false; $("m-needs-wrap").hidden = S.mode !== "support";
+      });
+    });
+    $("m-back").addEventListener("click", function () { renderContract(); show("contract"); });
+    var STAGE_MSG = { queued: "Queued…", transforming: "Making the version… 30–60 seconds.", auditing: "Checking it: does it keep your Learning Contract? Would a teacher actually use it? Could a student with AI skip the thinking?", repairing: "One of the checks failed — making a single bounded repair…", reauditing: "Checking the repaired version…", done: "Done.", failed: "Failed." };
+    $("m-go").addEventListener("click", function () {
+      if (!S.mode) return;
+      var supports = Array.prototype.map.call(document.querySelectorAll("#m-checks input:checked"), function (i) { return i.value; });
+      var req = { supports: supports, constraints_text: $("m-constraints").value.trim(), needs_text: S.mode === "support" ? $("m-needs").value.trim() : "" };
+      $("m-go").disabled = true; $("m-busy").hidden = false; $("m-err").hidden = true; $("m-busy").textContent = STAGE_MSG.queued;
+      AS.track("transform_request", { mode: S.mode, supports: supports, has_constraints: Boolean(req.constraints_text) }, S.a.id);
+      AS.api({ t: S.t, action: "transform", mode: S.mode, request: req }).then(function (j) {
+        if (j.error) { fail(j.error); return; }
+        poll(j.version.id, 0);
+      }).catch(function () { fail("Could not reach the studio. Check your connection and try again."); });
+      function fail(msg) { $("m-go").disabled = false; $("m-busy").hidden = true; $("m-err").hidden = false; $("m-err").textContent = msg; AS.track("transform_failed", { mode: S.mode }, S.a.id); }
+      function poll(vid, n) {
+        if (n > 120) { fail("This is taking longer than expected. Reload this page in a minute — the version will appear here when it is ready."); return; }
+        setTimeout(function () {
+          AS.api({ t: S.t, action: "get_version", version_id: vid }).then(function (j) {
+            if (j.error) { fail(j.error); return; }
+            var v = j.version;
+            $("m-busy").textContent = STAGE_MSG[v.stage] || STAGE_MSG.transforming;
+            if (v.status === "failed") { fail("The transformation failed: " + (v.error || "unknown error")); return; }
+            if (v.status !== "ready") { poll(vid, n + 1); return; }
+            $("m-go").disabled = false; $("m-busy").hidden = true;
+            S.versions.push(v); S.cur = v;
+            AS.track("transform_ready", { mode: S.mode, ms: v.generated_ms, review_required: countReview(v), repaired: v.repaired, audits: v.audit_verdicts }, S.a.id);
+            renderResult(); show("result");
+          }).catch(function () { poll(vid, n + 1); });
+        }, n < 10 ? 3000 : 5000);
+      }
+    });
+    function countReview(v) { var st = (v.output && v.output.statuses) || {}; return Object.keys(st).filter(function (k) { return st[k].status === "REVIEW_REQUIRED"; }).length; }
+
+    // ── 4 result ──
+    function badge(s) { var cls = s === "REVIEW_REQUIRED" ? " as-badge--review" : s === "INTENTIONALLY_EXTENDED" ? " as-badge--extended" : ""; return '<span class="as-badge' + cls + '">' + AS.esc(AS.STATUS_LABEL[s] || s) + "</span>"; }
+    function currentText() { return S.cur.edited_text || (S.cur.output && S.cur.output.new_version) || ""; }
+    function renderResult() {
+      var v = S.cur, o = v.output || {};
+      $("r-title").textContent = o.title || S.a.title || "Your assignment";
+      $("r-lede").textContent = "Your original on the left, the " + AS.MODE_LABEL[v.mode] + " version on the right. Below them: what we changed, what we protected, and what to check before you use it.";
+      $("r-tabs").innerHTML = S.versions.map(function (x) { return '<button type="button" class="tsa-btn tsa-btn--secondary tsa-btn--sm" role="tab" aria-selected="' + (x.id === v.id) + '" data-vid="' + x.id + '"' + (x.id === v.id ? ' style="border-color:var(--tsa-silver)"' : "") + ">" + AS.esc(AS.MODE_LABEL[x.mode]) + " · " + AS.fmtDate(x.created_at) + "</button>"; }).join("");
+      Array.prototype.forEach.call($("r-tabs").querySelectorAll("button"), function (b) { b.addEventListener("click", function () { S.cur = S.versions.filter(function (x) { return x.id === b.dataset.vid; })[0]; renderResult(); }); });
+      $("r-mode-label").textContent = AS.MODE_LABEL[v.mode];
+      $("r-original").innerHTML = AS.md(S.a.original_markdown || "");
+      $("r-new").innerHTML = AS.md(currentText());
+      $("r-edited-flag").hidden = !v.edited_text;
+      $("r-tnotes").innerHTML = AS.md(o.teacher_notes || ""); $("r-tnotes-wrap").hidden = !o.teacher_notes;
+      var tr = o.trace || { changed: [], protected: [], check_this: [] };
+      $("r-changed").innerHTML = (tr.changed || []).map(function (c) { return "<li>" + AS.esc(c.what) + (c.why ? "<em>" + AS.esc(c.why) + "</em>" : "") + "</li>"; }).join("") || "<li>—</li>";
+      $("r-protected").innerHTML = (tr.protected || []).map(function (c) { return "<li>" + AS.esc(c) + "</li>"; }).join("") || "<li>—</li>";
+      $("r-check").innerHTML = (tr.check_this || []).map(function (c) { return "<li>" + AS.esc(c) + "</li>"; }).join("");
+      var st = o.statuses || {};
+      $("r-status").innerHTML = ["learning_target","required_thinking","required_evidence","teacher_constraints","correctness"].map(function (k) { var s = st[k] || { status: "REVIEW_REQUIRED", note: "" }; return '<div class="as-status__row as-status__row--compact"><span class="as-status__k">' + AS.esc(AS.FIELD_LABEL[k]) + "</span>" + badge(s.status) + "<span>" + AS.esc(s.note) + "</span></div>"; }).join("");
+      $("r-workload").textContent = o.teacher_workload ? "Your workload: " + o.teacher_workload + (o.teacher_workload_note ? " — " + o.teacher_workload_note : "") : "";
+      $("r-audit").innerHTML = renderAudit(v);
+      renderSet();
+      var blocked = v.audit_verdicts && v.audit_verdicts.preservation === "BLOCK";
+      $("r-block").hidden = !blocked;
+      if (blocked) { var rr = ((v.audits || {}).rounds || []).slice(-1)[0] || {}; var bf = ((rr.preservation || {}).findings || []).filter(function (f) { return f.severity === "block"; })[0];
+        $("r-block-text").textContent = "Our own check found this " + AS.MODE_LABEL[v.mode] + " version changed something the " + AS.MODE_LABEL[v.mode] + " mode is not allowed to change" + (v.repaired ? ", even after one repair" : "") + (bf ? ": " + bf.invariant.replace(/_/g, " ") + " — " + bf.evidence : ".") + " Treat it as a draft to edit, not as a version that preserved your Learning Contract."; }
+      var uv = document.querySelectorAll('input[name=usev]'); Array.prototype.forEach.call(uv, function (r) { r.checked = r.value === v.use_answer; });
+      $("r-usec").value = v.use_comment || ""; $("r-usec-wrap").hidden = !(v.use_answer === "yes_with_changes" || v.use_answer === "no");
+      // feedback state
+      var fb = document.querySelectorAll('input[name=pres]'); Array.prototype.forEach.call(fb, function (r) { r.checked = r.value === v.preservation_answer; });
+      $("r-corr").value = v.preservation_correction || ""; $("r-corr-wrap").hidden = v.preservation_answer !== "yes"; $("r-fb-done").hidden = !(v.preservation_answer || v.use_answer);
+      $("r-msg").textContent = v.used_at ? "Recorded as used with students." : "";
+      $("r-editor").hidden = true; $("r-new").hidden = false; $("r-save").hidden = true; $("r-cancel").hidden = true; $("r-edit").hidden = false;
+      if (!v.viewed_at) { v.viewed_at = new Date().toISOString(); AS.api({ t: S.t, action: "version_event", version_id: v.id, event: "viewed" }); }
+    }
+    var SET_DESC = { support: "Reduce unnecessary barriers while preserving the intellectual work being assessed.", advanced: "Deepen the same learning without simply increasing quantity.", visible: "Improve evidence of student reasoning without creating a grading marathon." };
+    function renderSet() {
+      var have = {}; S.versions.forEach(function (x) { if (x.status === "ready") have[x.mode] = have[x.mode] || x; });
+      $("r-set-rows").innerHTML = ["support", "advanced", "visible"].map(function (m) {
+        var x = have[m];
+        return '<div class="as-status__row"><span class="as-status__k">' + AS.esc(AS.MODE_LABEL[m]) + "</span>" +
+          (x ? '<span class="as-badge">Made' + (x.id === S.cur.id ? " · showing" : "") + "</span>" : '<button type="button" class="tsa-btn tsa-btn--secondary tsa-btn--sm" data-make="' + m + '">Make this version</button>') +
+          "<span>" + AS.esc(SET_DESC[m]) + (x && x.id !== S.cur.id ? ' <a href="#" data-show="' + x.id + '">show</a>' : "") + "</span></div>";
+      }).join("");
+      Array.prototype.forEach.call($("r-set-rows").querySelectorAll("[data-make]"), function (b) { b.addEventListener("click", function () { AS.track("set_make", { mode: b.dataset.make, have: Object.keys(have) }, S.a.id); renderMode(); show("mode"); preselectMode(b.dataset.make); }); });
+      Array.prototype.forEach.call($("r-set-rows").querySelectorAll("[data-show]"), function (a) { a.addEventListener("click", function (ev) { ev.preventDefault(); S.cur = S.versions.filter(function (x) { return x.id === a.dataset.show; })[0]; renderResult(); }); });
+      var n = Object.keys(have).length;
+      $("r-set-docx").hidden = n < 2;
+      $("r-set-note").textContent = n >= 2 ? n + " versions ready — one Word file, one version per page." : "";
+    }
+    $("r-set-docx").addEventListener("click", function () {
+      var have = {}; S.versions.forEach(function (x) { if (x.status === "ready") have[x.mode] = have[x.mode] || x; });
+      var parts = ["support", "advanced", "visible"].filter(function (m) { return have[m]; }).map(function (m) { var x = have[m]; return { label: AS.MODE_LABEL[m] + " version", text: x.edited_text || (x.output && x.output.new_version) || "" }; });
+      AS.buildSetDocx(parts, S.a.title).then(function (blob) {
+        AS.download(blob, AS.safeName(S.a.title) + "-classroom-set.docx");
+        AS.track("set_download", { modes: Object.keys(have).sort() }, S.a.id);
+        Object.keys(have).forEach(function (m) { AS.api({ t: S.t, action: "version_event", version_id: have[m].id, event: "export_docx" }); });
+      }).catch(function (e) { alert("Word export failed: " + e.message); });
+    });
+    var AUDIT_LABEL = { PASS: "Kept your contract", REVIEW: "Review one thing", BLOCK: "Exceeded its permissions", USEFUL: "Usable as is", USEFUL_WITH_EDITS: "Usable with edits", NOT_USEFUL: "Needs rework", SURVIVES: "Thinking still required", WEAKENED: "Partly shortcut-able", UNDERMINED: "Shortcut-able" };
+    function auditBadge(v) { var warn = ["BLOCK", "NOT_USEFUL", "UNDERMINED"].indexOf(v) >= 0, mid = ["REVIEW", "USEFUL_WITH_EDITS", "WEAKENED"].indexOf(v) >= 0; return '<span class="as-badge' + (warn ? " as-badge--review" : "") + '">' + AS.esc(AUDIT_LABEL[v] || v) + (mid ? " ·" : "") + "</span>"; }
+    function renderAudit(v) {
+      var av = v.audit_verdicts; if (!av) return "";
+      var rounds = (v.audits && v.audits.rounds) || []; var last = rounds[rounds.length - 1] || {};
+      var u = last.usefulness || {}, adv = last.adversarial || {};
+      var html = '<div class="as-compare__label">Our own checks on this version' + (v.repaired ? " · repaired once after a failed check" : "") + "</div>";
+      html += '<div class="as-status__row"><span class="as-status__k">Contract kept?</span>' + auditBadge(av.preservation) + "<span>" + AS.esc((last.preservation && last.preservation.summary) || "") + "</span></div>";
+      html += '<div class="as-status__row"><span class="as-status__k">Usable in class?</span>' + auditBadge(av.usefulness) + "<span>" + AS.esc((u.notes || []).slice(0, 2).join(" · ")) + (u.grading_burden ? " (grading: " + AS.esc(u.grading_burden) + ")" : "") + "</span></div>";
+      html += '<div class="as-status__row"><span class="as-status__k">Student with AI?</span>' + auditBadge(av.adversarial) + "<span>" + AS.esc(adv.verdict === "SURVIVES" ? (adv.what_survives || "") : (adv.cheapest_path || "")) + "</span></div>";
+      html += '<p class="ast-note" style="margin-top:8px">Three narrow checks the studio runs on itself. They can be wrong; your answer below is what we learn from.</p>';
+      return html;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('input[name=usev]'), function (r) { r.addEventListener("change", function () { $("r-usec-wrap").hidden = r.value === "yes_as_is"; }); });
+    function vevent(ev, extra) { return AS.api(Object.assign({ t: S.t, action: "version_event", version_id: S.cur.id, event: ev }, extra || {})); }
+    $("r-edit").addEventListener("click", function () { $("r-editor").value = currentText(); $("r-editor").hidden = false; $("r-new").hidden = true; $("r-save").hidden = false; $("r-cancel").hidden = false; $("r-edit").hidden = true; });
+    $("r-cancel").addEventListener("click", renderResult);
+    $("r-save").addEventListener("click", function () {
+      var txt = $("r-editor").value; S.cur.edited_text = txt; S.cur.edited_at = new Date().toISOString();
+      vevent("edited", { text: txt }); AS.track("version_edited", { mode: S.cur.mode }, S.a.id); renderResult();
+    });
+    $("r-docx").addEventListener("click", function () {
+      AS.buildDocx(currentText(), "").then(function (blob) { AS.download(blob, AS.safeName(S.a.title) + "-" + S.cur.mode + ".docx"); vevent("export_docx"); AS.track("export_docx", { mode: S.cur.mode }, S.a.id); })
+        .catch(function (e) { alert("Word export failed: " + e.message + ". Use Print / PDF instead."); });
+    });
+    $("r-print").addEventListener("click", function () { vevent("export_print"); AS.track("export_print", { mode: S.cur.mode }, S.a.id); window.print(); });
+    Array.prototype.forEach.call(document.querySelectorAll('input[name=pres]'), function (r) { r.addEventListener("change", function () { $("r-corr-wrap").hidden = r.value !== "yes"; }); });
+    $("r-fb-go").addEventListener("click", function () {
+      var u = document.querySelector('input[name=usev]:checked'), p = document.querySelector('input[name=pres]:checked');
+      if (!u && !p) return;
+      var calls = [];
+      if (u) { var c = $("r-usec").value.trim(); calls.push(AS.api({ t: S.t, action: "use_answer", version_id: S.cur.id, answer: u.value, comment: c }).then(function (j) { if (!j.error) { S.cur.use_answer = u.value; S.cur.use_comment = c; AS.track("use_" + u.value, { mode: S.cur.mode, audits: S.cur.audit_verdicts }, S.a.id); if (u.value !== "no" && !S.cur.accepted_at) { S.cur.accepted_at = new Date().toISOString(); vevent("accepted"); } } })); }
+      if (p) { var corr = $("r-corr").value.trim(); calls.push(AS.api({ t: S.t, action: "preservation", version_id: S.cur.id, answer: p.value, correction: corr }).then(function (j) { if (!j.error) { S.cur.preservation_answer = p.value; S.cur.preservation_correction = corr; AS.track("preservation_" + p.value, { mode: S.cur.mode }, S.a.id); } })); }
+      Promise.all(calls).then(function () { $("r-fb-done").hidden = false; });
+    });
+    $("r-used").addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var note = prompt("How did it go? One line is plenty (optional).") || "";
+      S.cur.used_at = new Date().toISOString(); vevent("used", { note: note }); AS.track("version_used", { mode: S.cur.mode }, S.a.id); $("r-msg").textContent = "Thank you — recorded as used with students.";
+    });
+    $("r-another").addEventListener("click", function () { AS.track("another_assignment", null, S.a.id); S = { t: null, a: null, versions: [], cur: null, mode: null }; history.replaceState(null, "", location.pathname); $("f-upload").reset(); $("fname").textContent = ""; docxText = ""; show("upload"); });
+    $("r-withdraw").addEventListener("click", function (ev) {
+      ev.preventDefault();
+      if (!confirm("Delete this assignment, its Learning Contract, and every version made from it? This cannot be undone.")) return;
+      AS.api({ t: S.t, action: "withdraw" }).then(function () { S = { t: null, a: null, versions: [], cur: null, mode: null }; history.replaceState(null, "", location.pathname); show("upload"); });
+    });
+
+    // ── resume from ?t= ──
+    var t = new URLSearchParams(location.search).get("t");
+    if (t && /^[a-f0-9]{32}$/.test(t)) {
+      AS.api({ t: t, action: "get" }).then(function (j) {
+        if (j.error) { show("upload"); return; }
+        S.t = t; S.a = j.assignment; S.versions = (j.versions || []).filter(function (v) { return v.status === "ready"; });
+        AS.rememberToken(t, S.a.title);
+        if (S.a.status === "contract_failed") { show("upload"); $("u-err").hidden = false; $("u-err").textContent = "We could not read that assignment. Please upload it again."; return; }
+        if (S.versions.length) { S.cur = S.versions[S.versions.length - 1]; renderResult(); show("result"); }
+        else if (S.a.contract_confirmed) { renderMode(); show("mode"); }
+        else { renderContract(); show("contract"); }
+      }).catch(function () { show("upload"); });
+    } else show("upload");
+  })();
+  </script>
+</body>
+</html>

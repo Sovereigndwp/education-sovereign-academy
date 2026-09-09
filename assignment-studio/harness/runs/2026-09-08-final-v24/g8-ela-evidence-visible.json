@@ -1,0 +1,383 @@
+{
+  "id": "g8-ela-evidence",
+  "mode": "visible",
+  "version_id": "fdbfeee1-3cd9-43cd-9272-760101a98d2d",
+  "output": {
+    "title": "Author's Point of View — Evidence Paragraph",
+    "trace": {
+      "changed": [
+        {
+          "why": "Repair: creates a live, oral verification of the student's own inference and evidence-selection work at minute 10, before the paragraph is written, making it costly to outsource the entire task to AI",
+          "what": "Added a CHECKPOINT section between planning and paragraph-writing"
+        },
+        {
+          "why": "Visual separation so the checkpoint instruction is clearly distinct from planning prompts and paragraph task",
+          "what": "Inserted a horizontal rule before the checkpoint and after it"
+        }
+      ],
+      "protected": [
+        "The passage, task question, planning prompts, paragraph requirements, and 4-point rubric are unchanged",
+        "The 8–12 sentence constraint and one-period timing remain in place",
+        "The planning sheet structure (position prediction, two pieces of evidence with technique and explanation, counter-case treatment) is preserved exactly",
+        "The learning target (inferring position from textual choices and explaining the mechanism) is unaffected"
+      ],
+      "check_this": [
+        "Verify that 2 minutes for oral checkpoints (2–3 students per row, about 30 seconds each) fits within your period after planning time",
+        "Confirm that asking students to explain one piece of evidence orally matches your classroom norms for participation",
+        "create disproportionate grading burden: The checkpoint requires the teacher to 'ask you to read your position statement aloud and explain why one piece of your evidence shows that position' for each student at minute 10. The engine's trace estimates '2–3 students per row, about 30 seconds each' for '2 minutes for oral checkpoints,' which suggests brief individual interactions with all students during a single class period. Whether this constitutes a disproportionate burden compared to the original assignment (which had no oral component) is a magnitude question for the Usefulness audit, but the addition of an oral checkpoint for every student in one period creates a new grading/verification task that was not in the original.",
+        "A student with an AI assistant could shortcut part of this: The student pastes the passage and assignment into an AI chatbot with a prompt like: 'Fill out this planning sheet for a grade 8 assignment. Use simple language a 13-year-old would use.' The AI generates all planning answers (position statement, two quotes with techniques and explanations, counter-case treatment). The student copies these onto the planning sheet. At the checkpoint (minute 10), the student reads aloud the AI-generated position statement and repeats the AI-generated explanation for one piece of evidence. After passing the checkpoint, the student pastes the planning work back to the AI and asks: 'Now write the 8-12 sentence paragraph using this planning work, in a 13-year-old's voice.' The student copies the AI-generated paragraph as the final hand-in."
+      ]
+    },
+    "statuses": {
+      "correctness": {
+        "note": "The passage, task question, planning prompts, paragraph requirements, and rubric are unchanged; no content was altered.",
+        "status": "PRESERVED"
+      },
+      "learning_target": {
+        "note": "Students still infer an unstated position, select evidence, explain the mechanism by which each piece reveals the position, and describe how the author treats the counter-case; the checkpoint verifies this work orally but does not change what is being learned.",
+        "status": "PRESERVED"
+      },
+      "required_evidence": {
+        "note": "The written paragraph still contains the same elements: accurate position statement, two quotations/paraphrases, explanation naming a technique for each, and a sentence on how the engineer's case is acknowledged and answered.",
+        "status": "PRESERVED"
+      },
+      "required_thinking": {
+        "note": "The cognitive demand is unchanged: students must infer the position, select relevant evidence, name the technique, explain how it signals the position, and analyze the treatment of the opposing case; the checkpoint asks them to articulate work they have already done.",
+        "status": "PRESERVED"
+      },
+      "teacher_constraints": {
+        "note": "The checkpoint adds about 2 minutes of circulation time; planning and writing time are unchanged; the paragraph remains 8–12 sentences; the rubric is the same for every student and grading cost is unchanged.",
+        "status": "PRESERVED"
+      }
+    },
+    "new_version": "# Author's Point of View — Evidence Paragraph\n\n**Grade 8 English Language Arts · Informational Text · One class period**\n\nRead the passage. Then complete the task below.\n\n---\n\n### The Bridge on Mill Street\n\nThe Mill Street bridge is ninety-one years old, and for most of those years nobody thought about it at all. It carried farm trucks, then school buses, then the commuters who now cross it twice a day without looking down. Last spring an inspection report gave it a rating of \"poor,\" and the town council scheduled a vote on whether to repair it or replace it with a wider concrete span.\n\nThe case for replacement is simple, and the council's engineer made it in eleven minutes. The steel is tired. The deck is narrow enough that two delivery vans cannot pass without one of them slowing to a crawl. Repair would cost about two-thirds of what a new bridge costs and would buy, in the engineer's estimate, twenty more years. A new bridge would last seventy-five.\n\nWhat the engineer did not mention is that the Mill Street bridge is the only place in town where you can stand over moving water. Children drop leaves from the upstream rail and run across to watch them come out the other side. Every graduating class since 1974 has taken its photograph on it. The wider concrete span in the proposal has no sidewalk on the upstream side at all.\n\nNone of this appears in the inspection report, because inspection reports measure steel. They do not measure what a town does on a bridge, or what it would stop doing if the bridge became a road that happens to cross a river. The council will vote in March. The numbers are on one side. I am not sure the numbers are the only thing that should be counted.\n\n---\n\n### Task\n\nIn one well-developed paragraph (8–12 sentences), answer this question:\n\n**What is the author's point of view on replacing the Mill Street bridge, and how does the author respond to the opposing case?**\n\n**Before you write your paragraph, complete this planning work:**\n\n1. **Predict the author's position** (one sentence in your own words — not just \"for\" or \"against,\" but what the author believes should matter in the decision):\n\n   _________________________________________________________________\n\n2. **Select your two pieces of evidence.** For each one, write:\n   - The quotation or close paraphrase:\n   - The technique it uses (circle one): **word choice / contrast / placement / framing or selected detail / inclusion or omission**\n   - How that technique reveals the author's position (one sentence):\n\n   **Evidence 1:**\n   \n   Quote/paraphrase: _________________________________________________________________\n   \n   Technique: _________________________________________________________________\n   \n   How it reveals position: _________________________________________________________________\n\n   **Evidence 2:**\n   \n   Quote/paraphrase: _________________________________________________________________\n   \n   Technique: _________________________________________________________________\n   \n   How it reveals position: _________________________________________________________________\n\n3. **How does the author treat the engineer's case?** (Check what the author does, then write one sentence explaining it):\n   - [ ] Acknowledges it\n   - [ ] Concedes something about it\n   - [ ] Responds to it or limits it\n\n   Explanation: _________________________________________________________________\n\n---\n\n**CHECKPOINT (minute 10):** When you finish your planning work, raise your hand. Your teacher will ask you to read your position statement aloud and explain why one piece of your evidence shows that position. After the checkpoint, you will write your paragraph.\n\n---\n\n**Now write your paragraph** (8–12 sentences) using the planning work above. Your paragraph must:\n\n- State the author's point of view in your own words (do not just say \"the author is against it\").\n- Quote or closely paraphrase **two** pieces of textual evidence that reveal the author's point of view.\n- For each piece of evidence, explain **how** it shows the author's position (word choice, contrast, placement, or what the author chooses to include).\n- Explain how the author **acknowledges and responds to** the engineer's case for replacement.\n\n**Scoring (4-point rubric):** Point of view clearly stated and accurate (1) · Two relevant pieces of evidence (1) · Explanation connects each piece of evidence to the point of view (1) · Accurately describes how the author handles the opposing view (1).",
+    "teacher_notes": "At minute 10, circulate and ask 2–3 students per row to read their position statement aloud and explain orally why one piece of evidence shows that position. This takes about 2 minutes and creates an independent check on inference and evidence-selection before the paragraph is written. The planning sheet and paragraph are otherwise unchanged. The rubric remains the same for all students.",
+    "reviewer_notes": "The repair implements the audit's first suggested option: a 2-minute live checkpoint at minute 10 where the teacher circulates and asks 2–3 students per row to read their position statement aloud and explain orally why one piece of evidence shows that position. This creates an independent, non-AI-mediated check on the inference and evidence-selection work before the paragraph is written, making it costly to outsource the entire task. The checkpoint is inserted as a visually distinct section between planning and paragraph-writing. All other elements—passage, planning sheet, paragraph task, rubric—are unchanged. The addition fits within a standard class period (about 2 minutes for oral checks, leaving the rest for reading, planning, and writing).",
+    "teacher_workload": "slightly more",
+    "teacher_workload_note": "Prep is unchanged. Grading is unchanged (same rubric, same paragraph). The checkpoint adds about 2 minutes of circulation during class, asking 2–3 students per row to read their position statement and explain one piece of evidence orally."
+  },
+  "output_prerepair": {
+    "title": "Author's Point of View — Evidence Paragraph",
+    "trace": {
+      "changed": [
+        {
+          "why": "Makes the required reasoning visible: prediction of position, evidence selection with technique identification, and analysis of how the author treats the counter-case — all steps students already perform, now externalized",
+          "what": "Added three-part planning section before the paragraph prompt"
+        },
+        {
+          "why": "Externalizes inference work; teacher can see if student has identified a specific, accurate position before they write the paragraph",
+          "what": "Planning question 1 asks for prediction of author's position in one sentence"
+        },
+        {
+          "why": "Makes evidence selection and technique identification visible; teacher can see if evidence is relevant and if student can name the mechanism before reading the paragraph",
+          "what": "Planning question 2 structures evidence selection: quote, technique name (circling from list), one-sentence explanation per piece"
+        },
+        {
+          "why": "Externalizes the acknowledge/concede/respond analysis; teacher can see if student recognizes how the counter-case is handled",
+          "what": "Planning question 3 asks student to identify what the author does with the engineer's case (checklist) and explain in one sentence"
+        }
+      ],
+      "protected": [
+        "Passage and all content unchanged",
+        "Paragraph requirements unchanged: 8–12 sentences, same four components",
+        "4-point rubric unchanged and still applies to the paragraph only",
+        "One class period constraint: planning adds 5–8 minutes but replaces thinking time students already spend; total time similar",
+        "Learning target unchanged: still inferring position from authorial choices and analyzing treatment of counter-case"
+      ],
+      "check_this": [
+        "Verify that the planning section fits within your class period — estimate 5–8 minutes for planning, remainder for paragraph writing (similar to original time distribution)",
+        "Confirm that the technique list in question 2 matches the language you've taught (word choice, contrast, placement, framing/selected detail, inclusion/omission)",
+        "Decide whether you will collect the planning work or just use it for in-class formative feedback — rubric still applies only to the paragraph"
+      ]
+    },
+    "statuses": {
+      "correctness": {
+        "note": "Passage unchanged; task requirements unchanged; rubric unchanged; no factual content altered.",
+        "status": "PRESERVED"
+      },
+      "learning_target": {
+        "note": "Students still infer unstated position from textual choices, select evidence, explain the mechanism by which evidence reveals position, and describe treatment of counter-case — now with reasoning externalized before writing.",
+        "status": "PRESERVED"
+      },
+      "required_evidence": {
+        "note": "Paragraph requirements unchanged: accurate statement of position in student's words, two quotations/paraphrases, explanation naming technique for each, sentence on how engineer's case is acknowledged and answered — planning scaffolds production of this evidence.",
+        "status": "PRESERVED"
+      },
+      "required_thinking": {
+        "note": "All four cognitive moves unchanged: infer position, select evidence that reveals it, explain mechanism (technique), describe how counter-case is handled — planning section makes these moves observable without changing what is required.",
+        "status": "PRESERVED"
+      },
+      "teacher_constraints": {
+        "note": "One class period maintained (planning adds 5–8 minutes but replaces thinking time students already spend); single paragraph of 8–12 sentences unchanged; same 4-point rubric applied to paragraph only.",
+        "status": "PRESERVED"
+      }
+    },
+    "new_version": "# Author's Point of View — Evidence Paragraph\n\n**Grade 8 English Language Arts · Informational Text · One class period**\n\nRead the passage. Then complete the task below.\n\n---\n\n### The Bridge on Mill Street\n\nThe Mill Street bridge is ninety-one years old, and for most of those years nobody thought about it at all. It carried farm trucks, then school buses, then the commuters who now cross it twice a day without looking down. Last spring an inspection report gave it a rating of \"poor,\" and the town council scheduled a vote on whether to repair it or replace it with a wider concrete span.\n\nThe case for replacement is simple, and the council's engineer made it in eleven minutes. The steel is tired. The deck is narrow enough that two delivery vans cannot pass without one of them slowing to a crawl. Repair would cost about two-thirds of what a new bridge costs and would buy, in the engineer's estimate, twenty more years. A new bridge would last seventy-five.\n\nWhat the engineer did not mention is that the Mill Street bridge is the only place in town where you can stand over moving water. Children drop leaves from the upstream rail and run across to watch them come out the other side. Every graduating class since 1974 has taken its photograph on it. The wider concrete span in the proposal has no sidewalk on the upstream side at all.\n\nNone of this appears in the inspection report, because inspection reports measure steel. They do not measure what a town does on a bridge, or what it would stop doing if the bridge became a road that happens to cross a river. The council will vote in March. The numbers are on one side. I am not sure the numbers are the only thing that should be counted.\n\n---\n\n### Task\n\nIn one well-developed paragraph (8–12 sentences), answer this question:\n\n**What is the author's point of view on replacing the Mill Street bridge, and how does the author respond to the opposing case?**\n\n**Before you write your paragraph, complete this planning work:**\n\n1. **Predict the author's position** (one sentence in your own words — not just \"for\" or \"against,\" but what the author believes should matter in the decision):\n\n   _________________________________________________________________\n\n2. **Select your two pieces of evidence.** For each one, write:\n   - The quotation or close paraphrase:\n   - The technique it uses (circle one): **word choice / contrast / placement / framing or selected detail / inclusion or omission**\n   - How that technique reveals the author's position (one sentence):\n\n   **Evidence 1:**\n   \n   Quote/paraphrase: _________________________________________________________________\n   \n   Technique: _________________________________________________________________\n   \n   How it reveals position: _________________________________________________________________\n\n   **Evidence 2:**\n   \n   Quote/paraphrase: _________________________________________________________________\n   \n   Technique: _________________________________________________________________\n   \n   How it reveals position: _________________________________________________________________\n\n3. **How does the author treat the engineer's case?** (Check what the author does, then write one sentence explaining it):\n   - [ ] Acknowledges it\n   - [ ] Concedes something about it\n   - [ ] Responds to it or limits it\n\n   Explanation: _________________________________________________________________\n\n**Now write your paragraph** (8–12 sentences) using the planning work above. Your paragraph must:\n\n- State the author's point of view in your own words (do not just say \"the author is against it\").\n- Quote or closely paraphrase **two** pieces of textual evidence that reveal the author's point of view.\n- For each piece of evidence, explain **how** it shows the author's position (word choice, contrast, placement, or what the author chooses to include).\n- Explain how the author **acknowledges and responds to** the engineer's case for replacement.\n\n**Scoring (4-point rubric):** Point of view clearly stated and accurate (1) · Two relevant pieces of evidence (1) · Explanation connects each piece of evidence to the point of view (1) · Accurately describes how the author handles the opposing view (1).",
+    "teacher_notes": "The planning section makes students' reasoning visible before they write. You can see whether they've identified the position accurately, selected relevant evidence, and named a technique — all before grading the paragraph. If a student's planning is off-track, you can intervene during the period. The rubric and paragraph requirements are unchanged. Grading time is the same: you're still scoring one paragraph against the same four criteria, but now you have the planning work as a diagnostic if the paragraph is unclear.",
+    "reviewer_notes": "Transformation substitutes visible planning for invisible pre-writing. Students already predict position, select evidence, identify techniques, and analyze counter-case treatment before writing — this version externalizes those steps in a structured planning section (three questions, ~6 fill-in lines total). Time cost is minimal because it replaces thinking time students already spend. The paragraph task, length, and rubric are completely unchanged. Teacher can now see reasoning before grading the paragraph, which makes formative feedback possible during the period and makes unclear paragraphs easier to diagnose. This is not a process log or reflection — it is the same task with intermediate reasoning made observable. Grading cost is honest: slightly more if teacher reads planning work, but planning work is not required to be graded and serves primarily as a diagnostic.",
+    "teacher_workload": "slightly more",
+    "teacher_workload_note": "Prep is the same (no changes to passage, rubric, or paragraph requirements). Grading is slightly more: you're still scoring one paragraph against the same rubric, but you now have planning work that can serve as a diagnostic if a paragraph is unclear or can allow for formative feedback during the period. The planning work is not separately graded unless you choose to make it so. Estimated grading time per student: 3–4 minutes (was 3 minutes), with the benefit of clearer reasoning trails when paragraphs are ambiguous."
+  },
+  "repaired": true,
+  "audits": {
+    "rounds": [
+      {
+        "at": "2026-09-08T23:00:42.363Z",
+        "model": "claude-sonnet-4-5",
+        "round": 1,
+        "usefulness": {
+          "notes": [
+            "The planning section adds approximately 150 words of directions and blank lines. In a one-period assignment, test whether students can complete both planning and an 8–12 sentence paragraph in the available time.",
+            "Item 2 lists five technique options where the original listed four ('framing or selected detail' appears to combine two). Clarify whether students circle one or may identify multiple techniques.",
+            "The checklist in item 3 asks students to 'Check what the author does' but then says 'write one sentence explaining it' — clarify whether they check all that apply or select one to explain.",
+            "Minor layout edit: the blank lines for Evidence 1 and Evidence 2 should be visually consistent in length to avoid implying different expected response lengths."
+          ],
+          "clarity": 2,
+          "verdict": "USEFUL",
+          "feasibility": 2,
+          "grading_burden": "same",
+          "editing_required": "minor",
+          "improves_original": true,
+          "ignored_validity_notes": [
+            "The planning scaffold explicitly names techniques (word choice, contrast, placement, etc.) and asks students to match evidence to technique before explaining. This front-loads categorization that students would otherwise discover through analysis.",
+            "Item 1 asks students to predict position before selecting evidence, which may pre-structure their reading rather than letting evidence lead to the claim.",
+            "The checklist in item 3 (acknowledges/concedes/responds) provides the analytical categories rather than asking students to describe what they observe in the text."
+          ]
+        },
+        "adversarial": {
+          "steps": [
+            "Photograph or copy-paste the passage text",
+            "Photograph or copy-paste the planning questions and paragraph prompt",
+            "Send to AI with prompt: 'Complete this planning worksheet and write the paragraph for an 8th grade student'",
+            "Copy AI's planning answers into the blanks on the worksheet",
+            "Copy AI's paragraph into the final answer space",
+            "Hand in both planning sheet and paragraph"
+          ],
+          "verdict": "UNDERMINED",
+          "repair_hint": "Add a 2-minute live checkpoint after planning is complete: teacher circulates and asks 2-3 students per row to read aloud their position statement and explain orally why one piece of their evidence shows that position. Or: collect only the planning sheet at minute 10, provide brief written feedback on position accuracy, return it, then students write the paragraph. Either creates an independent check on at least the inference and evidence-selection work before the paragraph is written.",
+          "cheapest_path": "The student photographs the passage and planning sheet, pastes both into an AI chat, and asks: 'Fill out this planning worksheet for an 8th grader, then write the paragraph using those answers.' The AI generates all planning responses (position statement, two quotes with techniques circled and explanations, counter-case analysis) plus the final paragraph. The student copies everything onto the sheet and hands it in. Total time: 3-4 minutes of copying.",
+          "what_survives": "The planning structure makes the required reasoning steps visible on the page, so a teacher reviewing the work can see whether the position statement is specific, whether the evidence is relevant, whether the technique names match the evidence, and whether the counter-case analysis is accurate. The externalized thinking creates a reviewable artifact. However, this is post-hoc detection, not a structural barrier to AI generation.",
+          "cost_to_student": "trivial",
+          "what_is_bypassed": "All of the required thinking is bypassed: inferring the unstated position from the text, selecting evidence that reveals (not just mentions) the position, identifying which technique each piece uses, explaining the mechanism by which evidence signals position, and analyzing how the author treats the counter-case. The AI performs all inference, selection, categorization, and explanation. The student does no reading comprehension, no analysis of authorial choices, and no reasoning about how techniques reveal perspective.",
+          "independent_check": false,
+          "independent_check_what": ""
+        },
+        "preservation": {
+          "summary": "PASS. All contract elements held. The transformed version adds a three-part planning section that externalizes the required thinking (prediction of position, evidence selection with technique identification, counter-case analysis) before the paragraph is written. This is a permitted adaptation under 'process evidence' — the mode allows making 'intermediate reasoning requirements' visible. Critically, the planning section does not give away the assessed reasoning: students must still infer the position (question 1 asks them to predict it, not select from options), select and explain their own evidence (question 2 provides structure but not answers), and analyze counter-case treatment (question 3 asks them to identify and explain, not merely recognize a provided answer). The paragraph requir",
+          "verdict": "PASS",
+          "findings": [
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The learning target requires students to understand that 'an author's point of view in an informational text is revealed through choices — what is included and omitted, word choice, framing and selected details, contrast, and the order and placement of ideas — and a skilled author acknowledges the opposing case rather than ignoring it.' The transformed version preserves this entirely: students must still infer the position from the text, identify techniques (the planning section lists 'word choice / contrast / placement / framing or selected detail / inclusion or omission'), and analyze how the author treats the counter-case. The planning section externalizes this work but does not remove or weaken any element of it.",
+              "severity": "note",
+              "invariant": "learning_target",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract requires: 'Infer an unstated-but-signalled position from the text; select evidence that reveals the position (not merely mentions the topic); explain the mechanism by which each piece of evidence signals the position (word choice, framing/selected detail, contrast, inclusion/omission, placement); describe how the author treats the counter-case (acknowledge, concede, respond).' Every element remains required. Planning question 1 asks students to 'Predict the author's position (one sentence in your own words — not just \"for\" or \"against,\" but what the author believes should matter in the decision)' — this is the inference work, not a giveaway. Question 2 requires students to select evidence, identify the technique, and explain how it reveals position. Question 3 requires analysi",
+              "severity": "note",
+              "invariant": "required_thinking",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract specifies: 'One paragraph containing: an accurate, specific statement of the author's position in the student's words; two quotations/close paraphrases; an explanation for each that names a technique (word choice, framing/selected detail, contrast, inclusion/omission, placement); a sentence on how the engineer's case is acknowledged and answered.' The transformed version states: 'Now write your paragraph (8–12 sentences) using the planning work above. Your paragraph must: [lists all four original requirements].' The paragraph requirements are unchanged. The planning section adds process evidence (the mode's 'may_adapt' permission includes 'process evidence'), but the final paragraph must still contain all contracted elements. The rubric unchanged text confirms: 'Scoring (4-poi",
+              "severity": "note",
+              "invariant": "required_evidence",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract requires: 'One class period; single paragraph of 8–12 sentences; graded with the stated 4-point rubric; the rubric is the same for every student.' The transformed version preserves: 'One class period' (header unchanged), '8–12 sentences' (repeated in the paragraph prompt), and 'Scoring (4-point rubric): Point of view clearly stated and accurate (1) · Two relevant pieces of evidence (1) · Explanation connects each piece of evidence to the point of view (1) · Accurately describes how the author handles the opposing view (1)' (identical rubric). The engine's trace acknowledges timing: 'planning adds 5–8 minutes but replaces thinking time students already spend; total time similar.' The rubric applies to all students and remains unchanged.",
+              "severity": "note",
+              "invariant": "teacher_constraints",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The passage text is unchanged ('The Bridge on Mill Street' appears identically in both versions). The task requirements are factually consistent with the passage content. The technique list in the planning section ('word choice / contrast / placement / framing or selected detail / inclusion or omission') matches the learning target's enumeration. No mathematical or factual errors introduced.",
+              "severity": "note",
+              "invariant": "correctness",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            }
+          ]
+        },
+        "prompt_version": "audit-2026-09-08-v5"
+      },
+      {
+        "at": "2026-09-08T23:01:54.903Z",
+        "model": "claude-sonnet-4-5",
+        "round": 2,
+        "usefulness": {
+          "notes": [
+            "The checkpoint at minute 10 creates a bottleneck: if 25 students raise hands sequentially, each needing 1–2 minutes of teacher time, the period ends before writing begins. Either make it optional ('if you want feedback') or specify 'teacher will circulate and check 5–6 students' or remove it.",
+            "The planning section adds roughly 3 pages of handout length (blanks take space). Verify this fits your printing/packet constraints.",
+            "Grading burden increases slightly: teacher now reads planning work plus paragraph per student, though the rubric still scores only the paragraph. Clarify whether planning work is checked for completion only or factored into the rubric.",
+            "Evidence 2 technique line has identical blank format to Evidence 1 but the circled options don't repeat—add the circled options again or write 'same options as Evidence 1' for clarity."
+          ],
+          "clarity": 2,
+          "verdict": "USEFUL",
+          "feasibility": 2,
+          "grading_burden": "slightly more",
+          "editing_required": "minor",
+          "improves_original": true,
+          "ignored_validity_notes": [
+            "The planning scaffold provides sentence frames and technique labels that could guide students toward correct evidence selection and explanation, which aligns with 'make thinking visible.' Whether this preserves the cognitive demand of the original task (where students must independently identify how evidence functions) is a validity question outside this audit's scope.",
+            "The checkpoint requires students to 'explain why one piece of your evidence shows that position' aloud—this oral reasoning step makes thinking audible but occurs before writing, so the written paragraph may not fully capture whether the student reasoned independently or incorporated teacher feedback during the checkpoint."
+          ]
+        },
+        "adversarial": {
+          "steps": [
+            "Paste passage and planning prompts into AI chatbot",
+            "Add instruction: 'Fill this out like a grade 8 student would, simple language'",
+            "Copy AI's position statement, two quotes with techniques and explanations, and counter-case treatment onto planning sheet",
+            "At checkpoint, read aloud the AI-written position statement",
+            "When teacher asks about evidence, repeat the AI-written explanation for Evidence 1",
+            "After checkpoint, paste planning answers back to AI",
+            "Ask AI: 'Write the paragraph using this planning work, 8-12 sentences, grade 8 voice'",
+            "Copy AI-generated paragraph as final submission"
+          ],
+          "verdict": "WEAKENED",
+          "repair_hint": "At the checkpoint, require the student to justify their choice of technique for BOTH pieces of evidence by pointing to specific words or structural features in the passage, and ask them to explain why their second piece of evidence is different from the first (what different aspect of the author's position it reveals). This makes memorizing AI output much harder and exposes whether the student actually analyzed the text.",
+          "cheapest_path": "The student pastes the passage and assignment into an AI chatbot with a prompt like: 'Fill out this planning sheet for a grade 8 assignment. Use simple language a 13-year-old would use.' The AI generates all planning answers (position statement, two quotes with techniques and explanations, counter-case treatment). The student copies these onto the planning sheet. At the checkpoint (minute 10), the student reads aloud the AI-generated position statement and repeats the AI-generated explanation for one piece of evidence. After passing the checkpoint, the student pastes the planning work back to the AI and asks: 'Now write the 8-12 sentence paragraph using this planning work, in a 13-year-old's voice.' The student copies the AI-generated paragraph as the final hand-in.",
+          "what_survives": "The checkpoint forces the student to speak aloud a position statement and explain one piece of evidence in real time, which creates a moment where hollow understanding could be exposed if the teacher probes with follow-up questions. However, the checkpoint only covers the position statement and one explanation out of two, leaving the second piece of evidence, the technique identifications, and the counter-case treatment unverified. The student can successfully repeat AI-generated content if it sounds plausible.",
+          "cost_to_student": "low",
+          "what_is_bypassed": "The core inferential work (reading the passage to detect the unstated position through textual choices) is bypassed — the AI does this. The selection of evidence that reveals position (not just mentions topic) is bypassed. The identification of which technique each piece uses is bypassed. The explanation of how the technique signals the position is mostly bypassed (one is spoken aloud, but can be memorized from AI output). The analysis of how the author treats the counter-case is bypassed. The paragraph composition is bypassed. Essentially, all required thinking is done by the AI; the student performs only transcription and a brief oral repetition.",
+          "independent_check": true,
+          "independent_check_what": "The CHECKPOINT at minute 10 requires the student to 'read your position statement aloud and explain why one piece of your evidence shows that position' before writing the paragraph. This is done live, in class, and covers part of the required evidence (the position inference and one evidence-explanation connection)."
+        },
+        "preservation": {
+          "summary": "The transformed version preserves all four contract fields: the learning target (inferring position from textual choices and explaining mechanisms) is unchanged; the required thinking (infer, select, explain technique, describe counter-case treatment) is still fully demanded of students; the required evidence (paragraph with position statement, two quotations/paraphrases, technique explanations, counter-case description) remains identical; and teacher constraints (one period, 8–12 sentences, 4-point rubric) are maintained. The planning structure organizes the required thinking into boxes but does not supply answers or remove cognitive demand. The checkpoint asks students to articulate their own inference and evidence-explanation orally, which is process evidence the mode permits. However, ",
+          "verdict": "REVIEW",
+          "findings": [
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The learning target requires students to 'Infer an unstated-but-signalled position from the text; select evidence that reveals the position; explain the mechanism by which each piece of evidence signals the position.' The transformed version preserves this exactly: students must still 'Predict the author's position (one sentence in your own words)' in the planning section, select two pieces of evidence, identify the technique for each ('word choice / contrast / placement / framing or selected detail / inclusion or omission'), and explain 'How that technique reveals the author's position.' The checkpoint requires students to 'read your position statement aloud and explain why one piece of your evidence shows that position,' which verifies but does not supply the inference. All elements of t",
+              "severity": "note",
+              "invariant": "learning_target",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract requires: 'Infer an unstated-but-signalled position from the text; select evidence that reveals the position (not merely mentions the topic); explain the mechanism by which each piece of evidence signals the position (word choice, framing/selected detail, contrast, inclusion/omission, placement); describe how the author treats the counter-case.' Every element is still demanded: students must predict position (inference), select two pieces of evidence, name the technique for each, explain how each reveals position, and check boxes then explain how the author treats the engineer's case. The planning structure organizes this thinking but does not perform it. The checkpoint asks students to articulate their own inference and evidence-explanation orally, which is process evidence t",
+              "severity": "note",
+              "invariant": "required_thinking",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract specifies: 'One paragraph containing: an accurate, specific statement of the author's position in the student's words; two quotations/close paraphrases; an explanation for each that names a technique (word choice, framing/selected detail, contrast, inclusion/omission, placement); a sentence on how the engineer's case is acknowledged and answered.' The transformed version preserves this requirement identically in the paragraph task: 'State the author's point of view in your own words...Quote or closely paraphrase two pieces of textual evidence...For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include)...Explain how the author acknowledges and responds to the engineer's case.' The planning bo",
+              "severity": "note",
+              "invariant": "required_evidence",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract requires: 'One class period; single paragraph of 8–12 sentences; graded with the stated 4-point rubric; the rubric is the same for every student.' The transformed version maintains 'One class period' in the header, '8–12 sentences' in the paragraph requirements, the identical 4-point rubric at the end, and applies the same rubric to all students. The engine's trace acknowledges the timing question: 'Verify that 2 minutes for oral checkpoints (2–3 students per row, about 30 seconds each) fits within your period after planning time,' which is a reasonable implementation concern but does not violate the one-period constraint as stated.",
+              "severity": "note",
+              "invariant": "teacher_constraints",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The passage text is unchanged ('The Mill Street bridge is ninety-one years old...' through '...I am not sure the numbers are the only thing that should be counted'). The task question is unchanged ('What is the author's point of view on replacing the Mill Street bridge, and how does the author respond to the opposing case?'). No factual or mathematical content has been altered.",
+              "severity": "note",
+              "invariant": "correctness",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "unclear",
+              "rule": "create disproportionate grading burden",
+              "evidence": "The checkpoint requires the teacher to 'ask you to read your position statement aloud and explain why one piece of your evidence shows that position' for each student at minute 10. The engine's trace estimates '2–3 students per row, about 30 seconds each' for '2 minutes for oral checkpoints,' which suggests brief individual interactions with all students during a single class period. Whether this constitutes a disproportionate burden compared to the original assignment (which had no oral component) is a magnitude question for the Usefulness audit, but the addition of an oral checkpoint for every student in one period creates a new grading/verification task that was not in the original.",
+              "severity": "review",
+              "invariant": "must_not",
+              "permission": "must_not",
+              "still_required": false,
+              "weakened_or_given_away": false
+            }
+          ]
+        },
+        "prompt_version": "audit-2026-09-08-v5"
+      }
+    ],
+    "repair_reason": "Adversarial audit UNDERMINED — cheapest path: The student photographs the passage and planning sheet, pastes both into an AI chat, and asks: 'Fill out this planning worksheet for an 8th grader, then write the paragraph using those answers.' The AI generates all planning responses (position statement, two quotes with techniques circled and explanations, counter-case analysis) plus the final paragraph. The student copies everything onto the sheet and hands it in. Total time: 3-4 minutes of copying. · repair hint: Add a 2-minute live checkpoint after planning is complete: teacher circulates and asks 2-3 students per row to read aloud their position statement and explain orally why one piece of their evidence shows that position. Or: collect only the planning sheet at minute 10, provide brief written feedback on position accuracy, return it, then students write the paragraph. Either creates an independent check on at least the inference and evidence-selection work before the paragraph is written."
+  },
+  "audit_verdicts": {
+    "usefulness": "USEFUL",
+    "adversarial": "WEAKENED",
+    "preservation": "REVIEW"
+  },
+  "model": "claude-sonnet-4-5",
+  "prompt_version": "as-2026-09-05-v1",
+  "generated_ms": 81702,
+  "gold_boundary": {
+    "pass_looks_like": [
+      "A prediction line after the first paragraph of the passage ('Before reading on: which way do you expect the author to lean, and what made you think so?').",
+      "The student must name which of two candidate pieces of evidence they REJECTED and why (the choice, not the quote, is the visible thinking).",
+      "A brief self-check: 'Underline the sentence where you explain HOW, not WHAT.'",
+      "Grading stays on the same rubric; extra lines are read, not scored."
+    ],
+    "violation_looks_like": [
+      "Requiring a recorded oral explanation or in-class handwriting as verification.",
+      "A reflection paragraph longer than the analysis paragraph.",
+      "'Write in your own words so AI can't help' or any AI-proof claim.",
+      "Rubric changed so that the reflection carries points (teacher constraint broken)."
+    ],
+    "expected_statuses": {
+      "learning_target": "PRESERVED",
+      "required_thinking": "PRESERVED",
+      "required_evidence": [
+        "PRESERVED",
+        "ADAPTED_AS_PERMITTED"
+      ],
+      "teacher_constraints": "PRESERVED",
+      "correctness": "PRESERVED"
+    },
+    "expected_audits": {
+      "preservation": [
+        "PASS",
+        "REVIEW"
+      ],
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "SURVIVES",
+        "WEAKENED"
+      ],
+      "note": "Visible must not come back UNDERMINED after its one repair cycle; if it does, that is a finding about the mode, not the case."
+    }
+  }
+}

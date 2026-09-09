@@ -1,0 +1,148 @@
+{
+  "id": "g8-sci-ramp-data",
+  "fixture": {
+    "file": "fixtures/visible-apparent-resistance-bypassable.md",
+    "mode": "visible",
+    "kind": "apparent_ai_resistance_bypassable",
+    "why": "Personalised height, 'in your own words', 'do not copy the textbook', and an honesty signature look like AI-resistance. None of it changes the cheapest path: photograph the sheet, tell the AI your digit, ask for a 13-year-old's voice. The signal is undermined; the only thing that would have helped (a prediction before computing, a two-line in-class verification) is absent. Also a mode violation: the honesty statement is 'inconvenience confused with validity'.",
+    "expected": {
+      "preservation": [
+        "REVIEW",
+        "BLOCK"
+      ],
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": "UNDERMINED"
+    },
+    "expected_evidence": {
+      "adversarial": "cheapest_path mentions pasting/photographing the table and supplying the personal digit; cost trivial or low; repair_hint proposes a prediction-before-data or in-class verification, not detection",
+      "preservation": "note on the MUST-NOT 'confuse inconvenience with assessment validity' / 'claim to be AI-proof'"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:27:30.827Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "BLOCK",
+      "findings": [
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The learning target (energy transfer GPE→KE, speed grows with square root of height) remains fully accessible through the same data table, same graph requirement, same energy-reasoning requirement in question 5, and same pattern-identification in questions 4 and 6.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All required thinking elements remain: compute averages (Q1), graph (Q2), identify non-linear pattern (Q4 'what happens when height doubles'), construct claim (Q3), explain with energy model (Q5), evaluate misconception (Q6), extrapolate prediction with method (Q7). The personalization in Q7 changes the specific number but not the cognitive demand of extrapolation.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All required evidence elements remain demanded: correct averages (Q1), labelled graph (Q2), claim sentence (Q3), two quoted data comparisons including the doublings (Q4 explicitly requires both 10→20 and 20→40), GPE→KE and speed-squared reasoning (Q5), disagreement with 'twice as fast' backed by ×1.4 pattern (Q6), prediction with stated method (Q7). The personalized height in Q7 still requires extrapolation and method statement.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "unclear",
+          "evidence": "The honesty statement and personalization mechanism add administrative overhead. Whether the personalization system (tracking 'last digit of student ID' for 40-49 range, managing individualized answers for Q7) creates disproportionate grading burden compared to the original single-answer version is unclear without implementation details. The 30-minute constraint and CER format are preserved.",
+          "severity": "review",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The data table is unchanged, all mathematical relationships are preserved, and the personalized heights (40-49 cm) fall within a reasonable extrapolation range from the measured data (10-40 cm), maintaining the validity of the square-root pattern application.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "must_not",
+          "rule": "claim to be AI-proof",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "The header states 'Complete individually, in your own words' and questions 3, 5, and 6 add 'in your own words' with Q5 adding 'Do not copy definitions from the textbook.' The honesty statement reads 'I completed this assignment in my own words without using an AI tool. Signature: ____________________' These elements collectively claim the assignment is AI-proof through personalization and honesty pledges.",
+          "severity": "block",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "must_not",
+          "rule": "confuse inconvenience with assessment validity",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "The personalization of Q7 (40-49 cm range based on student ID) creates 10 different correct answers without changing the cognitive demand (extrapolation from a pattern). The transformation treats this inconvenience to copying as if it increases assessment validity, when the thinking required—apply the square-root pattern to extrapolate—is identical across all 10 versions.",
+          "severity": "review",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "BLOCK. The transformation preserves all instructional elements (learning target, required thinking, required evidence, correctness) and adds permitted process-visibility features. However, it violates two must-not rules: (1) claims to be AI-proof through 'in your own words' instructions, textbook-copying prohibition, and an honesty statement about AI non-use; (2) confuses inconvenience with validity by personalizing Q7 to create 10 answer variants without changing the extrapolation task's cognitive demand. The teacher_constraints finding (personalization grading burden) is marked for review but does not itself trigger a block."
+    },
+    "usefulness": {
+      "verdict": "USEFUL",
+      "clarity": 2,
+      "feasibility": 2,
+      "editing_required": "minor",
+      "grading_burden": "slightly more",
+      "improves_original": true,
+      "notes": [
+        "The personalization instruction at the top ('Take the last digit of your student ID...') needs clearer formatting—consider a box or bold heading so students don't miss it before starting.",
+        "Item 7 now requires the teacher to know each student's ID last digit to check predictions (40–49 cm range). Create a simple lookup table or roster with the personal heights before class.",
+        "The honesty statement adds a signature line but no date field; consider adding date for record-keeping.",
+        "Three instances of 'in your own words' plus the top instruction and honesty statement make the anti-copying message very clear, which improves classroom use for this mode."
+      ],
+      "ignored_validity_notes": [
+        "The personalization in item 7 (40–49 cm) is a narrow range that may not produce meaningfully different predictions across students, since all fall between the 40 cm data point and an interpolated 50 cm value. This could make the personalization feel artificial rather than genuinely individualized.",
+        "Repeated 'in your own words' reminders (items 3, 5, 6) may signal distrust rather than scaffolding thinking, depending on classroom culture."
+      ]
+    },
+    "adversarial": {
+      "verdict": "UNDERMINED",
+      "cheapest_path": "The student photographs the assignment sheet, pastes it into an AI chat, tells the AI their student ID's last digit, and asks: 'My student ID ends in 7, so my personal height is 47 cm. Complete this worksheet in a 13-year-old's voice, showing all work. Make it sound natural and use simple words.' The AI calculates the averages (1.30, 1.84, 2.25, 2.60), describes a hand-drawn graph, writes the claim ('As the release height increases, the cart's speed at the bottom also increases but not in a straight line'), provides the evidence ('When height doubles from 10 to 20 cm, speed goes from 1.30 to 1.84 m/s, which is about 1.4 times faster. When it doubles from 20 to 40 cm, speed goes from 1.84 to 2.60 m/s, also about 1.4 times'), explains the reasoning ('The cart has more gravitational potential energy when it starts higher up. As it rolls down, this energy turns into kinetic energy which makes it go faster. Kinetic energy depends on speed squared, so speed doesn't double when height doubles'), disagrees with the 80 cm claim ('No, because the pattern shows speed only increases by about 1.4 times when height doubles, not 2 times'), and predicts for 47 cm ('About 2.75 m/s, because 47 is between 40 and 50, closer to the middle, and I estimated between 2.60 and what 50 cm would be'). The student copies this onto paper, sketches a simple curve from the four points, and signs the honesty statement.",
+      "steps": [
+        "Photograph or type the assignment with the data table",
+        "Tell AI: 'My student ID ends in [X], so my personal height is [40+X] cm'",
+        "Prompt: 'Complete this worksheet in a 13-year-old's voice, make it sound natural and simple'",
+        "Copy AI's averages into the table",
+        "Sketch the graph by plotting the four points AI calculated and drawing a curve",
+        "Copy AI's claim, evidence, reasoning, disagreement, and prediction sentences onto paper",
+        "Sign the honesty statement"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing. The personalized height (40-49 cm) only requires the AI to interpolate between 40 and 50 cm, which it does trivially. The 'in your own words' instruction and honesty statement have no enforcement mechanism. The hand-sketched graph only requires plotting four points the AI provides.",
+      "what_is_bypassed": "All required thinking: computing averages (AI does it), identifying the non-linear pattern and comparing ratios (AI does it, including the ×1.4 pattern for both doublings), constructing the claim (AI writes it), explaining with the energy-transfer model and speed-squared relationship (AI provides grade-appropriate language), evaluating the misconception (AI disagrees with specific reference to the ×1.4 pattern), and extrapolating the prediction with stated method (AI interpolates and describes the method).",
+      "repair_hint": "Before students begin calculations, require them to write a two-sentence prediction on a separate slip: 'I predict that when height doubles, speed will _____ because _____.' Collect these predictions. Then have a 2-minute check-in after Part 1 where each student states aloud to the teacher one ratio they calculated from their own averages (e.g., '20 cm speed divided by 10 cm speed equals ___'). This forces them to compute the averages themselves and notice the pattern before writing the CER.",
+      "independent_check": false,
+      "independent_check_what": ""
+    }
+  },
+  "verdicts": {
+    "preservation": "BLOCK",
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED"
+  }
+}

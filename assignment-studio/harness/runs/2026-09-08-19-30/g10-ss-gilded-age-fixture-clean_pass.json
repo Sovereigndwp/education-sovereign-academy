@@ -1,0 +1,123 @@
+{
+  "id": "g10-ss-gilded-age",
+  "fixture": {
+    "file": "fixtures/support-clean-pass.md",
+    "mode": "support",
+    "kind": "clean_pass",
+    "why": "Documents untouched; vocabulary glossed beside the text; sourcing table and a planning table that structure but do not answer; item 2 and item 4 still require the student's own inference; POV weighting and the two-paragraph product kept; same six rubric points.",
+    "expected": {
+      "preservation": "PASS",
+      "usefulness": "USEFUL",
+      "adversarial": [
+        "WEAKENED",
+        "UNDERMINED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "all findings kind=held; no block/review severity",
+      "usefulness": "editing none/minor; grading same; improves_original true",
+      "adversarial": "a Support version of a take-home document analysis is expected to be shortcut-able; the verdict is recorded to calibrate the adversarial audit, not to fail the fixture"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:31:11.082Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "PASS",
+      "findings": [
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The transformed version preserves the core learning target intact: students must still source documents (author, date, audience in the table), extract and contrast causal explanations (question 2), read word choice for attitude (question 3), explain why each author would write as they did given their position (question 4), and construct an argument accounting for conflicting sources with contextual development (Part B). The table format and planning box structure the same work; they do not supply the answers or remove the requirement to weigh evidence by sourcing and point of view.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All required thinking remains: Part A question 1 requires sourcing (author, date, audience) via table format; question 2 requires extracting and contrasting causal explanations in one sentence each; question 3 requires identifying word/phrase and explaining what it reveals about attitude; question 4 requires explaining why each author would write as they did given their position. Part B still requires constructing an argument accounting for conflicting sources, weighting by point of view, and contextualizing with outside development. The planning table prompts students to organize these elements but does not provide the thinking—students must still generate position, select evidence, weigh by POV, and identify development.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "Part A still requires: four short answers with correct sourcing (table format), contrast of two causal explanations (question 2 sentences), word/phrase from each with explanation (question 3 blanks), and purpose statement for each author (question 4). Part B still requires: two paragraphs with position covering both documents, at least one piece of evidence from each, explicit weighting by point of view, and one accurate outside development. The planning table structures where these elements go but does not eliminate any required evidence—the rubric and instructions remain identical to the original.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All teacher constraints met: 45 minutes stated; paper format maintained; two-paragraph response explicitly required ('Now write two paragraphs'); same 6-point rubric reproduced verbatim; documents unchanged except for added vocabulary glosses (permitted vocabulary support under 'may adapt'). The planning table is marked 'not graded' and adds organizational structure without changing time allocation, format, or assessment criteria.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "Factual and historical correctness preserved: documents unchanged in content; vocabulary glosses are accurate ('administration of wealth = how money is managed and used'; 'ermine of the bench = the robes of judges'; 'colossal = enormous'); dates and historical context remain accurate (1889, 1892, Gilded Age); examples in planning table are historically correct (Homestead strike 1892, Pullman strike 1894, 1893 depression, growth of trusts, farm debt).",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "PASS. The transformed version holds all contract elements within permitted adaptations. It adds vocabulary support (glosses for 'administration of wealth,' 'deplored,' 'squalor,' 'preamble,' 'ermine of the bench,' 'colossal'), visual organization (sourcing table, answer blanks, planning table), and explicit sequencing ('Work through the parts in order,' 'Plan first'). None of these changes remove, weaken, or supply the required thinking: students must still source documents, extract and contrast causal explanations, analyze word choice, explain authorial purpose given position, construct an argument accounting for both sources, weigh evidence by point of view, and connect to outside development. The planning table structures the argument components but does not provide answers—students mus"
+    },
+    "usefulness": {
+      "verdict": "USEFUL",
+      "clarity": 3,
+      "feasibility": 3,
+      "editing_required": "none",
+      "grading_burden": "same",
+      "improves_original": true,
+      "notes": [
+        "The sourcing table in Part A.1 is clearer to complete than the original's 'one line each' instruction and produces the same information in a more organized format.",
+        "The vocabulary glosses ('Words to know') after each document remove a barrier without changing the cognitive work; students still must interpret the documents.",
+        "The planning table before Part B.5 scaffolds organization without reducing the writing or thinking required; the teacher can ignore it during grading or glance at it if a paragraph is unclear.",
+        "All directions fit the 45-minute window; the added structures (tables, glosses) save time rather than add it.",
+        "Grading burden remains identical: same six rubric points, same artifacts to check (sourcing answers, two explanations, word-choice analysis, contextual reasoning, two-paragraph argument with evidence and POV analysis)."
+      ],
+      "ignored_validity_notes": [
+        "The planning table in Part B could potentially allow students to fulfill rubric requirements mechanically (fill table, copy into sentences) without integrating the thinking, but this is an instructional validity concern, not a usability issue."
+      ]
+    },
+    "adversarial": {
+      "verdict": "UNDERMINED",
+      "cheapest_path": "The student photographs both documents and the questions, pastes them into an AI chat, and asks: 'Fill in the table for question 1, answer questions 2-4 in the format shown, complete the planning table, then write two paragraphs following the rubric. Use a 10th grader's voice.' The student copies all answers onto the paper and hands it in. Total time: 5-8 minutes of copying.",
+      "steps": [
+        "Photograph or copy-paste the two documents and all Part A questions into ChatGPT/Claude",
+        "Prompt: 'Answer these questions about the documents. For question 1, fill in the table. For questions 2-4, answer in the format shown. Then fill in the planning table and write two paragraphs that meet all the bullet points and scoring criteria. Write like a 10th grader.'",
+        "Copy the AI's table entries, short answers, planning table, and two paragraphs onto the paper",
+        "Hand in"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing. The planning table is visible on the page but was filled by AI, not used to organize the student's own thinking. The format requirements (table, one-sentence answers, planning boxes, two paragraphs) structure the AI's output, not the student's reasoning process.",
+      "what_is_bypassed": "All required thinking: sourcing the documents (author/date/audience/purpose), extracting and contrasting causal explanations, reading word choice for attitude, explaining why each author would write as they did given their position, and constructing an argument that accounts for conflicting sources while contextualizing them with outside knowledge. The student never engages with the documents' arguments or their relationship to each author's social position.",
+      "repair_hint": "Add a 3-minute in-class checkpoint before students see the documents: 'Write one sentence: What position did Andrew Carnegie hold in the 1880s-90s, and what position did the Populist Party represent?' Or: 'Before you read, predict: would a steel millionaire and a farmers' party describe the wealth gap the same way or differently, and why?' Collect these predictions, then return them with the documents. This forces students to activate the contextual knowledge needed to answer question 4 and weigh point of view in Part B, and makes a hollow AI response visible (the prediction won't match the later sophisticated analysis).",
+      "independent_check": false,
+      "independent_check_what": ""
+    }
+  },
+  "verdicts": {
+    "preservation": "PASS",
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED"
+  }
+}

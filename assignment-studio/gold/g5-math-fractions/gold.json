@@ -1,0 +1,181 @@
+{
+  "id": "g5-math-fractions",
+  "cell": {
+    "grade": "Grade 5",
+    "subject": "Mathematics",
+    "archetype": "practice set + word problems + error analysis"
+  },
+  "title": "Fractions with Unlike Denominators — Practice and Problems",
+  "license": "Original, written for this harness. CC-BY 4.0 The Sovereign Academy.",
+  "answer_key": {
+    "1": ">  (3/4 = 6/8)",
+    "2": ">  (2/3 = 8/12)",
+    "3": "<  (5/6 = 15/18, 8/9 = 16/18)",
+    "4": "5/6",
+    "5": "7/12",
+    "6": "4 1/12",
+    "7": "1 7/12 miles (9/12 + 10/12 = 19/12)",
+    "8": "5/12 cup (8/12 − 3/12)",
+    "9": "Added numerators and denominators separately (1+1)/(2+4). Correct: 2/4 + 1/4 = 3/4."
+  },
+  "contract": {
+    "learning_target": "Fractions can only be added or subtracted when the parts are the same size, so adding or subtracting unlike fractions requires reasoning with equivalent fractions (a common denominator). Comparing unlike fractions can legitimately use equivalent fractions, a benchmark such as 1/2, or a visual model — the denominator names the size of the parts, and any valid strategy must respect that.",
+    "required_thinking": "Items 1–3: choose a valid comparison strategy (equivalent fractions, benchmark, or visual model), execute it, and show the reasoning that supports the symbol. Items 4–8: construct equivalent fractions with a common denominator, then combine or compare like-sized parts and simplify or regroup to a mixed number where required; word problems require deciding whether the situation is join or compare before operating. Item 9: diagnose why adding denominators produces a wrong-sized part and state the reason, not just the corrected answer.",
+    "required_evidence": "Items 1–3: the correct symbol plus visible reasoning in any valid form (equivalent fractions written out, a labelled picture, or an explicit benchmark comparison). Items 4–8: the equivalent fractions written out, the operation performed on like-sized parts, and a simplified answer (a mixed number for 6 and 7). Item 9: a stated reason for the error and the correct sum.",
+    "teacher_constraints": "25 minutes; paper; students show all work; answers in simplest form; nine items across four parts."
+  },
+  "notes_for_reviewer": "Deliberately sound assignment. Items 1–3 accept three legitimate methods by design — a version that requires a common denominator for comparison has narrowed the construct, and a version that removes the student's choice of method has too. Item 9 is the highest-evidence item (reason must be stated). Items 6 and 7 require regrouping to a mixed number — that is the difficult part of Part B/C and must survive Support. The 25-minute limit is an explicit teacher constraint.",
+  "mode_boundaries": {
+    "support": {
+      "pass_looks_like": [
+        "Directions chunked per part; a labelled work box or grid per item; vocabulary ('denominator', 'equivalent', 'simplest form') glossed without instructions that solve items.",
+        "A worked example, if added, uses fractions NOT in the set (e.g. 1/3 + 1/5), and does not demonstrate regrouping on the exact structure of item 6 in a way that reduces it to copying.",
+        "Word problems keep both the join/compare decision and the mixed-number regrouping; language may be plainer.",
+        "Items 1–3 still let the student choose and carry out any valid comparison strategy (equivalent fractions, benchmark, or picture) and show it; items 4–8 still require the student to construct the common denominator themselves."
+      ],
+      "violation_looks_like": [
+        "Common denominators pre-filled for items 4–8 ('rewrite both as twelfths'), or items 1–3 forced into a single method (e.g. 'find a common denominator' as the only allowed route).",
+        "Item 9 turned into multiple choice or the error named in the prompt.",
+        "Regrouping removed from 6/7 (e.g. numbers changed so no regrouping is needed).",
+        "Any numbers changed without recomputing the key; key errors."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "UNDERMINED",
+          "SURVIVES"
+        ],
+        "note": "A Support version is not expected to resist AI; adversarial verdict is recorded, not judged, unless it triggers a repair that then breaks preservation."
+      }
+    },
+    "advanced": {
+      "pass_looks_like": [
+        "Fewer or equal items that demand generalization: e.g. 'Find two different common denominators for 5/6 and 8/9 and explain which is more efficient and why'; 'When is the product of the denominators NOT the least common denominator? Give a rule and a counterexample'.",
+        "Error analysis extended to a diagnosis of the wrong model (why 2/6 looks right to a student) and a rule that prevents it.",
+        "Word problem extended with an interacting condition (e.g. a third day, or 'how much farther on Tuesday than Monday, and is that more or less than half a mile?').",
+        "Still grounded in adding/subtracting/comparing unlike denominators — no drift into multiplication of fractions."
+      ],
+      "violation_looks_like": [
+        "Nine items become fourteen items of the same kind.",
+        "Harder arithmetic only (bigger denominators) with no new reasoning.",
+        "Introduces decimals, percent, or fraction multiplication as 'enrichment'."
+      ],
+      "expected_statuses": {
+        "learning_target": [
+          "PRESERVED",
+          "INTENTIONALLY_EXTENDED"
+        ],
+        "required_thinking": "INTENTIONALLY_EXTENDED",
+        "required_evidence": [
+          "INTENTIONALLY_EXTENDED",
+          "PRESERVED"
+        ],
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "SURVIVES",
+          "UNDERMINED"
+        ],
+        "note": "Advanced is judged on depth; adversarial recorded."
+      }
+    },
+    "visible": {
+      "pass_looks_like": [
+        "A one-line prediction before Part B ('Will 1/2 + 1/3 be more or less than 1? Why?').",
+        "One item asks the student to choose a method for a comparison and say why that method fits those numbers.",
+        "Item 9 asks 'what would you say to this student' (explanation targeted at the wrong model).",
+        "Personalised inputs are acceptable only if the key can still be checked quickly (e.g. 'use your birth month as the numerator over 12').",
+        "Workload note honest: grading adds seconds per paper, not minutes; total items unchanged or fewer."
+      ],
+      "violation_looks_like": [
+        "'Explain your thinking' appended to every item (process log, not evidence).",
+        "Oral defence, video, or 'no calculators allowed' framed as verification.",
+        "Any claim the version is AI-proof or cheat-proof.",
+        "Grading burden clearly doubled."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "teacher_constraints": "PRESERVED",
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "SURVIVES",
+          "WEAKENED"
+        ],
+        "note": "Visible must not come back UNDERMINED after its one repair cycle; if it does, that is a finding about the mode, not the case."
+      }
+    }
+  },
+  "fixtures": [
+    {
+      "file": "fixtures/visible-valid-excessive-burden.md",
+      "mode": "visible",
+      "kind": "valid_but_excessive_burden",
+      "why": "Every instructional invariant is preserved — all nine items keep their demand, students still choose their own method (box b), the reason in item 9 is still required, nothing is given away — but three boxes per item including a complete-sentence explanation of every step, a one-page reflection, and a five-minute conference per student make it unusable in practice. The point of this fixture is 'instructionally faithful but practically bad': usefulness must catch it; preservation should not be dragged into a BLOCK by generic burden. The only legitimate preservation flag is the explicit teacher constraint (25 minutes), which this version plainly cannot meet. (2026-09-08: an earlier draft also mandated a second method on every item and complete sentences only; both constrained routes the gold contract explicitly protects — strategy choice and 'a labelled picture' — and were removed so the fixture tests what it claims to. The audits read those constraints as route removal, consistently, which was a correct reading of the fixture, not an evaluator defect.)",
+      "expected": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": "NOT_USEFUL",
+        "adversarial": [
+          "SURVIVES",
+          "WEAKENED"
+        ]
+      },
+      "expected_evidence": {
+        "preservation": "learning_target, required_thinking, required_evidence all 'held'. A REVIEW-severity finding on teacher_constraints (the 25-minute limit is an explicit contract constraint) is acceptable and correct. A BLOCK for 'grading burden' or 'workload' in general is a miss — v0.1 makes 'reasonable teacher workload' a must-preserve for the Visible mode, but the usefulness audit owns that judgment; the preservation audit should not convert practical burden into an instructional failure.",
+        "usefulness": "grading_burden = much more; feasibility 1; the conference and one-page reflection named in notes"
+      }
+    }
+  ]
+}

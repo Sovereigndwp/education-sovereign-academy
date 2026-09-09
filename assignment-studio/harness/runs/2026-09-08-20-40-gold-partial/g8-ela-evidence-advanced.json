@@ -1,0 +1,226 @@
+{
+  "id": "g8-ela-evidence",
+  "mode": "advanced",
+  "version_id": "5007f660-c326-4f24-bc43-7f268aee8683",
+  "output": {
+    "title": "Author's Point of View — Evidence Paragraph",
+    "trace": {
+      "changed": [
+        {
+          "why": "Students must now articulate what the author believes should be weighed in the decision, not just that the author opposes replacement — requires inference and synthesis rather than binary identification",
+          "what": "Expanded the first bullet to require precision in stating the author's position"
+        },
+        {
+          "why": "Students must now explain how a technique signals meaning (e.g., how does contrast work? what would change with a different choice?) rather than simply labeling the technique — deepens understanding of authorial craft",
+          "what": "Added mechanism questions to the evidence explanation requirement"
+        },
+        {
+          "why": "Students must now distinguish what is conceded from what is challenged, and analyze structural positioning — requires evaluating the relationship between claims rather than summarizing that acknowledgment occurred",
+          "what": "Expanded the opposing-case bullet into three sub-questions"
+        },
+        {
+          "why": "Prompts transfer of the analytical moves to new contexts and makes the cognitive demand explicit — students must think about authorial choice as choice, not accident",
+          "what": "Added clarifying questions within each bullet (\"What would be different if...?\", \"How does the structure position...?\")"
+        }
+      ],
+      "protected": [
+        "The passage text is unchanged; all evidence remains available and accessible",
+        "The paragraph format (8–12 sentences, one class period) is preserved",
+        "The four-component structure (position, two pieces of evidence with explanations, treatment of opposing case) is intact",
+        "The 4-point rubric is unchanged; the same four elements are assessed",
+        "The learning target (inferring position through authorial choices and analyzing treatment of counter-case) is the foundation of every extension"
+      ],
+      "check_this": [
+        "Verify that the expanded precision requirement for stating the author's position is achievable within 8–12 sentences alongside the other required components",
+        "Confirm that the mechanism questions (how does the technique work? what would be different?) are appropriate for students who have been taught to identify techniques but may not yet have practiced explaining their function",
+        "Check that the three-part opposing-case question (concede/challenge/structural positioning) can be addressed in the sentence count without crowding out evidence discussion",
+        "teacher constraints: The contract specifies '8–12 sentences' and 'One class period.' The transformed version adds substantial cognitive load: 'articulate what the author believes should matter in the decision and why the replacement as proposed is inadequate' (two-part inference), 'explain the mechanism: how does that technique work...? What would be different if the author had made a different choice?' (two questions per piece of evidence = four additional analytical moves), and three sub-questions for the opposing case ('What does the author concede? What does the author claim...fails to account for? How does the structure...position the two cases?'). Whether this volume of analysis fits within 8–12 sentences in one class period is unclear without piloting."
+      ]
+    },
+    "statuses": {
+      "correctness": {
+        "note": "The passage is unchanged; no factual claims, dates, or quotations were altered; all evidence remains accurate and available.",
+        "status": "PRESERVED"
+      },
+      "learning_target": {
+        "note": "The target (inferring position through authorial choices and analyzing counter-case treatment) is preserved and deepened: students must now explain the mechanism by which choices signal meaning and distinguish concession from rebuttal, both of which depend on the same inferential and analytical skills.",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "required_evidence": {
+        "note": "The paragraph still contains position statement, two quotations/paraphrases, explanations naming techniques, and treatment of counter-case; the extension is in the depth of explanation required (mechanism, precision, structural analysis) rather than additional components.",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "required_thinking": {
+        "note": "Students must still infer position and select evidence, but now must also explain how techniques function (not just label them), articulate the author's position with greater specificity, and analyze the structural relationship between cases — all extensions of the original inferential and explanatory work.",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "teacher_constraints": {
+        "note": "One class period, single paragraph of 8–12 sentences, same 4-point rubric assessing the same four elements; format and assessment structure are unchanged.",
+        "status": "PRESERVED"
+      }
+    },
+    "new_version": "# Author's Point of View — Evidence Paragraph\n\n**Grade 8 English Language Arts · Informational Text · One class period**\n\nRead the passage. Then complete the task below.\n\n---\n\n### The Bridge on Mill Street\n\nThe Mill Street bridge is ninety-one years old, and for most of those years nobody thought about it at all. It carried farm trucks, then school buses, then the commuters who now cross it twice a day without looking down. Last spring an inspection report gave it a rating of \"poor,\" and the town council scheduled a vote on whether to repair it or replace it with a wider concrete span.\n\nThe case for replacement is simple, and the council's engineer made it in eleven minutes. The steel is tired. The deck is narrow enough that two delivery vans cannot pass without one of them slowing to a crawl. Repair would cost about two-thirds of what a new bridge costs and would buy, in the engineer's estimate, twenty more years. A new bridge would last seventy-five.\n\nWhat the engineer did not mention is that the Mill Street bridge is the only place in town where you can stand over moving water. Children drop leaves from the upstream rail and run across to watch them come out the other side. Every graduating class since 1974 has taken its photograph on it. The wider concrete span in the proposal has no sidewalk on the upstream side at all.\n\nNone of this appears in the inspection report, because inspection reports measure steel. They do not measure what a town does on a bridge, or what it would stop doing if the bridge became a road that happens to cross a river. The council will vote in March. The numbers are on one side. I am not sure the numbers are the only thing that should be counted.\n\n---\n\n### Task\n\nIn one well-developed paragraph (8–12 sentences), answer this question:\n\n**What is the author's point of view on replacing the Mill Street bridge, and how does the author respond to the opposing case?**\n\nYour paragraph must:\n\n- State the author's point of view in your own words with precision. Avoid vague statements like \"the author is against it\" or \"the author thinks the bridge is important.\" Instead, articulate **what the author believes should matter** in the decision and **why the replacement as proposed is inadequate**.\n- Quote or closely paraphrase **two** pieces of textual evidence that reveal the author's point of view.\n- For each piece of evidence, explain **how** it shows the author's position. Name the specific technique (word choice, contrast, placement, framing through selected detail, inclusion/omission) and explain **the mechanism**: how does that technique work to signal the position? What would be different if the author had made a different choice?\n- Explain how the author **acknowledges and responds to** the engineer's case for replacement. What does the author concede about the engineer's argument? What does the author claim the engineer's case fails to account for? How does the structure of the passage position the two cases in relation to each other?\n\n**Scoring (4-point rubric):** Point of view clearly stated and accurate (1) · Two relevant pieces of evidence (1) · Explanation connects each piece of evidence to the point of view (1) · Accurately describes how the author handles the opposing view (1).",
+    "teacher_notes": "The task now requires students to articulate the author's position with greater precision (what *should* matter, not just opposition) and to explain the *mechanism* of each technique — how word choice or contrast actually works to signal meaning, not just that it exists. The questions about the opposing case now ask students to distinguish concession from rebuttal and to consider structural positioning. The rubric is unchanged; grading criteria are the same, but responses that meet them will show deeper analysis. Expect more varied answers and more visible reasoning.",
+    "reviewer_notes": "All extensions trace to the original target: explaining mechanism is an extension of 'explain how evidence signals position'; requiring precision in the position statement is an extension of 'infer unstated position'; distinguishing concession from rebuttal is an extension of 'describe how the author treats the counter-case.' No new content was introduced. The passage and rubric are unchanged. The sentence count constraint may create productive pressure but should be monitored — flagged in check_this for teacher verification.",
+    "teacher_workload": "slightly more",
+    "teacher_workload_note": "Prep is the same (same passage, same rubric). Grading will take slightly longer per paper because responses will show more varied reasoning and require closer reading to assess whether mechanism explanations are sound and whether structural analysis is accurate. The rubric remains 4 points, but evaluating depth of explanation is more cognitively demanding than checking for presence of labeled techniques."
+  },
+  "output_prerepair": null,
+  "repaired": false,
+  "audits": {
+    "rounds": [
+      {
+        "at": "2026-09-08T19:54:31.520Z",
+        "model": "claude-sonnet-4-5",
+        "round": 1,
+        "usefulness": {
+          "notes": [
+            "First bullet runs 3 sentences with nested clauses ('what the author believes should matter...why the replacement as proposed is inadequate'); original was 1 clear sentence. Teacher cannot hand this out without rewriting.",
+            "Third bullet now asks students to 'Name the specific technique...explain the mechanism...What would be different if the author had made a different choice?' — this triples the cognitive load per piece of evidence. Original asked 'explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include)' — one explanatory sentence. Transformed version requires technique identification + mechanism explanation + counterfactual reasoning = 3–4 sentences per evidence piece minimum.",
+            "Fourth bullet expanded from 1 requirement to 4 questions ('What does the author concede? What does the author claim the engineer's case fails to account for? How does the structure of the passage position the two cases?'). This alone could consume 3–4 sentences.",
+            "Math: 1 (point of view) + 6–8 (two pieces of evidence × 3–4 sentences each) + 3–4 (opposing view) = 10–13 sentences minimum. The assignment ceiling is 12 sentences. Students cannot fit the expanded requirements into the stated format.",
+            "Grading burden: teacher must now check whether student named a technique correctly, explained its mechanism, provided counterfactual reasoning, identified what was conceded, what was omitted, AND structural positioning — per student. Original required checking: position stated, two pieces of evidence present, each connected to position, opposing view handled. This is roughly triple the evaluation points per paper."
+          ],
+          "clarity": 1,
+          "verdict": "NOT_USEFUL",
+          "feasibility": 1,
+          "grading_burden": "much more",
+          "editing_required": "substantial",
+          "improves_original": false,
+          "ignored_validity_notes": [
+            "The expanded directions may scaffold more sophisticated analysis, but they also risk making the task about technique-naming rather than understanding point of view. The counterfactual prompt ('What would be different if...') is a strong critical thinking move but may be beyond grade 8 in a single-period timed write."
+          ]
+        },
+        "adversarial": {
+          "steps": [
+            "Copy the passage text from the assignment",
+            "Copy the task requirements including all bullet points",
+            "Paste into AI chatbot with instruction to write in age-appropriate voice",
+            "Request the AI to include all required elements: precise position statement, two quotations, technique names with mechanism explanations, three-part opposing-case analysis",
+            "Copy the AI-generated paragraph",
+            "Submit as own work"
+          ],
+          "verdict": "UNDERMINED",
+          "repair_hint": "Add a 2-minute in-class checkpoint before students begin writing: each student must write down (on a teacher-initialed slip) their answer to 'What does the author believe should be counted that the engineer did not count?' and one technique they will use as evidence. The teacher spot-checks 3-4 answers aloud. This forces the core inference before the paragraph is written and makes a hollow hand-in visible.",
+          "cheapest_path": "The student pastes the passage and the expanded task requirements into an AI chatbot (ChatGPT, Claude, etc.) with a prompt like: 'Answer this assignment about the author's point of view. Write it in a 13-year-old's voice, 8-12 sentences, one paragraph. Make sure to quote two pieces of evidence and explain the techniques like word choice, contrast, placement, framing, or inclusion/omission. Explain how each technique works and what would be different with a different choice. Also explain what the author concedes about the engineer's case and what the engineer fails to account for.' The AI generates a complete paragraph meeting all specifications. The student copies and submits it.",
+          "what_survives": "Nothing. The expanded requirements ask for more sophisticated analysis (mechanism of techniques, what would be different with other choices, concession vs. challenge distinction, structural positioning), but AI can generate all of this fluently. The precision requirement ('what the author believes should matter' rather than 'the author is against it') is exactly the kind of nuanced inference that current AI excels at producing. The mechanism questions ('how does contrast work?', 'what would be different?') are standard literary analysis that AI handles routinely. The three-part opposing-case analysis (concede/challenge/structure) requires no student thinking when AI can read the passage and articulate these relationships.",
+          "cost_to_student": "trivial",
+          "what_is_bypassed": "All required thinking is bypassed: inferring the unstated position from textual signals; selecting evidence that reveals (not just mentions); explaining the mechanism by which techniques signal meaning; distinguishing acknowledgment from response in the treatment of counter-case. The student does not read closely, does not infer, does not select, does not explain mechanisms, and does not analyze the relationship between opposing arguments. The entire cognitive demand—understanding how authors use craft choices to signal position—is outsourced.",
+          "independent_check": false,
+          "independent_check_what": ""
+        },
+        "preservation": {
+          "summary": "The transformed version preserves all instructional elements: the learning target (inferring position through authorial choices), required thinking (inference, evidence selection, mechanism explanation, counter-case analysis), and required evidence (position statement, two quotations with technique-naming explanations, treatment of opposing case). The extensions are legitimate deepening moves permitted in ADVANCED mode: requiring precision in position articulation, demanding explanation of how techniques function rather than mere labeling, and analyzing the relationship between claims. However, the volume of analytical work added—two-part position statement, mechanism questions for each piece of evidence, three-part opposing-case analysis—creates uncertainty about whether the cognitive dem",
+          "verdict": "REVIEW",
+          "findings": [
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract requires 'Infer an unstated-but-signalled position from the text' and 'explain the mechanism by which each piece of evidence signals the position.' The transformed version preserves this: 'articulate what the author believes should matter in the decision and why the replacement as proposed is inadequate' still requires inference, and 'Name the specific technique...and explain the mechanism: how does that technique work to signal the position?' explicitly demands the same mechanism-explanation the contract names.",
+              "severity": "note",
+              "invariant": "learning_target",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "All contract elements remain: inferring unstated position ('what the author believes should matter'), selecting evidence (still 'two pieces'), explaining mechanism ('how does that technique work to signal the position? What would be different if the author had made a different choice?'), and describing counter-case treatment ('What does the author concede...? What does the author claim the engineer's case fails to account for? How does the structure...position the two cases?'). The questions added are prompts that structure the required thinking, not substitutes for it.",
+              "severity": "note",
+              "invariant": "required_thinking",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The contract specifies 'One paragraph containing: an accurate, specific statement of the author's position in the student's words; two quotations/close paraphrases; an explanation for each that names a technique; a sentence on how the engineer's case is acknowledged and answered.' The transformed version requires all of these: position statement (bullet 1), two quotations/paraphrases (bullet 2), technique-naming explanations (bullet 3), and treatment of engineer's case (bullet 4). The rubric remains identical, assessing the same four components.",
+              "severity": "note",
+              "invariant": "required_evidence",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "unclear",
+              "rule": "",
+              "evidence": "The contract specifies '8–12 sentences' and 'One class period.' The transformed version adds substantial cognitive load: 'articulate what the author believes should matter in the decision and why the replacement as proposed is inadequate' (two-part inference), 'explain the mechanism: how does that technique work...? What would be different if the author had made a different choice?' (two questions per piece of evidence = four additional analytical moves), and three sub-questions for the opposing case ('What does the author concede? What does the author claim...fails to account for? How does the structure...position the two cases?'). Whether this volume of analysis fits within 8–12 sentences in one class period is unclear without piloting.",
+              "severity": "review",
+              "invariant": "teacher_constraints",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The passage text is unchanged ('The passage text is unchanged; all evidence remains available and accessible'). No mathematical or factual content has been altered.",
+              "severity": "note",
+              "invariant": "correctness",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            }
+          ]
+        },
+        "prompt_version": "audit-2026-09-08-v5"
+      }
+    ],
+    "repair_reason": null
+  },
+  "audit_verdicts": {
+    "usefulness": "NOT_USEFUL",
+    "adversarial": "UNDERMINED",
+    "preservation": "REVIEW"
+  },
+  "model": "claude-sonnet-4-5",
+  "prompt_version": "as-2026-09-05-v1",
+  "generated_ms": 41429,
+  "gold_boundary": {
+    "pass_looks_like": [
+      "Same passage; deeper demand: e.g. evaluate whether the author's handling of the engineer's case is fair or a rhetorical move (the 'eleven minutes' detail); explain what the final hedged sentence does that a direct claim would not.",
+      "Transfer: predict how the passage would change if written by the engineer, and what evidence would disappear.",
+      "Comparison of two techniques: which does more work for the author's position, inclusion/omission or word choice, with justification.",
+      "Still one paragraph (or two if the teacher constraint is relaxed explicitly); rubric mapping stated."
+    ],
+    "violation_looks_like": [
+      "Two more paragraphs of the same task.",
+      "A new, unrelated passage added as 'extension'.",
+      "Turned into a persuasive essay about bridges (drift from analysis of author's craft)."
+    ],
+    "expected_statuses": {
+      "learning_target": [
+        "PRESERVED",
+        "INTENTIONALLY_EXTENDED"
+      ],
+      "required_thinking": "INTENTIONALLY_EXTENDED",
+      "required_evidence": [
+        "INTENTIONALLY_EXTENDED",
+        "PRESERVED"
+      ],
+      "teacher_constraints": [
+        "PRESERVED",
+        "ADAPTED_AS_PERMITTED"
+      ],
+      "correctness": "PRESERVED"
+    },
+    "expected_audits": {
+      "preservation": [
+        "PASS",
+        "REVIEW"
+      ],
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "WEAKENED",
+        "SURVIVES",
+        "UNDERMINED"
+      ],
+      "note": "Advanced is judged on depth; adversarial recorded."
+    }
+  }
+}

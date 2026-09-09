@@ -1,0 +1,238 @@
+{
+  "id": "g8-sci-ramp-data",
+  "mode": "support",
+  "version_id": "985dbe9b-8610-43d2-a77e-071cd5e23350",
+  "output": {
+    "title": "Ramp Height and Cart Speed — Data Analysis (CER)",
+    "trace": {
+      "changed": [
+        {
+          "why": "Chunks the calculation without changing the math or the evidence produced",
+          "what": "Q1: Added three-step procedure (add, divide, round) in place of the single direction"
+        },
+        {
+          "why": "Sequences the task; same graph, clearer path",
+          "what": "Q2: Broke graphing into four labeled steps (x-axis, y-axis, labels, plot)"
+        },
+        {
+          "why": "Marks the response space; does not change the claim itself",
+          "what": "Q3: Added a write-on line for the claim sentence"
+        },
+        {
+          "why": "Structures the two required comparisons and makes the non-proportional pattern explicit; same data, same reasoning",
+          "what": "Q4: Converted to three sub-prompts (4a, 4b, 4c) with sentence starters and a yes/no check"
+        },
+        {
+          "why": "Glosses the terms without removing the requirement to use them in an energy-transfer explanation; same reasoning demand",
+          "what": "Q5: Added inline definitions of GPE and KE, and three write-on lines"
+        },
+        {
+          "why": "Separates the judgment from the justification; both are still required",
+          "what": "Q6: Split into 6a (yes/no) and 6b (explain using the pattern)"
+        },
+        {
+          "why": "Makes the two-part requirement explicit; same prediction and reasoning",
+          "what": "Q7: Split into 7a (predicted value) and 7b (method explanation)"
+        }
+      ],
+      "protected": [
+        "All four averages must still be computed and entered in the table (Q1).",
+        "Graph must still be hand-sketched with labeled axes and all four points (Q2).",
+        "Claim sentence, two doubling comparisons, energy-transfer reasoning, disagreement with the 'twice as fast' misconception, and a 50 cm prediction with method are all still required and in the same order.",
+        "No worked examples, no answer-giving; scaffolds structure the response, they do not provide the content.",
+        "CER format and all item numbers preserved."
+      ],
+      "check_this": [
+        "Verify that the inline definitions of GPE and KE in Q5 are appropriate for your class and do not give away the reasoning you expect students to construct.",
+        "Check that the three write-on lines in Q5 provide enough space for the energy explanation your students typically write.",
+        "Confirm that splitting Q4 into a–c and Q6–7 into a–b does not make the assignment feel longer to your students, even though the thinking is unchanged."
+      ]
+    },
+    "statuses": {
+      "correctness": {
+        "note": "All data, calculations, and scientific claims (GPE→KE, speed-squared, the non-proportional pattern) are unchanged and correct.",
+        "status": "PRESERVED"
+      },
+      "learning_target": {
+        "note": "Students still compute averages, identify the non-linear (square-root-like) pattern from the doubling comparisons, and explain it with GPE→KE transfer and the speed-squared relationship.",
+        "status": "PRESERVED"
+      },
+      "required_evidence": {
+        "note": "All required evidence is still produced: correct averages in the table, labeled graph, claim sentence, the two doubling comparisons quoted, energy reasoning naming GPE→KE and speed-squared, explicit disagreement with 'twice as fast' backed by the ×1.4 pattern, and a ~2.9 m/s prediction for 50 cm with method.",
+        "status": "PRESERVED"
+      },
+      "required_thinking": {
+        "note": "All required thinking remains: compute averages, graph, compare ratios (the two doublings), construct a claim, explain with energy transfer, evaluate the misconception, extrapolate a prediction with a stated method.",
+        "status": "PRESERVED"
+      },
+      "teacher_constraints": {
+        "note": "Still 30 minutes, paper, hand-sketched graph, CER format; the version adds structure (sub-prompts, write-on lines) but does not add tasks—students write shorter prose in Q4–7 because the structure does some of the sentence-building work.",
+        "status": "PRESERVED"
+      }
+    },
+    "new_version": "# Ramp Height and Cart Speed — Data Analysis (CER)\n\n**Grade 8 Physical Science · Energy Unit · 30 minutes**\n\nA class released a cart from rest at four different heights on the same ramp and measured its speed at the bottom with a photogate. Each height was tested three times.\n\n| Release height (cm) | Trial 1 speed (m/s) | Trial 2 speed (m/s) | Trial 3 speed (m/s) | Average speed (m/s) |\n|---|---|---|---|---|\n| 10 | 1.28 | 1.33 | 1.30 | |\n| 20 | 1.84 | 1.87 | 1.82 | |\n| 30 | 2.24 | 2.28 | 2.23 | |\n| 40 | 2.58 | 2.62 | 2.61 | |\n\n---\n\n## Part 1 — Organize the data\n\n**1. Calculate the average speed for each height.**\n\n   - Add the three trial speeds for each row.\n   - Divide by 3.\n   - Round to the nearest hundredth (two decimal places).\n   - Write each average in the last column of the table.\n\n**2. Sketch a graph.**\n\n   - Put release height (cm) on the x-axis (horizontal).\n   - Put average speed (m/s) on the y-axis (vertical).\n   - Label both axes with their units.\n   - Plot the four points and connect them.\n\n---\n\n## Part 2 — Claim, Evidence, Reasoning\n\n**3. Claim** — Write one sentence stating how the cart's speed at the bottom is related to its release height.\n\n   Your claim:\n\n   ___________________________________________________________________________\n\n**4. Evidence** — Support your claim with specific numbers from the table.\n\n   a. When the height doubles from 10 cm to 20 cm, the speed changes from _______ m/s to _______ m/s.\n\n   b. When the height doubles from 20 cm to 40 cm, the speed changes from _______ m/s to _______ m/s.\n\n   c. In both cases, does the speed also double? _______ (yes/no)\n\n**5. Reasoning** — Explain *why* the relationship looks the way it does.\n\n   Use these terms in your explanation:\n   - **gravitational potential energy** (GPE) — energy the cart has because of its height\n   - **kinetic energy** (KE) — energy of motion; depends on speed squared (speed × speed)\n\n   Your explanation:\n\n   ___________________________________________________________________________\n\n   ___________________________________________________________________________\n\n   ___________________________________________________________________________\n\n---\n\n## Part 3 — Apply\n\n**6. Evaluate a claim.**\n\n   A student says: *\"If we release the cart from 80 cm, it will go twice as fast as from 40 cm.\"*\n\n   a. Do you agree? _______ (yes/no)\n\n   b. Use the pattern you found in question 4 to explain your answer:\n\n   ___________________________________________________________________________\n\n   ___________________________________________________________________________\n\n**7. Predict the speed for 50 cm.**\n\n   a. Predicted average speed for 50 cm: _______ m/s\n\n   b. Explain how you made your prediction:\n\n   ___________________________________________________________________________\n\n   ___________________________________________________________________________",
+    "teacher_notes": "The structure now guides students through the CER steps with labeled spaces and sub-prompts. Q4 breaks the doubling comparisons into fill-in-the-blank format so students focus on the pattern rather than sentence construction. Q5 defines the energy terms inline. Q6 and Q7 add yes/no or numeric prompts before the explanation to reduce the cold-start problem. All original thinking and evidence requirements remain. Time estimate: still 30 minutes; students write less prose but do the same reasoning.",
+    "reviewer_notes": "Arithmetic check: Q1 averages are (1.28+1.33+1.30)/3=1.30, (1.84+1.87+1.82)/3=1.84, (2.24+2.28+2.23)/3=2.25, (2.58+2.62+2.61)/3=2.60 — all correct to hundredths. The doubling pattern (10→20 gives ×1.42, 20→40 gives ×1.41) supports the required reasoning. Token count well within budget. All scaffolds are structural (chunking, sequencing, labeling spaces); none provide content or remove reasoning. The version fits the 30-minute window because the sub-prompts replace open-ended prose with shorter, guided responses—students do the same thinking in less writing time.",
+    "teacher_workload": "same",
+    "teacher_workload_note": "Prep: none beyond printing. Grading: same number of responses to check; the sub-prompts in Q4, Q6, Q7 may make partial credit decisions slightly faster because the steps are visible, but total grading time is unchanged."
+  },
+  "output_prerepair": null,
+  "repaired": false,
+  "audits": {
+    "rounds": [
+      {
+        "at": "2026-09-08T23:00:40.443Z",
+        "model": "claude-sonnet-4-5",
+        "round": 1,
+        "usefulness": {
+          "notes": [
+            "Part 1 directions are now explicit step-by-step (add, divide, round, write), making it immediately hand-out ready without teacher clarification.",
+            "Graph instructions specify axis placement and connection of points, removing ambiguity for students who struggle with graphing conventions.",
+            "Part 2 Evidence section (4a-c) provides structured blanks that guide students to extract the exact comparisons needed, reducing off-target responses.",
+            "Vocabulary scaffolding in question 5 (GPE and KE with brief definitions) supports students without giving away the reasoning.",
+            "Grading burden remains the same: teacher still reads one claim, checks two numerical comparisons, reads one explanation, and two application responses per student—same items, just better organized on the page."
+          ],
+          "clarity": 3,
+          "verdict": "USEFUL",
+          "feasibility": 3,
+          "grading_burden": "same",
+          "editing_required": "none",
+          "improves_original": true,
+          "ignored_validity_notes": [
+            "Question 4c ('does the speed also double?') could lead students to the key insight too directly, potentially reducing the thinking required for the claim in question 3, though students still must articulate the relationship themselves.",
+            "The hint about 'speed squared' in question 5 vocabulary may guide students toward the correct energy relationship more than the original, though they still must construct the explanation."
+          ]
+        },
+        "adversarial": {
+          "steps": [
+            "Photograph the assignment sheet",
+            "Paste into AI: 'Fill in all blanks and answer all questions. For the graph, describe what to draw.'",
+            "AI computes averages: 1.30, 1.84, 2.25, 2.60",
+            "AI fills sentence starters in 4a–4b with those numbers, answers 4c (no)",
+            "AI writes claim sentence about non-proportional increase",
+            "AI writes 3-line energy explanation using 'gravitational potential energy', 'kinetic energy', and 'speed squared'",
+            "AI answers 6a (no) and writes 6b explanation citing the ×1.4 pattern from question 4",
+            "AI predicts 2.9 m/s for 7a and explains square-root extrapolation in 7b"
+          ],
+          "verdict": "UNDERMINED",
+          "repair_hint": "Before students begin the written work, have them commit in class to a prediction: 'If we double the height from 20 cm to 40 cm, will the speed double, more than double, or less than double?' Collect this on a slip with their name. Then in question 4c, ask them to compare their prediction to what the data actually show. This forces them to interpret the numbers themselves before the AI can do it for them.",
+          "cheapest_path": "The student photographs the assignment sheet, pastes it into an AI chat, and asks: 'Fill in all the blanks and answer all questions. For the graph, describe what to draw.' The AI computes the four averages (1.30, 1.84, 2.25, 2.60), fills in all sentence starters and blanks in questions 4a–4c, writes the claim sentence, writes the three-line energy explanation using the provided terms, answers 6a (no) and writes 6b using the ×1.4 pattern, predicts ~2.9 m/s for question 7a and explains the extrapolation method in 7b. The student copies all text answers onto the sheet, sketches the graph following the AI's description (four labeled points on axes), and hands it in. Total time: under 10 minutes.",
+          "what_survives": "The hand-sketched graph requires the student to physically draw axes, plot four points, and label units — this takes a few minutes of manual work but does not require understanding the non-linear pattern or the energy model. No other learning signal survives.",
+          "cost_to_student": "trivial",
+          "what_is_bypassed": "Computing and interpreting the averages (AI does the arithmetic); identifying the non-linear pattern from numbers (AI recognizes that speed does not double when height doubles); constructing the claim (AI writes it); explaining the energy-transfer model (AI generates the GPE→KE explanation using the provided terms); evaluating the misconception (AI applies the pattern); making and justifying the prediction (AI extrapolates). The sentence starters and fill-in-the-blank structure in questions 4, 6, and 7 make the AI's output directly pasteable — the student does not need to identify what comparisons to make, what pattern to name, or what method to state.",
+          "independent_check": false,
+          "independent_check_what": ""
+        },
+        "preservation": {
+          "summary": "PASS. All contract elements held. The transformation applies permitted adaptations (chunking Q1 calculation steps, sequencing Q2 graphing steps, adding sentence starters in Q4, providing vocabulary glosses in Q5, splitting multi-part questions into labeled sub-parts) without removing, weakening, or supplying any required thinking or evidence. The inline definitions in Q5 support vocabulary without constructing the energy-transfer explanation students must build. The Q4c prompt 'does the speed also double?' makes the non-proportional pattern explicit but students must still compute the averages and recognize the ~×1.4 relationship from their data. No must-not rules violated.",
+          "verdict": "PASS",
+          "findings": [
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The learning target (energy transfer GPE→KE, speed grows with square root of height, non-proportional relationship) remains intact. Q5 still requires students to 'Explain *why* the relationship looks the way it does' using GPE and KE. The inline definitions ('energy the cart has because of its height' and 'energy of motion; depends on speed squared') provide vocabulary support without constructing the explanation or stating the transfer mechanism for students.",
+              "severity": "note",
+              "invariant": "learning_target",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "All required thinking preserved: Q1 still requires computing averages (procedure chunked but calculation unchanged); Q2 still requires graphing; Q4a-c still requires identifying the non-linear pattern through the two doublings ('does the speed also double?' makes the comparison explicit but students must compute and compare the ratios); Q3 still requires constructing a claim; Q5 still requires explaining with energy-transfer model; Q6 still requires evaluating the misconception using the pattern; Q7 still requires extrapolation with stated method.",
+              "severity": "note",
+              "invariant": "required_thinking",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "All evidence elements still required: Q1 produces correct averages in the table; Q2 produces labeled graph; Q3 produces claim sentence (write-on line is format, not content); Q4a-b require the two quoted doubling comparisons (sentence starters 'changes from ___ to ___' structure the quote without providing it); Q4c makes the ×1.4 pattern explicit but students must recognize it from their computed values; Q5 requires energy reasoning naming GPE→KE and speed-squared; Q6 requires explicit disagreement backed by pattern; Q7 requires ~2.9 m/s prediction with method.",
+              "severity": "note",
+              "invariant": "required_evidence",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "30-minute timing preserved (no content added, only sequencing); paper format preserved; hand-sketched graph explicitly maintained in Q2 ('Sketch a graph'); CER format preserved with Q3-5 maintaining Claim-Evidence-Reasoning structure and labels.",
+              "severity": "note",
+              "invariant": "teacher_constraints",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "Data table unchanged; mathematical relationships unchanged; the inline definitions in Q5 are factually correct (GPE depends on height, KE depends on speed squared); no computational errors introduced.",
+              "severity": "note",
+              "invariant": "correctness",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            }
+          ]
+        },
+        "prompt_version": "audit-2026-09-08-v5"
+      }
+    ],
+    "repair_reason": null
+  },
+  "audit_verdicts": {
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED",
+    "preservation": "PASS"
+  },
+  "model": "claude-sonnet-4-5",
+  "prompt_version": "as-2026-09-05-v1",
+  "generated_ms": 44586,
+  "gold_boundary": {
+    "pass_looks_like": [
+      "Averages partially pre-filled (e.g. 10 cm and 30 cm) so students still practise the computation but spend time on the CER; graph axes pre-drawn and scaled.",
+      "CER sentence frames that structure ('When the height went from ___ to ___, the speed went from ___ to ___, which is ___ times as fast') without supplying the ×1.4 conclusion.",
+      "Vocabulary glossed: potential energy, kinetic energy, photogate, proportional.",
+      "Item 6 kept as an evaluation of the student's claim; item 7 kept as an extrapolation with a stated method."
+    ],
+    "violation_looks_like": [
+      "Data altered to a linear pattern, or the table extended to include 50 cm or 80 cm (answers to 6/7 placed in the data).",
+      "Directions that state the relationship ('Speed increases by about 1.4 times each time height doubles').",
+      "Item 6 reduced to yes/no with no explanation, or item 5 reduced to 'name two kinds of energy'.",
+      "Any average recomputed incorrectly."
+    ],
+    "expected_statuses": {
+      "learning_target": "PRESERVED",
+      "required_thinking": "PRESERVED",
+      "required_evidence": [
+        "PRESERVED",
+        "ADAPTED_AS_PERMITTED"
+      ],
+      "teacher_constraints": [
+        "PRESERVED",
+        "ADAPTED_AS_PERMITTED"
+      ],
+      "correctness": "PRESERVED"
+    },
+    "expected_audits": {
+      "preservation": [
+        "PASS",
+        "REVIEW"
+      ],
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "WEAKENED",
+        "UNDERMINED",
+        "SURVIVES"
+      ],
+      "note": "A Support version is not expected to resist AI; adversarial verdict is recorded, not judged, unless it triggers a repair that then breaks preservation."
+    }
+  }
+}
