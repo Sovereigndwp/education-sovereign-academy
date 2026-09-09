@@ -3,7 +3,7 @@
 //   POST application/json {t, action, ...}   → get | confirm_contract | transform (background; poll get_version) | get_version
 //                                              | version_event | preservation | use_answer | audit_text | withdraw
 import { db, json, preflight, storagePut, storageDelete, EMAIL_RE, nowIso } from "../_shared/lib.ts";
-import { inferContract, transformVersion, auditText } from "../_shared/engine.ts";
+import { inferContract, transformVersion, auditText, reapIfStale, sweepStale } from "../_shared/engine.ts";
 import { CONTRACT_FIELDS, MODES, normalizeContract, diffContract, type LearningContract, type Mode } from "../_shared/contract.ts";
 
 const MAX_BYTES = 15 * 1024 * 1024;
@@ -13,7 +13,7 @@ const MIME_KIND: Record<string, "pdf" | "image" | "docx"> = {
 };
 const BUCKETS = new Set(["teacher", "district", "publisher"]);
 const A_SELECT = "id,created_at,title,subject,grade,teacher_notes,source_kind,status,contract_inferred,contract_confirmed,contract_confirmed_at,contract_corrected,pilot_id,teacher_key";
-const V_SELECT = "id,created_at,assignment_id,mode,request,output,status,stage,error,model,prompt_version,contract_version,generated_ms,viewed_at,accepted_at,edited_at,edited_text,used_at,used_note,export_docx_at,export_print_at,preservation_answer,preservation_correction,preservation_at,audit_verdicts,audits,repaired,use_answer,use_comment,use_at";
+const V_SELECT = "id,created_at,assignment_id,mode,request,output,status,stage,stage_at,error,model,prompt_version,contract_version,generated_ms,viewed_at,accepted_at,edited_at,edited_text,used_at,used_note,export_docx_at,export_print_at,preservation_answer,preservation_correction,preservation_at,audit_verdicts,audits,repaired,use_answer,use_comment,use_at";
 
 function s(form: FormData, k: string, max = 2000): string {
   const v = form.get(k);
@@ -30,7 +30,9 @@ async function loadByToken(t: string) {
   return rows?.[0] ?? null;
 }
 async function versionsOf(id: string) {
-  return await db<Record<string, unknown>[]>(`as_versions?assignment_id=eq.${id}&select=${V_SELECT}&order=created_at.asc`);
+  const rows = await db<Record<string, unknown>[]>(`as_versions?assignment_id=eq.${id}&select=${V_SELECT}&order=created_at.asc`);
+  // Resuming the page must not show a version that has been "making it…" since yesterday.
+  return await Promise.all((rows ?? []).map(reapIfStale));
 }
 function publicAssignment(a: Record<string, unknown>) {
   const inf = (a.contract_inferred ?? null) as Record<string, unknown> | null;
@@ -134,8 +136,15 @@ Deno.serve(async (req: Request) => {
 
   try {
     switch (b.action) {
-      case "get":
+      case "get": {
+        // Rows nobody is polling any more are reaped in the background, so "generating" is not a resting
+        // state in the metrics either. Best-effort and never awaited: a page read must not wait on it.
+        // deno-lint-ignore no-explicit-any
+        const rt = (globalThis as any).EdgeRuntime;
+        const sweep = sweepStale().catch((e) => console.error("sweep", e));
+        if (rt?.waitUntil) rt.waitUntil(sweep);
         return json({ assignment: publicAssignment(a), versions: await versionsOf(id) });
+      }
 
       case "retry_infer": {
         await inferContract(id);
@@ -179,8 +188,11 @@ Deno.serve(async (req: Request) => {
       case "get_version": {
         const vid = String(b.version_id ?? "");
         if (!/^[0-9a-f-]{36}$/.test(vid)) return json({ error: "version_id" }, 400);
-        const v = (await db<Record<string, unknown>[]>(`as_versions?id=eq.${vid}&assignment_id=eq.${id}&select=${V_SELECT}`))[0];
-        if (!v) return json({ error: "not_found" }, 404);
+        const row = (await db<Record<string, unknown>[]>(`as_versions?id=eq.${vid}&assignment_id=eq.${id}&select=${V_SELECT}`))[0];
+        if (!row) return json({ error: "not_found" }, 404);
+        // A background generation whose isolate was reclaimed leaves this row "generating" forever.
+        // Decide it here, where someone is actually waiting, instead of polling a state that cannot change.
+        const v = await reapIfStale(row);
         return json({ ok: true, version: v });
       }
 

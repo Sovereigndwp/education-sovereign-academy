@@ -105,7 +105,70 @@ async function ctxFor(assignmentId: string, mode: Mode): Promise<Ctx> {
 }
 
 async function stage(versionId: string, st: string) {
-  await db(`as_versions?id=eq.${versionId}`, { method: "PATCH", prefer: "return=minimal", body: { stage: st } });
+  // stage_at is what makes an abandoned run detectable on the read side (see reapIfStale).
+  await db(`as_versions?id=eq.${versionId}`, { method: "PATCH", prefer: "return=minimal", body: { stage: st, stage_at: nowIso() } });
+}
+
+// ── Abandoned generations ───────────────────────────────────────────────────
+// transformVersion runs in the background through EdgeRuntime.waitUntil. When the isolate is reclaimed
+// mid-run there is no error, no catch and no process left to record one: the row keeps status
+// "generating" and its last stage forever, and the client polls something that will never change.
+// No watchdog inside the function can fix this — the thing that would fire it is the thing that died —
+// so the check runs when a reader asks about the row, which is exactly when someone is waiting for it.
+//
+// The budget: transform (≤2 attempts, ~60s each) → three audits in parallel (~30s) → at most one repair
+// transform (~60s) → re-audit (~30s). Four minutes is a bad run. Six minutes is not a run any more.
+export const STALE_MS = 6 * 60 * 1000;
+
+const STAGE_STOPPED: Record<string, string> = {
+  queued: "it never started",
+  transforming: "it stopped while the new version was being written",
+  auditing: "it stopped while the checks were running",
+  repairing: "it stopped during the repair pass",
+  reauditing: "it stopped while the repaired version was being re-checked",
+};
+
+/** True when a row still claims to be in progress but has not advanced inside the budget. */
+export function isStale(v: Record<string, unknown>, now = Date.now()): boolean {
+  if (v.status !== "generating") return false;
+  const t = Date.parse(String(v.stage_at ?? v.created_at ?? ""));
+  return Number.isFinite(t) && now - t > STALE_MS;
+}
+
+/** Move an abandoned generation to a terminal failure state and return the updated row. Returns the row
+ *  unchanged when it is not stale. Never throws: a failed sweep must not break a read. */
+export async function reapIfStale(v: Record<string, unknown>): Promise<Record<string, unknown>> {
+  if (!isStale(v)) return v;
+  const what = STAGE_STOPPED[String(v.stage ?? "")] ?? "it stopped part-way through";
+  const error = `This version was abandoned before it finished — ${what}. Nothing was saved, and it will not finish on its own. Making it again usually works.`;
+  const patched = { status: "failed", stage: "failed", error, stage_at: nowIso() };
+  try {
+    // Guarded on status=eq.generating so a late-finishing background job cannot be clobbered by a sweep
+    // that raced it: whichever writes first wins, and the other write matches nothing.
+    await db(`as_versions?id=eq.${v.id}&status=eq.generating`, { method: "PATCH", prefer: "return=minimal", body: patched });
+  } catch (e) {
+    console.error("reapIfStale", e);
+    return v;
+  }
+  return { ...v, ...patched };
+}
+
+/** Reap abandoned rows nobody is polling any more, so "generating" is never a resting state in the data
+ *  either — the launch metrics count versions, and a row stuck mid-pipeline is neither a success nor a
+ *  recorded failure. Bounded and best-effort: called opportunistically on a page read, never awaited. */
+export async function sweepStale(limit = 25): Promise<number> {
+  try {
+    const cutoff = new Date(Date.now() - STALE_MS).toISOString();
+    const rows = await db<Record<string, unknown>[]>(
+      `as_versions?status=eq.generating&or=(stage_at.lt.${cutoff},and(stage_at.is.null,created_at.lt.${cutoff}))&select=id,status,stage,stage_at,created_at&limit=${limit}`,
+    );
+    let n = 0;
+    for (const r of rows ?? []) { const out = await reapIfStale(r); if (out.status === "failed") n++; }
+    return n;
+  } catch (e) {
+    console.error("sweepStale", e);
+    return 0;
+  }
 }
 
 /** One bounded retry. The transform returns a whole assignment inside a JSON string, and roughly one call in

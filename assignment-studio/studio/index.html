@@ -405,13 +405,16 @@
       }).catch(function () { fail("Could not reach the studio. Check your connection and try again."); });
       function fail(msg) { $("m-go").disabled = false; $("m-busy").hidden = true; $("m-err").hidden = false; $("m-err").textContent = msg; AS.track("transform_failed", { mode: S.mode }, S.a.id); }
       function poll(vid, n) {
-        if (n > 120) { fail("This is taking longer than expected. Reload this page in a minute — the version will appear here when it is ready."); return; }
+        // Never promise that a version will turn up later. The server marks an abandoned generation
+        // failed after six minutes, so reaching this line means we lost contact with the studio instead —
+        // which is also not something waiting longer fixes.
+        if (n > 120) { fail("We lost contact with the studio while this version was being made, so we cannot tell you whether it finished. Nothing was saved to your assignment. Press Transform to make it again."); return; }
         setTimeout(function () {
           AS.api({ t: S.t, action: "get_version", version_id: vid }).then(function (j) {
             if (j.error) { fail(j.error); return; }
             var v = j.version;
             $("m-busy").textContent = STAGE_MSG[v.stage] || STAGE_MSG.transforming;
-            if (v.status === "failed") { fail("The transformation failed: " + (v.error || "unknown error")); return; }
+            if (v.status === "failed") { fail((v.error || "The transformation failed for an unknown reason.") + " Press Transform to make it again."); return; }
             if (v.status !== "ready") { poll(vid, n + 1); return; }
             $("m-go").disabled = false; $("m-busy").hidden = true;
             S.versions.push(v); S.cur = v;
