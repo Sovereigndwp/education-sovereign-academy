@@ -13,6 +13,8 @@ export const VERDICTS = ["KEEP", "LIMITED", "NOT_SUPPORTED", "NO_CHEAP_CHECK"];
 
 const s = (v) => (v == null ? "" : String(v).trim());
 const arr = (v) => (Array.isArray(v) ? v : []);
+/** Constrain a model-supplied enum to the allowed set, defaulting rather than trusting. */
+const pick = (v, allowed, fallback) => (allowed.includes(s(v)) ? s(v) : fallback);
 
 // ── Instrument repair 2026-09-10 ────────────────────────────────────────────
 // The A1 run recorded 14 structural violations and every one was a false positive. The three causes are

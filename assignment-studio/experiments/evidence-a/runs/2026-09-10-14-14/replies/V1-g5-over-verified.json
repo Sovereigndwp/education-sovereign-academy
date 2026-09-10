@@ -1,0 +1,115 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        { "item": "1", "elicits": "Compare 3/4 and 5/8 by selecting and executing a strategy (common denominator, benchmark, or visual model), then write reasoning connecting that method to the comparison symbol produced." },
+        { "item": "2", "elicits": "Compare 2/3 and 7/12 by selecting and executing a strategy, then write reasoning connecting that method to the comparison symbol produced." },
+        { "item": "3", "elicits": "Compare 5/6 and 8/9 by selecting and executing a strategy, then write reasoning connecting that method to the comparison symbol produced." }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual, paper-and-pencil conditions with number pairs the student has not seen before, a teacher may conclude that a student who completes items 1-3 can choose a valid strategy for comparing two unlike fractions, execute it, and give written reasoning that connects the method to the resulting comparison symbol.",
+      "does_not_support": [
+        "Does not establish that the student can do this comparison mentally, quickly, or without the scaffolded prediction/solution/explanation structure.",
+        "Does not isolate mathematical reasoning from written-language proficiency; the 'complete sentences' explanation requirement can make a student who understands the comparison but writes less fluently look weaker on the reasoning component than one who writes fluently from a memorized script.",
+        "Does not show the student can justify a choice BETWEEN strategies (e.g., explain why a benchmark is more efficient than a common denominator for a given pair) - only that one chosen, valid strategy was executed and explained.",
+        "Adjacent-claim risk: a correct symbol paired with a generic or templated explanation should not be read as evidence for this conceptual claim unless the explanation actually names the strategy's controlling feature - a merely correct answer is closer to evidence for G5C2 (procedural execution) than for G5C1."
+      ],
+      "delegation": { "answer": "no", "reason": "Proctored, individual, paper-and-pencil administration with AI prohibited and enforced means the written strategy choice and symbol-justifying reasoning for items 1-3 must be produced by the student in the room, with no channel for an outside solver." },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          { "component": "Chooses a valid strategy (equivalent fractions, a benchmark, or a visual model) for comparing two unlike fractions", "items": ["1","2","3"], "status": "present", "evidence": "Items 1-3 instruct the student to reach a Solution 'using any method you choose' for three unlike-fraction pairs of varying denominator relationships.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false },
+          { "component": "Executes the chosen strategy to reach a comparison result", "items": ["1","2","3"], "status": "present", "evidence": "The (b) Solution box on items 1-3 requires the worked comparison, not just a stated symbol.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false },
+          { "component": "States reasoning that supports (justifies) the resulting comparison symbol", "items": ["1","2","3"], "status": "present", "evidence": "The (c) Explain box on items 1-3 requires 'explain every step in your thinking' for each comparison.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of G5C1 are exercised by items 1-3 under the declared proctored, individual, novel-number conditions. No component is absent, so there is nothing to carry forward."
+      },
+      "gate2_materiality": { "reached": false, "material": false, "why": "Not reached - Gate 1 found no absent component for this claim." },
+      "gate3_value": { "reached": false, "worth_it": false, "why": "Not reached - Gate 1 found no absent component for this claim." },
+      "why_no_intervention": "Gate 1 fails: items 1-3 already exercise strategy choice, execution, and symbol-supporting reasoning in full for this claim, so there is no materially absent component to carry forward.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The (a) Prediction box on items 1-3 asks the student to state, before solving, which fraction is larger - for a direct comparison task this duplicates the comparison itself (there is no separate quantity being predicted ahead of a later calculation), so it adds writing and scoring time without adding an observation distinct from what the Solution and Explanation boxes already establish for this claim.",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        { "item": "1", "elicits": "Convert 3/4 and 5/8 to a common denominator and compare the resulting like-sized parts." },
+        { "item": "2", "elicits": "Convert 2/3 and 7/12 to a common denominator and compare the resulting like-sized parts." },
+        { "item": "3", "elicits": "Find a common denominator for 5/6 and 8/9 (denominators not multiples of one another) and compare the resulting like-sized parts." },
+        { "item": "4", "elicits": "Construct common-denominator equivalents for 1/2 and 1/3 and combine them to produce 5/6." },
+        { "item": "5", "elicits": "Construct common-denominator equivalents for 5/6 and 1/4 and combine them to produce 7/12." },
+        { "item": "6", "elicits": "Construct common-denominator equivalents for the fractional parts of 2 1/3 and 1 3/4, combine them, and regroup the resulting improper fraction into a final mixed number." },
+        { "item": "7", "elicits": "Construct common-denominator equivalents for 3/4 and 5/6, combine them, and regroup the sum into a mixed number as the word problem requires." },
+        { "item": "8", "elicits": "Construct common-denominator equivalents for 2/3 and 1/4 and subtract to find the remaining amount needed." },
+        { "item": "9", "elicits": "Reconstruct the correct common-denominator sum for 1/2 + 1/4 (producing 3/4) as part of repairing the given error." }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "May conclude that a student who correctly completes these items can construct common-denominator equivalents, correctly combine or compare the resulting like-sized parts, and regroup an improper result into a mixed number where the item calls for it, on number pairs the student has not seen before, under proctored, individual, paper-only conditions.",
+      "does_not_support": [
+        "Does not show the student can simplify a sum to lower terms when the result is not already in simplest form and is not a mixed-number case - no item in this set produces such a result, so that specific sub-case is untested here.",
+        "Does not show mixed-number regrouping in the subtraction direction (borrowing from a whole number) - items 5 and 8 subtract proper fractions only, and item 6 regroups only in addition.",
+        "A correct final answer on items 4, 5, or 8 alone, read without the shown work, does not distinguish correct procedure from a memorized or guessed result for these common textbook-style sums; it is the shown common-denominator steps, not the bare answer, that carry this claim.",
+        "Does not indicate computational fluency or automaticity - untimed, paper-based execution with room to work says nothing about whether the procedure has become fast or effortless."
+      ],
+      "delegation": { "answer": "no", "reason": "The common-denominator construction and combination steps must be shown on paper in class under enforced no-AI, individual conditions, so the procedural work evidencing this claim cannot be produced by an outside source." },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          { "component": "Constructs equivalent fractions with a common denominator", "items": ["1","2","3","4","5","6","7","8","9"], "status": "present", "evidence": "Every item pairs fractions with unlike denominators that must be converted before comparing or combining, including a non-multiple pair (5/6 and 8/9, item 3) that requires genuine LCM-finding rather than scaling one denominator.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false },
+          { "component": "Combines like-sized parts (adds or subtracts)", "items": ["4","5","6","7","8","9"], "status": "present", "evidence": "Items 4-8 are direct add/subtract computations; item 9 requires the correct sum as part of the repair.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false },
+          { "component": "Compares like-sized parts", "items": ["1","2","3"], "status": "present", "evidence": "Items 1-3 require a comparison symbol after conversion to like denominators.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false },
+          { "component": "Simplifies or regroups to a mixed number where the item requires it", "items": ["6","7"], "status": "present", "evidence": "Item 6 (2 1/3 + 1 3/4) and item 7 (3/4 + 5/6, answer required as a mixed number) both produce improper sums of twelfths that must be regrouped into whole-plus-fraction form.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false }
+        ],
+        "carried_forward": "",
+        "why": "All four observable components are exercised by at least one item. Two narrower sub-cases go untested - reducing a non-mixed sum to lower terms, and subtraction-direction regrouping (borrowing from a whole number) - but the claim's own wording ties simplifying/regrouping to whatever 'the item requires,' and no item in this set requires either sub-case, so their absence is a scope fact rather than a hole."
+      },
+      "gate2_materiality": { "reached": false, "material": false, "why": "Not reached - Gate 1 found no absent component for this claim." },
+      "gate3_value": { "reached": false, "worth_it": false, "why": "Not reached - Gate 1 found no absent component for this claim." },
+      "why_no_intervention": "Gate 1 fails: construction, combination, comparison, and mixed-number regrouping are all exercised by items already in the assessment, so there is no materially absent component to carry forward.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The Prediction box asks for a guess at the final numeric answer before any conversion is done; for a procedural computation claim this tests nothing the Solution box does not already show, and scoring both adds per-item time without adding a distinct procedural observation. In addition, item 6 is one of the two items revisited in the post-grading oral conference; since the written classroom work under these proctored, individual, enforced-no-AI conditions is already independent evidence, the conference adds classroom and scoring time without closing an evidentiary gap for this claim.",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        { "item": "9", "elicits": "Locate and name the error in a given incorrect solution (1/2 + 1/4 = 2/6, denominators added directly) and produce the correct sum (3/4)." }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "May conclude that a student who correctly completes item 9 can identify that adding denominators directly produces a wrong-sized part and can produce the correct sum for that error, under proctored, individual, paper-only conditions on an error instance the student has not seen scripted in advance - and, for the subset of students seen in conference, can also state this reasoning aloud in real time.",
+      "does_not_support": [
+        "Does not show the reasoning generalizes beyond this one denominator-addition error pattern to other common fraction-operation errors (e.g., adding numerators and denominators together, or a numerator-only slip).",
+        "Does not by itself guarantee the explanation names the part-size mechanism specifically, rather than a purely procedural rule ('you forgot to find a common denominator'), unless scored for that distinction; a procedural-only response satisfies the letter of the prompt without the conceptual 'why.'",
+        "Does not indicate whether the student can catch this kind of error unprompted in their own work, since the error here is pre-identified and handed to the student rather than discovered by them.",
+        "Single-item claim: strong evidence for this specific instance, but the assessment does not on its own distinguish a student who has internalized the general principle from one who recognizes this one commonly-taught example."
+      ],
+      "delegation": { "answer": "no", "reason": "The error diagnosis and correct sum are produced on paper in class under enforced no-AI, individual conditions, and the subset explained aloud in the teacher conference is directly observed live." },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          { "component": "States why adding denominators directly produces a wrong-sized part (names the conceptual error)", "items": ["9"], "status": "present", "evidence": "Item 9 asks the student to 'Explain what the student did wrong' for the 1/2 + 1/4 = 2/6 error, which requires identifying that denominators were added directly.", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false },
+          { "component": "Gives the correct sum", "items": ["9"], "status": "present", "evidence": "Item 9 explicitly asks the student to 'show the correct answer.'", "belongs_to_inference": true, "assessed_elsewhere_or_out_of_scope": false, "narrows_support": false }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of this claim are exercised by item 9, so there is no absent component to carry forward. A second instance of this error type in a different number pair would raise confidence in generalization, but per the framework 'only one item covers it' is not itself an absence."
+      },
+      "gate2_materiality": { "reached": false, "material": false, "why": "Not reached - Gate 1 found no absent component for this claim." },
+      "gate3_value": { "reached": false, "worth_it": false, "why": "Not reached - Gate 1 found no absent component for this claim." },
+      "why_no_intervention": "Gate 1 fails: item 9 already asks the student to both locate/explain the denominator-addition error and give the correct sum, which is the whole of this claim; there is no materially absent component to carry forward.",
+      "no_short_check_reason": "",
+      "over_verified_note": "Item 9's Prediction box and the post-grading oral conference both add verification on top of an already-independent, claim-targeted written response; since proctored, individual, paper-only, enforced-no-AI conditions already secure independence for the written explanation, neither addition closes a gap this claim has - the conference in particular re-collects, live, what the written explanation already had to show under supervision.",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, summative purpose, proctored_in_class, individual, AI policy prohibited_and_enforced, paper/pencil only, 25 minutes; novelty as declared: the item type (compare, add/subtract, find-the-mistake with a prediction/solution/explanation structure) has been practised, but these specific numbers and problems are new to the students.",
+  "reviewer_notes": "All three confirmed claims (G5C1 strategy-choice/reasoning, G5C2 construction/combination/regrouping, G5C3 diagnose-the-denominator-error) are already carried by items already in this assessment under the declared proctored, individual, paper-only, enforced-no-AI conditions, so Gate 1 fails for all three and no additional observation is proposed for any of them. The instrument is, if anything, layered with more verification than these three claims need: every one of the nine items requires a Prediction, a Solution, and a full complete-sentence-or-labelled-picture Explanation, on top of a one-page metacognitive Reflection and a post-grading five-minute oral conference on two items. The written work alone is already independent evidence given the declared supervision, so the oral conference re-collects (at real per-student cost) what the paper record already had to show; the per-item Prediction box duplicates the Solution box rather than testing a distinct move; and the Reflection essay does not map to any of the three confirmed claims and should be read as pedagogical/metacognitive material, not as evidence for G5C1, G5C2, or G5C3. This is a scope observation about existing burden, not a finding that anything is missing."
+}
