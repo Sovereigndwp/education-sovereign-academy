@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-platform="esa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESA pilot — admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+  <link rel="stylesheet" href="/assignment-studio/as.css">
+  <link rel="stylesheet" href="/esa/esa.css">
+</head>
+<body>
+<header class="ast-header">
+  <div class="ast-header__inner">
+    <a class="ast-brand" href="/esa/admin.html">
+      <span class="ast-brand__mark">E</span>
+      <span class="ast-brand__text"><strong>Pilot</strong><span>Education Sovereign Academy</span></span>
+    </a>
+    <div class="ast-header__right"><span id="arch"></span></div>
+  </div>
+</header>
+
+<main id="main" class="ast-main ast-main--wide">
+  <section id="gate">
+    <h1 class="ast-h1">Pilot <em>admin</em></h1>
+    <div class="ast-field">
+      <label class="ast-label" for="key">Admin key</label>
+      <input class="ast-input" id="key" type="password" autocomplete="off" style="max-width:420px">
+    </div>
+    <div class="ast-actions"><button class="tsa-btn tsa-btn--primary" id="go">Open</button></div>
+    <p class="ast-note" id="err" role="alert"></p>
+  </section>
+
+  <section id="view" class="esa-hide">
+    <span class="tsa-section-tag">Five teachers · three reviews each</span>
+    <h1 class="ast-h1">Did anyone come back with a <em>second assessment</em>?</h1>
+    <p class="ast-lede">That is the whole question this pilot is asking. The counts are below; what will actually tell you something is <em>which</em> assessment each teacher brought second, and what they said when they brought it.</p>
+
+    <h2 class="ast-h2" style="margin-top:2.5rem">Teachers</h2>
+    <div class="esa-scroll"><table class="esa-table" id="t-invites">
+      <thead><tr><th>Teacher</th><th>Used</th><th>Left</th><th>Came back</th><th>First</th><th>Last</th><th>Invite link</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+
+    <h2 class="ast-h2" style="margin-top:2.5rem">Reviews</h2>
+    <div class="esa-scroll"><table class="esa-table" id="t-reviews">
+      <thead><tr><th>When</th><th>Teacher</th><th>Assessment</th><th>Conditions</th><th>Needs attribution</th><th>Claims edited</th><th>Status</th><th>Flags</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+
+    <h2 class="ast-h2" style="margin-top:2.5rem">What they said</h2>
+    <div class="esa-scroll"><table class="esa-table" id="t-feedback">
+      <thead><tr><th>When</th><th>Teacher</th><th>Worth it</th><th>Would bring another</th><th>Asked for upload</th><th>Comment</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+</main>
+
+<script src="/esa/admin.js"></script>
+</body>
+</html>
