@@ -87,22 +87,60 @@ export function deriveClaim(raw, declared) {
   // discipline the verdict already uses. A1 replies carry no gates and fall back to the asserted field,
   // so both generations score through one code path.
   const g1 = raw.gate1_absence, g2 = raw.gate2_materiality, g3 = raw.gate3_value;
-  const hasGates = !!(g1 && typeof g1 === "object");
-  const gate1Pass = hasGates && g1.is_absent === true;
+  // A3: gate 1 reports a component MAP rather than one chosen element. The teacher-confirmed claim is
+  // unchanged; this is the internal representation the gate reasons over. Permission is still derived
+  // here, never asserted: a component may only be carried forward when it is not present, materially
+  // belongs to this assessment's inference, is not assessed elsewhere, and genuinely narrows support.
+  const gc = raw.gate1_components;
+  const hasComponents = !!(gc && Array.isArray(gc.components));
+  const comps = hasComponents ? gc.components.map((c) => ({
+    component: s(c.component), items: arr(c.items).map(s).filter(Boolean),
+    status: pick(c.status, ["present", "absent", "not_called_for"], "absent"),
+    evidence: s(c.evidence),
+    belongs: c.belongs_to_inference === true,
+    elsewhere: c.assessed_elsewhere_or_out_of_scope === true,
+    narrows: c.narrows_support === true,
+  })) : [];
+  const carriedName = hasComponents ? s(gc.carried_forward) : "";
+  const norml = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const carried = carriedName
+    ? comps.find((c) => norml(c.component) === norml(carriedName))
+      || comps.find((c) => norml(c.component).includes(norml(carriedName)) || norml(carriedName).includes(norml(c.component)))
+    : null;
+
+  const hasGates = hasComponents || !!(g1 && typeof g1 === "object");
+  const gate1Pass = hasComponents
+    ? !!(carried && carried.status !== "present" && carried.belongs && !carried.elsewhere && carried.narrows)
+    : hasGates && g1.is_absent === true;
   const gate2Pass = gate1Pass && !!g2 && g2.material === true;
   const gate3Pass = gate2Pass && !!g3 && g3.worth_it === true;
   const warranted = hasGates ? gate3Pass : raw.intervention_warranted === true;
   const whyNot = s(raw.why_no_intervention);
 
+  if (hasComponents) {
+    if (!comps.length) v.push({ code: "NO_COMPONENTS", detail: "Returned an empty component map, so gate 1 decided nothing." });
+    // The prompt caps the map at five. More than that is sub-skill invention, which is the failure mode
+    // this repair was warned against: a long list of missing sub-skills becomes added assessment burden.
+    if (comps.length > 5) v.push({ code: "COMPONENT_INFLATION", detail: `Decomposed the claim into ${comps.length} components; past five is inventing sub-skills rather than reading the claim.` });
+    if (carriedName && !carried) v.push({ code: "CARRIED_UNKNOWN", detail: `carried_forward names "${carriedName.slice(0, 100)}", which is not in the component map.` });
+    if (carried && carried.status === "present") v.push({ code: "CARRIED_PRESENT_COMPONENT", detail: `Carried forward a component it had just recorded as present: "${carried.component.slice(0, 120)}".` });
+    if (carried && carried.status !== "present" && !(carried.belongs && !carried.elsewhere && carried.narrows)) {
+      v.push({ code: "CARRIED_WITHOUT_BASIS", detail: `Carried "${carried.component.slice(0, 90)}" forward without all three tests holding (belongs=${carried.belongs}, elsewhere=${carried.elsewhere}, narrows=${carried.narrows}).` });
+    }
+    for (const c of comps) if (c.status !== "present" && !c.evidence) {
+      v.push({ code: "UNEVIDENCED_COMPONENT", detail: `Component "${c.component.slice(0, 90)}" recorded as ${c.status} with nothing cited from the assessment.` });
+    }
+  }
+
   if (hasGates) {
-    if (add && !gate1Pass) v.push({ code: "GATE1_BYPASSED", detail: `Proposed an observation while reporting that the required element is present: "${s(g1.required_element).slice(0, 140)}".` });
+    if (add && !gate1Pass) v.push({ code: "GATE1_BYPASSED", detail: hasComponents ? "Proposed an observation although no component qualified to be carried past gate 1." : `Proposed an observation while reporting that the required element is present: "${s(g1.required_element).slice(0, 140)}".` });
     else if (add && !gate2Pass) v.push({ code: "GATE2_BYPASSED", detail: "Proposed an observation after judging the absence immaterial, or without reaching the materiality gate." });
     else if (add && !gate3Pass) v.push({ code: "GATE3_BYPASSED", detail: "Proposed an observation after judging it not worth its classroom and scoring cost, or without reaching that gate." });
-    if (gate1Pass && !s(g1.assessment_evidence)) v.push({ code: "ABSENCE_UNEVIDENCED", detail: "Declared an element absent without citing anything in this assessment to support it." });
-    if (!s(g1.required_element)) v.push({ code: "NO_REQUIRED_ELEMENT", detail: "Did not name the observable element whose absence would break the claim, so gate 1 decided nothing." });
+    if (!hasComponents && gate1Pass && !s(g1.assessment_evidence)) v.push({ code: "ABSENCE_UNEVIDENCED", detail: "Declared an element absent without citing anything in this assessment to support it." });
+    if (!hasComponents && !s(g1.required_element)) v.push({ code: "NO_REQUIRED_ELEMENT", detail: "Did not name the observable element whose absence would break the claim, so gate 1 decided nothing." });
     // A quality word where a pointable thing was required is how "it could be stronger" gets laundered
     // into an absence. Recorded, not corrected.
-    if (gate1Pass && /^(?:more|deeper|stronger|better|richer|additional|further|greater)\b/i.test(s(g1.required_element))) {
+    if (!hasComponents && gate1Pass && /^(?:more|deeper|stronger|better|richer|additional|further|greater)\b/i.test(s(g1.required_element))) {
       v.push({ code: "ELEMENT_IS_A_QUALITY", detail: `Named a quality rather than a pointable element: "${s(g1.required_element).slice(0, 120)}".` });
     }
   }
@@ -167,8 +205,12 @@ export function deriveClaim(raw, declared) {
     gap_statement: s(raw.gap_statement),
     intervention_warranted: warranted,
     gates: hasGates ? {
-      required_element: s(g1.required_element), is_absent: g1.is_absent === true,
-      assessment_evidence: s(g1.assessment_evidence),
+      components: hasComponents ? comps : null,
+      carried_forward: hasComponents ? carriedName : null,
+      carry_why: hasComponents ? s(gc.why) : null,
+      required_element: hasComponents ? (carried ? carried.component : "") : s(g1.required_element),
+      is_absent: hasComponents ? gate1Pass : g1.is_absent === true,
+      assessment_evidence: hasComponents ? (carried ? carried.evidence : "") : s(g1.assessment_evidence),
       material: g2 ? g2.material === true : null, materiality_why: s(g2 && g2.why),
       worth_it: g3 ? g3.worth_it === true : null, value_why: s(g3 && g3.why),
       stopped_at: !gate1Pass ? "gate1" : !gate2Pass ? "gate2" : !gate3Pass ? "gate3" : null,
