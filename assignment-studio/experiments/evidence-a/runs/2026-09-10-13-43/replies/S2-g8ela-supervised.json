@@ -1,0 +1,135 @@
+{
+  "claims": [
+    {
+      "claim_id": "E1",
+      "items": [
+        {
+          "item": "Paragraph bullet 1 — state the author's point of view in your own words, without simply asserting \"the author is against it\"",
+          "elicits": "Requires the student to synthesize a claim about the author's stance from the passage's overall argument and word choices, and produce it as an original paraphrase rather than copy a single stated sentence."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, under supervised, AI-blocked conditions on this unseen passage, the student can independently synthesize and state the author's implied position rather than lift a directly stated sentence.",
+      "does_not_support": [
+        "Does not support that the student can perform this same inference on a different passage, topic, or text structure — this is a single occasion with a single passage.",
+        "Does not distinguish a student who reasoned from the passage's structural choices (contrast, omission, framing) from one who mainly paraphrased the author's own late, hedged first-person line (\"I am not sure the numbers are the only thing that should be counted\"), since the rubric credits an accurate position statement regardless of which route produced it.",
+        "Is easily mistaken for the adjacent, easier claim of locating and restating the author's most explicit sentence rather than inferring an unstated position; the two are entangled in this rubric point.",
+        "Does not support that the student could produce this position statement under unsupervised or AI-permitted conditions — those conditions were not used here."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The position statement must be composed by hand, in the room, from a passage the student has not seen before, under enforced no-AI supervision, so it cannot be produced without the student actually reading and reasoning about this text."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An instruction requiring the student to produce the position in their own synthesized words rather than copy an explicit stated sentence.",
+        "is_absent": false,
+        "assessment_evidence": "\"State the author's point of view in your own words (do not just say “the author is against it”).\""
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 already failed, so materiality was not assessed."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed, so value-against-burden was not assessed."
+      },
+      "why_no_intervention": "Gate 1 fails: the required element (an own-words, non-copying position statement) is already present in the task's own bullet instruction, quoted above. No absence to justify an intervention.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "E2",
+      "items": [
+        {
+          "item": "Paragraph bullets 2–3 — quote or closely paraphrase two pieces of evidence and, for each, explain the technique (word choice, contrast, placement, or inclusion/omission) by which it signals the position",
+          "elicits": "Requires the student to locate two specific textual details in the new passage and, for each, name the rhetorical mechanism that makes that detail signal the author's stance."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can locate two specific pieces of textual evidence in the new passage and correctly name the technique by which each signals the author's position.",
+      "does_not_support": [
+        "Does not support that the student can name these techniques without prompting — the task bullet itself supplies the technique vocabulary (\"word choice, contrast, placement, or what the author chooses to include\"), so this evidence shows matching/selection ability under a supplied list, not unprompted generation of the label.",
+        "Is easily mistaken for the adjacent, easier claim of simply locating any two relevant quotations, since the rubric's \"relevant\" and \"connects\" judgments are holistic and do not verify that the named technique is the actual mechanism at work rather than a plausible-sounding label attached after the fact.",
+        "Does not support evidence-selection or technique-naming ability on a different passage or genre — single occasion, single text.",
+        "Does not support that the two pieces of evidence are independent of each other in what they reveal (a student could select two details that make essentially the same point) since the rubric does not require the two pieces to be distinct in kind."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Quoting two specific details from an unseen passage and matching each to a technique requires the student to have actually located and analyzed those details during the proctored, no-AI period, since no outside source contains this passage's specific content."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An instruction requiring the student to name the specific technique (not just quote evidence) by which each piece of evidence signals the position.",
+        "is_absent": false,
+        "assessment_evidence": "\"For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include).\""
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 already failed, so materiality was not assessed."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed, so value-against-burden was not assessed."
+      },
+      "why_no_intervention": "Gate 1 fails: the required element (naming the technique for each piece of evidence) is already present in the task's own bullet instruction and in rubric points 2 and 3, quoted above. No absence to justify an intervention.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "E3",
+      "items": [
+        {
+          "item": "Paragraph bullet 4 — explain how the author acknowledges and responds to the engineer's case for replacement",
+          "elicits": "Requires the student to identify the concession in the passage (paragraph 3's turn to what the engineer did not mention) and describe how the author uses it as a response to the engineer's argument, not merely summarize the engineer's case."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can identify where and how the author concedes the engineer's case and describe the move the author makes in response to it.",
+      "does_not_support": [
+        "Does not support that the student can identify a concession-and-response structure in a different passage or a differently organized argument — single occasion, single text.",
+        "Is easily mistaken for the adjacent, easier claim of summarizing both sides of the debate, since a student could restate the engineer's case and the author's counter-detail side by side without explicitly characterizing the second as a response to the first, and the single rubric point does not separately verify that distinction.",
+        "Does not support that the student understands concession-and-rebuttal as a general rhetorical strategy transferable beyond this specific bridge passage.",
+        "Does not support fluency under unsupervised or AI-permitted conditions — those were not the conditions used here."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Describing the specific concession-and-response move in an unseen passage requires the student to have read and located that move themselves during the proctored, no-AI period."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An instruction requiring the student to describe both the author's acknowledgment of the engineer's case and the author's response to it, not just a summary of the engineer's case.",
+        "is_absent": false,
+        "assessment_evidence": "\"Explain how the author acknowledges and responds to the engineer's case for replacement.\""
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 already failed, so materiality was not assessed."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed, so value-against-burden was not assessed."
+      },
+      "why_no_intervention": "Gate 1 fails: the required element (describing both the acknowledgment and the response) is already present in the task's own bullet instruction and rubric point 4, quoted above. No absence to justify an intervention.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 8 ELA, informational-text unit, end of unit, summative, 45 minutes; proctored_in_class, individual, AI prohibited_and_enforced, resources limited to the passage and paper; the passage is new to students, the paragraph structure and rubric are familiar.",
+  "reviewer_notes": "All three claims are carried by a single integrated paragraph task whose four rubric points map directly onto E1 (own-words position statement), E2 (two evidence-plus-technique pairs), and E3 (acknowledgment-and-response description). Under the declared supervised, AI-blocked, novel-passage conditions, the specific element each claim requires is already present in the task's own bullet instructions, so Gate 1 fails for every claim and no additional observation is proposed anywhere. The shared limitation across all three claims is that each rests on a single passage and a single occasion, which is inherent to an end-of-unit summative snapshot rather than a defect of this instrument relative to its stated purpose."
+}

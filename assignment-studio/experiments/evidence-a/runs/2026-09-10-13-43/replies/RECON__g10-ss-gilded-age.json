@@ -1,0 +1,97 @@
+{
+  "reading_a": {
+    "label": "Reading A: Document-analysis skill (sourcing, close reading, contextualization, and point-of-view weighting) as the target construct",
+    "claims": [
+      {
+        "id": "A1",
+        "statement": "Extracts sourcing information for a primary source (author, date, likely audience), one line per document, with no interpretation required beyond identification.",
+        "claim_type": "procedural",
+        "quoted_verb": "identify the author, the year, and the audience",
+        "items": [
+          "1"
+        ]
+      },
+      {
+        "id": "A2",
+        "statement": "Reads each document closely enough to state, in a single parallel sentence per document, what causal explanation that document itself offers for the wealth gap.",
+        "claim_type": "representational",
+        "quoted_verb": "state how Document 1 explains where that gap came from, and how Document 2 explains where it came from",
+        "items": [
+          "2"
+        ]
+      },
+      {
+        "id": "A3",
+        "statement": "Selects a specific word or phrase from each document and explains what that diction reveals about the author's attitude, i.e. performs a close-reading inference from language rather than from content summary.",
+        "claim_type": "representational",
+        "quoted_verb": "Choose one word or phrase from each document that shows the author's attitude ... Explain what the word choice reveals",
+        "items": [
+          "3"
+        ]
+      },
+      {
+        "id": "A4",
+        "statement": "Contextualizes each author by connecting their known social/political position in 1889-1892 to a plausible motive for producing that document.",
+        "claim_type": "conceptual",
+        "quoted_verb": "Use what you know about each author's position in 1889–1892",
+        "items": [
+          "4"
+        ]
+      },
+      {
+        "id": "A5",
+        "statement": "Explicitly discounts or credits each document's claim, inside the written argument, on the basis of the author's point of view rather than treating both sources as equally reliable.",
+        "claim_type": "procedural",
+        "quoted_verb": "explains how the point of view of each author affects how much weight you give their claim",
+        "items": [
+          "5"
+        ]
+      }
+    ]
+  },
+  "reading_b": {
+    "label": "Reading B: Conceptual understanding of the Gilded Age wealth-gap controversy as a substantive historical debate, with sourcing serving as the method rather than the object",
+    "claims": [
+      {
+        "id": "B1",
+        "statement": "States, as historical content, the two competing contemporary accounts of where the rich-poor gap came from (progress/civilization vs. governmental injustice/theft), correctly attributed to the side that held each view.",
+        "claim_type": "conceptual",
+        "quoted_verb": "state how Document 1 explains where that gap came from, and how Document 2 explains where it came from",
+        "items": [
+          "2"
+        ]
+      },
+      {
+        "id": "B2",
+        "statement": "Explains why an industrialist and a farmers'/workers' party respectively would hold and publish opposing positions on great fortunes, i.e. connects social position to the substance of Gilded Age class conflict, not just to authorial motive in the abstract.",
+        "claim_type": "conceptual",
+        "quoted_verb": "Why might Carnegie, of all people, have written Document 1? Why might a farmers' and workers' party have written Document 2?",
+        "items": [
+          "4"
+        ]
+      },
+      {
+        "id": "B3",
+        "statement": "Takes and defends a position on the era's actual historical question — progress's natural price versus a failed system — in a way that accounts for both documents, rather than treating the documents as interchangeable evidence for one side.",
+        "claim_type": "application",
+        "quoted_verb": "takes a position that accounts for both documents (you may argue that different groups saw it differently — say which and why)",
+        "items": [
+          "5"
+        ]
+      },
+      {
+        "id": "B4",
+        "statement": "Ties the documentary debate to a specific, accurately described outside development of the period (trusts, Homestead/Pullman, farm debt, the 1893 depression), demonstrating period content knowledge beyond the two excerpts.",
+        "claim_type": "application",
+        "quoted_verb": "connects the documents to at least one specific development from the period",
+        "items": [
+          "5"
+        ]
+      }
+    ]
+  },
+  "material_difference": "Reading A says the instrument's target is the transferable skill of sourcing/close-reading/point-of-view weighting — so the same tasks would count as working evidence with any two Gilded Age documents on any topic, and a student who nails the skill moves but gets the era's content thin deserves full credit; Reading B says the target is students' grasp of the actual Gilded Age wealth-gap controversy — so the tasks only count as evidence for content mastery of that specific debate, and a student who performs the sourcing moves flawlessly but cannot connect the debate to a real period development (item 5's last bullet) has not met the claim, which would license a different judgment about whether item 1's low-inference sourcing line even belongs in the same construct as item 5's outside-development requirement.",
+  "left_out_question": "The rubric's sixth point, 'Organization and clarity,' is worth the same one point as sourcing accuracy or evidence use but is not tied to any task verb in Parts A or B — is that meant to be assessed as its own target (writing craft), or is it there as an incidental grading convenience that shouldn't be read as part of what this instrument is licensed to say anything about?",
+  "preferred": "reading_b",
+  "preferred_reason": "The Part B question is framed as a live historical debate ('natural price of progress' vs. 'evidence the system had failed') and three of the six rubric points (position, outside development, and the point-of-view-to-weigh-evidence line applied to that specific debate) only make sense as evidence about period content, so the sourcing and close-reading moves in Part A read as the required method for reaching a content claim rather than as the claim being assessed."
+}

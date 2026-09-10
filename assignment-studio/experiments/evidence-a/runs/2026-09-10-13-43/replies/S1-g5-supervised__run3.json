@@ -1,0 +1,159 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Item 1: 3/4 ___ 5/8, then show how you know",
+          "elicits": "Student selects and executes a valid comparison strategy (common denominator, benchmark, or visual model) and writes reasoning that connects that strategy to the chosen inequality symbol."
+        },
+        {
+          "item": "Item 2: 2/3 ___ 7/12, then show how you know",
+          "elicits": "Same move on a closer-valued pair, testing whether the chosen strategy still resolves a smaller gap between the fractions."
+        },
+        {
+          "item": "Item 3: 5/6 ___ 8/9, then show how you know",
+          "elicits": "Same move on fractions close to one whole, where a benchmark-of-1 or distance-from-whole strategy becomes efficient, testing flexibility of strategy choice."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual, paper-and-pencil conditions with AI excluded, this evidence supports that the student can independently choose a valid strategy (equivalent fractions, a benchmark, or a visual model) to compare two unlike fractions, execute it correctly, and produce reasoning that justifies the resulting comparison symbol, on novel numeric pairs of a practiced item type.",
+      "does_not_support": [
+        "Does not distinguish which of the three strategies the student prefers or whether the student can produce a visual model specifically, since any one valid method satisfies the item.",
+        "Does not support comparison of fractions in forms not tested here, such as fractions greater than one or comparisons among three or more fractions at once.",
+        "Adjacent to G5C2: reaching the symbol via a fully executed common-denominator computation also demonstrates the procedural skill in G5C2 on these three items, so a weak reasoning line paired with a correct symbol should not be read as mastery of the comparison claim on its own.",
+        "Does not show whether the student can pick the most efficient strategy for a given pair versus defaulting to common denominators every time; the claim only requires a valid strategy, not the most efficient one."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The comparison and justification must be handwritten in real time under proctored supervision with AI prohibited and enforced, so there is no channel for the strategy choice or reasoning to originate outside the student."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to choose a comparison strategy, execute it, and show reasoning that supports the chosen symbol.",
+        "is_absent": false,
+        "assessment_evidence": "Part A, items 1-3: 'write <, >, or =. Then show how you know (a common denominator, a picture, or a benchmark like 1/2).' This is the element itself, not a proxy for it."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 found no absence, so materiality was not evaluated."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 stopped the process before a value-against-burden question arose."
+      },
+      "why_no_intervention": "Gate 1 fails: items 1-3 already require the student to choose a strategy, execute it, and show reasoning tied to the symbol, on three novel pairs. The required element is present, so no additional observation is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Item 4: 1/2 + 1/3 =, show every step, simplest form",
+          "elicits": "Constructing equivalent fractions with a common denominator and combining like-sized parts."
+        },
+        {
+          "item": "Item 5: 5/6 - 1/4 =, show every step, simplest form",
+          "elicits": "Same for subtraction, plus simplifying the resulting fraction."
+        },
+        {
+          "item": "Item 6: 2 1/3 + 1 3/4 =, show every step",
+          "elicits": "Combining mixed numbers with unlike denominators and regrouping an improper fraction into a whole number when the sum exceeds one whole."
+        },
+        {
+          "item": "Item 7: Maya word problem (3/4 mile + 5/6 mile), answer as a mixed number",
+          "elicits": "Translating a word problem into a fraction-addition procedure, then regrouping the result to a mixed number, adding a translation demand on top of the computation."
+        },
+        {
+          "item": "Item 8: Jonah flour word problem (2/3 cup needed, has 1/4 cup)",
+          "elicits": "Translating a word problem into a fraction-subtraction procedure with unlike denominators."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under the same declared conditions, this evidence supports that the student can independently construct equivalent fractions with a common denominator, combine or compare the like-sized parts, and simplify or regroup the result to a mixed number when required, across addition, subtraction, mixed-number, and word-problem forms of the practiced item type.",
+      "does_not_support": [
+        "Does not support fluency or speed; it only supports that the student can carry out the procedure correctly within the 25-minute session, not how quickly or automatically.",
+        "Does not support the student's understanding of why the common-denominator procedure works; that conceptual grounding is carried by G5C1 and G5C3, not by correct execution alone.",
+        "Items 7 and 8 add a translation demand: a miss there may reflect reading or setup difficulty rather than the fraction procedure itself, and should not be read as a pure procedural gap without checking items 4-6.",
+        "Does not extend to denominators or fraction forms outside those practiced, since the declared novelty here is limited to new numbers within an already-practiced item type."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The multi-step written work for building common denominators and simplifying is produced on paper in the room under AI-prohibited supervision, leaving no route for an outside agent to generate it undetected."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to find a common denominator, combine the parts, and simplify or regroup to a mixed number where the numbers call for it.",
+        "is_absent": false,
+        "assessment_evidence": "Part B items 4-6 ('Show every step. Answers in simplest form,' including a mixed-number addition requiring regrouping) and Part C items 7-8, which require the same procedure inside a word-problem context."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 found no absence, so materiality was not evaluated."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 stopped the process before a value-against-burden question arose."
+      },
+      "why_no_intervention": "Gate 1 fails: five items (4-8) already require constructing common denominators, combining, and simplifying/regrouping, including a mixed-number case. The required element is present, so no additional observation is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Item 9: a student added 1/2 + 1/4 and got 2/6; explain what the student did wrong, and show the correct answer",
+          "elicits": "Diagnosing an unfamiliar incorrect solution by naming why adding denominators directly produces a wrong-sized part, then executing the correct procedure to produce the right sum."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This evidence supports that the student can independently identify why adding denominators directly produces a wrong-sized part when shown an unfamiliar incorrect solution, and can produce the correct sum in its place, under proctored, AI-excluded conditions.",
+      "does_not_support": [
+        "Only one item carries this claim, so the evidence cannot distinguish a rote, memorized explanation ('you need a common denominator') from a genuine grasp of why unlike-sized parts cannot be added directly; the item does not require naming the controlling feature a second time in a differently-shaped instance.",
+        "Does not show whether the student would catch this same error unprompted inside their own multi-step work in Part B, since here the error is handed to them fully formed rather than self-generated.",
+        "The correct-sum portion of the item overlaps with G5C2's procedural skill; a correct sum paired with a weak explanation should not be double-counted as strong diagnostic evidence.",
+        "Does not generalize to other misconceptions about unlike denominators, such as adding numerators and denominators separately in a subtraction context, or errors made while simplifying, beyond the one error type shown here."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The error-diagnosis explanation is written live under supervision with no AI or outside access, so the explanation must originate from the student's own reasoning in the room."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that presents an unfamiliar incorrect solution and requires the student to state the reason it is wrong, not only the corrected answer.",
+        "is_absent": false,
+        "assessment_evidence": "Part D, item 9: 'A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.' This asks for the reason and the corrected answer both."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 found no absence, so materiality was not evaluated."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 stopped the process before a value-against-burden question arose."
+      },
+      "why_no_intervention": "Gate 1 fails: item 9 already presents an unfamiliar incorrect solution and requires both the reason it is wrong and the corrected answer. Presence, not repetition, is what Gate 1 tests, and the element is present, so no additional observation is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Proctored in-class, individual, summative assessment at the end of Unit 4; AI prohibited and enforced; paper and pencil only; 25 minutes. The item types (comparing unlike fractions, combining unlike fractions, diagnosing a denominator-addition error) were practiced in advance, but per the teacher's novelty note the specific numbers and problems were new to the students.",
+  "reviewer_notes": "All three claims are carried by items that are independent (proctored, individual, AI excluded), novel (specific numbers/problems unseen in advance, per the teacher's own note), and directly claim-targeted, so Gate 1 finds no absence for any claim and no additional observation is proposed anywhere. Part A's requirement to 'show how you know' alongside the symbol is what keeps items 1-3 from being scored as a guess-prone selected-response set, which is why no guess-rate caveat is needed there. Item 9 is the only observation carrying G5C3; under these gates that single instance is sufficient (Gate 1 tests presence, not repetition), but it is the thinnest of the three claims, and a memorized explanation could pass on one instance undetected by this instrument alone -- worth the teacher's own attention, not a flaw the gates license fixing here."
+}

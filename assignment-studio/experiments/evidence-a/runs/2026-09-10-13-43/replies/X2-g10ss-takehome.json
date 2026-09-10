@@ -1,0 +1,203 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "Part A, Q1 (identify author, year, and audience for each document)",
+          "elicits": "Retrieval/production of publication metadata (author, year) and a one-line audience inference per document, submitted from an unsupervised take-home window with internet and AI available."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The submitted response shows a document that correctly names author, year, and a plausible audience for each excerpt, but establishes nothing about whether the named student, rather than an available AI tool or a web search, performed that identification.",
+      "does_not_support": [
+        "Does not support that the student can source an unfamiliar document without AI or internet access, which is the procedural skill H1 actually names.",
+        "Does not distinguish a student who reasoned out audience/year from one who pasted the excerpt into a search engine or AI assistant.",
+        "Is easily mistaken for evidence of a related but different claim -- 'the student can locate correct metadata using external tools' -- which is a research-skill claim, not the sourcing-skill claim H1 states."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Any AI assistant given the two excerpts can supply author, year, and a plausible audience in seconds, and nothing in the unsupervised, AI-permitted take-home conditions excludes this."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student or an available AI/internet tool identified the author, year, and audience for each document.",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to source a document for author, year, and audience under supervision, with AI and internet access excluded from the room.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state \"Supervision: unsupervised\", \"AI policy: permitted\", \"Resources permitted: anything at home, internet, AI assistant\", and that the assessment is \"sent home over a week at the end of the industrialization unit\"; no item in the assessment is administered proctored_in_class or observed_live. Part A Q1 is the only item bearing on H1, and it sits inside that same take-home window, so no item supplies a supervised sourcing observation."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is declared summative: the teacher intends to certify that the named student can source a document. Without any supervised observation, the teacher cannot know whether the sourcing answers reflect the student's own procedure or an assistant's, which is exactly the conclusion a summative grade on H1 is meant to certify."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A five-minute in-class check on a single new document costs little against a summative grade that currently rests on zero independent evidence for this claim."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Transfer",
+        "item_text": "In class, read this new short excerpt from the same period, which you have not seen before. State the author (or author's role/type if unnamed), the year (or decade), and the audience the author was most likely trying to reach -- one line each.",
+        "variant_rule": "May change: the specific primary-source excerpt used and its true author/year/audience, drawn fresh each class period. Must stay fixed: the three-part response format (author, year, audience) and the requirement that the audience judgment name one textual or contextual cue. Avoid: reusing the Carnegie or Omaha Platform excerpts, or any document previewed before this check.",
+        "conditions": "proctored_in_class, individual, no notes/internet/AI, unfamiliar excerpt",
+        "sufficiency_line": "Counts as evidence if the student names a plausible author-type, a year within the correct decade, and an audience tied to one quoted or paraphrased cue from the new excerpt.",
+        "student_minutes": 5,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "Part A, Q2 (state in one sentence each how Document 1 and Document 2 explain the wealth gap)",
+          "elicits": "A one-sentence causal paraphrase per document, contrasting how each source locates the origin of the same fact, submitted unsupervised with AI/internet available."
+        },
+        {
+          "item": "Part A, Q3 (choose one word/phrase from each document showing attitude toward great fortunes, explain what it reveals)",
+          "elicits": "Selection of a lexical item plus a one-line inference about authorial attitude, submitted under the same unsupervised, AI-permitted conditions."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The submitted response shows contrasting causal statements and word-choice attitude observations consistent with a correct reading of both documents, but does not establish that the student, rather than an AI assistant, generated the contrast or the attitude inference.",
+      "does_not_support": [
+        "Does not support that the student can identify competing causal explanations or attitude-revealing word choice unaided, since an AI assistant can generate both directly from the pasted excerpts.",
+        "Does not distinguish genuine close reading from an AI-generated paraphrase the student merely transcribed or lightly edited.",
+        "Is easily mistaken for evidence of H3 (explaining authorial motive from position) since both draw on the same two documents, but H2 targets contrast and attitude specifically, and these conditions cannot verify either came from the student."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "An AI assistant can generate the causal contrast and identify an attitude-revealing word directly from the two pasted excerpts without the student reading either closely."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student or an AI assistant produced the causal contrast and the attitude-word analysis.",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to contrast two causal explanations and read attitude from word choice, under supervision, with AI and internet access excluded from the room.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state \"Supervision: unsupervised\", \"AI policy: permitted\", \"Resources permitted: anything at home, internet, AI assistant\", and that the assessment is \"sent home over a week at the end of the industrialization unit\"; no item in the assessment is administered proctored_in_class or observed_live. Part A Q2 and Q3 are the only items bearing on H2, and both sit inside that same take-home window, so no item supplies a supervised observation of this conceptual skill."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is declared summative: the teacher intends to certify that the student can contrast causal framing and read attitude from language. Without a supervised observation, the teacher cannot know whether the six rubric points reflect the student's own conceptual reading, which is the conclusion a summative grade on H2 is meant to certify."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A six-minute in-class check on a new document pair costs little against a summative grade that currently rests on zero independent evidence for this claim."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Transfer",
+        "item_text": "In class, read these two new short excerpts about a different disputed event from this unit (e.g., a strike or a debt crisis), stating the same underlying fact in two different ways. In one sentence each, state how excerpt A explains the cause and how excerpt B explains it differently. Then underline one word or phrase in each that reveals the author's attitude, and explain in one line what it reveals.",
+        "variant_rule": "May change: the topic/event and the two excerpts contrasted, drawn fresh each class period from the unit's other primary sources. Must stay fixed: two short excerpts describing the same fact from opposing viewpoints, and the two-part task (causal contrast, then word-choice attitude read with a one-line reason). Avoid: reusing the Carnegie/Omaha Platform pairing or any pairing already analyzed in class.",
+        "conditions": "proctored_in_class, individual, no notes/internet/AI, unfamiliar excerpt pair",
+        "sufficiency_line": "Counts as evidence if the student states, in one sentence each, how the two new excerpts locate the cause of the shared fact differently, and names one attitude-revealing word or phrase per excerpt with a one-line reason tied to that word.",
+        "student_minutes": 6,
+        "scoring_seconds": 45
+      }
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "Part A, Q4 (why might Carnegie have written Document 1; why might a farmers'/workers' party have written Document 2, given each author's position in 1889-1892)",
+          "elicits": "An 'explain why' response connecting each author's social/economic position to their writing choices -- precisely the format flagged as fully delegable when produced unsupervised."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The submitted response contains an explanation linking each author's position to their writing, but this exact format is one an AI assistant completes fluently from the two excerpts and their dates, so it does not establish that the student reasoned through the connection.",
+      "does_not_support": [
+        "Does not support that the student can independently reason from authorial position to textual choices, since 'explain why' items are fully delegable to an AI assistant when unsupervised.",
+        "Does not distinguish the student's own historical reasoning from a generated explanation the student copied or lightly rephrased.",
+        "Is easily mistaken for evidence of H2's attitude-reading, but H3 specifically requires connecting position to authorial choice, and these conditions cannot verify that connection came from the student."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "'Explain why' items are exactly the format an AI assistant completes fluently from the given excerpts and dates, and nothing in the unsupervised, AI-permitted conditions blocks this."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student's own reasoning, or an AI assistant's, connects each author's position to their writing choices.",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to infer an author's social/economic position from an unfamiliar text, under supervision, with AI and internet excluded, and with the 'why' captured only as a one-line reason inside a primitive rather than as free-standing explanation.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state \"Supervision: unsupervised\", \"AI policy: permitted\", \"Resources permitted: anything at home, internet, AI assistant\", and that the assessment is \"sent home over a week at the end of the industrialization unit\"; no item in the assessment is administered proctored_in_class or observed_live. Part A Q4 is the only item bearing on H3, and it sits inside that same take-home window as a free-standing 'explain why' response, so no item supplies a supervised, delegation-resistant observation of this skill."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is declared summative: the teacher intends to certify that the student can connect a historical actor's position to their rhetorical choices. Without a supervised observation, the teacher cannot know whether this response reflects the student's own reasoning, which is the conclusion a summative grade on H3 is meant to certify."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A five-minute in-class check on a new, unnamed-author excerpt costs little against a summative grade that currently rests on zero independent evidence for this claim."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Reverse",
+        "item_text": "In class, read this new short excerpt (the author is not named). What social or economic position would the author most likely hold to write this way? Name the position, and quote the specific phrase that led you to that conclusion (one line).",
+        "variant_rule": "May change: the excerpt and its true author/position, drawn fresh each class period from unfamiliar period-appropriate sources. Must stay fixed: the requirement to name a plausible position AND quote the specific textual phrase that signals it. Avoid: using either of the two documents already in this assessment, or revealing the author's name or affiliation up front.",
+        "conditions": "proctored_in_class, individual, no notes/internet/AI, unfamiliar unattributed excerpt",
+        "sufficiency_line": "Counts as evidence if the student names a plausible social/economic position and quotes the specific phrase from the new excerpt that signals it, with the phrase actually supporting the named position.",
+        "student_minutes": 5,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "Part B, Q5 (two-paragraph argument addressing both documents, weighing evidence by point of view, connecting one accurate outside development)",
+          "elicits": "A sustained, multi-part argumentative essay: a position statement, evidence from each document, an explicit point-of-view weighting, and an accurate outside connection -- a complex synthesis product submitted from an unsupervised, week-long, AI-permitted take-home window."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The submitted essay shows a two-paragraph argument that addresses both documents, weighs point of view, and connects an outside development, but under unsupervised, AI-permitted conditions it establishes only that such an essay was submitted under the student's name, not that the student constructed it.",
+      "does_not_support": [
+        "Does not support that the student can construct this argument without external drafting help, since the essay was produced unsupervised over a week with AI and internet permitted.",
+        "Does not establish that the point-of-view weighting or the outside-development connection reflects the student's own synthesis rather than an AI-generated draft.",
+        "Is easily mistaken for evidence of H1-H3 (sourcing, contrast, motive) since a well-written essay could embed all of that content, but none of it can be attributed to the student under these conditions.",
+        "The rubric's 'Organization and clarity' point does not itself evidence any of H1-H4's content claims and should not be read as corroborating them."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "A full two-paragraph argumentative essay addressing both documents, weighing point of view, and linking an outside development is a standard AI-assistant output, and the week-long unsupervised, AI-permitted take-home window imposes no barrier to submitting one."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student's own judgment, or an AI assistant's, produced the argument, the point-of-view weighting, and the outside-development connection.",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to construct this same multi-part argument under supervision, with AI and internet excluded from the room.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state \"Supervision: unsupervised\", \"AI policy: permitted\", \"Resources permitted: anything at home, internet, AI assistant\", and that the assessment is \"sent home over a week at the end of the industrialization unit\"; no item in the assessment is administered proctored_in_class or observed_live. Part B Q5 is the only item bearing on H4, and it sits inside that same take-home window, so no item supplies a supervised observation of this sustained synthesis."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is declared summative: the teacher intends to certify that the student can construct this weighted, multi-document argument. Without a supervised observation, the teacher cannot know whose synthesis produced the essay, which is the conclusion a summative grade on H4 is meant to certify."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": false,
+        "why": "In principle a supervised counterpart would add value, but no short version of this task reaches it without either handing the student the position/evidence framing (removing the judgment being tested) or growing into a full extended-writing period that is no longer a short check -- see no_short_check_reason."
+      },
+      "why_no_intervention": "All three gates point toward intervention in principle -- the supervised element is genuinely absent and the gap is material to the summative grade -- but H4 names a sustained, multi-step synthesis (position + evidence from both documents + explicit point-of-view weighting + an accurate outside connection) for which no short item exists that does not either pre-digest the synthesis for the student or stop being short. See no_short_check_reason; no observation is proposed.",
+      "no_short_check_reason": "Constructing an argument that takes a position, weighs two documents by point of view, and accurately connects an outside development is sustained, multi-step judgment; any short in-class version either pre-selects the position or the evidence for the student -- removing the judgment H4 is meant to test -- or it ceases to be a short item and becomes a second full essay.",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Unsupervised, individual, AI-permitted (anything at home, internet, an AI assistant), summative purpose, time not stated, sent home over a week at the end of the industrialization unit; the two documents are new to students, though the sourcing-practice question format is familiar from prior work.",
+  "reviewer_notes": "Every item in this assessment is completed unsupervised, at home, with AI explicitly permitted, so the independence condition fails categorically for all four claims regardless of how well-targeted each item is to its claim -- the feed-forward rule applies to the whole instrument, not just a process artifact within it. Q1-Q4 are well-matched to H1-H3 in content and would carry those claims cleanly if administered under supervision; a short in-class counterpart for each is proposed. H4's argument task is a sustained, multi-step synthesis with no short supervised substitute, so no item is proposed for it -- restoring evidence for H4 would require a different assessment design (e.g., a proctored extended-writing period), which is outside the scope of adding one item."
+}

@@ -1,0 +1,198 @@
+{
+  "claims": [
+    {
+      "claim_id": "K1",
+      "items": [
+        {
+          "item": "1. Evaluate ∫ x e^(2x) dx, name the technique",
+          "elicits": "carrying out integration by parts (choosing u and dv, applying the formula, integrating the resulting term) to a finished antiderivative"
+        },
+        {
+          "item": "2. Evaluate ∫ (3x+1)/(x²+x−6) dx, name the technique",
+          "elicits": "factoring the denominator, setting up and solving a partial-fraction decomposition, and integrating each resulting term"
+        },
+        {
+          "item": "3. Evaluate ∫ sin³x cos²x dx, name the technique",
+          "elicits": "splitting off one trig factor, applying a Pythagorean identity to rewrite the integrand, and integrating the resulting polynomial-in-cosine form"
+        },
+        {
+          "item": "4. Evaluate ∫ x/√(9−x²) dx, name the technique",
+          "elicits": "recognizing and carrying out a substitution (algebraic or trigonometric) to reach a closed-form antiderivative"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can correctly execute integration technique(s) — by parts, partial fractions, trig-identity reduction, and substitution — to a finished antiderivative on integrands unseen in advance, under closed-book, no-calculator, supervised conditions.",
+      "does_not_support": [
+        "Does not support that the student can select the appropriate technique unprompted when the choice itself is the point rather than given alongside a directive to evaluate — selection is targeted separately (and only partially by these same items) under K2.",
+        "Item 4 admits an ordinary algebraic substitution (u = 9 − x²) as well as a trigonometric substitution, so on its own it does not confirm execution of trigonometric substitution specifically, only execution of some valid substitution.",
+        "Does not support fluency under different conditions — with a calculator, with notes, or with more time — since all four items are produced closed-book, unaided, under a 40-minute limit.",
+        "Does not, as scored in Part A (evaluate-and-name together), cleanly separate a conceptual misunderstanding of the technique from a downstream algebraic slip in carrying it out."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The four integrands are unseen and must be evaluated by hand in the room under enforced no-calculator, no-notes, AI-prohibited conditions, so the written derivation on the page is necessarily the student's own work."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "an item requiring the student to carry out (not just select) an integration technique, unaided, on an integrand not seen in advance",
+        "is_absent": false,
+        "assessment_evidence": "Part A: 'Evaluate each integral' — items 1–4, four distinct unseen integrands, each solved without calculator or notes under supervision."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached — Gate 1 found the required element already present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached — Gate 1 already stopped the analysis."
+      },
+      "why_no_intervention": "Gate 1 fails: Part A already supplies four independent, closed-book, supervised executions across distinct technique families (by parts, partial fractions, trig-identity reduction, substitution). Nothing the claim requires is missing, so no addition is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "K2",
+      "items": [
+        {
+          "item": "5a. ∫ x²/√(x²+4) dx — name technique and substitution only",
+          "elicits": "recognizing that the integrand calls for a trigonometric substitution and stating the specific substitution, without carrying it out"
+        },
+        {
+          "item": "5b. ∫ ln x dx — name technique and substitution only",
+          "elicits": "recognizing integration by parts is needed for a single transcendental factor and naming the u/dv split, without carrying it out"
+        },
+        {
+          "item": "5c. ∫ 1/(x²−9) dx — name technique and substitution only",
+          "elicits": "recognizing the rational integrand factors into linear terms and stating the partial-fraction decomposition form, without solving for constants or integrating"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can identify which technique applies to an integrand and state the specific substitution, decomposition, or identity it depends on, prior to and independent of computing the antiderivative, under closed-book supervised conditions with integrands unseen in advance.",
+      "does_not_support": [
+        "Does not support that the student can then correctly execute the chosen technique to a finished antiderivative — execution is evidenced separately in Part A (K1), and correct selection here does not guarantee correct execution there.",
+        "Does not support technique selection performed under the added load of simultaneously computing the integral — Part B isolates selection by explicitly forbidding computation, so this is selection-in-isolation, not selection-while-solving.",
+        "Part A's 'name the technique you chose' alongside a worked solution is a related but conflated signal (selection bundled with computation); it should not be read as additional confirmation of clean selection ability equivalent to Part B.",
+        "Does not support selection among techniques not sampled here as a pure choose-only task — trig-power/identity reduction is tested only inside a compute item (Part A, item 3), not re-tested as a selection-only task in Part B."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Because Part B explicitly forbids carrying out the integration and is completed on paper under supervision with unseen integrands, the named technique and substitution can only come from the student's own recognition in the moment."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "an item requiring the student to name the applicable technique and its specific substitution, decomposition, or identity without performing the integration",
+        "is_absent": false,
+        "assessment_evidence": "Part B, items 5(a)-(c): 'name the technique you would use and write the substitution, decomposition or identity it depends on. Do not carry out the integration.'"
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached — Gate 1 found the required element already present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached — Gate 1 already stopped the analysis."
+      },
+      "why_no_intervention": "Gate 1 fails: Part B already isolates selection from computation across three technique families (trig substitution, integration by parts, partial fractions). The element the claim requires is present, so no addition is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "K3",
+      "items": [
+        {
+          "item": "6. Find the mistake in ∫ x cos(x²) dx = x sin(x²)/(2x) + C",
+          "elicits": "comparing each line of a given derivation against valid differentiation/integration rules to identify exactly where it breaks, then independently producing the correct antiderivative"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can locate the invalid step in a given incorrect antiderivative and produce the correct one, under closed-book supervised conditions, for a derivation not seen in advance.",
+      "does_not_support": [
+        "Does not support that the student can locate and repair errors arising from other technique families (integration by parts, partial fractions, trig-power reduction) — only one error type, a chain-rule/substitution flaw, is sampled here.",
+        "Does not support that the student can generate or anticipate this kind of error independently — only that the student can recognize and repair an error already given.",
+        "Adjacent claim this could be mistaken for: general error-checking ability across all four techniques practiced this unit, which this single item does not establish.",
+        "Does not support fluency or speed of error detection when multiple flaws are present at once, or when the error is subtler than a single clearly-identifiable step."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The flawed derivation is presented only on the in-room paper form, so locating its invalid step and repairing it must happen live, without notes or calculator, leaving no channel through which an outside solution could be substituted."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "an item that presents an incorrect antiderivative and requires the student both to identify the invalid step and to produce the corrected antiderivative",
+        "is_absent": false,
+        "assessment_evidence": "Item 6: 'A student writes: ∫ x cos(x²) dx = x sin(x²)/(2x) + C. The answer is wrong. Say which step does not follow and give the correct antiderivative.'"
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached — Gate 1 found the required element already present. Wanting a second error in a different technique family would raise confidence, but that is explicitly not a valid basis for intervention under this framework."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached — Gate 1 already stopped the analysis."
+      },
+      "why_no_intervention": "Gate 1 fails: item 6 already supplies an incorrect antiderivative, novel to the student, requiring both fault-location and repair in the room — the element the claim calls for is present. Testing a second error type would improve confidence, not fill an absence, so no addition is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "K4",
+      "items": [
+        {
+          "item": "7. Write an integral requiring integration by parts exactly twice; justify why twice and not once",
+          "elicits": "constructing, from scratch, an integrand satisfying a stated structural condition (exactly two by-parts applications) and stating in one line the structural reason that count is necessary"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that the student can produce, unaided, an original integrand requiring exactly two applications of integration by parts and can state in one line why a single application would not suffice, under closed-book supervised conditions.",
+      "does_not_support": [
+        "Does not rule out that the response reproduces a canonical example (e.g., a polynomial-times-exponential or polynomial-times-trig integrand) commonly used when this technique was introduced, together with a memorized version of its justification, rather than reasoning built fresh for this prompt — the item cannot distinguish a recalled instance from a constructed one.",
+        "Does not support that the student can construct an example meeting a different specified constraint (e.g., requiring three applications, or a different technique entirely).",
+        "Does not support fluency in actually executing the by-parts steps on the student's own construction — item 7 asks for construction and justification only, not evaluation.",
+        "Adjacent claim this could be mistaken for: general fluency in integration by parts (K1's territory), which this item does not test since the student is not required to carry out their own construction."
+      ],
+      "delegation": {
+        "answer": "partly",
+        "reason": "A student who has memorized the class's standard worked example of an integrand needing exactly two by-parts applications can reproduce both the integral and a rote version of the justification without performing fresh constructive reasoning, and the item as written cannot distinguish that from a genuinely constructed response."
+      },
+      "gap_statement": "We cannot tell from this assessment whether a correct response reflects the student's own structural reasoning about repeated integration by parts or recall of a previously modeled example and its justification.",
+      "gate1_absence": {
+        "required_element": "an item that asks the student to state a reason for the constraint, not only to produce a correct example",
+        "is_absent": false,
+        "assessment_evidence": "Item 7 already requires both: 'Write an integral that requires integration by parts exactly twice, and say in one sentence how you know twice is required and once is not.'"
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached — Gate 1 found the required element present. The rote-recall risk noted above is a real limitation, but addressing it would mean adding a second instance purely to raise confidence that the reasoning generalizes, which this framework does not treat as a valid absence."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached — Gate 1 already stopped the analysis."
+      },
+      "why_no_intervention": "Gate 1 fails: the item already requires both a constructed example and a one-line structural justification, which is the observable element the claim calls for. That a response might reflect a memorized canonical example rather than fresh reasoning is a genuine limitation, but curing it would mean adding a second instance solely to raise confidence — not filling an absence — so no addition is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "proctored_in_class, individual, AI prohibited_and_enforced, closed book with no calculator, summative, 40 minutes, administered after the techniques-of-integration sequence, with integrands the students have not seen before.",
+  "reviewer_notes": "All four claims are already carried by items purpose-built for them under the declared conditions, and none required an addition: Part A (K1) supplies four unaided executions across distinct technique families; Part B (K2) cleanly isolates selection from computation across three families; Part C (K3) supplies a genuine locate-and-repair task on an unseen erroneous derivation; Part D (K4) requires both a constructed example and a stated reason. No item is selected-response, so no guess-rate caveats apply anywhere. Two residual limitations are worth the teacher's awareness without being addressable interventions under this framework: item 4 can be solved by an ordinary algebraic substitution rather than requiring a trigonometric one, so it does not on its own confirm trig-substitution execution specifically; and item 7's construction task cannot distinguish a freshly reasoned example from recall of whatever canonical two-applications example was used when integration by parts was introduced. Both are noted in the relevant claim's does_not_support/delegation rather than proposed as additions, since curing either would mean adding an instance purely to raise confidence, which the gate framework treats as insufficient grounds for intervention."
+}

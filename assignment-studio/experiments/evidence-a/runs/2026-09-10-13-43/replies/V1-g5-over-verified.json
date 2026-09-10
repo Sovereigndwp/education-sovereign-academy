@@ -1,0 +1,171 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1. 3/4 ___ 5/8 (predict, solve, explain)",
+          "elicits": "Selects a comparison strategy (common denominator, benchmark, or visual model), carries it out, and states in words/picture why that strategy justifies the inequality symbol."
+        },
+        {
+          "item": "2. 2/3 ___ 7/12 (predict, solve, explain)",
+          "elicits": "Same strategy-select-execute-justify move on a second, differently-structured unlike-denominator pair."
+        },
+        {
+          "item": "3. 5/6 ___ 8/9 (predict, solve, explain)",
+          "elicits": "Same move on a pair with a less obvious common denominator, so a benchmark or eyeballed strategy is less likely to work by luck."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual, paper-only conditions with number pairs the class has not seen, this evidence supports that the student can choose a valid strategy, execute it, and state the reasoning that justifies the comparison symbol on two-fraction, unlike-denominator items like these.",
+      "does_not_support": [
+        "Does not support comparing three or more fractions at once, or pairs whose common denominator is much larger or less obvious than 8, 12, and 18.",
+        "Does not support speed or fluency, since each pair gets a single attempt inside a shared 25-minute window with eight other items.",
+        "Should not be read as evidence for G5C2's common-denominator procedure specifically, since a valid answer here may instead come from a benchmark or visual-model strategy that never constructs a common denominator.",
+        "Not a selected-response format, so no guess-rate caveat applies; the risk here is a well-rehearsed sentence frame standing in for real reasoning, which the specific, previously-unseen numbers in items 1-3 are designed to make harder to fake."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Items 1-3 are worked on paper in a proctored, individual room with AI prohibited and enforced, so the strategy and reasoning recorded have to be produced by the student in real time on numbers they have not prepared."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to choose and execute a comparison strategy on an unfamiliar unlike-denominator pair and justify the resulting symbol.",
+        "is_absent": false,
+        "assessment_evidence": "Items 1-3 each require '(a) Prediction... (b) Solution... (c) Explain every step (words or a labelled picture)' for a distinct unlike-denominator pair (3/4 vs 5/8, 2/3 vs 7/12, 5/6 vs 8/9)."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 already fails because the required element is present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 already fails."
+      },
+      "why_no_intervention": "Gate 1 fails. The element this claim needs \u2014 a fresh unlike-denominator pair where the student picks a strategy, executes it, and explains the symbol \u2014 is already supplied three times over (items 1-3), so there is no actual absence to intervene on.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The prediction box adds a fourth data point per comparison but the claim does not call for a pre-computation guess, and the full-sentence 'explain every step' requirement is already doing the justification work the claim needs; a second or third comparison item beyond the three already present would be redundant for this claim.",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4. 1/2 + 1/3 = ___ (predict, solve, explain)",
+          "elicits": "Constructs a common denominator (6) and combines the numerators to produce a sum."
+        },
+        {
+          "item": "5. 5/6 - 1/4 = ___ (predict, solve, explain)",
+          "elicits": "Constructs a common denominator (12) and combines (subtracts) the like-sized parts."
+        },
+        {
+          "item": "6. 2 1/3 + 1 3/4 = ___ (predict, solve, explain)",
+          "elicits": "Constructs a common denominator across mixed numbers, combines, and regroups the improper fraction part into a whole number to produce a mixed-number sum."
+        },
+        {
+          "item": "7. Maya word problem, answer as a mixed number",
+          "elicits": "Translates a context into an addition of unlike fractions, constructs a common denominator, combines, and converts the result to a mixed number as instructed."
+        },
+        {
+          "item": "8. Jonah recipe word problem",
+          "elicits": "Translates a context into a subtraction of unlike fractions and constructs/combines via a common denominator."
+        },
+        {
+          "item": "9. Find-the-mistake (secondary)",
+          "elicits": "As a secondary signal only: produces a correct common-denominator sum for 1/2 + 1/4 once the error is identified."
+        },
+        {
+          "item": "Teacher conference on item 6 (oral)",
+          "elicits": "A second, live, individually-observed account of how the common denominator and regrouping were produced, independent of the written work."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under the declared conditions, this evidence supports that the student can construct a common denominator, combine like-sized parts by addition or subtraction, and simplify or regroup to a mixed number where the problem calls for it, across both bare-number and word-problem forms.",
+      "does_not_support": [
+        "Does not, by itself, confirm the student can use a constructed common denominator to COMPARE two fractions (only 'combines' is directly tested here; 'compares' may have been done in Part A without ever building a common denominator, since benchmark and visual strategies are also valid there).",
+        "Does not support fluency under repeated, timed practice, since the common-denominator sub-skill and the regroup-to-mixed-number sub-skill are each tested in at most two items inside a shared 25-minute window.",
+        "Should not be read as evidence for G5C3 (diagnosing the denominator-addition error); producing a correct sum here does not show the student can locate that error in someone else's work.",
+        "Not a selected-response format, so no guess-rate caveat applies; the risk is scoring drift between crediting the correct written computation and crediting the quality of the prose explanation, which are two different things for a procedural claim."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The common-denominator work is done on paper under AI-enforced, individually-proctored conditions, and item 6 is additionally defended aloud at the post-test conference, which a submission produced by someone or something else could not survive."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to build a common denominator, combine the parts, and simplify or regroup to a mixed number where the numbers call for it.",
+        "is_absent": false,
+        "assessment_evidence": "Item 6 (2 1/3 + 1 3/4) and item 7 (Maya's mileage, 'Write your answer as a mixed number') both require the common-denominator-then-regroup sequence; items 4, 5, and 8 require the common-denominator-then-combine sequence."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 already fails because the required element is present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 already fails."
+      },
+      "why_no_intervention": "Gate 1 fails. Five separate items (4-8) already require constructing a common denominator and combining, and two of them (6, 7) also require regrouping to a mixed number, so nothing this claim needs is missing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "This claim is procedural, so the worked computation itself (the common denominator shown, the combined numerators, the regrouped mixed number) already carries the evidence; the required full-sentence-or-picture explanation on every one of items 4-8, on top of five worked solutions, adds grading cost without adding anything this claim needs, and item 6's own written work is further duplicated by the oral conference on the same item.",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9. Find the mistake: 1/2 + 1/4 'got 2/6' \u2014 explain the error and give the correct answer (predict, solve, explain)",
+          "elicits": "Names why adding the denominators produces a wrong-sized part (2/6 is not built from halves or quarters) and constructs the correct common-denominator sum."
+        },
+        {
+          "item": "Teacher conference on item 9 (oral)",
+          "elicits": "A second, live, individually-observed explanation of the same error and the same correct sum, independent of what was written."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under the declared conditions, this evidence supports that the student can state why adding the denominators in 1/2 + 1/4 produces a wrong-sized part and can supply the correct sum, corroborated a second time by an unscripted oral account of the same error at the conference.",
+      "does_not_support": [
+        "Does not support diagnosing other common fraction-operation errors (e.g., subtracting straight across, forgetting to convert a mixed number, misapplying a common denominator in subtraction) \u2014 only the specific 'add the denominators' error is tested.",
+        "Does not support catching this error unprompted in the student's own future work; this item hands the student an already-written mistake to locate, which is a different move from self-monitoring.",
+        "Should not be read as evidence for G5C2 fluency in general; the correct sum recovered here is one instance tied to the repair of this one error, not a separate procedural sample.",
+        "Not a selected-response format, so no guess-rate caveat applies; the live conference already closes most of the remaining doubt about whether a written explanation reflects real understanding."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The written explanation is produced on paper under proctored, AI-enforced conditions, and is then defended aloud, unscripted, at an individual conference, which is the single hardest feature to delegate in the whole assessment."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to explain why adding denominators yields a wrong-sized part and to supply the correct sum for that same problem.",
+        "is_absent": false,
+        "assessment_evidence": "Item 9: 'A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer,' reinforced by 'each student meets with the teacher for five minutes to explain items 6 and 9 aloud.'"
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 already fails because the required element is present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 already fails."
+      },
+      "why_no_intervention": "Gate 1 fails. Item 9 already requires exactly the diagnosis-and-repair move this claim names, and the oral conference independently re-collects the same evidence, so there is no absence to justify adding anything.",
+      "no_short_check_reason": "",
+      "over_verified_note": "This claim is carried twice over by a single problem: the written diagnose-and-repair item and a live oral re-explanation of the identical item at the conference. That is more independent verification than one diagnostic claim needs; if classroom time is tight, the redundant one (most likely the conference, since it costs five live minutes per student against a written item that already stands on its own) is the one worth reconsidering, not adding to.",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Proctored, individual, paper-and-pencil work with AI prohibited and enforced, summative, 25 minutes, end of Unit 4; the item types were practised beforehand but these specific numbers and problems were not, so novelty holds across the assessment.",
+  "reviewer_notes": "All three claims already have at least one independent, novel, claim-targeted observation, and none has an actual absence, so no additional observation is proposed for any of them \u2014 this assessment is doing its job as evidence for G5C1-G5C3. The instrument is, if anything, over-built for that job: every one of 9 items carries a prediction box plus a full explain-every-step box regardless of whether the claim needs that explanation, items 6 and 9 are each verified twice (once in writing, once live at conference), and a full-page reflection is required that does not map to any of the three named claims. None of this makes the existing claim-targeted evidence wrong, and none of it is treated here as a gap \u2014 it is redundant capacity, not missing capacity. Separately, and outside this audit's scope: fitting 9 predict/solve/explain items, a one-page reflection, and (later) a two-item oral conference inside a declared 25-minute window is a feasibility question for the teacher, not an evidentiary one."
+}

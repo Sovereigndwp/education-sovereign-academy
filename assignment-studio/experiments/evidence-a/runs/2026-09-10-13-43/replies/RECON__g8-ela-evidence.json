@@ -1,0 +1,95 @@
+{
+  "reading_a": {
+    "label": "Analytical reading: inferring point of view and explaining how the text's craft and argumentative structure convey and defend it",
+    "claims": [
+      {
+        "id": "A1",
+        "statement": "Infers the author's underlying stance from cues such as the closing hedge (\"I am not sure the numbers are the only thing that should be counted\") rather than restating the passage's surface verdict, and expresses that stance in the student's own original language.",
+        "claim_type": "conceptual",
+        "quoted_verb": "State the author's point of view in your own words (do not just say \"the author is against it\")",
+        "items": [
+          "Bullet 1",
+          "Rubric 1"
+        ]
+      },
+      {
+        "id": "A2",
+        "statement": "Selects, from the full passage, two specific details that function as signals of point of view rather than merely relevant facts, and reproduces them by quotation or close paraphrase.",
+        "claim_type": "representational",
+        "quoted_verb": "Quote or closely paraphrase two pieces of textual evidence that reveal the author's point of view",
+        "items": [
+          "Bullet 2",
+          "Rubric 2"
+        ]
+      },
+      {
+        "id": "A3",
+        "statement": "Names and explains the specific rhetorical mechanism (word choice, contrast, placement, or selective inclusion) by which each chosen detail conveys the author's position, tying the technique to the stance rather than just restating the detail.",
+        "claim_type": "conceptual",
+        "quoted_verb": "explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include)",
+        "items": [
+          "Bullet 3",
+          "Rubric 3"
+        ]
+      },
+      {
+        "id": "A4",
+        "statement": "Traces the passage's argumentative structure by identifying where the author concedes the engineer's case and where and how the author answers it, distinguishing concession from rebuttal.",
+        "claim_type": "conceptual",
+        "quoted_verb": "acknowledges and responds to the engineer's case for replacement",
+        "items": [
+          "Bullet 4",
+          "Rubric 4"
+        ]
+      }
+    ]
+  },
+  "reading_b": {
+    "label": "Evidence-based paragraph writing: assembling a claim-evidence-explanation-counterclaim structure, with this passage serving as the content vehicle",
+    "claims": [
+      {
+        "id": "B1",
+        "statement": "Produces a single paragraph within the specified length band, organized so that a stated claim, supporting evidence, explanation, and counterclaim-handling all appear inside one continuous unit of writing.",
+        "claim_type": "procedural",
+        "quoted_verb": "one well-developed paragraph (8–12 sentences)",
+        "items": [
+          "Length requirement"
+        ]
+      },
+      {
+        "id": "B2",
+        "statement": "Attaches two pieces of textual support to the stated claim, credited for being present and relevant rather than for revealing unusual interpretive insight.",
+        "claim_type": "procedural",
+        "quoted_verb": "Two relevant pieces of evidence (1)",
+        "items": [
+          "Bullet 2",
+          "Rubric 2"
+        ]
+      },
+      {
+        "id": "B3",
+        "statement": "Writes a sentence linking each piece of evidence back to the stated claim, credited whenever the link is coherent, regardless of which technique label (word choice, contrast, placement, or inclusion) is invoked or whether that label is the most accurate one available.",
+        "claim_type": "procedural",
+        "quoted_verb": "Explanation connects each piece of evidence to the point of view (1)",
+        "items": [
+          "Bullet 3",
+          "Rubric 3"
+        ]
+      },
+      {
+        "id": "B4",
+        "statement": "Includes a sentence describing the opposing case and the author's reply to it, credited for descriptive accuracy about what the passage does rather than for evaluating how effective or subtle that response is.",
+        "claim_type": "application",
+        "quoted_verb": "Accurately describes how the author handles the opposing view (1)",
+        "items": [
+          "Bullet 4",
+          "Rubric 4"
+        ]
+      }
+    ]
+  },
+  "material_difference": "Reading A treats all four required moves as evidence of analytical reading comprehension: can the student detect a point of view that is not stated outright, correctly attribute it to specific rhetorical techniques, and follow the passage's concession-and-response argument structure. Under that reading the assessment's value depends on whether the named technique and the traced response are actually correct, not merely present. Reading B treats the identical four moves as evidence of a general evidence-based-paragraph-writing skill: can the student assemble a claim, attach relevant support, write a sentence that functions as an explanation, and write a sentence that functions as a counterclaim-response, with this passage supplying content but not being the object of measurement. Under that reading the rubric's actual point allocations, which award credit for presence and relevance and never require the named technique or the traced response to be correct, are exactly calibrated to the construct, and a formally complete but interpretively thin paragraph would earn full marks. The two readings license different judgments: under Reading A the rubric under-specifies correctness and may over-credit shallow analysis dressed in the right structure; under Reading B the rubric is well-matched to what it actually checks.",
+  "left_out_question": "The task offers four named techniques (word choice, contrast, placement, or what the author chooses to include) for the 'how it shows the author's position' explanation, but the rubric awards that point for any coherent explanation regardless of which technique is named or whether the label fits the evidence chosen — is identifying the specific rhetorical device meant to be its own assessed skill, perhaps covered by a separate literary-devices unit or assessment, or is the menu only scaffolding to help students generate an explanation?",
+  "preferred": "reading_a",
+  "preferred_reason": "The task's own phrasing for the fourth requirement ('acknowledges and responds to') echoes the specific language of an author's-point-of-view/conflicting-viewpoints reading standard rather than a generic writing rubric, and the explicit instruction to state the point of view in original language and not just the passage's surface verdict is a guard against shallow restatement that only makes sense if interpretive accuracy, not structural presence, is the thing being licensed."
+}

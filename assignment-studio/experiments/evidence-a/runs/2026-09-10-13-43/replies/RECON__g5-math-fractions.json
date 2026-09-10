@@ -1,0 +1,72 @@
+{
+  "reading_a": {
+    "label": "Procedural fidelity: constructing common denominators and correctly executing the add/subtract/compare algorithm",
+    "claims": [
+      {
+        "id": "A1",
+        "statement": "Orders unlike fractions by constructing a common denominator (or an equivalent-fraction comparison) and applying it consistently, with the method displayed on the page.",
+        "claim_type": "procedural",
+        "quoted_verb": "write `<`, `>`, or `=`. Then show how you know",
+        "items": ["1", "2", "3"]
+      },
+      {
+        "id": "A2",
+        "statement": "Executes the standard add/subtract-unlike-denominators algorithm, including renaming mixed numbers, and reduces the result to lowest terms, with every intermediate step recorded.",
+        "claim_type": "procedural",
+        "quoted_verb": "Show every step. Answers in simplest form.",
+        "items": ["4", "5", "6"]
+      },
+      {
+        "id": "A3",
+        "statement": "Applies the add/subtract algorithm inside a word problem, translating the story into the correct operation and formatting the numeric result as a mixed number, with the computation shown.",
+        "claim_type": "application",
+        "quoted_verb": "Show your work",
+        "items": ["7", "8"]
+      },
+      {
+        "id": "A4",
+        "statement": "Locates the specific computational step where an addition procedure breaks down and re-executes it correctly to produce the right numeric answer.",
+        "claim_type": "diagnostic",
+        "quoted_verb": "show the correct answer",
+        "items": ["9"]
+      }
+    ]
+  },
+  "reading_b": {
+    "label": "Conceptual equivalence: reasoning about why unlike-sized parts must be renamed before they can be combined or compared",
+    "claims": [
+      {
+        "id": "B1",
+        "statement": "Reasons about the relative size of two fractions using whichever representation makes the relationship visible -- a common denominator, a drawn picture, or a benchmark like 1/2 -- rather than being required to run one fixed algorithm.",
+        "claim_type": "conceptual",
+        "quoted_verb": "a common denominator, a picture, or a benchmark like ½",
+        "items": ["1", "2", "3"]
+      },
+      {
+        "id": "B2",
+        "statement": "Demonstrates that unlike-sized fractional parts must first be converted to equivalent like-sized parts before they can be combined, by making that conversion an explicit, checkable step rather than folding it into a single computed answer.",
+        "claim_type": "conceptual",
+        "quoted_verb": "Show every step",
+        "items": ["4", "5", "6"]
+      },
+      {
+        "id": "B3",
+        "statement": "Interprets a real-world situation to decide whether quantities are being joined or compared by difference, choosing the operation from the meaning of the story rather than from a cue in the problem's structure.",
+        "claim_type": "application",
+        "quoted_verb": "How far did she run in all?",
+        "items": ["7", "8"]
+      },
+      {
+        "id": "B4",
+        "statement": "Articulates, in words, why adding denominators produces a non-equivalent fraction, showing the misconception is understood at the level of what a denominator represents, not only that the numeric answer is wrong.",
+        "claim_type": "diagnostic",
+        "quoted_verb": "Explain what the student did wrong",
+        "items": ["9"]
+      }
+    ]
+  },
+  "material_difference": "Reading A treats the instructions to 'show every step,' produce 'simplest form,' and 'show your work' as evidence the instrument is built to certify correct execution of the standard algorithm, with Part A's multiple accepted strategies and Part D's explanation demand as secondary framing around that procedural core. Reading B treats those same two features -- Part A explicitly accepting a picture or benchmark in place of a computed common denominator, and Part D demanding a verbal account of why the student's step was wrong -- as the instrument's real target, with Parts B and C's computations serving only as the vehicle that makes equivalence reasoning visible. The two readings license different judgments about the same items: under A, Part A and D already do their job as procedural checks; under B, Parts B and C would need to ask students to justify their steps, not just show them, to fully earn a conceptual claim -- so a colleague could reasonably say this assessment under-supports 'understands why the algorithm works' even though it clearly supports 'can run the algorithm.'",
+  "left_out_question": "Part B's instruction 'Answers in simplest form' asks every sum and difference to also be reduced to lowest terms -- is reducing fractions its own claim this assessment is meant to give evidence about, or is it a prerequisite skill assumed already mastered and enforced here only as a formatting rule on the add/subtract items?",
+  "preferred": "reading_a",
+  "preferred_reason": "Six of the nine items (4 through 9) cash out their instructions in a computed numeric answer that must be shown step-by-step and simplified, so the majority of what the page actually collects is executed procedure, with Part A's strategy choice and Part D's explanation adding conceptual color rather than carrying most of the graded work -- though a colleague weighting those two items more heavily could reasonably disagree."
+}

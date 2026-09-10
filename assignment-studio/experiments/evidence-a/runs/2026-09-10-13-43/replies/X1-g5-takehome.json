@@ -1,0 +1,183 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Part A, Item 1 (3/4 ___ 5/8, show how you know)",
+          "elicits": "Selects a comparison strategy (common denominator, benchmark, or picture), applies it to place the correct symbol, and writes a reasoning line tied to that strategy."
+        },
+        {
+          "item": "Part A, Item 2 (2/3 ___ 7/12, show how you know)",
+          "elicits": "Same move as Item 1 with a different fraction pair: strategy choice, execution, and written justification."
+        },
+        {
+          "item": "Part A, Item 3 (5/6 ___ 8/9, show how you know)",
+          "elicits": "Same move as Items 1-2 with a third fraction pair: strategy choice, execution, and written justification."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The returned worksheet shows a response consistent with a valid comparison strategy and justification for three unlike-fraction pairs, but because it was produced unsupervised at home with AI permitted, it can only be read as a record of what was submitted, not as evidence of the named student's own strategy selection or reasoning.",
+      "does_not_support": [
+        "Does not support that the comparison strategy or reasoning was produced by the student rather than an AI assistant, a search result, or another person, since the work was completed unsupervised at home with AI explicitly permitted.",
+        "Does not support fluency or independent execution speed, since time is not stated and the work could be completed at any point over the week.",
+        "Does not distinguish G5C1 (choosing and justifying a comparison strategy) from G5C2 (constructing equivalent fractions procedurally), since a correct common-denominator comparison could be produced via the same procedural skill without engaging the benchmark or visual-model alternatives the claim also names.",
+        "For the symbol chosen, there is a real chance of a correct guess among <, >, = absent the reasoning line, and whether the accompanying reasoning is the student's own cannot be verified under these conditions."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Comparing two fractions and writing a one-line justification in benchmark, common-denominator, or picture language is a task an AI assistant solves and explains fluently, and with AI, internet, and home resources explicitly permitted and no supervision, that explanation could substitute entirely for the student's own strategy selection."
+      },
+      "gap_statement": "We cannot tell from this unsupervised, AI-permitted take-home assignment whether the comparison strategy and reasoning shown on Items 1-3 were produced by the student, so G5C1 cannot be attributed to individual performance from this evidence.",
+      "gate1_absence": {
+        "required_element": "At least one G5C1 item (a compare-two-unlike-fractions-and-justify task) completed under supervision (proctored_in_class or observed_live) so the strategy and reasoning shown can be attributed to the student.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state 'Supervision: unsupervised', 'AI policy: permitted', 'Resources permitted: anything at home, internet, AI assistant', 'sent home over a week' — Items 1-3, like every item on the assessment, are completed entirely under these conditions with no supervised item anywhere."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher's stated purpose is summative for a Unit 4 assessment where G5C1 is a named, graded claim; without a supervised observation, any grade or mastery judgment about a student's ability to choose and justify a comparison strategy rests on an artifact whose authorship is unverifiable — exactly the conclusion the teacher would otherwise draw without knowing it is unsupported."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single new compare-and-justify pair, done on paper at the start of class in under three minutes and scored in seconds by checking the symbol and the named strategy, would supply the missing independent observation for G5C1 at a cost far below the value of restoring a defensible summative judgment."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "Compare: 5/8 ___ 2/3. Write <, >, or =. Then show how you know (a common denominator, a picture, or a benchmark like 1/2).",
+        "variant_rule": "Keep the compare-and-justify format fixed; rotate the two fraction values each period so the pair does not match Items 1-3 or any pair a student could have looked up in advance; keep the strategy space open (common denominator, benchmark, or picture) rather than forcing one method; the correct symbol and the viable strategies change with the new values but the task structure stays fixed.",
+        "conditions": "proctored_in_class: individual, paper only, no phone/internet/AI/calculator, administered at the start of class and collected before students leave.",
+        "sufficiency_line": "A response counts as evidence when the student writes the correct comparison symbol AND a reasoning line naming the strategy used (the common denominator value, the benchmark comparison, or a labeled picture); a symbol alone does not count.",
+        "student_minutes": 3,
+        "scoring_seconds": 20
+      }
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Part B, Item 4 (1/2 + 1/3)",
+          "elicits": "Finds a common denominator, combines the like-sized parts, and states the answer in simplest form."
+        },
+        {
+          "item": "Part B, Item 5 (5/6 - 1/4)",
+          "elicits": "Finds a common denominator, subtracts the like-sized parts, and simplifies the result."
+        },
+        {
+          "item": "Part B, Item 6 (2 1/3 + 1 3/4)",
+          "elicits": "Finds a common denominator for the fractional parts of two mixed numbers, combines them, and regroups the sum into a mixed number in simplest form."
+        },
+        {
+          "item": "Part C, Item 7 (Maya's running distances)",
+          "elicits": "Translates a word problem into an addition of unlike fractions, executes the common-denominator procedure, and expresses the answer as a mixed number as instructed."
+        },
+        {
+          "item": "Part C, Item 8 (Jonah's flour)",
+          "elicits": "Translates a word problem into a subtraction of unlike fractions and executes the common-denominator procedure to find the difference."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The returned worksheet shows procedurally complete work, common denominators found, parts combined, and answers simplified or regrouped, for the computation and word-problem items, but under unsupervised, AI-permitted conditions this can only be read as a record of the submitted answer, not as evidence that the named student carried out the procedure independently.",
+      "does_not_support": [
+        "Does not support that the equivalent-fraction, combining, and simplifying/regrouping steps shown were produced by the student rather than an AI assistant or other outside help, since the work was completed unsupervised at home with AI explicitly permitted.",
+        "Does not support procedural fluency under time pressure, since no time limit was enforced and the work could be completed at any point across the week.",
+        "Does not support G5C1's strategy-selection reasoning (benchmark or visual-model comparison), since these items only require the common-denominator/combine/simplify procedure, not a chosen comparison strategy.",
+        "Does not support that the student can produce this procedure without a worked example, calculator, or app, since any such aid was explicitly permitted."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Finding a common denominator, combining like-sized parts, and simplifying or regrouping is a fully-specified, routine procedure that a calculator, app, or AI assistant executes exactly and shows step by step, and with AI, internet, and home resources explicitly permitted and no supervision, that output could substitute entirely for the student's own execution."
+      },
+      "gap_statement": "We cannot tell from this unsupervised, AI-permitted take-home assignment whether the equivalent-fraction, combining, and simplifying/regrouping steps shown on Items 4-8 were produced by the student, so G5C2 cannot be attributed to individual performance from this evidence.",
+      "gate1_absence": {
+        "required_element": "At least one G5C2 item (constructing equivalent fractions, combining, and simplifying/regrouping) completed under supervision so the procedure shown can be attributed to the student.",
+        "is_absent": true,
+        "assessment_evidence": "Items 4-8 are administered under the same declared conditions as the rest of the assessment: 'Supervision: unsupervised', 'AI policy: permitted', 'sent home over a week' — no item in Parts B or C is supervised."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher's stated purpose is summative and G5C2 is a named, graded claim covering core procedural fraction skills; without a supervised observation, a grade or mastery judgment about the student's own equivalent-fraction and simplification procedure rests on an artifact whose authorship is unverifiable, which the teacher would otherwise take as individual evidence."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single new add-or-subtract-with-regrouping item, done on paper at the start of class in under four minutes and scored by checking the common-denominator step and the final simplified/regrouped answer, would supply the missing independent observation for G5C2 at a cost far below the value of restoring a defensible summative judgment."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "Add: 5/6 + 3/4 = ______. Show every step. Give your answer in simplest form.",
+        "variant_rule": "Keep the add-with-unlike-denominators-requiring-regrouping format fixed; rotate the two proper fractions each period so the sum exceeds 1 and must be converted to a mixed number, and so the pair does not repeat Part B; the common denominator and final answer change with the new values but the procedure (equivalent fractions, combine, simplify/regroup) stays fixed.",
+        "conditions": "proctored_in_class: individual, paper only, no phone/internet/AI/calculator, administered at the start of class and collected before students leave.",
+        "sufficiency_line": "A response counts as evidence when the student shows the equivalent-fraction step (common denominator visible), the combined numerator, and a correctly simplified/regrouped final answer; a bare final answer without the intermediate step does not count.",
+        "student_minutes": 4,
+        "scoring_seconds": 25
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Part D, Item 9 (student added 1/2 + 1/4 and got 2/6)",
+          "elicits": "Names the specific misconception (adding denominators instead of finding like-sized parts) that produces a wrong-sized part, and computes the correct sum."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "The returned worksheet shows an explanation of the denominator-adding error together with a corrected sum, but under unsupervised, AI-permitted conditions this can only be read as a record of the submitted explanation, not as evidence that the named student diagnosed the error independently.",
+      "does_not_support": [
+        "Does not support that the explanation of the error was generated by the student rather than an AI assistant, since AI use is explicitly permitted and unsupervised.",
+        "Does not support that the student would catch this error type unprompted in their own future work, since the item flags exactly where the mistake is rather than requiring the student to locate an unflagged error.",
+        "Does not support G5C2's procedural fluency independent of diagnosis: naming the misconception in words does not by itself confirm the student can execute the correct addition procedure without help, and the provenance of the corrected sum shown here is equally unverifiable.",
+        "Does not support generalization to other wrong-sized-part errors (for example subtracting denominators, or mis-simplifying), since only the add-the-denominators error is presented."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Naming why adding denominators produces a wrong-sized part and supplying the correct sum is a well-known, easily-searched misconception explanation that an AI assistant produces on request, and with AI, internet, and home resources explicitly permitted and no supervision, that explanation could substitute entirely for the student's own diagnosis."
+      },
+      "gap_statement": "We cannot tell from this unsupervised, AI-permitted take-home assignment whether the error explanation and correction shown on Item 9 were produced by the student, so G5C3 cannot be attributed to individual performance from this evidence.",
+      "gate1_absence": {
+        "required_element": "At least one G5C3 item (diagnosing the denominator-adding error and giving the correct sum) completed under supervision so the explanation and correction can be attributed to the student.",
+        "is_absent": true,
+        "assessment_evidence": "Item 9, the only item targeting G5C3, is administered under the same declared conditions as the rest of the assessment: 'Supervision: unsupervised', 'AI policy: permitted', 'sent home over a week'."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher's stated purpose is summative and G5C3 is a named, graded diagnostic claim; without a supervised observation, a judgment that the student personally holds or has repaired the denominator-adding misconception rests on an explanation whose authorship is unverifiable, which the teacher would otherwise take as individual evidence."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single new diagnose-and-correct item, reusing the same error type with new numbers, done on paper at the start of class in under three minutes and scored by checking the named error and the corrected sum, would supply the missing independent observation for G5C3 at a cost far below the value of restoring a defensible summative judgment."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Diagnose",
+        "item_text": "A student solved 2/3 + 1/6 and wrote 3/9. Explain what the student did wrong, and show the correct answer.",
+        "variant_rule": "Keep the wrong-answer-diagnosis format fixed, an invented incorrect solution that added both numerators and denominators; rotate the two fractions each period so the flawed sum and the correct sum are both new and do not repeat Item 9; the error type stays fixed (denominator-adding) since that is the misconception the claim targets, only the numbers change.",
+        "conditions": "proctored_in_class: individual, paper only, no phone/internet/AI/calculator, administered at the start of class and collected before students leave.",
+        "sufficiency_line": "A response counts as evidence when the student names the specific error (added the denominators instead of finding a common denominator/like-sized parts) AND supplies the correct sum with correct work; a fixed answer alone without naming the error does not count.",
+        "student_minutes": 3,
+        "scoring_seconds": 20
+      }
+    }
+  ],
+  "conditions_echo": "Grade 5 Unit 4 fractions assessment, purpose summative, sent home unsupervised over one week with AI, internet, and any home resource explicitly permitted, completed individually; time not stated; numbers and problems are new to the students though the item types have been practised.",
+  "reviewer_notes": "All three claims are blocked at the same point for the same reason: the items are well-matched to their claims (Part A pairs strategy choice with required justification for G5C1; Part B/C pair procedure with word-problem transfer for G5C2; Item 9 pairs error-naming with correction for G5C3), but the entire instrument is administered unsupervised with AI explicitly permitted, which removes independence from every item uniformly. This is a property of the administration, not of item design, so it applies identically across all three claims. If this same assessment were administered proctored_in_class with the same items, no additional observation would be needed for any claim; the gap is about where and how it is completed, not what it asks."
+}

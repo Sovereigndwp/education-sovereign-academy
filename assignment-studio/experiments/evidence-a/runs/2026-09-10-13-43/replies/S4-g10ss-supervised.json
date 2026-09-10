@@ -1,0 +1,180 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "Part A, Q1 (\"For each document, identify the author, the year, and the audience the author was most likely trying to reach. One line each.\")",
+          "elicits": "records the author and year printed in each document's own heading, and infers from the document's content, tone, and publication venue the audience the author was most likely addressing."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude, for each document, whether the student can correctly record the given citation information and infer the document's likely intended audience from its content and venue, under supervised, novel conditions.",
+      "does_not_support": [
+        "Does not show whether the student can determine authorship or publication date when that information is not explicitly printed on the source \u2014 a related but distinct sourcing skill from the one this item exercises.",
+        "Does not evidence H2 (contrasting causal explanations), H3 (explaining authorial motive), or H4 (weighted argument) \u2014 those are separate claims carried by later items.",
+        "The audience answer is not required to include a justification, so a correct one-line answer does not by itself show which textual or contextual clue the student used \u2014 a well-reasoned inference and a lucky guess read the same on the page."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Produced individually in the room with only the two documents and paper, AI prohibited and enforced, so the recorded sourcing judgments are the student's own in-the-moment reading."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "an item requiring the student to determine authorship or publication date from internal clues, without it being printed on the document",
+        "is_absent": true,
+        "assessment_evidence": "Both document headers state the author and year directly (\"Andrew Carnegie ... June 1889\"; \"...Omaha Platform ... July 1892\"), and Q1 only asks students to record author, year, and audience, not to attribute an unlabeled source."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": false,
+        "why": "H1 as the teacher wrote it asks students to record author/year and infer audience; it does not require blind attribution. Standard sourcing pedagogy (consistent with the prior 'sourcing practice' the teacher describes) treats citation as given information from which audience/purpose is inferred, so the claim is already satisfied by the audience-inference portion of the item."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 2 failed."
+      },
+      "why_no_intervention": "Gate 2 fails: the absence is real (no item tests blind attribution) but not material, because H1 does not ask for attribution without a citation and the item already produces genuine sourcing evidence through the audience-inference it does require.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "Part A, Q2 (state how each document explains the wealth gap, one sentence each)",
+          "elicits": "extracts each author's stated cause for the same fact (Carnegie: a natural, beneficial outcome of civilizational change; the Omaha Platform: governmental injustice and corruption) and states it in one sentence per document, producing a direct contrast."
+        },
+        {
+          "item": "Part A, Q3 (choose one word/phrase from each document showing attitude toward great fortunes, and explain what it reveals)",
+          "elicits": "selects a specific word or phrase from each document and states what attitude toward wealth it signals \u2014 a close-reading move linking diction to authorial stance."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude the student can identify and contrast each author's stated cause for the same historical fact, and can connect a specific word choice to that author's attitude, under supervised, novel conditions.",
+      "does_not_support": [
+        "Does not show the student can perform this contrast when the two documents to compare are not already paired for them \u2014 here the assessment hands the student exactly the two texts and the fact to contrast; identifying which documents or facts are worth contrasting is not exercised.",
+        "Does not evidence H3 (explaining why each author wrote as they did) or H4 (weighing evidence in a constructed argument) \u2014 those are separate, later claims.",
+        "Q2 and Q3 are scored as separate one-line answers, so this evidence does not show whether the student can integrate the diction-level attitude evidence (Q3) into the causal contrast itself (Q2) \u2014 only that each move can be performed on its own."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Same in-room, resource-limited, AI-prohibited-and-enforced conditions as H1; the contrast and the diction reading must be produced from the two novel excerpts with no outside help available."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "an item that asks the student to connect the chosen attitude-revealing word or phrase (Q3) back to the causal explanation (Q2), integrating the two moves the claim names",
+        "is_absent": true,
+        "assessment_evidence": "Q2 and Q3 are asked and presumably scored as two independent one-line/short responses; no item asks the student to fuse the diction evidence into the causal-contrast statement."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": false,
+        "why": "H2 names two moves joined by 'and' \u2014 contrast the causal explanations, and read a word/phrase for attitude \u2014 not their fusion into a single integrated statement. The teacher's own wording does not ask for that integration, so its absence does not limit the inference the teacher intends to draw."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 2 failed."
+      },
+      "why_no_intervention": "Gate 2 fails: H2 as written asks for two separable moves, and Q2 and Q3 each independently elicit one of them exactly as stated; nothing the claim names is missing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "Part A, Q4 (\"Why might Carnegie, of all people, have written Document 1? Why might a farmers' and workers' party have written Document 2? Use what you know about each author's position in 1889-1892.\")",
+          "elicits": "applies taught background knowledge of each author's social/economic position in 1889-1892 to explain why that author would produce that particular document."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude the student can apply knowledge of each author's historical position to explain why that author would write as they did, under supervised, novel conditions.",
+      "does_not_support": [
+        "This is a bare 'explain why' item rather than one of the eight verification primitives; open-ended explanation is inherently slower and less consistent to score than a primitive-based item, so the reliability of what a given response demonstrates depends heavily on the rubric applied at scoring time, not on the item itself.",
+        "Does not show whether the student can produce this reasoning about a person or group whose position was not built up during the unit \u2014 'position in 1889-1892' is very likely content taught in class, so this evidences application of taught context, not independent historical research.",
+        "A thin or underdeveloped response does not distinguish between not understanding the authors' positions and difficulty producing extended written explanation in English \u2014 a real equity gap, particularly for multilingual learners, that this format does not separate out.",
+        "Does not evidence H4's evidence-weighting-in-argument move; that is assessed separately in Part B."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "AI is prohibited and enforced and the response is produced in-room under supervision with only the two documents and paper, so the explanation recorded must be the student's own, even though this open-ended format would be highly delegable if it went home unsupervised."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "an item that anchors the explanation to a specific, named historical fact about each author's position rather than allowing generic restatement",
+        "is_absent": false,
+        "assessment_evidence": "Q4 already directs students to \"Use what you know about each author's position in 1889-1892,\" which anchors the explanation to specific historical grounding rather than leaving it open to unsupported restatement."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 failed."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 failed."
+      },
+      "why_no_intervention": "Gate 1 fails: nothing named by H3's claim wording is missing from Q4 \u2014 it already requires the explanation to be grounded in each author's specific historical position, and delegation is already excluded by the supervised, AI-prohibited-and-enforced conditions.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "Part B, Q5 (two-paragraph argument responding to \"did Americans see the growing gap ... as the natural price of progress, or as evidence that the system had failed?\")",
+          "elicits": "constructs a two-paragraph argument that takes a position accounting for both documents, cites at least one piece of evidence from each, explicitly states how each author's point of view affects how much weight their claim receives, and connects the documents to one specific outside development from the period."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "The teacher may conclude the student can construct an argument addressing both documents, explicitly weigh each author's evidence by point of view, and connect that argument to an accurate outside historical development, under supervised, novel conditions.",
+      "does_not_support": [
+        "Does not show the student can repeat this performance on a different document pair or a different topic within the unit \u2014 this is one occasion, on one pair of documents about one debate.",
+        "The outside-development connection draws on recall of specific unit content (trusts, the Homestead or Pullman strikes, farm debt, the 1893 depression); a weak connection here does not distinguish a gap in argument-construction skill from a gap in recall of that specific factual content.",
+        "Does not show what the student could produce with more time or a longer format \u2014 the two-paragraph length and the 45-minute window shared with Part A caps how fully the argument can be developed.",
+        "Does not evidence whether the student can decide, from a larger set of sources, which documents are most relevant to use \u2014 this task always hands the student exactly the two documents to argue from, so document-selection judgment is not exercised."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Produced in-class under enforced no-AI supervision with only the two provided documents and paper; the two-paragraph argument must be composed by the student, in the room, in real time."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "an item requiring the student to address both documents, explicitly state how point of view affects evidence weighting, and connect an accurate outside development, all within one constructed argument",
+        "is_absent": false,
+        "assessment_evidence": "Question 5's required bullets and the stated scoring rubric (\"Position addresses both documents (1)\", \"Point of view used to weigh evidence (1)\", \"Outside development connected accurately (1)\") already require and separately score each of these three sub-moves within a single argument."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 failed."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 failed."
+      },
+      "why_no_intervention": "Gate 1 fails: every sub-move H4 names \u2014 addressing both documents, explicit point-of-view weighting, and an accurate outside connection \u2014 already has a required, separately-scored bullet in Question 5. Nothing the claim names is missing from the item.",
+      "no_short_check_reason": "Sustained, evidence-weighted argument construction has no short independent check that reaches it without pre-digesting the synthesis judgment for the student (naming the position, the weighting, or the connection would just hand the answer back); Question 5's full extended-response format is the appropriate instrument for this claim, not a short primitive.",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 10 U.S. History, end of the industrialization unit, summative. Administered proctored_in_class, individually, 45 minutes, AI prohibited and enforced, resources limited to the two provided documents and paper. The two excerpts are novel to students; they had prior sourcing practice on different documents.",
+  "reviewer_notes": "All four claims clear Gate 1 or stop at Gate 2 on immateriality; none reaches Gate 3, so no additional observation is proposed anywhere in this assessment as it stands. The instrument is tightly matched to its own claims: Q1 to H1, Q2+Q3 to H2, Q4 to H3, and Q5's rubric bullets map one-to-one onto H4's three named sub-moves. Two soft spots are worth the teacher's attention even though neither clears the bar for intervention: (1) author and year are printed in both document headers, so H1's evidentiary weight sits almost entirely in the audience-inference, not in attribution; (2) Q4 is a bare 'explain why' item rather than a primitive, which is fine for delegation under these enforced supervised conditions but makes scoring consistency and multilingual-learner equity worth watching when the rubric is applied. Under the declared conditions (proctored, individual, AI prohibited and enforced, novel documents), every item in this assessment is independent evidence of the student's own work."
+}

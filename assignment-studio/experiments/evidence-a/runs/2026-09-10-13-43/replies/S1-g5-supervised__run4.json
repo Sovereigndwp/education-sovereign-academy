@@ -1,0 +1,171 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1. 3/4 ___ 5/8 (write <, >, or =, then show how you know)",
+          "elicits": "Selects a comparison strategy (common denominator, benchmark, or picture), executes it on this specific pair, and writes reasoning that justifies the chosen symbol."
+        },
+        {
+          "item": "2. 2/3 ___ 7/12 (write <, >, or =, then show how you know)",
+          "elicits": "Same move applied to a second unlike-denominator pair where 12 is a multiple of 3."
+        },
+        {
+          "item": "3. 5/6 ___ 8/9 (write <, >, or =, then show how you know)",
+          "elicits": "Same move applied to a pair where neither denominator divides the other, inviting either an LCD (18) or a distance-from-1 benchmark strategy."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A correct, reasoned response on these items licenses the conclusion that the student can choose a valid strategy (equivalent fractions, a benchmark, or a visual model), execute it on an unlike-denominator pair, and give reasoning that supports the resulting symbol.",
+      "does_not_support": [
+        "Does not confirm the student can use more than one of the three named strategies, since a student who defaults to the same strategy on all three items still earns full credit.",
+        "Does not confirm comparison skill on pairs that lack a 'nice' denominator relationship, since all three pairs here have one denominator dividing the other or a small LCD.",
+        "Does not, at the item-design level, guarantee that a correct symbol is backed by valid reasoning rather than lucky estimation \u2014 that separation happens at scoring, when the 'how you know' line is checked.",
+        "Adjacent claim: a correct symbol with thin or missing reasoning could be mistaken for evidence toward G5C2 (fraction computation), but comparing size and combining amounts are different moves."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The strategy and reasoning must be written out by hand in the room under enforced no-AI supervision, so nothing here can be produced by an outside source without also being observed."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that pairs a comparison symbol with a required written strategy/reasoning, not just the symbol alone.",
+        "is_absent": false,
+        "assessment_evidence": "Items 1-3 each instruct: 'write <, >, or =. Then show how you know (a common denominator, a picture, or a benchmark like 1/2).' The reasoning is required, not optional."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached \u2014 Gate 1 found no absence."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached \u2014 Gate 1 found no absence."
+      },
+      "why_no_intervention": "Gate 1 fails: the required element (symbol plus strategy-based reasoning) is already present in items 1-3, so there is nothing missing to justify an addition.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4. 1/2 + 1/3 = ______ (show every step, simplest form)",
+          "elicits": "Constructs equivalent fractions with a common denominator (sixths) and adds the like-sized parts; the result happens to already be in simplest form."
+        },
+        {
+          "item": "5. 5/6 - 1/4 = ______ (show every step, simplest form)",
+          "elicits": "Constructs equivalent fractions with a common denominator (twelfths) and subtracts the like-sized parts; the result happens to already be in simplest form."
+        },
+        {
+          "item": "6. 2 1/3 + 1 3/4 = ______ (show every step, simplest form)",
+          "elicits": "Constructs equivalent fractions with a common denominator (twelfths), adds mixed numbers, and regroups an improper fractional part into an additional whole (13/12 -> 1 1/12) to report a mixed-number answer."
+        },
+        {
+          "item": "7. Maya's distances word problem (3/4 mile + 5/6 mile, answer as a mixed number)",
+          "elicits": "Applies the same common-denominator addition and mixed-number regrouping inside a word-problem context, and must first select addition as the correct operation."
+        },
+        {
+          "item": "8. Jonah's flour word problem (2/3 cup - 1/4 cup)",
+          "elicits": "Applies common-denominator subtraction inside a word-problem context and must first select subtraction as the correct operation."
+        },
+        {
+          "item": "9. Find the mistake (secondary contribution) \u2014 corrected sum for 1/2 + 1/4",
+          "elicits": "As a secondary check, produces one more correct common-denominator sum (3/4); the item's primary target is the diagnostic claim G5C3."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Constructs equivalent fractions with a common denominator, combines or compares like-sized parts, and regroups an improper fraction into a mixed number when the item requires it; simplifying a computed result to lowest terms is not observed anywhere in this assessment.",
+      "supports": "A fully correct paper licenses the conclusion that the student can find a common denominator, add or subtract the like-sized parts, and regroup an improper fraction into a mixed number, across both bare computations and word-problem contexts.",
+      "does_not_support": [
+        "Does not show the student can reduce a computed sum or difference to lowest terms: every one of the five computed answers in Parts B and C (5/6, 7/12, 4 1/12, 1 7/12, 5/12) is already in simplest form, so the reduction step named in the claim is never triggered by this version of the assessment.",
+        "Does not confirm computation with three or more addends, or with denominator pairs whose LCD is not simply a shared multiple of the two given denominators.",
+        "Adjacent claim: a correct final answer here could be mistaken for evidence of the comparison reasoning in G5C1, but computing a sum and judging relative size are different moves.",
+        "No selected-response items are used for this claim, so no guess-rate caveat applies."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "All five computations are shown step-by-step on paper under supervision with AI excluded, so the procedure itself is what gets observed and cannot be produced by an outside source without that process being visible."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student can reduce a computed sum or difference to lowest terms, because every computed answer in Parts B and C is already in simplest form and the assessment never requires an actual reduction step.",
+      "gate1_absence": {
+        "required_element": "An item whose correct sum or difference is not already in lowest terms, so the student must reduce it as the final step.",
+        "is_absent": true,
+        "assessment_evidence": "Checking each computation: 1/2+1/3=5/6, 5/6-1/4=7/12, 2 1/3+1 3/4=4 1/12, 3/4+5/6=1 7/12, 2/3-1/4=5/12 \u2014 every result is already fully reduced; no item in Parts B, C, or D produces a reducible fraction."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "'Simplifies ... where the item requires it' is an explicit clause of the teacher's own claim, assessed summatively at the end of the unit; a fully correct paper would read as full evidence for that clause even though the clause is never exercised, so the teacher would draw a conclusion this evidence does not carry."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One short add/subtract item with numbers chosen so the answer reduces closes the gap directly; it reuses a format the student has already practiced, costs about two minutes and a few seconds to score, and needs no new rubric."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "1/6 + 1/2 = ______ Show your steps and write your answer in simplest form.",
+        "variant_rule": "Keep the operation (addition of two unlike fractions) and the common-denominator requirement fixed. Vary the specific fractions each period, but always choose a pair whose sum shares a common factor greater than 1 with its denominator, so the last step must be a genuine reduction (e.g., 1/6+1/2=4/6=2/3). Avoid any pair, like the ones already in Parts B/C, whose sum lands in lowest terms without a reduction step.",
+        "conditions": "Same as the rest of the assessment: proctored_in_class, individual, paper and pencil only, AI prohibited and enforced, numbers not seen in advance.",
+        "sufficiency_line": "Counts as evidence if the student converts to a common denominator, adds correctly, and writes the reduced answer (2/3), not the unreduced form (4/6).",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.",
+          "elicits": "Diagnoses an unfamiliar incorrect solution by naming the controlling error (adding denominators instead of finding a common one), and separately produces the correct sum (3/4)."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A correct response licenses the conclusion that the student can state why adding denominators produces a wrong-sized part in this error pattern and can compute the correct sum in its place.",
+      "does_not_support": [
+        "Does not confirm the student can diagnose other common Grade-5 fraction errors, such as subtracting without a common denominator, adding numerators and denominators separately in a subtraction, or mis-regrouping a mixed number \u2014 only the 'add the denominators' error is presented.",
+        "Does not confirm the student can generate a correct method unprompted; here the diagnosis is scaffolded by an already-given incorrect worked example.",
+        "A correct final answer (3/4) alone, without a stated reason naming the denominator error, should not be read as evidence for this claim \u2014 the claim requires both parts, and scoring needs to track that.",
+        "Adjacent claim: this item's corrected sum overlaps with G5C2's addition skill, but the primary move here is diagnostic (locating and naming the error), not independent computation."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The written explanation and corrected sum are produced by hand in the room under enforced no-AI supervision, so the reasoning about the controlling error is directly observed."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item presenting an unfamiliar incorrect solution built on the 'add the denominators' error, requiring both a stated reason and a corrected sum.",
+        "is_absent": false,
+        "assessment_evidence": "Item 9: 'A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer' \u2014 supplies exactly this."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached \u2014 Gate 1 found no absence."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached \u2014 Gate 1 found no absence."
+      },
+      "why_no_intervention": "Gate 1 fails: item 9 already supplies an unfamiliar incorrect solution built on exactly the named error, and requires both a stated reason and the corrected sum, so nothing is missing to add.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "proctored_in_class, individual, AI prohibited_and_enforced, paper and pencil only, summative, 25 minutes, end of Unit 4; item type practised in advance but these numbers and problems are new to students.",
+  "reviewer_notes": "Because the whole assessment is proctored, individual, AI-excluded, and uses numbers the students have not seen, the independent and novel conditions hold for every item; the claim-by-claim work below turns on whether each claim's specific sub-skills are actually exercised. G5C1 and G5C3 are each fully carried by the items already on the page. G5C2 is carried for common-denominator construction, combining like-sized parts, and regrouping to a mixed number, but the 'simplifies ... where required' clause is never triggered because every computed answer in this version happens to land in lowest terms already \u2014 the one proposed item is a direct numbers swap, not a redesign."
+}

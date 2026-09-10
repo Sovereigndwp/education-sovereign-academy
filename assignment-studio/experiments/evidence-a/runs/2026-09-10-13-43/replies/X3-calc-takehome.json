@@ -1,0 +1,210 @@
+{
+  "claims": [
+    {
+      "claim_id": "K1",
+      "items": [
+        {
+          "item": "Part A, items 1-4: evaluate ∫ x e^{2x} dx, ∫ (3x+1)/(x^2+x-6) dx, ∫ sin^3(x) cos^2(x) dx, ∫ x/√(9-x^2) dx, naming the technique next to each answer.",
+          "elicits": "Produces a complete antiderivative for each of four integrands and labels the technique used after computing it — an execution move, not a pre-computation selection move."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "Only that a submission exists containing a technique-labeled, apparently correct antiderivative for each of the four integrands; it cannot support that the named student personally executed the technique, because the declared conditions (unsupervised, AI assistant/CAS/internet permitted, sent home) do not exclude a tool having produced it.",
+      "does_not_support": [
+        "Does not support that this student, individually and without assistance, executed the technique, since production occurred unsupervised with AI/CAS/internet explicitly permitted.",
+        "Does not support technique-selection ability (K2) in isolation, since the item bundles selection and execution and the label is written after the answer is already known.",
+        "Does not support unaided procedural fluency: the assessment's own printed 'No calculator · No notes · Closed book' header is unenforceable once the paper leaves the classroom under the declared unsupervised, AI-permitted, take-home conditions.",
+        "Does not support procedural fluency beyond the four sampled integrands or generalize to techniques not represented here."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Any of the four integrands can be typed into a CAS or AI assistant, which returns both the antiderivative and a plausible technique name, so the entire required response is producible without the student executing anything."
+      },
+      "gap_statement": "We cannot tell from this assessment, as administered, whether the student can execute integration techniques independently, since every item was completed unsupervised with a calculator, notes, internet, and an AI assistant all permitted.",
+      "gate1_absence": {
+        "required_element": "An item completed under supervision (proctored_in_class or observed_live) so the response can be attributed to the student rather than to a permitted AI assistant or CAS.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state Supervision: unsupervised, AI policy: permitted, Resources permitted: anything at home, internet, AI assistant, CAS, and the quiz is 'sent home over a weekend'; no item in the assessment is completed in the presence of a supervisor, so this element is absent from the whole instrument, including Part A."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and the teacher intends an individual conclusion about K1; with the item unsupervised and AI/CAS explicitly permitted, the teacher cannot tell whether a submitted antiderivative reflects the student's own execution or a tool's output, which they would not otherwise know from the submission alone."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single short, in-class, closed-resource item on the same technique family supplies the first independent observation for K1 at a small one-time classroom cost, closing a complete evidentiary gap rather than adding a further rep to evidence that already exists."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "In class, closed book, no calculator, no notes, no AI or internet access: Evaluate ∫ x e^{3x} dx.",
+        "variant_rule": "Change one surface parameter (e.g. the exponent coefficient, or swap e^{kx} for a different k, or change sin^3 x cos^2 x to sin^2 x cos^3 x) of a form already drilled in class or on this quiz; keep the technique and the number of applications fixed; the numeric details of the correct answer must change; never reuse an integrand appearing verbatim on this quiz or in homework.",
+        "conditions": "Supervised, in class, closed book, no calculator, no notes, no AI or internet, individual, at the start of the next class period.",
+        "sufficiency_line": "Counts as evidence when the response shows the correct technique applied to this integrand and reaches a correct final antiderivative, or shows a single locatable arithmetic slip that does not change which technique was applied.",
+        "student_minutes": 3,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "K2",
+      "items": [
+        {
+          "item": "Part B, items 5(a)-(c): name the technique and write the substitution, decomposition or identity it depends on for ∫ x^2/√(x^2+4) dx, ∫ ln x dx, ∫ 1/(x^2-9) dx, without carrying out the integration.",
+          "elicits": "Selects a technique and states its governing substitution/decomposition/identity for three integrands prior to any computation — a compute-blind selection move."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "Only that a submission exists naming a plausible technique and its governing substitution or identity for each of the three integrands; it cannot support that this student is the one who selected and reasoned it, because AI assistant/CAS/internet are explicitly permitted and the item is unsupervised.",
+      "does_not_support": [
+        "Does not support that this student, individually and without assistance, selected the technique, since production occurred unsupervised with AI/CAS/internet explicitly permitted.",
+        "Does not support that the student can execute the technique (K1), since Part B explicitly withholds computation.",
+        "Does not support technique selection under any resource constraint, since resources at home are unlimited, unlike the constraint implied by the quiz header.",
+        "Part A's post-hoc technique labels (written after computing the answer) are not equivalent to this compute-blind selection move and add no independent evidence for K2."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "An AI assistant given the bare integrand will readily state the standard technique and its substitution or identity by pattern-matching the integral's form, so the written response requires no independent reasoning from the student under these conditions."
+      },
+      "gap_statement": "We cannot tell from this assessment, as administered, whether the student can independently select an appropriate technique and name its governing substitution or identity, since the item was completed unsupervised with an AI assistant and CAS permitted.",
+      "gate1_absence": {
+        "required_element": "An item completed under supervision (proctored_in_class or observed_live) so the technique-naming response can be attributed to the student rather than to a permitted AI assistant or CAS.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state Supervision: unsupervised, AI policy: permitted, sent home over a weekend; Part B is answered under the same unsupervised conditions as the rest of the quiz, so no supervised instance of this move exists anywhere in the assessment."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and the teacher intends an individual conclusion about K2; unsupervised with AI/CAS permitted, the teacher cannot tell whether the named technique and substitution reflect the student's own reasoning or a tool's suggestion, which they would not otherwise know from the submission."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single short, in-class item asking for technique-plus-deciding-feature on a fresh integrand supplies the first independent observation for K2 at a small classroom cost, closing a complete gap rather than adding to existing evidence, since none currently exists."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Classify",
+        "item_text": "In class, closed book, no notes, no calculator, no AI or internet access: Name the technique you would use for ∫ x^3 √(x^2+1) dx and state the one feature of the integrand that tells you so. Do not integrate.",
+        "variant_rule": "Swap in an integrand from the same technique families as Part B (a substitution/rationalizing form, a by-parts form on a non-elementary-derivative function, or a partial-fractions form) but change the specific function each period; require the technique name plus the one deciding feature; never ask for the integral's value.",
+        "conditions": "Supervised, in class, closed book, no notes, no calculator, no AI or internet, individual, at the start of the next class period.",
+        "sufficiency_line": "Counts as evidence when the student names a technique consistent with the integrand's structure and states the specific feature (e.g. 'a power of x times a function with no elementary antiderivative' or 'the denominator factors into distinct linear terms') that drove the choice.",
+        "student_minutes": 3,
+        "scoring_seconds": 25
+      }
+    },
+    {
+      "claim_id": "K3",
+      "items": [
+        {
+          "item": "Part C, item 6: a student's incorrect derivation of ∫ x cos(x^2) dx is shown; say which step does not follow and give the correct antiderivative.",
+          "elicits": "Locates which specific step of a given incorrect derivation is invalid and supplies the corrected antiderivative — a diagnostic move requiring identification of the broken inference, not just recognition that the final answer is wrong."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "Only that a submission exists identifying an invalid step and a corrected antiderivative for the given incorrect solution; it cannot support that this student personally diagnosed the error, because AI assistant/CAS/internet are explicitly permitted and the item is unsupervised.",
+      "does_not_support": [
+        "Does not support that this student, individually and without assistance, located the invalid step, since production occurred unsupervised with AI/CAS/internet explicitly permitted.",
+        "Does not support diagnostic ability across error types beyond the single error pattern sampled here (an invalid cancellation after substitution).",
+        "Does not support that the student can execute the technique from scratch (K1): recognizing that a proposed antiderivative's form looks wrong, or checking it by differentiating with a tool, does not require independently performing the original derivation.",
+        "Does not support that the student can select the technique unprompted (K2), since the technique (substitution) is already implied by the form of the incorrect solution shown."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "An AI assistant can be asked to check the given 'solution' and will locate the invalid step (an illegal cancellation of x after substitution) and supply the correct antiderivative directly, producing the full required response."
+      },
+      "gap_statement": "We cannot tell from this assessment, as administered, whether the student can independently locate an invalid step and produce a correct antiderivative, since the item was completed unsupervised with an AI assistant and CAS permitted.",
+      "gate1_absence": {
+        "required_element": "An item completed under supervision (proctored_in_class or observed_live) so the diagnosis and repair can be attributed to the student rather than to a permitted AI assistant or CAS.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state Supervision: unsupervised, AI policy: permitted, sent home over a weekend; Part C is answered under the same unsupervised conditions as the rest of the quiz, so no supervised instance of this diagnostic move exists anywhere in the assessment."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and the teacher intends an individual conclusion about K3; unsupervised with AI/CAS permitted, the teacher cannot tell whether the identified step and repair reflect the student's own diagnosis or a tool's check, which they would not otherwise know from the submission."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single short, in-class diagnose item on a fresh incorrect solution supplies the first independent observation for K3 at a small classroom cost, closing a complete gap rather than adding to existing evidence, since none currently exists."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Diagnose",
+        "item_text": "In class, closed book, no notes, no calculator, no AI or internet access: A student writes ∫ x^2 sin(x^3) dx = -x cos(x^3)/3 + C. This is wrong. Which step does not follow, and what is the correct antiderivative?",
+        "variant_rule": "Build a fresh incorrect 'solution' each period from a different substitution slip (e.g. forgetting to divide by the derivative of the inner function, or mishandling the constant of substitution) on an integrand not appearing on this quiz or in homework; keep the required response identical: name the invalid step and give the correct antiderivative.",
+        "conditions": "Supervised, in class, closed book, no notes, no calculator, no AI or internet, individual, at the start of the next class period.",
+        "sufficiency_line": "Counts as evidence when the student names the specific invalid step (not merely asserts the answer is wrong) and supplies an antiderivative that differentiates back to the given integrand.",
+        "student_minutes": 4,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "K4",
+      "items": [
+        {
+          "item": "Part D, item 7: write an integral requiring integration by parts exactly twice and say in one sentence how you know once is not enough.",
+          "elicits": "Constructs an original integrand satisfying a stated structural constraint and states, in one sentence, the feature that forces a second application — a generative-plus-justification move."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "Only that a submission exists containing an integral and a one-sentence justification claimed to require parts exactly twice; it cannot support that this student constructed and justified it personally, because AI assistant/CAS/internet are explicitly permitted and the item is unsupervised.",
+      "does_not_support": [
+        "Does not support that this student, individually and without assistance, constructed and justified the example, since production occurred unsupervised with AI/CAS/internet explicitly permitted.",
+        "Does not support that the student can perform the integration by parts they are describing (K1), since Part D never asks them to carry it out.",
+        "Does not support generative ability under any time or resource constraint, since resources at home are unlimited and there is no indication the constructed integral is even original to the student rather than copied from a search result.",
+        "Does not support that the justification sentence reflects understanding of why once is insufficient rather than a template phrase reused across similar constructions, since no follow-up probes the reasoning."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "An AI assistant or CAS, prompted to 'give an integral needing integration by parts twice, with justification,' will produce both the integral and a plausible one-sentence justification directly, with no construction effort required from the student."
+      },
+      "gap_statement": "We cannot tell from this assessment, as administered, whether the student can independently construct an integral meeting the by-parts-twice constraint and justify it, since the item was completed unsupervised with an AI assistant and CAS permitted.",
+      "gate1_absence": {
+        "required_element": "An item completed under supervision (proctored_in_class or observed_live) so the constructed example and its justification can be attributed to the student rather than to a permitted AI assistant or CAS.",
+        "is_absent": true,
+        "assessment_evidence": "The declared conditions state Supervision: unsupervised, AI policy: permitted, sent home over a weekend; Part D is answered under the same unsupervised conditions as the rest of the quiz, so no supervised instance of this generative move exists anywhere in the assessment."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and the teacher intends an individual conclusion about K4; unsupervised with AI/CAS permitted, the teacher cannot tell whether the constructed integral and its justification reflect the student's own construction or a tool's output, which they would not otherwise know from the submission."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single short, in-class generate item asking for a fresh by-parts-twice integral and justification supplies the first independent observation for K4 at a small classroom cost, closing a complete gap rather than adding to existing evidence, since none currently exists."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Generate",
+        "item_text": "In class, closed book, no notes, no calculator, no AI or internet access: Write an integral, different from any on this quiz, that requires integration by parts exactly twice to evaluate. In one sentence, say how you know once is not enough.",
+        "variant_rule": "Require a fresh integrand not appearing on this quiz or discussed in class (e.g. a different polynomial degree times a transcendental factor, or a different transcendental factor entirely); keep the required response identical: the integral plus a one-sentence justification naming why one application still leaves a by-parts-eligible or non-elementary term rather than a directly integrable one.",
+        "conditions": "Supervised, in class, closed book, no notes, no calculator, no AI or internet, individual, at the start of the next class period.",
+        "sufficiency_line": "Counts as evidence when the constructed integral genuinely requires two applications of parts (verified against the teacher's own check) and the sentence names the specific feature left after one application, rather than restating 'it needs two steps.'",
+        "student_minutes": 5,
+        "scoring_seconds": 40
+      }
+    }
+  ],
+  "conditions_echo": "Unsupervised, individual, AI policy permitted (anything at home: internet, AI assistant, CAS), summative purpose, time not stated, sent home over a weekend after the techniques-of-integration sequence; the integrands themselves are new to the students though each technique has been practised.",
+  "reviewer_notes": "All four claims fail the independence condition for the same structural reason, not four separate reasons: the entire instrument is administered unsupervised with AI, CAS and internet explicitly permitted, so no item anywhere in this quiz produces an observation that is independent as defined, regardless of how well each item is otherwise matched to its claim (and several are well matched — Part B's compute-blind selection, Part C's diagnose, and Part D's generate-plus-justify are each a clean fit for K2, K3 and K4 respectively as designed items). The assessment sheet's own printed header, 'No calculator · No notes · Closed book,' is contradicted by the teacher's declared administration conditions (unsupervised, take-home, AI/internet/CAS permitted) and is unenforceable once the paper leaves the room; it was not treated as evidence of supervision. Because the gap is identical in kind across all four claims, the proposed interventions are parallel by design: one short, in-class, closed-resource item per claim, each reusing the same primitive the take-home item already uses, which is the smallest way to recover a first independent observation without redesigning the quiz itself, which stays exactly as it is and continues to serve whatever formative or practice purpose it already serves."
+}

@@ -1,0 +1,49 @@
+{
+  "claims": [
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "Part B, Question 5 (the two-paragraph argument)",
+          "elicits": "Composes a written argument that takes a position accounting for both documents (or explains that groups saw it differently), cites at least one piece of evidence from each document, explicitly states how each author's point of view affects how much weight their claim is given, and links the documents to one specific outside development from the period (e.g., trusts, Homestead/Pullman strikes, farm debt, the 1893 depression)."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a completed Part B response licenses the conclusion that the student can, individually and without AI, construct a written argument that takes a position accounting for both documents, uses evidence from each, explicitly weighs that evidence by the author's point of view, and connects the documents to an accurate outside development from the period -- the full H4 claim, produced on documents novel to the student.",
+      "does_not_support": [
+        "Does not verify sourcing accuracy or point-of-view identification as standalone skills outside this argument; the teacher assesses those separately on the prior unit test, and Part A here (items 1-4) is explicit, ungraded warm-up that is not counted as evidence for H4.",
+        "Does not show whether the student can perform the same synthesis on a different document pair or a different topic within the unit -- this is a single instance on a single topic (Gilded Age wealth).",
+        "Does not, from a single total rubric score, guarantee that each of H4's three components was met individually -- the six-point rubric awards 'organization and clarity' as its own point, so a solid overall score could mask a weak point-of-view-weighting or outside-development point; the teacher should read the per-criterion points, not the total, to confirm H4 specifically.",
+        "Does not reach the student's ability to make this same argument verbally or under collaborative conditions -- only a single written, individual, timed channel is sampled."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The response is handwritten, individually, in a proctored room with AI prohibited and enforced and only the two novel documents and paper available, so the position, the dual-document evidence, the point-of-view weighting, and the outside-development link all have to be assembled by the student in real time."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student, in one submission, to build a position addressing both documents, explicitly weigh each document's evidence by the author's point of view, and connect it to an accurate outside development from the period.",
+        "is_absent": false,
+        "assessment_evidence": "Part B, Question 5 requires exactly this in one item, with each part separately scored: 'takes a position that accounts for both documents...'; 'explains how the point of view of each author affects how much weight you give their claim'; 'connects the documents to at least one specific development from the period' (rubric: Position addresses both documents (1), Evidence from each document (1), Point of view used to weigh evidence (1), Outside development connected accurately (1))."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 failed. The required element is present, so there is no absence to evaluate for materiality."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 failed."
+      },
+      "why_no_intervention": "Gate 1 fails: the single item needed to elicit the whole of H4 already exists as Part B, Question 5, which explicitly requires a both-document argument, explicit point-of-view weighting, and an accurate outside-development connection, produced individually, in class, under enforced no-AI conditions, on documents the student has not seen before. There is no observable element to point at as missing, so no intervention is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "proctored_in_class; individual; AI prohibited_and_enforced; resources permitted: the two documents and paper; summative; 45 minutes; end of the industrialization unit; the two documents are novel to students even though sourcing practice on other documents preceded this; sourcing and point of view are formally assessed on the prior unit test; Part A (items 1-4) is explicit ungraded warm-up, not scored as evidence.",
+  "reviewer_notes": "Only Part B (Question 5) is treated as evidence for H4, per the teacher's own scoping: 'On this one I only care about the argument in Part B... I do not grade them [Part A] for evidence.' Part A items were excluded from the items list and from the evidentiary judgment even though they touch related reading/sourcing moves, because the teacher does not use them as evidence for this claim and a separate instrument (the prior unit test) already carries sourcing and point-of-view identification on their own. This is a single-item, single-claim assessment in which that one item is independent (proctored, individual, AI prohibited and enforced), novel (documents unseen in this form), and claim-targeted (its three graded sub-requirements map one-to-one onto H4's three components), so it carries the whole claim and no additional observation is warranted."
+}

@@ -1,0 +1,107 @@
+{
+  "reading_a": {
+    "label": "Data-analysis / CER-argumentation reading: the assessment targets the skill of building and applying a claim-evidence-reasoning argument from a data pattern, with the energy vocabulary serving as the required linking language rather than as the thing being tested.",
+    "claims": [
+      {
+        "id": "A1",
+        "statement": "Computes the arithmetic mean of three repeated-trial speed measurements at each height and records it to a specified precision, with the raw trial values given in the table.",
+        "claim_type": "procedural",
+        "quoted_verb": "Calculate the average speed for each height and fill in the last column. Round to the nearest hundredth.",
+        "items": [
+          "1"
+        ]
+      },
+      {
+        "id": "A2",
+        "statement": "Produces a single declarative sentence naming the relationship between release height and bottom speed, in the specific one-claim format the CER structure requires.",
+        "claim_type": "representational",
+        "quoted_verb": "Write one sentence stating how the cart's speed at the bottom is related to its release height.",
+        "items": [
+          "3"
+        ]
+      },
+      {
+        "id": "A3",
+        "statement": "Selects at least two specific numeric values from the completed table to support the stated claim and characterizes how much speed changes when height is doubled, using the paired heights supplied (10 to 20 cm, 20 to 40 cm).",
+        "claim_type": "application",
+        "quoted_verb": "Support your claim with at least two specific numbers from the table. Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.",
+        "items": [
+          "4"
+        ]
+      },
+      {
+        "id": "A4",
+        "statement": "Uses the numeric pattern already established across the four tested heights, rather than a restated physical law, to judge a hypothetical extension of the data and to generate a numeric prediction for an untested height.",
+        "claim_type": "application",
+        "quoted_verb": "Use the pattern in the data to explain... Explain how you made your prediction.",
+        "items": [
+          "6",
+          "7"
+        ]
+      },
+      {
+        "id": "A5",
+        "statement": "Writes a reasoning sentence that links the stated claim to a named mechanism, using gravitational potential energy and kinetic energy as the required connecting vocabulary, without the item asking for a quantitative or mathematically correct account of that mechanism.",
+        "claim_type": "representational",
+        "quoted_verb": "Explain why the relationship looks the way it does. Use the ideas of gravitational potential energy and kinetic energy in your explanation.",
+        "items": [
+          "5"
+        ]
+      }
+    ]
+  },
+  "reading_b": {
+    "label": "Energy-concept reading: the assessment targets whether students understand that speed results from the conversion of gravitational potential energy into kinetic energy, including that this makes speed scale non-linearly with height rather than doubling when height doubles.",
+    "claims": [
+      {
+        "id": "B1",
+        "statement": "Accounts for the shape of the height-speed relationship (not merely its direction) by explaining it as an energy conversion from gravitational potential energy to kinetic energy.",
+        "claim_type": "conceptual",
+        "quoted_verb": "Explain why the relationship looks the way it does. Use the ideas of gravitational potential energy and kinetic energy in your explanation.",
+        "items": [
+          "5"
+        ]
+      },
+      {
+        "id": "B2",
+        "statement": "Quantifies, from the completed table, exactly how much speed increases when height doubles at two different points (10 to 20 cm and 20 to 40 cm), surfacing that the increase is well short of a doubling in each case.",
+        "claim_type": "diagnostic",
+        "quoted_verb": "Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.",
+        "items": [
+          "4"
+        ]
+      },
+      {
+        "id": "B3",
+        "statement": "Evaluates a peer's claim that doubling release height doubles speed against the energy relationship, correctly rejecting or qualifying a linear height-to-speed assumption.",
+        "claim_type": "diagnostic",
+        "quoted_verb": "If we release the cart from 80 cm, it will go twice as fast as from 40 cm. Do you agree?",
+        "items": [
+          "6"
+        ]
+      },
+      {
+        "id": "B4",
+        "statement": "Predicts the speed at an untested height (50 cm) in a way consistent with the non-linear (square-root-type) height-speed relationship implied by energy conversion, rather than by linearly interpolating between the 40 cm and adjacent table values.",
+        "claim_type": "application",
+        "quoted_verb": "Predict the average speed for a release height of 50 cm. Explain how you made your prediction.",
+        "items": [
+          "7"
+        ]
+      },
+      {
+        "id": "B5",
+        "statement": "States the claim sentence as a causal/energetic relationship between height and speed rather than as a plain description of a data trend.",
+        "claim_type": "conceptual",
+        "quoted_verb": "Write one sentence stating how the cart's speed at the bottom is related to its release height.",
+        "items": [
+          "3"
+        ]
+      }
+    ]
+  },
+  "material_difference": "The two readings disagree about what item 5's energy vocabulary is actually for, and by extension what the whole instrument is evidence of. Reading A treats 'use the ideas of gravitational potential energy and kinetic energy' as the required connecting language for a general CER reasoning step -- a student could give a coherent but physically loose mechanism and still fully satisfy the item, and items 6-7 explicitly tell students to reason from 'the pattern in the data,' not from energy concepts, so the instrument's load-bearing target is a portable data-argumentation skill. Reading B treats item 5 as the actual construct -- correctly explaining PE-to-KE conversion -- and treats items 4, 6 and 7 as that same conceptual target re-appearing in numeric form (recognizing and using the fact that speed does not double when height doubles). Under Reading A, a student who nails the CER form with weak physics reasoning is fully supported by the evidence; under Reading B, that same response would not license the teacher's claim about energy understanding.",
+  "left_out_question": "Item 2 asks students to sketch and label a speed-vs-height graph, but no later item asks them to read, describe, or use any feature of that graph -- its shape, curvature, or trend -- so nothing downstream depends on it. Is the graph meant to carry its own evidence about graphing/representational competence (perhaps assessed and tracked separately), or is it only a scaffold to help students notice the pattern they go on to describe in items 3-7, in which case it shouldn't be read as evidence toward either claim above?",
+  "preferred": "reading_a",
+  "preferred_reason": "Most of the instrument's explicit instructions (items 1, 3, 4, 6 and 7) direct students to build and apply their argument from the observed data pattern itself, and only item 5 explicitly mandates energy-concept vocabulary, so on its own that one item cannot carry an inference about energy-concept mastery as consistently as the instrument as a whole supports an inference about data-based CER argumentation -- though a teacher who treats item 5 as the whole point of the unit could reasonably read it the other way."
+}

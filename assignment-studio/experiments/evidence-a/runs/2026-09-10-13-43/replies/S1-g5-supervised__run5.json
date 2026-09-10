@@ -1,0 +1,159 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Part A, item 1: 3/4 ___ 5/8, write <, >, or = and show how you know.",
+          "elicits": "Choosing and executing a comparison strategy (equivalent fractions, benchmark, or visual model) for a specific unlike-denominator pair, and writing the reasoning that supports the chosen symbol."
+        },
+        {
+          "item": "Part A, item 2: 2/3 ___ 7/12, write <, >, or = and show how you know.",
+          "elicits": "Choosing and executing a comparison strategy for a pair whose denominators relate by a simple multiple (inviting an equivalent-fraction strategy), and writing supporting reasoning."
+        },
+        {
+          "item": "Part A, item 3: 5/6 ___ 8/9, write <, >, or = and show how you know.",
+          "elicits": "Choosing and executing a comparison strategy for a pair suited to a 'distance from one whole' benchmark, and writing supporting reasoning."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, on three new unlike-denominator pairs completed under supervised, paper-only, AI-prohibited conditions, the student can choose and carry out a valid comparison strategy and produce written reasoning that supports the resulting symbol.",
+      "does_not_support": [
+        "Does not support comparing more than two fractions at once, or pairs with denominators unlike the small, closely related ones tested here.",
+        "Does not support fluency or speed of comparison under time pressure \u2014 only three instances are collected inside a shared 25-minute period.",
+        "Should not be read as evidence for G5C2's computational procedure: a student may compare correctly using a benchmark or picture without ever constructing a common denominator, so this item does not by itself confirm the equivalent-fraction/common-denominator skill.",
+        "A correct symbol with no valid reasoning shown should not be scored as evidence for this claim \u2014 the reasoning, not the symbol alone, is what the claim requires."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The comparison and its written reasoning are produced on paper, in the room, under an enforced AI-prohibited policy with new numbers, so the strategy choice and justification must originate from the student in real time."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to choose a comparison strategy, execute it, and state the reasoning that supports the resulting symbol.",
+        "is_absent": false,
+        "assessment_evidence": "Part A instructs: 'For each pair, write <, >, or =. Then show how you know (a common denominator, a picture, or a benchmark like 1/2).' Items 1-3 apply this to three new unlike-denominator pairs."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached \u2014 Gate 1 found no absence, so materiality was not evaluated."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached \u2014 Gate 1 stopped the process before a value-versus-burden judgment was needed."
+      },
+      "why_no_intervention": "Gate 1 fails: the element the claim needs \u2014 a chosen strategy, its execution, and stated reasoning for the symbol \u2014 is already present in Part A items 1-3, so no intervention is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Part B, item 4: 1/2 + 1/3 =",
+          "elicits": "Constructing a common denominator for two unlike proper fractions and combining the like-sized parts, simplifying if needed."
+        },
+        {
+          "item": "Part B, item 5: 5/6 \u2212 1/4 =",
+          "elicits": "Constructing a common denominator and combining (subtracting) like-sized parts, simplifying if needed."
+        },
+        {
+          "item": "Part B, item 6: 2 1/3 + 1 3/4 =",
+          "elicits": "Constructing a common denominator for mixed numbers, combining whole and fractional parts, and regrouping an improper fractional sum into a mixed number."
+        },
+        {
+          "item": "Part C, item 7: Maya's running distances (3/4 mile + 5/6 mile), answer required as a mixed number.",
+          "elicits": "Translating a word problem into an addition of two unlike fractions, constructing a common denominator, combining, and regrouping the result into the required mixed number."
+        },
+        {
+          "item": "Part C, item 8: Jonah's flour (needs 2/3 cup, has 1/4 cup).",
+          "elicits": "Translating a word problem into a subtraction of two unlike fractions, constructing a common denominator, combining, and simplifying."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, on five new unlike-denominator computations spanning bare addition, bare subtraction, mixed-number addition with regrouping, and two word-problem contexts, the student can construct common denominators, combine like-sized parts, and simplify or regroup to a mixed number where required, under supervised, paper-only, AI-prohibited conditions.",
+      "does_not_support": [
+        "Does not support computational fluency or speed \u2014 only five instances are collected inside a shared 25-minute period alongside Parts A and D.",
+        "Does not support strategic comparison of fractions (choosing a benchmark or visual model) \u2014 that is G5C1's territory and is not what Part B/C elicits.",
+        "Items 7 and 8 conflate the procedure with word-problem reading and modeling; a wrong answer on those two items cannot be cleanly attributed to the computational procedure alone, since it could instead reflect a misreading of the situation.",
+        "Does not support the procedure on fraction pairs with denominators unrelated by a simple multiple \u2014 the Part B denominator pairs (2&3, 6&4, 3&4) are all small and closely related; larger or coprime denominators are not sampled."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Work is shown step-by-step on paper under proctored, AI-prohibited conditions with new numbers, so the construction, combination, and simplification steps must be the student's own."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to construct a common denominator, combine the resulting like-sized parts, and simplify or regroup to a mixed number when the numbers call for it.",
+        "is_absent": false,
+        "assessment_evidence": "Part B items 4-6 and Part C items 7-8 all instruct 'Show every step' / 'Show your work,' with item 6 (2 1/3 + 1 3/4) and item 7 (answer required as a mixed number) specifically forcing the regrouping step."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached \u2014 Gate 1 found no absence."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached \u2014 Gate 1 stopped the process."
+      },
+      "why_no_intervention": "Gate 1 fails: five items (4-8) already require the full construct-combine-simplify/regroup procedure on new numbers under supervision; nothing evidentiary is missing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Part D, item 9: 'A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.'",
+          "elicits": "Locating and articulating why adding the denominators directly produces a wrong-sized part for this specific numeric instance, then computing the correct sum via a valid common-denominator procedure."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude that, on one new numeric instance of the 'add the denominators' misconception, the student can state why that move produces a wrong-sized part and supply the correct sum, under supervised, paper-only, AI-prohibited conditions.",
+      "does_not_support": [
+        "Does not support diagnosis of other common fraction-operation errors (e.g., mis-subtracting numerators, forgetting to convert a mixed number) \u2014 only the single 'add the denominators' misconception is sampled.",
+        "Does not support the student generating or recognizing this misconception unprompted in their own independent work \u2014 only repairing a given, already-identified error.",
+        "A correct repaired sum with no stated reason should not be scored as evidence for this claim \u2014 the claim requires the stated 'why,' not only the corrected computation.",
+        "Does not support oral or on-the-fly explanation \u2014 only a single written response is collected."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation and corrected sum are handwritten in the room under an enforced no-AI policy, so both the diagnosis and repair must be the student's own."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to state the reason the specific error (adding denominators) yields a wrong-sized part, not merely identify or silently fix it.",
+        "is_absent": false,
+        "assessment_evidence": "Part D, item 9: 'Explain what the student did wrong, and show the correct answer' \u2014 applied to a new numeric instance (1/2 + 1/4 giving 2/6) of exactly this misconception."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached \u2014 Gate 1 found no absence."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached \u2014 Gate 1 stopped the process."
+      },
+      "why_no_intervention": "Gate 1 fails: item 9 already asks for both the stated reason and the corrected sum on a new numeric instance under supervision; nothing needed is absent.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 fractions unit test: proctored_in_class, individual, AI prohibited_and_enforced, paper/pencil only, summative, 25 minutes, administered at end of Unit 4; the item type was practiced beforehand but these specific numbers and problems are new to students.",
+  "reviewer_notes": "All three claims clear Gate 1 on the instrument as written: each already contains at least one item supplying the specific evidentiary element the claim needs, so no additional observation is proposed for any claim. Part A isolates G5C1's strategy-choice-and-reasoning; Part B/C isolate G5C2's construct-combine-simplify/regroup procedure across five new-number instances (bare computation and two word-problem contexts); Part D isolates G5C3's single named misconception in a diagnose-and-repair format. The recurring scoring caution across all three claims is the same: credit should attach to the shown strategy, work, or stated reason, not only to the final symbol or number, since the bare answer alone does not carry any of these claims."
+}

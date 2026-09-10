@@ -1,0 +1,159 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "Item 1 (3/4 ___ 5/8, show how you know)",
+          "elicits": "Writes the comparison symbol and shows one chosen strategy (common denominator, picture, or benchmark) that justifies it, on a pair with a natural common-denominator route."
+        },
+        {
+          "item": "Item 2 (2/3 ___ 7/12, show how you know)",
+          "elicits": "Writes the comparison symbol and shows a chosen strategy that justifies it, on a pair where the fractions are close in value."
+        },
+        {
+          "item": "Item 3 (5/6 ___ 8/9, show how you know)",
+          "elicits": "Writes the comparison symbol and shows a chosen strategy that justifies it, on a pair that invites a near-one benchmark strategy distinct from items 1-2."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can choose and execute a valid strategy (common denominator, picture, or benchmark) to compare two unlike fractions and can produce written reasoning that supports the comparison symbol.",
+      "does_not_support": [
+        "Does not support ordering three or more fractions at once, only pairwise comparison.",
+        "Does not support comparing fractions embedded in a word-problem or measurement context; all three items present bare numeral pairs.",
+        "Does not distinguish selecting the most efficient strategy from correctly executing a valid but less efficient one, since any of the three listed strategies earns the same credit.",
+        "Could be mistaken for evidence of G5C2's common-denominator procedure, since two of the three pairs are naturally solved by finding a common denominator; but no simplification or mixed-number regrouping is required here, so it does not reach that claim's full procedure."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, paper-and-pencil administration with AI prohibited and enforced leaves no channel for anyone but the student to produce the written strategy and reasoning in real time."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires the student to both produce the comparison symbol and show a named strategy (common denominator, picture, or benchmark) that justifies it.",
+        "is_absent": false,
+        "assessment_evidence": "Part A instructs: 'For each pair, write <, >, or =. Then show how you know (a common denominator, a picture, or a benchmark like 1/2).' Items 1-3 apply this to three unlike-denominator pairs."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 already failed because the required element is present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed."
+      },
+      "why_no_intervention": "The element that would have to be missing for this claim to fail — an item pairing the comparison symbol with a shown, named strategy — is already present in items 1-3. Nothing is absent, so Gate 1 fails and no intervention is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "Item 4 (1/2 + 1/3)",
+          "elicits": "Constructs a common denominator, combines the like-sized parts, and states the result already in simplest form."
+        },
+        {
+          "item": "Item 5 (5/6 - 1/4)",
+          "elicits": "Constructs a common denominator, combines (subtracts) the like-sized parts, and states the result in simplest form."
+        },
+        {
+          "item": "Item 6 (2 1/3 + 1 3/4)",
+          "elicits": "Constructs a common denominator for mixed numbers, combines the like-sized parts, and regroups the result to a mixed number when the fractional sum exceeds one whole."
+        },
+        {
+          "item": "Item 7 (Maya's mileage word problem)",
+          "elicits": "Applies the common-denominator-and-combine procedure inside a word-problem context and expresses the result as a mixed number, as instructed."
+        },
+        {
+          "item": "Item 8 (Jonah's flour word problem)",
+          "elicits": "Applies the common-denominator-and-combine (subtraction) procedure inside a word-problem context and states the result in simplest form."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can construct a common denominator, combine the resulting like-sized parts through addition or subtraction, and simplify or regroup the result to a mixed number where required, both in bare computation and in a word-problem context.",
+      "does_not_support": [
+        "Does not itself establish that the student understands why the common-denominator procedure produces comparable parts; that conceptual justification belongs to G5C1 and is not required or scored here.",
+        "Does not diagnose the source of a wrong answer (arithmetic slip vs. conceptual error); a student who gets an item wrong is indistinguishable, from this evidence alone, from one who used the wrong procedure entirely.",
+        "Does not support computation with three or more fractions, or with denominators that are not reachable by a straightforward common multiple within the practised range.",
+        "Items 7 and 8's word-problem framing could be mistaken for evidence of a separate 'choose the correct operation in context' skill, but both items telegraph the operation to use (find the total; find how much more), so they do not test operation selection under ambiguity."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The proctored, individual, paper-and-pencil condition with AI prohibited and enforced, combined with the 'show every step' instruction, means every intermediate step must be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item that requires constructing a common denominator, combining the resulting like-sized parts, and simplifying or regrouping the result to a mixed number when the value exceeds one whole.",
+        "is_absent": false,
+        "assessment_evidence": "Part B's instruction 'Show every step. Answers in simplest form' governs items 4-6, item 6 (2 1/3 + 1 3/4) forces regrouping past a whole, and item 7 explicitly instructs 'write your answer as a mixed number.'"
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 already failed because the required element is present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed."
+      },
+      "why_no_intervention": "The element that would have to be missing for this claim to fail — an item forcing common-denominator construction, combination, and mixed-number regrouping where the value exceeds one whole — is already present across items 4-8. Nothing is absent, so Gate 1 fails and no intervention is warranted.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "Item 9 (find the mistake in 1/2 + 1/4 = 2/6)",
+          "elicits": "Identifies and explains the specific error of adding denominators directly, and computes the correct sum."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can recognize the specific error of adding denominators directly, explain what is wrong with it, and produce the correct sum.",
+      "does_not_support": [
+        "Does not support diagnosing any fraction-addition error other than the specific 'add both numerator and denominator' error shown; a student's ability to spot a different error type (e.g., failing to find a common denominator at all) is not tested here.",
+        "Does not guarantee the written explanation names the underlying reason (that unlike denominators mean unlike-sized parts) rather than only the surface procedural rule ('add numerators, not denominators'); as worded, a purely procedural answer could earn full credit without naming the controlling feature.",
+        "Does not, on its own, support unprompted procedural fluency in adding fractions without an error already laid out in front of the student; that belongs to G5C2.",
+        "A correct final sum here could be mistaken for evidence of G5C2's computational procedure, but the arithmetic could be produced by imitating the correction pattern rather than by sound diagnostic reasoning, so the sum alone should not be read as evidence for this claim."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The proctored, individual, paper-and-pencil condition with AI prohibited and enforced means the diagnostic explanation must be composed live by the student."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item presenting an unfamiliar incorrect worked solution that the student must diagnose (explain the error) and correct.",
+        "is_absent": false,
+        "assessment_evidence": "Item 9: 'A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.'"
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 already failed because the required element is present."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed."
+      },
+      "why_no_intervention": "The element that would have to be missing for this claim to fail — a diagnose-and-correct item built on an unfamiliar incorrect solution — is already present as item 9. Nothing is absent, so Gate 1 fails and no intervention is warranted. (Whether the explanation must name the 'wrong-sized part' reasoning specifically, versus only the procedural rule, is noted under does_not_support rather than treated as an absence, since requiring a richer response format is explicitly excluded as Gate 1 grounds.)",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4: 25-minute proctored-in-class, individual, summative assessment; AI prohibited and enforced; paper and pencil only. The item types (comparing unlike fractions, adding/subtracting unlike fractions, finding a computational mistake) had been practised, but the teacher states these particular numbers and problems are new to the students.",
+  "reviewer_notes": "All nine items are completed under one proctored, individual, paper-and-pencil, AI-prohibited-and-enforced sitting, so the independence condition holds uniformly across the whole instrument; there is no take-home or process-journal component, so the feed-forward rule does not reduce any item's evidential value here. Each of the three claims is fully carried by the items mapped to it, and in each case Gate 1 fails because the element the claim needs is already present in the assessment as written — so no additional observation is proposed for any claim. The one interpretive soft spot worth flagging (item 9's explanation prompt does not itself force the student to name the 'unlike-sized parts' reasoning rather than a surface procedural rule) is recorded as a does_not_support caveat rather than an absence, since 'the response format could be richer' is explicitly excluded as grounds for intervention."
+}

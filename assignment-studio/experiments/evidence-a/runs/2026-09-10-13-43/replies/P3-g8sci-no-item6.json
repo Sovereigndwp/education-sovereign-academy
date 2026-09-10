@@ -1,0 +1,236 @@
+{
+  "claims": [
+    {
+      "claim_id": "S1c",
+      "items": [
+        {
+          "item": "Item 1 (calculate average speed for each height and fill in the table)",
+          "elicits": "Averaging three trial values by arithmetic and rounding to the requested precision, for each of four rows."
+        },
+        {
+          "item": "Item 2 (sketch a graph of average speed vs. release height, axes labeled with units)",
+          "elicits": "Constructing a two-variable graph from the student's own computed averages, placing variables on the correct axes and labeling both with units."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can compute an average from repeated-trial data and construct a correctly labeled speed-vs-height graph, produced individually under supervision with no AI access.",
+      "does_not_support": [
+        "Does not verify the student can decide which raw values to average or organize repeated-trial data themselves; the table already isolates the three trials per height.",
+        "Does not verify understanding of why averaging repeated trials is more reliable than a single reading; that is a measurement-reliability idea not named in this claim.",
+        "Does not verify the student can produce a correctly scaled and labeled graph from a differently shaped data set; only this one table is tested."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Computing averages and hand-sketching a labeled graph from the student's own computed values, in a supervised room with no device access, must be done by the student at the time of the test."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to compute an average speed for each height and produce a graph with both axes labeled with units.",
+        "is_absent": false,
+        "assessment_evidence": "Item 1: \"Calculate the average speed for each height and fill in the last column.\" Item 2: \"Sketch a graph of average speed (y-axis) versus release height (x-axis). Label both axes with units.\""
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 failed because the required element is already present in the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed."
+      },
+      "why_no_intervention": "Gate 1 failed: items 1 and 2 already require exactly this — computing averages and producing a labeled graph — under supervision; nothing is missing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "S2c",
+      "items": [
+        {
+          "item": "Item 3 (claim: one sentence on how speed relates to release height)",
+          "elicits": "Producing a single directional/relational statement connecting release height and bottom speed."
+        },
+        {
+          "item": "Item 4 (evidence: cite two specific numbers, doublings 10→20 and 20→40)",
+          "elicits": "Selecting and quoting the specific average-speed values from the table for two named height comparisons to justify the claim."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can state a relationship between release height and speed and back it with quoted values from the table for both required doublings, produced individually under supervision.",
+      "does_not_support": [
+        "Does not verify the student understands WHY the relationship holds; that is targeted separately by item 5's reasoning question, not by these items.",
+        "Does not verify the student explicitly evaluates or rejects a proportional ('twice as fast') claim; that is the distinct, separately-stated claim S4c.",
+        "Does not verify the student would notice this relational pattern in a genuinely unfamiliar data set, since the class collected this table together before the test.",
+        "A vague but technically true claim such as 'speed increases with height' satisfies item 3 without demonstrating recognition of the relationship's specific (non-proportional) shape."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Writing the claim sentence and quoting specific table values happens in the room under supervision with no AI access, so the response reflects the student's own reading of the table at test time."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to state a directional claim about the height-speed relationship and cite at least two specific values from the table for both the 10→20 and 20→40 doublings.",
+        "is_absent": false,
+        "assessment_evidence": "Item 3: \"Write one sentence stating how the cart's speed at the bottom is related to its release height.\" Item 4: \"Support your claim with at least two specific numbers from the table. Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.\""
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 failed because the required element is already present in the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed."
+      },
+      "why_no_intervention": "Gate 1 failed: items 3 and 4 already require exactly this — a stated claim plus two quoted doubling comparisons — under supervision; nothing is missing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "S3c",
+      "items": [
+        {
+          "item": "Item 5 (reasoning: explain why the relationship looks the way it does, using gravitational PE and KE)",
+          "elicits": "Producing a free-form written explanation connecting an increase in gravitational potential energy at release to an increase in kinetic energy (speed) at the bottom."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can explain the speed-height pattern in terms of gravitational potential energy converting to kinetic energy, in the student's own words, under supervised individual conditions.",
+      "does_not_support": [
+        "Does not verify the explanation is tied specifically to the non-proportional (not-doubling) shape of the data; the prompt asks for a general 'why,' not a why anchored to the numeric pattern.",
+        "Does not verify the student can apply the PE→KE idea to a different physical system; only this ramp scenario is tested.",
+        "As an open free-response item, scoring is more exposed to writing fluency than the tightly-scoped numeric items elsewhere in this assessment, so two equally-knowledgeable students could be scored differently based on phrasing.",
+        "Does not verify recognition that the relationship is non-proportional; that is claim S4c's target, not this item's."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation is handwritten in a supervised, individual, no-AI setting, so it cannot be produced by an outside agent, though a memorized generic phrase could pass without engaging this specific data — a scoring-validity risk, not a delegation risk."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to explain the speed-height pattern using gravitational potential energy converting to kinetic energy.",
+        "is_absent": false,
+        "assessment_evidence": "Item 5: \"Reasoning. Explain why the relationship looks the way it does. Use the ideas of gravitational potential energy and kinetic energy in your explanation.\""
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 failed because the required element is already present in the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed."
+      },
+      "why_no_intervention": "Gate 1 failed: item 5 already requires exactly this explanation, under supervision. The open-essay format is a quality property (scoring speed, language load) worth noting, not a missing evidentiary element, so it is not grounds for an intervention.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "S4c",
+      "items": [
+        {
+          "item": "Item 3 (claim) and Item 4 (evidence: doubling comparisons)",
+          "elicits": "Reporting the actual measured speed values for the two doubling comparisons; does not itself require the student to state whether those values confirm or contradict a proportional ('twice as fast') assumption."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "The assessment supports that the student can report the actual measured average speeds for the 10→20 and 20→40 height doublings; it does not support that the student recognizes those values as contradicting proportional reasoning or would disagree with a 'twice as fast' claim.",
+      "supports": "A teacher may conclude the student can locate and quote the exact speed values for both required doublings; the evidence does not establish that the student recognizes this pattern as contradicting proportional ('twice as fast') reasoning.",
+      "does_not_support": [
+        "Does not verify the student explicitly rejects or evaluates a proportional ('twice as fast') claim; no item presents that claim for the student to respond to.",
+        "Does not verify the student names or recognizes proportionality/non-proportionality as a concept; item 3's claim can score correct without ever invoking the doubling assumption.",
+        "Easily mistaken for being covered by items 3–4 since they use the same numbers, but reporting a value is not the same as diagnosing what is wrong with an assumption about that value.",
+        "Does not test the misconception-repair move under a genuinely presented wrong assumption, since none is given to the student."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "No item elicits the specific disagree-with-proportionality move, so there is nothing bearing on it to delegate; the adjacent items that are collected (3–4) are produced under supervision and require the student's own arithmetic and wording."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student recognizes that the data contradict proportional reasoning or would disagree with a 'twice as fast' claim, because no item presents that claim for the student to evaluate — items 3–4 only require reporting the actual speed values, which a student could do without ever connecting them to the proportionality assumption.",
+      "gate1_absence": {
+        "required_element": "An item that presents an incorrect proportional claim (e.g., 'the cart released from twice as high should go twice as fast') and asks the student to state agreement or disagreement, citing the numeric pattern as justification.",
+        "is_absent": true,
+        "assessment_evidence": "No item does. Items 3 and 4 ask the student to state their own relational claim and quote the doubling values, but never present a proportional ('twice as fast') claim for the student to accept or reject."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher states the explicit purpose of this unit is that students 'stop assuming everything is proportional' and this claim is the direct evidence for that. A student can score full marks on items 3–4 without ever engaging the proportionality question, so a teacher reading those scores as evidence for S4c would draw a conclusion this evidence does not carry, and would not otherwise know it."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "A single short Diagnose item (about 2 minutes, roughly 20 seconds to score) directly targets the one move this claim requires and speaks to what the teacher names as the central point of the unit, so the classroom cost is small relative to closing a gap in that central claim."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Diagnose",
+        "item_text": "A classmate looked at the table and said: \"20 cm is twice 10 cm, so the speed at 20 cm should be twice the speed at 10 cm.\" Do you agree or disagree with this claim? Use the actual average speeds from the table to justify your answer in 1-2 sentences.",
+        "variant_rule": "May change which doubling pair is cited (10→20 or 20→40) and, on a re-run of the lab with new data, the specific numeric values, as long as the underlying relationship stays non-proportional (v ∝ √h); keep the 'twice as high implies twice as fast' framing fixed so the item targets the same proportional-reasoning misconception; the correct answer is always 'disagree,' justified by the actual ratio (~1.4×, not 2×); avoid substituting a genuinely proportional data set, which would flip the correct answer and no longer test this misconception.",
+        "conditions": "Administered in class, individually, proctored, no AI, calculator and paper permitted — the same declared conditions as the rest of this assessment, appended to the existing 30-minute period.",
+        "sufficiency_line": "A response that counts as evidence states disagreement with the doubling claim and cites at least one specific pair of actual average speeds (or their ratio) from the table showing the increase is less than double.",
+        "student_minutes": 2,
+        "scoring_seconds": 20
+      }
+    },
+    {
+      "claim_id": "S5c",
+      "items": [
+        {
+          "item": "Item 6 (predict speed at 50 cm and explain the method used)",
+          "elicits": "Producing a numeric or directional extrapolation beyond the four tested heights and stating, in the student's own words, the procedure used to generate it."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "A teacher may conclude the student can extrapolate a prediction just beyond the measured data range and articulate the method used to arrive at it, produced individually under supervision with no AI access.",
+      "does_not_support": [
+        "Does not verify the extrapolation method is physically sound (e.g., using the v proportional to square-root-of-h pattern) versus a naive straight-line read from the graph; the item credits any stated method, not necessarily a correct one.",
+        "Does not verify consistency between the student's own graph (item 2) and their stated prediction method.",
+        "Could be mistaken for evidence of S3c or S4c reasoning; a student may state a purely numeric pattern-continuation method without connecting it to energy transfer or to the non-proportionality finding.",
+        "Does not require the student to reference or use the graph they drew in item 2, so it does not verify extrapolation via a graphical representation specifically."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The extrapolated value and its stated method are produced from the student's own computed averages in a supervised, individual, no-AI setting at test time."
+      },
+      "gap_statement": "",
+      "gate1_absence": {
+        "required_element": "An item requiring the student to predict a value just beyond the measured range and state the method used to get it.",
+        "is_absent": false,
+        "assessment_evidence": "Item 6: \"Predict the average speed for a release height of 50 cm. Explain how you made your prediction.\""
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached; Gate 1 failed because the required element is already present in the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached; Gate 1 already failed."
+      },
+      "why_no_intervention": "Gate 1 failed: item 6 already requires exactly this — an extrapolated prediction beyond the tested range plus a stated method — under supervision; nothing is missing.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Judged under the teacher's declared conditions: proctored_in_class, individual, AI prohibited_and_enforced, resources limited to calculator/paper/ruler, summative purpose, 30 minutes, end of the energy unit. The class collected the data table together in advance; the analysis items (1-6) are new to students, so novelty is judged against the analysis tasks, not the raw data.",
+  "reviewer_notes": "Four of the five claims (S1c, S2c, S3c, S5c) are already directly and fully carried by an existing item or item pair, produced under supervision with no AI access; no changes are warranted for those. S4c is the one claim with a material gap: it is a diagnostic claim requiring the student to disagree with a proportional ('twice as fast') assumption, but no item presents that assumption for the student to evaluate — items 3-4 only require reporting the actual doubling values, which can be done without ever engaging the misconception. Given the teacher's own stated purpose for the unit ('the whole point... is that they stop assuming everything is proportional'), this is treated as material and a single short Diagnose item is proposed. Item 5's open 'explain why' format for S3c is noted as a quality property (slower to score, more exposed to writing fluency and language load) but is not treated as a missing evidentiary element, since the claim itself is already directly targeted and 'the response format could be richer' is not a valid absence under Gate 1."
+}
