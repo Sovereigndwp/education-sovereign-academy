@@ -18,9 +18,14 @@ import { deriveCase, scoreCase, extractJson, VERDICTS } from "./lib/derive.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const AS = join(here, "..", "..");                       // assignment-studio/
-const CASES = JSON.parse(readFileSync(join(here, "cases", "cases.json"), "utf8"));
-const CLAIMS = JSON.parse(readFileSync(join(here, "groundtruth", "claims.json"), "utf8"));
-const EXPECTED = JSON.parse(readFileSync(join(here, "groundtruth", "expected.json"), "utf8")).cases;
+// --set=<name> loads an alternate, self-contained case/claim/ground-truth trio. It exists so a
+// follow-up can add cases WITHOUT editing, reinterpreting or overwriting a frozen record: the default
+// files are never touched and a prior run's packet keeps scoring exactly as it did.
+const SET = (process.argv.slice(2).find((a) => a.startsWith("--set=")) || "").slice(6);
+const SFX = SET ? `-${SET}` : "";
+const CASES = JSON.parse(readFileSync(join(here, "cases", `cases${SFX}.json`), "utf8"));
+const CLAIMS = JSON.parse(readFileSync(join(here, "groundtruth", `claims${SFX}.json`), "utf8"));
+const EXPECTED = JSON.parse(readFileSync(join(here, "groundtruth", `expected${SFX}.json`), "utf8")).cases;
 const MODEL = process.env.EXP_MODEL || "claude-sonnet-4-5";
 let lastMeta = null;   // model/temperature/usage actually used, reported into the manifest
 

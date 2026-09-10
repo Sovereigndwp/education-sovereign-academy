@@ -1,0 +1,10 @@
+{
+  "_note": "A4 case set. One case, five repeats. The assessment file, subject, grade and every declared condition are byte-identical to S1-g5-supervised in cases.json. The only difference is which claim set is passed in.",
+  "cases": [
+    { "id": "S1split-g5-supervised", "cell": "sound / supervised", "text_id": "g5-math-fractions", "source": "gold/g5-math-fractions/assignment.md",
+      "subject": "Mathematics", "grade": "Grade 5", "claims": "g5-math-fractions-a4",
+      "conditions": { "supervision": "proctored_in_class", "collaboration": "individual", "ai_policy": "prohibited_and_enforced", "resources": ["paper", "pencil"], "purpose": "summative", "time_minutes": 25, "when_in_sequence": "end of Unit 4", "novelty_note": "Students have practised this kind of item; these particular numbers and problems are new to them." } }
+  ],
+  "stability": { "case_id": "S1split-g5-supervised", "runs": 5 },
+  "reconstruction_cases": []
+}

@@ -1,0 +1,12 @@
+{
+  "_note": "A4 claim set. Additive: groundtruth/claims.json is untouched and the frozen 616eefa / 9616043 records keep scoring exactly as they did. The ONLY substantive change is that the ambiguous 'or' inside the original G5C2 is separated into two explicit expectations. G5C1 and G5C3 are byte-identical to the original set.",
+  "_original_G5C2": "Constructs equivalent fractions with a common denominator, combines or compares like-sized parts, and simplifies or regroups to a mixed number where the item requires it. — PRESERVED AS WRITTEN in claims.json; this file does not modify it.",
+  "_split_note": "The original G5C2 named three things, not two: (1) construct equivalent fractions with a common denominator, (2) combine or compare the like-sized parts, (3) simplify OR regroup. Only (3) is ambiguous. Dropping (1) and (2) would narrow the claim below what the original intended, so they are carried as G5C2core with the wording lifted verbatim from the original minus its ambiguous tail. Nothing is broadened.",
+  "g5-math-fractions-a4": [
+    { "id": "G5C1", "claim_type": "conceptual", "statement": "Chooses a valid strategy for comparing two unlike fractions — equivalent fractions, a benchmark such as one half, or a visual model — executes it, and shows the reasoning that supports the symbol.", "items": ["1", "2", "3"] },
+    { "id": "G5C2core", "claim_type": "procedural", "statement": "Constructs equivalent fractions with a common denominator and combines or compares the resulting like-sized parts.", "items": ["4", "5", "6", "7", "8"] },
+    { "id": "G5C2a", "claim_type": "procedural", "statement": "Simplifies a reducible fraction result to lowest terms when the item requires it.", "items": ["4", "5", "6", "7", "8"] },
+    { "id": "G5C2b", "claim_type": "procedural", "statement": "Regroups an improper fraction result to a mixed number when the item requires it.", "items": ["4", "5", "6", "7", "8"] },
+    { "id": "G5C3", "claim_type": "diagnostic", "statement": "States why adding denominators produces a wrong-sized part, and gives the correct sum.", "items": ["9"] }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_note": "A4 ground truth. This is a NEW hypothesis arising from the decision-level ambiguity found in 616eefa. It does not replace, reinterpret or correct the prior ground truth, which stays as recorded. Written before the split-claim prompt was run.",
+  "_hypothesis": "Separating the two meanings joined by 'or' should produce a stable, decision-level distinction: simplification is not exercised by this assessment because every computed result is already irreducible (5/6, 7/12, 4 1/12, 1 7/12, 5/12 — verified by hand), while regrouping IS exercised by items 6 and 7. These outcomes are the expectation being tested, not a target to force.",
+  "cases": {
+    "S1split-g5-supervised": { "claims": [
+      { "claim_id": "G5C1", "verdict": ["KEEP"], "intervention": false, "why": "Unchanged from the original set. Items 1-3 require the symbol and the reasoning that supports it, supervised, on fresh numbers." },
+      { "claim_id": "G5C2core", "verdict": ["KEEP"], "intervention": false, "why": "All five A3 repeats found common-denominator construction and combining present across items 4-8, without disagreement. This half of the original claim was never the unstable part." },
+      { "claim_id": "G5C2a", "verdict": ["LIMITED", "NOT_SUPPORTED"], "intervention": true, "why": "PRE-REGISTERED EXPECTATION. Every computed result in the assessment is already in lowest terms, so no item ever triggers reduction, while 'Answers in simplest form' appears in the directions. Both verdicts are defensible — LIMITED if partial evidence is read from the surrounding work, NOT_SUPPORTED if no independent observation reaches it at all — and the experiment wants to see which it gives. The decision-level expectation is that an intervention IS warranted." },
+      { "claim_id": "G5C2b", "verdict": ["KEEP"], "intervention": false, "why": "PRE-REGISTERED EXPECTATION. Item 6 (2 1/3 + 1 3/4 = 4 1/12) forces regrouping past a whole, and item 7 instructs 'write your answer as a mixed number'. The component is exercised, so no intervention is warranted." },
+      { "claim_id": "G5C3", "verdict": ["KEEP"], "intervention": false, "why": "Unchanged from the original set. Item 9 demands the stated reason, not just the corrected sum." }
+    ] }
+  }
+}
