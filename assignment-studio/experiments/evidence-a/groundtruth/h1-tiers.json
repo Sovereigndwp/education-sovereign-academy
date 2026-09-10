@@ -1,0 +1,19 @@
+{
+  "_note": "H1 tier expectations, written before the hierarchy prompt was run. These ADD a dimension to the existing ground truth; verdicts and intervention decisions in expected.json and expected-a4.json are unchanged and still govern. A claim only gets a tier expectation if ground truth says an intervention is warranted there.",
+  "_the_trap": "X1/X2/X3 are the sharp test. Their evidence fails on the declared CONDITIONS — the work goes home with AI permitted — and no rewording of any item repairs that. If the engine reaches for tier 1 there, the hierarchy has become a cheap way to always have an answer, and H1 fails.",
+  "expected_tier": {
+    "P2-g5-selected-response/G5C1": { "tier": ["modify_item"], "why": "Part A was narrowed to a bare circled symbol with 'Do not show work'. Restoring the 'show how you know' instruction on those same three items closes the gap with no added item and no added minute. This is the clearest tier-1 case in the set." },
+    "A4/G5C2a": { "tier": ["modify_item"], "why": "Every computed answer is already irreducible. Changing one item's numbers so its answer reduces — e.g. item 5 from 5/6 - 1/4 to 5/6 - 1/3, giving 3/6 - makes simplification unavoidable at zero cost. Same item count, same page, same minutes." },
+    "P1-g5-no-diagnose/G5C3": { "tier": ["add_observation", "modify_item"], "why": "Item 9 was deleted, so the diagnostic claim has no host item. Adding a short Diagnose item is the obvious answer. Converting an existing word problem would remove evidence that item currently carries for G5C2, which tier 1 forbids — but a defensible modification may exist, so both are allowed and the REASONING is what is judged." },
+    "P3-g8sci-no-item6/S4c": { "tier": ["add_observation", "modify_item"], "why": "Item 6 was deleted. Item 7 (extrapolate to 50 cm) could arguably be extended to also require the proportional-reasoning check, which would be tier 1; or a short Predict item could be added. Both defensible." },
+    "X1-g5-takehome/G5C1": { "tier": ["add_observation"], "why": "CONDITIONS gap. Unsupervised with AI permitted — no rewording of any item makes the artifact observable." },
+    "X1-g5-takehome/G5C2": { "tier": ["add_observation"], "why": "CONDITIONS gap." },
+    "X1-g5-takehome/G5C3": { "tier": ["add_observation"], "why": "CONDITIONS gap." },
+    "X2-g10ss-takehome/H1": { "tier": ["add_observation"], "why": "CONDITIONS gap." },
+    "X2-g10ss-takehome/H2": { "tier": ["add_observation"], "why": "CONDITIONS gap." },
+    "X2-g10ss-takehome/H3": { "tier": ["add_observation"], "why": "CONDITIONS gap." },
+    "X3-calc-takehome/K1": { "tier": ["add_observation"], "why": "CONDITIONS gap." },
+    "X3-calc-takehome/K2": { "tier": ["add_observation"], "why": "CONDITIONS gap." },
+    "X3-calc-takehome/K3": { "tier": ["add_observation"], "why": "CONDITIONS gap." }
+  }
+}

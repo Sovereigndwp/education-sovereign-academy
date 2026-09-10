@@ -13,7 +13,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { reconstructionSystem, reconstructionUser, judgmentSystem, judgmentSystemA2, judgmentSystemA3, judgmentUser, EXPERIMENT_VERSION, EXPERIMENT_VERSION_A2, EXPERIMENT_VERSION_A3 } from "./lib/prompts.mjs";
+import { reconstructionSystem, reconstructionUser, judgmentSystem, judgmentSystemA2, judgmentSystemA3, judgmentSystemH1, judgmentUser, EXPERIMENT_VERSION, EXPERIMENT_VERSION_A2, EXPERIMENT_VERSION_A3, EXPERIMENT_VERSION_H1 } from "./lib/prompts.mjs";
 import { deriveCase, scoreCase, extractJson, VERDICTS } from "./lib/derive.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -34,8 +34,9 @@ const mode = args.includes("--score") ? "score" : args.includes("--live") ? "liv
 // --a2 swaps in the gated judgment prompt and nothing else. Same cases, same ground truth, same scorer.
 const A2 = args.includes("--a2");
 const A3 = args.includes("--a3");
-const JUDGMENT_SYSTEM = A3 ? judgmentSystemA3() : A2 ? judgmentSystemA2() : judgmentSystem();
-const VERSION = A3 ? EXPERIMENT_VERSION_A3 : A2 ? EXPERIMENT_VERSION_A2 : EXPERIMENT_VERSION;
+const H1 = args.includes("--h1");
+const JUDGMENT_SYSTEM = H1 ? judgmentSystemH1() : A3 ? judgmentSystemA3() : A2 ? judgmentSystemA2() : judgmentSystem();
+const VERSION = H1 ? EXPERIMENT_VERSION_H1 : A3 ? EXPERIMENT_VERSION_A3 : A2 ? EXPERIMENT_VERSION_A2 : EXPERIMENT_VERSION;
 // --only limits which jobs are emitted/run, so a narrow re-run stays narrow. Comma-separated name
 // prefixes; reconstruction jobs are skipped whenever it is set, since they are unaffected by a gate change.
 const ONLY = (args.find((a) => a.startsWith("--only=")) || "").slice(7).split(",").filter(Boolean);
@@ -121,7 +122,7 @@ async function callModel(system, user) {
 if (mode === "emit" || mode === "live") {
   const out = stampDir();
   const jobs = buildJobs();
-  const manifest = { experiment: VERSION, generation: A3 ? "A3" : A2 ? "A2" : "A1", mode, only: ONLY, model: mode === "live" ? MODEL : "(external)", at: new Date().toISOString(), jobs: [] };
+  const manifest = { experiment: VERSION, generation: H1 ? "H1" : A3 ? "A3" : A2 ? "A2" : "A1", mode, only: ONLY, model: mode === "live" ? MODEL : "(external)", at: new Date().toISOString(), jobs: [] };
   for (const j of jobs) {
     writeFileSync(join(out, "prompts", `${j.name}.system.txt`), j.system);
     writeFileSync(join(out, "prompts", `${j.name}.user.txt`), j.user);
@@ -168,7 +169,8 @@ if (mode === "score") {
     results.cases[c.id] = {
       cell: c.cell, supervision: c.conditions.supervision, runs: perRun.length, stable,
       claims: primary.derived.claims.map((x) => ({
-        claim_id: x.claim_id, verdict: x.verdict, intervention: !!x.proposed,
+        claim_id: x.claim_id, verdict: x.verdict, intervention: !!x.proposed, tier: x.tier,
+        modification: x.modification, why_not_tier_1: x.why_not_tier_1,
         intervention_warranted: x.intervention_warranted, primitive: x.proposed?.primitive || null,
         negative_scope_count: x.does_not_support.length, delegation: x.delegation.answer,
         violations: x.violations.map((v) => v.code),

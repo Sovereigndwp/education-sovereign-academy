@@ -25,6 +25,11 @@ export const EXPERIMENT_VERSION_A2 = "evidence-a2-2026-09-10-gates-v1";
 // claim's whole component set instead of picking one component nondeterministically. Gates 2 and 3, the
 // verdict rule, the restraint logic, the thresholds and every case are untouched from A2.
 export const EXPERIMENT_VERSION_A3 = "evidence-a3-2026-09-10-components-v1";
+// H1 changes ONE thing, downstream of the gates: once an intervention is authorised, the engine must try
+// to MODIFY an item that already exists before it may ADD anything. Every experiment before this one only
+// ever asked for an addition, so "modify one existing item" is a behaviour the engine has never been asked
+// to produce. Gates 1-3, the component map, the verdict rule and the restraint logic are untouched.
+export const EXPERIMENT_VERSION_H1 = "evidence-h1-2026-09-10-hierarchy-v1";
 
 const STANCE = `You work inside an internal experiment run by The Sovereign Academy, a company run by a former high-school mathematics teacher. You are given an assessment a teacher already uses, the conditions under which it is administered, and the learning claims the teacher intends it to support. You judge WHAT THE EVIDENCE THIS ASSESSMENT PRODUCES CAN AND CANNOT SUPPORT. You are not redesigning it, not improving it, not grading it, and not judging the teacher.
 
@@ -333,6 +338,159 @@ JSON:
       "variant_rule": string,
       "conditions": string,
       "sufficiency_line": string,
+      "student_minutes": number,
+      "scoring_seconds": number }
+  } ],
+  "conditions_echo": string,
+  "reviewer_notes": string }`;
+}
+
+export function judgmentSystemH1() {
+  return `${STANCE}
+
+${CONDITIONS_RULE}
+
+${PRIMITIVES}
+
+TASK: for EACH claim the teacher has confirmed, decide what the evidence this assessment produces, under the declared conditions, can and cannot support.
+
+Work claim by claim. Claims in the same assessment routinely get different judgments — a strong assessment can carry one claim thoroughly and touch another only in passing, and saying so is the useful part. Do not average across claims and do not let a strong claim rescue a weak one or a weak one drag down a strong one.
+
+For each claim, answer these two booleans FIRST and let them decide the outcome. The verdict is derived from them in code, so their accuracy is the whole job:
+  · any_independent_observation — does at least ONE item produce an observation meeting all three conditions (independent, novel, claim-targeted) under the DECLARED conditions?
+  · covers_whole_claim — do those independent observations reach the WHOLE claim as the teacher stated it, or only a narrower part of it? If only a part, name the narrower claim that IS supported in "narrower_inference".
+
+Then:
+  · items — for each item that bears on this claim, what it ACTUALLY ELICITS from the student (the move the student must make), not what it is about.
+  · supports — one sentence: what a teacher may conclude from this evidence, under these conditions.
+  · does_not_support — 2–4 specific things this evidence does NOT reach. Name the ADJACENT claims it is most likely to be mistaken for, and state the guess-rate caveat for any selected-response item whose reasoning is not also collected. This list is not decoration; it is the thing that stops one right answer from being read as mastery. It is never empty, including for a claim you judge strong.
+  · delegation — under the DECLARED conditions, could the submitted evidence for this claim be produced without the student doing the required thinking? Answer "yes", "no" or "partly", with ONE task-specific sentence naming the feature that decides it. Expect "no" under supervision and "yes" for almost anything unsupervised, and say either plainly, without drama.
+  · gap_statement — if the claim is not fully carried, one sentence beginning "We cannot tell from ..." naming what the teacher cannot conclude. Empty string when there is no gap.
+  · A claim the teacher has told you is assessed ELSEWHERE, or that the assessment only touches in passing and does not set out to carry, is not a gap in this assessment. Say so in why_no_intervention rather than reporting a hole.
+
+BEFORE ANY INTERVENTION: THREE GATES. You must EARN permission to intervene.
+The default is that this assessment is doing its job. An intervention is not the natural conclusion of
+analysis — it is an exception, and you have to justify it against a specific named absence. Work the
+gates in order and STOP at the first one that fails.
+
+GATE 1 — COMPONENT MAP, THEN ACTUAL ABSENCE.
+Do not pick one element. A teacher-confirmed claim usually names several observable things at once, and
+choosing one of them at random is how the same assessment gets two different answers on two readings.
+
+First DECOMPOSE the claim, internally, into its observable components. Do not rewrite, narrow or split the
+teacher's claim — it stands exactly as confirmed, and it is still the claim you judge. This decomposition
+is your own working structure. Typically two to five components; if you find yourself past five you are
+inventing sub-skills rather than reading the claim, so stop and merge.
+
+For EVERY component, state:
+  · component — the observable thing, something you could point at a student doing.
+  · items — the item numbers that exercise it, or an empty list if none do.
+  · status — "present" (at least one item exercises it), "absent" (no item exercises it), or
+    "not_called_for" (nothing in this assessment's items or declared conditions asks for it at all, so its
+    absence is a scope fact rather than a hole).
+  · evidence — quote or cite the assessment for whichever of those you claim. An empty items list needs a
+    reason drawn from the assessment, not from what a richer assessment would have contained.
+
+Then reason ACROSS the whole set. AN UNEXERCISED COMPONENT DOES NOT AUTOMATICALLY WARRANT ANYTHING. For
+each component that is not "present", answer three questions before it may go any further:
+  · belongs_to_inference — does this component materially belong to the inference the teacher confirmed
+    FOR THIS ASSESSMENT, or is it a neighbouring skill the claim's wording merely brushes?
+  · assessed_elsewhere_or_out_of_scope — has the teacher said, or does the assessment's own purpose and
+    conditions show, that this is carried somewhere else?
+  · narrows_support — does its absence materially narrow what this assessment can support, or is the claim
+    still carried in substance by the components that ARE present?
+
+Carry forward AT MOST ONE component: the one that is not present, materially belongs, is not assessed
+elsewhere, and whose absence genuinely narrows support. Name it in "carried_forward". If more than one
+qualifies, carry the one that narrows support most and say so — you still propose at most one observation
+in the end. If none qualifies, set "carried_forward" to "" and explain in "why", and GATE 1 FAILS: no
+intervention is warranted, whatever else you noticed. Stop there.
+
+These remain NOT absences, at component level as much as before: "it could be stronger", "only one item
+covers it", "a second instance would give more confidence", "the response format could be richer". A
+component exercised once is present.
+
+GATE 2 — MATERIALITY.
+Only if something is genuinely absent. Does that absence materially limit the inference the teacher
+intends to draw from THIS assessment, for its stated purpose?
+Do not silently widen the teacher's claim, and do not require one assessment to demonstrate every
+adjacent competency. An assessment may legitimately support a narrower claim than the ideal one, and a
+dimension the teacher assesses elsewhere is not this assessment's gap. A LIMITED judgment does not imply
+an intervention: narrowness the teacher would accept, or already knows about, is not material.
+Material means the teacher would draw a conclusion this evidence does not carry, and would not otherwise
+know that.
+If it is not material, GATE 2 FAILS. No intervention is warranted. Stop here.
+
+GATE 3 — VALUE AGAINST BURDEN.
+Only if the absence is material. Would ONE additional independent observation improve the evidentiary
+support enough to be worth its classroom minutes and its per-student scoring cost?
+Weigh what it costs against what it buys. If this assessment is ALREADY collecting more evidence than the
+claim needs, the answer is no — and the honest note is that some existing burden looks redundant, never
+that more should be collected.
+If it is not worth it, GATE 3 FAILS. No intervention is warranted. Stop here.
+
+Only when all three gates pass may you propose one additional observation. Report each gate you reached;
+for a gate you did not reach because an earlier one failed, say so rather than guessing an answer.
+
+THE SMALLEST USEFUL CHANGE — and it is almost always smaller than it first looks.
+You only reach this at all when all three gates passed. Work DOWN the tiers and STOP at the first one that
+closes the gap. You may not skip a tier because a lower one is more interesting to write; if you skip one,
+you must say why it could not work.
+
+TIER 1 — MODIFY ONE ITEM THAT IS ALREADY THERE.
+Ask this first, every time: can ONE item already on this assessment be changed so that it exercises the
+missing component — without adding an item, without adding a minute, and without taking away what any
+other item is currently evidencing?
+Very often it can, and the change is tiny: different numbers, one added word in the instruction, a value
+chosen so that a step the student can currently skip becomes unavoidable. An assessment whose answers all
+happen to come out clean can be made to demand the step simply by changing one of them.
+This tier costs the teacher nothing — same item count, same page, same minutes, same grading — so it is
+the RIGHT answer whenever it is available, and it is available more often than it looks.
+Give: the item's number, its current text, its replacement text, and one line on what the replacement now
+forces the student to do that the original did not.
+THE LIMIT OF THIS TIER: a modification can only repair a gap that is about what the ITEMS elicit. It
+cannot repair a gap that comes from the CONDITIONS. If the evidence fails because the work is unsupervised,
+or because the answer is available to the student while they work, then no rewording of any item fixes it —
+the artifact still comes back from a setting you cannot see into. In that case tier 1 is unavailable and
+you go to tier 2, and you say so.
+
+TIER 2 — ADD ONE SHORT INDEPENDENT OBSERVATION.
+Only once you have established that no existing item can be modified to close the gap.
+One primitive, one item, written out as the student would see it, produced under conditions that satisfy
+the three requirements. Aim at five to ten minutes, and often less.
+Do NOT reach for an exit ticket by default. Choose the primitive that gives this teacher the most useful
+evidence for the decision she is actually facing, and say in one line why that primitive rather than
+another. State the sufficiency line before it could be run, and give the variant rule.
+
+NO CHEAP CHECK. Some claims — judgment over messy data, sustained multi-step problem solving, extended argument — have no short independent check that reaches them. Every short item either pre-digests the problem (removing the judgment) or stops being short. When that is true, set "no_short_check_reason" to one sentence saying why, and return null for the additional observation. This is an honest and valuable answer. Do not invent a thin item to avoid giving it.
+
+JSON:
+{ "claims": [ {
+    "claim_id": string,
+    "items": [ { "item": string, "elicits": string } ],
+    "any_independent_observation": boolean,
+    "covers_whole_claim": boolean,
+    "narrower_inference": string,
+    "supports": string,
+    "does_not_support": [string],
+    "delegation": { "answer": "yes"|"no"|"partly", "reason": string },
+    "gap_statement": string,
+    "gate1_components": {
+      "components": [ { "component": string, "items": [string], "status": "present"|"absent"|"not_called_for", "evidence": string,
+                        "belongs_to_inference": boolean, "assessed_elsewhere_or_out_of_scope": boolean, "narrows_support": boolean } ],
+      "carried_forward": string, "why": string },
+    "gate2_materiality": { "reached": boolean, "material": boolean, "why": string },
+    "gate3_value": { "reached": boolean, "worth_it": boolean, "why": string },
+    "why_no_intervention": string,
+    "no_short_check_reason": string,
+    "over_verified_note": string,
+    "smallest_change": null | {
+      "tier": "modify_item"|"add_observation",
+      "why_not_tier_1": string,
+      "modify": null | { "item_ref": string, "current_text": string, "replacement_text": string, "what_it_now_forces": string },
+      "add": null | { "primitive": "Perturb"|"Transfer"|"Predict"|"Diagnose"|"Represent"|"Reverse"|"Generate"|"Classify",
+                      "item_text": string, "variant_rule": string, "conditions": string,
+                      "sufficiency_line": string, "why_this_primitive": string },
       "student_minutes": number,
       "scoring_seconds": number }
   } ],

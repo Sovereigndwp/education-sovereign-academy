@@ -60,7 +60,17 @@ export function deriveClaim(raw, declared) {
   const anyIndep = raw.any_independent_observation === true;
   const covers = raw.covers_whole_claim === true;
   const noCheap = s(raw.no_short_check_reason);
-  const add = raw.minimum_additional_observation;
+  // H1: the proposal may now arrive as a tiered `smallest_change` (modify an existing item, or add an
+  // observation) instead of the older always-additive `minimum_additional_observation`. Both shapes score
+  // through one path so A1-A4 packets keep scoring exactly as recorded.
+  const sc = raw.smallest_change;
+  const hasTiers = !!(sc && typeof sc === "object" && !Array.isArray(sc));
+  const tier = hasTiers ? pick(sc.tier, ["modify_item", "add_observation"], "add_observation") : null;
+  const modify = hasTiers && tier === "modify_item" ? (sc.modify || {}) : null;
+  // `obs` is the ADDED observation, and only that — a tier-1 modification is not an added observation and
+  // must not be checked as one.
+  const obs = hasTiers ? (tier === "add_observation" ? (sc.add || {}) : null) : raw.minimum_additional_observation;
+  const add = hasTiers ? sc : raw.minimum_additional_observation;
 
   // ── the verdict rule ──────────────────────────────────────────────────────
   let verdict;
@@ -170,17 +180,35 @@ export function deriveClaim(raw, declared) {
   }
 
   // ── feed-forward (the constraint most likely to be quietly violated) ──────
-  if (add && !Array.isArray(add)) {
-    const where = norm(s(add.conditions) + " " + s(add.item_text));
+  // ── tier discipline (H1) ──────────────────────────────────────────────────
+  if (hasTiers && add) {
+    if (tier === "modify_item") {
+      const m = modify || {};
+      if (!s(m.item_ref) || !s(m.replacement_text)) {
+        v.push({ code: "MODIFY_INCOMPLETE", detail: "Chose to modify an existing item without naming which item and what it becomes." });
+      }
+      // The trap this experiment exists to catch: a conditions gap cannot be reworded away. If the work
+      // goes home, no change to an item's text makes the artifact observable.
+      if (declared.supervision === "unsupervised") {
+        v.push({ code: "MODIFY_ON_CONDITIONS_GAP", detail: `Proposed modifying item ${s(m.item_ref) || "?"} although the evidence fails on the declared conditions (unsupervised), which no rewording of an item can repair.` });
+      }
+    }
+    if (tier === "add_observation" && !s(sc.why_not_tier_1)) {
+      v.push({ code: "TIER_SKIPPED_WITHOUT_REASON", detail: "Went straight to adding an observation without saying why no existing item could be modified." });
+    }
+  }
+
+  if (obs && !Array.isArray(obs)) {
+    const where = norm(s(obs.conditions) + " " + s(obs.item_text));
     const whereNet = stripSourceRefs(where);          // R2: source references removed before testing
     if (GOES_HOME.test(whereNet)) {
-      v.push({ code: "FEED_FORWARD", detail: `Proposed an observation that leaves the room: "${s(add.conditions).slice(0, 120)}". An artifact produced out of the room is a prompt, not a proof.` });
+      v.push({ code: "FEED_FORWARD", detail: `Proposed an observation that leaves the room: "${s(obs.conditions).slice(0, 120)}". An artifact produced out of the room is a prompt, not a proof.` });
     } else if (!SUPERVISED.test(where)) {          // R1: underscore-joined tokens now read
       v.push({ code: "CONDITIONS_UNSTATED", detail: "Proposed an observation without stating supervised conditions, so it cannot be checked against the independence requirement." });
     }
-    if (!s(add.variant_rule)) v.push({ code: "NO_VARIANT_RULE", detail: "Proposed an item with no variant rule, so it cannot be made fresh across periods." });
-    if (!s(add.sufficiency_line)) v.push({ code: "NO_LINE_BEFORE", detail: "Proposed an item without stating in advance what a response that counts as evidence contains." });
-    if (/explain (?:why|your thinking)|reflect(?:ion)?|in your own words|honesty|pledge|signature/i.test(s(add.item_text)) && s(add.primitive) !== "Diagnose") {
+    if (!s(obs.variant_rule)) v.push({ code: "NO_VARIANT_RULE", detail: "Proposed an item with no variant rule, so it cannot be made fresh across periods." });
+    if (!s(obs.sufficiency_line)) v.push({ code: "NO_LINE_BEFORE", detail: "Proposed an item without stating in advance what a response that counts as evidence contains." });
+    if (/explain (?:why|your thinking)|reflect(?:ion)?|in your own words|honesty|pledge|signature/i.test(s(obs.item_text)) && s(obs.primitive) !== "Diagnose") {
       v.push({ code: "EXPLAIN_AS_MECHANISM", detail: "Leaned on open explanation, reflection or an honesty device, which the primitive set rejects as a standalone mechanism." });
     }
   }
@@ -191,7 +219,7 @@ export function deriveClaim(raw, declared) {
   }
 
   // ── false precision ───────────────────────────────────────────────────────
-  const prose = [raw.supports, raw.gap_statement, raw.narrower_inference, raw.over_verified_note, raw.why_no_intervention, ...arr(raw.does_not_support), add && !Array.isArray(add) ? add.sufficiency_line : ""].map(s).join(" \n ");
+  const prose = [raw.supports, raw.gap_statement, raw.narrower_inference, raw.over_verified_note, raw.why_no_intervention, ...arr(raw.does_not_support), obs && !Array.isArray(obs) ? obs.sufficiency_line : (modify ? modify.what_it_now_forces : "")].map(s).join(" \n ");
   const banned = norm(prose).match(BANNED);
   if (banned) v.push({ code: "BANNED_LANGUAGE", detail: `Used measurement or AI-resistance language: "${banned[0]}".` });
 
@@ -220,9 +248,12 @@ export function deriveClaim(raw, declared) {
     why_no_intervention: whyNot,
     no_short_check_reason: noCheap,
     over_verified_note: s(raw.over_verified_note),
+    tier: hasTiers ? tier : (add ? "add_observation" : null),
+    modification: modify ? { item_ref: s(modify.item_ref), current_text: s(modify.current_text), replacement_text: s(modify.replacement_text), what_it_now_forces: s(modify.what_it_now_forces) } : null,
+    why_not_tier_1: hasTiers ? s(sc.why_not_tier_1) : "",
     proposed: add && !Array.isArray(add) ? {
-      primitive: s(add.primitive), item_text: s(add.item_text), variant_rule: s(add.variant_rule),
-      conditions: s(add.conditions), sufficiency_line: s(add.sufficiency_line),
+      primitive: obs ? s(obs.primitive) : "", item_text: obs ? s(obs.item_text) : "", variant_rule: obs ? s(obs.variant_rule) : "",
+      conditions: obs ? s(obs.conditions) : "", sufficiency_line: obs ? s(obs.sufficiency_line) : "",
       student_minutes: Number(add.student_minutes) || null, scoring_seconds: Number(add.scoring_seconds) || null,
       cost_status: "modeled",
     } : null,
