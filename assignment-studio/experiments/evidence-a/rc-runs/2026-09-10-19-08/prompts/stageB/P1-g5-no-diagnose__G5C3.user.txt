@@ -1,0 +1,75 @@
+Subject: Mathematics · Grade/course: Grade 5
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: proctored_in_class
+- Individual or collaborative: individual
+- AI policy: prohibited_and_enforced
+- Resources permitted: paper, pencil
+- Purpose: summative
+- Time: 25 minutes
+- Where in the sequence: end of Unit 4
+- What students had already seen, in the teacher's words: Students have practised this kind of item; these particular numbers and problems are new to them.
+
+THE TEACHER-CONFIRMED CLAIM (G5C3) — this governs; do not rewrite or narrow it:
+States why adding denominators produces a wrong-sized part, and gives the correct sum.
+
+THE FROZEN DIAGNOSIS for this claim (record 51a9300ce53390d4, closed — not yours to revise):
+  what this assessment DOES support: The teacher may conclude that on these particular items, worked in the room, the student reached the correct sum by a route that did not add denominators together.
+  what it does NOT reach:
+    - It does not reach the stated half of the claim: nowhere is the student asked to say why adding denominators produces a wrong-sized part, so no such statement exists to judge.
+    - A correct sum does not distinguish a student who understands why the parts must be the same size from a student correctly executing a remembered rule, and that is the adjacent claim these correct answers are most likely to be mistaken for.
+    - It does not reach whether the student can recognise or repair the denominator-adding error when it appears in someone else's work, or under the pressure of an unfamiliar item type.
+    - Items 4, 6 and 7 are constructed-response with steps shown, so there is no guess-rate caveat here; the caveat that does apply is the opposite one, that a correct procedure is silent about the reasoning behind it.
+  delegation under these conditions: no — The sums are computed on paper in a proctored individual sitting on numbers the teacher declares new, so whatever is on the page for items 4, 6 and 7 is the student's own work.
+  component map:
+  · States why adding denominators produces a wrong-sized part
+      status: absent   items: none
+      No item on the sheet presents the denominator-adding error, asks the student to evaluate a worked example, or asks for an explanation of any incorrect procedure. The only prompts for writing are 'show how you know' in Part A, which is attached to the student's own comparison, and 'Show every step' / 'Show your work' in Parts B and C, which elicit the student's own correct procedure. Nothing in Parts A, B or C calls for a statement about a wrong-sized part.
+  · Gives the correct sum
+      status: present   items: 4, 6, 7
+      Items 4 (1/2 + 1/3), 6 (2 1/3 + 1 3/4) and 7 (3/4 + 5/6) each require a correct sum with steps shown, and all three are addition of unlike denominators, the exact site of the misconception named in the claim.
+  the component carried forward as absent: States why adding denominators produces a wrong-sized part
+  why: This claim has two components and only one is exercised. The unexercised one is not a neighbouring skill the wording brushes; it is the diagnostic half of the claim as the teacher stated it, it is the part that makes the claim diagnostic rather than procedural, and the teacher has not said it is assessed elsewhere. Its absence materially narrows what the assessment supports, so it is the single component carried forward.
+  materiality: The teacher labelled this claim diagnostic, which means she intends to conclude something about the misconception itself, not only about correct output. Correct sums on 4, 6 and 7 are consistent with the misconception being resolved and also consistent with a student who never articulated it and follows a rule. Reading Part B as settling the diagnostic claim would be drawing a conclusion this evidence does not carry, and nothing else on the sheet would signal that to her.
+  worth the teacher's attention: This is not the ordinary narrowness every assessment has. Two of the three claims on this sheet are carried thoroughly, so the sheet reads as strong, and a strong sheet is exactly where a diagnostic claim quietly resting on procedural evidence is easiest to miss. The distinction between 'did not make the error here' and 'can say why the error is an error' is one this teacher can act on at the point where she decides whether Unit 4's misconception work is finished.
+
+THE MISSING EVIDENCE you are to obtain:
+This assessment produces no observation of the student stating why adding denominators produces a wrong-sized part; no item presents that error, and no prompt asks the student to account for an incorrect procedure.
+
+THE ASSESSMENT, exactly as the teacher uses it:
+"""
+# Fractions with Unlike Denominators — Practice and Problems
+
+**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**
+
+Name: ______________________  Date: ______________
+
+### Part A — Compare
+
+For each pair, write `<`, `>`, or `=`. Then show how you know (a common denominator, a picture, or a benchmark like ½).
+
+1. 3/4 ___ 5/8
+
+2. 2/3 ___ 7/12
+
+3. 5/6 ___ 8/9
+
+### Part B — Add and subtract
+
+Show every step. Answers in simplest form.
+
+4. 1/2 + 1/3 = ______
+
+5. 5/6 − 1/4 = ______
+
+6. 2 1/3 + 1 3/4 = ______
+
+### Part C — Word problems
+
+7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.
+
+8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.
+
+"""
+
+Return the JSON object now.

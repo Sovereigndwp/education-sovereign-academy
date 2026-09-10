@@ -1,0 +1,15 @@
+{
+  "tier": "modify_item",
+  "why_not_tier_1": "Tier 1 was not skipped. The gap is about what the items elicit, not about the conditions: the sitting is proctored, individual, paper and pencil only, so the artifact is already an independent observation. The only reason no reduction is observed is the particular numbers chosen, and one item's numbers can be changed so that a reducible result appears under the existing 'Answers in simplest form' instruction, with no added item, no added minute, and no loss of another item's contribution.",
+  "modify": {
+    "item_ref": "Part B, item 4",
+    "current_text": "4. 1/2 + 1/3 = ______",
+    "replacement_text": "4. 1/2 + 1/6 = ______",
+    "what_it_now_forces": "The sum arrives as 4/6, which is not in lowest terms, so the student must notice the common factor and divide numerator and denominator by 2 to reach 2/3 - the Part B header instruction now has something to act on, and the reduction step is performed rather than merely satisfied by accident. What this gives up: item 4 no longer requires a common denominator that is neither of the two given denominators (the LCD becomes 6, the larger denominator), but items 5 (6 and 4) and 6 (3 and 4) still test that case, so no relationship is lost from the paper."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 0,
+  "scoring_seconds": 0,
+  "disagreement": ""
+}

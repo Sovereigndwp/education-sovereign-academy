@@ -1,0 +1,15 @@
+{
+  "tier": "modify_item",
+  "why_not_tier_1": "Tier 1 is available and is used. The gap is about what the items elicit, not about the conditions: the work is proctored, individual, paper-and-pencil, AI prohibited, and the numbers are new to the students, so an observation made on this page is already independent and novel. Item 9 already puts the erroneous work in front of the student and already collects the corrected sum; the only thing missing is that its question ('what did the student do wrong') is answered by naming the move. Adding one required sentence to that same item makes the account of part size unavoidable without adding an item, a minute, or a second thing to grade.",
+  "modify": {
+    "item_ref": "Item 9 (Part D - Find the mistake)",
+    "current_text": "9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.",
+    "replacement_text": "9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer. Then finish both sentences: (a) Sixths are ______ than halves and fourths. (b) So 2/6 must be wrong, because 2/6 is ______ than 1/2 by itself, and 1/2 was only one of the two pieces being added.",
+    "what_it_now_forces": "The student must now say something about the size of the parts - that sixths are smaller pieces than the halves and fourths being combined, and that the answer landed below 1/2 alone - which naming the move ('they added the bottoms') no longer satisfies; the original wording, the error identification and the corrected sum are all kept intact, so nothing item 9 was contributing is given up, and the sentence frames keep the language load low enough that a multilingual learner is not being scored on prose."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 1,
+  "scoring_seconds": 15,
+  "disagreement": ""
+}

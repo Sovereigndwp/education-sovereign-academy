@@ -1,0 +1,309 @@
+{
+  "claims": [
+    {
+      "claim_id": "K1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Commit to integration by parts on x*e^(2x), choose u = x and dv = e^(2x)dx, and carry the reduction through to a correct antiderivative, then name the technique in one phrase."
+        },
+        {
+          "item": "2",
+          "elicits": "Factor x^2+x-6 into (x+3)(x-2), split (3x+1)/(x^2+x-6) into partial fractions, solve for the two constants, and integrate each term to a logarithmic antiderivative."
+        },
+        {
+          "item": "3",
+          "elicits": "Peel off one sine factor, rewrite the remaining even power of sine with the Pythagorean identity, and complete the u = cos x substitution to a correct antiderivative."
+        },
+        {
+          "item": "4",
+          "elicits": "Recognise the x dx numerator as the derivative-linked part of u = 9 - x^2 and carry the substitution through to -sqrt(9 - x^2) + C."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "Only that a submitted paper contains worked antiderivatives for four integrands the class had not seen, each with a technique named beside it; the authorship of the execution is unknown, so nothing narrower about this student's own execution is reached either.",
+      "supports": "Under the declared conditions the teacher may conclude that a complete set of worked solutions covering parts, partial fractions, a trigonometric power reduction and a root substitution was submitted, and nothing about who or what produced the work.",
+      "does_not_support": [
+        "That this student can execute integration by parts, partial fractions, the sine-power reduction or the radical substitution at all: the work is produced where a CAS, the internet and an AI assistant are permitted, so a correct antiderivative carries no information about the student.",
+        "The unaided half of K1 as stated ('without a calculator or notes'): the declared permitted resources include exactly the aids the claim excludes, so that part of the claim is untouched even in principle.",
+        "The adjacent claim this is most likely to be mistaken for: readiness to perform these same four techniques in an unaided, closed-book setting, which is what the paper's own header describes but not what was declared.",
+        "Fluency or working rate: time is not stated and the paper is worked across a weekend, so nothing about how long any execution took is observable. No item is selected-response, so no guess-rate caveat arises here."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Each Part A integrand is a single-line query to a permitted CAS or AI assistant that returns both the antiderivative and the name of the technique, which together are the entire required output."
+      },
+      "gap_statement": "We cannot tell from a take-home paper worked with a CAS, the internet and an AI assistant permitted whether this student can execute any of these four techniques, still less execute them without a calculator or notes.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Selects the technique the given integrand calls for and commits to it",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Part A instruction: 'Evaluate each integral. Next to your answer, name in one phrase the technique you chose.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Carries the chosen technique through to a correct antiderivative on a single integrand",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Four Part A integrands each demand a complete execution: x*e^(2x) (parts), (3x+1)/(x^2+x-6) (partial fractions), sin^3(x)cos^2(x) (identity plus substitution), x/sqrt(9-x^2) (substitution).",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of K1 are exercised by Part A items, so nothing is absent. The 'without a calculator or notes' wording in K1 is a condition of observation rather than a move a student makes, and the declared conditions permit a CAS, the internet and an AI assistant; that failure is recorded in any_independent_observation and in delegation, not as a component absence. No component qualifies to be carried forward, so Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of K1 is absent from the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed."
+      },
+      "why_no_gap": "This assessment contains an item for every observable part of K1, and the teacher states the integrands are new, so the novelty condition holds. What defeats K1 is the declared administration, not a hole in the instrument's content, and that is already stated in the booleans, in supports, in does_not_support and in delegation.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "K2",
+      "items": [
+        {
+          "item": "5(a)",
+          "elicits": "Recognise x^2/sqrt(x^2+4) as a trigonometric-substitution integrand and state the substitution it depends on (x = 2 tan(theta)), without computing anything."
+        },
+        {
+          "item": "5(b)",
+          "elicits": "Name integration by parts for the integral of ln x and state the decomposition it depends on (u = ln x, dv = dx), withholding the evaluation."
+        },
+        {
+          "item": "5(c)",
+          "elicits": "Name partial fractions for 1/(x^2-9) and state the decomposition it depends on, the split over (x-3)(x+3)."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "Only that a submitted paper names a technique and a dependency for each of three integrands; because the work is unsupervised with an AI assistant permitted, no narrower inference about this student's own selection reasoning survives either.",
+      "supports": "Under the declared conditions the teacher may conclude that a paper was submitted naming a technique and its underlying substitution, decomposition or identity for three integrands, with no claim about who selected them.",
+      "does_not_support": [
+        "That the student can pick the technique: naming a method and its substitution is the shortest and most transcribable output on the paper, and it is available from a permitted assistant in one prompt.",
+        "Anything about executing the chosen technique: Part B instructs 'Do not carry out the integration', so execution is deliberately outside this part and belongs to Part A.",
+        "The adjacent claim it is most likely to be read as: that the student can discriminate among techniques unaided, for instance on a mixed set encountered for the first time in class.",
+        "That the named dependency is understood rather than recited: the item asks for the substitution, decomposition or identity, not for why it is the one the integrand forces. All Part B responses are constructed, not selected, so no guess-rate caveat applies."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Part B asks for a technique name plus one substitution per integrand and explicitly forbids the computation, so the entire required response is a three-line answer any permitted AI assistant produces directly."
+      },
+      "gap_statement": "We cannot tell from three method-naming responses produced at home with an AI assistant permitted whether this student selects the technique or names the substitution it depends on.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Names an appropriate integration technique for a given integrand",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)"
+            ],
+            "status": "present",
+            "evidence": "Part B: 'name the technique you would use', across three structurally distinct integrands.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States the substitution, decomposition or identity the technique depends on",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)"
+            ],
+            "status": "present",
+            "evidence": "Part B: 'write the substitution, decomposition or identity it depends on' - the three integrands are chosen so each rests on a different one.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Does this without computing the integral",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)"
+            ],
+            "status": "present",
+            "evidence": "Part B heading 'Choose the method, do not evaluate' and the bolded 'Do not carry out the integration.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of K2 are exercised by items 5(a)-(c), including the 'without computing' condition, which the item states explicitly. Nothing is absent, so there is nothing to carry forward and Gate 1 fails. The limitation on K2 is the declared administration, recorded in the booleans and in delegation."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of K2 is absent."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed."
+      },
+      "why_no_gap": "Part B is a direct, item-by-item match to K2, down to the instruction not to evaluate, and the integrands are new to the students. The claim is defeated by the declared take-home, AI-permitted conditions rather than by anything the instrument omits.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "K3",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "Read a proposed antiderivative for the integral of x*cos(x^2), identify the step that does not follow - treating the variable factor 2x as if it could be divided out as a constant, so the proposed function does not differentiate back to the integrand - and supply the correct antiderivative, (1/2)sin(x^2) + C."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "Only that a submitted paper contains a named faulty step and a corrected antiderivative for one flagged error; under the declared conditions no narrower inference about this student's own diagnosis is reached.",
+      "supports": "Under the declared conditions the teacher may conclude that a response was submitted locating a step in a flagged incorrect antiderivative and offering a replacement, with no claim about who performed the diagnosis.",
+      "does_not_support": [
+        "That the student can diagnose the error: locating a flagged mistake and returning the correct antiderivative is a single prompt to a permitted assistant, and the whole worked line is reproduced on the paper for it to read.",
+        "Detection of an error that has not been announced: item 6 tells the student 'The answer is wrong', so noticing that something is wrong in unflagged work is not what is elicited here.",
+        "The adjacent claim it is most likely to be mistaken for: that the student checks and repairs their own Part A work by the same means.",
+        "Generality of the diagnosis beyond this instance: one incorrect antiderivative of one type is presented, so the reach of the response is to that instance, not to the underlying principle stated in general terms. The item is constructed-response, so no guess-rate caveat applies."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "The faulty line is printed in full and the error is pre-announced, so the required output - which step fails and what the correct antiderivative is - is returned verbatim by any permitted AI assistant or checked instantly against a CAS."
+      },
+      "gap_statement": "We cannot tell from an at-home response to a pre-flagged error, with an AI assistant permitted, whether this student located the invalid step or produced the correct antiderivative.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Locates the invalid step in an incorrect antiderivative",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6: 'Say which step does not follow', with the full faulty line x*sin(x^2)/(2x) + C printed for inspection.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Produces the correct antiderivative in place of the invalid one",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6: 'and give the correct antiderivative.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "K3 names two observable moves and item 6 asks for both in the order the claim states them. A component exercised once is present, so the single instance is not an absence. Nothing qualifies to be carried forward and Gate 1 fails; K3 is limited here by the declared conditions, not by a missing component."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because both components of K3 are exercised by item 6."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed."
+      },
+      "why_no_gap": "Item 6 is built to K3's wording and the integrand is new to the students, so the novelty condition holds; only independence fails, which is a fact about the declared administration and is reported in the booleans and delegation rather than as a hole in the instrument.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "K4",
+      "items": [
+        {
+          "item": "7",
+          "elicits": "Produce an integrand of the student's own choosing whose parts reduction does not terminate after one application - for example x^2*e^x or e^x*sin x - and state in one sentence why a single application still leaves an integral that itself requires parts, so two are needed and one is not."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "Only that a submitted paper contains an integral said to require parts twice together with a one-sentence justification; the authorship of the construction is unknown, so no narrower inference about this student's construction is reached.",
+      "supports": "Under the declared conditions the teacher may conclude that a constructed integral and a one-sentence justification were submitted, with no claim about who constructed or justified them.",
+      "does_not_support": [
+        "That the student can construct to a structural constraint: 'write an integral that needs integration by parts exactly twice, and say why twice and not once' is a single prompt to a permitted assistant, which returns both parts of the required answer.",
+        "That the student can recognise the same structural property in an integral handed to them rather than one they chose, which is the adjacent claim this item is most likely to be read as supporting.",
+        "That the student can carry the double reduction out: item 7 asks for the construction and the justification, not for the evaluation, so execution of a two-pass parts problem is not elicited here.",
+        "That the justification reflects a general grasp of when parts recurs, as against a correct sentence about one self-selected example. The item is constructed-response, so no guess-rate caveat applies."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "The item's output is one self-chosen integrand plus one sentence, with the student free to pick the example, which is the easiest thing on the paper for a permitted assistant to supply whole."
+      },
+      "gap_statement": "We cannot tell from a self-chosen integral and one sentence written at home with an AI assistant permitted whether this student can construct an integral to that structural constraint or justify why twice is required.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs an integral that meets the structural constraint of requiring integration by parts exactly twice",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 7: 'Write an integral that requires integration by parts exactly twice'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Justifies why two applications are required and one is not",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 7: 'say in one sentence how you know twice is required and once is not.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "K4 names a construction and a justification, and item 7 asks for exactly those two things in the claim's own terms. Neither is absent, so there is nothing to carry forward and Gate 1 fails. K4 is defeated here by the declared conditions, not by anything the item omits."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because both components of K4 are exercised by item 7."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed."
+      },
+      "why_no_gap": "Item 7 mirrors K4 clause for clause. The only thing standing between this item and the claim is the declared take-home, AI-permitted administration, which is reported in the booleans and in delegation rather than as an evidence gap in the instrument.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Declared by the teacher and governing throughout: unsupervised; individual; AI permitted; resources permitted are anything at home, the internet, an AI assistant and a CAS; purpose summative; time not stated; sent home over a weekend after the techniques-of-integration sequence; in the teacher's words, students have practised each technique and these integrands are new to them. The paper's own header reads '40 minutes, no calculator, no notes, closed book', which describes a different administration from the declared one; the declared conditions govern and have not been overruled, so every judgment above follows from the weekend take-home.",
+  "reviewer_notes": "Novelty holds for all four claims - the teacher states the integrands are new, so nothing here was available to be prepared in this exact form. Claim-targeting also holds: each Part maps cleanly onto one claim (A to K1, B to K2, C to K3, D to K4), with no orphan item and no claim left without an item. Independence is what fails, and it fails uniformly, because 'unsupervised' never qualifies and the permitted resources include the same class of tool that would produce every required output. Because of that, all four claims come back with no independent observation, and delegation is 'yes' in all four cases for reasons specific to each part. Every item is constructed-response, so no guess-rate caveat is triggered anywhere. No component of any claim is absent from the instrument, so Gate 1 fails for all four claims and no missing_evidence is recorded; the limitation is administrative, not a hole in the content. Nothing above describes or implies any change to the assessment, which stands exactly as the teacher uses it."
+}

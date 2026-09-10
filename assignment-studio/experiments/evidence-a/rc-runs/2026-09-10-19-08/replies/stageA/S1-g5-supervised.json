@@ -1,0 +1,298 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Student must commit to a symbol for 3/4 vs 5/8 and then write the basis for it: rename 3/4 as 6/8 and compare eighths, or argue from a picture or from both fractions' position relative to 1/2. The denominators are related (8 is a multiple of 4), so the renaming is a single step."
+        },
+        {
+          "item": "2",
+          "elicits": "Student must compare 2/3 and 7/12 where the benchmark 1/2 does not separate them (both exceed it), so a workable strategy has to be renaming to twelfths (8/12 vs 7/12) or a model; the written work shows which strategy was actually run."
+        },
+        {
+          "item": "3",
+          "elicits": "Student must compare 5/6 and 8/9 where neither denominator is a multiple of the other: either build eighteenths (15/18 vs 16/18) or reason about the missing piece from one whole (1/6 vs 1/9). The strategy choice has consequences here, and the shown work exposes it."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctoring, individually, with only paper and pencil and on number pairs the students had not seen, the teacher may conclude that the student selected a valid comparison strategy, carried it out, and wrote reasoning that connects to the symbol recorded.",
+      "does_not_support": [
+        "It does not reach strategy flexibility or efficiency: a student may run one method (common denominators) on all three pairs, so the evidence does not show that benchmarks or visual models are available to that student.",
+        "It does not reach the adjacent claim it is most likely to be mistaken for — ordering three or more fractions, or placing fractions on a number line — since every item is a two-fraction pairwise comparison.",
+        "The symbol on its own is a one-in-three choice among <, > and =, so where a student's shown work is missing, thin or illegible, that item's mark alone does not separate a chosen strategy from a lucky guess; only the written reasoning does that work.",
+        "It does not reach a general justification of why the strategy works (why renaming preserves the amount), only its correct application to these three pairs."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The comparisons are worked in the room under proctoring with paper and pencil on numbers the students had not seen, and each item requires the student's own written route to the symbol, not just the symbol."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Chooses a valid comparison strategy (equivalent fractions, a benchmark such as one half, or a visual model)",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A instruction: 'Then show how you know (a common denominator, a picture, or a benchmark like 1/2)' leaves the choice to the student rather than prescribing a method.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Executes the chosen strategy on the pair",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Items 1-3 require an actual comparison to be carried out; item 3 (5/6 vs 8/9) cannot be settled by the 1/2 benchmark and forces a renaming or a distance-from-one argument.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Shows the reasoning that supports the symbol written",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "'For each pair, write <, >, or =. Then show how you know'; the header also states 'Show all work'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every component of this claim is exercised by items 1-3: the strategy is left to the student, the pairs (including one whose denominators are not multiples) force it to be executed, and the reasoning is required in writing alongside the symbol. Nothing named in the claim is absent, so Gate 1 fails and there is no gap here."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of the claim is unexercised."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: analysis stopped at Gate 1."
+      },
+      "why_no_gap": "The assessment sets out to carry this claim and does: three unseen pairs, a free strategy choice, execution, and written reasoning tied to the symbol, all produced under supervision. The remaining limits (single method per student, pairwise only) are the ordinary boundaries of the claim as written, not holes in it.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Renaming 3/4 into eighths to set two fractions in like-sized parts before comparing them."
+        },
+        {
+          "item": "2",
+          "elicits": "Building twelfths from thirds so that 2/3 and 7/12 are expressed in like-sized parts and can be compared directly."
+        },
+        {
+          "item": "3",
+          "elicits": "Finding a common denominator for sixths and ninths, where neither denominator is a multiple of the other, and comparing the renamed parts."
+        },
+        {
+          "item": "4",
+          "elicits": "Renaming halves and thirds into sixths and combining like parts: 3/6 + 2/6 = 5/6, with the steps written out."
+        },
+        {
+          "item": "5",
+          "elicits": "Renaming sixths and fourths into twelfths and subtracting like parts: 10/12 - 3/12 = 7/12; the operation runs in the harder direction (subtraction) with unlike parts."
+        },
+        {
+          "item": "6",
+          "elicits": "Handling mixed numbers: renaming 1/3 and 3/4 as twelfths, adding to 13/12, and regrouping the improper part into the whole to give 4 1/12."
+        },
+        {
+          "item": "7",
+          "elicits": "Deciding from a described situation that the two distances combine, renaming to twelfths, adding to 19/12, and regrouping to the mixed number 1 7/12 as the item explicitly demands."
+        },
+        {
+          "item": "8",
+          "elicits": "Reading a 'how much more' situation as a subtraction, renaming thirds and fourths to twelfths, and taking the difference: 8/12 - 3/12 = 5/12."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctoring, individually, on paper, with unseen numbers, the teacher may conclude that the student can build a common denominator for unlike fractions, combine or compare the like-sized parts in both addition and subtraction, including with mixed numbers, and regroup an improper result into a mixed number where the item calls for it.",
+      "does_not_support": [
+        "It does not reach reduction to lowest terms: none of the answers produced by items 4-8 (5/6, 7/12, 4 1/12, 1 7/12, 5/12) is reducible, so a correct paper here is not evidence that the student can simplify a result such as 6/8 or 10/12, even though 'Answers in simplest form' is printed on the page.",
+        "It does not reach the adjacent claim it is most likely to be mistaken for — fluency or automaticity with unlike denominators — since eight items in twenty-five minutes with all work written speaks to accuracy on a small set, not to speed or to holding up across a wider range of denominators.",
+        "It does not reach multiplication or division of fractions, or addition of three or more unlike fractions; every item combines exactly two quantities.",
+        "In Part A the symbol itself is a one-in-three selection, so for those items the common-denominator work only counts as evidence where the student actually wrote it."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Every step is written in the room under proctoring with paper and pencil on number pairs the students had not seen, so a submitted paper is the student's own execution rather than a retrievable result."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs equivalent fractions with a common denominator",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Items 4-8 all pair unlike denominators (2 and 3; 6 and 4; 3 and 4; 4 and 6; 3 and 4), and Part A permits a common denominator as the route.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Combines or compares like-sized parts",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Part B 'Add and subtract' and Part C word problems require the combination; Part A requires the comparison of renamed parts.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Regroups an improper result into a mixed number where the item requires it",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 6 (2 1/3 + 1 3/4) yields 13/12 over the whole numbers, and item 7 says 'write your answer as a mixed number' for a sum of 19/12.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Simplifies a result to lowest terms where the item requires it",
+            "items": [],
+            "status": "not_called_for",
+            "evidence": "The instruction 'Answers in simplest form' appears in Part B, but no item produces a reducible answer: 4 gives 5/6, 5 gives 7/12, 6 gives 4 1/12, 7 gives 1 7/12, 8 gives 5/12. The claim itself conditions this on 'where the item requires it', and no item does.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": true,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Three of the four components are exercised repeatedly. The fourth, simplification, is not absent from the assessment so much as not called for by it: the claim's own wording is conditional ('where the item requires it') and no item's answer is reducible, so its non-appearance is a scope fact about these numbers rather than a hole. Nothing qualifies to carry forward, so Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed, since no component that materially belongs and narrows support was found absent."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: analysis stopped at Gate 1."
+      },
+      "why_no_gap": "This assessment sets out to carry the procedural claim and does so across five worked items plus the Part A renaming, in both operations and with mixed numbers, under conditions that make the work observed. The one unexercised element, simplification, is conditional in the teacher's own wording and no item triggers it.",
+      "missing_evidence": "",
+      "over_verified_note": "Common-denominator construction is exercised eight times across Parts A, B and C. That is more instances of one move than the claim needs; if anything on this page is redundant burden inside twenty-five minutes, it is the repetition of that single step, not any thin spot."
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "Given a worked wrong answer (1/2 + 1/4 = 2/6), the student must locate the error in someone else's reasoning and write what it was, then produce the correct sum 3/4. The prompt asks what the student did wrong; naming the move ('they added the bottoms', 'they needed a common denominator') answers it, and an account of why sixths are the wrong-sized part is invited by 'explain' but not required by it."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Under supervision the student can identify, in an unseen worked example, that the denominators were added instead of a common denominator being found, and can produce the correct sum.",
+      "supports": "The teacher may conclude that the student recognises the added-denominators error when it is shown to them and can correct the computation, on a case they had not seen before, without help.",
+      "does_not_support": [
+        "It does not reach the mechanism the claim names — why the resulting sixth is the wrong-sized part — because a response that names the error and computes 3/4 satisfies the item without ever referring to the size of the pieces.",
+        "It does not reach the adjacent claim it is most likely to be mistaken for: spotting the error when it is presented is not the same as not committing it, nor as catching it unprompted in one's own work, and items 4-8 do not offer the temptation because no distractor is present there.",
+        "It does not reach transfer of the misconception's logic to subtraction (a student writing 1/2 - 1/4 = 0/2 is never elicited) or to any other denominator pair; one instance with halves and fourths is the whole basis.",
+        "It does not reach whether the student can say what 2/6 would be the correct answer to, i.e. what quantity the wrong procedure actually computes."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation is written by hand in the room under proctoring on a worked error the students had not seen, so whatever appears is the student's own account."
+      },
+      "gap_statement": "We cannot tell from item 9 whether a student who names the error can say why adding denominators yields a part of the wrong size, since naming the rule that was broken earns the item just as fully as explaining the size of the parts.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies the error in the worked example (the denominators were added rather than a common denominator found)",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "'A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong' puts the erroneous work in front of the student and asks for the error.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States why adding denominators produces a wrong-sized part",
+            "items": [],
+            "status": "absent",
+            "evidence": "No item asks about the size of the parts. Item 9 asks 'what the student did wrong', which is answered by naming the move; nothing on the page requires the student to say that sixths are smaller pieces than the fourths and halves being combined, or that the answer 2/6 is smaller than 1/2 alone.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          },
+          {
+            "component": "Gives the correct sum",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "'and show the correct answer', with the header instruction 'Show all work'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "States why adding denominators produces a wrong-sized part",
+        "why": "Two of the three components are exercised by item 9. The third is the explanatory half of the claim and is the one the teacher wrote most specifically ('states why ... a wrong-sized part'); the item's question is a different question, about what was done rather than about why the resulting part is the wrong size, and it is not carried anywhere else on the page. It materially belongs to this claim, the teacher has not said it is assessed elsewhere, and its absence narrows what the paper licenses, so it is carried forward as the single component."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "This is the diagnostic claim, and its whole point is the mechanism of the misconception. A correct item 9 saying 'they added the bottoms, the answer is 3/4' will read on the page exactly like the evidence the teacher wants, so she would credit an account of part size that the paper never asked for and may not contain. That is a conclusion the evidence does not carry."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "It is specific to this item's wording rather than the ordinary narrowness of any one-item claim: the gap is between the question asked ('what did the student do wrong') and the claim as confirmed ('states why ... produces a wrong-sized part'), which a teacher reading finished papers has little occasion to notice, because the responses she credits will look right. It is also the only claim of the three where what the paper produces falls short of the wording, so it is not a general caution about single items."
+      },
+      "why_no_gap": "",
+      "missing_evidence": "The assessment produces no written account of why the parts are the wrong size — no item requires the student to say that sixths are smaller pieces than the halves and fourths being combined, or that 2/6 is less than 1/2 on its own, so the papers contain identification of the error and the corrected sum but nothing that shows the reasoning behind either.",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Grade 5 mathematics, end of Unit 4, summative, 25 minutes. Proctored in class, individual work, AI prohibited and enforced, paper and pencil only. Teacher's novelty note: students have practised this kind of item, but these particular numbers and problems are new to them. On these declared conditions every item is independent and novel, so the analysis turns on what each item elicits rather than on who produced it.",
+  "reviewer_notes": "The declared conditions are as favourable as this instrument can get: supervision makes the work an observation of the student, and the novelty note makes the specific items unpreparable, so nothing here fails on independence or novelty and no feed-forward artifact is involved. The three claims therefore separate on what the items actually ask. G5C1 and G5C2 are carried in substance, with G5C2 collecting one move (common-denominator construction) eight times. G5C3 is the only claim where the item's question and the claim's wording come apart: item 9 asks what was done wrong, the claim asks why the part is the wrong size. Two notes that are boundaries rather than gaps: no answer in Part B or C is reducible, so 'simplest form' is never actually tested; and the Part A symbols are three-way selections, which only the shown work redeems."
+}

@@ -1,0 +1,289 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "With 3/4 ___ 5/8, the student must pick a route without being told which one (rename to eighths, or reason from the one-half benchmark), carry it out on paper, and write the reasoning the comparison symbol rests on in box (c)."
+        },
+        {
+          "item": "2",
+          "elicits": "With 2/3 ___ 7/12, one denominator is a multiple of the other, so the student must generate the equivalent 8/12 and state in words or a labelled picture why 8/12 is the larger of two same-sized-part quantities."
+        },
+        {
+          "item": "3",
+          "elicits": "With 5/6 ___ 8/9, neither denominator is a multiple of the other and both quantities sit near one, so the benchmark of one half does not separate them; the student must reach a common denominator of 18, or argue from the size of the remaining piece, and show that argument."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual, paper-and-pencil conditions with numbers the students had not seen, a teacher may conclude that the student selected a valid comparison strategy, executed it, and produced the reasoning that supports the symbol on three unlike-denominator pairs of differing difficulty.",
+      "does_not_support": [
+        "It does not reach strategy efficiency or strategy choice among alternatives: 'using any method you choose' elicits one valid route, not evidence that the student can judge which route is better suited to a given pair.",
+        "It does not reach ordering three or more fractions or locating them on a number line, which is the adjacent claim this one is most likely to be mistaken for.",
+        "It does not reach comparison of fractions greater than one or of mixed numbers; every pair in Part A is a pair of proper fractions.",
+        "The symbol itself in items 1-3 is a one-in-three choice (<, >, =), so a correct symbol read on its own would carry a guess rate; that caveat is discharged here only because box (c) collects the reasoning for every item, and it returns in full if the symbol is ever scored apart from the explanation."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The comparisons are worked on paper in a proctored, individual sitting with AI prohibited and enforced and with number pairs the teacher states were new, so the explanation in box (c) is written in the room by the person who produced the symbol."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Chooses a valid strategy for comparing two unlike fractions (equivalent fractions, a benchmark such as one half, or a visual model)",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "The instruction for box (b) is 'your full solution, using any method you choose', and items 1-3 differ enough (3/4 vs 5/8, 2/3 vs 7/12, 5/6 vs 8/9) that the choice is live rather than dictated.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Executes the chosen strategy",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Box (b) requires a full worked solution on each of items 1, 2 and 3, and item 3 (5/6 vs 8/9) cannot be closed by a benchmark, so execution to a common denominator or an equivalent argument is forced.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Shows the reasoning that supports the symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Box (c): 'Explain every step (words or a labelled picture)' is required on every item, including all three Part A comparisons.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of G5C1 as the teacher worded it - choosing a strategy, executing it, and showing the reasoning behind the symbol - are exercised by items 1, 2 and 3 under the declared conditions. Nothing is absent, so no component qualifies to be carried forward and Gate 1 fails. Wanting a fourth comparison, or a richer response format, is not an absence."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of this claim is unexercised, so there is nothing whose materiality could be weighed."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so no absence reached the question of whether it would be worth this teacher's attention."
+      },
+      "why_no_gap": "This claim is carried in full by items 1-3 under the declared conditions. The comparisons are proctored, individual, and use number pairs the teacher states were new, and every item collects the reasoning alongside the answer, so strategy choice, execution and justification are all observed rather than inferred. There is no hole to report.",
+      "missing_evidence": "",
+      "over_verified_note": "For this claim the prediction in box (a) of items 1-3 adds nothing evidentially: the same student's chosen strategy, worked solution and step-by-step explanation are already collected in boxes (b) and (c), and a guess written before the work is not a second observation of the claim. Within a 25-minute sitting that burden looks redundant against G5C1."
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Renaming 3/4 and 5/8 to a shared denominator and then comparing like-sized parts - the comparison half of the claim rather than the combining half."
+        },
+        {
+          "item": "2",
+          "elicits": "Generating 8/12 from 2/3 and comparing twelfths with twelfths."
+        },
+        {
+          "item": "3",
+          "elicits": "Generating eighteenths from sixths and ninths and comparing like-sized parts where no benchmark separates the two quantities."
+        },
+        {
+          "item": "4",
+          "elicits": "1/2 + 1/3 forces both addends to be renamed - neither denominator serves as the common one - and then combined as sixths."
+        },
+        {
+          "item": "5",
+          "elicits": "5/6 - 1/4 forces renaming of both terms to twelfths and subtraction of like-sized parts, so it is not a case where one denominator can simply absorb the other."
+        },
+        {
+          "item": "6",
+          "elicits": "2 1/3 + 1 3/4 requires renaming the fractional parts to twelfths, adding to 13/12, and regrouping the extra whole into the whole-number part rather than leaving an improper fractional part."
+        },
+        {
+          "item": "7",
+          "elicits": "The student must read 3/4 and 5/6 as an addition, rename to twelfths, and then convert 19/12 into a mixed number because the item explicitly requires the answer in that form."
+        },
+        {
+          "item": "8",
+          "elicits": "The student must decide that 'how much more' is a difference rather than a sum, then rename 2/3 and 1/4 to twelfths and subtract."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions a teacher may conclude that the student constructs common-denominator equivalents on unseen numbers, combines or compares like-sized parts in addition, subtraction and word-problem form, and regroups to a mixed number on the items that call for it.",
+      "does_not_support": [
+        "It does not reach reducing a result to lowest terms: none of items 4-8 produces an answer that needs reducing (5/6, 7/12, 4 1/12, 1 7/12, 5/12), so the 'simplifies' half of the claim is observed only in its regrouping form.",
+        "It does not reach multiplication or division of fractions, nor denominator pairs with no small common multiple; every denominator here lies in 2, 3, 4, 6, 8, 9, 12.",
+        "It does not reach fluency or durability - this is one 25-minute sitting at the end of Unit 4, and it is most likely to be mistaken for the adjacent claim that the student can do this quickly and will still be able to weeks later.",
+        "It does not reach performance without the prediction and explanation scaffolding; every item here is worked inside a three-box structure that keeps the method visible, so it says nothing about a bare computation format."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Every computation is performed in the room with paper and pencil only, under proctoring with AI prohibited and enforced, and on numbers the teacher states were new, so no submitted answer here could have been produced elsewhere."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs equivalent fractions with a common denominator",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Items 4 (1/2 + 1/3) and 5 (5/6 - 1/4) both force renaming of both terms rather than allowing one denominator to serve as the common one; the Part A and Part C items require the same construction.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Combines or compares like-sized parts",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Combining is exercised in items 4, 6 and 7 (addition) and 5 and 8 (subtraction); comparing like-sized parts is exercised in items 1-3 after renaming.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Regroups to a mixed number where the item requires it",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 6 (2 1/3 + 1 3/4) yields 13/12 in the fractional part and must be regrouped; item 7 states 'Write your answer as a mixed number' and yields 19/12.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Simplifies a result where the item requires it",
+            "items": [],
+            "status": "not_called_for",
+            "evidence": "No item in this assessment produces a result in need of reducing - 1/2 + 1/3 = 5/6, 5/6 - 1/4 = 7/12, 2 1/3 + 1 3/4 = 4 1/12, 3/4 + 5/6 = 1 7/12, 2/3 - 1/4 = 5/12 - and the teacher's own wording conditions this on 'where the item requires it', so nothing in these items or the declared conditions calls for it.",
+            "belongs_to_inference": false,
+            "assessed_elsewhere_or_out_of_scope": true,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Three of the four components are exercised by items across Parts A, B and C. The fourth, simplifying a result, is not called for by any item, and the teacher's claim itself makes it conditional on the item requiring it, so its absence is a scope fact about these particular numbers rather than an absence in the assessment. No component is both genuinely absent and materially part of the confirmed inference, so nothing is carried forward and Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component qualified to be carried forward."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so no absence reached this gate."
+      },
+      "why_no_gap": "The procedural claim is carried in substance and then some: renaming, combining, comparing and regrouping are each observed on more than one item, in bare-computation and word-problem form, under supervision and on unseen numbers. The one element not observed - reducing to lowest terms - is one the teacher's own wording makes conditional on the item requiring it, and no item here does.",
+      "over_verified_note": "This claim is observed five to eight times over. Items 4 and 5 already produce the renaming-and-combining evidence, items 6 and 7 already produce the regrouping evidence, and items 7 and 8 already produce it again inside word problems; on top of that every one of those items also demands a prediction and a full written explanation of every step, and item 6 is then re-explained aloud in the five-minute conference after grading. For G5C2 specifically, the oral re-explanation of item 6 and the prediction boxes duplicate evidence the written solutions already carry.",
+      "missing_evidence": ""
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "The student must locate the error in someone else's work as an operation performed on the denominators, say why 2/6 is a wrong-sized part rather than merely the wrong number, and produce 3/4 as the correct sum, with the reasoning written out in box (c)."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual, paper-and-pencil conditions a teacher may conclude that the student can articulate why adding denominators yields a part of the wrong size and can give the correct sum for that case.",
+      "does_not_support": [
+        "It does not reach whether the student would catch this error unprompted: item 9 announces that a mistake exists and supplies it, so it is most likely to be mistaken for the adjacent claim that the student self-monitors for the error in their own work.",
+        "It does not reach a general account of why a common denominator is necessary; one worked diagnosis of 1/2 + 1/4 -> 2/6 is not evidence about the principle stated in the abstract.",
+        "It does not reach recognition of other fraction errors - subtracting across, mis-regrouping a mixed number, or treating an improper fraction as final - none of which appears anywhere in Part D.",
+        "There is no selected-response element in item 9, so no guess-rate caveat applies; the correct sum alone would still be uninformative without the explanation, which box (c) collects."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation of the error is written in the room in the student's own words, under proctoring with no resources beyond paper and pencil, so the diagnosis cannot have been supplied from outside."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States why adding denominators produces a wrong-sized part",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9: 'Explain what the student did wrong', with box (c) requiring an explanation of every step in words or a labelled picture.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Gives the correct sum",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9: 'and show the correct answer', for 1/2 + 1/4.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "The diagnostic claim as the teacher worded it has exactly two observable components, and item 9 exercises both under the declared conditions. That only one item does so is not an absence - a component exercised once is present - so nothing is carried forward and Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because both components of this claim are exercised by item 9."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so no absence reached this gate."
+      },
+      "why_no_gap": "Item 9 asks for precisely the two things the claim names, and the declared conditions make the written explanation an observation of this student rather than an artifact of unknown authorship. The claim is narrow as the teacher stated it, and this item matches its width.",
+      "missing_evidence": "",
+      "over_verified_note": "Item 9 is collected three times: in writing in box (c), again in the one-page reflection where a wrong prediction must be explained, and a third time aloud in the five-minute post-grading conference, which names item 9 explicitly. The written explanation already produces the evidence this claim needs, so the oral repetition and the prediction box are additional burden rather than additional evidence for G5C3."
+    }
+  ],
+  "conditions_echo": "Grade 5 mathematics, end of Unit 4, summative, 25 minutes. Proctored in class, individual work, AI prohibited and enforced, paper and pencil the only permitted resources. Teacher's novelty note: students have practised this kind of item, but these particular numbers and problems are new to them. All judgments above are made under these declared conditions and no others.",
+  "reviewer_notes": "All three claims clear the independence and novelty conditions on the teacher's own declaration: the work is proctored and individual, and the specific numbers were not available to be prepared. Nothing leaves the room before it is produced, so the feed-forward rule does not put any of this evidence at risk. It is worth being clear about why, though. The prediction boxes, the one-page reflection and the post-grading conference are process artifacts; what secures this evidence is the supervision, not those artifacts, and they would carry no evidential weight of their own under any other condition. They may be doing real teaching work - that is not what this audit measures. Across all three claims the pattern is the same: every component the teacher named is exercised, several of them repeatedly, and Gate 1 fails in each case. No gap is reported for any claim. The one thing worth putting in front of this teacher is the opposite of a gap, and it is recorded per claim in over_verified_note: within 25 minutes this instrument demands a prediction, a full solution and a written explanation of every step for all nine items, plus a one-page reflection and a five-minute oral re-explanation of items 6 and 9, while claims G5C1, G5C2 and G5C3 are already carried by the solutions and explanations alone."
+}

@@ -1,0 +1,77 @@
+Subject: Physical Science · Grade/course: Grade 8
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: proctored_in_class
+- Individual or collaborative: individual
+- AI policy: prohibited_and_enforced
+- Resources permitted: calculator, paper, ruler
+- Purpose: summative
+- Time: 30 minutes
+- Where in the sequence: end of the energy unit
+- What students had already seen, in the teacher's words: The class collected this data together; the analysis questions are new.
+
+THE TEACHER-CONFIRMED CLAIM (S4c) — this governs; do not rewrite or narrow it:
+Recognises that the data contradict proportional reasoning and disagrees with the 'twice as fast' claim, citing the pattern in the numbers.
+
+THE FROZEN DIAGNOSIS for this claim (record 32b5dec2201e2370, closed — not yours to revise):
+  what this assessment DOES support: Under proctored individual conditions, the teacher may conclude that the student can produce and quote the numbers across both doublings, which is the pattern this claim rests on.
+  what it does NOT reach:
+    - It does not reach the diagnostic move itself: no item asks the student to evaluate, accept or reject a proportional 'twice as fast' claim, so agreement with that misconception would never surface.
+    - It is most likely to be mistaken for the adjacent claim that the student has ruled out proportional reasoning - item 4's wording 'when the height doubles' makes the doubling comparison look like a test of proportionality when it only requires reporting values.
+    - It does not reach whether a student who writes '10 cm to 20 cm: 1.30 to 1.84' has noticed anything at all about that increase, since the item is satisfied by transcription plus a direction word.
+    - It does not reach whether the student holds the proportional misconception in some other setting, such as predicting speed at a new height, since item 6 accepts any stated method.
+  delegation under these conditions: no — Whatever the student writes about the doublings is written in the room under proctoring with AI prohibited and enforced, so authorship is not in question here - the limit is what the items ask for, not who produced the answers.
+  component map:
+  · Recognises that the data contradict proportional reasoning
+      status: present   items: 3, 4
+      Item 4 requires the student to state what happens to speed across the 10-to-20 cm and 20-to-40 cm doublings, which is the comparison in which non-proportionality appears; item 3 requires a stated relationship.
+  · Disagrees with the 'twice as fast' claim
+      status: absent   items: none
+      No item anywhere in the assessment states a 'twice as fast' claim or any other assertion for the student to accept or reject; items 3, 4, 5 and 6 all ask the student to produce, not to evaluate. The teacher has confirmed S4c for this assessment and has not said it is carried elsewhere.
+  · Cites the pattern in the numbers in support
+      status: present   items: 4
+      Item 4: 'Support your claim with at least two specific numbers from the table.'
+  the component carried forward as absent: Disagrees with the 'twice as fast' claim
+  why: One component is not present. It materially belongs: the teacher's claim names disagreeing with the 'twice as fast' claim as the diagnostic move, and this claim is typed diagnostic - it is about detecting a misconception, not about reporting values. Nothing in the teacher's declaration or the assessment's summative purpose places it elsewhere, and its absence narrows what can be supported, because the two present components together produce only the numbers, not a position on them. It is carried forward.
+  materiality: The absence is material because item 4's 'when the height doubles' wording lands directly on the misconception without ever asking about it: a summative reading of a correct item 4 would be taken as evidence that the student has rejected proportional reasoning, and that is a conclusion this evidence does not carry. A student who believes speed doubles with height can answer items 3, 4, 5 and 6 acceptably.
+  worth the teacher's attention: This is not the ordinary narrowness every assessment has. The teacher confirmed a distinct diagnostic claim about disagreeing with a specific wrong claim, and the assessment's doubling language makes that claim look covered when the items only ever ask the student to produce values. A teacher deciding summatively that a misconception is cleared would be acting on evidence that was never collected.
+
+THE MISSING EVIDENCE you are to obtain:
+This assessment produces no observation of the student taking a position on a stated proportional 'twice as fast' claim; nothing in it asks the student to agree or disagree with any assertion about the data.
+
+THE ASSESSMENT, exactly as the teacher uses it:
+"""
+# Ramp Height and Cart Speed — Data Analysis (CER)
+
+**Grade 8 Physical Science · Energy Unit · 30 minutes**
+
+A class released a cart from rest at four different heights on the same ramp and measured its speed at the bottom with a photogate. Each height was tested three times.
+
+| Release height (cm) | Trial 1 speed (m/s) | Trial 2 speed (m/s) | Trial 3 speed (m/s) | Average speed (m/s) |
+|---|---|---|---|---|
+| 10 | 1.28 | 1.33 | 1.30 | |
+| 20 | 1.84 | 1.87 | 1.82 | |
+| 30 | 2.24 | 2.28 | 2.23 | |
+| 40 | 2.58 | 2.62 | 2.61 | |
+
+### Part 1 — Organize the data
+
+1. Calculate the average speed for each height and fill in the last column. Round to the nearest hundredth.
+
+2. Sketch a graph of average speed (y-axis) versus release height (x-axis). Label both axes with units.
+
+### Part 2 — Claim, Evidence, Reasoning
+
+3. **Claim.** Write one sentence stating how the cart's speed at the bottom is related to its release height.
+
+4. **Evidence.** Support your claim with at least two specific numbers from the table. Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.
+
+5. **Reasoning.** Explain *why* the relationship looks the way it does. Use the ideas of gravitational potential energy and kinetic energy in your explanation.
+
+### Part 3 — Apply
+
+6. Predict the average speed for a release height of 50 cm. Explain how you made your prediction.
+
+"""
+
+Return the JSON object now.

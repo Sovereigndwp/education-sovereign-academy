@@ -1,0 +1,85 @@
+Subject: Mathematics · Grade/course: Grade 5
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: proctored_in_class
+- Individual or collaborative: individual
+- AI policy: prohibited_and_enforced
+- Resources permitted: paper, pencil
+- Purpose: summative
+- Time: 25 minutes
+- Where in the sequence: end of Unit 4
+- What students had already seen, in the teacher's words: Students have practised this kind of item; these particular numbers and problems are new to them.
+
+THE TEACHER-CONFIRMED CLAIM (G5C1) — this governs; do not rewrite or narrow it:
+Chooses a valid strategy for comparing two unlike fractions — equivalent fractions, a benchmark such as one half, or a visual model — executes it, and shows the reasoning that supports the symbol.
+
+THE FROZEN DIAGNOSIS for this claim (record 1ad6579ef294bcb7, closed — not yours to revise):
+  what this assessment DOES support: The teacher may conclude that this student, unaided and on new numbers, reached the correct relation for these three unlike-fraction pairs.
+  what it does NOT reach:
+    - Which of the strategies the claim names - equivalent fractions, a one-half benchmark, or a visual model - the student actually used, or whether any strategy was used rather than a remembered fact about these particular fractions.
+    - The adjacent and easily substituted claim that the student can justify a comparison: no words, diagram or conversion are collected in Part A, so a correct symbol cannot be read as reasoning.
+    - Each Part A item is a three-option selected response, so a correct mark is obtainable by guessing roughly one time in three and the reasoning behind it is not collected; three correct marks therefore separate reasoning from luck only weakly, and a single correct mark not at all.
+    - The adjacent claim that the student's comparison method generalises - the three pairs are fixed, and nothing shows what happens when a benchmark fails or when the denominators are unrelated.
+  delegation under these conditions: no — Part A is circled in a proctored, individual, paper-and-pencil sitting with AI prohibited and enforced, so whatever produced the symbol was produced by the student in the room.
+  component map:
+  · chooses a valid strategy for comparing two unlike fractions - equivalent fractions, a benchmark such as one half, or a visual model
+      status: absent   items: none
+      Part A is the only place comparison is asked for, and its instruction is 'Circle the correct symbol. Do not show work.' - the sheet provides no place where a choice of strategy could appear.
+  · executes the chosen comparison strategy
+      status: absent   items: none
+      Items 1-3 record only the circled symbol; the execution that produced it is not written down, and no other item in Parts B-D asks for a comparison of two unlike fractions.
+  · shows the reasoning that supports the symbol
+      status: absent   items: none
+      The Part A instruction positively excludes it: 'Do not show work.' Parts B, C and D require work to be shown, but for addition and subtraction, not for comparison.
+  · produces the correct comparison symbol for two unlike fractions
+      status: present   items: 1, 2, 3
+      Items 1-3 each present a pair (3/4 and 5/8, 2/3 and 7/12, 5/6 and 8/9) with three symbols to choose from, on numbers the teacher states are new to the students.
+  the component carried forward as absent: shows the reasoning that supports the symbol
+  why: Three components of this conceptual claim are unexercised for the same structural reason, and all three materially belong to the inference the teacher confirmed; none is assessed elsewhere, since Part A is the assessment's only comparison work and Parts B-D show work for computation instead. Of the three, showing the reasoning narrows support most: it is the component the teacher's own wording ends on, it is the one the assessment positively excludes rather than merely omits, and were it collected it would also expose the strategy chosen and its execution. It is carried forward on that basis.
+  materiality: The claim is a conceptual one about reasoning, and the outcome-only record invites exactly the conclusion it cannot carry: that a correct symbol shows a valid strategy was chosen and executed. With three options per item and no reasoning collected, the evidence stops at the relation itself. This is a summative use, so the conclusion drawn here is the one that stands for the unit.
+  worth the teacher's attention: This is not the ordinary narrowness every assessment carries. The teacher confirmed a claim ending in 'shows the reasoning that supports the symbol' while the instrument's own instruction forbids showing it, and that tension between the confirmed claim and the printed instruction is a specific thing she may not have looked at side by side. It is also actionable in the only sense diagnosis allows: it tells her which conclusions from Part A to hold more loosely.
+
+THE MISSING EVIDENCE you are to obtain:
+This assessment produces no written record of a comparison strategy or of the reasoning behind any circled symbol, since Part A is its only comparison work and it collects the symbol alone.
+
+THE ASSESSMENT, exactly as the teacher uses it:
+"""
+# Fractions with Unlike Denominators — Practice and Problems
+
+**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**
+
+Name: ______________________  Date: ______________
+
+### Part A — Compare
+
+Circle the correct symbol. Do not show work.
+
+1. 3/4  ( < )  ( > )  ( = )  5/8
+
+2. 2/3  ( < )  ( > )  ( = )  7/12
+
+3. 5/6  ( < )  ( > )  ( = )  8/9
+
+### Part B — Add and subtract
+
+Show every step. Answers in simplest form.
+
+4. 1/2 + 1/3 = ______
+
+5. 5/6 − 1/4 = ______
+
+6. 2 1/3 + 1 3/4 = ______
+
+### Part C — Word problems
+
+7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.
+
+8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.
+
+### Part D — Find the mistake
+
+9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.
+
+"""
+
+Return the JSON object now.

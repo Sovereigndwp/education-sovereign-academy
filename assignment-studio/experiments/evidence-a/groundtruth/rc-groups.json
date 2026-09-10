@@ -1,0 +1,31 @@
+{
+  "_note": "The release-check groups. Every expectation here is already on record from A2/A3/A4/H1 or from the owner's gold README. Nothing new is being established.",
+  "cases": [
+    "S1-g5-supervised", "S2-g8ela-supervised", "S3-g8sci-supervised",
+    "P1-g5-no-diagnose", "P2-g5-selected-response", "P3-g8sci-no-item6",
+    "X1-g5-takehome", "X2-g10ss-takehome", "X3-calc-takehome",
+    "S1split-g5-supervised", "V1-g5-over-verified"
+  ],
+  "group_A_h1_false_positives": {
+    "_expect": "Stage A finds NO gap. Verdict KEEP. These are the four H1 manufactured interventions.",
+    "claims": ["S1-g5-supervised/G5C2", "S1-g5-supervised/G5C3", "S2-g8ela-supervised/E2", "S3-g8sci-supervised/S3c"]
+  },
+  "group_B_genuine_tier1": {
+    "_expect": "Stage A independently finds the gap; Stage B may then choose modify_item. Restraint must not be bought by making modification impossible.",
+    "claims": ["P2-g5-selected-response/G5C1", "S1split-g5-supervised/G5C2a", "P1-g5-no-diagnose/G5C3", "P3-g8sci-no-item6/S4c"]
+  },
+  "group_C_conditions_gap": {
+    "_expect": "Stage A finds the gap; Stage B must NOT choose modify_item. No rewording of a worksheet repairs unsupervised, AI-permitted conditions.",
+    "claims": ["X1-g5-takehome/G5C1", "X1-g5-takehome/G5C2", "X1-g5-takehome/G5C3",
+               "X2-g10ss-takehome/H1", "X2-g10ss-takehome/H2", "X2-g10ss-takehome/H3",
+               "X3-calc-takehome/K1", "X3-calc-takehome/K2", "X3-calc-takehome/K3"]
+  },
+  "group_D_split_case": {
+    "_expect": "The A4 distinction preserved: G5C1 KEEP, G5C2core KEEP, G5C2a gap, G5C2b KEEP, G5C3 KEEP.",
+    "expected": { "G5C1": "KEEP", "G5C2core": "KEEP", "G5C2a": "GAP", "G5C2b": "KEEP", "G5C3": "KEEP" }
+  },
+  "observation_only_V1": {
+    "_note": "Not a release criterion. The over-verified fixture is run because it guards the product's central promise — that 'I would not change this' is a real answer. Reported, not gating.",
+    "expect": "0 gaps on all three claims"
+  }
+}

@@ -1,0 +1,79 @@
+Subject: Mathematics · Grade/course: Grade 5
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: proctored_in_class
+- Individual or collaborative: individual
+- AI policy: prohibited_and_enforced
+- Resources permitted: paper, pencil
+- Purpose: summative
+- Time: 25 minutes
+- Where in the sequence: end of Unit 4
+- What students had already seen, in the teacher's words: Students have practised this kind of item; these particular numbers and problems are new to them.
+
+THE TEACHER-CONFIRMED CLAIM (G5C2a) — this governs; do not rewrite or narrow it:
+Simplifies a reducible fraction result to lowest terms when the item requires it.
+
+THE FROZEN DIAGNOSIS for this claim (record 0d4edd025cd1c503, closed — not yours to revise):
+  what this assessment DOES support: Under these conditions the teacher may conclude only that students present final answers in an already-reduced form; the assessment produces no observation of a student reducing anything, because the qualifying condition in the claim, 'when the item requires it', is never triggered.
+  what it does NOT reach:
+    - It does not reach the act of simplifying at all: no correct answer anywhere in Parts B, C or D has a common factor to remove.
+    - It is most likely to be mistaken for exactly that claim, because the instruction 'Answers in simplest form' sits at the head of Part B and a correctly answered paper will be uniformly in simplest form.
+    - It does not reach recognition of reducibility, which is the prior move: no item ever puts a reducible result in front of the student to be noticed.
+    - It does not reach greatest-common-factor reasoning or equivalence in the reducing direction, which the surrounding items exercise only in the building-up direction. No item bearing on this claim is selected-response, so no guess-rate caveat applies.
+  delegation under these conditions: no — Everything on this paper is written in a proctored, individual sitting with paper and pencil only, so nothing here could be produced elsewhere, though for this claim there is also no observation to delegate.
+  component map:
+  · Recognises when a result is not yet in lowest terms
+      status: absent   items: none
+      Part B directs 'Answers in simplest form', so the move is called for by the assessment, but the correct results across items 4 to 9 are 5/6, 7/12, 4 1/12, 1 7/12, 5/12 and 3/4, none of which has a common factor to recognise.
+  · Divides numerator and denominator by their common factor to reach lowest terms
+      status: absent   items: none
+      No item in Parts B, C or D yields a reducible answer, so the reduction step named by the header instruction is never performed anywhere on the paper.
+  the component carried forward as absent: Divides numerator and denominator by their common factor to reach lowest terms
+  why: Both components qualify, since both materially belong to the claim, neither is assessed elsewhere on the teacher's account, and both are genuinely absent rather than merely thin. I carry the reduction step itself, because it is the action the claim names and its absence narrows support the most: without it there is no observation of simplifying at all, whereas recognition is a prerequisite that could in principle be inferred if reduction were ever seen.
+  materiality: The assessment's own instruction announces simplest form, and a correctly completed paper will be entirely in simplest form, so the teacher would reasonably read a clean paper as confirmation that students simplify. She would have to check the reducibility of every answer key entry to discover otherwise, so this materially limits the summative inference she intends to draw.
+  worth the teacher's attention: This is a fact about the particular numbers in her item set rather than the ordinary narrowness every assessment carries; it is not something an experienced teacher would assume, since the presence of the simplest-form instruction points the other way, and it bears directly on an end-of-unit summative judgment.
+
+THE MISSING EVIDENCE you are to obtain:
+This assessment never produces a result that is not already in lowest terms, so it contains no observation of a student reducing a fraction.
+
+THE ASSESSMENT, exactly as the teacher uses it:
+"""
+# Fractions with Unlike Denominators — Practice and Problems
+
+**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**
+
+Name: ______________________  Date: ______________
+
+### Part A — Compare
+
+For each pair, write `<`, `>`, or `=`. Then show how you know (a common denominator, a picture, or a benchmark like ½).
+
+1. 3/4 ___ 5/8
+
+2. 2/3 ___ 7/12
+
+3. 5/6 ___ 8/9
+
+### Part B — Add and subtract
+
+Show every step. Answers in simplest form.
+
+4. 1/2 + 1/3 = ______
+
+5. 5/6 − 1/4 = ______
+
+6. 2 1/3 + 1 3/4 = ______
+
+### Part C — Word problems
+
+7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.
+
+8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.
+
+### Part D — Find the mistake
+
+9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.
+
+"""
+
+Return the JSON object now.

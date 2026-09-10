@@ -1,0 +1,15 @@
+{
+  "tier": "modify_item",
+  "why_not_tier_1": "Tier 1 is available and is what is used here. The gap is about what the items elicit, not about the conditions: Part A is already proctored, individual, paper-and-pencil with AI prohibited and enforced, so whatever is written on the page was produced by the student in the room. The only thing standing between the teacher and the missing record is the printed instruction 'Do not show work.' on the one part where comparison is asked for. Lifting that instruction for a single item, on numbers already on the page, closes the stated gap without adding an item, a page, or a new administration.",
+  "modify": {
+    "item_ref": "Part A, item 3",
+    "current_text": "Part A instruction: 'Circle the correct symbol. Do not show work.'\n\n3. 5/6  ( < )  ( > )  ( = )  8/9",
+    "replacement_text": "3. 5/6  ( < )  ( > )  ( = )  8/9\n\n   For question 3 only, do show your work: after you circle the symbol, write one line saying how you decided. Name the equivalent fractions you used, the benchmark you compared both to, or draw the picture you used.",
+    "what_it_now_forces": "The student must now put the comparison itself on the page - a common denominator, a benchmark, or a drawn model - so a circled symbol on item 3 can no longer be read back as reasoning that was never recorded, and a one-in-three guess no longer looks the same as a strategy. Item 3 gives up nothing it was contributing: the pair 5/6 and 8/9 is unchanged, so it still supplies the correct-symbol observation and still remains the pair on which a one-half benchmark cannot decide, since both fractions exceed one half. The cost is about a minute of student time and a few seconds of scoring on one item; items 1 and 2 keep the 'do not show work' instruction and are untouched."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 1,
+  "scoring_seconds": 15,
+  "disagreement": "None. The diagnosis and the carried-forward component are taken as given, and I would note only that the remedy is unusually cheap here precisely because the diagnosis identified an instruction that forbids the evidence rather than a setting that cannot produce it."
+}

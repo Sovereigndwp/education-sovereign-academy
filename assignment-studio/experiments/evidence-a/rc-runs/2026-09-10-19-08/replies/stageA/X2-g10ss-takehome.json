@@ -1,0 +1,354 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Copies the author name and year off the printed document headers, and states one inferred likely audience per excerpt; only the audience line requires a judgment that is not already printed on the page."
+        },
+        {
+          "item": "4",
+          "elicits": "Names each author's position and situation in 1889-1892, which touches sourcing indirectly by requiring the author to be placed rather than only named."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "That a submitted packet does or does not contain accurate author, year and audience lines for two excerpts the student had not seen before; the author of those lines is unknown.",
+      "supports": "Under unsupervised conditions with an AI assistant expressly permitted, the teacher may conclude that the returned artifact contains correct or incorrect sourcing lines, and nothing about who or what produced them.",
+      "does_not_support": [
+        "That this student can source a document independently: the same three lines can be produced by pasting either excerpt into a model, so a correct item 1 is an artifact property, not an observation of the student.",
+        "The adjacent claim it is most easily mistaken for, that the student can identify audience from internal evidence, since author and year are printed verbatim in the document headers and only the audience line calls for any inference at all.",
+        "That the student knows why audience matters for weighing a source, which item 1 never asks to be stated.",
+        "That sourcing would hold on a document with no header supplied, a condition this assessment never creates."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Item 1 asks for three short retrievable facts about two named, published, widely digitized documents, and the declared conditions permit an AI assistant and the open internet during the week the packet is at home."
+      },
+      "gap_statement": "We cannot tell from this assessment whether this student can source a document, because under the declared unsupervised, AI-permitted conditions the packet's authorship is unknown for every line in it.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies the author of each document",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Item 1: 'identify the author, the year, and the audience ... One line each.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Identifies the year of each document",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Item 1 names the year explicitly; the headers give 'June 1889' and 'July 1892'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Identifies the audience the author was most likely trying to reach",
+            "items": [
+              "1",
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 1: 'the audience the author was most likely trying to reach'; item 4 requires the author's position to be used, which the audience judgment rests on.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every component of H1 as the teacher worded it is exercised by item 1, and audience is reinforced by item 4, so there is no unexercised component to carry forward. Gate 1 fails. The limitation on this claim is not a missing component but the declared administration conditions, which is already recorded in the booleans and in delegation rather than as a component gap."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of H1 is absent."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_gap": "No component of H1 is missing from the instrument. What limits this claim is the declared unsupervised, AI-permitted administration, which affects the whole packet uniformly and is a conditions fact rather than a hole in the item set.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "2",
+          "elicits": "States in one sentence per document the cause each author assigns to the same observed wealth gap, placing Carnegie's account of it as a welcomed by-product of changed conditions beside the Omaha Platform's account of it as theft under governmental injustice."
+        },
+        {
+          "item": "3",
+          "elicits": "Selects a specific word or phrase from each excerpt and states what that choice reveals about the author's attitude toward great fortunes."
+        },
+        {
+          "item": "5",
+          "elicits": "Requires a position that accounts for both documents, so the two explanations must be handled together rather than one at a time."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "That a submitted packet does or does not contain a correct pairing of the two causal explanations and a defensible attitude reading of one word from each excerpt; the author of that text is unknown.",
+      "supports": "The teacher may conclude that the returned artifact does or does not correctly contrast the two causal accounts and read a chosen word for attitude, with no basis for attributing that contrast to the student.",
+      "does_not_support": [
+        "That the student can perform the contrast: a model given both excerpts and the wording of items 2 and 3 will produce exactly this output, so the submitted contrast is not an observation of anyone's reasoning.",
+        "The adjacent claim it is most likely to be mistaken for, that the student can detect attitude in an unglossed passage, since item 3 lets the student choose the word and the two excerpts are unusually explicit ('welcomed as highly beneficial', 'boldly stolen').",
+        "That the student would find the contrast without being told the two documents describe the same fact, which item 2 supplies outright.",
+        "That the student can sustain the attitude reading beyond one chosen word per document, which is all item 3 asks for."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Items 2 and 3 are close-reading moves on two short excerpts that are reproduced in full in the packet, and the declared AI-permitted, unsupervised week makes producing them without reading either excerpt straightforward."
+      },
+      "gap_statement": "We cannot tell from this assessment whether this student can contrast two authors' causal explanations or read a word for attitude, because the declared conditions leave the author of the submitted contrast unknown.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States the causal explanation each author gives for the same fact",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "Item 2: 'state how Document 1 explains where that gap came from, and how Document 2 explains where it came from.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Puts the two explanations against each other so the difference between them is visible",
+            "items": [
+              "2",
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 2 frames both against the same fact, 'Both authors describe the same fact'; item 5 requires a position that 'accounts for both documents'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Chooses a word or phrase from each document and reads it for the author's attitude",
+            "items": [
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Item 3: 'Choose one word or phrase from each document that shows the author's attitude toward great fortunes. Explain what the word choice reveals.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three components of H2 are exercised, each by an item that names the move directly. Nothing is absent, so Gate 1 fails and there is no component-level gap. The constraint on this claim comes from the declared conditions, not from the item set."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because every component of H2 is exercised by an item."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_gap": "The instrument asks for both halves of H2 explicitly. What it cannot do is attribute the answers to the student, which is a property of the declared unsupervised, AI-permitted administration and applies to the packet as a whole.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "Supplies a motive for each text tied to the writer's own position: why Carnegie 'of all people' would defend great fortunes, and why a farmers' and workers' party would describe them as stolen, using each author's situation in 1889-1892."
+        },
+        {
+          "item": "5",
+          "elicits": "Requires the point of view of each author to be used to decide how much weight the claim gets, which re-uses the positional reasoning item 4 asks for."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "That a submitted packet does or does not contain a historically plausible positional motive for each author in 1889-1892; the author of that explanation is unknown.",
+      "supports": "The teacher may conclude that the returned artifact does or does not explain each author's writing from that author's position in the period, and may not attribute that explanation to the student.",
+      "does_not_support": [
+        "That the student can reason from an author's position to a motive: item 4's phrasing, 'Why might Carnegie, of all people', already flags that his position is in tension with his argument, and the whole move is one an AI assistant will supply on request under the declared conditions.",
+        "The adjacent claim it is most likely to be mistaken for, that the student holds accurate background knowledge of Carnegie and of Populism, since the packet permits the internet and any such knowledge may have been looked up during the week.",
+        "That the student can identify an author's position when the prompt does not point at it, since item 4 names both positions for the student.",
+        "That the student can distinguish a motive grounded in the period from a plausible-sounding anachronism, which no item forces to the surface."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Item 4 asks for the standard historiographic motive of two of the most documented actors of the era, and the declared conditions permit an AI assistant and the open internet for a week."
+      },
+      "gap_statement": "We cannot tell from this assessment whether this student can explain an author's writing from that author's position, because under the declared conditions the submitted explanation may have been produced without the student doing the reasoning.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Explains why Carnegie would write as he did given his position",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 4: 'Why might Carnegie, of all people, have written Document 1?'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Explains why a farmers' and workers' party would write as it did given its position",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 4: 'Why might a farmers' and workers' party have written Document 2?'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Grounds each explanation in the author's position in 1889-1892 rather than in general sentiment",
+            "items": [
+              "4",
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 4: 'Use what you know about each author's position in 1889-1892'; item 5 requires point of view to be used in weighing evidence.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Item 4 names each half of H3 and the periodization the teacher's wording specifies, and item 5 exercises the same positional reasoning again. No component is absent, so Gate 1 fails and nothing is carried forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because every component of H3 is exercised."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_gap": "H3 is asked for directly and completely by item 4. The limit on what may be concluded comes from the declared unsupervised, AI-permitted administration rather than from anything absent in the instrument.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "Produces a two-paragraph argument that takes a position covering both documents, quotes or cites evidence from each, states how each author's point of view changes the weight given to that evidence, and attaches one named development from the period."
+        },
+        {
+          "item": "2",
+          "elicits": "Establishes the two causal accounts the item 5 position must reconcile."
+        },
+        {
+          "item": "3",
+          "elicits": "Establishes the attitude reading that the point-of-view weighting in item 5 rests on."
+        },
+        {
+          "item": "4",
+          "elicits": "Establishes the positional reasoning that item 5's weighting bullet reuses."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "That a submitted two-paragraph response does or does not contain a both-document position, evidence from each excerpt, explicit point-of-view weighting, and one accurate outside development; the author of that response is unknown.",
+      "supports": "The teacher may conclude that the returned essay does or does not meet the four stated requirements of item 5, and may not conclude that the student constructed the argument.",
+      "does_not_support": [
+        "That the student can construct a document-based argument: a week at home with a permitted AI assistant and both excerpts in hand makes item 5 the most delegable task on the page, since the prompt itself lists every element the response must contain.",
+        "The adjacent claim it is most likely to be mistaken for, that the student holds accurate outside knowledge of the period, since item 5 supplies a menu of acceptable developments (trusts, Homestead, Pullman, farm debt, the 1893 depression) and the internet is permitted for choosing and checking one.",
+        "That the point-of-view weighting reflects the student's own judgment rather than a restatement of the scoring bullet, which names the move to be performed.",
+        "That the student could produce an argument of this kind under time pressure or without resources, a condition this administration never creates."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Item 5 states its own success criteria as a four-bullet checklist over two short supplied excerpts, which is close to a finished prompt for an assistant the teacher has expressly permitted."
+      },
+      "gap_statement": "We cannot tell from this assessment whether this student can construct a document-based argument with explicit point-of-view weighting, because under the declared conditions the submitted essay's authorship is unknown.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Takes a position that addresses both documents",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5: 'takes a position that accounts for both documents (you may argue that different groups saw it differently - say which and why)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Uses evidence drawn from each document",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5: 'uses at least one piece of evidence from each document'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Weights that evidence explicitly by the author's point of view",
+            "items": [
+              "5",
+              "3",
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 5: 'explains how the point of view of each author affects how much weight you give their claim'; items 3 and 4 build the attitude and position readings it draws on.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Connects one accurate outside development from the period",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5: 'connects the documents to at least one specific development from the period', with examples listed.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All four components of H4 as the teacher stated it appear as named requirements of item 5, and the scoring line reproduces them one for one. Nothing is absent, so Gate 1 fails and no component is carried forward. What constrains this claim is the declared administration, not the item design."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because every component of H4 is exercised by item 5."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_gap": "H4 is fully specified by item 5, requirement by requirement. The gap that matters here is not a missing component but the authorship of the whole packet under the declared unsupervised, AI-permitted conditions, which is recorded in the booleans and in delegation.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Declared by the teacher and used as given: unsupervised; individual; AI permitted; anything at home, the internet and an AI assistant permitted as resources; summative purpose; time not stated; sent home over a week at the end of the industrialization unit; students have done sourcing practice on other documents but these two excerpts are new to them.",
+  "reviewer_notes": "Novelty holds for every item on this page: the teacher states both excerpts are new to the students, and the item set is claim-targeted, with each of H1 through H4 addressed by a named item and the scoring line mapping onto H4 requirement by requirement. Two of the three conditions are therefore met throughout, and the instrument's coverage of the four claims is complete at component level, which is why Gate 1 fails for all four claims rather than for want of analysis. The condition that fails is independence, and it fails uniformly: supervision is declared 'unsupervised' and an AI assistant is expressly permitted, so no item on the page produces an independent observation and every claim's booleans come out the same way. Under the feed-forward rule the entire packet leaves the room with the student for a week, so nothing in it - including the sourcing lines and the two-paragraph argument - is secured by being written down. All five items are constructed response, so no guess-rate caveat applies anywhere in this assessment. Author and year for both documents are printed in the document headers, which is worth the teacher knowing when reading item 1 even setting the conditions aside. This is a diagnosis of what the declared conditions license, not a comment on the assessment's design or on the teacher's practice."
+}

@@ -1,0 +1,263 @@
+{
+  "claims": [
+    {
+      "claim_id": "E1",
+      "items": [
+        {
+          "item": "Prompt question: 'What is the author's point of view on replacing the Mill Street bridge, and how does the author respond to the opposing case?'",
+          "elicits": "The student must commit to one reading of the whole passage and assert a stance, rather than summarise what the passage is about."
+        },
+        {
+          "item": "Task bullet 1: 'State the author's point of view in your own words (do not just say \"the author is against it\").'",
+          "elicits": "The student must render the stance in her own language, which blocks a bare pro/con tag and forces her to say what the author is actually for and against."
+        },
+        {
+          "item": "Task bullet 3: 'For each piece of evidence, explain how it shows the author's position.'",
+          "elicits": "The student must trace the stance back to a specific authorial choice instead of asserting it, i.e. show the route from text to position."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "The student can state the author's position on replacing the bridge accurately and in her own words, and can connect that position to specific choices in the text.",
+      "supports": "Under proctored, individual conditions with an unseen passage, a teacher may conclude that the student read this passage closely enough to state the author's position in her own words and to tie it to particular moves in the text.",
+      "does_not_support": [
+        "It does not reach a stance that is genuinely unstated: the passage closes with 'I am not sure the numbers are the only thing that should be counted,' so an accurate position statement here may be a paraphrase of the author's own sentence rather than an inference from the text's choices.",
+        "It is easily mistaken for the adjacent claim 'identifies the author's purpose or main idea' — one accurate stance statement about one editorial passage is not that broader claim.",
+        "It says nothing about transfer: one passage, on one occasion, in a paragraph structure and rubric the teacher reports are already familiar, so it does not reach the student's stance-reading on a second text or a different informational genre.",
+        "It does not reach evaluation of the stance — whether the author's position is well founded, or whether the student can weigh it against the engineer's — which the paragraph never asks for."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The paragraph is hand-written in the room in one 45-minute period with only the passage and paper, on a passage the teacher states is new to the students, so the thinking that produced the words happened where the teacher could see it."
+      },
+      "gap_statement": "We cannot tell from a paragraph that states the position and cites supporting evidence whether the student inferred the author's position from the text's choices or read it off the closing sentence 'I am not sure the numbers are the only thing that should be counted.'",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States the author's position on replacing the bridge in the student's own words",
+            "items": [
+              "Task bullet 1",
+              "Prompt question"
+            ],
+            "status": "present",
+            "evidence": "'State the author's point of view in your own words (do not just say \"the author is against it\").'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Ties that position to specific choices the author made in the text",
+            "items": [
+              "Task bullet 2",
+              "Task bullet 3"
+            ],
+            "status": "present",
+            "evidence": "'Quote or closely paraphrase two pieces of textual evidence that reveal the author's point of view' and 'For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include).'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Arrives at the position from the author's choices rather than from a sentence in which the author states it",
+            "items": [],
+            "status": "absent",
+            "evidence": "The passage's final paragraph speaks in the first person — 'I am not sure the numbers are the only thing that should be counted' — and the task's only prohibition is on the phrasing 'the author is against it'; nothing in the prompt, the bullets or the 4-point rubric distinguishes a position derived from the author's choices from one lifted from that closing sentence.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Arrives at the position from the author's choices rather than from a sentence in which the author states it",
+        "why": "The first two components are exercised by explicit task bullets and are present. The third is the one the teacher's own wording insists on ('rather than from any sentence that states it'), it is not carried anywhere else, and its absence changes what the paragraph licenses, so it is the single component carried forward."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The claim as confirmed turns on the position being unstated. Because this passage half-states it in the first person and nothing in the task separates the two routes, a teacher reading an accurate stance statement would conclude the student inferred the position from the text's choices, when the paragraph does not carry that distinction."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "This is not the ordinary narrowness of a single-passage task; it is a property of this particular passage that a teacher who wrote the claim as 'unstated' may not have registered, and it changes how she reads the first sentence of every paragraph she scores."
+      },
+      "why_no_gap": "",
+      "missing_evidence": "This assessment does not produce any observation that separates a position reached from the author's choices from a position paraphrased out of the passage's closing first-person sentence.",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "E2",
+      "items": [
+        {
+          "item": "Task bullet 2: 'Quote or closely paraphrase two pieces of textual evidence that reveal the author's point of view.'",
+          "elicits": "The student must select spans on the criterion of revealing stance rather than of being about the topic, and must reproduce them accurately — a selection judgment, not a retrieval."
+        },
+        {
+          "item": "Task bullet 3: 'For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include).'",
+          "elicits": "The student must name the mechanism carrying the stance for each selected piece and state how that mechanism does the work."
+        },
+        {
+          "item": "Rubric rows 2 and 3: 'Two relevant pieces of evidence' and 'Explanation connects each piece of evidence to the point of view'",
+          "elicits": "Two evidence-plus-mechanism pairings rather than one worked example plus a second citation left bare."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual conditions on an unseen passage, a teacher may conclude that the student can pick two stance-revealing pieces of text and say, for each, by what technique it signals the author's position.",
+      "does_not_support": [
+        "It does not reach command of the full technique range the claim lists: the student chooses her two pieces, and both may run on the same mechanism, so nothing here shows she can recognise, say, omission when contrast is not available.",
+        "It is easily mistaken for the adjacent claim that the student can evaluate evidence — whether the two pieces are the strongest ones in the passage, or whether they actually justify the author's position, is never asked.",
+        "The 4-point rubric does not isolate technique-naming (its third row scores only that the explanation connects evidence to the point of view), so a total score cannot stand in for this claim; the paragraph's own wording is the evidence for it.",
+        "It does not reach unprompted selection: the task states in advance that two pieces are wanted and supplies the technique vocabulary in parentheses, so it is not evidence that the student would look for stance signals in a text without being told to."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Both the selection and the explanation are written by hand in class from a passage the students had not seen, with no resource beyond the passage itself, so the selecting is done in the room."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Selects two pieces of text that reveal the author's position",
+            "items": [
+              "Task bullet 2",
+              "Rubric row 2"
+            ],
+            "status": "present",
+            "evidence": "'Quote or closely paraphrase two pieces of textual evidence that reveal the author's point of view'; rubric: 'Two relevant pieces of evidence (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Names the technique by which each selected piece signals the position",
+            "items": [
+              "Task bullet 3"
+            ],
+            "status": "present",
+            "evidence": "'For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include).'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Does this for each of the two pieces rather than for one",
+            "items": [
+              "Task bullet 3",
+              "Rubric row 3"
+            ],
+            "status": "present",
+            "evidence": "'For each piece of evidence...' and rubric: 'Explanation connects each piece of evidence to the point of view (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every component of the claim as the teacher stated it is exercised by an explicit task bullet under conditions that make the work observable. The claim's list of techniques reads as a menu — the technique by which each piece signals the position — so requiring instances of all five would be widening the teacher's claim rather than finding an absence in the assessment. Gate 1 fails; there is no gap."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed, so no absence was carried forward to test for materiality."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so nothing reached this gate."
+      },
+      "why_no_gap": "The assessment sets out to carry this claim and does: it names the number of pieces, requires them to be stance-revealing, and requires a mechanism for each, all produced in the room on an unseen passage. The narrowness that remains — one passage, the student's own choice of technique — is the ordinary reach of a single 45-minute task and is recorded in does_not_support rather than as a hole.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "E3",
+      "items": [
+        {
+          "item": "Prompt question, second half: '...and how does the author respond to the opposing case?'",
+          "elicits": "The student must treat the engineer's case as a position in its own right and locate the author's move against it, not merely report that a disagreement exists."
+        },
+        {
+          "item": "Task bullet 4: 'Explain how the author acknowledges and responds to the engineer's case for replacement.'",
+          "elicits": "The student must reconstruct the engineer's case from the second paragraph (tired steel, narrow deck, two-thirds the cost, twenty years against seventy-five) and then say what the author does with it — grants it, then reframes what the inspection report measures."
+        },
+        {
+          "item": "Rubric row 4: 'Accurately describes how the author handles the opposing view (1)'",
+          "elicits": "Both halves — the acknowledgement and the answer — rather than one of the two."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual conditions on an unseen passage, a teacher may conclude that the student can find where an author grants an opposing case and can describe the move by which the author answers it.",
+      "does_not_support": [
+        "It does not reach evaluation: whether the author's answer to the engineer is fair, adequate, or leaves the cost argument standing is never asked.",
+        "It is easily mistaken for the adjacent claim that the student understands counterargument and rebuttal as a structure — this passage hands the opposing case its own paragraph and flags the turn with 'What the engineer did not mention', which is a more legible arrangement than most argument texts offer.",
+        "It does not reach production: nothing here shows the student can acknowledge and answer an opposing case in her own argument writing.",
+        "One passage on one occasion does not reach consistency; it says nothing about a text where the opposing case is scattered or only implied."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The description must be written in class from a passage the students had not seen, so identifying the engineer's case and the author's answer to it happens under supervision."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies the engineer's case as the passage presents it",
+            "items": [
+              "Task bullet 4",
+              "Prompt question"
+            ],
+            "status": "present",
+            "evidence": "Bullet 4 asks for 'the engineer's case for replacement', and the passage supplies it in full: 'The steel is tired... Repair would cost about two-thirds... A new bridge would last seventy-five.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Describes how the author acknowledges that case",
+            "items": [
+              "Task bullet 4",
+              "Rubric row 4"
+            ],
+            "status": "present",
+            "evidence": "'Explain how the author acknowledges and responds to...'; the acknowledgement is on the page in 'The case for replacement is simple, and the council's engineer made it in eleven minutes.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Describes how the author answers it",
+            "items": [
+              "Task bullet 4",
+              "Rubric row 4"
+            ],
+            "status": "present",
+            "evidence": "'...and responds to the engineer's case'; rubric: 'Accurately describes how the author handles the opposing view (1)'. The answer is available in 'inspection reports measure steel. They do not measure what a town does on a bridge.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both halves the teacher named — acknowledges, and answers — are asked for explicitly in bullet 4 and scored in the rubric's fourth row, and the material each half needs is present in the passage. No component is absent, so Gate 1 fails and there is no gap."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed, so no absence was carried forward to test for materiality."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so nothing reached this gate."
+      },
+      "why_no_gap": "This claim is carried in substance. Bullet 4 asks for exactly the two moves the claim names, the rubric scores them, and the observation is produced in the room on a new passage. That it is one instance of a clearly signposted counterargument is a limit on reach, noted in does_not_support, not an absence in the assessment.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual work, AI prohibited and enforced, resources limited to the passage and paper, summative, 45 minutes, end of the informational-text unit; the teacher states the passage is new to the students while the paragraph structure and rubric are familiar. On these declared conditions the independence and novelty conditions hold for every item, and nothing leaves the room, so the feed-forward rule does not bear on this assessment.",
+  "reviewer_notes": "There are no selected-response items in this assessment — the single constructed paragraph is the whole response — so the guess-rate caveat does not apply to any claim here. All three claims ride on one 8-to-12 sentence paragraph, which means the same text is the evidence for each; that is a fact about the instrument rather than a fault, but it does mean the 4-point total cannot stand in for any individual claim, since a paragraph can earn the point-of-view point and the opposing-view point while the technique-naming that E2 rests on goes unscored. Judgments here are about the instrument only; no student work was seen or considered."
+}

@@ -1,0 +1,383 @@
+{
+  "claims": [
+    {
+      "claim_id": "S1c",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "The student must add three trial values and divide by three for each of four rows, then write each result rounded to the nearest hundredth into the correct cell."
+        },
+        {
+          "item": "2",
+          "elicits": "The student must construct a plot from the four averaged pairs, place height on the x-axis and speed on the y-axis, choose a workable scale, and write a unit on each axis label."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual, no-AI conditions the teacher may conclude that this student, unaided, computed the four averages to the stated precision and produced a speed-against-height graph with both axes labelled with units.",
+      "does_not_support": [
+        "It does not reach whether the student can collect or design the measurement: the trial data was gathered collectively by the class and handed to every student pre-made.",
+        "It does not reach interpretation of the graph's shape; drawing a correct curve is a plotting act, and reading a diminishing-increment pattern off it is claimed separately (S2c/S4c).",
+        "It does not reach arithmetic fluency without tools, since a calculator is a permitted resource and the averaging may be entirely machine-performed.",
+        "No item here is selected-response, so no answer on this claim can be obtained by guessing among supplied options; the guess-rate caveat does not apply to S1c."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The averaging and the graph are drawn on paper in a proctored, individual sitting with AI prohibited and enforced, so the marks on the page were made by the student in the room."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Computes the average speed for each release height",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Item 1: 'Calculate the average speed for each height and fill in the last column. Round to the nearest hundredth.' The table supplies an empty Average speed column for all four heights.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Produces a graph of speed against height",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "Item 2: 'Sketch a graph of average speed (y-axis) versus release height (x-axis).'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Labels both axes with units",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "Item 2: 'Label both axes with units.' The table supplies the units (cm, m/s) the student must carry onto the axes.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every component of S1c is exercised by an item: item 1 exercises the averaging across all four heights, and item 2 exercises both the plot and the unit-labelled axes. Nothing in the claim is left unexercised, so no component qualifies to be carried forward and Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of S1c is absent, so there is no absence whose materiality could be weighed."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was never entered, so no judgment about what is worth the teacher's attention was made here."
+      },
+      "why_no_gap": "The assessment sets out to carry S1c and does: the averaging, the plot and the unit labelling are each directly called for and each is observed under supervision. This is a procedural claim fully exercised by items 1 and 2, and I would not change it.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "S2c",
+      "items": [
+        {
+          "item": "3",
+          "elicits": "The student must commit to a single directional statement relating speed at the bottom to release height, in one sentence, rather than describe the data row by row."
+        },
+        {
+          "item": "4",
+          "elicits": "The student must pull specific numbers out of the table and say what happens across two named doublings (10 to 20 cm and 20 to 40 cm), which forces a comparison of the size of the change, not just its direction."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions the teacher may conclude that this student stated a relationship between release height and speed and backed it with at least two quoted comparisons from the table covering both doublings, unaided.",
+      "does_not_support": [
+        "It does not reach whether the student would select the evidentially relevant comparisons on their own: item 4 names both doublings, so the choice of which numbers matter is made by the prompt, not the student.",
+        "It does not reach the causal account of why the relationship holds, which is the adjacent claim S3c and is carried by item 5, not by items 3 and 4.",
+        "It does not reach the student's judgment of how much evidence is enough, since the item fixes the quantity ('at least two specific numbers') in advance.",
+        "It does not reach evidence use with unstructured or noisy data: the table is clean, pre-averaged by the student's own item-1 work, and small enough to scan."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The claim sentence and the numeric comparisons are written in the room in a proctored individual sitting with AI prohibited and enforced, and nothing about item 3 or 4 is prepared outside it."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States a claim about how speed relates to release height",
+            "items": [
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Item 3: 'Write one sentence stating how the cart's speed at the bottom is related to its release height.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Supports the claim with at least two specific quoted comparisons from the table",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 4: 'Support your claim with at least two specific numbers from the table.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Covers both doublings in those comparisons",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 4: 'Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three components of S2c are exercised: item 3 elicits the claim itself and item 4 elicits both the quoted numeric support and the two specific doublings the teacher named. Nothing is absent, so nothing can be carried forward and Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of S2c is absent."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was never entered."
+      },
+      "why_no_gap": "S2c as the teacher stated it is item 4's exact demand, down to naming both doublings, and item 3 supplies the claim sentence it supports. The assessment carries this claim in full.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "S3c",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "The student must move from describing the pattern to accounting for it, writing a causal chain in which height at release sets the gravitational potential energy and that energy becomes kinetic energy at the bottom, using the two named energy terms."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions the teacher may conclude that this student, unaided, produced a grade-appropriate written explanation of the observed pattern in terms of gravitational potential energy becoming kinetic energy.",
+      "does_not_support": [
+        "It does not reach whether the student would identify energy transfer as the relevant framework unprompted, because item 5 names gravitational potential energy and kinetic energy and instructs the student to use them.",
+        "It does not reach quantitative energy reasoning: nothing here asks the student to relate the energies numerically or to account for why equal height increases yield shrinking speed increases.",
+        "It does not distinguish a genuine transfer account from a fluent restatement of the two supplied terms attached to the pattern already described in items 3 and 4.",
+        "It does not reach transfer of the explanation to a different energy context, such as a pendulum or a falling object; the observation is confined to this ramp."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation is composed on paper during a supervised 30-minute individual sitting with AI prohibited and enforced, so no outside author can have written it."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Explains why the observed pattern looks the way it does",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5: 'Explain why the relationship looks the way it does.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Uses gravitational potential energy and kinetic energy in the explanation",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5: 'Use the ideas of gravitational potential energy and kinetic energy in your explanation.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Connects the two energies as a transfer driven by release height",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5 asks for the reason the relationship holds while naming both energy forms, so an answer that satisfies it has to link height to stored energy and stored energy to motion; the CER structure places this item as the Reasoning that must connect the item-3 claim to the item-4 evidence.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All components of S3c are exercised by item 5, which is written to elicit exactly the explanation the claim names. Only one item bears on this claim, but a component exercised once is present, so nothing qualifies to be carried forward and Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of S3c is absent."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was never entered."
+      },
+      "why_no_gap": "Item 5 is a constructed-response explanation aimed squarely at S3c and produced under supervision, which is exactly the evidence a conceptual claim of this kind requires. That a single item carries it is not an absence.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "S4c",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "The student must evaluate someone else's proportional inference, take a position against it, and justify that position by pointing at the shrinking speed increases in the table rather than at a rule."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions the teacher may conclude that this student, unaided, rejected the 'twice as fast' proportional claim and grounded that rejection in the pattern of the measured numbers.",
+      "does_not_support": [
+        "The agree/disagree half of item 6 is a two-way choice that could be landed on without the underlying reasoning; because the item also requires the explanation, the teacher should read the position as evidence only when the cited pattern accompanies it.",
+        "It does not reach whether the student would notice the proportional error unprompted, since item 6 presents the faulty claim already flagged as something to evaluate.",
+        "It does not reach an account of what relationship does hold instead of proportionality, only that proportionality fails.",
+        "It does not reach recognition of the same error in a different context, such as a proportional misreading of a distance-time or force-extension dataset."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The disagreement and its numeric justification are written during the proctored individual sitting with AI prohibited and enforced, so the submitted reasoning is the student's own in-room work."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Disagrees with the 'twice as fast' claim",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6 quotes the student claim 'If we release the cart from 80 cm, it will go twice as fast as from 40 cm' and asks 'Do you agree?'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Recognises that the data contradict proportional reasoning",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6 sets the proportional inference directly against the measured data by asking the student to answer it from that data; the doublings in item 4 (1.30 to about 1.85, and 1.85 to about 2.60) are the contradicting numbers in hand.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Cites the pattern in the numbers to support the disagreement",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6: 'Use the pattern in the data to explain.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Item 6 exercises all three components of S4c at once: it forces a position on the proportional claim, it puts that claim against the measured data, and it requires the numeric pattern as justification. Nothing is absent, so Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of S4c is absent."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was never entered."
+      },
+      "why_no_gap": "The diagnostic claim is targeted by an item built for it, and the required justification is collected alongside the position, which is what keeps the binary from standing alone. There is no hole here to report.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "S5c",
+      "items": [
+        {
+          "item": "7",
+          "elicits": "The student must produce a specific numeric speed for 50 cm, a height just past the measured 40 cm, and then make their own method visible in words rather than only stating the answer."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions the teacher may conclude that this student, unaided, produced a prediction just beyond the measured range and stated the method by which they arrived at it.",
+      "does_not_support": [
+        "It does not reach the soundness of the method as a general procedure; one stated method for one point does not show the student would apply it consistently across other extrapolations.",
+        "It does not reach quantitative extrapolation far beyond the data, such as putting a number to the 80 cm case that item 6 treats only qualitatively.",
+        "It does not reach any sense of the uncertainty of an extrapolated value or the limits of the measured range, which is a neighbouring competence the item never asks about.",
+        "It does not reach interpolation between measured heights, since 50 cm lies outside the table rather than between its rows."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Both the predicted number and the account of how it was reached are written in the proctored individual sitting with AI prohibited and enforced, so the method statement reflects work done in the room."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Extrapolates a prediction just beyond the measured range",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 7: 'Predict the average speed for a release height of 50 cm.' The table stops at 40 cm, so 50 cm sits just past the measured range.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States the method used to get the prediction",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 7: 'Explain how you made your prediction.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "S5c names two observable things and item 7 asks for both in the same breath: the out-of-range prediction and the account of how it was made. Neither is absent, so Gate 1 fails."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of S5c is absent."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was never entered."
+      },
+      "why_no_gap": "The claim is small and precisely worded, and item 7 matches it exactly, including the requirement that the method be stated rather than inferred from the answer.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual work, AI prohibited and enforced, calculator/paper/ruler permitted, summative, 30 minutes, end of the energy unit; the teacher states the class collected this data together and that the analysis questions are new. Supervision is 'proctored_in_class', so the independence condition is met for every item, and I take the declared novelty note at face value.",
+  "reviewer_notes": "This is a supervised, in-room, constructed-response assessment with no take-home component, so the feed-forward rule never bites: nothing here is a checkpoint, outline, draft or process journal that leaves the room. Every one of the five claims has at least one item written directly at it, and item-to-claim alignment is one-to-one or close to it (1-2 to S1c, 3-4 to S2c, 5 to S3c, 6 to S4c, 7 to S5c), which is why all five gate-1 checks close without a carried-forward component. Two features are worth the teacher's awareness without being gaps: the shared data table means item 1 operates on numbers the class produced collectively, and several items name the move they want (the two doublings in item 4, the two energy terms in item 5, the claim to evaluate in item 6), so the evidence is of executing a named move rather than of choosing it. Both are recorded under does_not_support for the claims concerned. Item 6's 'Do you agree?' is the only near-selected-response element, and its reasoning is collected in the same item, so the guess-rate caveat is stated but contained."
+}

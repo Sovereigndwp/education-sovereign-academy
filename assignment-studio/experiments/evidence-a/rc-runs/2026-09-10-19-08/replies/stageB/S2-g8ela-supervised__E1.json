@@ -1,0 +1,15 @@
+{
+  "tier": "modify_item",
+  "why_not_tier_1": "Tier 1 is not skipped: it is used. The gap the diagnosis carries forward is about what the items elicit, not about the conditions - supervision is proctored_in_class, work is individual, AI is prohibited and enforced, and the passage is new to the students, so the thinking happens where the teacher can see it. Nothing about the setting blocks the evidence; what blocks it is that the task leaves the passage's closing first-person sentence open as a route to an accurate position statement. That is exactly the kind of gap one instruction line can close, at no cost in items, minutes or grading time.",
+  "modify": {
+    "item_ref": "Task bullet 1 (first bullet under 'Your paragraph must:')",
+    "current_text": "State the author's point of view in your own words (do not just say \"the author is against it\").",
+    "replacement_text": "State the author's point of view in your own words (do not just say \"the author is against it\"). Build that statement only from what the author does in the first three paragraphs - what he includes, what he sets against what, what he leaves out. The passage's last sentence (\"I am not sure the numbers are the only thing that should be counted\") is off limits: do not quote it, paraphrase it, or use it as one of your two pieces of evidence anywhere in your paragraph.",
+    "what_it_now_forces": "The student can no longer produce an accurate stance sentence by restating the author's own concession; the position must be assembled from the author's choices - the third paragraph's 'What the engineer did not mention', the leaves and the class photograph placed against the eleven-minute engineering case, the withheld upstream sidewalk - so the two routes the diagnosis says are currently indistinguishable now land differently on the page. What it gives up: the closing sentence is no longer available as one of the two evidence quotes, so the paragraph stops showing whether a student can recognise an explicit first-person stance statement as evidence; no other item was carrying that, and it is not part of the confirmed claim, which turns on the position being reached rather than read off."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 0,
+  "scoring_seconds": 0,
+  "disagreement": ""
+}

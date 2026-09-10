@@ -1,0 +1,82 @@
+Subject: Mathematics · Grade/course: Grade 5
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: proctored_in_class
+- Individual or collaborative: individual
+- AI policy: prohibited_and_enforced
+- Resources permitted: paper, pencil
+- Purpose: summative
+- Time: 25 minutes
+- Where in the sequence: end of Unit 4
+- What students had already seen, in the teacher's words: Students have practised this kind of item; these particular numbers and problems are new to them.
+
+THE TEACHER-CONFIRMED CLAIM (G5C3) — this governs; do not rewrite or narrow it:
+States why adding denominators produces a wrong-sized part, and gives the correct sum.
+
+THE FROZEN DIAGNOSIS for this claim (record 15281c54f6e5a479, closed — not yours to revise):
+  what this assessment DOES support: The teacher may conclude that the student recognises the added-denominators error when it is shown to them and can correct the computation, on a case they had not seen before, without help.
+  what it does NOT reach:
+    - It does not reach the mechanism the claim names — why the resulting sixth is the wrong-sized part — because a response that names the error and computes 3/4 satisfies the item without ever referring to the size of the pieces.
+    - It does not reach the adjacent claim it is most likely to be mistaken for: spotting the error when it is presented is not the same as not committing it, nor as catching it unprompted in one's own work, and items 4-8 do not offer the temptation because no distractor is present there.
+    - It does not reach transfer of the misconception's logic to subtraction (a student writing 1/2 - 1/4 = 0/2 is never elicited) or to any other denominator pair; one instance with halves and fourths is the whole basis.
+    - It does not reach whether the student can say what 2/6 would be the correct answer to, i.e. what quantity the wrong procedure actually computes.
+  delegation under these conditions: no — The explanation is written by hand in the room under proctoring on a worked error the students had not seen, so whatever appears is the student's own account.
+  component map:
+  · Identifies the error in the worked example (the denominators were added rather than a common denominator found)
+      status: present   items: 9
+      'A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong' puts the erroneous work in front of the student and asks for the error.
+  · States why adding denominators produces a wrong-sized part
+      status: absent   items: none
+      No item asks about the size of the parts. Item 9 asks 'what the student did wrong', which is answered by naming the move; nothing on the page requires the student to say that sixths are smaller pieces than the fourths and halves being combined, or that the answer 2/6 is smaller than 1/2 alone.
+  · Gives the correct sum
+      status: present   items: 9
+      'and show the correct answer', with the header instruction 'Show all work'.
+  the component carried forward as absent: States why adding denominators produces a wrong-sized part
+  why: Two of the three components are exercised by item 9. The third is the explanatory half of the claim and is the one the teacher wrote most specifically ('states why ... a wrong-sized part'); the item's question is a different question, about what was done rather than about why the resulting part is the wrong size, and it is not carried anywhere else on the page. It materially belongs to this claim, the teacher has not said it is assessed elsewhere, and its absence narrows what the paper licenses, so it is carried forward as the single component.
+  materiality: This is the diagnostic claim, and its whole point is the mechanism of the misconception. A correct item 9 saying 'they added the bottoms, the answer is 3/4' will read on the page exactly like the evidence the teacher wants, so she would credit an account of part size that the paper never asked for and may not contain. That is a conclusion the evidence does not carry.
+  worth the teacher's attention: It is specific to this item's wording rather than the ordinary narrowness of any one-item claim: the gap is between the question asked ('what did the student do wrong') and the claim as confirmed ('states why ... produces a wrong-sized part'), which a teacher reading finished papers has little occasion to notice, because the responses she credits will look right. It is also the only claim of the three where what the paper produces falls short of the wording, so it is not a general caution about single items.
+
+THE MISSING EVIDENCE you are to obtain:
+The assessment produces no written account of why the parts are the wrong size — no item requires the student to say that sixths are smaller pieces than the halves and fourths being combined, or that 2/6 is less than 1/2 on its own, so the papers contain identification of the error and the corrected sum but nothing that shows the reasoning behind either.
+
+THE ASSESSMENT, exactly as the teacher uses it:
+"""
+# Fractions with Unlike Denominators — Practice and Problems
+
+**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**
+
+Name: ______________________  Date: ______________
+
+### Part A — Compare
+
+For each pair, write `<`, `>`, or `=`. Then show how you know (a common denominator, a picture, or a benchmark like ½).
+
+1. 3/4 ___ 5/8
+
+2. 2/3 ___ 7/12
+
+3. 5/6 ___ 8/9
+
+### Part B — Add and subtract
+
+Show every step. Answers in simplest form.
+
+4. 1/2 + 1/3 = ______
+
+5. 5/6 − 1/4 = ______
+
+6. 2 1/3 + 1 3/4 = ______
+
+### Part C — Word problems
+
+7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.
+
+8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.
+
+### Part D — Find the mistake
+
+9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.
+
+"""
+
+Return the JSON object now.

@@ -1,0 +1,15 @@
+{
+  "tier": "modify_item",
+  "why_not_tier_1": "Tier 1 is available and is used. The gap is about what the items elicit, not about the conditions: the work is proctored, individual, AI prohibited and enforced, and the teacher states the analysis questions are new, so an observation made on this page is already independent and novel. The only thing missing is that no item states an assertion for the student to accept or reject. Item 6 is the one item that can carry that assertion at no cost, because the component map credits items 3 and 4 with the two present components and credits item 6 with nothing; item 4 is left untouched precisely so that the numbers-and-doublings evidence it currently produces is not disturbed.",
+  "modify": {
+    "item_ref": "6",
+    "current_text": "6. Predict the average speed for a release height of 50 cm. Explain how you made your prediction.",
+    "replacement_text": "6. A student in another class looks at this table and says: \"The cart is released from twice the height at 20 cm as at 10 cm, so it must be going twice as fast at the bottom.\" Do you agree or disagree with that student? Write AGREE or DISAGREE, then give two numbers from the table that decide it and one sentence saying what those numbers show. Then predict the average speed for a release height of 50 cm.",
+    "what_it_now_forces": "The student must now take a stated position on the proportional 'twice as fast' assertion and name the numbers that decide it, so a student who holds the doubling misconception writes AGREE and is visible, instead of passing item 4 by transcribing 1.30 and 1.84 with a direction word; nothing is given up, because the 50 cm prediction that item 6 previously asked for is retained in the same item, and item 4's doubling evidence is left exactly as it stands."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 0,
+  "scoring_seconds": 20,
+  "disagreement": ""
+}

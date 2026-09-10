@@ -1,0 +1,15 @@
+{
+  "tier": "modify_item",
+  "why_not_tier_1": "Tier 1 was not skipped. The stated gap is about what the items elicit, not about the conditions: supervision is proctored_in_class, the sitting is individual, AI is prohibited and enforced, and the teacher declares these numbers new, so an observation made on this page is already independent and novel. Nothing about the setting blocks the missing component; only the wording of the items does, and one item on the page can be rewritten to carry it without adding an item, a minute of new administration, or a second page.",
+  "modify": {
+    "item_ref": "Item 4 (Part B — Add and subtract)",
+    "current_text": "Part B — Add and subtract. Show every step. Answers in simplest form.\n\n4. 1/2 + 1/3 = ______",
+    "replacement_text": "Part B — Add and subtract. Show every step. Answers in simplest form.\n\n4. Sam added 1/2 + 1/3 by adding the top numbers and adding the bottom numbers, and wrote 2/5. Sam's answer is wrong.\n\n   (a) Write one line saying why adding the bottom numbers gives pieces of the wrong size:\n   ____________________________________________\n\n   (b) Now work out 1/2 + 1/3 correctly. Show every step.\n   1/2 + 1/3 = ______",
+    "what_it_now_forces": "Part (a) puts the denominator-adding error on the page in someone else's work and requires the student to produce a statement about why the resulting part is the wrong size, which is the component the diagnosis carried forward as absent — previously no such statement existed anywhere on the sheet to judge; part (b) keeps the correct sum with steps shown, so item 4 still contributes to the component already recorded as present. What item 4 gives up: its sum is now cued — the student has been told in advance that adding denominators is wrong, so item 4 no longer shows an uncued choice of route; items 6 (2 1/3 + 1 3/4) and 7 (3/4 + 5/6) are untouched and continue to carry that uncued correct sum, including the mixed-number case and the word-problem case, so nothing any other item was evidencing is taken away."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 2,
+  "scoring_seconds": 20,
+  "disagreement": ""
+}

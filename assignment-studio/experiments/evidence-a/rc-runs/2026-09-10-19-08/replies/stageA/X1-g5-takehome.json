@@ -1,0 +1,262 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Student must pick one comparison route for 3/4 and 5/8 and carry it out — rewrite 3/4 as 6/8 (or reason from a model) — then commit to a symbol and write the route down; a half-benchmark alone will not decide it, since both fractions sit above one half."
+        },
+        {
+          "item": "2",
+          "elicits": "Student must convert 2/3 and 7/12 to a common denominator (8/12 vs 7/12) or produce an equivalent visual argument, then record the symbol and the supporting route; again the half-benchmark does not separate the pair."
+        },
+        {
+          "item": "3",
+          "elicits": "Student must handle a pair whose denominators are not related by a single scaling — 5/6 and 8/9 — by building eighteenths, or by arguing from distance to one whole (1/6 vs 1/9), and then show that route beside the symbol."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "No part of this claim is independently observed. What the evidence reaches is narrower than any statement about the student: that a completed artifact was submitted showing a symbol and a written route for three unlike-fraction pairs, with authorship unknown.",
+      "supports": "Under the declared conditions the teacher may conclude that a submitted artifact contains a comparison symbol and a stated route for each of three unlike-fraction pairs, and nothing about who produced that route.",
+      "does_not_support": [
+        "It does not reach the claim it is most likely to be mistaken for — that this student chooses a valid strategy — because unsupervised administration with AI permitted leaves the author of the strategy choice unknown.",
+        "It does not reach the adjacent claim that the student can compare unlike fractions without support, since the declared resources include an assistant that will both choose and execute the route.",
+        "The symbol itself is a three-way selected response (<, >, =); the item does ask for the route, but wherever the shown work is thin, absent, or not attributable, a correct symbol is reachable by chance at a rate that makes the mark uninformative on its own.",
+        "It does not reach durability or transfer: three pairs worked over a week at home say nothing about whether the same route is available to the student later or under different conditions."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "A comparison symbol plus a 'how you know' line for pairs like 3/4 and 5/8 is exactly the output a permitted AI assistant returns on a single request, and the week-long take-home format ties none of that writing to the student."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student chose the comparison strategy, executed it, or produced the reasoning written beside the symbol, because the declared conditions permit an assistant to supply all three.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Chooses a valid strategy for comparing two unlike fractions",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A leaves the route open to the student — 'show how you know (a common denominator, a picture, or a benchmark like 1/2)' — and items 2 and 3 present pairs where a naive half-benchmark does not decide the comparison, so a choice must actually be made.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Executes the chosen strategy to reach the comparison symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Each of items 1-3 requires a committed symbol ('write <, >, or ='), and item 3 (5/6 vs 8/9) cannot be settled without carrying the chosen route through to a result.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Shows the reasoning that supports the symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A's instruction 'Then show how you know' asks for the supporting reasoning explicitly, and the header repeats 'Show all work'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every component of G5C1 is exercised by at least one item in Part A, and the pairs are chosen so that the choice, the execution and the written route are all called for rather than assumed. Nothing this claim names is missing from the instrument, so Gate 1 fails and there is no coverage gap to report. What limits this claim is the declared administration condition, not an unexercised component."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of the claim is absent from the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so no absence reached the materiality or value questions."
+      },
+      "why_no_gap": "There is no coverage gap in this assessment for G5C1: it asks for the strategy choice, the execution and the reasoning, all three. The limit on what it licenses comes entirely from the declared conditions — unsupervised, AI permitted, a week at home — which is a condition fact, not a hole in the item set.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "Student must build sixths from halves and thirds and add like parts to 5/6 — the simplest case, with no regrouping and no simplification called for."
+        },
+        {
+          "item": "5",
+          "elicits": "Student must find twelfths for 5/6 and 1/4 and subtract like parts (10/12 - 3/12 = 7/12), i.e. the same construction applied to a difference rather than a sum."
+        },
+        {
+          "item": "6",
+          "elicits": "Student must handle mixed numbers: convert thirds and quarters to twelfths, combine 4/12 + 9/12 to 13/12, then regroup the improper part into the whole-number count to write 4 1/12."
+        },
+        {
+          "item": "7",
+          "elicits": "Student must read a situation as a sum, build twelfths from 3/4 and 5/6, combine to 19/12, and regroup to the mixed number the item explicitly demands."
+        },
+        {
+          "item": "8",
+          "elicits": "Student must read 'how much more' as a subtraction, build twelfths from 2/3 and 1/4, and take like parts to 5/12."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "No part of this claim is independently observed. The available inference stops at the artifact: a submitted paper showing common-denominator steps, combined parts, and a regrouped mixed number, with authorship unknown.",
+      "supports": "Under the declared conditions the teacher may conclude that submitted work displays common-denominator construction, combination of like parts, and regrouping to a mixed number, and not that this student carried out any of those steps.",
+      "does_not_support": [
+        "It does not reach the adjacent claim most easily read into it — that the student can execute the procedure — since a permitted assistant produces the full worked steps, not only the answers.",
+        "It does not separate procedural fluency from situation-reading on items 7 and 8: written work that arrives at 1 7/12 or 5/12 does not show whether the sum-or-difference decision was made by the student or supplied with the arithmetic.",
+        "It does not reach fluency under time or without resources; 25 minutes is printed on the page, but the declared administration is a week at home with an assistant, and the printed time is not a condition that held.",
+        "It does not reach retention: work produced at the end of Unit 4 with unlimited resources says nothing about what remains available to the student afterwards."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Every step of 2 1/3 + 1 3/4, regrouping included, is standard generated output for a permitted assistant, and the assessment's own demand to 'show every step' is satisfied just as easily by that output as by the student's."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student constructed the common denominators, combined the like parts, or performed the regrouping shown on the page, because the declared conditions permit those steps to be supplied in full.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs equivalent fractions with a common denominator",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Items 4-8 all pair unlike denominators (halves and thirds, sixths and quarters, thirds and quarters) so that no combination is possible without first building common parts; 'Show every step' makes the construction itself part of what is asked for.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Combines or compares like-sized parts",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Part B asks for both addition (4, 6) and subtraction (5), and Part C repeats each in a situation (7 a sum, 8 a difference).",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Simplifies or regroups to a mixed number where the item requires it",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Part B's instruction 'Answers in simplest form' plus item 6's mixed-number addends (13/12 must be regrouped into the whole count) and item 7's explicit 'write your answer as a mixed number'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three components the teacher named are exercised, and the third is exercised by items where the regrouping is unavoidable rather than incidental. No component of G5C2 is absent from the instrument, so Gate 1 fails and no coverage gap follows. The constraint on this claim is the declared condition set, not the items."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of the claim is absent from the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so no absence reached the materiality or value questions."
+      },
+      "why_no_gap": "G5C2 is fully covered at the item level — construction, combination and regrouping each have items that force them. What the assessment cannot license comes from the declared conditions, so reporting a hole in coverage here would misdescribe the instrument.",
+      "missing_evidence": "",
+      "over_verified_note": "The common-denominator-and-combine pair of components is exercised five times (items 4, 5, 6, 7, 8) while the regrouping component is exercised twice; if the burden of this task ever needs trimming, the repetition sits in that first pair, not in the mixed-number work."
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "Student must diagnose someone else's error rather than produce an answer: identify that 1/2 + 1/4 = 2/6 comes from adding the denominators as if they were counts, say what is wrong with the resulting part, and then supply the correct sum 3/4."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "No part of this claim is independently observed. The available inference reaches only the artifact: a submitted explanation of the error together with a corrected sum, of unknown authorship.",
+      "supports": "Under the declared conditions the teacher may conclude that a written diagnosis of the added-denominators error and a corrected sum were submitted, and nothing about whose diagnosis it is.",
+      "does_not_support": [
+        "It does not reach the claim it will most readily be mistaken for — that the student holds the underlying idea that denominators name the size of the part — because a written explanation of this specific, extremely common error is among the most reproducible outputs a permitted assistant can supply.",
+        "It does not distinguish an explanation that names the size of the part from one that only names the move; item 9 asks what the student 'did wrong', so a submitted answer may identify the added denominators without accounting for why sixths are the wrong-sized part, and the claim's 'why' would still read as met.",
+        "It does not reach the diagnostic skill in the general case: one error, in one prepared and heavily practised form, does not show that the same error is recognised when it appears inside a longer or unfamiliar computation.",
+        "It does not reach the student's own likelihood of making the error, which is a different claim from being able to explain it in someone else's work."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "'Explain what the student did wrong and show the correct answer' for 1/2 + 1/4 = 2/6 is precisely the prose a permitted assistant generates on request, and the explanation is the whole of what this claim asks the student to produce."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student can state why adding denominators produces a wrong-sized part, because the declared conditions permit the explanation and the corrected sum to be produced without the student doing the diagnostic thinking.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States why adding denominators produces a wrong-sized part",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9 supplies the error in exactly the form the claim names — '1/2 + 1/4 and got 2/6' — and asks 'Explain what the student did wrong', which calls for the account rather than a corrected answer alone.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Gives the correct sum",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "The same item continues 'and show the correct answer', so the corrected sum is required alongside the explanation.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both components the teacher named are exercised by item 9, and the item presents the error in the exact form the claim describes. A single item that exercises a component is present; 'only one item covers it' is not an absence. Gate 1 therefore fails and there is no coverage gap. The limitation on this claim is the declared administration, not the item."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 failed because no component of the claim is absent from the assessment."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 1 failed, so no absence reached the materiality or value questions."
+      },
+      "why_no_gap": "Item 9 asks for both halves of G5C3 directly. Nothing the claim names is missing from the instrument; what is missing is any condition under which the writing can be attributed to the student, which is a fact about the declared administration rather than a gap in this assessment's coverage.",
+      "missing_evidence": "",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Declared by the teacher and governing every judgment above: unsupervised; individual; AI permitted; resources permitted are anything at home, internet, and an AI assistant; purpose summative; time not stated (the printed '25 minutes' is not the condition under which this is administered); sent home over a week at the end of Unit 4; students have practised this kind of item, but these particular numbers and problems are new to them.",
+  "reviewer_notes": "One declared condition decides all three claims together, so the three verdicts are alike for a single reason and not because the items are alike. The items are not: Part A forces a genuine strategy choice by using pairs a half-benchmark cannot settle, Part B carries the regrouping case, and item 9 puts the target error on the page in exactly the form claim G5C3 names. At the level of coverage this assessment does what the teacher built it to do, and no component of any of the three claims is unexercised. What it cannot do is attribute any of that work to the student: administered unsupervised, over a week, with an assistant explicitly permitted, every submission is an artifact of unknown authorship. The teacher's novelty note does not change this — new numbers keep the items novel relative to what a student could have prepared in advance, but novelty is only one of the three conditions, and independence is the one that fails here. Because independence fails at the condition level rather than at the item level, this is not reported as a coverage gap for any claim: the gate-1 component maps are clean and the analysis stops there, with the limitation stated instead in each claim's delegation, gap_statement and does_not_support."
+}

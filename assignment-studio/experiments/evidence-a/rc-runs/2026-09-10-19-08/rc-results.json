@@ -1,0 +1,520 @@
+{
+  "architecture": "esa-two-stage-2026-09-10-v1",
+  "at": "2026-09-10T19:18:46.303Z",
+  "cases": {
+    "S1-g5-supervised": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "2e7306908efbe9b20e3b80c2ae78fa9689e48d16db3918f568e250cf837bbd11",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 4,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "519c129c5f79fed004d692d5c2afb642e5c6e265211a0454bdffac86e87a3af0",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "stage_a_gap": true,
+          "verdict": "LIMITED",
+          "components": 3,
+          "carried": "States why adding denominators produces a wrong-sized part",
+          "tier": "modify_item",
+          "modify_item_ref": "Item 9 (Part D - Find the mistake)",
+          "diagnosis_hash": "15281c54f6e5a4793b068877587b84ffb836dc838ef8bd3e3b488889833ddd8b",
+          "derive_violations": []
+        }
+      ]
+    },
+    "S2-g8ela-supervised": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "E1",
+          "stage_a_gap": true,
+          "verdict": "LIMITED",
+          "components": 3,
+          "carried": "Arrives at the position from the author's choices rather than from a sentence in which the author states it",
+          "tier": "modify_item",
+          "modify_item_ref": "Task bullet 1 (first bullet under 'Your paragraph must:')",
+          "diagnosis_hash": "a7f548f1b3422154b88254f96977b8c738125b819e956af9fb1484db69559dfd",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "E2",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "9a57a5e4477877889ad9327e4b2ccf97e4d1b9dce8f5a3599543c4a9db34ffb9",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "E3",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "757278561c70ee5d4ad29cb619f16d2861ca5c917c15b551848b7e49df946c86",
+          "derive_violations": []
+        }
+      ]
+    },
+    "S3-g8sci-supervised": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "S1c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "1e728521f4a3295dc16381858d67d295f391de269263c50162745388192a7b7c",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S2c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "1a805b68e067806acee5754afd9d09f694093c2df99242160625943f082a5f7d",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S3c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "03b69812475ff591730d7e636f102dc470f57dadcd5c8314938570a2cd218ea2",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S4c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "5fd6eabdd02cb947b33c985b0204b2b8b18653963d8fa4e330fe7a9afd452ffa",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S5c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "25742e029225db65d9df43a85a7fde75980cbba0df1a152fb64e19035fb2806c",
+          "derive_violations": []
+        }
+      ]
+    },
+    "X1-g5-takehome": {
+      "conditions": "unsupervised",
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "2670e1882e1d514940dd4a0a932a49e577ee25279fedcb550434662004d2e8fd",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "8877db25dc32d9e4df7856953891dd620c1f2cc7fbc7822862bbcd27bc31aac5",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "316f7c9fba275ebbae849f6927cb234c22fd4889aa6eea3c3e30a54e0cdd7599",
+          "derive_violations": []
+        }
+      ]
+    },
+    "X2-g10ss-takehome": {
+      "conditions": "unsupervised",
+      "rows": [
+        {
+          "claim_id": "H1",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "513c075fff0a0bd938b45a9b9c67b71503ee63f7c4e00710476645986d911d39",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "H2",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "2e6c259e9f3901e13a1c1ef22da1866c65aac102955a2c55ce98f840c3ffca6d",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "H3",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "a34669d614934944aa8eeebdc97c2705439572decb711fc733d8b7d62a1e05d7",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "H4",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 4,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "f62eb0f17eab9307349a31bdcb8b2f92244859bea999b4a2925be6bdd9ca88cc",
+          "derive_violations": []
+        }
+      ]
+    },
+    "X3-calc-takehome": {
+      "conditions": "unsupervised",
+      "rows": [
+        {
+          "claim_id": "K1",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "36c64e087e5955203c5ea8b0681454901cbfd516c86f79710733ed66f407ae84",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "K2",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "c1195ebbe667fc25525dd67bafda864f647c489c3ed2a776cc8e566fa4bf87a5",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "K3",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "55d314475a7d8430e256908c7da6dc959cf1d7d5324907d9aba214cf0999b827",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "K4",
+          "stage_a_gap": false,
+          "verdict": "NOT_SUPPORTED",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "f9544499a67deb8ec364c318a47270fe88a8b57f15873e22a26e7573682bd0db",
+          "derive_violations": []
+        }
+      ]
+    },
+    "P1-g5-no-diagnose": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "006c6a2f7fb5e5c9df87e506268bf253cedb819a186503df954a23a8a80ec037",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 4,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "4d62af50c4a1b9e97a65f199047366ec7689aa5b64024b6c5e13746cb979b8fc",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "stage_a_gap": true,
+          "verdict": "LIMITED",
+          "components": 2,
+          "carried": "States why adding denominators produces a wrong-sized part",
+          "tier": "modify_item",
+          "modify_item_ref": "Item 4 (Part B — Add and subtract)",
+          "diagnosis_hash": "51a9300ce53390d4fa83ceba93cfbc16c607bf453e9238bb35ab00cbd7c3b7bd",
+          "derive_violations": []
+        }
+      ]
+    },
+    "P2-g5-selected-response": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "stage_a_gap": true,
+          "verdict": "LIMITED",
+          "components": 4,
+          "carried": "shows the reasoning that supports the symbol",
+          "tier": "modify_item",
+          "modify_item_ref": "Part A, item 3",
+          "diagnosis_hash": "1ad6579ef294bcb7da80d686401b6fac007df671fba0e808e58bbfe3bf34ec7b",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "e4ae7267e41f1e1e200ebf2ccb551e437640367bb84104f6df1e14ccc8cbe142",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "9584cd310d3993e476bcf632d15e72dffbe1215f3b6740dae0712999b958b843",
+          "derive_violations": []
+        }
+      ]
+    },
+    "P3-g8sci-no-item6": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "S1c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "d5b021dec21709135925d8a49114d663b3aacbd9bc3a34f56e59a80517d22581",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S2c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "d51c46a2c89700d9c93445d13cabb755100c1978e5622becf22f7155f106369e",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S3c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "3ae3ee47aecb0f306934e2609994f8fd62ee1e071c57aabef84ac247f6bcbee1",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S4c",
+          "stage_a_gap": true,
+          "verdict": "LIMITED",
+          "components": 3,
+          "carried": "Disagrees with the 'twice as fast' claim",
+          "tier": "modify_item",
+          "modify_item_ref": "6",
+          "diagnosis_hash": "32b5dec2201e2370ef9f753bc16052b6338af1a275306295cea239c1fc6e0040",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "S5c",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "117b3ab9af24425cf55bab5c04582acaf6ebdc24aed1b1c4cfd1943b3b9bd0d1",
+          "derive_violations": []
+        }
+      ]
+    },
+    "V1-g5-over-verified": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 3,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "226c96fe94d2c9dcdc7415ba3132c0cb93b9f191afe04c0f9ee70b9a82e98495",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 4,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "9084f792900ab6da09e3cb471fb9077c59cd0ca5ba65941bd6fa6b221e89e61a",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "66fbf97d6dd49c0e10dc9c178b97f5970af04710fca4cf8b42d951572ccbea38",
+          "derive_violations": []
+        }
+      ]
+    },
+    "S1split-g5-supervised": {
+      "conditions": "proctored_in_class",
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 4,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "b1d22d130e0ae29a5c6b1a45a1d306075e1108791d998f93e06c4865488bcb93",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2core",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "5583b9632246b94b584fda6e68529671ab892a630560913c342854284172dff2",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2a",
+          "stage_a_gap": true,
+          "verdict": "NOT_SUPPORTED",
+          "components": 2,
+          "carried": "Divides numerator and denominator by their common factor to reach lowest terms",
+          "tier": "modify_item",
+          "modify_item_ref": "Part B, item 4",
+          "diagnosis_hash": "0d4edd025cd1c503c04c5968edec4a0e84296f22e5cea90abc243d654a5158fb",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C2b",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "fe226ed7a7f0d5a46ba35286972863b9fca0f8b2c61b7802eda19f873cd3016b",
+          "derive_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "stage_a_gap": false,
+          "verdict": "KEEP",
+          "components": 2,
+          "carried": "",
+          "tier": null,
+          "modify_item_ref": null,
+          "diagnosis_hash": "0754bae476cba1c85e79466e8c96710e23da2b414f112e74b59b9f6347ed45a7",
+          "derive_violations": []
+        }
+      ]
+    }
+  },
+  "arch_violations": [
+    {
+      "case_id": "P2-g5-selected-response",
+      "claim_id": "G5C1",
+      "code": "STAGE_B_DISAGREED",
+      "detail": "Stage B disagreed with the frozen diagnosis and was overridden: \"None. The diagnosis and the carried-forward component are taken as given, and I would note only that the remedy is unusually cheap here precisely because the diagnosis identified an instruction that f\""
+    }
+  ]
+}

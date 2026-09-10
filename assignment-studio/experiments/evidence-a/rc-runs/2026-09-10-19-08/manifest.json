@@ -1,0 +1,160 @@
+{
+  "architecture": "esa-two-stage-2026-09-10-v1",
+  "at": "2026-09-10T19:08:55.802Z",
+  "stage_a": {
+    "system_sha256": "7a07ff2ee5610777881d354436f96534ba413c67b16363929aef74d2b6c90152",
+    "system_bytes": 12626,
+    "leak_check": "PASSED — no remedy vocabulary in the Stage A system prompt or in any Stage A user prompt",
+    "jobs": [
+      {
+        "case_id": "S1-g5-supervised",
+        "user_sha256": "e7b2f94f30826d9019cdd2c6990a2ffa75f62b9913701dbcea3d51edd92fc135",
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "case_id": "S2-g8ela-supervised",
+        "user_sha256": "444f09eb06ee5686aeabb9a05332edd0b2e413798428e4a089ce3a23089f550e",
+        "claims": [
+          "E1",
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "case_id": "S3-g8sci-supervised",
+        "user_sha256": "cf0687d52b8ec389b0d14a807b72c0f59fcdc3cfbdca7d29ca4df991e583a574",
+        "claims": [
+          "S1c",
+          "S2c",
+          "S3c",
+          "S4c",
+          "S5c"
+        ]
+      },
+      {
+        "case_id": "X1-g5-takehome",
+        "user_sha256": "806c3db05cfece55f4652d8bccd988707b69ebd5736b940b95ba1d39db896bf6",
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "case_id": "X2-g10ss-takehome",
+        "user_sha256": "ede9e823de8509cbb0c57d223c22a5638045914cfcd7b821525fe36b30afa2f4",
+        "claims": [
+          "H1",
+          "H2",
+          "H3",
+          "H4"
+        ]
+      },
+      {
+        "case_id": "X3-calc-takehome",
+        "user_sha256": "5caf194ceecc0d23af989dd184b583245575bbb3fbf736d1993c755fd6ddc72b",
+        "claims": [
+          "K1",
+          "K2",
+          "K3",
+          "K4"
+        ]
+      },
+      {
+        "case_id": "P1-g5-no-diagnose",
+        "user_sha256": "0dc5ca3caf33267b1e2c0d66e4fc2c42da3abaa2141ae95cf95c55978a74e849",
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "case_id": "P2-g5-selected-response",
+        "user_sha256": "065d53c206acf3d79c4b555d37aff45cc77c0f5c81ebc3c298974af88802b70d",
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "case_id": "P3-g8sci-no-item6",
+        "user_sha256": "e31da910d4aa4754cac3d70ac37469b7b2494e64c836b6cfded727f375895c1e",
+        "claims": [
+          "S1c",
+          "S2c",
+          "S3c",
+          "S4c",
+          "S5c"
+        ]
+      },
+      {
+        "case_id": "V1-g5-over-verified",
+        "user_sha256": "751f0df5080dfc0e40853fa9af1a1e17b0584febb03da13d694f0de433c800d4",
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "case_id": "S1split-g5-supervised",
+        "user_sha256": "e4d95e85785bcd6721f996f88786015d01a4e0f4d2236d6328b8baab8e81f2e4",
+        "claims": [
+          "G5C1",
+          "G5C2core",
+          "G5C2a",
+          "G5C2b",
+          "G5C3"
+        ]
+      }
+    ]
+  },
+  "stage_b": {
+    "system_bytes": 9770,
+    "ran_for": [
+      {
+        "name": "S1-g5-supervised__G5C3",
+        "case_id": "S1-g5-supervised",
+        "claim_id": "G5C3",
+        "diagnosis_hash": "15281c54f6e5a4793b068877587b84ffb836dc838ef8bd3e3b488889833ddd8b"
+      },
+      {
+        "name": "S2-g8ela-supervised__E1",
+        "case_id": "S2-g8ela-supervised",
+        "claim_id": "E1",
+        "diagnosis_hash": "a7f548f1b3422154b88254f96977b8c738125b819e956af9fb1484db69559dfd"
+      },
+      {
+        "name": "P1-g5-no-diagnose__G5C3",
+        "case_id": "P1-g5-no-diagnose",
+        "claim_id": "G5C3",
+        "diagnosis_hash": "51a9300ce53390d4fa83ceba93cfbc16c607bf453e9238bb35ab00cbd7c3b7bd"
+      },
+      {
+        "name": "P2-g5-selected-response__G5C1",
+        "case_id": "P2-g5-selected-response",
+        "claim_id": "G5C1",
+        "diagnosis_hash": "1ad6579ef294bcb7da80d686401b6fac007df671fba0e808e58bbfe3bf34ec7b"
+      },
+      {
+        "name": "P3-g8sci-no-item6__S4c",
+        "case_id": "P3-g8sci-no-item6",
+        "claim_id": "S4c",
+        "diagnosis_hash": "32b5dec2201e2370ef9f753bc16052b6338af1a275306295cea239c1fc6e0040"
+      },
+      {
+        "name": "S1split-g5-supervised__G5C2a",
+        "case_id": "S1split-g5-supervised",
+        "claim_id": "G5C2a",
+        "diagnosis_hash": "0d4edd025cd1c503c04c5968edec4a0e84296f22e5cea90abc243d654a5158fb"
+      }
+    ],
+    "note": "Stage B runs ONLY for a claim Stage A recorded as a gap, and receives only that claim."
+  }
+}
