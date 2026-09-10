@@ -1,0 +1,19 @@
+{
+  "limitation_type": "conditions",
+  "assessment_change": "none",
+  "inference_boundary": "Part B shows what a student turns in when an AI assistant is at hand: for each integrand, a technique named and the substitution, decomposition or identity it rests on, with computation kept out of the way. It does not show that any individual student made that selection, or named that underlying substitution, on their own — the declared conditions leave who made the choice open.",
+  "verification": "short_supervised_observation",
+  "why_this_verification": "The teacher wants to conclude that each student individually selects the technique and names what it depends on, and an AI assistant is permitted at home, so the choice cannot be attributed without one observation of it being made in the room; the take-home already elicits the right move and stays untouched.",
+  "add": {
+    "primitive": "Perturb",
+    "item_text": "No calculator, no notes. Do NOT evaluate either integral.\n\nFor each of these, name the technique you would use and write the substitution, decomposition or identity it depends on.\n\n(a)  ∫ x / √(25 − x²) dx\n\n(b)  ∫ 1 / √(25 − x²) dx\n\nThen, in one line: which single feature of the integrand decides that (a) and (b) do not take the same technique?",
+    "variant_rule": "May change: the constant under the radical (4, 9, 16, 25), the form of the radicand (a² − x² or x² + a²), and which member of the pair is printed first — one fresh pair per period. Must stay fixed: a minimal pair of integrands differing by exactly one feature that flips the technique; no evaluation asked for; both a technique name AND its underlying substitution required for each member; one line naming the deciding feature. Key changes with the form: for ∫ x/√(a² − x²) the substitution is u = a² − x², du = −2x dx, and for ∫ 1/√(a² − x²) it is the trigonometric substitution x = a sin θ; for x² + a² the pair is u = x² + a² against x = a tan θ. Avoid: pairs differing in more than one feature, and pairs where a second technique is equally defensible (for instance 1/(x² − 9), which a student may legitimately route through partial fractions) — the naming line then stops discriminating.",
+    "conditions": "Proctored in class, individual, on paper, no calculator, no notes, closed book. Three minutes at the start of the period, collected before anything else begins.",
+    "sufficiency_line": "Each part carries a technique name that fits its integrand together with the specific substitution written out — u = 25 − x² with du = −2x dx for (a), x = 5 sin θ for (b) — and the one-line reason names the x factor in the numerator, the derivative of the radicand up to a constant, as the deciding feature. No antiderivative is required and its absence is not a fault.",
+    "why_this_primitive": "Perturb puts the selection itself under observation: because only one feature separates the two integrands, the technique must be chosen from the controlling feature rather than from the shape of the integrand, which is exactly the move the claim names and nothing more."
+  },
+  "no_short_check_reason": "",
+  "student_minutes": 3,
+  "scoring_seconds": 40,
+  "disagreement": ""
+}

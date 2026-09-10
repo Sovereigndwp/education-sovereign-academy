@@ -1,0 +1,19 @@
+{
+  "limitation_type": "conditions",
+  "assessment_change": "none",
+  "inference_boundary": "These results show what a student produces when a CAS and an AI assistant are available: four completed antiderivatives with a technique named beside each. They do not show that any individual student executed a technique through to an antiderivative without a calculator or notes, because the declared conditions leave the authorship of those steps open.",
+  "verification": "short_supervised_observation",
+  "why_this_verification": "The teacher's intended inference is about each student individually executing a technique without a calculator or notes, and the declared conditions permit exactly the tool that performs that execution, so the attribution has to come from one short observation in the room; the take-home itself already asks for the right thing and stays as it is.",
+  "add": {
+    "primitive": "Perturb",
+    "item_text": "No calculator, no notes.\n\nEvaluate  ∫ x e^{3x} dx.\n\nWrite the completed antiderivative, and name in one phrase the technique you used.",
+    "variant_rule": "May change: the constant in the exponent (e^{3x}, e^{-x}, e^{x/2}), the sign, and the linear factor (x, 2x, x+1) — one fresh form per period. Must stay fixed: a single polynomial-times-exponential integrand that one application of integration by parts carries to a completed antiderivative, with no calculator and no notes. Key changes with the constant: for ∫ x e^{kx} dx the antiderivative is e^{kx}(x/k − 1/k²) + C. Avoid: x² e^{kx} or x e^{x²} — the first forces a second application and the second is a different technique, and either changes what the item observes.",
+    "conditions": "Proctored in class, individual, on paper, no calculator, no notes, closed book. Three minutes at the start of the period, collected before anything else begins.",
+    "sufficiency_line": "The technique is carried through to a completed antiderivative that is correct for the perturbed constant, with the parts assignment visible and the technique named. A dropped constant of integration or a single arithmetic slip is noted but is not the deciding feature; the deciding feature is whether the chosen technique runs to completion unaided.",
+    "why_this_primitive": "Perturb asks for exactly what the claim names — one integrand, one technique executed to an antiderivative — and changing only a parameter makes the form novel across five periods without asking for anything the take-home did not already ask."
+  },
+  "no_short_check_reason": "",
+  "student_minutes": 3,
+  "scoring_seconds": 30,
+  "disagreement": ""
+}

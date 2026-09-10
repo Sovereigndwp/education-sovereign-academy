@@ -1,0 +1,104 @@
+{
+  "architecture": "esa-two-path-2026-09-10-v2",
+  "at": "2026-09-10T19:37:24.109Z",
+  "stage_a": {
+    "system_sha256": "76fd839e5a86fdcb5e2d6a1ff6021eafacb55cb32cb2f3d414b2e42ce6f12c7d",
+    "leak_check": "PASSED",
+    "jobs": [
+      {
+        "name": "S1-g5-supervised",
+        "case_id": "S1-g5-supervised",
+        "needs_individual_attribution": true,
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "name": "S2-g8ela-supervised",
+        "case_id": "S2-g8ela-supervised",
+        "needs_individual_attribution": true,
+        "claims": [
+          "E1",
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "name": "X1-g5-takehome",
+        "case_id": "X1-g5-takehome",
+        "needs_individual_attribution": true,
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "name": "X2-g10ss-takehome",
+        "case_id": "X2-g10ss-takehome",
+        "needs_individual_attribution": true,
+        "claims": [
+          "H1",
+          "H2",
+          "H3",
+          "H4"
+        ]
+      },
+      {
+        "name": "X3-calc-takehome",
+        "case_id": "X3-calc-takehome",
+        "needs_individual_attribution": true,
+        "claims": [
+          "K1",
+          "K2",
+          "K3",
+          "K4"
+        ]
+      },
+      {
+        "name": "P2-g5-selected-response",
+        "case_id": "P2-g5-selected-response",
+        "needs_individual_attribution": true,
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "name": "V1-g5-over-verified",
+        "case_id": "V1-g5-over-verified",
+        "needs_individual_attribution": true,
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      },
+      {
+        "name": "S1split-g5-supervised",
+        "case_id": "S1split-g5-supervised",
+        "needs_individual_attribution": true,
+        "claims": [
+          "G5C1",
+          "G5C2core",
+          "G5C2a",
+          "G5C2b",
+          "G5C3"
+        ]
+      },
+      {
+        "name": "X1-g5-takehome__resource-purpose",
+        "case_id": "X1-g5-takehome",
+        "needs_individual_attribution": false,
+        "claims": [
+          "G5C1",
+          "G5C2",
+          "G5C3"
+        ]
+      }
+    ]
+  }
+}

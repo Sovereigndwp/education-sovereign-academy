@@ -1,0 +1,19 @@
+{
+  "limitation_type": "conditions",
+  "assessment_change": "none",
+  "inference_boundary": "Item 6 shows what a student submits as a diagnosis when an AI assistant and a CAS are available: which step was flagged as not following, and what antiderivative was offered in its place, on an integrand new to the class. It does not show that any individual student located that invalid step or produced that correct antiderivative unaided, and because one instance is observed it says nothing about the same error pattern met elsewhere.",
+  "verification": "short_supervised_observation",
+  "why_this_verification": "The teacher wants to conclude that each student individually finds the bad step and repairs it, and the declared conditions permit a tool that performs the same diagnosis, so the authorship has to be established by watching the diagnosis happen once in the room; item 6 already asks for exactly the right thing and stays as written.",
+  "add": {
+    "primitive": "Diagnose",
+    "item_text": "No calculator, no notes.\n\nA student writes:\n\n    ∫ x cos x dx  =  ( ∫ x dx ) · ( ∫ cos x dx )  =  (x²/2) · sin x  +  C\n\nThe answer is wrong. Say which step does not follow, and give the correct antiderivative.",
+    "variant_rule": "May change: the second factor (cos x, sin x, e^x, e^{2x}, cos 3x) and the constant inside it — one fresh form per period. Must stay fixed: an integrand that one application of integration by parts repairs; exactly one error in the shown work; that error structural and nameable in a phrase (here, antidifferentiating the two factors separately) rather than arithmetic; and both halves asked for, the step and the corrected antiderivative. Key changes with the factor: ∫ x cos(kx) dx = (x/k) sin(kx) + (1/k²) cos(kx) + C; ∫ x sin(kx) dx = −(x/k) cos(kx) + (1/k²) sin(kx) + C; ∫ x e^{kx} dx = e^{kx}(x/k − 1/k²) + C. Avoid: the integrands printed in Parts A, B and C, whose corrected forms went home over the weekend; a merely dropped constant, which leaves no step to locate; and two errors at once, which makes 'which step' ambiguous and slows scoring.",
+    "conditions": "Proctored in class, individual, on paper, no calculator, no notes, closed book. Three minutes at the start of the period, collected before anything else begins.",
+    "sufficiency_line": "The response names the move that does not follow — the integral of a product was taken as the product of the integrals, and there is no such rule — rather than only asserting that the answer is wrong or that parts was needed, and it gives x sin x + cos x + C. Both halves are required: a correct antiderivative with no located step, or a located step with no correct antiderivative, does not reach the claim, which names both. The constant of integration is not the deciding feature.",
+    "why_this_primitive": "Diagnose is the claim itself — an unfamiliar incorrect solution, the invalid step located, the antiderivative repaired — so no translation between what the take-home asked and what is observed in the room is needed."
+  },
+  "no_short_check_reason": "",
+  "student_minutes": 3,
+  "scoring_seconds": 40,
+  "disagreement": ""
+}

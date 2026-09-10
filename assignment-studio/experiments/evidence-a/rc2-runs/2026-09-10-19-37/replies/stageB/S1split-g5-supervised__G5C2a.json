@@ -1,0 +1,17 @@
+{
+  "limitation_type": "coverage",
+  "assessment_change": "modify_one_item",
+  "tier": "modify_item",
+  "why_not_tier_1": "",
+  "modify": {
+    "item_ref": "Part B, item 4",
+    "current_text": "4. 1/2 + 1/3 = ______",
+    "replacement_text": "4. 1/2 + 1/6 = ______",
+    "what_it_now_forces": "The sum now arrives as 4/6, so the standing instruction \"Answers in simplest form\" finally has an occasion to act on: the student must notice the common factor and carry out the reduction to 2/3, and a student who does not reduce leaves 4/6 on the page where it is visible rather than indistinguishable from a correct non-reducing answer. What this gives up: 1/2 + 1/3 had coprime denominators requiring an LCD found as a product, while 2 divides 6, so item 4 becomes the easier denominator subtype; that harder relationship is still exercised by item 6 (2 1/3 + 1 3/4) and item 8 (2/3 \u2212 1/4), and item 5 and item 7 still require a true LCM of 6 and 4, so nothing that only item 4 was evidencing is lost."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 0,
+  "scoring_seconds": 0,
+  "disagreement": ""
+}

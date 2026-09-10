@@ -1,0 +1,78 @@
+Subject: Mathematics · Grade/course: Grade 5
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: proctored_in_class
+- Individual or collaborative: individual
+- AI policy: prohibited_and_enforced
+- Resources permitted: paper, pencil
+- Purpose: summative
+- Time: 25 minutes
+- Where in the sequence: end of Unit 4
+- What students had already seen, in the teacher's words: Students have practised this kind of item; these particular numbers and problems are new to them.
+
+WHAT THE TEACHER WANTS TO CONCLUDE (confirmed; take as given):
+- That EACH STUDENT INDIVIDUALLY can do what the claim names. Independent attribution is required.
+
+THE TEACHER-CONFIRMED CLAIM (G5C2a) — this governs; do not rewrite or narrow it:
+Simplifies a reducible fraction result to lowest terms when the item requires it.
+
+THE FROZEN DIAGNOSIS (record 545d650a76795afa, closed — not yours to revise):
+  LIMITATION TYPE: coverage
+  what this assessment DOES support: That the student worked individually and unaided on fraction arithmetic and left the results in a form that is in lowest terms.
+  what it does NOT reach:
+    - That the student can recognise when a result is reducible
+    - That the student can carry out a reduction to lowest terms
+    - That an answer written in simplest form here reflects a simplifying step rather than arithmetic that never required one
+
+  COVERAGE: limited
+  component map:
+  · Reduces a result that comes out with a common factor to its lowest terms
+      status: absent   items: none
+      Part B instructs "Answers in simplest form", but no item on this assessment yields a reducible result: items 4–9 produce 5/6, 7/12, 4 1/12, 1 7/12, 5/12 and 3/4, each already in lowest terms. The instruction is present; the occasion to act on it is not.
+  the component not exercised: Reduces a result that comes out with a common factor to its lowest terms
+  why: The claim is scoped to "when the item requires it", and no item on this assessment requires it — every computed result already arrives in lowest terms, so the reducing move is never occasioned and the standing instruction "Answers in simplest form" is satisfied by doing nothing.
+
+THE MISSING EVIDENCE you are to obtain:
+A computed result carrying a common factor — the assessment produces no occasion on which a student must reduce, so it produces no observation of reducing.
+
+THE ASSESSMENT, exactly as the teacher uses it — it is not to be rewritten:
+"""
+# Fractions with Unlike Denominators — Practice and Problems
+
+**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**
+
+Name: ______________________  Date: ______________
+
+### Part A — Compare
+
+For each pair, write `<`, `>`, or `=`. Then show how you know (a common denominator, a picture, or a benchmark like ½).
+
+1. 3/4 ___ 5/8
+
+2. 2/3 ___ 7/12
+
+3. 5/6 ___ 8/9
+
+### Part B — Add and subtract
+
+Show every step. Answers in simplest form.
+
+4. 1/2 + 1/3 = ______
+
+5. 5/6 − 1/4 = ______
+
+6. 2 1/3 + 1 3/4 = ______
+
+### Part C — Word problems
+
+7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.
+
+8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.
+
+### Part D — Find the mistake
+
+9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.
+
+"""
+
+Return the JSON object now.

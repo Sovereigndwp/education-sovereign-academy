@@ -1,0 +1,569 @@
+{
+  "architecture": "esa-two-path-2026-09-10-v2",
+  "at": "2026-09-10T19:43:18.435Z",
+  "cases": {
+    "S1-g5-supervised": {
+      "supervision": "proctored_in_class",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Selects one of the named comparison approaches for a pair of unlike fractions",
+            "P:Carries the chosen approach through to a comparison symbol",
+            "P:Writes out the reasoning that justifies the symbol the student wrote"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Rewrites two unlike fractions as equivalent fractions sharing a denominator",
+            "P:Adds or subtracts the rewritten parts once they are the same size, or compares them",
+            "P:Puts the result in simplest form, or regroups an improper result into a mixed number, when the item calls for it"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Explains in writing what is wrong with adding the denominators, in terms of the size of the parts",
+            "P:Produces the correct value of the sum that was done wrongly"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    },
+    "S2-g8ela-supervised": {
+      "supervision": "proctored_in_class",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "E1",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Arrives at and states the author's position on replacing the bridge, which the passage never states outright",
+            "N:Manner qualifier on the inference move — names the route the inference must take, not a second observable move"
+          ],
+          "stage_b": null,
+          "span_violations": [
+            {
+              "code": "NO_VERB",
+              "detail": "Component \"Manner qualifier on the inference move — names the route the inference\" names no student verb."
+            }
+          ]
+        },
+        {
+          "claim_id": "E2",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Picks out two specific pieces of text that reveal the author's position",
+            "P:For each selected piece, identifies the technique through which it signals the author's position"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "E3",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Describes both the author's acknowledgement of the engineer's case for replacement and the author's answer to it"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    },
+    "X1-g5-takehome": {
+      "supervision": "unsupervised",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Selects one comparison approach for a pair of unlike fractions from the available approaches",
+            "P:Carries the chosen approach through to a comparison result and writes the symbol",
+            "P:Writes out the reasoning that connects the work to the symbol chosen"
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Rewrites the given fractions as equivalent fractions sharing one denominator",
+            "P:Adds, subtracts, or orders the parts once they are the same size",
+            "P:Puts the result in simplest form, or regroups an improper result into a mixed number when the item calls for one"
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Writes an account of what goes wrong when denominators are added",
+            "P:Produces the correct result of the addition that was done wrongly"
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        }
+      ]
+    },
+    "X2-g10ss-takehome": {
+      "supervision": "unsupervised",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "H1",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Names, for each document, who wrote it, when, and who the author was most likely writing for."
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "H2",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Sets Carnegie's account of where the wealth gap came from against the Omaha Platform's account of the same gap.",
+            "P:Picks a word or phrase out of each document and says what it shows about that author's attitude."
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "H3",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Accounts for each author's choice to write what they wrote by reference to where that author stood in the years 1889 to 1892."
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "H4",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Writes an argued position on the question that takes account of both documents rather than one.",
+            "P:States how much weight each author's claim gets and ties that weighting to the author's point of view.",
+            "P:Brings in a specific development from the period beyond the two documents and links it to the argument."
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    },
+    "X3-calc-takehome": {
+      "supervision": "unsupervised",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "K1",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Carries a chosen technique through on one integrand and produces the resulting antiderivative."
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "K2",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Picks and names a technique that fits the integrand in front of them.",
+            "P:States the specific substitution, decomposition or identity the chosen technique rests on."
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "K3",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Points to the specific step in the given worked answer that does not follow.",
+            "P:Writes the correct antiderivative for the same integrand."
+          ],
+          "stage_b": {
+            "tier": null,
+            "assessment_change": "none",
+            "verification": "short_supervised_observation",
+            "modify_item": null
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "K4",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "conditions",
+          "routed_as": "conditions",
+          "components": [
+            "P:Writes an integrand of the student's own devising that forces integration by parts to be applied twice.",
+            "P:Gives a reason that the second application is necessary and one application does not finish the job."
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    },
+    "P2-g5-selected-response": {
+      "supervision": "proctored_in_class",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "verdict": "LIMITED",
+          "coverage": "limited",
+          "conditions": "strong",
+          "limitation_type": "coverage",
+          "routed_as": "coverage",
+          "components": [
+            "P:Selects a way of comparing two fractions that do not share a denominator.",
+            "P:Carries the chosen comparison through to a decision about which fraction is larger.",
+            "A:Writes out the reasoning that justifies the comparison symbol the student selected."
+          ],
+          "stage_b": {
+            "tier": "modify_item",
+            "assessment_change": "modify_one_item",
+            "verification": null,
+            "modify_item": "Part A, item 3"
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Rewrites the given fractions as equivalent fractions that share a denominator.",
+            "P:Adds or subtracts the rewritten parts once they are the same size.",
+            "P:Puts the result in simplest form, or regroups it into a mixed number when the item calls for that."
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Says in words what goes wrong when the denominators are added together.",
+            "P:Produces the right answer to the addition that was done wrongly."
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    },
+    "V1-g5-over-verified": {
+      "supervision": "proctored_in_class",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Selects a method for comparing the two fractions rather than being told which one to use",
+            "P:Carries the chosen method through to a comparison symbol between the two fractions",
+            "P:Makes the reasoning that justifies the symbol visible in words or a labelled picture"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Rewrites the given fractions as equivalent fractions sharing one denominator",
+            "P:Adds, subtracts or orders the rewritten parts once they are the same size",
+            "P:Converts an improper result into a mixed number, or reduces the result, on the items whose answers demand it"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Says what goes wrong when denominators are added — that the resulting pieces are not the size the problem calls for",
+            "P:Produces the correct value of the sum that was mis-added"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    },
+    "S1split-g5-supervised": {
+      "supervision": "proctored_in_class",
+      "needs_attribution": true,
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Selects one of the named comparison strategies for a pair of unlike fractions rather than being told which to use",
+            "P:Carries the chosen strategy through to a comparison result",
+            "P:Puts the reasoning on the page in a form that connects to the symbol written"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2core",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Rewrites two unlike fractions as equivalent fractions sharing one denominator",
+            "P:Adds, subtracts, or compares the rewritten parts once they are the same size"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2a",
+          "verdict": "LIMITED",
+          "coverage": "limited",
+          "conditions": "strong",
+          "limitation_type": "coverage",
+          "routed_as": "coverage",
+          "components": [
+            "A:Reduces a result that comes out with a common factor to its lowest terms"
+          ],
+          "stage_b": {
+            "tier": "modify_item",
+            "assessment_change": "modify_one_item",
+            "verification": null,
+            "modify_item": "Part B, item 4"
+          },
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2b",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Converts a result whose numerator exceeds its denominator into a whole number with a proper fractional part"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "verdict": "KEEP",
+          "coverage": "sufficient",
+          "conditions": "strong",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Says in writing what goes wrong when denominators are added — that the resulting parts are not the size the problem is about",
+            "P:Produces the right answer to the same addition"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    },
+    "X1-g5-takehome__resource-purpose": {
+      "supervision": "unsupervised",
+      "needs_attribution": false,
+      "rows": [
+        {
+          "claim_id": "G5C1",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Selects a comparison approach for a pair of unlike fractions from more than one available option",
+            "P:Carries the chosen comparison method through to a comparison symbol",
+            "P:Writes out the reasoning that connects the method to the symbol chosen"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C2",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Rewrites the given fractions as equivalent fractions sharing one denominator",
+            "P:Adds, subtracts or compares the rewritten parts once they are the same size",
+            "P:Puts the result in simplest form, or regroups an improper result into a mixed number when the item calls for it"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        },
+        {
+          "claim_id": "G5C3",
+          "verdict": "NOT_SUPPORTED",
+          "coverage": "sufficient",
+          "conditions": "limited",
+          "limitation_type": "none",
+          "routed_as": "none",
+          "components": [
+            "P:Writes an explanation of why summing the denominators changes the size of the parts and so gives a wrong result",
+            "P:Produces the correct value of the sum that was mis-added"
+          ],
+          "stage_b": null,
+          "span_violations": []
+        }
+      ]
+    }
+  },
+  "span_violations": [
+    {
+      "case": "S2-g8ela-supervised",
+      "claim_id": "E1",
+      "code": "NO_VERB",
+      "detail": "Component \"Manner qualifier on the inference move — names the route the inference\" names no student verb."
+    }
+  ],
+  "arch_violations": []
+}

@@ -1,0 +1,304 @@
+{
+  "claims": [
+    {
+      "claim_id": "K1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Carrying out integration by parts on \\int x e^{2x}\\,dx and producing an antiderivative."
+        },
+        {
+          "item": "2",
+          "elicits": "Carrying out a partial-fraction decomposition and integrating \\int (3x+1)/(x^2+x-6)\\,dx to a final antiderivative."
+        },
+        {
+          "item": "3",
+          "elicits": "Carrying out a trigonometric-identity/substitution route through \\int \\sin^3 x\\cos^2 x\\,dx to a final antiderivative."
+        },
+        {
+          "item": "4",
+          "elicits": "Carrying out a substitution on \\int x/\\sqrt{9-x^2}\\,dx to a final antiderivative."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Executes the chosen integration technique correctly on a single integrand",
+            "verb": "Executes",
+            "component": "Carries a chosen technique through on one integrand and produces the resulting antiderivative.",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Part A — Evaluate: 'Evaluate each integral. Next to your answer, name in one phrase the technique you chose.' Items 1-4 each require the technique to be executed to a completed antiderivative."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "The claim names one observable move, execution of a chosen technique on a single integrand, and Part A asks for exactly that on four separate integrands. The trailing phrase 'without a calculator or notes' has no student verb of its own; it qualifies how the move is done rather than naming a second move, so it is not a component and it is handled on the conditions path."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared 'unsupervised' with an AI assistant and a CAS permitted, so the executed antiderivatives on items 1-4 cannot be attributed to the student rather than to a tool that performs that same execution.",
+        "conditions_supports": "A teacher may conclude from this work what a student can produce when a CAS and an AI assistant are available to them — that the finished integrals were obtained and presented, with a technique named alongside each."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claim names; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "Nothing the claim names is unexercised, so there is no coverage limitation to be material. The attribution limit is material because the inference she wants is about the individual student's own execution, and a permitted CAS performs precisely the move the claim names."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "An observation of the technique being carried through to an antiderivative in a setting where a CAS or AI assistant is excluded or visible; the declared conditions leave the authorship of the executed steps open.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "That the student can produce correct executed antiderivatives for these four integrands with a CAS and an AI assistant available — not that the student can execute the technique unaided.",
+      "supports": "The assessment asks for every move this claim names, four times over; under the declared conditions it supports a conclusion about executed work produced with tools available.",
+      "does_not_support": [
+        "That any individual student can execute the chosen technique without a calculator or notes.",
+        "That the antiderivatives written on items 1-4 were arrived at by the student rather than by a permitted CAS or AI assistant.",
+        "Any conclusion about the student's fluency or speed at execution, which the declared conditions do not observe."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Executing an integration technique on a single integrand is exactly what the permitted CAS and AI assistant do; the whole claimed move can be handed over without leaving a trace in the artifact."
+      },
+      "gap_statement": "Coverage is complete for K1 and this is a fine take-home task; what the declared unsupervised, AI-permitted conditions change is what the results license — the executed integrals cannot be attributed to the individual student, which is the inference the teacher said she needs.",
+      "why_no_gap": "",
+      "over_verified_note": "Four items exercise the single component this claim names; the assessment already collects more instances of executed work than the claim requires."
+    },
+    {
+      "claim_id": "K2",
+      "items": [
+        {
+          "item": "5(a)",
+          "elicits": "Naming a technique for \\int x^2/\\sqrt{x^2+4}\\,dx and stating the substitution it depends on, without evaluating."
+        },
+        {
+          "item": "5(b)",
+          "elicits": "Naming a technique for \\int \\ln x\\,dx and stating the decomposition/parts choice it depends on, without evaluating."
+        },
+        {
+          "item": "5(c)",
+          "elicits": "Naming a technique for \\int 1/(x^2-9)\\,dx and stating the decomposition it depends on, without evaluating."
+        },
+        {
+          "item": "1-4 (technique line)",
+          "elicits": "Naming in one phrase the technique chosen for each Part A integrand."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Selects an appropriate integration technique for an integrand",
+            "verb": "Selects",
+            "component": "Picks and names a technique that fits the integrand in front of them.",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)",
+              "1-4 (technique line)"
+            ],
+            "status": "present",
+            "evidence": "Part B: 'For each integral, name the technique you would use'; also Part A: 'name in one phrase the technique you chose.'"
+          },
+          {
+            "claim_span": "names the substitution, decomposition or identity it depends on",
+            "verb": "names",
+            "component": "States the specific substitution, decomposition or identity the chosen technique rests on.",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)"
+            ],
+            "status": "present",
+            "evidence": "Part B: 'write the substitution, decomposition or identity it depends on.'"
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Both moves the claim names are asked for directly in Part B on three integrands, and the selection move is asked for again alongside each Part A item. The trailing phrase 'without computing the integral' is a constraint on how the move is performed, not a further move, and Part B enforces it: 'Do not carry out the integration.'"
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared 'unsupervised' with an AI assistant permitted, so the named technique and named substitution on items 5(a)-(c) cannot be attributed to the student rather than to the assistant.",
+        "conditions_supports": "A teacher may conclude what a student turns in when an AI assistant is at hand: which technique and which underlying substitution, decomposition or identity were identified and written down for each integrand."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can select and name; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "No component of the claim is unexercised, so there is no material coverage limit. The attribution limit is material because naming a technique and its underlying substitution is a short, fully delegable answer, and the inference she wants is about the individual."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "An observation of the selection and the naming of the underlying substitution, decomposition or identity made where an AI assistant is excluded or visible; the declared conditions leave who made the choice open.",
+      "narrower_inference": "That the student can submit an appropriate technique and its underlying substitution, decomposition or identity for these three integrands with an AI assistant available — not that the student can select and name them unaided.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "supports": "The assessment asks for both named moves on three fresh integrands and keeps computation out of the way, so the elicited response is squarely the conceptual move the claim describes.",
+      "does_not_support": [
+        "That any individual student can select the appropriate technique and name its underlying substitution on their own.",
+        "That the technique names and substitutions written in Part B originated with the student rather than with a permitted AI assistant.",
+        "That the student would select the same technique when no assistant is available."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Naming a technique and the substitution, decomposition or identity behind it is a short answer that a permitted AI assistant produces directly; the artifact records the answer, not who chose it."
+      },
+      "gap_statement": "Coverage is complete for K2; what the declared unsupervised, AI-permitted conditions change is what the results license — the selections and named substitutions cannot be attributed to the individual student, which is the inference the teacher said she needs.",
+      "why_no_gap": "",
+      "over_verified_note": "Three Part B integrands plus the technique line on each of the four Part A items exercise the selection component repeatedly, more instances than the claim requires."
+    },
+    {
+      "claim_id": "K3",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "Identifying which step in \\int x\\cos(x^2)\\,dx = x\\sin(x^2)/(2x) + C does not follow, and writing the correct antiderivative."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Locates the invalid step in an incorrect antiderivative",
+            "verb": "Locates",
+            "component": "Points to the specific step in the given worked answer that does not follow.",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6: 'The answer is wrong. Say which step does not follow.'"
+          },
+          {
+            "claim_span": "produces the correct one",
+            "verb": "produces",
+            "component": "Writes the correct antiderivative for the same integrand.",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6: 'and give the correct antiderivative.'"
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Item 6 asks for both moves the claim names, in the claim's own order: say which step does not follow, then give the correct antiderivative. A single item exercising each move once is exercised."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared 'unsupervised' with an AI assistant and CAS permitted, so the located error and the corrected antiderivative on item 6 cannot be attributed to the student rather than to a tool that performs the same diagnosis.",
+        "conditions_supports": "A teacher may conclude what a student submits as a diagnosis when an AI assistant is available: which step was flagged and what antiderivative was offered in its place."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can locate the invalid step and correct it; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "Both named moves are exercised, so no coverage limit is material. The attribution limit is material because error-diagnosis on a short worked line is precisely what a permitted assistant does, and the inference she wants is about the individual."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "An observation of the invalid step being located and the correct antiderivative produced where an AI assistant or CAS is excluded or visible; the declared conditions leave the authorship of the diagnosis open.",
+      "narrower_inference": "That the student can submit an identified faulty step and a correct antiderivative for this integrand with an AI assistant available — not that the student can diagnose the error unaided.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "supports": "The assessment asks for exactly the located error and the corrected antiderivative the claim names, on an integrand the teacher states is new to the students.",
+      "does_not_support": [
+        "That any individual student can locate the invalid step and produce the correct antiderivative on their own.",
+        "That the step named in item 6 was found by the student rather than by a permitted AI assistant or CAS.",
+        "Any conclusion about whether the student would recognise the same error pattern elsewhere, since one instance is observed."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Spotting the faulty step in a two-line worked answer and returning the correct antiderivative is a single query to a permitted assistant; the submitted artifact does not distinguish the two sources."
+      },
+      "gap_statement": "Coverage is complete for K3; what the declared unsupervised, AI-permitted conditions change is what the results license — the diagnosis cannot be attributed to the individual student, which is the inference the teacher said she needs.",
+      "why_no_gap": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "K4",
+      "items": [
+        {
+          "item": "7",
+          "elicits": "Writing an integral that requires integration by parts exactly twice, and stating in one sentence how the student knows twice is required and once is not."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Constructs an integral that meets a structural constraint — requiring integration by parts exactly twice",
+            "verb": "Constructs",
+            "component": "Writes an integrand of the student's own devising that forces integration by parts to be applied twice.",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 7: 'Write an integral that requires integration by parts exactly twice'."
+          },
+          {
+            "claim_span": "justifies why twice and not once",
+            "verb": "justifies",
+            "component": "Gives a reason that the second application is necessary and one application does not finish the job.",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 7: 'and say in one sentence how you know twice is required and once is not.'"
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Item 7 asks for the construction and the justification, and the structural constraint the claim names — exactly twice — is stated in the item in the same terms. The one-sentence response format is a format choice, not a missing move."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared 'unsupervised' with an AI assistant permitted, so the constructed integral and its accompanying justification on item 7 cannot be attributed to the student rather than to the assistant.",
+        "conditions_supports": "A teacher may conclude what a student turns in when an AI assistant is available: an integrand that meets the stated structural constraint and a sentence explaining why two applications are needed."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can construct and justify; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "Both named moves are exercised, so no coverage limit is material. The attribution limit is material because constructing an example to a stated constraint and writing one justifying sentence is fully answerable by a permitted assistant, and the inference she wants is about the individual."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "An observation of the integral being constructed and the two-applications reason being given where an AI assistant is excluded or visible; the declared conditions leave the authorship of both the example and the justification open.",
+      "narrower_inference": "That the student can submit a conforming integral and a justifying sentence with an AI assistant available — not that the student can construct the example and reason about the constraint unaided.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "supports": "The assessment asks for both the construction under the named structural constraint and the justification, in the claim's own terms.",
+      "does_not_support": [
+        "That any individual student can construct an integral meeting the exactly-twice constraint and justify it on their own.",
+        "That the integral and the sentence in item 7 originated with the student rather than with a permitted AI assistant.",
+        "That the student could recognise a non-conforming example, since only construction of a conforming one is asked for."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "An integrand meeting a stated structural constraint plus a one-sentence justification is a standard request a permitted AI assistant fulfils in full; nothing in the submitted response separates the two authors."
+      },
+      "gap_statement": "Coverage is complete for K4; what the declared unsupervised, AI-permitted conditions change is what the results license — the constructed example and its justification cannot be attributed to the individual student, which is the inference the teacher said she needs.",
+      "why_no_gap": "",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Declared by the teacher and governing every judgment above: supervision unsupervised; individual rather than collaborative; AI permitted; resources permitted are anything at home, the internet, an AI assistant and a CAS; purpose summative; time not stated; sent home over a weekend after the techniques-of-integration sequence, with each technique already practised and these integrands new to the students; individual, independent attribution is required for the inference she wants.",
+  "reviewer_notes": "All four claims are exercised by the paper as written: Part A carries K1, Part B carries both moves of K2, item 6 carries both moves of K3, item 7 carries both moves of K4, and no claim has a component the assessment fails to ask for. The single distinguishing fact runs the same way across all four: the declared administration is unsupervised with a CAS and an AI assistant permitted, and every move the four claims name is a move those tools perform in full, so the resulting artifact's authorship is open. The printed header on the paper reads 'No calculator · No notes · Closed book', but the teacher's declared conditions govern and they say unsupervised with AI permitted; this report follows the declared conditions throughout. The novelty condition is met — the teacher states these integrands are new to the students — and the independence condition is not, which is why the limitation is uniformly conditions rather than coverage. This is not a criticism of the task: as a weekend take-home after a techniques sequence it asks for the right things, and it produces real evidence of what students can produce with these resources. What it does not produce, under these declared conditions, is the individual, independent attribution the teacher said her summative purpose requires."
+}

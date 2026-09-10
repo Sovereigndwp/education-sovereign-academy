@@ -1,0 +1,67 @@
+Subject: Mathematics · Grade/course: Honors Calculus (Grade 11-12)
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern every judgment below):
+- Supervision: unsupervised
+- Individual or collaborative: individual
+- AI policy: permitted
+- Resources permitted: anything at home, internet, AI assistant, CAS
+- Purpose: summative
+- Time: not stated
+- Where in the sequence: sent home over a weekend after the techniques-of-integration sequence
+- What students had already seen, in the teacher's words: Students have practised each technique; these integrands are new to them.
+
+THE INFERENCE THE TEACHER WANTS TO MAKE (she has confirmed this; take it as given):
+- She needs to conclude that EACH STUDENT INDIVIDUALLY can do what the claims name. Individual, independent attribution is required.
+  (derived for this check from purpose="summative" and collaboration="individual"; in the pilot the teacher answers this directly)
+
+THE TEACHER-CONFIRMED LEARNING CLAIMS (these govern; do not rewrite them, do not read them more strictly than they are written):
+- K1: Executes the chosen integration technique correctly on a single integrand, without a calculator or notes.  [type: procedural]
+- K2: Selects an appropriate integration technique for an integrand and names the substitution, decomposition or identity it depends on, without computing the integral.  [type: conceptual]
+- K3: Locates the invalid step in an incorrect antiderivative and produces the correct one.  [type: diagnostic]
+- K4: Constructs an integral that meets a structural constraint — requiring integration by parts exactly twice — and justifies why twice and not once.  [type: conceptual]
+
+THE ASSESSMENT, exactly as the teacher uses it:
+"""
+# Techniques of Integration — Quiz 4
+
+**Honors Calculus · 40 minutes · No calculator · No notes · Closed book**
+
+Name: ______________________  Date: ______________
+
+### Part A — Evaluate
+
+Evaluate each integral. Next to your answer, name in one phrase the technique you chose.
+
+1. $\displaystyle \int x e^{2x}\,dx$
+
+2. $\displaystyle \int \frac{3x+1}{x^{2}+x-6}\,dx$
+
+3. $\displaystyle \int \sin^{3}x\,\cos^{2}x\,dx$
+
+4. $\displaystyle \int \frac{x}{\sqrt{9-x^{2}}}\,dx$
+
+### Part B — Choose the method, do not evaluate
+
+For each integral, name the technique you would use and write the substitution, decomposition or
+identity it depends on. **Do not carry out the integration.**
+
+5. (a) $\displaystyle \int \frac{x^{2}}{\sqrt{x^{2}+4}}\,dx$
+   (b) $\displaystyle \int \ln x\,dx$
+   (c) $\displaystyle \int \frac{1}{x^{2}-9}\,dx$
+
+### Part C — Find the mistake
+
+6. A student writes:
+
+   $$\int x\cos(x^{2})\,dx \;=\; \frac{x\sin(x^{2})}{2x} \;+\; C$$
+
+   The answer is wrong. Say which step does not follow and give the correct antiderivative.
+
+### Part D — Build one
+
+7. Write an integral that requires integration by parts **exactly twice**, and say in one sentence how you
+   know twice is required and once is not.
+
+"""
+
+Return the JSON object now.

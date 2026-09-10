@@ -1,0 +1,270 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Comparison of 3/4 and 5/8 by circling <, > or =, with the instruction \"Do not show work.\""
+        },
+        {
+          "item": "2",
+          "elicits": "Comparison of 2/3 and 7/12 by circling a symbol only."
+        },
+        {
+          "item": "3",
+          "elicits": "Comparison of 5/6 and 8/9 by circling a symbol only."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Chooses a valid strategy for comparing two unlike fractions",
+            "verb": "Chooses",
+            "component": "Selects a way of comparing two fractions that do not share a denominator.",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A \"Compare\" presents three unlike-denominator pairs (3/4 vs 5/8, 2/3 vs 7/12, 5/6 vs 8/9), each of which requires the student to settle on some comparison approach before circling a symbol."
+          },
+          {
+            "claim_span": "executes it",
+            "verb": "executes",
+            "component": "Carries the chosen comparison through to a decision about which fraction is larger.",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "\"Circle the correct symbol\" in Part A requires the comparison to be carried through to a stated outcome for all three pairs."
+          },
+          {
+            "claim_span": "shows the reasoning that supports the symbol",
+            "verb": "shows",
+            "component": "Writes out the reasoning that justifies the comparison symbol the student selected.",
+            "items": [],
+            "status": "absent",
+            "evidence": "Part A instructs \"Circle the correct symbol. Do not show work.\" No item in Part A, and no item elsewhere in the assessment, asks the student to record reasoning for a fraction comparison."
+          }
+        ],
+        "coverage_status": "limited",
+        "coverage_missing_component": "Writes out the reasoning that justifies the comparison symbol the student selected.",
+        "why": "Part A exercises the choosing and the executing of a comparison strategy, but the assessment explicitly forbids the written reasoning the claim names, so the third component of this claim is never asked for anywhere in the instrument."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Supervision is declared as proctored_in_class with only paper and pencil permitted and AI prohibited and enforced, and the teacher's novelty note states these particular numbers and problems are new to the students, so the circled symbols were produced in the room by the student under observation.",
+        "conditions_supports": "The teacher may conclude that the marks on the page are this individual student's own work, produced without outside help on items whose exact form the student could not have prepared in advance."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claims name; the purpose is summative and the work is individual."
+      },
+      "materiality": {
+        "coverage_material": true,
+        "conditions_material": false,
+        "why": "She wants to conclude that each student can choose a strategy, execute it AND show the reasoning behind the symbol; a circled symbol with work explicitly forbidden leaves that last part unobserved, and a correct circle is consistent with sound reasoning, a partially correct rule, or a guess among three options. Attribution is not at issue, because the proctored, paper-and-pencil, novel-item conditions place the work squarely with the student."
+      },
+      "limitation_type": "coverage",
+      "coverage_missing_evidence": "A written or spoken record of why the student chose the symbol he or she circled — the instrument currently produces the outcome of the comparison and no trace of the reasoning that produced it.",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "From this assessment the teacher may conclude that the student, working independently, produced correct comparison symbols for three unlike-denominator pairs; she may not conclude from Part A which strategy was used or that the student can articulate the reasoning behind the symbol.",
+      "supports": "Independent evidence that the student can arrive at the correct comparison for unlike fractions on novel number pairs under supervision.",
+      "does_not_support": [
+        "That the student can show the reasoning that supports the symbol, since Part A instructs \"Do not show work.\"",
+        "That any particular valid strategy — equivalent fractions, a benchmark such as one half, or a visual model — was the one the student used.",
+        "That a correct circle on any single item reflects reasoning rather than a correct answer reached another way, including selection among three symbols."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The work was produced in class under proctoring with only paper and pencil and AI prohibited and enforced, so the comparison marks are attributable to the student."
+      },
+      "gap_statement": "This assessment asks the student to choose and carry out a comparison of unlike fractions but never asks the student to show the reasoning that supports the symbol, so it produces evidence of correct comparison outcomes and no evidence of the reasoning component of this claim.",
+      "why_no_gap": "",
+      "over_verified_note": "Three separate unlike-denominator pairs exercise the choosing and executing components, which is more instances than the claim requires for those two parts."
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "Addition of 1/2 + 1/3 with every step shown and the answer in simplest form."
+        },
+        {
+          "item": "5",
+          "elicits": "Subtraction of 5/6 − 1/4 with every step shown and the answer in simplest form."
+        },
+        {
+          "item": "6",
+          "elicits": "Addition of the mixed numbers 2 1/3 + 1 3/4, requiring regrouping to a mixed number, with every step shown."
+        },
+        {
+          "item": "7",
+          "elicits": "Word-problem addition of 3/4 and 5/6 with work shown and the answer written as a mixed number."
+        },
+        {
+          "item": "8",
+          "elicits": "Word-problem subtraction of 1/4 from 2/3 with work shown."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Constructs equivalent fractions with a common denominator",
+            "verb": "Constructs",
+            "component": "Rewrites the given fractions as equivalent fractions that share a denominator.",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Items 4-8 all pair unlike denominators (1/2 and 1/3; 5/6 and 1/4; 1/3 and 3/4; 3/4 and 5/6; 2/3 and 1/4), and Part B directs \"Show every step\" while items 7 and 8 direct \"Show your work.\""
+          },
+          {
+            "claim_span": "combines or compares like-sized parts",
+            "verb": "combines",
+            "component": "Adds or subtracts the rewritten parts once they are the same size.",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Items 4, 6 and 7 require addition; items 5 and 8 require subtraction, each after a common denominator has been formed."
+          },
+          {
+            "claim_span": "simplifies or regroups to a mixed number where the item requires it",
+            "verb": "simplifies",
+            "component": "Puts the result in simplest form, or regroups it into a mixed number when the item calls for that.",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Part B states \"Answers in simplest form\"; item 6 (2 1/3 + 1 3/4) requires regrouping to a mixed number, and item 7 states \"write your answer as a mixed number.\""
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Every component this claim names is exercised: common denominators must be constructed in all five items, both combining and comparing of like-sized parts appear, and both the simplifying and the regrouping-to-a-mixed-number conditions are called for explicitly."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "The work is declared proctored_in_class, individual, paper and pencil only, with AI prohibited and enforced and with these particular numbers new to the students, so the shown steps were produced by the student in the room.",
+        "conditions_supports": "The teacher may conclude that the recorded procedure on the page is this individual student's own, unaided, on number combinations the student could not have prepared in advance."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed that individual, independent attribution is required for a summative, individually completed assessment."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "Neither path is limited: the claim's three moves are all exercised, several of them more than once, and the declared proctored, unaided, novel-item conditions place the work with the individual student, which is exactly what the intended inference needs."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Independent evidence that the individual student can construct common denominators, combine or compare like-sized parts, and simplify or regroup to a mixed number on novel numbers, in bare-number and word-problem form.",
+      "does_not_support": [
+        "Anything about whether the student can explain why the common-denominator procedure works, which this claim does not name and these items do not ask for.",
+        "Retention of the procedure beyond the end of Unit 4, since all evidence comes from a single 25-minute sitting.",
+        "Performance on denominators or regrouping cases outside the ones sampled here (halves, thirds, quarters, sixths)."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored in class, individual, paper and pencil only, AI prohibited and enforced — no part of the production left the room or the student."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The assessment asks for each move the claim names and produces the step-by-step record under conditions that attribute that record to the individual student, so this claim is carried in full and I would not change the instrument for it.",
+      "over_verified_note": "Five items exercise the common-denominator and combining components and four exercise simplifying or regrouping, and the word problems in Part C repeat the same procedural moves in context — more evidence than this claim requires."
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "Explanation of what is wrong with a worked error, 1/2 + 1/4 = 2/6, together with the correct answer."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "States why adding denominators produces a wrong-sized part",
+            "verb": "States",
+            "component": "Says in words what goes wrong when the denominators are added together.",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9 presents exactly the denominator-adding error (\"A student added 1/2 + 1/4 and got 2/6\") and directs \"Explain what the student did wrong.\""
+          },
+          {
+            "claim_span": "gives the correct sum",
+            "verb": "gives",
+            "component": "Produces the right answer to the addition that was done wrongly.",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9 directs \"and show the correct answer\" for 1/2 + 1/4."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Both moves this claim names are asked for in item 9 — the stated explanation of the denominator-adding error and the correct sum. That a single item carries both is not an absence."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Item 9 is completed under the declared proctored_in_class supervision, individually, with paper and pencil only and AI prohibited and enforced, so the written explanation is the student's own language produced in the room.",
+        "conditions_supports": "The teacher may conclude that the wording of the explanation and the correct sum came from this individual student, unaided."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs individual, independent attribution for each claim on this summative, individually completed assessment."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "The item asks for both named moves and the proctored, unaided conditions attribute the response to the individual student, so neither path limits the inference she wants to make."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Independent evidence that the individual student can state what is wrong with adding denominators and produce the correct sum, in the student's own written words.",
+      "does_not_support": [
+        "That the student would catch the same error unprompted, since item 9 names the error's location by presenting the wrong answer.",
+        "That the student can diagnose fraction errors other than denominator-adding, which is the only error type this assessment presents.",
+        "Anything about the quality of mathematical language beyond what a 25-minute written response in Part D captures."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Written in class under proctoring with AI prohibited and enforced and only paper and pencil permitted."
+      },
+      "gap_statement": "",
+      "why_no_gap": "Item 9 asks for both the explanation and the correct sum that this claim names, under conditions that attribute both to the individual student, so this claim is already supported by the assessment as it stands.",
+      "over_verified_note": "The error presented in item 9 is the exact error the claim names, so the item is precisely targeted rather than broader than needed."
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual work, AI prohibited and enforced, paper and pencil only, summative, 25 minutes, end of Unit 4; students have practised this kind of item but these particular numbers and problems are new to them. Individual, independent attribution is required for every claim.",
+  "reviewer_notes": "The declared conditions are as strong as classroom conditions get for attribution, so all three claims clear Path B and the only question that separates them is Path A. G5C2 and G5C3 are carried in full: every move those claims name is asked for on the page, and for G5C2 several times over. G5C1 is the one place where the instrument and the claim part company, and only on its third component: Part A instructs \"Do not show work,\" so the assessment produces the outcome of a comparison and no record of the reasoning behind the symbol, while the claim names showing that reasoning as part of what is being assessed. That is a statement about what the circled symbols license, not a defect in Parts B, C or D, which do carry written reasoning for the procedural and diagnostic claims."
+}

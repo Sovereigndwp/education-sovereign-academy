@@ -1,0 +1,19 @@
+{
+  "limitation_type": "conditions",
+  "assessment_change": "none",
+  "inference_boundary": "These returned pages support that the assignment asks for the whole of G5C1 and that a student hands back a comparison symbol with a chosen strategy carried out and reasoning written beside it, produced at home over a week with the internet and an AI assistant available. They do not support a summative individual judgment that a named student chose the strategy, executed it, and wrote that reasoning herself.",
+  "verification": "short_supervised_observation",
+  "why_this_verification": "The teacher wants an individual, summative conclusion, and the declared unsupervised conditions with AI permitted cannot attribute the strategy choice, the execution or the reasoning to the student, so one short in-room observation of the same behaviour is what supplies the missing attribution.",
+  "add": {
+    "primitive": "Generate",
+    "item_text": "Write a fraction with a denominator of 10 that is greater than 3/4 and less than 1.\n\nMy fraction: ______\n\nOn one line, show how you know your fraction is greater than 3/4. You may use a common denominator, a picture, or a benchmark like 1/2.\n________________________________________________",
+    "variant_rule": "MAY CHANGE: the comparison fraction (e.g. 2/3, 5/8, 4/5) and the required denominator (6, 8, 10, 12), and whether the constraint is 'greater than' or 'less than'. MUST STAY FIXED: two unlike denominators, a comparison fraction that is not a unit fraction, and at least two correct answers available so the student must compare rather than recall. KEY CHANGES: the set of admissible numerators, found by rewriting the comparison fraction over the required denominator (3/4 = 7.5/10, so 8/10 or 9/10). AVOID: pairs where the required denominator equals the comparison denominator, targets whose only correct answer is an equal fraction, and constraints with no whole-number solution.",
+    "conditions": "In class, proctored, individually, no notes, no devices, no calculator, at the start of a period; fresh numbers each period from the variant rule.",
+    "sufficiency_line": "Counts as reaching the claim when the fraction named satisfies both constraints AND the one line names the controlling feature - the rewritten equivalent fraction, the equal-sized parts, or the benchmark that separates the two. A correct fraction with a line that names no controlling feature reaches only the first half of the claim; a wrong fraction with sound reasoning reaches neither.",
+    "why_this_primitive": "Generate forces the student to pick a comparison approach and carry it out to a decision rather than recognise a pre-set pair, so choice, execution and reasoning are all visible in one short in-room answer."
+  },
+  "no_short_check_reason": "",
+  "student_minutes": 3,
+  "scoring_seconds": 20,
+  "disagreement": ""
+}

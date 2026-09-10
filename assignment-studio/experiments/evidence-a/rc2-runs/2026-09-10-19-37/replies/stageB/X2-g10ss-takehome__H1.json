@@ -1,0 +1,19 @@
+{
+  "limitation_type": "conditions",
+  "assessment_change": "none",
+  "inference_boundary": "These results show what each student can produce as sourcing lines for two new documents when a week, the internet and an AI assistant are available; they do not show that any individual student can identify author, year and likely audience of an unfamiliar document on their own.",
+  "verification": "short_supervised_observation",
+  "why_this_verification": "The teacher wants to attribute sourcing to each student individually, and under unsupervised conditions with AI permitted the author of the submitted lines cannot be established, so one brief in-room observation on a fresh document is needed to attach the claim to the student.",
+  "add": {
+    "primitive": "Transfer",
+    "item_text": "Read the document below. On the lines provided, write: (a) the author, (b) the year, (c) the audience the author was most likely trying to reach, and (d) one line giving the detail in the source line or the text that told you who that audience was.\n\nSource: Mary Elizabeth Lease, speech to a farmers' alliance meeting, Kansas, 1890.\n\n\"Wall Street owns the country. It is no longer a government of the people, by the people, and for the people, but a government of Wall Street, by Wall Street, and for Wall Street. The great common people of this country are slaves, and monopoly is the master. We were told two years ago to go to work and raise a big crop, that was all we needed. We went to work and plowed and planted; the rains fell, the sun shone, nature smiled, and we raised the big crop that they told us to; and what came of it? Eight-cent corn, ten-cent oats, two-cent beef and no price at all for butter and eggs.\"\n\n(a) Author: ____________________\n(b) Year: ____________________\n(c) Most likely audience: ____________________\n(d) What told you: ____________________",
+    "variant_rule": "What may change: the document itself \u2014 any short excerpt (60-120 words) from the same period that the class has not read, with a source line that supplies author and date. What must stay fixed: the source line must state author and date so those two elements are read rather than recalled; the excerpt must contain at least one internal signal of who is being addressed (a form of address, a shared grievance, an assumed common interest, a call to act); and all four blanks stay. How the key changes: (a) and (b) are read off the new source line; (c) is the group the internal signal points to; (d) must quote or name that signal. What to avoid: excerpts by authors the class has studied by name, excerpts with no addressee signal (pure narration or statistics), and excerpts long enough that reading time dominates the five minutes.",
+    "conditions": "In class, proctored, individual, no internet, no AI assistant, no notes. Handed out and collected in the room; document not seen in advance and not sent home afterward.",
+    "sufficiency_line": "Counts as met if (a) and (b) are correct from the source line, (c) names a plausible audience for this document, and (d) names an actual feature of the source line or text rather than restating the topic.",
+    "why_this_primitive": "Transfer puts the same three-element sourcing move on a document the student has never met, which is exactly what the take-home already asked and the only thing the room needs to establish."
+  },
+  "no_short_check_reason": "",
+  "student_minutes": 5,
+  "scoring_seconds": 40,
+  "disagreement": ""
+}

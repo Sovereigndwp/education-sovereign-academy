@@ -1,0 +1,84 @@
+Subject: Mathematics · Grade/course: Grade 5
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: unsupervised
+- Individual or collaborative: individual
+- AI policy: permitted
+- Resources permitted: anything at home, internet, AI assistant
+- Purpose: summative
+- Time: not stated
+- Where in the sequence: sent home over a week at the end of Unit 4
+- What students had already seen, in the teacher's words: Students have practised this kind of item; these particular numbers and problems are new to them.
+
+WHAT THE TEACHER WANTS TO CONCLUDE (confirmed; take as given):
+- That EACH STUDENT INDIVIDUALLY can do what the claim names. Independent attribution is required.
+
+THE TEACHER-CONFIRMED CLAIM (G5C3) — this governs; do not rewrite or narrow it:
+States why adding denominators produces a wrong-sized part, and gives the correct sum.
+
+THE FROZEN DIAGNOSIS (record 540e2cb4fd2dd311, closed — not yours to revise):
+  LIMITATION TYPE: conditions
+  what this assessment DOES support: That the assessment asks for both parts of G5C3 in item 9 and returns a written explanation and a correct sum produced under home conditions with resources available.
+  what it does NOT reach:
+    - That an individual student can state, unaided, why adding denominators produces a wrong-sized part.
+    - That the wording of the explanation reflects the student's own grasp of the error.
+    - A summative individual diagnosis of who does and does not still hold this misconception.
+
+  COVERAGE: sufficient
+  component map:
+  · Writes an account of what goes wrong when denominators are added
+      status: present   items: 9
+      Item 9: "A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong" - the presented error is precisely the added-denominator error, and the item calls for the explanation of it.
+  · Produces the correct result of the addition that was done wrongly
+      status: present   items: 9
+      Item 9: "and show the correct answer."
+  (every component the claim names IS exercised — coverage is not the problem)
+
+  CONDITIONS SUPPORT: limited
+  Supervision is declared "unsupervised" with an AI assistant permitted, and this claim's observable is a short written explanation - the form of output most readily supplied by a permitted assistant - so the explanation on the page cannot be attributed to the student.
+  what work produced under these conditions DOES support: A teacher may conclude what explanation of the added-denominator error a student is able to assemble and hand in when working at home with the internet and an AI assistant available.
+
+WHAT THE CONDITIONS LEAVE UNESTABLISHED:
+The declared conditions leave unestablished that the explanation of the wrong-sized part, and the correct sum beside it, came from the student rather than from a permitted resource.
+
+THE ASSESSMENT, exactly as the teacher uses it — it is not to be rewritten:
+"""
+# Fractions with Unlike Denominators — Practice and Problems
+
+**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**
+
+Name: ______________________  Date: ______________
+
+### Part A — Compare
+
+For each pair, write `<`, `>`, or `=`. Then show how you know (a common denominator, a picture, or a benchmark like ½).
+
+1. 3/4 ___ 5/8
+
+2. 2/3 ___ 7/12
+
+3. 5/6 ___ 8/9
+
+### Part B — Add and subtract
+
+Show every step. Answers in simplest form.
+
+4. 1/2 + 1/3 = ______
+
+5. 5/6 − 1/4 = ______
+
+6. 2 1/3 + 1 3/4 = ______
+
+### Part C — Word problems
+
+7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.
+
+8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.
+
+### Part D — Find the mistake
+
+9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.
+
+"""
+
+Return the JSON object now.

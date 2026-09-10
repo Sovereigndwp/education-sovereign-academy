@@ -1,0 +1,19 @@
+{
+  "limitation_type": "conditions",
+  "assessment_change": "none",
+  "inference_boundary": "These results show what each student can produce, over a week with the internet and an AI assistant available, in the way of an explanation of why Carnegie and the Populists wrote as they did; they do not show that any individual student holds the background about those positions or can apply it to an author's text unaided.",
+  "verification": "short_supervised_observation",
+  "why_this_verification": "The teacher wants to attribute the positional explanation to each student, and under unsupervised conditions with background sources and an AI assistant permitted it cannot be told from retrieved reasoning, so one brief in-room observation on unattributed passages is needed.",
+  "add": {
+    "primitive": "Reverse",
+    "item_text": "Each passage below was written in the 1890s. The author's name has been removed. For each one, name the kind of position its author most likely held \u2014 what they did, or what interest they had \u2014 and then, in one line, name the thing about that position that would make a person write this.\n\nPassage X (1894)\n\"The railroads have carried the settler west, opened the plains, and built up the towns. Rates fall wherever traffic grows. Those who complain of freight charges forget who laid the track that made their crop worth anything at all.\"\n\nPassage Y (1892)\n\"Our mortgage falls due in the spring, and the price of wheat falls with it. We ask only that the money of the nation be enlarged, so that debts contracted in cheap dollars are not paid back in dear ones.\"\n\nPassage X \u2014 author's likely position: ______________________\n   What about that position makes this likely: ______________________\n\nPassage Y \u2014 author's likely position: ______________________\n   What about that position makes this likely: ______________________",
+    "variant_rule": "What may change: the two passages, provided both come from 1889-1892 or the years immediately around it and both remain unattributed. What must stay fixed: each passage argues a position whose author has a visible stake in the argument; the two stakes are opposed; each passage stays under about 50 words; the year is given but the author is not; and both blanks stay for each passage. How the key changes: the acceptable positions change with the passage, but the target does not \u2014 a position whose material interest the argument serves, plus a line naming that interest. What to avoid: passages by authors named in the unit packet or on the take-home, passages whose author is identifiable by a famous phrase, passages arguing something no one had a stake in, and passages that state the author's occupation inside the text.",
+    "conditions": "In class, proctored, individual, no internet, no AI assistant, no notes. Passages handed out and collected in the room; not seen in advance and not taken home.",
+    "sufficiency_line": "Counts as met if, for each passage, the position named is one whose interest the passage's argument actually serves (for X, a railroad owner, officer, investor or agent; for Y, an indebted farmer or someone speaking for farm debtors), and the line attached names that stake rather than restating what the passage says.",
+    "why_this_primitive": "Reverse hands the student the outcome \u2014 the text \u2014 and asks for the authorial position that would produce it, which is the same move the take-home asked for on Carnegie and the Populists, run on authors the student has not met."
+  },
+  "no_short_check_reason": "",
+  "student_minutes": 6,
+  "scoring_seconds": 50,
+  "disagreement": ""
+}

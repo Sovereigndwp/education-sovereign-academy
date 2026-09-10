@@ -1,0 +1,85 @@
+Subject: U.S. History · Grade/course: Grade 10
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: unsupervised
+- Individual or collaborative: individual
+- AI policy: permitted
+- Resources permitted: anything at home, internet, AI assistant
+- Purpose: summative
+- Time: not stated
+- Where in the sequence: sent home over a week at the end of the industrialization unit
+- What students had already seen, in the teacher's words: Students have done sourcing practice on other documents; these two excerpts are new to them.
+
+WHAT THE TEACHER WANTS TO CONCLUDE (confirmed; take as given):
+- That EACH STUDENT INDIVIDUALLY can do what the claim names. Independent attribution is required.
+
+THE TEACHER-CONFIRMED CLAIM (H1) — this governs; do not rewrite or narrow it:
+Sources each document — author, year, and the audience the author was most likely trying to reach.
+
+THE FROZEN DIAGNOSIS (record 6327ced89d20feca, closed — not yours to revise):
+  LIMITATION TYPE: conditions
+  what this assessment DOES support: The assessment asks for every element the claim names, on both documents, and the work it returns shows what the student can produce with the permitted resources at hand.
+  what it does NOT reach:
+    - That any individual student can identify author, year and likely audience without the internet or an AI assistant.
+    - That the sourcing lines submitted originated with the student.
+    - That the student would source an unfamiliar document this way under any other set of conditions.
+
+  COVERAGE: sufficient
+  component map:
+  · Names, for each document, who wrote it, when, and who the author was most likely writing for.
+      status: present   items: 1
+      Item 1: "For each document, identify the **author**, the **year**, and the **audience** the author was most likely trying to reach. One line each." The document headers supply author and date for both excerpts, so all three elements are asked for on both documents.
+  (every component the claim names IS exercised — coverage is not the problem)
+
+  CONDITIONS SUPPORT: limited
+  Supervision is declared "unsupervised" with an AI assistant and the internet permitted, so the sourcing lines leave the room with the student and the author of the response cannot be established.
+  what work produced under these conditions DOES support: A teacher may conclude from this work what a student can produce by way of sourcing lines when home resources, the internet and an AI assistant are available.
+
+WHAT THE CONDITIONS LEAVE UNESTABLISHED:
+The declared conditions leave unestablished whether the sourcing lines were produced by the student rather than by the permitted AI assistant or another person.
+
+THE ASSESSMENT, exactly as the teacher uses it — it is not to be rewritten:
+"""
+# Two Views of Wealth in the Gilded Age — Document Analysis
+
+**Grade 10 U.S. History · Industrialization Unit · 45 minutes**
+
+Read both documents. Answer the questions in Part A, then write the response in Part B.
+
+---
+
+**Document 1 — Andrew Carnegie, "Wealth," *North American Review*, June 1889 (excerpt)**
+
+> The problem of our age is the proper administration of wealth, so that the ties of brotherhood may still bind together the rich and poor in harmonious relationship. The conditions of human life have not only been changed, but revolutionized, within the past few hundred years. … The contrast between the palace of the millionaire and the cottage of the laborer with us to-day measures the change which has come with civilization. This change, however, is not to be deplored, but welcomed as highly beneficial. … Much better this great irregularity than universal squalor.
+
+**Document 2 — Preamble to the Omaha Platform of the People's (Populist) Party, July 1892 (excerpt)**
+
+> We meet in the midst of a nation brought to the verge of moral, political, and material ruin. Corruption dominates the ballot-box, the Legislatures, the Congress, and touches even the ermine of the bench. … The fruits of the toil of millions are boldly stolen to build up colossal fortunes for a few, unprecedented in the history of mankind; and the possessors of these, in turn, despise the Republic and endanger liberty. From the same prolific womb of governmental injustice we breed the two great classes — tramps and millionaires.
+
+---
+
+### Part A — Sourcing and close reading
+
+1. For each document, identify the **author**, the **year**, and the **audience** the author was most likely trying to reach. One line each.
+
+2. Both authors describe the same fact: a large gap between the very rich and everyone else. In one sentence each, state how **Document 1** explains where that gap came from, and how **Document 2** explains where it came from.
+
+3. Choose one word or phrase from each document that shows the author's attitude toward great fortunes. Explain what the word choice reveals.
+
+4. Why might Carnegie, of all people, have written Document 1? Why might a farmers' and workers' party have written Document 2? Use what you know about each author's position in 1889–1892.
+
+### Part B — Argument
+
+5. **Question:** In the late nineteenth century, did Americans see the growing gap between rich and poor as the natural price of progress, or as evidence that the system had failed?
+
+Write a response of two paragraphs that:
+- takes a position that accounts for **both** documents (you may argue that different groups saw it differently — say which and why);
+- uses at least one piece of evidence from **each** document;
+- explains how the **point of view** of each author affects how much weight you give their claim;
+- connects the documents to at least one specific development from the period (for example: the growth of trusts, the Homestead or Pullman strikes, farm debt, the 1893 depression).
+
+**Scoring (6 points):** Sourcing accurate (1) · Position addresses both documents (1) · Evidence from each document (1) · Point of view used to weigh evidence (1) · Outside development connected accurately (1) · Organization and clarity (1).
+
+"""
+
+Return the JSON object now.

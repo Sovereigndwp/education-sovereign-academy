@@ -1,0 +1,17 @@
+{
+  "limitation_type": "coverage",
+  "assessment_change": "modify_one_item",
+  "tier": "modify_item",
+  "why_not_tier_1": "",
+  "modify": {
+    "item_ref": "Part A, item 3",
+    "current_text": "Part A - Compare. Circle the correct symbol. Do not show work.\n3. 5/6  ( < )  ( > )  ( = )  8/9",
+    "replacement_text": "Part A - Compare. Circle the correct symbol. Items 1 and 2: do not show work. Item 3: circle the symbol, then finish the sentence on the line under it.\n3. 5/6  ( < )  ( > )  ( = )  8/9\n   I know because ________________________________________________ (one line: name the two numbers you compared after renaming, OR the benchmark you compared each fraction to, OR what your picture showed - then say which fraction that made larger).",
+    "what_it_now_forces": "The student must leave a written trace of the strategy that produced the symbol - the renamed pair (45/54 and 48/54), the distance of each fraction from 1 or from one half, or what a drawn model showed - so the circled symbol is no longer the only thing on the page; item 3 keeps the same number pair and the same comparison it already tested, and gives up only the roughly one minute of pure answer-speed that the 'do not show work' instruction was buying on this one item, while items 1 and 2 continue to supply the no-work comparisons unchanged."
+  },
+  "add": null,
+  "no_short_check_reason": "",
+  "student_minutes": 1,
+  "scoring_seconds": 15,
+  "disagreement": ""
+}

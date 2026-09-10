@@ -1,0 +1,417 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Compare 3/4 and 5/8 with a symbol and show how the student knows (common denominator, picture, or benchmark)."
+        },
+        {
+          "item": "2",
+          "elicits": "Compare 2/3 and 7/12 with a symbol and show the supporting reasoning."
+        },
+        {
+          "item": "3",
+          "elicits": "Compare 5/6 and 8/9 with a symbol and show the supporting reasoning."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Chooses a valid strategy for comparing two unlike fractions — equivalent fractions, a benchmark such as one half, or a visual model",
+            "verb": "Chooses",
+            "component": "Selects one of the named comparison strategies for a pair of unlike fractions rather than being told which to use",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A directs: \"Then show how you know (a common denominator, a picture, or a benchmark like ½).\" The choice among the three is left to the student on items 1, 2 and 3."
+          },
+          {
+            "claim_span": "executes it",
+            "verb": "executes",
+            "component": "Carries the chosen strategy through to a comparison result",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Items 1–3 require a written symbol (\"write `<`, `>`, or `=`\"), which can only be produced by carrying the chosen strategy through."
+          },
+          {
+            "claim_span": "shows the reasoning that supports the symbol",
+            "verb": "shows",
+            "component": "Puts the reasoning on the page in a form that connects to the symbol written",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A: \"Then show how you know\", plus the header instruction \"Show all work\"."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Each of the three moves the claim names — choosing among the named strategies, executing the chosen one, and showing reasoning tied to the symbol — is exercised by every item in Part A, and Part A asks for the choice rather than prescribing it."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Supervision is declared \"proctored_in_class\" with resources limited to paper and pencil, and the teacher's novelty note says these particular numbers and problems are new to the students, so the comparison work on the page was produced in the room in a form the student could not have prepared.",
+        "conditions_supports": "The teacher may conclude that each student, working alone with paper and pencil in 25 minutes, chose and carried out a comparison strategy and wrote the reasoning behind the symbol."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The conditions block states the teacher needs to conclude that each student individually can do what the claim names; purpose is summative and the work is individual."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "Nothing the claim names goes unexercised, and the declared proctored, individual, novel-item conditions supply exactly the individual attribution the teacher's intended inference requires."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "That each student individually chose a valid comparison strategy for unlike fractions, executed it, and showed the reasoning behind the comparison symbol, on number pairs new to them.",
+      "does_not_support": [
+        "That the student would choose the same strategy, or any strategy, on fraction pairs where a benchmark comparison is harder than these three admit",
+        "That the student can compare fractions orally or explain the strategy choice out loud — the observation is of written work only",
+        "That the strategy the student showed is one the student prefers or uses habitually outside a 25-minute summative setting"
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Under proctored in-class administration with only paper and pencil and AI prohibited and enforced, there is no channel through which the comparison work could have been produced by anyone but the student."
+      },
+      "gap_statement": "",
+      "why_no_gap": "Every component the teacher's own words name is exercised in Part A, and the declared conditions place the work in the room on items the students could not have prepared, so this claim is carried in full.",
+      "over_verified_note": "Three separate items exercise the same claim; one would already have established it, so the second and third add confidence beyond what the claim needs rather than covering anything additional."
+    },
+    {
+      "claim_id": "G5C2core",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "May be answered by rewriting 3/4 and 5/8 over a common denominator and comparing the like-sized parts."
+        },
+        {
+          "item": "2",
+          "elicits": "May be answered by rewriting 2/3 and 7/12 over a common denominator and comparing."
+        },
+        {
+          "item": "3",
+          "elicits": "May be answered by rewriting 5/6 and 8/9 over a common denominator and comparing."
+        },
+        {
+          "item": "4",
+          "elicits": "Rewrite 1/2 and 1/3 over a common denominator and add the like-sized parts."
+        },
+        {
+          "item": "5",
+          "elicits": "Rewrite 5/6 and 1/4 over a common denominator and subtract the like-sized parts."
+        },
+        {
+          "item": "6",
+          "elicits": "Rewrite the fractional parts of 2 1/3 and 1 3/4 over a common denominator and combine."
+        },
+        {
+          "item": "7",
+          "elicits": "Rewrite 3/4 and 5/6 over a common denominator and add, in a word-problem context."
+        },
+        {
+          "item": "8",
+          "elicits": "Rewrite 2/3 and 1/4 over a common denominator and subtract, in a word-problem context."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Constructs equivalent fractions with a common denominator",
+            "verb": "Constructs",
+            "component": "Rewrites two unlike fractions as equivalent fractions sharing one denominator",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Items 4–8 all pair unlike denominators (1/2 + 1/3, 5/6 − 1/4, 2 1/3 + 1 3/4, 3/4 + 5/6, 2/3 − 1/4) and Part B instructs \"Show every step\", so the equivalent-fraction step is required on the page."
+          },
+          {
+            "claim_span": "combines or compares the resulting like-sized parts",
+            "verb": "combines",
+            "component": "Adds, subtracts, or compares the rewritten parts once they are the same size",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Part B items 4–6 and word problems 7–8 require the sum or difference; Part A items 1–3 allow the same construction to be used for a comparison (\"a common denominator\")."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Both moves the claim names — constructing the common-denominator equivalents and then combining or comparing the like-sized parts — are exercised repeatedly across Parts A, B and C, with \"Show every step\" making the construction visible rather than inferred from an answer."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "The work is produced under declared \"proctored_in_class\" supervision, individually, with only paper and pencil permitted and the particular numbers new to the students, so the steps on the page are an observation of the student.",
+        "conditions_supports": "The teacher may conclude that each student individually built common-denominator equivalents and combined or compared the resulting parts on unfamiliar numbers, unaided, within 25 minutes."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs individual, independent attribution for each claim; this is a summative, individual administration."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "Neither path is limited: the claim's two moves are exercised many times over, and the proctored individual conditions deliver the individual attribution the intended inference needs."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "That each student individually constructed equivalent fractions over a common denominator and combined or compared the resulting like-sized parts, across bare computation and word-problem contexts.",
+      "does_not_support": [
+        "That the student can do this with denominators outside the small range used here (2, 3, 4, 6, 8, 9, 12)",
+        "That the student chose a least common denominator rather than any workable common denominator — the claim does not name that and the items do not force it",
+        "That the student can carry the procedure without written work, mentally or under time pressure shorter than the 25 minutes allowed"
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual administration with paper and pencil only and AI prohibited and enforced leaves no route for the procedure to have been executed by anyone else."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The assessment asks for exactly the moves the claim names, in eight items, and the declared conditions attribute the resulting work to the individual student.",
+      "over_verified_note": "Five computation items plus three comparison items exercise a two-move procedural claim; this is already collecting considerably more evidence than the claim requires, which is a reason to trust it, not a problem."
+    },
+    {
+      "claim_id": "G5C2a",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "1/2 + 1/3 = 5/6 — the result is already in lowest terms, so no reduction is performed."
+        },
+        {
+          "item": "5",
+          "elicits": "5/6 − 1/4 = 7/12 — already in lowest terms."
+        },
+        {
+          "item": "6",
+          "elicits": "2 1/3 + 1 3/4 = 4 1/12 — already in lowest terms."
+        },
+        {
+          "item": "7",
+          "elicits": "3/4 + 5/6 = 1 7/12 — already in lowest terms."
+        },
+        {
+          "item": "8",
+          "elicits": "2/3 − 1/4 = 5/12 — already in lowest terms."
+        },
+        {
+          "item": "9",
+          "elicits": "The correct sum 1/2 + 1/4 = 3/4 — already in lowest terms."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Simplifies a reducible fraction result to lowest terms",
+            "verb": "Simplifies",
+            "component": "Reduces a result that comes out with a common factor to its lowest terms",
+            "items": [],
+            "status": "absent",
+            "evidence": "Part B instructs \"Answers in simplest form\", but no item on this assessment yields a reducible result: items 4–9 produce 5/6, 7/12, 4 1/12, 1 7/12, 5/12 and 3/4, each already in lowest terms. The instruction is present; the occasion to act on it is not."
+          }
+        ],
+        "coverage_status": "limited",
+        "coverage_missing_component": "Reduces a result that comes out with a common factor to its lowest terms",
+        "why": "The claim is scoped to \"when the item requires it\", and no item on this assessment requires it — every computed result already arrives in lowest terms, so the reducing move is never occasioned and the standing instruction \"Answers in simplest form\" is satisfied by doing nothing."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Supervision is \"proctored_in_class\", individual, paper and pencil only, on numbers new to the students, so whatever work does appear on the page is attributable to the student.",
+        "conditions_supports": "The teacher may conclude that the arithmetic she does see was produced by that student alone; the conditions are not what limits this claim."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can simplify a reducible result; this is a summative individual assessment."
+      },
+      "materiality": {
+        "coverage_material": true,
+        "conditions_material": false,
+        "why": "The coverage gap is material because the teacher wants to conclude each student can reduce to lowest terms and this assessment never puts a reducible result in front of the student, so a student who cannot reduce and a student who can are indistinguishable on this paper; conditions are not material because attribution is strong."
+      },
+      "limitation_type": "coverage",
+      "coverage_missing_evidence": "A computed result carrying a common factor — the assessment produces no occasion on which a student must reduce, so it produces no observation of reducing.",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "That each student individually wrote results that happened to be in lowest terms because the arithmetic delivered them that way — not that the student would recognise or reduce a result that was not.",
+      "supports": "That the student worked individually and unaided on fraction arithmetic and left the results in a form that is in lowest terms.",
+      "does_not_support": [
+        "That the student can recognise when a result is reducible",
+        "That the student can carry out a reduction to lowest terms",
+        "That an answer written in simplest form here reflects a simplifying step rather than arithmetic that never required one"
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Attribution is not the issue here; the proctored individual conditions are strong, and the limitation is that the simplifying move is never called for."
+      },
+      "gap_statement": "This assessment does not produce evidence for G5C2a: no item yields a reducible result, so no student is ever observed reducing one, and correct papers are silent on whether the student can.",
+      "why_no_gap": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "G5C2b",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "2 1/3 + 1 3/4 gives 3 13/12, which must be regrouped to 4 1/12."
+        },
+        {
+          "item": "7",
+          "elicits": "3/4 + 5/6 gives 19/12, and the item explicitly directs \"write your answer as a mixed number\" (1 7/12)."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Regroups an improper fraction result to a mixed number",
+            "verb": "Regroups",
+            "component": "Converts a result whose numerator exceeds its denominator into a whole number with a proper fractional part",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 7 states \"write your answer as a mixed number\" and its sum 3/4 + 5/6 is 19/12; item 6 (2 1/3 + 1 3/4) produces 3 13/12, which cannot be left as written."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "The single move the claim names is exercised on two items that genuinely require it, one of them naming the required form explicitly, so the claim's \"when the item requires it\" condition is actually met here."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Declared \"proctored_in_class\", individual, paper and pencil only, with these particular numbers new to the students, so the regrouping shown on items 6 and 7 was performed in the room by that student.",
+        "conditions_supports": "The teacher may conclude that each student individually converted an improper result to a mixed number, unaided, on numbers they had not seen."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "Individual, independent attribution is required for every claim per the confirmed conditions block."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "The move is exercised where the claim scopes it, and the proctored individual conditions supply the attribution the teacher's inference needs; neither path is limited."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "That each student individually regrouped an improper fraction result into a mixed number on items that required it, including one where the mixed-number form was explicitly demanded.",
+      "does_not_support": [
+        "That the student can go the other way, from a mixed number to an improper fraction",
+        "That the student would regroup unprompted on an item that did not name the mixed-number form — only item 6 tests that, and it forces the regrouping arithmetically",
+        "That the student can regroup results involving whole-number parts larger than the small values used here"
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, paper-and-pencil administration with AI prohibited and enforced leaves the regrouping work attributable to the student."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The claim names one move, two items require it, and the declared conditions attribute the resulting work to the individual student.",
+      "over_verified_note": "Two items require the regrouping where the claim needs only one occasion, so this claim is carried with a margin."
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "Explain what a student who answered 1/2 + 1/4 = 2/6 did wrong, and show the correct answer."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "States why adding denominators produces a wrong-sized part",
+            "verb": "States",
+            "component": "Says in writing what goes wrong when denominators are added — that the resulting parts are not the size the problem is about",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9 presents exactly the denominator-adding error (1/2 + 1/4 → 2/6) and directs \"Explain what the student did wrong\"."
+          },
+          {
+            "claim_span": "gives the correct sum",
+            "verb": "gives",
+            "component": "Produces the right answer to the same addition",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9: \"and show the correct answer\" — the correct sum of 1/2 + 1/4."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Both moves the claim names are asked for by the one item built for this claim, and the item stages the precise error the claim is about rather than a generic mistake."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "The explanation is written in class under declared \"proctored_in_class\" supervision, individually, with only paper and pencil and this particular error case new to the students, so the wording on the page is the student's own.",
+        "conditions_supports": "The teacher may conclude that each student individually wrote an explanation of the denominator-adding error and produced the correct sum, in 25 minutes without resources."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The confirmed conditions block requires individual, independent attribution for each claim, and this diagnostic claim is about what each student can articulate."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "The item asks for both named moves, and proctored individual administration attributes the written explanation to the student; the ordinary narrowness of resting a diagnostic claim on one item is not a missing component."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "That each student individually wrote why adding denominators yields a wrong-sized part and gave the correct sum for 1/2 + 1/4, in their own words under supervision.",
+      "does_not_support": [
+        "That the student would identify the same error unprompted, where the item does not announce that a mistake is present",
+        "That the student can articulate the reasoning orally or at length — the observation is one short written explanation on one error case",
+        "That the student recognises the same error in subtraction or in unlike-denominator pairs other than halves and quarters"
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Written in class under proctored individual conditions with AI prohibited and enforced, so the explanation cannot have come from elsewhere."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The one item asks for both moves the claim names, on exactly the error the claim describes, under conditions that attribute the writing to the individual student.",
+      "over_verified_note": ""
+    }
+  ],
+  "conditions_echo": "Grade 5 mathematics, end of Unit 4, 25 minutes, summative. Declared: proctored_in_class supervision, individual work, AI prohibited and enforced, resources limited to paper and pencil, item types practised but these particular numbers and problems new to students. Individual, independent attribution is required for every claim.",
+  "reviewer_notes": "Attribution is strong for all five claims and is not the pressure point anywhere in this assessment: proctored, individual, paper-and-pencil administration on unfamiliar numbers meets the independent and novel conditions throughout, so the results license individual conclusions. Four of the five claims are carried in full, two of them with more items than the claim needs. The single limitation is one of coverage on G5C2a: the paper says \"Answers in simplest form\" but every computed result on it — 5/6, 7/12, 4 1/12, 1 7/12, 5/12, 3/4 — already arrives in lowest terms, so the simplifying move is never occasioned and a correct paper says nothing about whether the student can reduce. G5C2b, the parallel 'when the item requires it' claim, is by contrast genuinely required by items 6 and 7. This is a diagnosis of what the evidence licenses; no change to the assessment is proposed or implied."
+}

@@ -1,0 +1,277 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "For each of the two documents, a one-line identification of author, year, and the audience the author was most likely trying to reach."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Sources each document — author, year, and the audience the author was most likely trying to reach",
+            "verb": "Sources",
+            "component": "Names, for each document, who wrote it, when, and who the author was most likely writing for.",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Item 1: \"For each document, identify the **author**, the **year**, and the **audience** the author was most likely trying to reach. One line each.\" The document headers supply author and date for both excerpts, so all three elements are asked for on both documents."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Item 1 asks for the three named elements — author, year, audience — on each document, which is the whole of what this claim names. Nothing in the claim goes beyond that."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared \"unsupervised\" with an AI assistant and the internet permitted, so the sourcing lines leave the room with the student and the author of the response cannot be established.",
+        "conditions_supports": "A teacher may conclude from this work what a student can produce by way of sourcing lines when home resources, the internet and an AI assistant are available."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claim names; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "Nothing the claim names is unexercised, so there is no coverage limitation to be material. The attribution limit is material because the inference she wants is about the individual student and the declared conditions do not place this work where outside help is excluded or visible."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "The declared conditions leave unestablished whether the sourcing lines were produced by the student rather than by the permitted AI assistant or another person.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "This assessment licenses the conclusion that the student can arrive at author, year and likely audience for these two documents with home resources, the internet and an AI assistant available.",
+      "supports": "The assessment asks for every element the claim names, on both documents, and the work it returns shows what the student can produce with the permitted resources at hand.",
+      "does_not_support": [
+        "That any individual student can identify author, year and likely audience without the internet or an AI assistant.",
+        "That the sourcing lines submitted originated with the student.",
+        "That the student would source an unfamiliar document this way under any other set of conditions."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Author and year are printed in the document headers and the likely audience of both the Carnegie essay and the Omaha Platform preamble is a standard, widely available identification, so a permitted AI assistant can produce the entire response."
+      },
+      "gap_statement": "Under unsupervised administration with an AI assistant permitted, this assessment does not establish that the sourcing was done by the student, which is what the intended summative inference about each individual requires.",
+      "why_no_gap": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "2",
+          "elicits": "One sentence for each document stating how that document explains the origin of the same stated fact, the gap between the very rich and everyone else."
+        },
+        {
+          "item": "3",
+          "elicits": "A word or phrase chosen from each document that shows the author's attitude toward great fortunes, with an explanation of what the choice reveals."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Contrasts the two authors' causal explanations of the same fact",
+            "verb": "Contrasts",
+            "component": "Sets Carnegie's account of where the wealth gap came from against the Omaha Platform's account of the same gap.",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "Item 2: \"Both authors describe the same fact: a large gap between the very rich and everyone else. In one sentence each, state how **Document 1** explains where that gap came from, and how **Document 2** explains where it came from.\" The item fixes the shared fact and requires both causal accounts side by side."
+          },
+          {
+            "claim_span": "reads a chosen word or phrase from each for the author's attitude",
+            "verb": "reads",
+            "component": "Picks a word or phrase out of each document and says what it shows about that author's attitude.",
+            "items": [
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Item 3: \"Choose one word or phrase from each document that shows the author's attitude toward great fortunes. Explain what the word choice reveals.\""
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Item 2 exercises the contrast of causal explanations against a fact the item itself holds constant, and item 3 exercises the attitude reading on a chosen word or phrase from each document. Both moves the claim names are asked for."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared \"unsupervised\" with an AI assistant permitted, so the contrast and the word-level reading are produced where outside help is neither excluded nor visible.",
+        "conditions_supports": "A teacher may conclude what a student can produce, in the way of a contrast between two causal accounts and a reading of loaded language, with the internet and an AI assistant available."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claim names; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "Both named moves are exercised, so there is no coverage limitation to weigh. The attribution limit bears directly on the inference she wants, which is about what each student individually can do."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "The declared conditions leave unestablished whether the contrast of causal explanations and the attitude reading were the student's own reading of these two excerpts.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "This assessment licenses the conclusion that the student can produce a contrast of the two causal explanations and an attitude reading of chosen language with home resources, the internet and an AI assistant available.",
+      "supports": "The assessment asks for both moves the claim names on both documents, and the returned work shows what the student can produce with the permitted resources.",
+      "does_not_support": [
+        "That any individual student can contrast the two causal explanations unaided.",
+        "That the word or phrase chosen and the attitude read from it reflect the student's own close reading rather than a permitted assistant's.",
+        "That the student could do this with documents they encountered without resources at hand."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Both excerpts are short, public and widely discussed texts; a permitted AI assistant can state both causal explanations and select and gloss an attitude-bearing phrase from each."
+      },
+      "gap_statement": "Under unsupervised administration with an AI assistant permitted, this assessment does not establish that the contrast and the attitude reading were done by the student, which the intended summative inference about each individual requires.",
+      "why_no_gap": "",
+      "over_verified_note": "The teacher's note that these two excerpts are new to students means novelty of the exact form holds; what the conditions do not settle is authorship, not familiarity."
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "An explanation of why Carnegie in particular would have written Document 1 and why a farmers' and workers' party would have written Document 2, drawing on each author's position in 1889-1892."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Explains why each author would write as they did given their position in 1889–1892",
+            "verb": "Explains",
+            "component": "Accounts for each author's choice to write what they wrote by reference to where that author stood in the years 1889 to 1892.",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 4: \"Why might Carnegie, of all people, have written Document 1? Why might a farmers' and workers' party have written Document 2? Use what you know about each author's position in 1889–1892.\""
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Item 4 asks the move on both authors and names the same 1889-1892 positional frame the claim names, which is the whole of what the claim asks for."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared \"unsupervised\" with the internet and an AI assistant permitted, so an explanation of authorial position is produced where outside help is neither excluded nor visible.",
+        "conditions_supports": "A teacher may conclude what a student can produce by way of a positional explanation of each author when background sources and an AI assistant are available to them."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claim names; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "The named move is exercised on both authors, so coverage carries no limitation. The attribution limit is material because the conclusion she wants is about the individual student's application, and background knowledge about Carnegie and the Populists is exactly what the permitted resources supply."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "The declared conditions leave unestablished whether the positional explanation reflects knowledge the student holds and applies, or knowledge retrieved for them during the week at home.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "This assessment licenses the conclusion that the student can produce an explanation of each author's motive tied to their 1889-1892 position when the internet and an AI assistant are available.",
+      "supports": "The assessment asks the explanatory move the claim names on both authors within the period the claim names, and returns work showing what the student can produce with the permitted resources.",
+      "does_not_support": [
+        "That any individual student holds the background knowledge of Carnegie's and the Populists' positions that the explanation rests on.",
+        "That the explanation submitted is the student's own application rather than a permitted assistant's.",
+        "That the student could explain the authorial positions of a new pair of documents without resources."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Why Carnegie wrote \"Wealth\" and why the People's Party wrote the Omaha Platform preamble are standard historical explanations that a permitted AI assistant or a web search can supply in full."
+      },
+      "gap_statement": "Under unsupervised administration with the internet and an AI assistant permitted, this assessment does not establish that the positional explanation came from the student, which the intended summative inference about each individual requires.",
+      "why_no_gap": "",
+      "over_verified_note": ""
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "A two-paragraph argued response taking a position that accounts for both documents, using evidence from each, explaining how each author's point of view affects the weight given to their claim, and connecting at least one specific development from the period."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Constructs an argument that addresses both documents",
+            "verb": "Constructs",
+            "component": "Writes an argued position on the question that takes account of both documents rather than one.",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5 requires a two-paragraph response that \"takes a position that accounts for **both** documents (you may argue that different groups saw it differently — say which and why)\" and \"uses at least one piece of evidence from **each** document\"."
+          },
+          {
+            "claim_span": "weights their evidence explicitly by point of view",
+            "verb": "weights",
+            "component": "States how much weight each author's claim gets and ties that weighting to the author's point of view.",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5 bullet: \"explains how the **point of view** of each author affects how much weight you give their claim\"; the scoring line also names \"Point of view used to weigh evidence\"."
+          },
+          {
+            "claim_span": "connects one accurate outside development from the period",
+            "verb": "connects",
+            "component": "Brings in a specific development from the period beyond the two documents and links it to the argument.",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Item 5 bullet: \"connects the documents to at least one specific development from the period (for example: the growth of trusts, the Homestead or Pullman strikes, farm debt, the 1893 depression)\"; the scoring line names \"Outside development connected accurately\"."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Each of the three moves the claim names is asked for explicitly in the bulleted requirements of item 5, and each is separately named in the scoring line."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared \"unsupervised\", the task is sent home over a week and an AI assistant is permitted, so an extended written argument is produced where outside help is neither excluded nor visible.",
+        "conditions_supports": "A teacher may conclude what a student can produce as a finished document-based argument when given a week, home resources, the internet and an AI assistant — a real and useful thing to know about the student's output."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claim names; the task is declared individual and summative."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": true,
+        "why": "All three named moves are exercised, so coverage carries no limitation. The attribution limit is material and most consequential here, because extended argumentative writing is the form a permitted AI assistant produces most completely, and the intended conclusion is about the individual student."
+      },
+      "limitation_type": "conditions",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "The declared conditions leave unestablished whether the argument, the point-of-view weighting and the outside connection were composed by the student.",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "This assessment licenses the conclusion that the student can submit a two-paragraph document-based argument meeting all four stated requirements when given a week with the internet and an AI assistant.",
+      "supports": "The assessment asks for all three moves the claim names in a single argued response and returns work showing what the student can produce with a week and the permitted resources.",
+      "does_not_support": [
+        "That any individual student can construct this argument on their own.",
+        "That the point-of-view weighting represents the student's own judgment about the two authors.",
+        "That the outside development named is knowledge the student holds rather than retrieved during the week.",
+        "That the writing in the submitted paragraphs is the student's."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "A two-paragraph document-based argument on Carnegie against the Omaha Platform, including point-of-view weighting and a Gilded Age outside development, is fully producible by a permitted AI assistant from the two excerpts as printed."
+      },
+      "gap_statement": "Under unsupervised administration over a week with an AI assistant permitted, this assessment does not establish that the argument, its point-of-view weighting or its outside connection were produced by the student, which the intended summative inference about each individual requires.",
+      "why_no_gap": "",
+      "over_verified_note": "The scoring line also records organization and clarity, which the claim does not name; that is extra information the teacher collects, not a gap."
+    }
+  ],
+  "conditions_echo": "Unsupervised, individual, summative, AI assistant and internet permitted, anything at home permitted, sent home over a week at the end of the industrialization unit, time not stated; students have done sourcing practice on other documents but these two excerpts are new to them; the teacher requires individual, independent attribution.",
+  "reviewer_notes": "Coverage and conditions diverge cleanly and identically across all four claims. On coverage the instrument is unusually well aligned: every move named in H1 through H4 has a matching item, and item 5's bulleted requirements and scoring line map one-to-one onto the three moves in H4, so there is no coverage limitation to report on any claim. The novelty condition also holds, since the teacher states these two excerpts are new to students. What decides every claim is the independence condition: supervision is \"unsupervised\" with an AI assistant permitted, so none of the four claims is carried by an independent observation, while the teacher's declared inference is about each individual student. This is a boundary on what the returned work licenses, not a defect in the assignment — as a take-home document analysis it asks for exactly what the claims name, and work produced with these resources remains real evidence of what students can produce with them."
+}

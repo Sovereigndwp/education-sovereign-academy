@@ -1,0 +1,85 @@
+Subject: Mathematics · Grade/course: Honors Calculus (Grade 11-12)
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: unsupervised
+- Individual or collaborative: individual
+- AI policy: permitted
+- Resources permitted: anything at home, internet, AI assistant, CAS
+- Purpose: summative
+- Time: not stated
+- Where in the sequence: sent home over a weekend after the techniques-of-integration sequence
+- What students had already seen, in the teacher's words: Students have practised each technique; these integrands are new to them.
+
+WHAT THE TEACHER WANTS TO CONCLUDE (confirmed; take as given):
+- That EACH STUDENT INDIVIDUALLY can do what the claim names. Independent attribution is required.
+
+THE TEACHER-CONFIRMED CLAIM (K1) — this governs; do not rewrite or narrow it:
+Executes the chosen integration technique correctly on a single integrand, without a calculator or notes.
+
+THE FROZEN DIAGNOSIS (record 0ddf4ff6ce9f189c, closed — not yours to revise):
+  LIMITATION TYPE: conditions
+  what this assessment DOES support: The assessment asks for every move this claim names, four times over; under the declared conditions it supports a conclusion about executed work produced with tools available.
+  what it does NOT reach:
+    - That any individual student can execute the chosen technique without a calculator or notes.
+    - That the antiderivatives written on items 1-4 were arrived at by the student rather than by a permitted CAS or AI assistant.
+    - Any conclusion about the student's fluency or speed at execution, which the declared conditions do not observe.
+
+  COVERAGE: sufficient
+  component map:
+  · Carries a chosen technique through on one integrand and produces the resulting antiderivative.
+      status: present   items: 1, 2, 3, 4
+      Part A — Evaluate: 'Evaluate each integral. Next to your answer, name in one phrase the technique you chose.' Items 1-4 each require the technique to be executed to a completed antiderivative.
+  (every component the claim names IS exercised — coverage is not the problem)
+
+  CONDITIONS SUPPORT: limited
+  Supervision is declared 'unsupervised' with an AI assistant and a CAS permitted, so the executed antiderivatives on items 1-4 cannot be attributed to the student rather than to a tool that performs that same execution.
+  what work produced under these conditions DOES support: A teacher may conclude from this work what a student can produce when a CAS and an AI assistant are available to them — that the finished integrals were obtained and presented, with a technique named alongside each.
+
+WHAT THE CONDITIONS LEAVE UNESTABLISHED:
+An observation of the technique being carried through to an antiderivative in a setting where a CAS or AI assistant is excluded or visible; the declared conditions leave the authorship of the executed steps open.
+
+THE ASSESSMENT, exactly as the teacher uses it — it is not to be rewritten:
+"""
+# Techniques of Integration — Quiz 4
+
+**Honors Calculus · 40 minutes · No calculator · No notes · Closed book**
+
+Name: ______________________  Date: ______________
+
+### Part A — Evaluate
+
+Evaluate each integral. Next to your answer, name in one phrase the technique you chose.
+
+1. $\displaystyle \int x e^{2x}\,dx$
+
+2. $\displaystyle \int \frac{3x+1}{x^{2}+x-6}\,dx$
+
+3. $\displaystyle \int \sin^{3}x\,\cos^{2}x\,dx$
+
+4. $\displaystyle \int \frac{x}{\sqrt{9-x^{2}}}\,dx$
+
+### Part B — Choose the method, do not evaluate
+
+For each integral, name the technique you would use and write the substitution, decomposition or
+identity it depends on. **Do not carry out the integration.**
+
+5. (a) $\displaystyle \int \frac{x^{2}}{\sqrt{x^{2}+4}}\,dx$
+   (b) $\displaystyle \int \ln x\,dx$
+   (c) $\displaystyle \int \frac{1}{x^{2}-9}\,dx$
+
+### Part C — Find the mistake
+
+6. A student writes:
+
+   $$\int x\cos(x^{2})\,dx \;=\; \frac{x\sin(x^{2})}{2x} \;+\; C$$
+
+   The answer is wrong. Say which step does not follow and give the correct antiderivative.
+
+### Part D — Build one
+
+7. Write an integral that requires integration by parts **exactly twice**, and say in one sentence how you
+   know twice is required and once is not.
+
+"""
+
+Return the JSON object now.

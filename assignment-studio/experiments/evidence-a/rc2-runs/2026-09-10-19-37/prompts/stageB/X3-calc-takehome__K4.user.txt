@@ -1,0 +1,88 @@
+Subject: Mathematics · Grade/course: Honors Calculus (Grade 11-12)
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern everything):
+- Supervision: unsupervised
+- Individual or collaborative: individual
+- AI policy: permitted
+- Resources permitted: anything at home, internet, AI assistant, CAS
+- Purpose: summative
+- Time: not stated
+- Where in the sequence: sent home over a weekend after the techniques-of-integration sequence
+- What students had already seen, in the teacher's words: Students have practised each technique; these integrands are new to them.
+
+WHAT THE TEACHER WANTS TO CONCLUDE (confirmed; take as given):
+- That EACH STUDENT INDIVIDUALLY can do what the claim names. Independent attribution is required.
+
+THE TEACHER-CONFIRMED CLAIM (K4) — this governs; do not rewrite or narrow it:
+Constructs an integral that meets a structural constraint — requiring integration by parts exactly twice — and justifies why twice and not once.
+
+THE FROZEN DIAGNOSIS (record 5092ce55972fe62e, closed — not yours to revise):
+  LIMITATION TYPE: conditions
+  what this assessment DOES support: The assessment asks for both the construction under the named structural constraint and the justification, in the claim's own terms.
+  what it does NOT reach:
+    - That any individual student can construct an integral meeting the exactly-twice constraint and justify it on their own.
+    - That the integral and the sentence in item 7 originated with the student rather than with a permitted AI assistant.
+    - That the student could recognise a non-conforming example, since only construction of a conforming one is asked for.
+
+  COVERAGE: sufficient
+  component map:
+  · Writes an integrand of the student's own devising that forces integration by parts to be applied twice.
+      status: present   items: 7
+      Item 7: 'Write an integral that requires integration by parts exactly twice'.
+  · Gives a reason that the second application is necessary and one application does not finish the job.
+      status: present   items: 7
+      Item 7: 'and say in one sentence how you know twice is required and once is not.'
+  (every component the claim names IS exercised — coverage is not the problem)
+
+  CONDITIONS SUPPORT: limited
+  Supervision is declared 'unsupervised' with an AI assistant permitted, so the constructed integral and its accompanying justification on item 7 cannot be attributed to the student rather than to the assistant.
+  what work produced under these conditions DOES support: A teacher may conclude what a student turns in when an AI assistant is available: an integrand that meets the stated structural constraint and a sentence explaining why two applications are needed.
+
+WHAT THE CONDITIONS LEAVE UNESTABLISHED:
+An observation of the integral being constructed and the two-applications reason being given where an AI assistant is excluded or visible; the declared conditions leave the authorship of both the example and the justification open.
+
+THE ASSESSMENT, exactly as the teacher uses it — it is not to be rewritten:
+"""
+# Techniques of Integration — Quiz 4
+
+**Honors Calculus · 40 minutes · No calculator · No notes · Closed book**
+
+Name: ______________________  Date: ______________
+
+### Part A — Evaluate
+
+Evaluate each integral. Next to your answer, name in one phrase the technique you chose.
+
+1. $\displaystyle \int x e^{2x}\,dx$
+
+2. $\displaystyle \int \frac{3x+1}{x^{2}+x-6}\,dx$
+
+3. $\displaystyle \int \sin^{3}x\,\cos^{2}x\,dx$
+
+4. $\displaystyle \int \frac{x}{\sqrt{9-x^{2}}}\,dx$
+
+### Part B — Choose the method, do not evaluate
+
+For each integral, name the technique you would use and write the substitution, decomposition or
+identity it depends on. **Do not carry out the integration.**
+
+5. (a) $\displaystyle \int \frac{x^{2}}{\sqrt{x^{2}+4}}\,dx$
+   (b) $\displaystyle \int \ln x\,dx$
+   (c) $\displaystyle \int \frac{1}{x^{2}-9}\,dx$
+
+### Part C — Find the mistake
+
+6. A student writes:
+
+   $$\int x\cos(x^{2})\,dx \;=\; \frac{x\sin(x^{2})}{2x} \;+\; C$$
+
+   The answer is wrong. Say which step does not follow and give the correct antiderivative.
+
+### Part D — Build one
+
+7. Write an integral that requires integration by parts **exactly twice**, and say in one sentence how you
+   know twice is required and once is not.
+
+"""
+
+Return the JSON object now.

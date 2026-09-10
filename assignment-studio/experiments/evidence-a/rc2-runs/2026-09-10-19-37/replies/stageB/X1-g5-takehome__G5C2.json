@@ -1,0 +1,19 @@
+{
+  "limitation_type": "conditions",
+  "assessment_change": "none",
+  "inference_boundary": "These returned pages support that the assignment asks for the whole of G5C2 across nine items and that a student hands back worked common denominators, combined parts, and simplest-form or mixed-number results, produced at home over a week with calculators, the internet and an AI assistant available. They do not support a summative individual judgment that a named student carried out that procedure herself.",
+  "verification": "short_supervised_observation",
+  "why_this_verification": "The claim names a procedure that the permitted tools perform end to end, and the teacher wants an individual summative conclusion, so the attribution she is missing can only come from watching the same procedure run once in the room.",
+  "add": {
+    "primitive": "Reverse",
+    "item_text": "Fill in the missing fraction.\n\n2/3 + ______ = 1 1/12\n\nShow your steps.",
+    "variant_rule": "MAY CHANGE: the given fraction and the target total (e.g. 3/4 + ___ = 1 1/8; 1/2 + ___ = 1 1/6). MUST STAY FIXED: two unlike denominators where neither is a multiple of the other where possible, a target written as a mixed number so the improper/mixed regrouping is unavoidable, and a missing fraction that exists in simplest form. KEY CHANGES: rewrite the target as an improper fraction over the common denominator and subtract the given fraction (13/12 - 8/12 = 5/12). AVOID: whole-number targets, targets where the missing fraction equals the given one, and denominator pairs already used on the take-home (2 and 3, 6 and 4, 3 and 4).",
+    "conditions": "In class, proctored, individually, no notes, no devices, no calculator; fresh numbers each period from the variant rule.",
+    "sufficiency_line": "Counts as reaching the claim when the shown steps put both quantities over one common denominator, combine them, and the answer is given in simplest form. A correct answer with no common denominator visible in the steps, or steps that stop at an improper form the item's arithmetic required be regrouped, reaches only part of the claim.",
+    "why_this_primitive": "Reverse gives the outcome and withholds one input, so the student cannot copy a forward procedure onto the page - the common denominator must be built, the parts combined and the mixed number unpacked to recover the missing fraction."
+  },
+  "no_short_check_reason": "",
+  "student_minutes": 3,
+  "scoring_seconds": 20,
+  "disagreement": ""
+}

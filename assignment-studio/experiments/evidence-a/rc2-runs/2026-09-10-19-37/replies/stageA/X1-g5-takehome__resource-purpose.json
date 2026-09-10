@@ -1,0 +1,296 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Compares 3/4 and 5/8 with a symbol and shows how the student knows, via a common denominator, a picture, or a benchmark such as one half."
+        },
+        {
+          "item": "2",
+          "elicits": "Compares 2/3 and 7/12 with a symbol and shows the supporting method."
+        },
+        {
+          "item": "3",
+          "elicits": "Compares 5/6 and 8/9 with a symbol and shows the supporting method."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Chooses a valid strategy for comparing two unlike fractions",
+            "verb": "Chooses",
+            "component": "Selects a comparison approach for a pair of unlike fractions from more than one available option",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A instructs: \"Then show how you know (a common denominator, a picture, or a benchmark like ½).\" The three named options are offered without prescribing one, so items 1-3 require the student to pick."
+          },
+          {
+            "claim_span": "executes it",
+            "verb": "executes",
+            "component": "Carries the chosen comparison method through to a comparison symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A: \"For each pair, write `<`, `>`, or `=`.\" Items 1-3 each require the method to be run to a symbol."
+          },
+          {
+            "claim_span": "shows the reasoning that supports the symbol",
+            "verb": "shows",
+            "component": "Writes out the reasoning that connects the method to the symbol chosen",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Part A: \"Then show how you know\"; the assessment header also states \"Show all work\"."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Every move the claim names — choosing a strategy, executing it, and showing the reasoning behind the symbol — is exercised by each of items 1, 2 and 3. Part A leaves the strategy open rather than dictating it, which is what the claim's \"Chooses\" requires."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "Supervision is declared \"unsupervised\" with an AI assistant and the internet permitted, so the comparison work leaves the room with the student and the resulting paper cannot be attributed to the student alone.",
+        "conditions_supports": "The teacher may conclude what a student can produce on unlike-fraction comparisons when home resources, the internet and an AI assistant are available over a week."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": false,
+        "why": "The teacher has confirmed she wants to know what students can produce using the resources available to them, and has stated that individual, independent attribution is not required."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "Coverage is not limited at all, so nothing is missing to be material. The attribution limit is real but sits outside the inference the teacher told you she wants: she is asking what students produce with resources, and this task produces exactly that."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "What this student can produce on unlike-fraction comparison — symbol plus supporting reasoning — with a week, the internet and an AI assistant available.",
+      "supports": "That the assessment asks for, and the returned work shows, strategy choice, execution and stated reasoning for comparing unlike fractions under resource-available conditions.",
+      "does_not_support": [
+        "That any individual student can choose and execute a comparison strategy unaided.",
+        "That the written reasoning on the page was composed by the student rather than by a permitted resource.",
+        "That the student could reproduce this comparison work under time pressure or without access to the internet or an AI assistant."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Comparing two unlike fractions and writing the justifying sentence is exactly the kind of move a permitted AI assistant performs end to end, so the whole component set can be delegated; that is a boundary on attribution, not a fault in the task, and the teacher has already said attribution is not what she needs."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The assessment asks for every move the claim names, and the one boundary that exists — attribution — does not touch the inference the teacher told you she wants to draw.",
+      "over_verified_note": "Three separate items (1, 2, 3) exercise the same three components; the claim would be covered by one. The extra items give the teacher more of the same evidence than the claim requires."
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Permits building a common denominator for 3/4 and 5/8 and comparing the resulting like-sized parts."
+        },
+        {
+          "item": "2",
+          "elicits": "Permits building a common denominator for 2/3 and 7/12 and comparing like-sized parts."
+        },
+        {
+          "item": "3",
+          "elicits": "Permits building a common denominator for 5/6 and 8/9 and comparing like-sized parts."
+        },
+        {
+          "item": "4",
+          "elicits": "Rewrites 1/2 and 1/3 over a common denominator and combines them, with every step shown."
+        },
+        {
+          "item": "5",
+          "elicits": "Rewrites 5/6 and 1/4 over a common denominator and subtracts like-sized parts, in simplest form."
+        },
+        {
+          "item": "6",
+          "elicits": "Adds 2 1/3 and 1 3/4, which requires common denominators and regrouping the result to a mixed number."
+        },
+        {
+          "item": "7",
+          "elicits": "Adds 3/4 and 5/6 in a word-problem setting and requires the answer written as a mixed number."
+        },
+        {
+          "item": "8",
+          "elicits": "Subtracts 1/4 from 2/3 in a word-problem setting, requiring a common denominator."
+        },
+        {
+          "item": "9",
+          "elicits": "Requires the correct sum of 1/2 + 1/4, which rests on like-sized parts."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Constructs equivalent fractions with a common denominator",
+            "verb": "Constructs",
+            "component": "Rewrites the given fractions as equivalent fractions sharing one denominator",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Part B \"Show every step\" over 1/2 + 1/3, 5/6 − 1/4 and 2 1/3 + 1 3/4, none of which share a denominator; Part A names \"a common denominator\" as a route; items 7 and 8 use 3/4 with 5/6 and 2/3 with 1/4."
+          },
+          {
+            "claim_span": "combines or compares like-sized parts",
+            "verb": "combines",
+            "component": "Adds, subtracts or compares the rewritten parts once they are the same size",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Part B \"Add and subtract\" (items 4-6), Part C word problems (\"How far did she run in all?\", \"How much more flour does Jonah need?\"), and Part A's comparison symbols."
+          },
+          {
+            "claim_span": "simplifies or regroups to a mixed number where the item requires it",
+            "verb": "simplifies",
+            "component": "Puts the result in simplest form, or regroups an improper result into a mixed number when the item calls for it",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Part B: \"Answers in simplest form.\" Item 6 adds two mixed numbers; item 7: \"write your answer as a mixed number.\""
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Constructing common denominators, combining or comparing like-sized parts, and simplifying or regrouping to a mixed number are each exercised by named items, and the claim's own qualifier \"where the item requires it\" is satisfied by items 6 and 7."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "The declared \"unsupervised\" administration with an AI assistant permitted means the procedural steps on the page can have been produced by a permitted resource rather than observed being executed by the student.",
+        "conditions_supports": "The teacher may conclude what procedural fraction work a student can produce and present when home resources, the internet and an AI assistant are available."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": false,
+        "why": "The teacher confirmed the question she wants answered is what students can produce using available resources, not whether each student can execute the procedure on their own."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "No component is missing, and the attribution limit does not obstruct a resource-available inference — that is the inference the teacher declared."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "What this student can produce on common-denominator construction, combination and simplification when resources including an AI assistant are available over a week.",
+      "supports": "That the assessment asks for, and the returned work shows, the full procedural chain the claim names under resource-available conditions.",
+      "does_not_support": [
+        "That the student can carry out the common-denominator procedure unaided.",
+        "That the steps written on the page were generated by the student rather than copied from a permitted resource.",
+        "That the student can perform the same procedure fluently within the 25-minute figure printed on the sheet."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Every step in this claim — rewriting to a common denominator, adding or subtracting, simplifying, regrouping to a mixed number — is fully performable by the permitted AI assistant, so the artifact does not fix authorship; the teacher's declared inference does not depend on fixing it."
+      },
+      "gap_statement": "",
+      "why_no_gap": "Every component the claim names is exercised, most of them several times over, and the attribution boundary is compatible with the inference the teacher declared.",
+      "over_verified_note": "Eight items bear on the first two components and four on the third; the claim would be covered by a single add and a single subtract item. This assessment collects considerably more procedural evidence than the claim needs."
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "Explains what a student who added 1/2 + 1/4 and got 2/6 did wrong, and shows the correct answer."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "States why adding denominators produces a wrong-sized part",
+            "verb": "States",
+            "component": "Writes an explanation of why summing the denominators changes the size of the parts and so gives a wrong result",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9: \"A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong\" — 2/6 is precisely the denominator-adding error, and the item asks for the explanation of it."
+          },
+          {
+            "claim_span": "gives the correct sum",
+            "verb": "gives",
+            "component": "Produces the correct value of the sum that was mis-added",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Item 9: \"and show the correct answer.\""
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Both moves the claim names are asked for in the single Part D item: the explanation of the denominator-adding error and the correct sum. A component exercised once is present."
+      },
+      "conditions_support": {
+        "status": "limited",
+        "conditions_reason": "The task is declared unsupervised with an AI assistant permitted, and a written explanation of a standard fraction error is among the most readily generated text there is, so the explanation cannot be attributed to the student.",
+        "conditions_supports": "The teacher may conclude what explanation of the denominator-adding error a student can produce and hand in when home resources, the internet and an AI assistant are available."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": false,
+        "why": "The teacher confirmed she wants to know what students can produce with available resources; she has not asked to conclude that each student holds this understanding independently."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "Nothing the claim names is unexercised, and the attribution limit falls outside the declared inference. It is worth stating as a boundary, not as a problem."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": false,
+      "covers_whole_claim": true,
+      "narrower_inference": "What explanation of the denominator-adding error and what corrected sum this student can produce with a week and an AI assistant available.",
+      "supports": "That the assessment asks for, and the returned work shows, both a stated reason the denominator-adding move is wrong and the correct sum, under resource-available conditions.",
+      "does_not_support": [
+        "That the student personally holds the misconception-repairing understanding the explanation expresses.",
+        "That the wording of the explanation originated with the student.",
+        "That the student would recognise the same error on a different pair of fractions without resources at hand."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Explaining why 1/2 + 1/4 is not 2/6 and giving 3/4 is a single prompt away from a permitted AI assistant, so the returned explanation does not establish whose understanding it is; the teacher's declared inference does not require that it do so."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The single Part D item asks for both moves the claim names, and the attribution boundary does not block the resource-available inference the teacher declared.",
+      "over_verified_note": "Coverage here is exactly matched rather than over-collected: one item carries both components of this claim, which is what the claim requires and no more."
+    }
+  ],
+  "conditions_echo": "Grade 5 mathematics, Unit 4, summative, sent home over a week; supervision unsupervised; individual rather than collaborative; AI permitted; resources permitted are anything at home, the internet and an AI assistant; time not stated beyond the 25 minutes printed on the sheet; novelty note: students have practised this kind of item but these particular numbers and problems are new to them. The teacher wants to know what students can produce using the resources available to them and has confirmed individual, independent attribution is not required.",
+  "reviewer_notes": "All three claims are fully covered by the items as written, and the same single condition — unsupervised administration with an AI assistant permitted — sets the same attribution boundary on all three. Because the teacher declared that she wants to know what students can produce with available resources, that boundary is compatible with her inference and none of the three claims carries a material limitation. The novelty condition holds (the particular numbers and problems are new), but novelty alone does not lift attribution without independence. Worth stating plainly for the teacher's own use: this is a good take-home task and its results license conclusions about produced-with-resources performance, which is what she said she is after."
+}

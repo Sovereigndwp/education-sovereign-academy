@@ -1,0 +1,62 @@
+Subject: Mathematics · Grade/course: Grade 5
+
+DECLARED ADMINISTRATION CONDITIONS (the teacher declared these; they govern every judgment below):
+- Supervision: unsupervised
+- Individual or collaborative: individual
+- AI policy: permitted
+- Resources permitted: anything at home, internet, AI assistant
+- Purpose: summative
+- Time: not stated
+- Where in the sequence: sent home over a week at the end of Unit 4
+- What students had already seen, in the teacher's words: Students have practised this kind of item; these particular numbers and problems are new to them.
+
+THE INFERENCE THE TEACHER WANTS TO MAKE (she has confirmed this; take it as given):
+- She wants to know what students can produce using the resources available to them. Individual, independent attribution is NOT required.
+  (variant: the same assessment and conditions, with the teacher wanting to know what students can produce using available resources)
+
+THE TEACHER-CONFIRMED LEARNING CLAIMS (these govern; do not rewrite them, do not read them more strictly than they are written):
+- G5C1: Chooses a valid strategy for comparing two unlike fractions — equivalent fractions, a benchmark such as one half, or a visual model — executes it, and shows the reasoning that supports the symbol.  [type: conceptual]
+- G5C2: Constructs equivalent fractions with a common denominator, combines or compares like-sized parts, and simplifies or regroups to a mixed number where the item requires it.  [type: procedural]
+- G5C3: States why adding denominators produces a wrong-sized part, and gives the correct sum.  [type: diagnostic]
+
+THE ASSESSMENT, exactly as the teacher uses it:
+"""
+# Fractions with Unlike Denominators — Practice and Problems
+
+**Grade 5 Mathematics · Unit 4 · 25 minutes · Show all work**
+
+Name: ______________________  Date: ______________
+
+### Part A — Compare
+
+For each pair, write `<`, `>`, or `=`. Then show how you know (a common denominator, a picture, or a benchmark like ½).
+
+1. 3/4 ___ 5/8
+
+2. 2/3 ___ 7/12
+
+3. 5/6 ___ 8/9
+
+### Part B — Add and subtract
+
+Show every step. Answers in simplest form.
+
+4. 1/2 + 1/3 = ______
+
+5. 5/6 − 1/4 = ______
+
+6. 2 1/3 + 1 3/4 = ______
+
+### Part C — Word problems
+
+7. Maya ran 3/4 of a mile on Monday and 5/6 of a mile on Tuesday. How far did she run in all? Show your work and write your answer as a mixed number.
+
+8. A recipe needs 2/3 cup of flour. Jonah has 1/4 cup. How much more flour does Jonah need? Show your work.
+
+### Part D — Find the mistake
+
+9. A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.
+
+"""
+
+Return the JSON object now.

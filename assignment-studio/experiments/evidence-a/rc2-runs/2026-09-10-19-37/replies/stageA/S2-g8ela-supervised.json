@@ -1,0 +1,230 @@
+{
+  "claims": [
+    {
+      "claim_id": "E1",
+      "items": [
+        {
+          "item": "Task bullet 1",
+          "elicits": "State the author's point of view in your own words (do not just say \"the author is against it\") — a stated inference about the author's position that cannot be satisfied by copying a sentence, since the passage never states the position outright."
+        },
+        {
+          "item": "Task prompt question",
+          "elicits": "\"What is the author's point of view on replacing the Mill Street bridge...\" — requires the student to arrive at an unstated position from the passage."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Infers the author's unstated position on replacing the Mill Street bridge",
+            "verb": "Infers",
+            "component": "Arrives at and states the author's position on replacing the bridge, which the passage never states outright",
+            "items": [
+              "Task prompt question",
+              "Task bullet 1"
+            ],
+            "status": "present",
+            "evidence": "Task: \"What is the author's point of view on replacing the Mill Street bridge...\" and bullet: \"State the author's point of view in your own words (do not just say 'the author is against it').\" The passage's closest sentence is the hedged \"I am not sure the numbers are the only thing that should be counted,\" so no sentence states the position for the student to lift."
+          },
+          {
+            "claim_span": "from the text's choices rather than from any sentence that states it",
+            "verb": "",
+            "component": "Manner qualifier on the inference move — names the route the inference must take, not a second observable move",
+            "items": [],
+            "status": "not_called_for",
+            "evidence": "This phrase has no student verb of its own; it qualifies HOW the inference is drawn and is recorded here only so no part of the claim is silently dropped. The passage supplies no stating sentence, so the qualifier is satisfied by the same item that exercises the inference."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "The claim names one observable student move — inferring and stating the author's unstated position — and the task's central question plus its first required bullet ask for exactly that, with the parenthetical explicitly blocking a bare label. The trailing phrase is a manner qualifier on that same move, not a second move."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Supervision is declared \"proctored_in_class\" with AI prohibited and enforced, resources limited to the passage and paper, and the teacher's novelty note says the passage is new to the students, so the work is produced where outside help is excluded or visible and the exact form could not have been prepared in advance.",
+        "conditions_supports": "The teacher may conclude that this individual student, working alone in 45 minutes with only the passage in front of her, inferred and stated the author's unstated position on the bridge."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claim names; the assessment is summative and individual."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "Nothing the claim names is unexercised, and the declared proctored, individual, resource-restricted conditions with a passage new to students place the attribution exactly where her individual inference requires it. There is no limitation on either path to be material."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment, as administered, licenses the teacher to conclude that this student can infer the author's unstated position on replacing the Mill Street bridge from the text itself and state it in her own words.",
+      "does_not_support": [
+        "It does not license any conclusion about whether the student can do this with a passage whose author's position is signalled differently, or in a text longer than one class period allows.",
+        "It does not license a conclusion about durability — a single 45-minute performance at the end of the unit says what the student did that day, not that the inference will hold weeks later.",
+        "It does not license any conclusion about the student's ability to infer position in discussion, orally, or in any form other than written paragraph."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Under proctored supervision with AI prohibited and enforced and only the passage and paper permitted, the inference move cannot be handed to a tool or another person; the student performs it in the room."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The single move the claim names is exercised by the task's central question and its first required bullet, and the declared conditions attribute the resulting paragraph to the individual student, so neither path is limited.",
+      "over_verified_note": "The passage's own construction adds strength the claim does not require: because the author's position is never stated outright, a student cannot satisfy the item by locating and copying a sentence."
+    },
+    {
+      "claim_id": "E2",
+      "items": [
+        {
+          "item": "Task bullet 2",
+          "elicits": "Quote or closely paraphrase two pieces of textual evidence that reveal the author's point of view — the selection move, with the count fixed at two."
+        },
+        {
+          "item": "Task bullet 3",
+          "elicits": "For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include) — requires the signalling technique to be named for each piece."
+        },
+        {
+          "item": "Rubric line 2",
+          "elicits": "\"Two relevant pieces of evidence (1)\" — makes the two-piece selection separately scored."
+        },
+        {
+          "item": "Rubric line 3",
+          "elicits": "\"Explanation connects each piece of evidence to the point of view (1)\" — makes the per-piece explanation separately scored."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Selects two pieces of evidence that reveal the position",
+            "verb": "Selects",
+            "component": "Picks out two specific pieces of text that reveal the author's position",
+            "items": [
+              "Task bullet 2",
+              "Rubric line 2"
+            ],
+            "status": "present",
+            "evidence": "Bullet: \"Quote or closely paraphrase two pieces of textual evidence that reveal the author's point of view,\" scored by rubric line \"Two relevant pieces of evidence (1).\""
+          },
+          {
+            "claim_span": "names the technique by which each signals it — word choice, framing or selected detail, contrast, inclusion or omission, placement",
+            "verb": "names",
+            "component": "For each selected piece, identifies the technique through which it signals the author's position",
+            "items": [
+              "Task bullet 3",
+              "Rubric line 3"
+            ],
+            "status": "present",
+            "evidence": "Bullet: \"For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include),\" scored by rubric line \"Explanation connects each piece of evidence to the point of view (1).\" The parenthetical names the same techniques the claim lists."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "Both moves the claim names — selecting two revealing pieces, and naming the signalling technique for each — are asked for explicitly, in matching numbers, and each is carried by its own rubric line. The claim's technique list and the task's parenthetical name the same categories, so the second move is asked for in the claim's own terms rather than a looser version of it."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Supervision is declared \"proctored_in_class\", individual, with AI prohibited and enforced and only the passage and paper permitted, and the passage is new to the students, so the selection and the technique naming both occur where outside help is excluded and the exact items could not have been prepared in advance.",
+        "conditions_supports": "The teacher may conclude that this individual student, unaided and working from a passage she had not seen before, chose two revealing pieces of evidence and named how each signals the author's position."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs individual, independent attribution for each student; the task is summative and individual."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "Neither path is limited: every named move is exercised, and the declared proctored individual conditions with a novel passage support exactly the individual attribution she requires. There is nothing here she has to discount."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment licenses the teacher to conclude that this student can select two pieces of evidence that reveal an author's position and name the technique by which each signals it.",
+      "does_not_support": [
+        "It does not license a conclusion about the student's command of the full technique list — two pieces of evidence exercise at most two of the five techniques the claim names, and which two is the student's choice, not the assessment's.",
+        "It does not license a conclusion about whether the student can do this in a text where the position is signalled by techniques she did not choose here, such as omission if she wrote about word choice.",
+        "It does not license a conclusion about how the student selects evidence when more than two pieces are required or when the count is left open."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Both the selection and the naming happen in a proctored room with AI prohibited and enforced and only the passage and paper available, so neither move can be delegated to a person or a tool."
+      },
+      "gap_statement": "",
+      "why_no_gap": "Both moves named in the claim are exercised and separately scored, and the declared conditions attribute the paragraph to the individual student, so neither path is limited.",
+      "over_verified_note": "The rubric collects more than the claim strictly needs: it scores the selection and the per-piece explanation on separate lines, so the teacher can see which of the two moves carried the response rather than only whether the response as a whole worked."
+    },
+    {
+      "claim_id": "E3",
+      "items": [
+        {
+          "item": "Task prompt question",
+          "elicits": "\"...and how does the author respond to the opposing case?\" — puts the opposing case in the question the paragraph must answer."
+        },
+        {
+          "item": "Task bullet 4",
+          "elicits": "Explain how the author acknowledges and responds to the engineer's case for replacement — requires description of both the acknowledgement and the answer to it."
+        },
+        {
+          "item": "Rubric line 4",
+          "elicits": "\"Accurately describes how the author handles the opposing view (1)\" — scores the move on its own line."
+        }
+      ],
+      "coverage": {
+        "components": [
+          {
+            "claim_span": "Describes how the author acknowledges the engineer's opposing case and answers it",
+            "verb": "Describes",
+            "component": "Describes both the author's acknowledgement of the engineer's case for replacement and the author's answer to it",
+            "items": [
+              "Task prompt question",
+              "Task bullet 4",
+              "Rubric line 4"
+            ],
+            "status": "present",
+            "evidence": "Bullet: \"Explain how the author acknowledges and responds to the engineer's case for replacement,\" reinforced by the task question \"...and how does the author respond to the opposing case?\" and scored by \"Accurately describes how the author handles the opposing view (1).\" The passage supplies the material: the engineer's eleven-minute case in paragraph two and the author's answer in paragraphs three and four."
+          }
+        ],
+        "coverage_status": "sufficient",
+        "coverage_missing_component": "",
+        "why": "The claim names a single student move — describing the author's handling of the opposing case — with \"acknowledges\" and \"answers\" being the author's actions inside that one description, not two separate things the student does. The task asks for it directly, in the same paired terms, and the rubric scores it separately."
+      },
+      "conditions_support": {
+        "status": "strong",
+        "conditions_reason": "Supervision is declared \"proctored_in_class\" and individual, with AI prohibited and enforced, resources limited to the passage and paper, and a passage new to the students, so the description is produced where outside help is excluded and the exact task could not have been prepared beforehand.",
+        "conditions_supports": "The teacher may conclude that this individual student, working alone from an unfamiliar passage, described how the author took up the engineer's case and answered it."
+      },
+      "intended_inference": {
+        "needs_individual_attribution": true,
+        "why": "The teacher has confirmed she needs to conclude that each student individually can do what the claim names; the assessment is summative and individual."
+      },
+      "materiality": {
+        "coverage_material": false,
+        "conditions_material": false,
+        "why": "The one move the claim names is asked for explicitly and scored on its own rubric line, and the declared conditions deliver the individual attribution her inference needs, so neither path carries a limitation to weigh."
+      },
+      "limitation_type": "none",
+      "coverage_missing_evidence": "",
+      "conditions_missing_evidence": "",
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment licenses the teacher to conclude that this student can describe how an author acknowledges an opposing case and answers it, in a text where that opposing case is stated plainly.",
+      "does_not_support": [
+        "It does not license a conclusion about whether the student can find and describe an opposing case that the author handles implicitly — here the engineer's case occupies its own clearly marked paragraph.",
+        "It does not license any conclusion about whether the student can evaluate the strength of the author's answer, only that she can describe it — the claim asks for description and the task asks for description.",
+        "It does not license a conclusion about the student's handling of multiple competing opposing cases in a single text; this passage carries one."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The description is written in a proctored classroom with AI prohibited and enforced and only the passage and paper permitted, so the move stays with the student."
+      },
+      "gap_statement": "",
+      "why_no_gap": "The single move the claim names is exercised by the task question, a dedicated required bullet and a dedicated rubric line, and the declared conditions attribute the work to the individual student.",
+      "over_verified_note": "The move is asked for twice — once inside the central question and once as its own required bullet — and scored on its own rubric line, which is more collection than the claim requires."
+    }
+  ],
+  "conditions_echo": "Proctored in class, individual, AI prohibited and enforced, resources limited to the passage and paper, summative, 45 minutes, at the end of the informational-text unit; the passage is new to the students while the paragraph structure and rubric are familiar.",
+  "reviewer_notes": "All three claims come out the same way, which is worth stating plainly rather than dressing up as variety: the task asks for each named move in the claims' own terms, and the declared conditions — proctored, individual, no AI, passage unseen — place the work where the teacher's individual attribution requirement is met. Familiarity with the paragraph structure and rubric does not touch novelty, because novelty is relative to what a student could have prepared, and what she could not have prepared is this passage and this question about it. The one boundary that recurs across E2 and E3 is scope rather than defect: two pieces of evidence reach at most two of the five techniques E2 lists, and this passage states its opposing case openly, so E3's evidence speaks to plainly marked counterarguments. Both are the ordinary narrowness of a 45-minute single-passage task, and I would not change anything about the instrument."
+}
