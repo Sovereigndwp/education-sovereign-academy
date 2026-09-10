@@ -1,0 +1,94 @@
+{
+  "claims": [
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "Constructs a two-paragraph argument that takes a position addressing both documents, cites evidence from each, explicitly weighs that evidence by each author's point of view, and connects one outside development from the period."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions (proctored, individual, AI prohibited and enforced, only the two documents and paper permitted), a compliant response to item 5 licenses the conclusion that this student can construct an argument addressing both documents, use evidence from each, explicitly weigh that evidence by point of view, and connect an accurate outside development -- the whole of H4.",
+      "does_not_support": [
+        "Whether the student can source the documents (author, year, audience) or read them for causal explanation and attitude independently -- H1-H3 are, by the teacher's own account, assessed on the unit test the week before, and Part A here is explicit, ungraded warm-up.",
+        "Whether the student's outside-development knowledge is broad -- the rubric credits any one accurate connection, so this shows the student has at least one usable example, not comprehensive command of the period.",
+        "Whether the student could produce this argument without the two documents already excerpted and placed in front of them -- locating and vetting primary sources is not part of what this item asks.",
+        "Whether this kind of weighing-and-connecting argument holds up on a different document pair or a question not structured as two paired viewpoints -- this is one instance with one pair."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "AI is prohibited and enforced, and the response is produced in class under supervision with only the two documents and paper, so the argument must be the student's own live construction."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Takes a position that addresses both documents",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Rubric: 'Position addresses both documents (1)'; instruction: 'takes a position that accounts for both documents.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Uses evidence from each document",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Rubric: 'Evidence from each document (1)'; instruction: 'uses at least one piece of evidence from each document.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Explicitly weighs the evidence by point of view",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Rubric: 'Point of view used to weigh evidence (1)'; instruction: 'explains how the point of view of each author affects how much weight you give their claim.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Connects one accurate outside development from the period",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Rubric: 'Outside development connected accurately (1)'; instruction: 'connects the documents to at least one specific development from the period.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All four observable components of H4 are directly required by Part B's instructions and scored by the rubric; nothing is absent, so there is no component to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- gate 1 already found no absent component, so materiality was not evaluated."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- gate 1 already found no absent component, so value against burden was not evaluated."
+      },
+      "why_no_intervention": "Every observable component of H4 is already elicited and scored by item 5 under supervised, AI-enforced-prohibited conditions; there is no absent component to carry forward, so gate 1 fails and no intervention is warranted. Sourcing and point-of-view reading (H1-H3) are not part of this claim and are, by the teacher's own account, assessed on the prior week's unit test; Part A here (items 1-4) is explicit, ungraded warm-up.",
+      "no_short_check_reason": "",
+      "over_verified_note": "Part A (items 1-4) is present on the page but explicitly ungraded warm-up per the teacher; it does not bear on H4 and adds no evidentiary burden to this claim.",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Proctored in-class, individual, AI prohibited and enforced, 45 minutes, only the two documents and paper permitted; end of the industrialization unit. Sourcing and point-of-view reading (H1-H3) were assessed on the unit test the week before; only H4 is confirmed for this assessment, and Part A here (items 1-4) is explicit, ungraded warm-up.",
+  "reviewer_notes": "Item 5 already produces independent, novel, claim-targeted evidence for the whole of H4 under these conditions; there is no gap to close. This is the correct, expected outcome when the conditions and the item already align with the claim -- finding nothing wrong is a result, not a failure to do the job."
+}

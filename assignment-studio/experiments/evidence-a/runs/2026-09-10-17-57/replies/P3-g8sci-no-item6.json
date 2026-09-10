@@ -1,0 +1,356 @@
+{
+  "claims": [
+    {
+      "claim_id": "S1c",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "computing average speed from three trial readings for each of four release heights, rounded to the nearest hundredth"
+        },
+        {
+          "item": "2",
+          "elicits": "plotting average speed against release height with both axes labelled with units"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can compute an average from repeated trial measurements for each height and produce a correctly labelled speed-vs-height graph.",
+      "does_not_support": [
+        "Does not verify the plotted points are positioned accurately on the graph, only that both axes carry units -- a mislabelled-but-accurately-plotted graph and a labelled-but-inaccurately-plotted graph would both pass on the labelling requirement alone.",
+        "Does not check whether the student chose an appropriate scale or graph type beyond what 'sketch a graph' implies.",
+        "Does not establish understanding of why averaging three trials is appropriate (e.g. reducing measurement error); that reasoning is not part of this procedural claim and is not asked for.",
+        "Adjacent claim it is most likely to be mistaken for: S2c -- a correctly computed and graphed data set is a precondition for S2c's claim-and-evidence writing but does not itself demonstrate that the student can state or support a relationship claim from that data."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual work with AI prohibited and enforced, using only calculator, paper, and ruler, means the computation and graph must be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Computes the average speed for each height",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Item 1 directly instructs this, rounded to the nearest hundredth.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Produces a graph of speed vs. height with both axes labelled with units",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "Item 2: 'Label both axes with units.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both named components of S1c are directly exercised by items 1 and 2; nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Items 1 and 2 exercise both named components of this procedural claim; no component is absent.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "S2c",
+      "items": [
+        {
+          "item": "3",
+          "elicits": "stating one sentence claiming a relationship between release height and speed"
+        },
+        {
+          "item": "4",
+          "elicits": "quoting at least two specific number pairs from the table, addressing both named doublings (10 to 20 cm and 20 to 40 cm), as evidence for the claim"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can state a relationship claim about height and speed and support it with at least two specific quoted number comparisons, including both doublings named in the claim.",
+      "does_not_support": [
+        "Item 4 names the two comparisons to use (10 to 20 cm and 20 to 40 cm) rather than requiring the student to independently identify that these are the doublings worth comparing; it verifies the student can read and quote the requested numbers accurately, not that they would notice the doublings unprompted.",
+        "Does not verify the claim addresses magnitude as well as direction (e.g. 'increases, but by a shrinking amount' vs. simply 'increases').",
+        "No selected-response item is used here, so no guess-rate caveat applies.",
+        "Adjacent claim it is most likely to be mistaken for: S4c -- citing what happens at the two doublings is not the same as explicitly recognizing that this contradicts proportional ('twice as fast') reasoning, which no item currently asks the student to state outright."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced means the claim and evidence sentences must be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States a claim about how speed relates to release height",
+            "items": [
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Item 3 explicitly requests this.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Supports the claim with at least two specific quoted comparisons, including both doublings",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Item 4: 'at least two specific numbers... Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both components are exercised by items 3 and 4; nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Items 3 and 4 exercise both named components of this claim; no component is absent.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "S3c",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "explaining the speed-height pattern using gravitational potential energy transferring to kinetic energy, in the student's own words"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can offer a grade-appropriate explanation of the pattern that invokes gravitational potential energy converting to kinetic energy.",
+      "does_not_support": [
+        "Does not require or verify any quantitative treatment of energy (e.g. PE=mgh, KE=1/2mv^2); this is appropriate to the claim's own 'grade-appropriate form' wording, not a gap, but it does mean the evidence stops at qualitative use of the concepts.",
+        "The open free-response format ('Explain why...') rewards fluent prose and is slower to score consistently than a constrained item; a scorer must watch for responses that name the vocabulary without actually connecting the transfer to why speed increases with height, since the item does not force a one-line, feature-naming answer.",
+        "Does not check whether the explanation would hold up under a varied case, such as a ramp with friction or a different surface.",
+        "Adjacent claim it is most likely to be mistaken for: S1c/S2c -- a well-organized answer here draws on the same table the student already used for those claims, so a rich-sounding item 5 response can be misread as also confirming careful data handling, which is a separate claim."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, paper-and-pencil work with AI prohibited and enforced means the explanation must be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Uses gravitational potential energy and kinetic energy concepts in the explanation",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "'Use the ideas of gravitational potential energy and kinetic energy in your explanation.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Connects those concepts causally to explain why the pattern looks the way it does",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "'Explain why the relationship looks the way it does' frames the whole item around causal explanation, not just definition.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both components are exercised by item 5; nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Item 5 exercises both the conceptual-vocabulary and the causal-explanation components of this claim; no component is absent.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "S4c",
+      "items": [
+        {
+          "item": "3",
+          "elicits": "stating a general relationship claim about height and speed, without being asked to take a position on a stated proportional claim"
+        },
+        {
+          "item": "4",
+          "elicits": "quoting the two named doubling comparisons as evidence, without being asked whether they support or refute a 'doubles proportionally' idea"
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence, as currently structured, does not license a conclusion about S4c; at most a teacher can say the student produced some true relationship claim and some correctly quoted numbers, without knowing whether the student ever confronted or rejected the 'twice as fast' proportional idea the claim names.",
+      "does_not_support": [
+        "Cannot tell whether a student who wrote a correct general claim (item 3) did so because they explicitly recognized and rejected proportional reasoning, or because they described the increasing trend without ever considering a doubling hypothesis.",
+        "Cannot distinguish a student who privately still assumes proportionality but happened to write a vague, technically-correct sentence, from a student who has genuinely confronted and rejected that assumption -- which the teacher states is the entire point of the unit.",
+        "No item presents the specific 'twice as fast' framing for the student to agree or disagree with, so there is nothing to diagnose or refute.",
+        "Adjacent claim it is most likely to be mistaken for: S2c -- strong claim-and-evidence writing (items 3-4) is easily read as also demonstrating S4c's diagnostic recognition, but S2c only requires citing what the numbers show, not explicitly rejecting a stated proportional claim."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced means whatever is collected must be produced live by the student; the gap here is about what is asked, not about who could produce it."
+      },
+      "gap_statement": "We cannot tell from this assessment whether students recognize that the data contradict proportional reasoning and would reject a 'twice as fast' claim, since no item presents that claim for the student to evaluate.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States that the data do not support proportional reasoning (doubling height does not double speed)",
+            "items": [],
+            "status": "absent",
+            "evidence": "No item asks the student to state this explicitly; item 3 asks only for a general relationship claim, and item 4 asks only for the raw comparison numbers.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          },
+          {
+            "component": "Disagrees with a stated 'twice as fast' claim, citing the pattern in the numbers",
+            "items": [],
+            "status": "absent",
+            "evidence": "No item presents this claim for the student to respond to at all.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Disagrees with a stated 'twice as fast' claim, citing the pattern in the numbers",
+        "why": "Both sub-components are absent for the same underlying reason -- no item ever poses the proportional claim -- but carrying forward the disagreement-and-citation component subsumes the other: an item that asks the student to take a position on 'twice as fast' necessarily also requires them to state what the data actually show instead."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher states this recognition is 'the whole point of this unit' and that she needs to see it directly; without an item that poses the proportional claim, this assessment cannot license the conclusion that students have specifically confronted and rejected it, and the teacher would otherwise read strong S2c answers as covering this too."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "The gap can be closed by rewording the existing claim item to anchor it against the 'twice as fast' idea, at no added item and negligible added time -- clearly worth it for a claim the teacher names as the unit's central point."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "modify_item",
+        "why_not_tier_1": "",
+        "modify": {
+          "item_ref": "3",
+          "current_text": "Claim. Write one sentence stating how the cart's speed at the bottom is related to its release height.",
+          "replacement_text": "Claim. A classmate says, 'If you release the cart from twice the height, it comes out twice as fast.' Do you agree or disagree? Write one sentence stating how the cart's speed is actually related to its release height, and say explicitly whether the classmate's 'twice as fast' idea is right.",
+          "what_it_now_forces": "Forces the student to take an explicit position on the proportional claim named in S4c, not just state their own general relationship, while still producing the relationship claim S2c needs."
+        },
+        "add": null,
+        "student_minutes": 1,
+        "scoring_seconds": 20
+      }
+    },
+    {
+      "claim_id": "S5c",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "predicting the average speed at a 50 cm release height, just beyond the measured range, and stating the method used to arrive at the prediction"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can extrapolate a prediction just beyond the measured data range and state the method used to produce it.",
+      "does_not_support": [
+        "Does not verify the quality or correctness of the stated method beyond its presence in words -- any stated method (reading the trend off the graph, continuing the pattern of differences, a physics-based calculation) satisfies the item as worded.",
+        "50 cm is only 10 cm beyond the top measured height (40 cm); this evidence does not extend to a prediction far outside the measured range, where the same extrapolation habit might not hold or might not be appropriate.",
+        "No selected-response item is used here, so no guess-rate caveat applies.",
+        "Adjacent claim it is most likely to be mistaken for: S3c -- a stated 'method' that references energy ideas could be graded as double-counting the causal explanation already captured in item 5, when item 6 only needs to name how the number was produced, not why the pattern exists."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, paper-and-pencil work with AI prohibited and enforced means the prediction and its stated method must be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Extrapolates a prediction just beyond the measured range",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "Item 6 asks for the speed at 50 cm, just past the measured 10-40 cm range.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States the method used to arrive at the prediction",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "'Explain how you made your prediction.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both components are exercised by item 6; nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Item 6 exercises both the extrapolation and the stated-method components of this claim; no component is absent.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Grade 8 Physical Science, end of the energy unit, proctored_in_class, individual, AI prohibited_and_enforced, calculator/paper/ruler permitted, summative, 30 minutes; the class collected the data together but the analysis questions are new to students.",
+  "reviewer_notes": "S1c, S2c, S3c, and S5c are each fully carried by their corresponding items (1-2, 3-4, 5, and 6) as printed. S4c is the one gap: nothing on the assessment poses the 'twice as fast' proportional claim the claim names, so students can write a correct-sounding relationship claim and correctly quoted doubling comparisons without ever being asked to explicitly confront or reject proportional reasoning -- which the teacher identifies as the entire point of this unit. Rewording item 3 to anchor the claim against that specific idea closes the gap without adding an item."
+}

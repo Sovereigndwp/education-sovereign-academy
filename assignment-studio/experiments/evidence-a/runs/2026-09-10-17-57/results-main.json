@@ -1,0 +1,1966 @@
+{
+ "experiment": "evidence-h1-2026-09-10-hierarchy-v1",
+ "at": "2026-09-10T18:14:40.254Z",
+ "cases": {
+  "S1-g5-supervised": {
+   "cell": "sound / supervised",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "G5C1",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2",
+     "verdict": "LIMITED",
+     "intervention": true,
+     "tier": "modify_item",
+     "modification": {
+      "item_ref": "5",
+      "current_text": "5/6 − 1/4 = ______",
+      "replacement_text": "5/6 − 1/3 = ______",
+      "what_it_now_forces": "5/6 minus 1/3 over a common denominator of six gives 3/6, which must be reduced to 1/2 to be marked correct, so the student cannot reach the final answer without performing the reduce-to-lowest-terms step that the original numbers never required."
+     },
+     "why_not_tier_1": "",
+     "intervention_warranted": true,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C3",
+     "verdict": "LIMITED",
+     "intervention": true,
+     "tier": "modify_item",
+     "modification": {
+      "item_ref": "9",
+      "current_text": "A student added 1/2 + 1/4 and got 2/6. Explain what the student did wrong, and show the correct answer.",
+      "replacement_text": "A student added 1/2 + 1/4 and got 2/6. Explain why adding the denominators gives pieces of the wrong size, not just that the method is wrong, and show the correct answer.",
+      "what_it_now_forces": "The student must name the size-of-the-piece reasoning specifically, so a generic 'you forgot a common denominator' answer no longer satisfies the prompt."
+     },
+     "why_not_tier_1": "",
+     "intervention_warranted": true,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "G5C1",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Items 1-3 require the symbol AND the reasoning that supports it, in any of three legitimate forms, produced under supervision on numbers the students have not seen. The claim is carried whole."
+     },
+     {
+      "claim_id": "G5C2",
+      "expected": "KEEP",
+      "actual": "LIMITED",
+      "match": false,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": true,
+      "intervention_match": false,
+      "cell": "unnecessary_proposed",
+      "note": "Five items, work shown, including the two that force regrouping to a mixed number. Supervised and fresh."
+     },
+     {
+      "claim_id": "G5C3",
+      "expected": "KEEP",
+      "actual": "LIMITED",
+      "match": false,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": true,
+      "intervention_match": false,
+      "cell": "unnecessary_proposed",
+      "note": "Item 9 demands the stated reason, not just the corrected sum — the owner's gold record calls it the highest-evidence item."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 0,
+     "justified_missed": 0,
+     "unnecessary_proposed": 2,
+     "restraint_correct": 1,
+     "not_scored": 0
+    },
+    "claims_matched": 1,
+    "claims_total": 3,
+    "intervention_scored_total": 3,
+    "intervention_matched": 1,
+    "unexpected_claims": [],
+    "manufactured": [
+     "G5C2",
+     "G5C3"
+    ],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "S1-g5-supervised__run1",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2:LIMITED+fix",
+      "G5C3:LIMITED+fix"
+     ]
+    }
+   ]
+  },
+  "S2-g8ela-supervised": {
+   "cell": "sound / supervised",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "E1",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "E2",
+     "verdict": "LIMITED",
+     "intervention": true,
+     "tier": "modify_item",
+     "modification": {
+      "item_ref": "Task bullet 3",
+      "current_text": "For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include).",
+      "replacement_text": "For each piece of evidence, name which technique it uses (word choice, framing or selected detail, contrast, inclusion or omission, or placement) and explain how that technique reveals the author's position.",
+      "what_it_now_forces": "The student must explicitly categorize each piece of evidence by technique name before explaining it, so a response that only gestures at a connection without identifying which technique is used no longer satisfies the bullet; the matching rubric point should read 'Explanation names the technique and connects it to the point of view' so scoring enforces the same requirement."
+     },
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": [
+      "CARRIED_UNKNOWN",
+      "GATE1_BYPASSED",
+      "PROPOSED_UNWARRANTED",
+      "UNEXPLAINED_RESTRAINT"
+     ]
+    },
+    {
+     "claim_id": "E3",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "E1",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "The passage never states the position, so the paragraph cannot be written without inferring it. Supervised, new passage."
+     },
+     {
+      "claim_id": "E2",
+      "expected": "KEEP or LIMITED",
+      "actual": "LIMITED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": true,
+      "intervention_match": false,
+      "cell": "unnecessary_proposed",
+      "note": "Two pieces of evidence with a named technique each is exactly what the rubric demands, so KEEP is right; LIMITED is defensible because two instances is a thin sample of a five-technique repertoire. Either way no intervention: the narrowing is the teacher's deliberate scope for one paragraph."
+     },
+     {
+      "claim_id": "E3",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Rubric point 4 requires it explicitly and the passage contains the engineer's case to be answered."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 0,
+     "justified_missed": 0,
+     "unnecessary_proposed": 1,
+     "restraint_correct": 2,
+     "not_scored": 0
+    },
+    "claims_matched": 3,
+    "claims_total": 3,
+    "intervention_scored_total": 3,
+    "intervention_matched": 2,
+    "unexpected_claims": [],
+    "manufactured": [
+     "E2"
+    ],
+    "missed": []
+   },
+   "violations": [
+    {
+     "claim_id": "E2",
+     "code": "CARRIED_UNKNOWN",
+     "detail": "carried_forward names \"Names which technique each piece of evidence exemplifies\", which is not in the component map."
+    },
+    {
+     "claim_id": "E2",
+     "code": "GATE1_BYPASSED",
+     "detail": "Proposed an observation although no component qualified to be carried past gate 1."
+    },
+    {
+     "claim_id": "E2",
+     "code": "PROPOSED_UNWARRANTED",
+     "detail": "Proposed an additional observation after deciding an intervention was not warranted."
+    },
+    {
+     "claim_id": "E2",
+     "code": "UNEXPLAINED_RESTRAINT",
+     "detail": "Declined to intervene on an incompletely carried claim without saying why that is the right answer here."
+    }
+   ],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "S2-g8ela-supervised",
+     "verdicts": [
+      "E1:KEEP",
+      "E2:LIMITED+fix",
+      "E3:KEEP"
+     ]
+    }
+   ]
+  },
+  "S3-g8sci-supervised": {
+   "cell": "sound / supervised",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "S1c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "S2c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "S3c",
+     "verdict": "LIMITED",
+     "intervention": true,
+     "tier": "modify_item",
+     "modification": {
+      "item_ref": "5",
+      "current_text": "Explain why the relationship looks the way it does. Use the ideas of gravitational potential energy and kinetic energy in your explanation.",
+      "replacement_text": "Explain why the relationship looks the way it does, referring to the pattern you see in your data or graph (for example, what happens to the increase in speed as the height gets larger). Use the ideas of gravitational potential energy and kinetic energy in your explanation.",
+      "what_it_now_forces": "The student must tie the energy-transfer mechanism to the specific shape of this dataset, so a generic, memorized sentence about potential energy converting to kinetic energy that never engages with the actual numbers or graph no longer satisfies the prompt."
+     },
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "partly",
+     "violations": [
+      "CARRIED_UNKNOWN",
+      "GATE1_BYPASSED",
+      "PROPOSED_UNWARRANTED",
+      "UNEXPLAINED_RESTRAINT"
+     ]
+    },
+    {
+     "claim_id": "S4c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "S5c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "S1c",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Averages and a labelled graph are directly observable products, produced in class."
+     },
+     {
+      "claim_id": "S2c",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Item 4 names both doublings, so the quoted comparisons are compelled rather than optional."
+     },
+     {
+      "claim_id": "S3c",
+      "expected": "KEEP or LIMITED",
+      "actual": "LIMITED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": true,
+      "intervention_match": false,
+      "cell": "unnecessary_proposed",
+      "note": "Item 5 is open explanation, the weakest response form in the primitive set — but under supervision it is a real observation, and the energy vocabulary is compelled by the prompt. LIMITED is defensible on response form; an intervention is not warranted because the class period already carries it."
+     },
+     {
+      "claim_id": "S4c",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Item 6 is built to separate proportional reasoning from the actual pattern; the owner's gold record names it the difficult part."
+     },
+     {
+      "claim_id": "S5c",
+      "expected": "KEEP or LIMITED",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "One extrapolation item with the method demanded. LIMITED is defensible on a single observation; no intervention, because a second item buys little and the period is full."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 0,
+     "justified_missed": 0,
+     "unnecessary_proposed": 1,
+     "restraint_correct": 4,
+     "not_scored": 0
+    },
+    "claims_matched": 5,
+    "claims_total": 5,
+    "intervention_scored_total": 5,
+    "intervention_matched": 4,
+    "unexpected_claims": [],
+    "manufactured": [
+     "S3c"
+    ],
+    "missed": []
+   },
+   "violations": [
+    {
+     "claim_id": "S3c",
+     "code": "CARRIED_UNKNOWN",
+     "detail": "carried_forward names \"Connects the energy-transfer mechanism specifically to the pattern observed in this dataset\", which is not in the component map."
+    },
+    {
+     "claim_id": "S3c",
+     "code": "GATE1_BYPASSED",
+     "detail": "Proposed an observation although no component qualified to be carried past gate 1."
+    },
+    {
+     "claim_id": "S3c",
+     "code": "PROPOSED_UNWARRANTED",
+     "detail": "Proposed an additional observation after deciding an intervention was not warranted."
+    },
+    {
+     "claim_id": "S3c",
+     "code": "UNEXPLAINED_RESTRAINT",
+     "detail": "Declined to intervene on an incompletely carried claim without saying why that is the right answer here."
+    }
+   ],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "S3-g8sci-supervised",
+     "verdicts": [
+      "S1c:KEEP",
+      "S2c:KEEP",
+      "S3c:LIMITED+fix",
+      "S4c:KEEP",
+      "S5c:KEEP"
+     ]
+    }
+   ]
+  },
+  "S4-g10ss-supervised": {
+   "cell": "sound / supervised",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "H1",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "H2",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": [
+      "BANNED_LANGUAGE"
+     ]
+    },
+    {
+     "claim_id": "H3",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "H4",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "H1",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Item 1 asks for author, year and audience on both documents, in the room."
+     },
+     {
+      "claim_id": "H2",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Items 2 and 3 compel both the causal contrast and the word-level attitude reading."
+     },
+     {
+      "claim_id": "H3",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Item 4 asks the POV question directly, of both authors."
+     },
+     {
+      "claim_id": "H4",
+      "expected": "KEEP or LIMITED",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "The rubric compels position, evidence from each document, explicit POV weighting and an outside development. KEEP is right. LIMITED is defensible because one extended argument is a single observation of a composite claim — but the correct response is to name that, not to add a second essay to a 45-minute period."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 0,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 4,
+     "not_scored": 0
+    },
+    "claims_matched": 4,
+    "claims_total": 4,
+    "intervention_scored_total": 4,
+    "intervention_matched": 4,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [
+    {
+     "claim_id": "H2",
+     "code": "BANNED_LANGUAGE",
+     "detail": "Used measurement or AI-resistance language: \"sufficient\"."
+    }
+   ],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "S4-g10ss-supervised",
+     "verdicts": [
+      "H1:KEEP",
+      "H2:KEEP",
+      "H3:KEEP",
+      "H4:KEEP"
+     ]
+    }
+   ]
+  },
+  "S5-calc-supervised": {
+   "cell": "sound / supervised",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "K1",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "K2",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "K3",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "K4",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "K1",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Four integrals worked closed-book, no calculator, fresh integrands."
+     },
+     {
+      "claim_id": "K2",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Part B asks for method selection with the substitution named and explicitly forbids evaluating, and Part A demands the technique be named alongside each answer. Method selection is separated from execution by design. This is the case that most directly tests whether the engine can leave a well-built assessment alone."
+     },
+     {
+      "claim_id": "K3",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Item 6 requires locating the invalid step and producing the correct antiderivative — a Diagnose item in all but name."
+     },
+     {
+      "claim_id": "K4",
+      "expected": "KEEP or LIMITED",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Item 7 is a Generate item with a structural constraint and a justification. LIMITED is defensible on a single instance; no intervention warranted in a 40-minute quiz."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 0,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 4,
+     "not_scored": 0
+    },
+    "claims_matched": 4,
+    "claims_total": 4,
+    "intervention_scored_total": 4,
+    "intervention_matched": 4,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "S5-calc-supervised",
+     "verdicts": [
+      "K1:KEEP",
+      "K2:KEEP",
+      "K3:KEEP",
+      "K4:KEEP"
+     ]
+    }
+   ]
+  },
+  "X1-g5-takehome": {
+   "cell": "paired context",
+   "supervision": "unsupervised",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "G5C1",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Items 1-3 already ask for exactly the right moves (strategy, execution, symbol, reasoning); nothing about their wording causes the gap. The gap is that the declared conditions (unsupervised, AI permitted, at home) mean no item's response can be attributed to the student, and no rewording of an item changes who or what produced it.",
+     "intervention_warranted": true,
+     "primitive": "Perturb",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Items 4-8 already ask for exactly the right procedure; the gap is not in what any item asks for. It is that the declared conditions (unsupervised, AI permitted, at home) mean no item's shown steps can be attributed to the student, and no rewording of an item changes who or what produced them.",
+     "intervention_warranted": false,
+     "primitive": "Perturb",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": [
+      "CARRIED_UNKNOWN",
+      "GATE1_BYPASSED",
+      "PROPOSED_UNWARRANTED",
+      "UNEXPLAINED_RESTRAINT"
+     ]
+    },
+    {
+     "claim_id": "G5C3",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Item 9 already asks for exactly the right two-part response (name the error, give the correct sum); the gap is not in its wording. It is that the declared conditions (unsupervised, AI permitted, at home) mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+     "intervention_warranted": false,
+     "primitive": "Diagnose",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": [
+      "CARRIED_UNKNOWN",
+      "GATE1_BYPASSED",
+      "PROPOSED_UNWARRANTED",
+      "UNEXPLAINED_RESTRAINT"
+     ]
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "G5C1",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "Unsupervised with AI permitted: nothing submitted is an independent observation, and a fraction comparison with shown work is trivially producible. A cheap supervised check exists, so this is not NO_CHEAP_CHECK."
+     },
+     {
+      "claim_id": "G5C2",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "Same conditions; the arithmetic and the shown steps are the easiest thing in the whole case set to delegate."
+     },
+     {
+      "claim_id": "G5C3",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "A stated reason is prose, which is the most delegable response form there is once it leaves the room."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 3,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 0,
+     "not_scored": 0
+    },
+    "claims_matched": 3,
+    "claims_total": 3,
+    "intervention_scored_total": 3,
+    "intervention_matched": 3,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [
+    {
+     "claim_id": "G5C2",
+     "code": "CARRIED_UNKNOWN",
+     "detail": "carried_forward names \"Independent production: the compute-and-simplify chain is visibly the student's own work, not an out\", which is not in the component map."
+    },
+    {
+     "claim_id": "G5C2",
+     "code": "GATE1_BYPASSED",
+     "detail": "Proposed an observation although no component qualified to be carried past gate 1."
+    },
+    {
+     "claim_id": "G5C2",
+     "code": "PROPOSED_UNWARRANTED",
+     "detail": "Proposed an additional observation after deciding an intervention was not warranted."
+    },
+    {
+     "claim_id": "G5C2",
+     "code": "UNEXPLAINED_RESTRAINT",
+     "detail": "Declined to intervene on an incompletely carried claim without saying why that is the right answer here."
+    },
+    {
+     "claim_id": "G5C3",
+     "code": "CARRIED_UNKNOWN",
+     "detail": "carried_forward names \"Independent production: the diagnosis-and-correction is visibly the student's own work, not an outsi\", which is not in the component map."
+    },
+    {
+     "claim_id": "G5C3",
+     "code": "GATE1_BYPASSED",
+     "detail": "Proposed an observation although no component qualified to be carried past gate 1."
+    },
+    {
+     "claim_id": "G5C3",
+     "code": "PROPOSED_UNWARRANTED",
+     "detail": "Proposed an additional observation after deciding an intervention was not warranted."
+    },
+    {
+     "claim_id": "G5C3",
+     "code": "UNEXPLAINED_RESTRAINT",
+     "detail": "Declined to intervene on an incompletely carried claim without saying why that is the right answer here."
+    }
+   ],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "X1-g5-takehome",
+     "verdicts": [
+      "G5C1:NOT_SUPPORTED+fix",
+      "G5C2:NOT_SUPPORTED+fix",
+      "G5C3:NOT_SUPPORTED+fix"
+     ]
+    }
+   ]
+  },
+  "X2-g10ss-takehome": {
+   "cell": "paired context",
+   "supervision": "unsupervised",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "H1",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Item 1 already asks for exactly the right three facts; the gap is not in its wording. It is that the declared conditions (unsupervised, AI permitted, at home) mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+     "intervention_warranted": false,
+     "primitive": "Transfer",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": [
+      "CARRIED_UNKNOWN",
+      "GATE1_BYPASSED",
+      "PROPOSED_UNWARRANTED",
+      "UNEXPLAINED_RESTRAINT"
+     ]
+    },
+    {
+     "claim_id": "H2",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Items 2-3 already ask for exactly the right two moves (causal contrast, word-choice reading); the gap is not in their wording. It is that the declared conditions mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+     "intervention_warranted": true,
+     "primitive": "Transfer",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": []
+    },
+    {
+     "claim_id": "H3",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Item 4 already asks for exactly the right reasoning move for both authors; the gap is not in its wording. It is that the declared conditions mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+     "intervention_warranted": false,
+     "primitive": "Transfer",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": [
+      "CARRIED_UNKNOWN",
+      "GATE1_BYPASSED",
+      "PROPOSED_UNWARRANTED",
+      "UNEXPLAINED_RESTRAINT"
+     ]
+    },
+    {
+     "claim_id": "H4",
+     "verdict": "NO_CHEAP_CHECK",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": true,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "H1",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "Sourcing two well-known published documents is a lookup."
+     },
+     {
+      "claim_id": "H2",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "Both documents are in the prompt; the contrast and the attitude reading are producible from the text alone."
+     },
+     {
+      "claim_id": "H3",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "The POV question is answerable from general knowledge of Carnegie and the Populists."
+     },
+     {
+      "claim_id": "H4",
+      "expected": "NOT_SUPPORTED or NO_CHEAP_CHECK",
+      "actual": "NO_CHEAP_CHECK",
+      "match": true,
+      "intervention_scored": false,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": null,
+      "cell": "not_scored",
+      "note": "Both are correct answers and the experiment wants to see which it gives. The composite argument claim is the LC-8 class from the ontology stress test: no short supervised item reaches sustained argument with POV weighting and outside context. NOT_SUPPORTED with a partial check is defensible; NO_CHEAP_CHECK is the more honest answer. Intervention is not scored on this claim because it depends on which verdict it gives."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 3,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 0,
+     "not_scored": 1
+    },
+    "claims_matched": 4,
+    "claims_total": 4,
+    "intervention_scored_total": 3,
+    "intervention_matched": 3,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [
+    {
+     "claim_id": "H1",
+     "code": "CARRIED_UNKNOWN",
+     "detail": "carried_forward names \"Independent production: the sourcing answers are visibly the student's own work, not an outside reso\", which is not in the component map."
+    },
+    {
+     "claim_id": "H1",
+     "code": "GATE1_BYPASSED",
+     "detail": "Proposed an observation although no component qualified to be carried past gate 1."
+    },
+    {
+     "claim_id": "H1",
+     "code": "PROPOSED_UNWARRANTED",
+     "detail": "Proposed an additional observation after deciding an intervention was not warranted."
+    },
+    {
+     "claim_id": "H1",
+     "code": "UNEXPLAINED_RESTRAINT",
+     "detail": "Declined to intervene on an incompletely carried claim without saying why that is the right answer here."
+    },
+    {
+     "claim_id": "H3",
+     "code": "CARRIED_UNKNOWN",
+     "detail": "carried_forward names \"Independent production: the position-to-purpose explanations are visibly the student's own work, not\", which is not in the component map."
+    },
+    {
+     "claim_id": "H3",
+     "code": "GATE1_BYPASSED",
+     "detail": "Proposed an observation although no component qualified to be carried past gate 1."
+    },
+    {
+     "claim_id": "H3",
+     "code": "PROPOSED_UNWARRANTED",
+     "detail": "Proposed an additional observation after deciding an intervention was not warranted."
+    },
+    {
+     "claim_id": "H3",
+     "code": "UNEXPLAINED_RESTRAINT",
+     "detail": "Declined to intervene on an incompletely carried claim without saying why that is the right answer here."
+    }
+   ],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "X2-g10ss-takehome",
+     "verdicts": [
+      "H1:NOT_SUPPORTED+fix",
+      "H2:NOT_SUPPORTED+fix",
+      "H3:NOT_SUPPORTED+fix",
+      "H4:NO_CHEAP_CHECK"
+     ]
+    }
+   ]
+  },
+  "X3-calc-takehome": {
+   "cell": "paired context",
+   "supervision": "unsupervised",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "K1",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Items 1-4 already ask for exactly the right worked antiderivatives; the gap is not in their wording. It is that the declared conditions (unsupervised, AI/CAS permitted, at home) mean no item's work can be shown to be calculator- and notes-free, and no rewording changes who or what produced the answer.",
+     "intervention_warranted": true,
+     "primitive": "Perturb",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": []
+    },
+    {
+     "claim_id": "K2",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Items 5a-5c already ask for exactly the right identification move; the gap is not in their wording. It is that the declared conditions mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+     "intervention_warranted": true,
+     "primitive": "Classify",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": []
+    },
+    {
+     "claim_id": "K3",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Item 6 already asks for exactly the right two-part response (locate the step, give the correct antiderivative); the gap is not in its wording. It is that the declared conditions mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+     "intervention_warranted": true,
+     "primitive": "Diagnose",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": []
+    },
+    {
+     "claim_id": "K4",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "add_observation",
+     "modification": null,
+     "why_not_tier_1": "Item 7 already asks for exactly the right construct-and-justify response; the gap is not in its wording. It is that the declared conditions mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+     "intervention_warranted": true,
+     "primitive": "Generate",
+     "negative_scope_count": 4,
+     "delegation": "yes",
+     "violations": [
+      "FEED_FORWARD"
+     ]
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "K1",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "A CAS produces all four antiderivatives; unsupervised, nothing is observed."
+     },
+     {
+      "claim_id": "K2",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "Naming the technique is if anything easier to delegate than executing it."
+     },
+     {
+      "claim_id": "K3",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "Error diagnosis on a supplied worked solution is fully producible from the prompt."
+     },
+     {
+      "claim_id": "K4",
+      "expected": "NOT_SUPPORTED or NO_CHEAP_CHECK",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": false,
+      "expects_intervention": false,
+      "got_intervention": true,
+      "intervention_match": null,
+      "cell": "not_scored",
+      "note": "A constructed example with a structural justification is delegable; whether a short supervised item reaches the same claim is a genuine judgment call."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 3,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 0,
+     "not_scored": 1
+    },
+    "claims_matched": 4,
+    "claims_total": 4,
+    "intervention_scored_total": 3,
+    "intervention_matched": 3,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [
+    {
+     "claim_id": "K4",
+     "code": "FEED_FORWARD",
+     "detail": "Proposed an observation that leaves the room: \"proctored_in_class, individual, no calculator, notes, AI, or CAS, about 4 minutes.\". An artifact produced out of the room is a prompt, not a proof."
+    }
+   ],
+   "over_verified_note": [
+    "K4's own take-home item is already a short Generate task; the fix costs nothing beyond moving the same kind of task into class."
+   ],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "X3-calc-takehome",
+     "verdicts": [
+      "K1:NOT_SUPPORTED+fix",
+      "K2:NOT_SUPPORTED+fix",
+      "K3:NOT_SUPPORTED+fix",
+      "K4:NOT_SUPPORTED+fix"
+     ]
+    }
+   ]
+  },
+  "P1-g5-no-diagnose": {
+   "cell": "planted gap / no item",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "G5C1",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C3",
+     "verdict": "LIMITED",
+     "intervention": true,
+     "tier": "modify_item",
+     "modification": {
+      "item_ref": "4",
+      "current_text": "1/2 + 1/3 = ______ (Show every step. Answers in simplest form.)",
+      "replacement_text": "A student solved 1/2 + 1/3 by writing 2/5, adding the numerators and the denominators straight across. (a) In one sentence, explain why this gives a wrong-sized part. (b) Give the correct sum, showing every step. Answer in simplest form.",
+      "what_it_now_forces": "Requires the student to name the flaw in adding denominators directly, not only to compute a correct answer, closing the diagnostic half of the claim inside the same item slot."
+     },
+     "why_not_tier_1": "",
+     "intervention_warranted": true,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "G5C1",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched by the planted deletion. A false gap here is a manufactured problem."
+     },
+     {
+      "claim_id": "G5C2",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched. A false gap here is a manufactured problem."
+     },
+     {
+      "claim_id": "G5C3",
+      "expected": "NOT_SUPPORTED",
+      "actual": "LIMITED",
+      "match": false,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "PLANTED: item 9 is deleted, and the teacher's note states this claim explicitly. No item in the assessment reaches it. A Diagnose item is the obvious minimum and costs about two minutes."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 1,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 2,
+     "not_scored": 0
+    },
+    "claims_matched": 2,
+    "claims_total": 3,
+    "intervention_scored_total": 3,
+    "intervention_matched": 3,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "P1-g5-no-diagnose",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2:KEEP",
+      "G5C3:LIMITED+fix"
+     ]
+    }
+   ]
+  },
+  "P2-g5-selected-response": {
+   "cell": "planted gap / narrowed",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "G5C1",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "modify_item",
+     "modification": {
+      "item_ref": "Part A instructions (items 1-3)",
+      "current_text": "Circle the correct symbol. Do not show work.",
+      "replacement_text": "Circle the correct symbol. Then show how you know (a common denominator, a picture, or a benchmark like 1/2).",
+      "what_it_now_forces": "Requires the student to externalize the strategy and reasoning behind the circled symbol, restoring the observable process this claim needs instead of only the endpoint answer."
+     },
+     "why_not_tier_1": "",
+     "intervention_warranted": true,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C3",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "G5C1",
+      "expected": "LIMITED",
+      "actual": "NOT_SUPPORTED",
+      "match": false,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "PLANTED: Part A now collects a circled symbol and explicitly forbids work. Recognition of which fraction is larger survives; choosing and executing a strategy does not, and three items with three options carry a real guess rate. The narrower inference must be named."
+     },
+     {
+      "claim_id": "G5C2",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched."
+     },
+     {
+      "claim_id": "G5C3",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 1,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 2,
+     "not_scored": 0
+    },
+    "claims_matched": 2,
+    "claims_total": 3,
+    "intervention_scored_total": 3,
+    "intervention_matched": 3,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "P2-g5-selected-response",
+     "verdicts": [
+      "G5C1:NOT_SUPPORTED+fix",
+      "G5C2:KEEP",
+      "G5C3:KEEP"
+     ]
+    }
+   ]
+  },
+  "P3-g8sci-no-item6": {
+   "cell": "planted gap / no item",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "S1c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "S2c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "S3c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "S4c",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "tier": "modify_item",
+     "modification": {
+      "item_ref": "3",
+      "current_text": "Claim. Write one sentence stating how the cart's speed at the bottom is related to its release height.",
+      "replacement_text": "Claim. A classmate says, 'If you release the cart from twice the height, it comes out twice as fast.' Do you agree or disagree? Write one sentence stating how the cart's speed is actually related to its release height, and say explicitly whether the classmate's 'twice as fast' idea is right.",
+      "what_it_now_forces": "Forces the student to take an explicit position on the proportional claim named in S4c, not just state their own general relationship, while still producing the relationship claim S2c needs."
+     },
+     "why_not_tier_1": "",
+     "intervention_warranted": true,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "S5c",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "S1c",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched."
+     },
+     {
+      "claim_id": "S2c",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched."
+     },
+     {
+      "claim_id": "S3c",
+      "expected": "KEEP or LIMITED",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched; same reasoning as S3."
+     },
+     {
+      "claim_id": "S4c",
+      "expected": "NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "PLANTED: item 6 is deleted. Item 7 is extrapolation, not misconception separation — a student can extrapolate correctly while still believing the relationship is proportional. A Predict or Classify item reaches it in two minutes."
+     },
+     {
+      "claim_id": "S5c",
+      "expected": "KEEP or LIMITED",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Untouched, now item 6."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 1,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 4,
+     "not_scored": 0
+    },
+    "claims_matched": 5,
+    "claims_total": 5,
+    "intervention_scored_total": 5,
+    "intervention_matched": 5,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "P3-g8sci-no-item6",
+     "verdicts": [
+      "S1c:KEEP",
+      "S2c:KEEP",
+      "S3c:KEEP",
+      "S4c:NOT_SUPPORTED+fix",
+      "S5c:KEEP"
+     ]
+    }
+   ]
+  },
+  "P4-g10ss-scoped-out": {
+   "cell": "false-positive control",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "H4",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "H4",
+      "expected": "KEEP or LIMITED",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "The teacher has scoped this assessment to the argument only. H4 is carried by Part B under supervision. The real test is the CONTROL below: sourcing and POV are assessed elsewhere and must not be reported as gaps in this assessment."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 0,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 1,
+     "not_scored": 0
+    },
+    "claims_matched": 1,
+    "claims_total": 1,
+    "intervention_scored_total": 1,
+    "intervention_matched": 1,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [
+    "Part A (items 1-4) is present on the page but explicitly ungraded warm-up per the teacher; it does not bear on H4 and adds no evidentiary burden to this claim."
+   ],
+   "control": {
+    "no_unexpected_claims": true,
+    "why": "Reporting a gap for sourcing, word-choice attitude or POV here would be a false positive — the teacher has said where those are assessed. Any claim returned beyond H4 counts as a manufactured problem."
+   },
+   "all_runs": [
+    {
+     "run": "P4-g10ss-scoped-out",
+     "verdicts": [
+      "H4:KEEP"
+     ]
+    }
+   ]
+  },
+  "V1-g5-over-verified": {
+   "cell": "over-verified",
+   "supervision": "proctored_in_class",
+   "runs": 1,
+   "stable": null,
+   "claims": [
+    {
+     "claim_id": "G5C1",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C3",
+     "verdict": "KEEP",
+     "intervention": false,
+     "tier": null,
+     "modification": null,
+     "why_not_tier_1": "",
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "G5C1",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "This version already carries prediction, solution and explanation boxes per item plus a reflection and a five-minute conference. The evidence is there several times over."
+     },
+     {
+      "claim_id": "G5C2",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Same."
+     },
+     {
+      "claim_id": "G5C3",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Same."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 0,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 3,
+     "not_scored": 0
+    },
+    "claims_matched": 3,
+    "claims_total": 3,
+    "intervention_scored_total": 3,
+    "intervention_matched": 3,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [
+    "The prediction box on items 1-3 adds writing and scoring burden without adding evidence this claim needs: the claim asks for strategy, execution, and reasoning, all of which the solution and explanation boxes already fully supply, so a prediction step ahead of solving is extra collection, not additional support, for G5C1.",
+    "The prediction box and the requirement to explain every arithmetic step in complete sentences add scoring burden for each of five items without adding evidence a procedural claim needs; the written computation and simplified answer already fully demonstrate the construct-combine-simplify-regroup sequence.",
+    "The five-minute individual oral conference re-verifying item 9 (and item 6) is a second, costlier independent observation of something item 9's written response already fully evidences under conditions that satisfy independence, novelty, and claim-targeting; it adds teacher time across the class without closing any gap Gate 1 would identify, and the same is true of the one-page reflection essay, which is not targeted at any of the three claims at all."
+   ],
+   "control": {
+    "zero_interventions": true,
+    "expect_over_verified_note": true,
+    "why": "The decisive test of F4. Any proposal on this case is a straight failure. Naming the disproportion — that the conference and reflection cost more than they buy — is the desired extra behaviour, recorded as a bonus signal rather than as pass/fail."
+   },
+   "all_runs": [
+    {
+     "run": "V1-g5-over-verified",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2:KEEP",
+      "G5C3:KEEP"
+     ]
+    }
+   ]
+  }
+ },
+ "reconstruction": {},
+ "missing": [
+  "S1-g5-supervised__run2",
+  "S1-g5-supervised__run3",
+  "S1-g5-supervised__run4",
+  "S1-g5-supervised__run5"
+ ],
+ "confusion": {
+  "justified_proposed": 12,
+  "justified_missed": 0,
+  "unnecessary_proposed": 4,
+  "restraint_correct": 27,
+  "not_scored": 2,
+  "detection_recall": 1,
+  "restraint_rate": 0.871,
+  "_note": "Two rates, deliberately not combined. detection_recall is of the interventions ground truth says were warranted; restraint_rate is of the claims ground truth says warranted none. A run that improves one by sacrificing the other is not an improvement."
+ },
+ "falsification": {
+  "F1_manufactures_problems": {
+   "sound_cases": 5,
+   "sound_claims": 19,
+   "manufactured": [
+    "S1-g5-supervised/G5C2",
+    "S1-g5-supervised/G5C3",
+    "S2-g8ela-supervised/E2",
+    "S3-g8sci-supervised/S3c"
+   ],
+   "sound_cases_clean": "2 of 5",
+   "clean_rate": 0.4,
+   "threshold": "kill if clean_rate < 0.80 (the original 8-of-10 rate, against the case set actually built)",
+   "verdict": "FAIL"
+  },
+  "F2_context_matters": {
+   "pairs": [
+    {
+     "pair": "S1-g5-supervised → X1-g5-takehome",
+     "of": 3,
+     "changed": 3,
+     "wrong_direction": 0
+    },
+    {
+     "pair": "S4-g10ss-supervised → X2-g10ss-takehome",
+     "of": 4,
+     "changed": 4,
+     "wrong_direction": 0
+    },
+    {
+     "pair": "S5-calc-supervised → X3-calc-takehome",
+     "of": 4,
+     "changed": 4,
+     "wrong_direction": 0
+    }
+   ],
+   "threshold": "kill if any pair shows 0 changed verdicts, or any wrong_direction > 0",
+   "verdict": "PASS"
+  },
+  "F3_discrimination": {
+   "planted_gaps": 3,
+   "planted_found": [
+    "P1-g5-no-diagnose/G5C3",
+    "P2-g5-selected-response/G5C1",
+    "P3-g8sci-no-item6/S4c"
+   ],
+   "found_rate": 1,
+   "manufactured_in_sound": 4,
+   "false_positive_P4_unexpected_claims": 0,
+   "threshold": "kill if found_rate < 0.75 (the original 3-of-4 rate), or manufactured_in_sound > 2, or P4 returns any unexpected claim",
+   "verdict": "FAIL"
+  },
+  "F4_minimality": {
+   "over_verified_interventions": 0,
+   "over_verified_note_given": true,
+   "menu_violations": 0,
+   "feed_forward_violations": 1,
+   "threshold": "kill if any intervention is proposed on the over-verified case, or any menu or feed-forward violation",
+   "verdict": "PASS"
+  },
+  "F5_reconstruction": {
+   "status": "not scored automatically — see reconstruction._scoring_note"
+  },
+  "F6_stability": {
+   "cases_with_repeats": 0,
+   "stable": 0,
+   "threshold": "identical verdicts and intervention decisions across repeats",
+   "verdict": "FAIL"
+  },
+  "all_violations_by_code": {
+   "CARRIED_UNKNOWN": 6,
+   "GATE1_BYPASSED": 6,
+   "PROPOSED_UNWARRANTED": 6,
+   "UNEXPLAINED_RESTRAINT": 6,
+   "BANNED_LANGUAGE": 1,
+   "FEED_FORWARD": 1
+  }
+ }
+}

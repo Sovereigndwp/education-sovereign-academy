@@ -1,0 +1,304 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "predicting the comparison result, then selecting and executing a strategy, then explaining every step of the reasoning behind the symbol for 3/4 vs 5/8"
+        },
+        {
+          "item": "2",
+          "elicits": "predicting, selecting/executing a strategy, and explaining every step for 2/3 vs 7/12"
+        },
+        {
+          "item": "3",
+          "elicits": "predicting, selecting/executing a strategy, and explaining every step for 5/6 vs 8/9"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can choose and execute a valid comparison strategy and justify the resulting symbol with reasoning; the required solution-plus-explanation boxes for items 1-3 fully carry this claim on their own.",
+      "does_not_support": [
+        "The added 'prediction' box does not, by itself, add evidence for this claim beyond what the required solution and explanation already show -- the claim does not ask whether a student can predict a comparison outcome before working it, only that they choose, execute, and justify a valid strategy.",
+        "Does not confirm the student can compare fractions where the correct relation is '=', since none of items 1-3 resolve to '='.",
+        "Does not distinguish reasoning that names the controlling feature of the chosen strategy from reasoning that restates the algorithm without understanding why it works.",
+        "Adjacent claim it is most likely to be mistaken for: G5C2 -- correct common-denominator work in Part A's explanation box also demonstrates part of G5C2's construction step, so strong Part A results should not be read as confirming G5C2's simplifying/regrouping components, which Part A does not exercise."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, paper-and-pencil work with AI prohibited and enforced means the prediction, solution, and explanation must all be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Chooses a strategy among common denominator, benchmark, or visual model",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "The solution box permits 'any method you choose' and the explanation box records which method was used.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Executes the chosen strategy correctly",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "The solution box requires the worked method.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Shows reasoning that connects the strategy to the symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "'Explain every step of your thinking' requires this directly, in more depth than the claim asks for.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three components are already exercised, and more heavily than the claim requires -- nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Every component of this claim is already exercised by the solution and explanation boxes on items 1-3; no absence exists, so no further observation is warranted -- if anything this claim is verified beyond what it needs.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The prediction box on items 1-3 adds writing and scoring burden without adding evidence this claim needs: the claim asks for strategy, execution, and reasoning, all of which the solution and explanation boxes already fully supply, so a prediction step ahead of solving is extra collection, not additional support, for G5C1.",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "predicting, then constructing a common denominator for 1/2 and 1/3, combining, simplifying, and explaining every step in complete sentences"
+        },
+        {
+          "item": "5",
+          "elicits": "predicting, then constructing a common denominator for 5/6 and 1/4, subtracting, simplifying, and explaining every step"
+        },
+        {
+          "item": "6",
+          "elicits": "predicting, then constructing a common denominator for 2 1/3 and 1 3/4, combining, regrouping to a mixed number, and explaining every step"
+        },
+        {
+          "item": "7",
+          "elicits": "predicting, then applying the procedure inside a word problem and explaining every step"
+        },
+        {
+          "item": "8",
+          "elicits": "predicting, then applying the procedure inside a subtraction word problem and explaining every step"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can construct a common denominator for two unlike fractions (including a mixed number), combine or compare the like-sized parts, and simplify or regroup the result where required.",
+      "does_not_support": [
+        "Requiring a full sentence-by-sentence explanation of every arithmetic step for straightforward common-denominator addition/subtraction (items 4, 5, 7, 8) does not add material evidence for a purely procedural claim beyond what the shown computation itself already demonstrates.",
+        "Does not establish that the procedure holds for denominators that are not small and closely related.",
+        "Regrouping to a mixed number is directly exercised by only items 6 and 7.",
+        "Adjacent claim it is most likely to be mistaken for: G5C3 -- a correct, well-explained sum on items 4-8 is easily read as also confirming G5C3's diagnostic reasoning about why adding denominators directly is wrong, which these items do not require."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced leaves no channel for the written computation to be produced by anyone or anything other than the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs equivalent fractions with a common denominator",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "All five items require converting to a common denominator before combining, visible in the solution and explanation boxes.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Combines or compares the like-sized parts (adds/subtracts numerators)",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Each item requires the resulting numeric sum or difference.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Simplifies the result to simplest form",
+            "items": [
+              "4",
+              "5",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Simplest-form and mixed-number requirements carry over from the base version of this task.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Regroups an improper result into a mixed number where the item requires it",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 6 sums to an improper total requiring regrouping; item 7 requires a mixed-number answer.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every observable component of G5C2 is exercised at least once by items already on the assessment; nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "All components of G5C2 are exercised by items 4-8, and the added prediction and full-sentence explanation requirements exceed what the claim needs rather than falling short of it; no absence exists.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The prediction box and the requirement to explain every arithmetic step in complete sentences add scoring burden for each of five items without adding evidence a procedural claim needs; the written computation and simplified answer already fully demonstrate the construct-combine-simplify-regroup sequence.",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "producing a correct sum via common-denominator procedure"
+        },
+        {
+          "item": "5",
+          "elicits": "producing a correct difference via common-denominator procedure"
+        },
+        {
+          "item": "6",
+          "elicits": "producing a correct sum with regrouping via common-denominator procedure"
+        },
+        {
+          "item": "7",
+          "elicits": "producing a correct sum inside a word problem"
+        },
+        {
+          "item": "8",
+          "elicits": "producing a correct difference inside a word problem"
+        },
+        {
+          "item": "9",
+          "elicits": "predicting, then identifying why adding 1/2 and 1/4 straight across gives a wrong-sized part, giving the correct sum, and explaining every step; the same item is later re-explained aloud in a five-minute teacher conference"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can state why adding unlike denominators directly produces a wrong-sized part and can produce the correct sum; item 9's written response alone already fully carries this claim.",
+      "does_not_support": [
+        "Item 9 tests the error on one specific fraction pair (1/2 + 1/4); it does not confirm the explanation generalizes to less visually obvious pairs.",
+        "Does not verify the student can spot the same error inside their own work rather than a third party's.",
+        "No selected-response item is used here, so no guess-rate caveat applies.",
+        "The oral conference on item 9 re-covers ground the written item already evidences under conditions that already satisfy independence, novelty, and claim-targeting, so it should not be read as reaching further than the written response does; it adds confidence in the score, not new evidentiary reach for the claim."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced means the written explanation and correction must be produced live by the student; the follow-up oral conference is likewise live and unaided."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States why adding unlike denominators directly produces a wrong-sized part",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "'Explain what the student did wrong' plus the explanation box.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Gives the correct sum",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ],
+            "status": "present",
+            "evidence": "'...and show the correct answer' in item 9, plus the correct-sum requirement across the rest of the assessment.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both components are already exercised by item 9 (and the correct-sum component further by items 4-8); nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Item 9's written response already exercises both components of this claim under conditions that satisfy independence, novelty, and claim-targeting; no absence exists to justify any further observation, written or oral.",
+      "no_short_check_reason": "",
+      "over_verified_note": "The five-minute individual oral conference re-verifying item 9 (and item 6) is a second, costlier independent observation of something item 9's written response already fully evidences under conditions that satisfy independence, novelty, and claim-targeting; it adds teacher time across the class without closing any gap Gate 1 would identify, and the same is true of the one-page reflection essay, which is not targeted at any of the three claims at all.",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, proctored_in_class, individual, AI prohibited_and_enforced, paper and pencil only, summative, 25 minutes declared; the item type has been practised but these particular numbers are new to the students.",
+  "reviewer_notes": "All three claims are already fully carried by this assessment's solution-and-explanation boxes and, for G5C3, item 9. The additional apparatus layered on top -- a prediction box on every item, full-sentence step-by-step explanations even for straightforward procedural computation, a one-page reflection essay, and a five-minute oral conference re-covering items 6 and 9 -- does not close any gap Gate 1 identifies for any of the three claims; it adds student writing time and per-student grading/conference time well beyond what the declared 25 minutes would comfortably hold, without adding independent evidentiary reach for G5C1, G5C2, or G5C3. If a claim-by-claim gap existed, this would be the assessment to trim, not to extend further."
+}

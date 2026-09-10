@@ -1,0 +1,329 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "identifying, for each document, the author, the year, and a stated judgment about the intended audience, in one line per document"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can source each document by correctly identifying its author, year, and most likely intended audience.",
+      "does_not_support": [
+        "Does not confirm sourcing skill when author and year are not explicitly given in an accompanying citation; both documents here carry a full citation line, so identifying author and year is close to a copying task rather than an inferential one.",
+        "Does not require using the sourcing information to judge document reliability or bias explicitly; that use of sourcing is part of the point-of-view weighting tested separately in H4.",
+        "Does not test sourcing for an anonymous or ambiguously authored document, where audience inference would be harder without a named author's context.",
+        "Adjacent claim it could be mistaken for: general background knowledge about Carnegie or the Populist party, which is the separate contextual content tested in H3."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The sourcing lines are handwritten in one proctored sitting from only the two documents and paper, with AI prohibited and enforced, so the identification and audience judgment must be the student's own."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies the author of each document",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "'For each document, identify the author, the year, and the audience...'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Identifies the year of each document",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Same instruction line requires the year.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Identifies the audience the author was most likely trying to reach",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Same instruction line requires 'the audience the author was most likely trying to reach.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three named parts of this sourcing claim, author, year, and audience, are directly instructed and exercised by item 1 for both documents. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 1 directly instructs identification of author, year, and audience for both documents.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "2",
+          "elicits": "writing one sentence stating Document 1's explanation of the wealth gap's origin and one sentence stating Document 2's explanation, so the two causal accounts sit side by side for comparison"
+        },
+        {
+          "item": "3",
+          "elicits": "choosing one word or phrase from each document and explaining what that word choice reveals about the author's attitude toward great fortunes"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can state each author's differing causal explanation for the same observed wealth gap and can read a chosen word or phrase from each document for the author's attitude toward great fortunes.",
+      "does_not_support": [
+        "Does not require the student to write an explicit comparative sentence naming the contrast (for example, 'Document 1 attributes the gap to natural progress, while Document 2 attributes it to political corruption'); the two causal explanations are elicited as parallel one-sentence statements rather than as a single stated comparison.",
+        "Does not confirm word-choice analysis on a document with more subtle, less loaded diction; both excerpts here use strongly charged language ('welcomed as highly beneficial' versus 'boldly stolen,' 'tramps and millionaires'), which makes attitude comparatively easy to locate.",
+        "Does not test contrasting causal explanations across more than two documents, or documents that describe different facts rather than the same fact.",
+        "Adjacent claim it could be mistaken for: the point-of-view weighting required in H4's argument; this item is a close-reading and comprehension check, not the evidentiary weighing task."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The causal statements and word-choice explanation are handwritten in one proctored sitting from only the two documents and paper, with AI prohibited and enforced, so they must reflect the student's own reading."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States Document 1's causal explanation for the wealth gap",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "'In one sentence each, state how Document 1 explains where that gap came from...'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States Document 2's causal explanation for the wealth gap",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "'...and how Document 2 explains where it came from.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Reads a chosen word or phrase from each document for the author's attitude",
+            "items": [
+              "3"
+            ],
+            "status": "present",
+            "evidence": "'Choose one word or phrase from each document that shows the author's attitude toward great fortunes. Explain what the word choice reveals.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "The claim's two named moves, stating each author's causal explanation and reading a word or phrase from each for attitude, are directly instructed and exercised by items 2 and 3. Presenting the two causal statements as parallel, adjacent sentences is a standard and sufficient way to elicit a contrast for a reader to observe; the claim does not require the student to additionally narrate the comparison in a separate sentence. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Items 2 and 3 already elicit both named moves of this claim; the parallel-sentence structure of item 2 is a sufficient, standard way to produce a contrast without requiring an extra comparison sentence.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "explaining, using outside knowledge of each author's actual historical position in 1889-1892, why Carnegie would write Document 1 and why a farmers' and workers' party would write Document 2"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can explain why each author, given their position in 1889-1892, would write as they did.",
+      "does_not_support": [
+        "Does not confirm this contextual reasoning transfers to authors or positions outside the specific Carnegie and Populist pairing already studied in this unit.",
+        "Does not require identifying a specific sharpening detail within Carnegie's own circumstances, such as the labor unrest of the era; a general 'he was rich and wanted to justify it' answer could satisfy the prompt without that depth.",
+        "Does not clearly distinguish contextual, motive-based reasoning from simple paraphrase of the document's stated content, since the item does not explicitly require the response to go beyond restating what each document already says.",
+        "Adjacent claim it could be mistaken for: the causal-contrast reading required in H2, since both draw on the same documents; this item is specifically about authorial motive and position, not the two explanations' comparative content."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The explanation is handwritten in one proctored sitting from only the two documents and paper, with AI prohibited and enforced, so it must reflect the student's own recalled and applied knowledge."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Explains why Carnegie, given his position, would write Document 1",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "'Why might Carnegie, of all people, have written Document 1?'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Explains why the Populist party, given its position, would write Document 2",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "'Why might a farmers' and workers' party have written Document 2?'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Grounds the explanation in outside knowledge of each author's actual 1889-1892 position, not just the document's own text",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "'Use what you know about each author's position in 1889-1892.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of this claim, explaining each author's motive and grounding it in outside knowledge of their historical position, are directly instructed and exercised by item 4. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 4 directly asks for both authors' motives and explicitly instructs the student to use outside knowledge of their historical positions.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "writing a two-paragraph argument that takes a position accounting for both documents, cites at least one piece of evidence from each, explains how each author's point of view affects the weight given to their claim, and connects the documents to one specific outside development from the period"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can construct an argument addressing both documents, explicitly weigh their evidence by point of view, and accurately connect one outside development from the period.",
+      "does_not_support": [
+        "Does not confirm the ability to independently recall a relevant outside development without a prompt list; the item supplies four examples (trusts, Homestead or Pullman strikes, farm debt, the 1893 depression) for the student to choose among.",
+        "Does not require weighing more than two documents or reconciling conflicting evidence of comparable strength within a single document; only two clearly opposed sources are used.",
+        "Does not confirm sustained argumentative writing beyond two paragraphs, such as a full multi-paragraph essay with several distinct pieces of evidence per document.",
+        "Adjacent claim it could be mistaken for: broad factual recall of Gilded Age history in isolation; this item specifically requires connecting that outside knowledge back to the two documents' argument, not recalling it standalone."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The argument is handwritten in one proctored sitting from only the two documents and paper, with AI prohibited and enforced, so the position, evidence use, weighting, and outside connection must be the student's own live work."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Takes a position that accounts for both documents",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "'takes a position that accounts for both documents (you may argue that different groups saw it differently)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Uses at least one piece of evidence from each document",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "'uses at least one piece of evidence from each document'; rubric: 'Evidence from each document (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Explicitly weighs the evidence by each author's point of view",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "'explains how the point of view of each author affects how much weight you give their claim'; rubric: 'Point of view used to weigh evidence (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Connects one accurate outside development from the period",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "'connects the documents to at least one specific development from the period'; rubric: 'Outside development connected accurately (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All four observable components of this claim, taking a position on both documents, using evidence from each, weighing by point of view, and connecting an accurate outside development, are directly instructed and separately scored in the rubric. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 5's four bullets and the matching rubric points each name and score one of the claim's four components directly.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Grade 10 U.S. History, end of the industrialization unit, proctored_in_class, individual work, AI prohibited_and_enforced, the two given documents and paper only, summative, 45 minutes; students have done sourcing practice on other documents before, but these two excerpts are new to them.",
+  "reviewer_notes": "This document-based assessment maps cleanly onto all four claims: sourcing (item 1), causal contrast and word-choice attitude reading (items 2-3), authorial motive and position (item 4), and the weighed, evidence-based argument (item 5), and none needed an intervention. One minor observation, not treated as a gap: the printed 6-point scoring guide shows explicit criteria for sourcing (item 1) and for the five parts of the Part B argument, but shows no separate scoring line for items 2-4; this is consistent with short-answer items being checked for correctness rather than points, but it is worth the teacher confirming that items 2-4 are in fact read and used as evidence for H2 and H3, since she has confirmed those claims for this assessment."
+}

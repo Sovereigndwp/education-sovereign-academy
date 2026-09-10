@@ -1,0 +1,347 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Selects and executes a comparison strategy (common denominator, benchmark, or visual model) for 3/4 vs 5/8, records the symbol, and writes a one-line justification."
+        },
+        {
+          "item": "2",
+          "elicits": "Selects and executes a comparison strategy for 2/3 vs 7/12, records the symbol, and writes a one-line justification."
+        },
+        {
+          "item": "3",
+          "elicits": "Selects and executes a comparison strategy for 5/6 vs 8/9, records the symbol, and writes a one-line justification."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence can only confirm that a compliant response -- a symbol plus a strategy-based justification, matching the taught format -- was returned for three fraction pairs; it cannot confirm that G5C1 describes what the student personally can do.",
+      "does_not_support": [
+        "Whether the student, rather than an AI assistant or a family member, chose the strategy and wrote the justification -- nothing in the packet distinguishes the two under these conditions.",
+        "Whether the student can produce this comparison quickly or without outside resources, since time is not stated and any resource at home, including AI, is permitted.",
+        "This is easily mistaken for evidence of G5C2 (the compute-and-simplify procedure), since items 1-3 involve equivalent-fraction arithmetic; G5C1 is specifically the comparison judgment and its justification, not the arithmetic alone.",
+        "Whether the student can choose a strategy without the prompt's own menu of options (a common denominator, a picture, or a benchmark) already naming the choices for them."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "AI is permitted and the work is unsupervised, so a model can be given the two fractions and return the symbol and a one-line justification, indistinguishable from a student's own work."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, rather than an outside resource, chose the comparison strategy and produced the reasoning that justifies the symbol.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Selects a valid comparison strategy (common denominator, benchmark such as one half, or visual model) suited to the pair",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'show how you know (a common denominator, a picture, or a benchmark like 1/2)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Correctly executes the chosen strategy",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Items 1-3 require the worked comparison, not just the symbol.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Records the correct relational symbol (<, >, =)",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Items 1-3 instruct: 'write <, >, or ='.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States a reasoning line connecting the work to the chosen symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Instruction requires 'show how you know' alongside the symbol.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Independent production: the strategy-execution-reasoning chain is visibly the student's own work, not an outside resource's",
+            "items": [],
+            "status": "absent",
+            "evidence": "Declared conditions: supervision unsupervised, AI policy permitted, resources anything at home/internet/AI, sent home over a week; no item on this packet is produced where outside help is excluded or visible.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Independent production: the strategy-execution-reasoning chain is visibly the student's own work, not an outside resource's",
+        "why": "Every content component of G5C1 (strategy choice, execution, symbol, reasoning) is exercised by items 1-3. The one genuinely absent, material component is independent production -- none of these responses can be attributed to the student under unsupervised, AI-permitted conditions, and nothing elsewhere in this packet or its conditions supplies that."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and individual; the teacher intends to conclude that this student can choose, execute, and justify a comparison. Under AI-permitted, unsupervised conditions she cannot draw that conclusion from items 1-3, and nothing else in the packet would tell her the response was AI-produced."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One fresh comparison item, done in class in about 3 minutes with seconds to score, recovers the missing independent evidence for the whole claim at negligible classroom cost."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "add_observation",
+        "why_not_tier_1": "Items 1-3 already ask for exactly the right moves (strategy, execution, symbol, reasoning); nothing about their wording causes the gap. The gap is that the declared conditions (unsupervised, AI permitted, at home) mean no item's response can be attributed to the student, and no rewording of an item changes who or what produced it.",
+        "modify": null,
+        "add": {
+          "primitive": "Perturb",
+          "item_text": "In class, on your own: Compare 3/8 and 5/12. Write <, >, or =, then show how you know in one line.",
+          "variant_rule": "Swap in a fresh unlike-denominator pair each class period (denominators at or below 12, not one of the three pairs used on the take-home); keep the response format fixed -- a symbol plus a one-line justification naming the strategy used.",
+          "conditions": "proctored_in_class, individual, no notes or device, about 3 minutes.",
+          "sufficiency_line": "A correct symbol together with a reasoning line that names the actual controlling feature (a valid common-denominator, benchmark, or model argument) is enough to attribute the strategy-choice-execute-justify chain in G5C1 to the student.",
+          "why_this_primitive": "Perturb reuses exactly the move already practiced on the take-home, with new numbers, so it isolates authorship without teaching or testing anything the take-home did not already ask for."
+        },
+        "student_minutes": 3,
+        "scoring_seconds": 25
+      }
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "Finds a common denominator for 1/2 and 1/3, adds the numerators, and records the sum in simplest form."
+        },
+        {
+          "item": "5",
+          "elicits": "Finds a common denominator for 5/6 and 1/4, subtracts the numerators, and records the difference in simplest form."
+        },
+        {
+          "item": "6",
+          "elicits": "Converts two mixed numbers to a common denominator, adds them, and regroups the improper fraction part into a mixed number."
+        },
+        {
+          "item": "7",
+          "elicits": "In a word-problem context, adds 3/4 mile and 5/6 mile using a common denominator and reports the total as a mixed number."
+        },
+        {
+          "item": "8",
+          "elicits": "In a word-problem context, subtracts 1/4 cup from 2/3 cup using a common denominator and reports how much more flour is needed."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence can only confirm that a compliant, step-shown response -- common denominator, combine, simplified or regrouped result -- was returned for five problems; it cannot confirm that G5C2 describes what the student personally can do.",
+      "does_not_support": [
+        "Whether the student, rather than an outside resource, carried out the common-denominator, combine, and simplify steps -- authorship is indistinguishable under these conditions.",
+        "Whether the student can execute this procedure without a calculator, converter, or AI tool, since resources and time are unconstrained at home.",
+        "Item 6's regroup step could be mistaken for evidence of comparing fractions (G5C1); it only exercises the compute-and-simplify chain, not a comparison judgment.",
+        "Whether the shown steps reflect the student's own working, since a full worked solution can be copied from an outside source rather than produced by the student."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "AI is permitted and the work is unsupervised, so a model or an online fraction tool can generate every step (common denominator, combine, simplify) and the student can transcribe it."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, rather than an outside resource, carried out the common-denominator, combine, and simplify steps.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Finds a common denominator (or equivalent fractions) for two unlike fractions",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Every item requires unlike denominators to be reconciled before combining.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Combines or compares the like-sized numerators accurately (adds or subtracts)",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Items 4-5, 7-8 are direct add/subtract; item 6 adds two mixed numbers.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Simplifies the result to lowest terms, or regroups to a mixed number when the sum exceeds one whole",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 6 (2 1/3 + 1 3/4) and item 7 (3/4 + 5/6, answer required as a mixed number) both force a regroup step; items 4-5 already resolve to simplest form without forcing this step.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Independent production: the strategy-execution-reasoning chain is visibly the student's own work, not an outside resource's",
+            "items": [],
+            "status": "absent",
+            "evidence": "Declared conditions: supervision unsupervised, AI policy permitted, resources anything at home/internet/AI, sent home over a week; no item on this packet is produced where outside help is excluded or visible.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Independent production: the compute-and-simplify chain is visibly the student's own work, not an outside resource's",
+        "why": "Every content component of G5C2 is exercised across items 4-8. The one genuinely absent, material component is independent production -- none of these responses can be attributed to the student under unsupervised, AI-permitted conditions, and nothing elsewhere in the packet supplies that."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and individual; five items of practice-quality procedure do not substitute for one independently produced instance when the conclusion the teacher wants is about this student's own execution."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One fresh add/subtract item, done in class in about 3 minutes with seconds to score, recovers the missing independent evidence for the whole procedural chain at negligible cost."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "add_observation",
+        "why_not_tier_1": "Items 4-8 already ask for exactly the right procedure; the gap is not in what any item asks for. It is that the declared conditions (unsupervised, AI permitted, at home) mean no item's shown steps can be attributed to the student, and no rewording of an item changes who or what produced them.",
+        "modify": null,
+        "add": {
+          "primitive": "Perturb",
+          "item_text": "In class: 5/6 + 3/4 = ____. Show every step. Answer in simplest form.",
+          "variant_rule": "Rotate in a fresh pair of unlike fractions whose sum exceeds one whole (denominators at or below 12, not used on the take-home) each period, so the regroup-to-a-mixed-number step is always required; keep the instruction wording fixed.",
+          "conditions": "proctored_in_class, individual, no notes or device, about 3 minutes.",
+          "sufficiency_line": "A correctly found common denominator, an accurate combine, and a simplified/regrouped final answer, all shown in the steps, is enough to attribute the compute-and-simplify chain in G5C2 to the student.",
+          "why_this_primitive": "Perturb re-exercises the exact common-denominator/combine/simplify chain already practiced, with numbers chosen so the regroup step cannot be skipped, isolating authorship without adding new content."
+        },
+        "student_minutes": 3,
+        "scoring_seconds": 25
+      }
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "Examines an unfamiliar incorrect addition (1/2 + 1/4 = 2/6), names what the wrong step was (adding denominators instead of finding a common one), and computes the correct sum."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence can only confirm that a compliant response -- naming a denominator error and giving a correct sum -- was returned for one flawed example; it cannot confirm that G5C3 describes what the student personally can do.",
+      "does_not_support": [
+        "Whether the student, rather than an AI assistant, generated the explanation of the denominator error -- this one-line diagnosis is exactly the kind of response an assistant can supply without the student engaging with the misconception.",
+        "Whether the student can catch this kind of error unprompted, in their own work, since being told 'find the mistake' is a different demand than noticing an error nobody flagged.",
+        "This is the only item in the whole packet that touches G5C3; even setting the conditions problem aside, one instance does not show the diagnosis generalizes beyond this one error pattern.",
+        "Could be mistaken for evidence of G5C2 (produces the correct sum); the explanatory half is what distinguishes G5C3, and it is the half most exposed under these conditions."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "AI is permitted and the work is unsupervised, so a model can both name the denominator error and compute the correct sum, which is exactly the two-part response this item asks for."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, rather than an outside resource, identified the denominator error and produced the correct sum.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies why adding denominators produces a wrong-sized part (names the controlling misconception)",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'Explain what the student did wrong.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Produces the correct sum via a valid procedure",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'show the correct answer.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Independent production: the strategy-execution-reasoning chain is visibly the student's own work, not an outside resource's",
+            "items": [],
+            "status": "absent",
+            "evidence": "Declared conditions: supervision unsupervised, AI policy permitted, resources anything at home/internet/AI, sent home over a week; no item on this packet is produced where outside help is excluded or visible.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Independent production: the diagnosis-and-correction is visibly the student's own work, not an outside resource's",
+        "why": "Both content components of G5C3 are exercised by item 9. The one genuinely absent, material component is independent production -- this single response cannot be attributed to the student under unsupervised, AI-permitted conditions, and nothing elsewhere in the packet supplies that."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and individual, and this is the only item touching G5C3; if that one response is not attributable to the student, the teacher has no basis at all for the diagnostic claim."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One fresh find-the-mistake item, done in class in about 2 minutes with seconds to score, recovers the only evidence this claim has at negligible cost."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "add_observation",
+        "why_not_tier_1": "Item 9 already asks for exactly the right two-part response (name the error, give the correct sum); the gap is not in its wording. It is that the declared conditions (unsupervised, AI permitted, at home) mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+        "modify": null,
+        "add": {
+          "primitive": "Diagnose",
+          "item_text": "In class: A student solved 1/3 + 1/4 and wrote 2/7. What did the student do wrong? Explain in one line, then write the correct sum.",
+          "variant_rule": "Swap in a fresh unlike-denominator pair for the flawed example each period (not 1/2 + 1/4, the take-home's pair); keep the error type fixed -- denominators added instead of found in common -- and the two-part response format.",
+          "conditions": "proctored_in_class, individual, no notes or device, about 2 minutes.",
+          "sufficiency_line": "Correctly naming that the parts are different sizes (or that the denominator must be a shared whole, not summed) plus a correct sum is enough to attribute the diagnostic reasoning in G5C3 to the student.",
+          "why_this_primitive": "Diagnose is the primitive the claim itself names -- locate and repair an unfamiliar wrong solution -- so it reproduces item 9's exact demand under conditions that exclude outside help."
+        },
+        "student_minutes": 2,
+        "scoring_seconds": 20
+      }
+    }
+  ],
+  "conditions_echo": "Unsupervised, individual, AI-permitted take-home summative assessment, sent home over a week at the end of Unit 4; the numbers and problems are new to the students, but the item types have been practiced.",
+  "reviewer_notes": "All three claims are well-targeted by their items -- the gap is identical and singular across the assessment: it is administered unsupervised with AI permitted, so no item's response can be attributed to the student, not that any item asks for the wrong thing. A short (2-3 minute) supervised check per claim, using the same item types already on the take-home, would recover the missing independent evidence at low cost. The take-home itself can still be used for practice or completion purposes, just not as the basis for the summative conclusion about individual mastery."
+}

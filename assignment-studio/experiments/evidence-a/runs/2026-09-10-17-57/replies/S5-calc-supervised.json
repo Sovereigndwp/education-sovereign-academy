@@ -1,0 +1,313 @@
+{
+  "claims": [
+    {
+      "claim_id": "K1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "selecting and correctly carrying out integration by parts on x e^(2x) with no calculator or notes, and naming the technique used"
+        },
+        {
+          "item": "2",
+          "elicits": "selecting and correctly carrying out partial-fraction decomposition on (3x+1)/(x^2+x-6) with no calculator or notes, and naming the technique used"
+        },
+        {
+          "item": "3",
+          "elicits": "selecting and correctly carrying out a Pythagorean-identity-plus-substitution approach on sin^3(x)cos^2(x) with no calculator or notes, and naming the technique used"
+        },
+        {
+          "item": "4",
+          "elicits": "selecting and correctly carrying out a direct substitution on x/sqrt(9-x^2) with no calculator or notes (the integrand is deliberately solvable by simple substitution rather than requiring trigonometric substitution), and naming the technique used"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can carry out a self-selected integration technique to a correct antiderivative, without a calculator or notes, across a genuine variety of technique types.",
+      "does_not_support": [
+        "Does not confirm execution ability on an integrand requiring the same or different techniques chained together in one problem, such as two rounds of integration by parts; that structural case is only constructed, not evaluated, in Part D.",
+        "Does not separately verify whether a wrong final answer stems from a flawed technique choice versus an arithmetic or algebraic slip within an otherwise correct technique, since only the final antiderivative and a one-phrase technique label are collected.",
+        "Does not require checking the final antiderivative by differentiation; no verification step is asked for.",
+        "Adjacent claim it could be mistaken for: technique selection under genuine ambiguity between competing plausible methods, which is the separate, execution-free content of K2, not tested here since the student proceeds straight to computation."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Each evaluation is handwritten in one proctored sitting with no calculator, notes, or AI, and the integrands are new, so the computation must be the student's own live work."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Correctly executes the chosen technique to reach the correct antiderivative",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "status": "present",
+            "evidence": "'Evaluate each integral' across four integrands spanning integration by parts, partial fractions, a trig-identity-plus-substitution problem, and a direct substitution.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Performs the execution without a calculator or notes",
+            "items": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Header: 'No calculator. No notes. Closed book.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of this procedural claim, correct execution and doing so without aids, are directly exercised across four varied integrands in Part A. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Part A already exercises correct execution under closed-book conditions across four genuinely different technique types.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "K2",
+      "items": [
+        {
+          "item": "5(a)",
+          "elicits": "naming the technique for x^2/sqrt(x^2+4) and writing the substitution it depends on, without carrying out the integration"
+        },
+        {
+          "item": "5(b)",
+          "elicits": "naming the technique for ln x and writing what it depends on (the u and dv choice), without carrying out the integration"
+        },
+        {
+          "item": "5(c)",
+          "elicits": "naming the technique for 1/(x^2-9) and writing the decomposition it depends on, without carrying out the integration"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can select an appropriate integration technique for a given integrand and name the substitution, decomposition, or identity it depends on, independent of whether the student can carry out the resulting computation.",
+      "does_not_support": [
+        "Does not confirm the student can carry out the technique once selected; execution is explicitly excluded here ('Do not carry out the integration') and is tested separately, on different integrands, in Part A.",
+        "Does not test selection when two techniques are both viable and the 'appropriate' choice is a matter of efficiency rather than correctness; each of the three integrands here has one standard technique.",
+        "Does not require the student to justify why the named technique is preferable to a plausible alternative, only to state the choice and its dependency.",
+        "Adjacent claim it could be mistaken for: execution accuracy (K1), since naming a substitution or decomposition correctly does not guarantee the student could carry it out successfully if asked to."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The technique names and dependencies are handwritten in one proctored sitting with no notes, calculator, or AI, so the selection must be the student's own live judgment."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Selects an appropriate technique for the given integrand",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)"
+            ],
+            "status": "present",
+            "evidence": "'For each integral, name the technique you would use...'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Names the substitution, decomposition, or identity the technique depends on",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)"
+            ],
+            "status": "present",
+            "evidence": "'...and write the substitution, decomposition or identity it depends on.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Does not compute the integral",
+            "items": [
+              "5(a)",
+              "5(b)",
+              "5(c)"
+            ],
+            "status": "present",
+            "evidence": "'Do not carry out the integration.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of this claim, selecting the technique, naming its dependency, and doing so without computing, are directly instructed and exercised across the three sub-items of Part B. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Part B directly instructs technique selection and naming of the underlying substitution, decomposition, or identity, with computation explicitly excluded.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "K3",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "locating which specific step in the given derivation does not follow (rather than only checking whether the final numeric expression looks plausible), and producing the correct antiderivative"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can locate the invalid step in an incorrect derivation and produce the correct antiderivative, including in a case where the flawed final expression happens to simplify to a value equal to the correct answer.",
+      "does_not_support": [
+        "Does not confirm diagnostic ability on a seeded error whose final numeric answer is clearly and simply wrong; this item's error is unusually deceptive because the given expression algebraically reduces to a valid antiderivative, so success here does not confirm performance on more straightforward errors.",
+        "Does not test locating an error embedded partway through a longer, multi-step derivation, such as one involving two rounds of integration by parts.",
+        "Does not require identifying or repairing more than one flawed step, since only one seeded error pattern is presented.",
+        "Adjacent claim it could be mistaken for: general execution fluency in substitution problems (K1); this item is specifically diagnostic of someone else's work, not independent execution from scratch."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The diagnosis and correction are handwritten in one proctored sitting with no calculator, notes, or AI, so they must reflect the student's own live reasoning."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Locates the invalid step in the given incorrect derivation",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "'Say which step does not follow.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Produces the correct antiderivative",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "'...and give the correct antiderivative.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of this diagnostic claim, locating the invalid step and producing the correct antiderivative, are directly instructed and exercised by item 6. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 6 directly asks for both the located step and the corrected antiderivative.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "K4",
+      "items": [
+        {
+          "item": "7",
+          "elicits": "constructing an original integral that genuinely requires two rounds of integration by parts, and writing one sentence justifying why two applications are required and one is not"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can construct an integral meeting the structural constraint of requiring integration by parts exactly twice, and can justify why twice is required and once is not.",
+      "does_not_support": [
+        "Does not confirm the student could construct an example requiring a different specific number of applications, such as exactly three, since only the two-application case is asked for.",
+        "Does not confirm the student can execute the two rounds of integration by parts on their own constructed example; only construction and justification are required, not full computation.",
+        "Does not test recognizing a case that looks like it needs repeated by-parts but is actually resolved by algebraic self-reference (such as an integral requiring by-parts twice followed by solving for the original integral algebraically) rather than a further application, since the student is free to avoid such edge cases when constructing their own example.",
+        "Adjacent claim it could be mistaken for: execution fluency with integration by parts (K1), since constructing a valid example likely requires mentally simulating the process, but this claim is specifically about construction and justification, not full written execution."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The constructed integral and justification are handwritten in one proctored sitting with no calculator, notes, or AI, so they must be the student's own original work."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs a valid integral requiring exactly two rounds of integration by parts",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "'Write an integral that requires integration by parts exactly twice.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Justifies why two applications are required and one is not",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "'...and say in one sentence how you know twice is required and once is not.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of this claim, constructing a qualifying example and justifying the count, are directly instructed and exercised by item 7. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 7 directly asks for both the constructed example and the one-sentence justification of the required count.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Honors Calculus, after the techniques-of-integration sequence, proctored_in_class, individual work, AI prohibited_and_enforced, no calculator or notes, closed book, summative, 40 minutes; students have practised each technique, but these particular integrands are new to them.",
+  "reviewer_notes": "This quiz maps cleanly onto all four claims with almost no overlap: Part A isolates execution (K1) across four genuinely different technique types, Part B isolates selection-without-computation (K2), Part C is a diagnostic item (K3) whose seeded error is unusually well constructed (two individually invalid steps, pulling a variable out of the integral sign and a bogus chain-rule-reversal shortcut on a non-elementary integral, that happen to cancel to the numerically correct final expression, which sharpens rather than weakens the diagnostic value), and Part D isolates construction and justification (K4). No claim showed a material, addressable gap; all four gates were reached only as far as confirming no absence."
+}

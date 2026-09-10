@@ -1,0 +1,237 @@
+{
+  "claims": [
+    {
+      "claim_id": "E1",
+      "items": [
+        {
+          "item": "Evidence paragraph, bullet 1 (state the point of view in your own words)",
+          "elicits": "stating a specific, accurate version of the author's position in the student's own words, guarded against a generic label by the instruction 'do not just say the author is against it'"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can state an accurate, specific version of the author's unstated position on the bridge, grounded in the passage's distributed choices rather than lifted whole from any single sentence.",
+      "does_not_support": [
+        "Does not confirm the student can perform this inference on a passage with no first-person authorial commentary at all; this passage's closing line ('I am not sure the numbers are the only thing that should be counted') comes close to a direct hint, which a harder, fully implicit passage would not offer.",
+        "Does not distinguish stating the position from summarizing the passage's facts about the bridge's condition and the upcoming vote.",
+        "Does not confirm the student can do this without the rubric's explicit guardrail against the generic phrasing 'the author is against it'; an unscaffolded prompt is a harder version of the same task.",
+        "Adjacent claim it could be mistaken for: general reading comprehension of what the passage states about the bridge, rather than interpretive inference of the author's stance."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The paragraph is handwritten in one proctored 45-minute sitting from only the passage and paper, with AI prohibited and enforced, so the stated position must be the student's own live inference."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States a specific position, not a generic label",
+            "items": [
+              "bullet 1"
+            ],
+            "status": "present",
+            "evidence": "'State the author's point of view in your own words (do not just say the author is against it.)'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "The stated position is accurate relative to the text",
+            "items": [
+              "bullet 1"
+            ],
+            "status": "present",
+            "evidence": "Rubric point 1: 'Point of view clearly stated and accurate (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Position is grounded in the author's distributed textual choices rather than a single stated sentence",
+            "items": [
+              "bullet 1",
+              "bullets 2-3"
+            ],
+            "status": "present",
+            "evidence": "No sentence in the passage states the position outright (the closest, the final line, is a hedge, not a claim), and bullets 2-3 additionally require two technique-based pieces of evidence drawn from across the text, which forces engagement with the distributed choices regardless of how bullet 1 is answered.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of this claim are exercised: a specific, accurate, in-the-student's-own-words position, necessarily grounded in choices distributed across the passage because the text contains no sentence that states the position outright and the paired evidence bullets force engagement with that wider set of choices. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "The task instruction and rubric together already require a specific, accurate, self-phrased position, and the passage offers no explicit sentence a student could simply copy in place of inference.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "E2",
+      "items": [
+        {
+          "item": "Evidence paragraph, bullets 2-3 (two pieces of evidence, each explained)",
+          "elicits": "quoting or closely paraphrasing two pieces of textual evidence and writing an explanation of how each connects to the author's position; the technique category (word choice, contrast, placement, or inclusion) is offered as optional vocabulary in the prompt but the explanation itself need not name which one applies"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "The evidence supports that the student can select two textually relevant pieces of evidence and explain, in some form, how each connects to the author's position. It does not confirm that the student can name which specific technique (word choice, framing or selected detail, contrast, inclusion or omission, or placement) each piece exemplifies, because neither the task instruction nor the rubric requires that naming.",
+      "supports": "This assessment supports the conclusion that the student can select two relevant pieces of textual evidence and explain how each connects to the author's inferred position.",
+      "does_not_support": [
+        "Does not confirm, as scored, that the student can name which specific technique each piece of evidence exemplifies: the task bullet offers 'word choice, contrast, placement, or what the author chooses to include' as parenthetical examples rather than requiring the student to state which one applies, and rubric point 3 only requires that the 'explanation connects each piece of evidence to the point of view,' which a technique-free explanation can satisfy.",
+        "Does not confirm the ability to select evidence when the position is more contested or when multiple competing signals point different directions; this passage's evidence is comparatively concentrated in two clearly patterned paragraphs (the engineer's case, then the omitted human details).",
+        "Does not extend to identifying evidence and technique in other genres, such as narrative or persuasive speech, where the signal types differ.",
+        "Adjacent claim it could be mistaken for: literal comprehension of what the passage says happens on the bridge, rather than analysis of how the author's textual choices signal a stance."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The evidence and explanations are handwritten in one proctored sitting from only the passage and paper, with AI prohibited and enforced, so the selection and explanation must be the student's own live work."
+      },
+      "gap_statement": "We cannot tell from this assessment, as it is scored, whether the student can name which specific technique each piece of evidence exemplifies, because the rubric credits any explanation that connects evidence to the position without requiring the technique to be identified.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Selects two pieces of textual evidence relevant to the position",
+            "items": [
+              "bullet 2"
+            ],
+            "status": "present",
+            "evidence": "'Quote or closely paraphrase two pieces of textual evidence that reveal the author's point of view.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Explains how each piece of evidence connects to the position",
+            "items": [
+              "bullet 3"
+            ],
+            "status": "present",
+            "evidence": "Rubric point 3: 'Explanation connects each piece of evidence to the point of view (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Names which technique (word choice, framing or selected detail, contrast, inclusion or omission, or placement) each piece of evidence exemplifies",
+            "items": [],
+            "status": "absent",
+            "evidence": "Bullet 3 asks the student to 'explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include)', offering the technique words as optional examples rather than requiring the student to name one, and rubric point 3 scores only whether the explanation 'connects' evidence to the point of view, not whether a technique is identified.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Names which technique each piece of evidence exemplifies",
+        "why": "This is the one component not present. It is explicitly named in the claim's own wording ('names the technique by which each signals it'), nothing in the assessment shows it is checked elsewhere, and its absence narrows support: a fully-scored response can connect evidence to position in prose without ever identifying which of the five listed techniques is at work, so the technique-naming half of the claim is not actually gated by the instrument as scored."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "E2 names two distinct moves (select evidence, and name the technique that signals it). As worded and scored, a response can earn full marks on this criterion while never naming a technique, so a teacher crediting this evidence for the whole claim would be crediting a move the instrument never required."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "The fix is a wording change to the existing bullet and its matching rubric line, no added items, time, or scoring burden, and it targets exactly the missing half of the claim."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "modify_item",
+        "why_not_tier_1": "",
+        "modify": {
+          "item_ref": "Task bullet 3",
+          "current_text": "For each piece of evidence, explain how it shows the author's position (word choice, contrast, placement, or what the author chooses to include).",
+          "replacement_text": "For each piece of evidence, name which technique it uses (word choice, framing or selected detail, contrast, inclusion or omission, or placement) and explain how that technique reveals the author's position.",
+          "what_it_now_forces": "The student must explicitly categorize each piece of evidence by technique name before explaining it, so a response that only gestures at a connection without identifying which technique is used no longer satisfies the bullet; the matching rubric point should read 'Explanation names the technique and connects it to the point of view' so scoring enforces the same requirement."
+        },
+        "add": null,
+        "student_minutes": 0,
+        "scoring_seconds": 0
+      }
+    },
+    {
+      "claim_id": "E3",
+      "items": [
+        {
+          "item": "Evidence paragraph, bullet 4 (acknowledges and responds to the engineer's case)",
+          "elicits": "describing, in one paragraph, both what the engineer's case for replacement was and how the author's choices in the text answer or undercut it"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can describe how the author represents the engineer's opposing case and how the author answers it.",
+      "does_not_support": [
+        "Does not confirm the student can locate a rebuttal that is more diffuse or spread across noncontiguous sections; here the engineer's case and the author's answer to it fall in adjacent, clearly signaled paragraphs.",
+        "Does not confirm recognition of an opposing case the author fails to answer successfully, since only this author's successful rebuttal structure is available to observe.",
+        "Does not distinguish, at the level of a separate score, a response that thoroughly restates the engineer's case with only a thin gesture at the author's answer from one that balances both; rubric point 4 is a single holistic point rather than two.",
+        "Adjacent claim it could be mistaken for: comprehension of the engineer's argument alone, rather than description of the author's rebuttal to it."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The description is handwritten in one proctored sitting from only the passage and paper, with AI prohibited and enforced, so it must reflect the student's own live reading of how the rebuttal works."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies/represents the engineer's case as the author presents it",
+            "items": [
+              "bullet 4"
+            ],
+            "status": "present",
+            "evidence": "'Explain how the author acknowledges and responds to the engineer's case for replacement' requires engaging with the engineer's case as given.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Describes how the author answers or undercuts that case",
+            "items": [
+              "bullet 4"
+            ],
+            "status": "present",
+            "evidence": "Rubric point 4: 'Accurately describes how the author handles the opposing view (1)'.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of the claim, representing the opposing case and describing how the author answers it, are directly requested by the task instruction and scored by the rubric. Bundling them into a single holistic rubric point is a legitimate scoring choice for two moves that are naturally described together in one continuous account, not an absence."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "The task instruction explicitly asks the student to explain both how the author acknowledges and how the author responds to the opposing case, and the rubric scores that description; nothing named in the claim goes unexercised.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Grade 8 English Language Arts, end of the informational-text unit, proctored_in_class, individual work, AI prohibited_and_enforced, passage and paper only, summative, 45 minutes; the passage is new to the students, though the paragraph structure and rubric are familiar.",
+  "reviewer_notes": "One integrated paragraph task carries all three claims economically under conditions that already make the writing independent, novel, and claim-targeted; E1 and E3 are already fully carried by the task and rubric as written. The one real gap is in E2: the task offers technique vocabulary (word choice, contrast, placement, inclusion) as optional examples rather than requiring the student to name which technique applies, and the matching rubric point scores only whether the explanation connects evidence to the position, not whether a technique is identified, so a fully-scored response need never name a technique. A small wording change to bullet 3 and its rubric line closes this at no added cost."
+}

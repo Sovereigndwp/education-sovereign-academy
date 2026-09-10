@@ -1,0 +1,309 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "selecting a comparison strategy (common denominator, benchmark, or visual model), executing it for 3/4 vs 5/8, producing the symbol, and writing reasoning that connects the strategy to the symbol"
+        },
+        {
+          "item": "2",
+          "elicits": "selecting and executing a valid strategy for 2/3 vs 7/12, producing the symbol, and writing the reasoning behind it"
+        },
+        {
+          "item": "3",
+          "elicits": "selecting and executing a valid strategy for the closer pair 5/6 vs 8/9, producing the symbol, and writing the reasoning behind it"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these supervised, individual, paper-and-pencil conditions with novel number pairs, a teacher may conclude the student can choose and correctly execute a valid strategy for comparing two unlike fractions and can justify the resulting symbol with reasoning that names the strategy used.",
+      "does_not_support": [
+        "Does not confirm the student can compare fractions where the correct relation is '=', since none of items 1-3 are equivalent pairs.",
+        "Does not extend to comparing more than two fractions at once, ordering a set, or comparing a fraction to a whole number.",
+        "Does not distinguish reasoning that genuinely names the controlling feature of the chosen strategy from reasoning that restates the algorithm without understanding why it works.",
+        "Adjacent claim it is most likely to be mistaken for: G5C2's procedural fluency -- a correct common-denominator conversion here also demonstrates part of G5C2's construction step, so strong Part A results should not be read as confirming G5C2's simplifying/regrouping components, which Part A does not exercise."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, paper-and-pencil administration with AI prohibited and enforced, plus novel number pairs, means the strategy choice, execution, and written reasoning must be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Chooses a strategy among common denominator, benchmark, or visual model",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "'Then show how you know (a common denominator, a picture, or a benchmark like 1/2)' invites and records a choice of method.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Executes the chosen strategy correctly",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Students must 'show how you know' -- the worked method -- for each pair.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Shows reasoning that connects the strategy to the symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "The same instruction requires the justification alongside the symbol, not just the symbol.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of this claim are exercised by items 1-3 under conditions that satisfy independence, novelty, and claim-targeting; nothing is absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Gate 1 found every component of this claim already present in items 1-3 under conditions that satisfy independence, novelty, and claim-targeting; no absence exists to justify an intervention.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "constructing a common denominator for 1/2 and 1/3, combining the like-sized parts, and simplifying the result"
+        },
+        {
+          "item": "5",
+          "elicits": "constructing a common denominator for 5/6 and 1/4, subtracting like-sized parts, and simplifying"
+        },
+        {
+          "item": "6",
+          "elicits": "constructing a common denominator for 2 1/3 and 1 3/4, combining, and regrouping the improper result into a mixed number"
+        },
+        {
+          "item": "7",
+          "elicits": "applying the construct-combine-simplify procedure inside a word problem and expressing the result as a mixed number as instructed"
+        },
+        {
+          "item": "8",
+          "elicits": "applying the construct-combine-simplify procedure inside a subtraction word problem"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can construct a common denominator for two unlike fractions (including a mixed number), combine or compare the like-sized parts, and simplify or regroup the result where required.",
+      "does_not_support": [
+        "Does not establish that the procedure holds for denominators that are not small and closely related -- items use only 2, 3, 4, 6, 8, 9, and 12.",
+        "Does not distinguish a correct answer produced by understanding equivalence from one produced by a memorized rule applied without knowing why denominators must match, since Part B never asks for that reasoning.",
+        "Regrouping to a mixed number is directly exercised by only item 6 and item 7, a thinner base for that specific sub-skill than for construction and simplification, though still a present, scorable instance.",
+        "Adjacent claim it is most likely to be mistaken for: G5C3 -- a correct sum on items 4-8 is easily read as evidence the student also knows WHY adding denominators directly is wrong, but Part B never requires that explanation."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced leaves no channel for the written computation to be produced by anyone or anything other than the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs equivalent fractions with a common denominator",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "All five items require converting to a common denominator before combining, visible in the required work.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Combines or compares the like-sized parts (adds/subtracts numerators)",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Each item requires the resulting numeric sum or difference.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Simplifies the result to simplest form",
+            "items": [
+              "4",
+              "5",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "'Answers in simplest form' instruction for Part B; word problems require a final usable answer.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Regroups an improper result into a mixed number where the item requires it",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 6 sums to an improper total requiring regrouping; item 7 explicitly instructs 'write your answer as a mixed number.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every observable component of G5C2 is exercised at least once by items already on the assessment; nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "All components -- constructing common denominators, combining, simplifying, and regrouping -- are already exercised across items 4-8; no absence exists to justify an intervention.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "producing the correct sum via a common-denominator procedure (does not ask the student to state why adding denominators directly would be wrong)"
+        },
+        {
+          "item": "5",
+          "elicits": "producing the correct difference via a common-denominator procedure"
+        },
+        {
+          "item": "6",
+          "elicits": "producing the correct sum with regrouping via a common-denominator procedure"
+        },
+        {
+          "item": "7",
+          "elicits": "producing the correct sum inside a word problem"
+        },
+        {
+          "item": "8",
+          "elicits": "producing the correct difference inside a word problem"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "Students can compute the correct sum or difference of two unlike fractions using a common denominator, including regrouping to a mixed number where required.",
+      "supports": "Under these conditions, a teacher may conclude the student can produce a correct common-denominator sum or difference for unlike fractions; this evidence does not by itself establish that the student can state why adding the denominators directly is wrong.",
+      "does_not_support": [
+        "Does not establish that the student can articulate why adding denominators directly produces a wrong-sized part -- the specific diagnostic content the claim names and the teacher identifies as her annual reteach target.",
+        "Cannot distinguish a student who avoids the denominator-adding error because they understand why it is wrong from one who avoids it purely by following a memorized procedure.",
+        "No item presents an incorrect solution for the student to locate and repair, so there is no check on whether the student can recognize the error when it is not their own.",
+        "Adjacent claim it is most likely to be mistaken for: G5C2 -- a correct sum on items 4-8 is procedural evidence for G5C2 and is easily misread as also confirming G5C3's diagnostic reasoning, which no item here collects."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced means the computations that ARE collected must be produced by the student live."
+      },
+      "gap_statement": "We cannot tell from this assessment whether students can state why adding the denominators directly produces a wrong-sized part -- the specific reasoning the teacher named as her annual reteach target -- only that they can compute a correct sum or difference through proper procedure.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States why adding unlike denominators directly produces a wrong-sized part",
+            "items": [],
+            "status": "absent",
+            "evidence": "No item presents an incorrect or tempting wrong solution for the student to diagnose, and no item asks the student to explain the flaw in adding denominators directly; items 4-8 instruct only 'show every step' toward a correct answer.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          },
+          {
+            "component": "Gives the correct sum",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "'Answers in simplest form' plus shown work is required across Part B and Part C.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "States why adding unlike denominators directly produces a wrong-sized part",
+        "why": "This is the only component of G5C3 that is absent; it is the component the teacher herself names as the point of the claim ('I need to know they can say WHY... that is the thing I reteach every year'), it is not carried anywhere else in this assessment, and its absence leaves the diagnostic half of the claim completely unevidenced."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher intends to conclude, from this assessment, that students understand why the denominator-adding error is wrong, not merely that they avoid it; without any item eliciting that reasoning, this assessment cannot license that specific conclusion, and the teacher would otherwise read a clean set of correct sums as covering it."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "The gap can be closed by rewording a single existing item into a diagnose-style prompt, at no added item, no added grading item, and negligible added time -- clearly worth it against a claim the teacher flags as her central annual concern."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "modify_item",
+        "why_not_tier_1": "",
+        "modify": {
+          "item_ref": "4",
+          "current_text": "1/2 + 1/3 = ______ (Show every step. Answers in simplest form.)",
+          "replacement_text": "A student solved 1/2 + 1/3 by writing 2/5, adding the numerators and the denominators straight across. (a) In one sentence, explain why this gives a wrong-sized part. (b) Give the correct sum, showing every step. Answer in simplest form.",
+          "what_it_now_forces": "Requires the student to name the flaw in adding denominators directly, not only to compute a correct answer, closing the diagnostic half of the claim inside the same item slot."
+        },
+        "add": null,
+        "student_minutes": 1,
+        "scoring_seconds": 20
+      }
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, proctored_in_class, individual, AI prohibited_and_enforced, paper and pencil only, summative, 25 minutes; the item type has been practised but these particular numbers are new to the students.",
+  "reviewer_notes": "G5C1 and G5C2 are fully carried by items 1-8 as printed and need no change. G5C3's procedural half (giving the correct sum) is also carried by items 4-8, but its diagnostic half -- stating why adding denominators directly is wrong, which the teacher names as her central annual reteach target -- is not exercised by any current item. Rewording item 4 into a find-the-error prompt closes this at zero added cost."
+}

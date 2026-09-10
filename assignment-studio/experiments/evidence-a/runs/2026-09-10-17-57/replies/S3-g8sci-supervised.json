@@ -1,0 +1,376 @@
+{
+  "claims": [
+    {
+      "claim_id": "S1c",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "computing the average of three trial speeds for each of the four release heights and rounding each average to the nearest hundredth"
+        },
+        {
+          "item": "2",
+          "elicits": "plotting the four computed averages as a graph of speed against height and labelling both axes with units"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can compute average speed from repeated trials at each height and produce a correctly labelled graph of speed against height.",
+      "does_not_support": [
+        "Does not confirm the student can compute an average from messier data, such as a set containing an outlier trial or values requiring a different rounding rule.",
+        "Does not confirm graphing skill on a non-monotonic or otherwise differently shaped dataset, since this data increases steadily across all four heights.",
+        "Does not confirm the student can choose which variable belongs on which axis, since the item already specifies speed on the y-axis and height on the x-axis.",
+        "Does not confirm an appropriate, independently chosen scale, since the item does not specify or check grid spacing beyond labelling the axes with units."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The calculation and graph are produced by hand in one proctored sitting with only a calculator, paper and ruler, AI prohibited and enforced, so the averages and plotted points must be the student's own work."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Computes the average speed correctly for each of the four heights",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "'Calculate the average speed for each height and fill in the last column. Round to the nearest hundredth.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Produces a graph plotting the computed averages of speed against height",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "'Sketch a graph of average speed (y-axis) versus release height (x-axis).'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Labels both axes with units",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "'Label both axes with units.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components named in the claim, computing the averages, plotting them, and labelling both axes with units, are directly instructed and exercised by items 1 and 2. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Items 1 and 2 directly instruct and exercise every observable part of this procedural claim.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "S2c",
+      "items": [
+        {
+          "item": "3",
+          "elicits": "writing one sentence that states a relationship between release height and the cart's speed at the bottom"
+        },
+        {
+          "item": "4",
+          "elicits": "citing at least two specific numbers from the table as support, explicitly reporting what happens to speed across both doublings, 10 cm to 20 cm and 20 cm to 40 cm"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can state a claim about how speed relates to release height and support it with specific numerical comparisons drawn from the table, including both of the required doublings.",
+      "does_not_support": [
+        "Does not confirm the claim identifies the precise mathematical form of the relationship, such as square-root-like growth; only a qualitative description of the relationship is required.",
+        "Does not confirm the student can construct comparisons from a table that is not already sorted in ascending, aligned order.",
+        "Does not require comparisons beyond the two mandated doublings, so it does not test whether the student can independently choose which numbers are the most informative to cite.",
+        "Adjacent claim it could be mistaken for: explaining why the relationship looks the way it does, which is the separate conceptual content of S3c and is not required here."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The claim and evidence are handwritten in one proctored sitting with AI prohibited and enforced, and the instruction explicitly requires citing the two specific doubling comparisons, so the response must reflect the student's own reading of the table."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States a one-sentence claim about how speed relates to height",
+            "items": [
+              "3"
+            ],
+            "status": "present",
+            "evidence": "'Write one sentence stating how the cart's speed at the bottom is related to its release height.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Supports the claim with at least two specific numbers from the table",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "'Support your claim with at least two specific numbers from the table.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "The comparisons cited include both required doublings, 10 to 20 cm and 20 to 40 cm",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "'Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of the claim, stating the claim, citing specific numbers, and covering both named doublings, are directly instructed and exercised by items 3 and 4. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 4 explicitly names both required doublings and demands specific numbers, so the claim is exercised in full.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "S3c",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "writing a prose explanation that uses the terms gravitational potential energy and kinetic energy; the instruction does not require the explanation to reference the specific numbers or shape of this dataset, so it can be satisfied by a generic energy-transfer statement as well as by one tied to the observed pattern"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": false,
+      "narrower_inference": "This assessment supports that the student can name and describe the gravitational-potential-to-kinetic energy transfer mechanism in grade-appropriate terms. It does not confirm, as item 5 is worded, that the student connects that mechanism specifically to the pattern observed in this dataset, since nothing in the prompt requires the explanation to refer back to the data or graph.",
+      "supports": "This assessment supports the conclusion that the student can describe, in grade-appropriate language, the idea that gravitational potential energy transfers to kinetic energy as the cart descends.",
+      "does_not_support": [
+        "Does not confirm, as worded, that the explanation is tied to the specific pattern in this dataset rather than a memorized generic statement about potential energy converting to kinetic energy, since item 5 never asks the student to refer back to the numbers or the graph.",
+        "Does not require quantitative reasoning, such as the square-root relationship between speed and height; only a grade-appropriate qualitative account is asked for.",
+        "Does not distinguish an explanation of why speed increases with height from an explanation of why that increase is not proportional; the latter is the diagnostic content of S4c and is not required here.",
+        "Adjacent claim it could be mistaken for: recall of the definitions of gravitational potential energy and kinetic energy in isolation, rather than their explanatory use for this specific pattern."
+      ],
+      "delegation": {
+        "answer": "partly",
+        "reason": "The prompt does not require the explanation to reference the specific pattern in this data, so under supervision a memorized generic sentence about potential energy converting to kinetic energy could satisfy it without demonstrating engagement with what was actually observed."
+      },
+      "gap_statement": "We cannot tell from this assessment, as item 5 is worded, whether the student's explanation is genuinely connected to the specific pattern observed in this data or is a memorized general statement about potential and kinetic energy conversion.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States the gravitational-potential-to-kinetic energy transfer mechanism in grade-appropriate language",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "'Use the ideas of gravitational potential energy and kinetic energy in your explanation.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Connects that mechanism specifically to the pattern observed in this dataset, rather than describing the mechanism in the abstract",
+            "items": [],
+            "status": "absent",
+            "evidence": "Item 5 reads 'Explain why the relationship looks the way it does. Use the ideas of gravitational potential energy and kinetic energy in your explanation.' It never asks the student to refer to a specific number, the graph, or the shape of the increase, unlike item 4, which explicitly requires citing table numbers.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Connects the energy-transfer mechanism specifically to the pattern observed in this dataset",
+        "why": "This is the one component not present. The claim is explicitly to explain THE PATTERN, not energy transfer in the abstract, so this belongs to the inference; nothing in the assessment shows it is checked elsewhere; and its absence narrows support because a fully generic, memorized explanation disconnected from the actual data could satisfy the item as worded."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The claim is specifically about explaining the pattern in this data, not energy concepts in general. Because the item does not require the explanation to reference the data or graph, a teacher could credit a rote, generic energy-transfer sentence as evidence of understanding this specific pattern when the item never actually required that connection."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "The fix is a short addition to the existing prompt asking the student to refer to the data or graph, at no added items, time, or scoring burden, and it directly targets the missing link between mechanism and pattern."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "modify_item",
+        "why_not_tier_1": "",
+        "modify": {
+          "item_ref": "5",
+          "current_text": "Explain why the relationship looks the way it does. Use the ideas of gravitational potential energy and kinetic energy in your explanation.",
+          "replacement_text": "Explain why the relationship looks the way it does, referring to the pattern you see in your data or graph (for example, what happens to the increase in speed as the height gets larger). Use the ideas of gravitational potential energy and kinetic energy in your explanation.",
+          "what_it_now_forces": "The student must tie the energy-transfer mechanism to the specific shape of this dataset, so a generic, memorized sentence about potential energy converting to kinetic energy that never engages with the actual numbers or graph no longer satisfies the prompt."
+        },
+        "add": null,
+        "student_minutes": 0,
+        "scoring_seconds": 0
+      }
+    },
+    {
+      "claim_id": "S4c",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "evaluating a stated 'twice as fast' proportional claim, deciding to agree or disagree, and citing the actual pattern in the table or graph as the basis for that decision"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can recognise that the data do not follow simple proportional (doubling) reasoning and can disagree with a 'twice as fast' claim by citing the actual pattern in the numbers.",
+      "does_not_support": [
+        "Does not require computing the specific numeric ratio between speeds to justify disagreement; a qualitative citation of the pattern may be enough, so this does not confirm precise ratio computation.",
+        "Does not confirm recognition of non-proportionality in a dataset where a doubling claim looks numerically closer to true; here the pattern (roughly 1.4 times, not 2 times, across each doubling) is comparatively easy to spot as a contradiction.",
+        "Does not test the student's response to a proportional claim framed a different way, such as a claim about a tripling or halving rather than a doubling.",
+        "Adjacent claim it could be mistaken for: producing a precise quantitative extrapolation, which is the separate content of S5c and is not required here."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The judgment is handwritten in one proctored sitting with AI prohibited and enforced, and the instruction explicitly requires using the pattern in the data, so the response must reflect the student's own reading of the table."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Recognises and states disagreement with the proportional ('twice as fast') claim",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "'Do you agree?' directly asks the student to take and state a position.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Cites the pattern in the numbers as the basis for that disagreement",
+            "items": [
+              "6"
+            ],
+            "status": "present",
+            "evidence": "'Use the pattern in the data to explain.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of the claim, disagreeing with the proportional claim and citing the data pattern as the reason, are directly instructed and exercised by item 6. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 6 directly asks for agreement or disagreement and explicitly requires using the data pattern as justification, unlike item 5, so the diagnostic content of this claim is already anchored to the specific dataset.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "S5c",
+      "items": [
+        {
+          "item": "7",
+          "elicits": "producing a numeric prediction of average speed at 50 cm, a height just beyond the measured 10-40 cm range, and stating the method used to arrive at it"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "This assessment supports the conclusion that the student can extrapolate a plausible prediction just beyond the measured range and state the method used to produce it.",
+      "does_not_support": [
+        "Does not confirm the student can extrapolate further beyond the measured range, where a simple graphical or pattern-continuation method is more likely to break down; 50 cm is a modest, one-step extension from the 40 cm maximum.",
+        "Does not confirm the prediction is derived from the correct underlying physics relationship rather than a rough graphical or pattern-based estimate, since either method can satisfy 'explain how you made your prediction.'",
+        "Does not test recognising when extrapolation becomes invalid, such as beyond the ramp's physical limits, since 50 cm is a safe extension.",
+        "Adjacent claim it could be mistaken for: the conceptual gravitational-potential-to-kinetic-energy explanation of S3c, since a student might justify the prediction using energy ideas, but this claim is specifically about producing and explaining the extrapolation method, not the mechanism."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The prediction and method statement are handwritten in one proctored sitting with only a calculator, paper and ruler, AI prohibited and enforced, so the extrapolation must be the student's own work."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Produces a numeric prediction for a height just beyond the measured range",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "'Predict the average speed for a release height of 50 cm.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States the method used to arrive at the prediction",
+            "items": [
+              "7"
+            ],
+            "status": "present",
+            "evidence": "'Explain how you made your prediction.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components of the claim, the numeric prediction and the stated method, are directly instructed and exercised by item 7. Nothing is left absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Gate 1 identified no absent component, so gate 2 was not reached."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Gate 2 was not reached."
+      },
+      "why_no_intervention": "Item 7 directly requires both the numeric prediction and a stated method, and 50 cm sits just beyond the measured range as the claim specifies.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Grade 8 Physical Science, end of the energy unit, proctored_in_class, individual work, AI prohibited_and_enforced, calculator/paper/ruler only, summative, 30 minutes; the class collected this data together, so the raw numbers are familiar, but the analysis questions (items 1-7) are new to the students.",
+  "reviewer_notes": "This is an efficient CER worksheet: each of the five claims maps to one or two items with little overlap or redundant burden. S1c, S2c, S4c, and S5c are already fully carried by their items as written. The one real gap is in S3c: item 5 asks the student to explain the relationship using gravitational potential energy and kinetic energy, but unlike item 4 (which explicitly forces citation of table numbers) it never requires the explanation to reference the specific data or graph, so a generic, memorized energy-transfer sentence could satisfy it without demonstrating engagement with the pattern actually observed. A short addition to the existing prompt closes this at no added cost."
+}

@@ -1,0 +1,308 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "circling one of three symbols for 3/4 vs 5/8, with no work or reasoning collected or permitted"
+        },
+        {
+          "item": "2",
+          "elicits": "circling one of three symbols for 2/3 vs 7/12, with no work or reasoning collected or permitted"
+        },
+        {
+          "item": "3",
+          "elicits": "circling one of three symbols for 5/6 vs 8/9, with no work or reasoning collected or permitted"
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "Under these conditions, this evidence supports only that the student circled the correct comparison symbol for three novel unlike-fraction pairs; it does not license any conclusion about which strategy, if any, produced that symbol.",
+      "does_not_support": [
+        "Does not establish that the student used a valid strategy (common denominator, benchmark, or visual model) to reach the symbol, since no work is collected and none is permitted ('Do not show work').",
+        "Cannot distinguish a student who reasoned correctly from one who guessed among three options; on a 3-choice item the guess rate is roughly one in three per item, and this caveat applies because no reasoning is collected alongside the selected-response answer.",
+        "Does not verify execution of any comparison procedure at all -- only the final symbol is visible.",
+        "Adjacent claim it is most likely to be mistaken for: a correct set of three circled symbols is easily read as confirming the full conceptual claim (choice, execution, and reasoning), when it is at most weak evidence of the final answer alone."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervision and the AI prohibition remove any outside-agent channel for producing the circled answer; the weakness here is guessability and missing reasoning, not delegation."
+      },
+      "gap_statement": "We cannot tell from Part A whether a student who circled the correct symbol did so through a valid strategy or through guessing among three options, since no strategy, execution, or reasoning is collected or permitted.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Chooses a strategy among common denominator, benchmark, or visual model",
+            "items": [],
+            "status": "absent",
+            "evidence": "'Circle the correct symbol. Do not show work.' explicitly forecloses recording a strategy.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          },
+          {
+            "component": "Executes the chosen strategy correctly",
+            "items": [],
+            "status": "absent",
+            "evidence": "Same instruction; no method is visible, only the final circled symbol.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          },
+          {
+            "component": "Shows reasoning that connects the strategy to the symbol",
+            "items": [],
+            "status": "absent",
+            "evidence": "'Do not show work' explicitly prohibits recording reasoning.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Shows reasoning that connects the strategy to the symbol (and, in doing so, reveals which strategy was chosen and how it was executed)",
+        "why": "All three sub-components are absent for the same reason -- the item format forbids showing work -- but reasoning is the one component whose restoration also recovers evidence of the other two, since a written justification necessarily names the strategy and shows its execution; carrying it forward closes the whole gap in one move."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher intends to conclude students can choose and execute a valid comparison strategy and justify it; a 3-option circled answer with no reasoning does not license that conclusion, and without a fix the teacher would likely read a set of correct circles as confirming exactly that."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "Restoring the 'show how you know' instruction costs nothing beyond the writing time already budgeted for a 25-minute session structured like this one (the same task is used, with that instruction, elsewhere in this experiment), and it closes the gap completely."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "modify_item",
+        "why_not_tier_1": "",
+        "modify": {
+          "item_ref": "Part A instructions (items 1-3)",
+          "current_text": "Circle the correct symbol. Do not show work.",
+          "replacement_text": "Circle the correct symbol. Then show how you know (a common denominator, a picture, or a benchmark like 1/2).",
+          "what_it_now_forces": "Requires the student to externalize the strategy and reasoning behind the circled symbol, restoring the observable process this claim needs instead of only the endpoint answer."
+        },
+        "add": null,
+        "student_minutes": 3,
+        "scoring_seconds": 45
+      }
+    },
+    {
+      "claim_id": "G5C2",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "constructing a common denominator for 1/2 and 1/3, combining the like-sized parts, and simplifying the result"
+        },
+        {
+          "item": "5",
+          "elicits": "constructing a common denominator for 5/6 and 1/4, subtracting like-sized parts, and simplifying"
+        },
+        {
+          "item": "6",
+          "elicits": "constructing a common denominator for 2 1/3 and 1 3/4, combining, and regrouping the improper result into a mixed number"
+        },
+        {
+          "item": "7",
+          "elicits": "applying the construct-combine-simplify procedure inside a word problem and expressing the result as a mixed number as instructed"
+        },
+        {
+          "item": "8",
+          "elicits": "applying the construct-combine-simplify procedure inside a subtraction word problem"
+        },
+        {
+          "item": "9",
+          "elicits": "incidentally producing a correct sum via proper common-denominator procedure while diagnosing a different student's error"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can construct a common denominator for two unlike fractions (including a mixed number), combine or compare the like-sized parts, and simplify or regroup the result where required.",
+      "does_not_support": [
+        "Does not establish that the procedure holds for denominators that are not small and closely related -- items use only 2, 3, 4, 6, 8, 9, and 12.",
+        "Does not distinguish a correct answer produced by understanding equivalence from one produced by a memorized rule applied without knowing why denominators must match.",
+        "Regrouping to a mixed number is directly exercised by only item 6 and item 7, a thinner base for that specific sub-skill than for construction and simplification, though still a present, scorable instance.",
+        "Adjacent claim it is most likely to be mistaken for: G5C3 -- a correct sum on items 4-8 is easily read as evidence the student also knows WHY adding denominators directly is wrong; item 9 is the only item that actually asks for that reasoning."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced leaves no channel for the written computation to be produced by anyone or anything other than the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs equivalent fractions with a common denominator",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "All five items require converting to a common denominator before combining, visible in the required work.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Combines or compares the like-sized parts (adds/subtracts numerators)",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Each item requires the resulting numeric sum or difference.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Simplifies the result to simplest form",
+            "items": [
+              "4",
+              "5",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "'Answers in simplest form' instruction for Part B; word problems require a final usable answer.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Regroups an improper result into a mixed number where the item requires it",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 6 sums to an improper total requiring regrouping; item 7 explicitly instructs 'write your answer as a mixed number.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Every observable component of G5C2 is exercised at least once by items already on the assessment; nothing is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "All components -- constructing common denominators, combining, simplifying, and regrouping -- are already exercised across items 4-8; no absence exists to justify an intervention.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "producing the correct sum via a common-denominator procedure"
+        },
+        {
+          "item": "5",
+          "elicits": "producing the correct difference via a common-denominator procedure"
+        },
+        {
+          "item": "6",
+          "elicits": "producing the correct sum with regrouping via a common-denominator procedure"
+        },
+        {
+          "item": "7",
+          "elicits": "producing the correct sum inside a word problem"
+        },
+        {
+          "item": "8",
+          "elicits": "producing the correct difference inside a word problem"
+        },
+        {
+          "item": "9",
+          "elicits": "identifying why adding 1/2 and 1/4 straight across (numerator+numerator, denominator+denominator) gives a wrong-sized part, and producing the correct sum via proper common-denominator procedure"
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under these conditions, a teacher may conclude the student can identify why adding unlike denominators directly produces a wrong-sized part and can produce the correct sum, since item 9 requires both under supervised, novel, paper-and-pencil conditions.",
+      "does_not_support": [
+        "Item 9 tests the error on one specific fraction pair (1/2 + 1/4); it does not confirm the explanation generalizes to pairs where the wrong-sized-part error is less visually obvious.",
+        "Does not verify the student can spot the same error inside their own work rather than someone else's; item 9 presents a third-party mistake to diagnose, which is a different (and generally easier) task than self-monitoring.",
+        "No selected-response item is used for this claim (item 9 is constructed-response), so no guess-rate caveat applies here.",
+        "Adjacent claim it is most likely to be mistaken for: a strong item 9 response could be over-read as evidence for all of G5C2's procedural sub-skills, e.g. regrouping to a mixed number, which item 9's specific numbers do not require."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Supervised, individual, paper-and-pencil work with AI prohibited and enforced means item 9's explanation and correction must be produced live by the student."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States why adding unlike denominators directly produces a wrong-sized part",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "'Explain what the student did wrong' directly requires this.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Gives the correct sum",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ],
+            "status": "present",
+            "evidence": "'...and show the correct answer' in item 9, plus the correct-sum requirement across Part B and Part C.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both components of G5C3 are exercised -- item 9 supplies the diagnostic reasoning this claim specifically names, and items 4-9 supply the correct-sum component -- so nothing is absent to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached -- Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached -- Gate 1 stopped further evaluation."
+      },
+      "why_no_intervention": "Item 9 exercises the diagnostic reasoning this claim requires, and items 4-9 exercise the correct-sum component; no component is absent.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, proctored_in_class, individual, AI prohibited_and_enforced, paper and pencil only, summative, 25 minutes; the item type has been practised but these particular numbers are new to the students.",
+  "reviewer_notes": "G5C2 and G5C3 are fully carried: items 4-8 supply G5C2's procedural evidence, and item 9's find-the-mistake prompt supplies G5C3's diagnostic reasoning. G5C1 is the weak point: converting Part A to a no-work, circle-the-symbol format removes the process evidence (strategy choice, execution, reasoning) this conceptual claim requires, leaving only a guessable final answer. Restoring the 'show how you know' instruction to Part A closes the gap at no added cost."
+}

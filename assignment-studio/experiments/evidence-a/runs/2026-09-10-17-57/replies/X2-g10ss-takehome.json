@@ -1,0 +1,396 @@
+{
+  "claims": [
+    {
+      "claim_id": "H1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "For each of Document 1 and Document 2, states the author, the year, and the audience the author was most likely trying to reach, one line each."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence can only confirm that a compliant sourcing response -- author, year, and audience for each document -- was returned; it cannot confirm that H1 describes what the student personally can do.",
+      "does_not_support": [
+        "Whether the student, rather than an AI assistant or a quick internet search, produced the author/year/audience answers -- authorship is indistinguishable under these conditions.",
+        "Whether the student can source an unfamiliar document under any time constraint, since time is not stated and any resource, including AI, is permitted.",
+        "This is easily mistaken for evidence of H3 (explaining authorial motive), but H1 only requires factual identification, not an explanation of why the author wrote as they did.",
+        "Whether the audience answer reflects reading-based inference from the document's own language versus a fact looked up about the publication."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "AI is permitted and the work is unsupervised, so a model or a quick search can return the author, year, and audience for a named, published document without the student reading it."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, rather than an outside resource, identified each document's author, year, and audience.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies the author of each document",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'identify the author ... for each document.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Identifies the year of each document",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'the year.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Identifies the audience the author was most likely trying to reach, for each document",
+            "items": [
+              "1"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'the audience the author was most likely trying to reach.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Independent production: the sourcing answers is visibly the student's own work, not an outside resource's",
+            "items": [],
+            "status": "absent",
+            "evidence": "Declared conditions: supervision unsupervised, AI policy permitted, resources anything at home/internet/AI, sent home over a week; no item is produced where outside help is excluded or visible.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Independent production: the sourcing answers are visibly the student's own work, not an outside resource's",
+        "why": "All three named sourcing components are directly exercised by item 1. The one genuinely absent, material component is independent production -- the response cannot be attributed to the student under unsupervised, AI-permitted conditions, and nothing elsewhere in the packet supplies that."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and individual; without independent production the teacher cannot conclude this student can source a document, only that a correct-looking sourcing statement was returned."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One fresh unfamiliar document, sourced in class in about 3 minutes with seconds to score, recovers the missing independent evidence at negligible cost."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "add_observation",
+        "why_not_tier_1": "Item 1 already asks for exactly the right three facts; the gap is not in its wording. It is that the declared conditions (unsupervised, AI permitted, at home) mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+        "modify": null,
+        "add": {
+          "primitive": "Transfer",
+          "item_text": "In class: Read this short excerpt [a brief, unfamiliar primary-source excerpt from the same period, not covered in the unit]. Identify the author, year, and the audience the author was most likely trying to reach. One line each.",
+          "variant_rule": "Swap in a new brief (3-5 sentence) primary-source excerpt each period, same era and topic area but not used in the unit; keep the three-part response format (author, year, audience) fixed.",
+          "conditions": "proctored_in_class, individual, no notes/internet/AI, about 3 minutes.",
+          "sufficiency_line": "A correct author, year, and a plausible, text-grounded audience for a document the student has not seen before is enough to attribute the sourcing move in H1 to the student.",
+          "why_this_primitive": "Transfer moves the same sourcing task to an unfamiliar document, which is exactly what distinguishes reading the document from having memorized or looked up facts about a known one."
+        },
+        "student_minutes": 3,
+        "scoring_seconds": 30
+      }
+    },
+    {
+      "claim_id": "H2",
+      "items": [
+        {
+          "item": "2",
+          "elicits": "States, in one sentence each, how Document 1 and Document 2 explain the same fact (the rich-poor gap) differently."
+        },
+        {
+          "item": "3",
+          "elicits": "Chooses one word or phrase from each document that shows the author's attitude toward great fortunes, and explains what the word choice reveals."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence can only confirm that a compliant response -- a causal contrast between the two documents and a word-choice explanation for each -- was returned; it cannot confirm that H2 describes what the student personally can do.",
+      "does_not_support": [
+        "Whether the student, rather than an AI assistant, produced the causal contrast and the word-choice explanation -- authorship is indistinguishable under these conditions.",
+        "Whether the student can identify an attitude-revealing word choice unprompted, since item 3 already directs attention to word choice as the thing to look for.",
+        "This is easily mistaken for evidence of H4's point-of-view weighting, but H2 only asks the student to state and contrast the two accounts, not to weigh one against the other in an argument.",
+        "Whether the causal contrast reflects the student's own reading versus a second-hand summary of the documents' arguments that an outside tool could generate without the primary text."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "AI is permitted and the work is unsupervised, so a model given the two excerpts can generate both the causal contrast and the word-choice explanation directly."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, rather than an outside resource, contrasted the two authors' causal explanations and read the word choice for attitude.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "States how Document 1 explains the wealth gap",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'state how Document 1 explains where that gap came from.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States how Document 2 explains the wealth gap",
+            "items": [
+              "2"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'state ... how Document 2 explains where it came from.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Selects a word/phrase from each document and explains what it reveals about attitude",
+            "items": [
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'Choose one word or phrase from each document ... Explain what the word choice reveals.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Independent production: the contrast-and-attitude-reading is visibly the student's own work, not an outside resource's",
+            "items": [],
+            "status": "absent",
+            "evidence": "Declared conditions: supervision unsupervised, AI policy permitted, resources anything at home/internet/AI, sent home over a week; no item is produced where outside help is excluded or visible.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Independent production: the contrast-and-attitude-reading is visibly the student's own work, not an outside resource's",
+        "why": "All three named components of H2 are directly exercised by items 2-3. The one genuinely absent, material component is independent production -- the response cannot be attributed to the student under unsupervised, AI-permitted conditions, and nothing elsewhere in the packet supplies that."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and individual; without independent production the teacher cannot conclude this student can contrast causal explanations and read attitude from word choice, only that a correct-looking response was returned."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One fresh short excerpt pair, contrasted and read for attitude in about 5 minutes with under a minute to score, recovers the missing independent evidence at low cost."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "add_observation",
+        "why_not_tier_1": "Items 2-3 already ask for exactly the right two moves (causal contrast, word-choice reading); the gap is not in their wording. It is that the declared conditions mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+        "modify": null,
+        "add": {
+          "primitive": "Transfer",
+          "item_text": "In class: Read these two short excerpts describing the same event from different perspectives [new, brief, 2-3 sentence excerpts]. In one sentence each, state how excerpt A and excerpt B explain the shared fact differently. Then choose one word or phrase from each that shows the author's attitude, and say what it reveals.",
+          "variant_rule": "Swap in a new pair of brief excerpts describing a shared fact from opposing viewpoints each period, kept within the same unit/topic so no new background knowledge is required; keep the two-part response format (causal contrast + word-choice explanation) fixed.",
+          "conditions": "proctored_in_class, individual, no notes/internet/AI, about 5 minutes.",
+          "sufficiency_line": "A correct one-sentence causal statement for each excerpt plus a word/phrase pick with an accurate explanation of what it reveals is enough to attribute the contrast-and-attitude-reading in H2 to the student.",
+          "why_this_primitive": "Transfer keeps the same two-document contrast-and-read-for-attitude move but moves it to unfamiliar text, isolating the reading skill from prior exposure or outside help."
+        },
+        "student_minutes": 5,
+        "scoring_seconds": 40
+      }
+    },
+    {
+      "claim_id": "H3",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "Explains, for each author, why they would write as they did given their known position in 1889-1892."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence can only confirm that a compliant response -- a plausible position-to-purpose explanation for each author -- was returned; it cannot confirm that H3 describes what the student personally can do.",
+      "does_not_support": [
+        "Whether the student, rather than an AI assistant, produced the explanation of why each author wrote as they did -- authorship is indistinguishable under these conditions.",
+        "Whether the student's reasoning draws on position/context knowledge taught in this unit specifically, or on general knowledge an outside tool supplies about any historical author.",
+        "This is easily mistaken for evidence of H4's point-of-view weighting, but H3 only asks for a motive explanation, not for using that motive to weigh evidence within an argument.",
+        "One item covering two already-studied authors is a single instance of this reasoning move; it does not show the move transfers to an author the student has not already discussed in class."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "AI is permitted and the work is unsupervised, so a model can generate a plausible motive explanation for each author from their well-documented historical position without the student reasoning about it."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, rather than an outside resource, explained why each author would write as they did given their position.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Explains why Carnegie would write Document 1, tied to his position",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'Why might Carnegie ... have written Document 1? ... Use what you know about each author's position.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Explains why the Populist party would write Document 2, tied to its position",
+            "items": [
+              "4"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'Why might a farmers' and workers' party have written Document 2?'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Independent production: the position-to-purpose explanations is visibly the student's own work, not an outside resource's",
+            "items": [],
+            "status": "absent",
+            "evidence": "Declared conditions: supervision unsupervised, AI policy permitted, resources anything at home/internet/AI, sent home over a week; no item is produced where outside help is excluded or visible.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Independent production: the position-to-purpose explanations are visibly the student's own work, not an outside resource's",
+        "why": "Both named components of H3 are directly exercised by item 4. The one genuinely absent, material component is independent production -- the response cannot be attributed to the student under unsupervised, AI-permitted conditions, and nothing elsewhere in the packet supplies that."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and individual, and this is the only item touching H3; without independent production the teacher has no basis for concluding this student can make this reasoning move."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One fresh author/document, explained in class in about 3 minutes with seconds to score, recovers the missing independent evidence at negligible cost."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "smallest_change": {
+        "tier": "add_observation",
+        "why_not_tier_1": "Item 4 already asks for exactly the right reasoning move for both authors; the gap is not in its wording. It is that the declared conditions mean the response cannot be attributed to the student, and no rewording changes who or what produced it.",
+        "modify": null,
+        "add": {
+          "primitive": "Transfer",
+          "item_text": "In class: Given [a new author/document excerpt whose position is stated or already known to the class], why might this author have written as they did, given their position at the time? One line.",
+          "variant_rule": "Swap in a new author/document whose position is stated or already discussed in class each period; keep the one-line position-to-purpose response format fixed.",
+          "conditions": "proctored_in_class, individual, no notes/internet/AI, about 3 minutes.",
+          "sufficiency_line": "A one-line explanation that correctly ties the new author's position to a plausible reason for writing as they did is enough to attribute this reasoning move in H3 to the student.",
+          "why_this_primitive": "Transfer applies the same position-to-purpose reasoning to an author the student has not already analyzed in class, isolating the reasoning move from having already worked out these two authors' motives together."
+        },
+        "student_minutes": 3,
+        "scoring_seconds": 25
+      }
+    },
+    {
+      "claim_id": "H4",
+      "items": [
+        {
+          "item": "5",
+          "elicits": "Constructs a two-paragraph argument that takes a position addressing both documents, cites evidence from each, explicitly weighs that evidence by each author's point of view, and connects one outside development from the period."
+        }
+      ],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This evidence can only confirm that a compliant two-paragraph argument meeting the rubric's five content elements was returned; it cannot confirm that H4 describes what the student personally can do.",
+      "does_not_support": [
+        "Whether the student, rather than an AI assistant, constructed the argument, selected the evidence, and made the point-of-view weighting explicit -- an unsupervised, AI-permitted take-home cannot distinguish a student's writing from an AI-drafted or AI-revised response.",
+        "Whether the student can do this under any time constraint, since time is not stated and resources, including AI, are unconstrained.",
+        "Whether the outside-development connection reflects the student's own recalled knowledge versus a fact looked up for the occasion.",
+        "The rubric's organization-and-clarity point is not evidence of the reasoning skill itself and can be produced or polished by an outside tool regardless of whether the ideas are the student's own."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "AI is permitted and the work is unsupervised, so a model can draft the entire two-paragraph argument, including evidence selection, point-of-view weighting language, and the outside-development connection."
+      },
+      "gap_statement": "We cannot tell from this assessment whether the student, rather than an outside resource, constructed the argument, weighed the evidence by point of view, and made the outside-development connection.",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Takes a position that addresses both documents",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'takes a position that accounts for both documents.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Uses evidence from each document",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'uses at least one piece of evidence from each document.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Explicitly weights the evidence by point of view",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'explains how the point of view of each author affects how much weight you give their claim.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Connects one accurate outside development from the period",
+            "items": [
+              "5"
+            ],
+            "status": "present",
+            "evidence": "Instruction: 'connects the documents to at least one specific development from the period.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Independent production: the argument is visibly the student's own work, not an outside resource's",
+            "items": [],
+            "status": "absent",
+            "evidence": "Declared conditions: supervision unsupervised, AI policy permitted, resources anything at home/internet/AI, sent home over a week; no item is produced where outside help is excluded or visible.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Independent production: the argument is visibly the student's own work, not an outside resource's",
+        "why": "All four named content components of H4 are directly required and scored by item 5's rubric. The one genuinely absent, material component is independent production -- the response cannot be attributed to the student under unsupervised, AI-permitted conditions, and nothing elsewhere in the packet supplies that."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The purpose is summative and individual, and H4 is the assessment's central claim; without independent production the teacher cannot conclude this student can construct and weigh this kind of argument, only that a compliant-looking essay was returned."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "Independent evidence for H4 would clearly matter to the summative conclusion -- it is the assessment's central claim -- so pursuing it is worth it in principle, even though (see no_short_check_reason) no short version of the check exists."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "H4 asks for a sustained, two-paragraph argument that integrates both documents, weighs them by point of view, and connects an outside development -- each move depends on the others for its meaning, so no few-minute item can require the whole chain without either pre-selecting the evidence or the weighting for the student (removing the judgment being assessed) or ceasing to be short. The only way to get an independent observation of H4 itself is to have the student write this same kind of argument under supervision, which is a different administration of the task, not a small addition to this one.",
+      "over_verified_note": "",
+      "smallest_change": null
+    }
+  ],
+  "conditions_echo": "Unsupervised, individual, AI-permitted take-home summative assessment, sent home over a week at the end of the industrialization unit; the two documents are new to the students, but sourcing practice has been done on other documents.",
+  "reviewer_notes": "H1-H3 share one defect: the items ask for the right moves, but unsupervised, AI-permitted take-home conditions mean no response can be attributed to the student, and a short (3-5 minute) supervised check recovers each at low cost. H4 is different in kind -- it is a sustained, integrated argument, and no short check can reach it without pre-digesting the very judgment being assessed. Recovering independent evidence for H4 requires administering this same kind of writing task under supervision; that is a conditions decision for the teacher to make about the assessment as a whole, not a two-minute addition to this one."
+}
