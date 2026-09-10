@@ -1,0 +1,17 @@
+{
+  "_note": "Gate-level expectations for A2, written before the gated prompt ran. These do not replace groundtruth/expected.json — they add the mechanism-level prediction for the diagnostic cases, so a right answer reached by the wrong route is visible.",
+  "expected_stop": {
+    "V1-g5-over-verified/G5C2": { "gate": ["gate1", "gate3"], "why": "The element is present three times over (solution box, explanation box, conference). If it reaches gate 3, 'already collecting more than the claim needs' must stop it there." },
+    "S5-calc-supervised/K3": { "gate": ["gate1"], "why": "Item 6 already is a Diagnose item; A1 proposed a Diagnose item for a claim carried by one." },
+    "S3-g8sci-supervised/S3c": { "gate": ["gate1", "gate2"], "why": "Item 5 compels the GPE-to-KE explanation; if judged narrow, the narrowness is not material for a 30-minute assessment." },
+    "S1-g5-supervised/G5C2": { "gate": ["gate1"], "why": "Five worked items with all work shown under supervision. This is the claim A1 flipped in 2 of 5 identical repeats." },
+    "P1-g5-no-diagnose/G5C2": { "gate": ["gate1"], "why": "Untouched by the planted deletion." },
+    "P2-g5-selected-response/G5C2": { "gate": ["gate1"], "why": "Untouched by the planted narrowing." }
+  },
+  "expected_pass_all_gates": [
+    "P1-g5-no-diagnose/G5C3", "P2-g5-selected-response/G5C1", "P3-g8sci-no-item6/S4c",
+    "X1-g5-takehome/G5C1", "X1-g5-takehome/G5C2", "X1-g5-takehome/G5C3",
+    "X2-g10ss-takehome/H1", "X2-g10ss-takehome/H2", "X2-g10ss-takehome/H3",
+    "X3-calc-takehome/K1", "X3-calc-takehome/K2", "X3-calc-takehome/K3"
+  ]
+}

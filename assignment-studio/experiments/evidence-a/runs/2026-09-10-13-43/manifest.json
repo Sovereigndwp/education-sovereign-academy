@@ -1,0 +1,119 @@
+{
+ "experiment": "evidence-a2-2026-09-10-gates-v1",
+ "generation": "A2",
+ "mode": "emit",
+ "model": "(external)",
+ "at": "2026-09-10T13:43:35.752Z",
+ "jobs": [
+  {
+   "name": "S1-g5-supervised__run1",
+   "kind": "judgment",
+   "case_id": "S1-g5-supervised"
+  },
+  {
+   "name": "S1-g5-supervised__run2",
+   "kind": "judgment",
+   "case_id": "S1-g5-supervised"
+  },
+  {
+   "name": "S1-g5-supervised__run3",
+   "kind": "judgment",
+   "case_id": "S1-g5-supervised"
+  },
+  {
+   "name": "S1-g5-supervised__run4",
+   "kind": "judgment",
+   "case_id": "S1-g5-supervised"
+  },
+  {
+   "name": "S1-g5-supervised__run5",
+   "kind": "judgment",
+   "case_id": "S1-g5-supervised"
+  },
+  {
+   "name": "S2-g8ela-supervised",
+   "kind": "judgment",
+   "case_id": "S2-g8ela-supervised"
+  },
+  {
+   "name": "S3-g8sci-supervised",
+   "kind": "judgment",
+   "case_id": "S3-g8sci-supervised"
+  },
+  {
+   "name": "S4-g10ss-supervised",
+   "kind": "judgment",
+   "case_id": "S4-g10ss-supervised"
+  },
+  {
+   "name": "S5-calc-supervised",
+   "kind": "judgment",
+   "case_id": "S5-calc-supervised"
+  },
+  {
+   "name": "X1-g5-takehome",
+   "kind": "judgment",
+   "case_id": "X1-g5-takehome"
+  },
+  {
+   "name": "X2-g10ss-takehome",
+   "kind": "judgment",
+   "case_id": "X2-g10ss-takehome"
+  },
+  {
+   "name": "X3-calc-takehome",
+   "kind": "judgment",
+   "case_id": "X3-calc-takehome"
+  },
+  {
+   "name": "P1-g5-no-diagnose",
+   "kind": "judgment",
+   "case_id": "P1-g5-no-diagnose"
+  },
+  {
+   "name": "P2-g5-selected-response",
+   "kind": "judgment",
+   "case_id": "P2-g5-selected-response"
+  },
+  {
+   "name": "P3-g8sci-no-item6",
+   "kind": "judgment",
+   "case_id": "P3-g8sci-no-item6"
+  },
+  {
+   "name": "P4-g10ss-scoped-out",
+   "kind": "judgment",
+   "case_id": "P4-g10ss-scoped-out"
+  },
+  {
+   "name": "V1-g5-over-verified",
+   "kind": "judgment",
+   "case_id": "V1-g5-over-verified"
+  },
+  {
+   "name": "RECON__g5-math-fractions",
+   "kind": "reconstruction",
+   "case_id": "S1-g5-supervised"
+  },
+  {
+   "name": "RECON__g8-ela-evidence",
+   "kind": "reconstruction",
+   "case_id": "S2-g8ela-supervised"
+  },
+  {
+   "name": "RECON__g8-sci-ramp-data",
+   "kind": "reconstruction",
+   "case_id": "S3-g8sci-supervised"
+  },
+  {
+   "name": "RECON__g10-ss-gilded-age",
+   "kind": "reconstruction",
+   "case_id": "S4-g10ss-supervised"
+  },
+  {
+   "name": "RECON__g11-calc-integration",
+   "kind": "reconstruction",
+   "case_id": "S5-calc-supervised"
+  }
+ ]
+}

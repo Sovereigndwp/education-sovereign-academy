@@ -83,8 +83,29 @@ export function deriveClaim(raw, declared) {
   // ── minimality and restraint (F4) ─────────────────────────────────────────
   // "Warranted" is deliberately separate from "fully carried": a strong assessment may sample a claim
   // narrowly on purpose, and the correct response to that is a named narrowing and no intervention.
-  const warranted = raw.intervention_warranted === true;
+  // A2: permission to intervene is DERIVED from the three gates, never asserted by the model — the same
+  // discipline the verdict already uses. A1 replies carry no gates and fall back to the asserted field,
+  // so both generations score through one code path.
+  const g1 = raw.gate1_absence, g2 = raw.gate2_materiality, g3 = raw.gate3_value;
+  const hasGates = !!(g1 && typeof g1 === "object");
+  const gate1Pass = hasGates && g1.is_absent === true;
+  const gate2Pass = gate1Pass && !!g2 && g2.material === true;
+  const gate3Pass = gate2Pass && !!g3 && g3.worth_it === true;
+  const warranted = hasGates ? gate3Pass : raw.intervention_warranted === true;
   const whyNot = s(raw.why_no_intervention);
+
+  if (hasGates) {
+    if (add && !gate1Pass) v.push({ code: "GATE1_BYPASSED", detail: `Proposed an observation while reporting that the required element is present: "${s(g1.required_element).slice(0, 140)}".` });
+    else if (add && !gate2Pass) v.push({ code: "GATE2_BYPASSED", detail: "Proposed an observation after judging the absence immaterial, or without reaching the materiality gate." });
+    else if (add && !gate3Pass) v.push({ code: "GATE3_BYPASSED", detail: "Proposed an observation after judging it not worth its classroom and scoring cost, or without reaching that gate." });
+    if (gate1Pass && !s(g1.assessment_evidence)) v.push({ code: "ABSENCE_UNEVIDENCED", detail: "Declared an element absent without citing anything in this assessment to support it." });
+    if (!s(g1.required_element)) v.push({ code: "NO_REQUIRED_ELEMENT", detail: "Did not name the observable element whose absence would break the claim, so gate 1 decided nothing." });
+    // A quality word where a pointable thing was required is how "it could be stronger" gets laundered
+    // into an absence. Recorded, not corrected.
+    if (gate1Pass && /^(?:more|deeper|stronger|better|richer|additional|further|greater)\b/i.test(s(g1.required_element))) {
+      v.push({ code: "ELEMENT_IS_A_QUALITY", detail: `Named a quality rather than a pointable element: "${s(g1.required_element).slice(0, 120)}".` });
+    }
+  }
 
   if (verdict === "KEEP" && warranted) {
     v.push({ code: "WARRANTED_ON_KEEP", detail: "Judged the evidence complete for this claim and still called an intervention warranted." });
@@ -145,6 +166,13 @@ export function deriveClaim(raw, declared) {
     delegation: { answer: s(raw.delegation?.answer), reason: s(raw.delegation?.reason) },
     gap_statement: s(raw.gap_statement),
     intervention_warranted: warranted,
+    gates: hasGates ? {
+      required_element: s(g1.required_element), is_absent: g1.is_absent === true,
+      assessment_evidence: s(g1.assessment_evidence),
+      material: g2 ? g2.material === true : null, materiality_why: s(g2 && g2.why),
+      worth_it: g3 ? g3.worth_it === true : null, value_why: s(g3 && g3.why),
+      stopped_at: !gate1Pass ? "gate1" : !gate2Pass ? "gate2" : !gate3Pass ? "gate3" : null,
+    } : null,
     why_no_intervention: whyNot,
     no_short_check_reason: noCheap,
     over_verified_note: s(raw.over_verified_note),

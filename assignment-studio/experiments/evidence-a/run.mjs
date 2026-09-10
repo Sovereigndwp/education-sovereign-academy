@@ -13,7 +13,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { reconstructionSystem, reconstructionUser, judgmentSystem, judgmentUser, EXPERIMENT_VERSION } from "./lib/prompts.mjs";
+import { reconstructionSystem, reconstructionUser, judgmentSystem, judgmentSystemA2, judgmentUser, EXPERIMENT_VERSION, EXPERIMENT_VERSION_A2 } from "./lib/prompts.mjs";
 import { deriveCase, scoreCase, extractJson, VERDICTS } from "./lib/derive.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -22,9 +22,14 @@ const CASES = JSON.parse(readFileSync(join(here, "cases", "cases.json"), "utf8")
 const CLAIMS = JSON.parse(readFileSync(join(here, "groundtruth", "claims.json"), "utf8"));
 const EXPECTED = JSON.parse(readFileSync(join(here, "groundtruth", "expected.json"), "utf8")).cases;
 const MODEL = process.env.EXP_MODEL || "claude-sonnet-4-5";
+let lastMeta = null;   // model/temperature/usage actually used, reported into the manifest
 
 const args = process.argv.slice(2);
 const mode = args.includes("--score") ? "score" : args.includes("--live") ? "live" : "emit";
+// --a2 swaps in the gated judgment prompt and nothing else. Same cases, same ground truth, same scorer.
+const A2 = args.includes("--a2");
+const JUDGMENT_SYSTEM = A2 ? judgmentSystemA2() : judgmentSystem();
+const VERSION = A2 ? EXPERIMENT_VERSION_A2 : EXPERIMENT_VERSION;
 
 function claimsFor(c) {
   const all = CLAIMS[c.claims];
@@ -42,7 +47,7 @@ function buildJobs() {
         kind: "judgment",
         name: runs > 1 ? `${c.id}__run${r}` : c.id,
         case_id: c.id,
-        system: judgmentSystem(),
+        system: JUDGMENT_SYSTEM,
         user: judgmentUser({
           subject: c.subject, grade: c.grade, assessment: textFor(c),
           conditions: { ...c.conditions, novelty_note: [c.conditions.novelty_note, c.teacher_note].filter(Boolean).join(" ") },
@@ -72,9 +77,25 @@ function stampDir() {
   return out;
 }
 
+// Transport only. The Anthropic credential lives solely as an edge-function secret on the Supabase
+// project (engine.ts has no database or UI fallback by design), so a live run reaches the product model
+// path through a thin guarded passthrough deployed beside as-studio. The proxy hard-codes the product's
+// model and temperature, so a run cannot silently drift onto a different model. Set AS_PROXY and
+// AS_PROXY_TOKEN to use it; ANTHROPIC_API_KEY still works directly where one is available.
 async function callModel(system, user) {
+  const proxy = process.env.AS_PROXY;
+  if (proxy) {
+    const res = await fetch(proxy, {
+      method: "POST", headers: { "content-type": "application/json" },
+      body: JSON.stringify({ token: process.env.AS_PROXY_TOKEN, system, user, max_tokens: 8000 }),
+    });
+    const body = await res.json();
+    if (!res.ok || body.error) throw new Error(`proxy ${res.status}: ${body.error || ""} ${body.detail || ""}`.trim());
+    lastMeta = { model: body.model, temperature: body.temperature, ms: body.ms, usage: body.usage };
+    return body.text;
+  }
   const key = process.env.ANTHROPIC_API_KEY;
-  if (!key) throw new Error("ANTHROPIC_API_KEY is not set. --live needs it; use --emit otherwise.");
+  if (!key) throw new Error("Set AS_PROXY (+AS_PROXY_TOKEN) or ANTHROPIC_API_KEY. --live needs one; use --emit otherwise.");
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
@@ -90,7 +111,7 @@ async function callModel(system, user) {
 if (mode === "emit" || mode === "live") {
   const out = stampDir();
   const jobs = buildJobs();
-  const manifest = { experiment: EXPERIMENT_VERSION, mode, model: mode === "live" ? MODEL : "(external)", at: new Date().toISOString(), jobs: [] };
+  const manifest = { experiment: VERSION, generation: A2 ? "A2" : "A1", mode, model: mode === "live" ? MODEL : "(external)", at: new Date().toISOString(), jobs: [] };
   for (const j of jobs) {
     writeFileSync(join(out, "prompts", `${j.name}.system.txt`), j.system);
     writeFileSync(join(out, "prompts", `${j.name}.user.txt`), j.user);
@@ -100,7 +121,8 @@ if (mode === "emit" || mode === "live") {
       try {
         const text = await callModel(j.system, j.user);
         writeFileSync(join(out, "replies", `${j.name}.json`), JSON.stringify(extractJson(text), null, 1));
-        console.log("ok");
+        if (lastMeta) manifest.jobs[manifest.jobs.length - 1].meta = lastMeta;
+        console.log("ok", lastMeta ? `(${lastMeta.model} @ ${lastMeta.temperature}, ${lastMeta.ms}ms)` : "");
       } catch (e) { console.log("FAILED:", e.message); writeFileSync(join(out, "replies", `${j.name}.error.txt`), String(e.message)); }
     }
   }
@@ -114,7 +136,7 @@ if (mode === "score") {
   const dir = args[args.indexOf("--score") + 1];
   if (!dir || !existsSync(dir)) { console.error("usage: node run.mjs --score runs/<stamp>"); process.exit(1); }
   const replies = readdirSync(join(dir, "replies")).filter((f) => f.endsWith(".json"));
-  const results = { experiment: EXPERIMENT_VERSION, at: new Date().toISOString(), cases: {}, reconstruction: {}, missing: [] };
+  const results = { experiment: VERSION, at: new Date().toISOString(), cases: {}, reconstruction: {}, missing: [] };
 
   for (const c of CASES.cases) {
     const runs = CASES.stability.case_id === c.id ? CASES.stability.runs : 1;
