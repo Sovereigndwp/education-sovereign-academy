@@ -1,0 +1,392 @@
+{
+  "claims": [
+    {
+      "claim_id": "G5C1",
+      "items": [
+        {
+          "item": "1",
+          "elicits": "Determines the correct <,>,= relation between 3/4 and 5/8 and writes a justification using a chosen valid strategy (common denominator, benchmark, or picture)."
+        },
+        {
+          "item": "2",
+          "elicits": "Determines the correct relation between 2/3 and 7/12, a closer pair, and justifies the symbol chosen."
+        },
+        {
+          "item": "3",
+          "elicits": "Determines the correct relation between 5/6 and 8/9, both above the 1/2 benchmark, forcing a finer strategy (common denominator or distance-from-one reasoning) to justify the symbol."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under proctored, individual, no-AI conditions with novel numbers, this assessment supports the conclusion that a student can choose a valid strategy, execute it, and produce written reasoning that supports a correct comparison symbol for two unlike-denominator fractions, exercised across three pairs of varying difficulty.",
+      "does_not_support": [
+        "Does not show whether the student can compare more than two fractions or order a set of fractions.",
+        "Does not show mastery of adding or subtracting unlike fractions (G5C2core) — comparison and combination are different operations even when common-denominator mechanics are shared.",
+        "Because the strategy is offered as a choice, does not confirm the student can use a common-denominator strategy specifically if they consistently chose benchmark or picture reasoning instead.",
+        "The bare <,>,= mark carries a 1-in-3 guess rate; without the required written justification actually being checked for validity, a correct symbol alone is not evidence of the claim."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Proctored, individual, paper/pencil administration with numbers the student has not seen before removes every channel through which the comparison and its written justification could be produced without the student doing the work."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Produces the correct relational symbol (<, >, =) for the two given fractions",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "\"For each pair, write <, >, or =.\"",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Selects and executes a valid strategy (common denominator, benchmark, or visual model) to justify the symbol",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "\"Then show how you know (a common denominator, a picture, or a benchmark like ½).\"",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States reasoning that connects the chosen strategy to the symbol produced",
+            "items": [
+              "1",
+              "2",
+              "3"
+            ],
+            "status": "present",
+            "evidence": "Same instruction requires the 'how you know' to be shown, tying the method to the conclusion.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three observable components of G5C1 are exercised at least once by items 1-3 under proctored, novel-number conditions; none is absent, so there is nothing to carry forward."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 found no absent component, so no absence proceeds to Gate 2."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_intervention": "Gate 1 stopped: no component of G5C1 is absent from items 1-3, so no absence qualifies to be carried forward.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2core",
+      "items": [
+        {
+          "item": "4",
+          "elicits": "Constructs a common denominator for 1/2 and 1/3 and adds the resulting like-sized parts."
+        },
+        {
+          "item": "5",
+          "elicits": "Constructs a common denominator for 5/6 and 1/4 and subtracts the resulting like-sized parts."
+        },
+        {
+          "item": "6",
+          "elicits": "Constructs a common denominator for the fractional parts of two mixed numbers and adds them."
+        },
+        {
+          "item": "7",
+          "elicits": "In a word-problem context, constructs a common denominator for 3/4 and 5/6 and adds the resulting parts."
+        },
+        {
+          "item": "8",
+          "elicits": "In a word-problem context, constructs a common denominator for 2/3 and 1/4 and subtracts the resulting parts."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under the declared conditions, this assessment supports the conclusion that a student can construct a common denominator for two unlike fractions (including within mixed numbers) and correctly add or subtract the resulting like-sized parts, exercised across five items spanning bare computation and word-problem contexts.",
+      "does_not_support": [
+        "Does not show whether the student understands WHY the common-denominator step is necessary — that reasoning is what G5C1 targets, not this claim.",
+        "Does not show whether the student can simplify a reducible result to lowest terms (see G5C2a) or regroup an improper result outside items 6-7 (see G5C2b) — items 4, 5 and 8 happen to produce answers needing neither.",
+        "Does not show the student comparing (rather than combining) fractions using a constructed common denominator, since Part A leaves the strategy choice open.",
+        "Not selected-response, so no guess-rate caveat applies."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Same proctored/no-AI/novel-number conditions apply, and the 'show every step' requirement means a correct final answer without visible common-denominator work would be inconsistent with credit, leaving no route to produce it without doing the arithmetic."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Constructs a common denominator / equivalent fractions for two unlike fractions, including within mixed numbers",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "\"Show every step\" over five unlike-denominator addition/subtraction items (1/2+1/3, 5/6-1/4, 2 1/3+1 3/4, 3/4+5/6, 2/3-1/4).",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Correctly combines (adds or subtracts) the resulting like-sized parts",
+            "items": [
+              "4",
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "status": "present",
+            "evidence": "Same five items require a final combined answer.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both observable components (constructing a common denominator and combining the resulting parts) are exercised by five items spanning bare computation, mixed numbers, and word problems; none is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_intervention": "Gate 1 stopped: no component of G5C2core is absent from items 4-8, so no absence qualifies to be carried forward.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C2a",
+      "items": [],
+      "any_independent_observation": false,
+      "covers_whole_claim": false,
+      "narrower_inference": "",
+      "supports": "This assessment currently supports no conclusion about whether students can reduce a fraction result to lowest terms, because no item's correct answer is actually reducible: 1/2+1/3=5/6, 5/6-1/4=7/12, 2 1/3+1 3/4=4 1/12, 3/4+5/6=1 7/12, 2/3-1/4=5/12, and the corrected 1/2+1/4=3/4 are all already in lowest terms.",
+      "does_not_support": [
+        "Does not show whether a student recognizes that a computed sum or difference has a common factor between numerator and denominator.",
+        "Does not show whether a student can correctly divide numerator and denominator by a common factor to reach lowest terms.",
+        "Does not show whether compliance with the printed instruction 'Answers in simplest form' reflects actual simplification skill, since every correct answer already happens to be in lowest terms without any reduction step.",
+        "Should not be read from items 4-8, which do provide evidence for G5C2core and G5C2b but never for this claim, since none of their correct results require reduction."
+      ],
+      "delegation": {
+        "answer": "yes",
+        "reason": "Because no item's correct answer actually requires reduction, a student who cannot simplify at all produces work identical to a student who can, so satisfying the printed instruction requires no simplification thinking at all, regardless of supervision."
+      },
+      "gap_statement": "We cannot tell from this assessment whether students can simplify a reducible fraction to lowest terms, because none of the nine items' correct answers require a reduction step — every computed result in Parts A-C is already in lowest terms despite the Part B instruction 'Answers in simplest form.'",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Reduces a computed sum or difference to lowest terms when the result is reducible",
+            "items": [],
+            "status": "absent",
+            "evidence": "Every correct result in Parts A-C is already in lowest terms (5/6, 7/12, 4 1/12, 1 7/12, 5/12, 3/4), despite the Part B instruction 'Answers in simplest form,' so no item's numbers actually call for a reduction step.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": true
+          }
+        ],
+        "carried_forward": "Reduces a computed sum or difference to lowest terms when the result is reducible",
+        "why": "This is the only component of G5C2a. It belongs directly to the claim as confirmed, nothing in the declared conditions or the teacher's notes indicates it is assessed elsewhere, and its absence eliminates rather than merely narrows support for this claim, so it is carried forward."
+      },
+      "gate2_materiality": {
+        "reached": true,
+        "material": true,
+        "why": "The teacher's own instruction ('Answers in simplest form') signals intent to assess this skill, and current results give no information about it — a teacher reading scores would likely believe simplification was checked when it never was triggered by any item's numbers, which is not evident without checking each item's arithmetic."
+      },
+      "gate3_value": {
+        "reached": true,
+        "worth_it": true,
+        "why": "One short item with a genuinely reducible result costs roughly two testing minutes and fifteen scoring seconds per response, and it closes a currently complete absence of evidence for a named procedural claim — clearly worth it against what it buys."
+      },
+      "why_no_intervention": "",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": {
+        "primitive": "Perturb",
+        "item_text": "Add and write your answer in simplest form: 1/6 + 1/3 = ______  Show your steps.",
+        "variant_rule": "Keep the operation (addition of two proper fractions) and the 'answer in simplest form' requirement fixed; vary the two fraction values each period so their sum is a fraction that CAN be reduced (numerator and denominator share a common factor after combining) — never assign numbers whose sum is already in lowest terms, as items 4-8 of the base assessment do. The key must show the unreduced common-denominator sum and the reduced final answer.",
+        "conditions": "Administered the same way as the rest of this assessment: proctored in class, individual, paper and pencil, no AI, appended to or given alongside the existing instrument, with numbers the student has not seen before.",
+        "sufficiency_line": "A response counts as evidence for G5C2a if the final answer is written in lowest terms (1/2), with either the unreduced sum (3/6) shown and struck through/reduced, or a reduction step otherwise visible — a correct but unreduced final answer (3/6) does not count.",
+        "student_minutes": 2,
+        "scoring_seconds": 15
+      }
+    },
+    {
+      "claim_id": "G5C2b",
+      "items": [
+        {
+          "item": "6",
+          "elicits": "Converts the improper fractional part (13/12) produced by adding the mixed numbers into a mixed number and regroups it into the whole-number total."
+        },
+        {
+          "item": "7",
+          "elicits": "Converts the improper sum (19/12) into the mixed-number form the item explicitly asks for (1 7/12)."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under the declared conditions, this assessment supports the conclusion that a student can regroup an improper fractional result into a mixed number when addition produces one, exercised in both a bare computation (item 6) and a word problem that explicitly demands a mixed-number answer (item 7).",
+      "does_not_support": [
+        "Does not show regrouping in a subtraction/borrowing context (e.g., a mixed-number subtraction requiring borrowing a whole as a fraction) — that is a different regrouping direction not exercised here.",
+        "Does not show the skill in a bare, non-word-problem improper-fraction context outside of addition — items 6 and 7 are both additions.",
+        "Should not be read as evidence the student can also simplify to lowest terms (G5C2a); in both items the resulting mixed number happens to already be in lowest terms.",
+        "Not selected-response, so no guess-rate caveat applies."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "The regrouping step is embedded inside a proctored, novel-number computation the student must show work for, so there is no channel to produce a correctly regrouped mixed number without doing the conversion."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Recognizes that a computed sum is an improper fraction needing conversion",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Item 6's fractional sum 13/12 exceeds 1; item 7 explicitly instructs 'write your answer as a mixed number.'",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Correctly converts/regroups the improper result into proper mixed-number form",
+            "items": [
+              "6",
+              "7"
+            ],
+            "status": "present",
+            "evidence": "Same two items require the final regrouped mixed number as the answer.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "Both components of the regrouping skill are exercised twice, once in a bare computation and once in a word problem that explicitly demands a mixed-number answer; none is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_intervention": "Gate 1 stopped: no component of G5C2b is absent from items 6-7, so no absence qualifies to be carried forward.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    },
+    {
+      "claim_id": "G5C3",
+      "items": [
+        {
+          "item": "9",
+          "elicits": "Locates the specific error in an unfamiliar incorrect solution (1/2+1/4=2/6), writes what about the procedure produced a wrong-sized part, and computes/writes the correct sum."
+        }
+      ],
+      "any_independent_observation": true,
+      "covers_whole_claim": true,
+      "narrower_inference": "",
+      "supports": "Under the declared conditions, this assessment supports the conclusion that a student can locate the 'added the denominators' error in an unfamiliar incorrect solution, explain in writing what about it produces a wrong-sized part, and supply the correct sum.",
+      "does_not_support": [
+        "Tests only one misconception (adding the denominators directly); does not show whether the student can diagnose other common errors (e.g., mis-adding mixed-number wholes, or cross-multiplication mistakes).",
+        "The prompt asks the student to 'explain what the student did wrong' generally; a purely procedural answer ('you have to find a common denominator first') could earn credit without ever stating the size-based reason the claim names (unlike denominators mean unlike-sized pieces) — scoring needs to check for that reasoning specifically, not just a correct-sounding statement.",
+        "Does not show whether the student can diagnose an error of this kind without an already-set-up incorrect example in front of them.",
+        "Not selected-response, so no guess-rate caveat applies."
+      ],
+      "delegation": {
+        "answer": "no",
+        "reason": "Diagnosing an unfamiliar incorrect solution and writing the reasoning is done on paper under supervision with no reference material, so the explanation cannot be produced without the student actually locating and understanding the error."
+      },
+      "gap_statement": "",
+      "gate1_components": {
+        "components": [
+          {
+            "component": "Identifies the specific procedural error in an unfamiliar incorrect solution",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "\"Explain what the student did wrong.\"",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "States the size-based reason the error produces a wrong-sized part (unlike denominators mean unlike-sized pieces)",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "Same prompt invites this, though its wording is generic ('what the student did wrong') rather than a direct cue for the size-based reasoning; the scoring-precision risk this creates is noted under does_not_support rather than treated as an absent component, since the item does exercise it.",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          },
+          {
+            "component": "Gives the correct sum",
+            "items": [
+              "9"
+            ],
+            "status": "present",
+            "evidence": "\"...and show the correct answer.\"",
+            "belongs_to_inference": true,
+            "assessed_elsewhere_or_out_of_scope": false,
+            "narrows_support": false
+          }
+        ],
+        "carried_forward": "",
+        "why": "All three components -- identify the error, state why it produces a wrong-sized part, and give the correct sum -- are exercised by item 9; none is absent."
+      },
+      "gate2_materiality": {
+        "reached": false,
+        "material": false,
+        "why": "Not reached: Gate 1 found no absent component."
+      },
+      "gate3_value": {
+        "reached": false,
+        "worth_it": false,
+        "why": "Not reached: Gate 2 was not reached."
+      },
+      "why_no_intervention": "Gate 1 stopped: no component of G5C3 is absent from item 9, so no absence qualifies to be carried forward.",
+      "no_short_check_reason": "",
+      "over_verified_note": "",
+      "minimum_additional_observation": null
+    }
+  ],
+  "conditions_echo": "Grade 5 Mathematics, end of Unit 4, summative, 25 minutes; proctored_in_class, individual, AI prohibited_and_enforced, paper and pencil only; item types have been practised but these specific numbers and problems are new to the students.",
+  "reviewer_notes": "Four of the five claims (G5C1, G5C2core, G5C2b, G5C3) are already carried in substance by the existing items under the declared conditions and warrant no change -- Gate 1 finds no absent component for any of them. The one exception is G5C2a: the Part B instruction 'Answers in simplest form' signals intent to assess simplification, but arithmetic-checking every item shows no correct answer in the entire assessment is actually reducible, so this claim currently has zero supporting evidence despite looking, at a glance, like it is covered. That is the only place an addition is proposed, and it is a single two-minute item."
+}

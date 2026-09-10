@@ -1,0 +1,252 @@
+{
+ "experiment": "evidence-a-2026-09-09-v1",
+ "at": "2026-09-10T15:07:45.594Z",
+ "cases": {
+  "S1split-g5-supervised": {
+   "cell": "sound / supervised",
+   "supervision": "proctored_in_class",
+   "runs": 5,
+   "stable": true,
+   "claims": [
+    {
+     "claim_id": "G5C1",
+     "verdict": "KEEP",
+     "intervention": false,
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2core",
+     "verdict": "KEEP",
+     "intervention": false,
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2a",
+     "verdict": "NOT_SUPPORTED",
+     "intervention": true,
+     "intervention_warranted": true,
+     "primitive": "Perturb",
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C2b",
+     "verdict": "KEEP",
+     "intervention": false,
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    },
+    {
+     "claim_id": "G5C3",
+     "verdict": "KEEP",
+     "intervention": false,
+     "intervention_warranted": false,
+     "primitive": null,
+     "negative_scope_count": 4,
+     "delegation": "no",
+     "violations": []
+    }
+   ],
+   "score": {
+    "rows": [
+     {
+      "claim_id": "G5C1",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Unchanged from the original set. Items 1-3 require the symbol and the reasoning that supports it, supervised, on fresh numbers."
+     },
+     {
+      "claim_id": "G5C2core",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "All five A3 repeats found common-denominator construction and combining present across items 4-8, without disagreement. This half of the original claim was never the unstable part."
+     },
+     {
+      "claim_id": "G5C2a",
+      "expected": "LIMITED or NOT_SUPPORTED",
+      "actual": "NOT_SUPPORTED",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": true,
+      "got_intervention": true,
+      "intervention_match": true,
+      "cell": "justified_proposed",
+      "note": "PRE-REGISTERED EXPECTATION. Every computed result in the assessment is already in lowest terms, so no item ever triggers reduction, while 'Answers in simplest form' appears in the directions. Both verdicts are defensible — LIMITED if partial evidence is read from the surrounding work, NOT_SUPPORTED if no independent observation reaches it at all — and the experiment wants to see which it gives. The decision-level expectation is that an intervention IS warranted."
+     },
+     {
+      "claim_id": "G5C2b",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "PRE-REGISTERED EXPECTATION. Item 6 (2 1/3 + 1 3/4 = 4 1/12) forces regrouping past a whole, and item 7 instructs 'write your answer as a mixed number'. The component is exercised, so no intervention is warranted."
+     },
+     {
+      "claim_id": "G5C3",
+      "expected": "KEEP",
+      "actual": "KEEP",
+      "match": true,
+      "intervention_scored": true,
+      "expects_intervention": false,
+      "got_intervention": false,
+      "intervention_match": true,
+      "cell": "restraint_correct",
+      "note": "Unchanged from the original set. Item 9 demands the stated reason, not just the corrected sum."
+     }
+    ],
+    "confusion": {
+     "justified_proposed": 1,
+     "justified_missed": 0,
+     "unnecessary_proposed": 0,
+     "restraint_correct": 4,
+     "not_scored": 0
+    },
+    "claims_matched": 5,
+    "claims_total": 5,
+    "intervention_scored_total": 5,
+    "intervention_matched": 5,
+    "unexpected_claims": [],
+    "manufactured": [],
+    "missed": []
+   },
+   "violations": [],
+   "over_verified_note": [],
+   "control": null,
+   "all_runs": [
+    {
+     "run": "S1split-g5-supervised__run1",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2core:KEEP",
+      "G5C2a:NOT_SUPPORTED+fix",
+      "G5C2b:KEEP",
+      "G5C3:KEEP"
+     ]
+    },
+    {
+     "run": "S1split-g5-supervised__run2",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2core:KEEP",
+      "G5C2a:NOT_SUPPORTED+fix",
+      "G5C2b:KEEP",
+      "G5C3:KEEP"
+     ]
+    },
+    {
+     "run": "S1split-g5-supervised__run3",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2core:KEEP",
+      "G5C2a:NOT_SUPPORTED+fix",
+      "G5C2b:KEEP",
+      "G5C3:KEEP"
+     ]
+    },
+    {
+     "run": "S1split-g5-supervised__run4",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2core:KEEP",
+      "G5C2a:NOT_SUPPORTED+fix",
+      "G5C2b:KEEP",
+      "G5C3:KEEP"
+     ]
+    },
+    {
+     "run": "S1split-g5-supervised__run5",
+     "verdicts": [
+      "G5C1:KEEP",
+      "G5C2core:KEEP",
+      "G5C2a:NOT_SUPPORTED+fix",
+      "G5C2b:KEEP",
+      "G5C3:KEEP"
+     ]
+    }
+   ]
+  }
+ },
+ "reconstruction": {},
+ "missing": [],
+ "confusion": {
+  "justified_proposed": 1,
+  "justified_missed": 0,
+  "unnecessary_proposed": 0,
+  "restraint_correct": 4,
+  "not_scored": 0,
+  "detection_recall": 1,
+  "restraint_rate": 1,
+  "_note": "Two rates, deliberately not combined. detection_recall is of the interventions ground truth says were warranted; restraint_rate is of the claims ground truth says warranted none. A run that improves one by sacrificing the other is not an improvement."
+ },
+ "falsification": {
+  "F1_manufactures_problems": {
+   "sound_cases": 1,
+   "sound_claims": 5,
+   "manufactured": [],
+   "sound_cases_clean": "1 of 1",
+   "clean_rate": 1,
+   "threshold": "kill if clean_rate < 0.80 (the original 8-of-10 rate, against the case set actually built)",
+   "verdict": "PASS"
+  },
+  "F2_context_matters": {
+   "pairs": [],
+   "threshold": "kill if any pair shows 0 changed verdicts, or any wrong_direction > 0",
+   "verdict": "PASS"
+  },
+  "F3_discrimination": {
+   "planted_gaps": 0,
+   "planted_found": [],
+   "found_rate": null,
+   "manufactured_in_sound": 0,
+   "false_positive_P4_unexpected_claims": null,
+   "threshold": "kill if found_rate < 0.75 (the original 3-of-4 rate), or manufactured_in_sound > 2, or P4 returns any unexpected claim",
+   "verdict": "PASS"
+  },
+  "F4_minimality": {
+   "over_verified_interventions": null,
+   "over_verified_note_given": null,
+   "menu_violations": 0,
+   "feed_forward_violations": 0,
+   "threshold": "kill if any intervention is proposed on the over-verified case, or any menu or feed-forward violation",
+   "verdict": "PASS"
+  },
+  "F5_reconstruction": {
+   "status": "not scored automatically — see reconstruction._scoring_note"
+  },
+  "F6_stability": {
+   "cases_with_repeats": 1,
+   "stable": 1,
+   "threshold": "identical verdicts and intervention decisions across repeats",
+   "verdict": "PASS"
+  },
+  "all_violations_by_code": {}
+ }
+}

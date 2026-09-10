@@ -1,0 +1,35 @@
+{
+ "experiment": "evidence-a3-2026-09-10-components-v1",
+ "generation": "A3",
+ "mode": "emit",
+ "only": [],
+ "model": "(external)",
+ "at": "2026-09-10T14:57:45.767Z",
+ "jobs": [
+  {
+   "name": "S1split-g5-supervised__run1",
+   "kind": "judgment",
+   "case_id": "S1split-g5-supervised"
+  },
+  {
+   "name": "S1split-g5-supervised__run2",
+   "kind": "judgment",
+   "case_id": "S1split-g5-supervised"
+  },
+  {
+   "name": "S1split-g5-supervised__run3",
+   "kind": "judgment",
+   "case_id": "S1split-g5-supervised"
+  },
+  {
+   "name": "S1split-g5-supervised__run4",
+   "kind": "judgment",
+   "case_id": "S1split-g5-supervised"
+  },
+  {
+   "name": "S1split-g5-supervised__run5",
+   "kind": "judgment",
+   "case_id": "S1split-g5-supervised"
+  }
+ ]
+}
