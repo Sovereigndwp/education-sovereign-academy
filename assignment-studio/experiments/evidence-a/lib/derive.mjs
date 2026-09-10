@@ -14,12 +14,43 @@ export const VERDICTS = ["KEEP", "LIMITED", "NOT_SUPPORTED", "NO_CHEAP_CHECK"];
 const s = (v) => (v == null ? "" : String(v).trim());
 const arr = (v) => (Array.isArray(v) ? v : []);
 
-// Words that would smuggle a measurement back in. Checked against every free-text field the teacher
-// would see; a hit is recorded as a violation rather than scrubbed.
-const BANNED = /\b(sufficient|sufficiency|score[ds]?|scoring out of|rating|rated|percentile|confidence (?:score|level|of \d)|\d{1,3}\s?%|\b\d{1,3}\s?\/\s?100\b|grade of [A-F]\b|[A-F][+-]\s+(?:for|on|overall)|AI[- ]?(?:proof|resistant|resistance)|cheat[- ]?proof)/i;
+// ── Instrument repair 2026-09-10 ────────────────────────────────────────────
+// The A1 run recorded 14 structural violations and every one was a false positive. The three causes are
+// fixed here and NOWHERE ELSE: this file is the measuring instrument, not the engine. No prompt changed.
+//
+// R1. `\bproctored\b` cannot match `proctored_in_class`, because `_` is a word character, so the
+//     boundary never lands. The declared-conditions vocabulary is underscore-joined by design and the
+//     model echoes it back verbatim. Fix: normalise `_` to a space before any of these patterns run.
+// R2. The feed-forward matcher fired on "…before any discussion of the take-home quiz", which names the
+//     assessment BEING VERIFIED, not where the new observation happens. Fix: strip noun phrases that
+//     refer to the assessment under audit before testing, and require the surviving text to place the
+//     new observation out of the room.
+// R3. `score[ds]?` caught the ordinary verb — "the evidentiary value depends on the reasoning actually
+//     being scored" — which is the ontology's own phrasing. Fix: ban only false PRECISION (a number, a
+//     letter grade, a named score or rating) and the two forbidden claim words. The verb is allowed.
+
+/** Underscore-joined condition tokens (proctored_in_class, prohibited_and_enforced) read as prose. */
+const norm = (t) => String(t || "").replace(/_/g, " ");
+
+/** Remove references to the assessment under audit, so naming it cannot look like a proposal to send
+ *  the new observation home. Only noun phrases — "the take-home quiz", "this homework set". */
+const stripSourceRefs = (t) => String(t || "")
+  .replace(/\b(?:the|this|that|their|a)\s+(?:take[- ]home|home|homework)\s+(?:quiz|assignment|assessment|task|set|sheet|worksheet|paper|packet|problem set|work)\b/gi, " ")
+  .replace(/\b(?:the|this|that)\s+(?:take[- ]home|homework)\b/gi, " ");
+
+// False precision only. "sufficient"/"sufficiency" and the AI-resistance family stay banned outright;
+// the bare verbs score / scored / scoring / rate do not, because judging what an item is scored FOR is
+// exactly the vocabulary this work is built on.
+// R3b. A bare number is NOT evidence of false precision in this domain and must never be matched on its
+// own. "2/5" is a fraction in a fractions assessment; "a 50% guess rate" is language the ontology
+// REQUIRES on any selected-response item. A number only offends when a scoring word is attached to it,
+// so every numeric branch below carries that word with it. (Found by the re-score: the one violation
+// that survived the first repair pass was the fraction 2/5.)
+const BANNED = /\b(?:sufficient|sufficiency)\b|\b(?:validity|confidence|resilience|rigou?r|assessment)\s+(?:score|rating|index|grade)\b|\b(?:scored?|scoring|rat(?:ed|ing)|grade[ds]?)\s*(?:of|at|:)?\s*\d{1,3}\s*(?:%|\/\s?\d{1,3}|\bout of\b)?\b|\b\d{1,3}\s*(?:%|out of \d{1,3})\s+(?:valid|reliable|confident|resilient|sufficient|accurate)\b|\bgrade of [A-F][+-]?\b|\b[A-F][+-]\s+(?:overall|rating|grade)\b|\bpercentile\b|AI[- ]?(?:proof|resistant|resistance)|cheat[- ]?proof/i;
+
 // A proposed observation that leaves the room is not an observation (ontology §1.3 feed-forward rule).
 const GOES_HOME = /\bat home\b|\btake[- ]home\b|\bhomework\b|\bovernight\b|\bbefore (?:the )?next class\b|\bsubmit online\b|\bupload\b|\boutside class\b/i;
-const SUPERVISED = /\bin class\b|\bin the room\b|\bproctored\b|\bsupervised\b|\bat the start of\b|\bexit ticket\b|\bwarm[- ]up\b|\bobserved\b|\baloud\b|\bat the board\b|\bmini[- ]whiteboard/i;
+const SUPERVISED = /\bin[- ]class\b|\bin the room\b|\bproctored\b|\bsupervised\b|\bat the start of\b|\bexit ticket\b|\bwarm[- ]up\b|\bobserved\b|\baloud\b|\bat the board\b|\bmini[- ]whiteboard|\bbefore students leave\b|\bcollected before\b|\bobserved live\b/i;
 
 /** One claim's derived result. Returns the verdict plus every structural violation found, unrepaired. */
 export function deriveClaim(raw, declared) {
@@ -79,10 +110,11 @@ export function deriveClaim(raw, declared) {
 
   // ── feed-forward (the constraint most likely to be quietly violated) ──────
   if (add && !Array.isArray(add)) {
-    const where = s(add.conditions) + " " + s(add.item_text);
-    if (GOES_HOME.test(where)) {
+    const where = norm(s(add.conditions) + " " + s(add.item_text));
+    const whereNet = stripSourceRefs(where);          // R2: source references removed before testing
+    if (GOES_HOME.test(whereNet)) {
       v.push({ code: "FEED_FORWARD", detail: `Proposed an observation that leaves the room: "${s(add.conditions).slice(0, 120)}". An artifact produced out of the room is a prompt, not a proof.` });
-    } else if (!SUPERVISED.test(where)) {
+    } else if (!SUPERVISED.test(where)) {          // R1: underscore-joined tokens now read
       v.push({ code: "CONDITIONS_UNSTATED", detail: "Proposed an observation without stating supervised conditions, so it cannot be checked against the independence requirement." });
     }
     if (!s(add.variant_rule)) v.push({ code: "NO_VARIANT_RULE", detail: "Proposed an item with no variant rule, so it cannot be made fresh across periods." });
@@ -99,7 +131,7 @@ export function deriveClaim(raw, declared) {
 
   // ── false precision ───────────────────────────────────────────────────────
   const prose = [raw.supports, raw.gap_statement, raw.narrower_inference, raw.over_verified_note, raw.why_no_intervention, ...arr(raw.does_not_support), add && !Array.isArray(add) ? add.sufficiency_line : ""].map(s).join(" \n ");
-  const banned = prose.match(BANNED);
+  const banned = norm(prose).match(BANNED);
   if (banned) v.push({ code: "BANNED_LANGUAGE", detail: `Used measurement or AI-resistance language: "${banned[0]}".` });
 
   return {
@@ -138,33 +170,57 @@ export function deriveCase(rawJson, declared) {
   };
 }
 
-/** Score one derived case against pre-registered, claim-level ground truth. */
+/** Score one derived case against pre-registered, claim-level ground truth.
+ *
+ *  R4 (instrument repair 2026-09-10): ground truth may set `intervention: null`, meaning "deliberately
+ *  not scored on this axis" — used where two verdicts are both defensible and the intervention that
+ *  follows depends on which one the engine gives. The A1 scorer collapsed null to false and counted
+ *  X3/K4 as a miss. Null now routes to `not_scored` and is excluded from every intervention count.
+ *
+ *  Each scored claim lands in exactly one confusion cell, so restraint and detection can never be
+ *  traded off inside a single aggregate. */
+export const CONFUSION_CELLS = ["justified_proposed", "justified_missed", "unnecessary_proposed", "restraint_correct", "not_scored"];
+
 export function scoreCase(derived, truth) {
   const rows = [];
   for (const exp of truth.claims) {
     const got = derived.claims.find((c) => c.claim_id === exp.claim_id);
     const allowed = Array.isArray(exp.verdict) ? exp.verdict : [exp.verdict];
+    const scored = exp.intervention === true || exp.intervention === false;
+    const wants = exp.intervention === true;
+    const gotFix = got ? !!got.proposed : false;
+    let cell;
+    if (!scored) cell = "not_scored";
+    else if (wants && gotFix) cell = "justified_proposed";
+    else if (wants && !gotFix) cell = "justified_missed";
+    else if (!wants && gotFix) cell = "unnecessary_proposed";
+    else cell = "restraint_correct";
     rows.push({
       claim_id: exp.claim_id,
       expected: allowed.join(" or "),
       actual: got ? got.verdict : "MISSING",
       match: got ? allowed.includes(got.verdict) : false,
-      expects_intervention: exp.intervention === true,
-      got_intervention: got ? !!got.proposed : false,
-      intervention_match: got ? (exp.intervention === true) === !!got.proposed : false,
+      intervention_scored: scored,
+      expects_intervention: wants,
+      got_intervention: gotFix,
+      intervention_match: scored ? (got ? wants === gotFix : false) : null,
+      cell,
       note: exp.why || "",
     });
   }
   const extra = derived.claims.filter((c) => !truth.claims.some((e) => e.claim_id === c.claim_id)).map((c) => c.claim_id);
+  const confusion = Object.fromEntries(CONFUSION_CELLS.map((k) => [k, rows.filter((r) => r.cell === k).length]));
   return {
     rows,
+    confusion,
     claims_matched: rows.filter((r) => r.match).length,
     claims_total: rows.length,
-    intervention_matched: rows.filter((r) => r.intervention_match).length,
+    intervention_scored_total: rows.filter((r) => r.intervention_scored).length,
+    intervention_matched: rows.filter((r) => r.intervention_match === true).length,
     unexpected_claims: extra,
-    // F1's unit: an intervention proposed on a claim whose ground truth says none was warranted.
-    manufactured: rows.filter((r) => !r.expects_intervention && r.got_intervention).map((r) => r.claim_id),
-    missed: rows.filter((r) => r.expects_intervention && !r.got_intervention).map((r) => r.claim_id),
+    // An intervention proposed on a claim whose ground truth says none was warranted.
+    manufactured: rows.filter((r) => r.cell === "unnecessary_proposed").map((r) => r.claim_id),
+    missed: rows.filter((r) => r.cell === "justified_missed").map((r) => r.claim_id),
   };
 }
 

@@ -168,43 +168,92 @@ if (mode === "score") {
   }
 
   // ── falsification criteria, computed ──────────────────────────────────────
-  const sound = Object.entries(results.cases).filter(([, v]) => v.cell === "sound / supervised");
-  const soundKeep = sound.filter(([, v]) => v.claims.every((c) => c.verdict === "KEEP" || (c.verdict === "LIMITED" && !c.intervention)));
-  const manufactured = sound.flatMap(([id, v]) => v.score.manufactured.map((c) => `${id}/${c}`));
+  // R5 (instrument repair 2026-09-10): every denominator is derived from the ground truth actually
+  // loaded, never from prose carried over from the decision package. A1's F1 threshold cited "10 sound
+  // claim-sets" against 5 built cases and F3 cited "4 planted gaps" against 3. The RATES are unchanged
+  // — 8/10 is 0.80, 3/4 is 0.75 — so this is bookkeeping, not a moved goalpost.
+  const cellsOf = (pred) => Object.entries(results.cases).filter(([, v]) => pred(String(v.cell)));
+  const sound = cellsOf((c) => c.startsWith("sound"));
+  const planted = cellsOf((c) => c.startsWith("planted gap"));
+
+  const soundClaims = sound.flatMap(([id, v]) => v.score.rows.map((r) => ({ id, ...r })));
+  const manufactured = soundClaims.filter((r) => r.cell === "unnecessary_proposed").map((r) => `${r.id}/${r.claim_id}`);
+  const soundCasesClean = sound.filter(([, v]) => v.score.confusion.unnecessary_proposed === 0).length;
+  const soundCleanRate = sound.length ? soundCasesClean / sound.length : null;
+
+  const plantedRows = planted.flatMap(([id, v]) => v.score.rows.filter((r) => r.expects_intervention).map((r) => ({ id, ...r })));
+  const plantedFound = plantedRows.filter((r) => r.got_intervention).map((r) => `${r.id}/${r.claim_id}`);
+  const plantedFoundRate = plantedRows.length ? plantedFound.length / plantedRows.length : null;
   const p4 = results.cases["P4-g10ss-scoped-out"];
   const falsePosP4 = p4 ? (p4.score.unexpected_claims || []).length : null;
-  const planted = Object.entries(results.cases).filter(([, v]) => String(v.cell).startsWith("planted gap"));
-  const plantedFound = planted.flatMap(([id, v]) => v.score.rows.filter((r) => r.expects_intervention && r.got_intervention).map((r) => `${id}/${r.claim_id}`));
-  const plantedTotal = planted.flatMap(([id, v]) => v.score.rows.filter((r) => r.expects_intervention).map((r) => `${id}/${r.claim_id}`));
+
   const pairs = CASES.cases.filter((c) => c.pair_with).map((c) => {
     const a = results.cases[c.pair_with], b = results.cases[c.id];
     if (!a || !b) return { pair: c.id, comparable: false };
-    const changed = a.claims.filter((x) => {
+    let changed = 0, wrongWay = 0;
+    for (const x of a.claims) {
       const y = b.claims.find((z) => z.claim_id === x.claim_id);
-      return y && y.verdict !== x.verdict;
-    }).length;
-    const wrongWay = a.claims.filter((x) => {
-      const y = b.claims.find((z) => z.claim_id === x.claim_id);
-      if (!y) return false;
-      return VERDICTS.indexOf(y.verdict) < VERDICTS.indexOf(x.verdict); // unsupervised judged stronger
-    }).length;
+      if (!y) continue;
+      if (y.verdict !== x.verdict) changed++;
+      if (VERDICTS.indexOf(y.verdict) < VERDICTS.indexOf(x.verdict)) wrongWay++; // unsupervised judged stronger
+    }
     return { pair: `${c.pair_with} → ${c.id}`, of: a.claims.length, changed, wrong_direction: wrongWay };
   });
   const v1 = results.cases["V1-g5-over-verified"];
   const stability = Object.values(results.cases).filter((v) => v.stable !== null);
 
+  // Aggregate confusion — reported as four separate counts, never folded into one number, so a gain in
+  // restraint bought by going blind to real gaps is visible on its face.
+  const confusion = { justified_proposed: 0, justified_missed: 0, unnecessary_proposed: 0, restraint_correct: 0, not_scored: 0 };
+  for (const v of Object.values(results.cases)) for (const k of Object.keys(confusion)) confusion[k] += v.score.confusion[k];
+
+  results.confusion = {
+    ...confusion,
+    detection_recall: confusion.justified_proposed + confusion.justified_missed
+      ? +(confusion.justified_proposed / (confusion.justified_proposed + confusion.justified_missed)).toFixed(3) : null,
+    restraint_rate: confusion.restraint_correct + confusion.unnecessary_proposed
+      ? +(confusion.restraint_correct / (confusion.restraint_correct + confusion.unnecessary_proposed)).toFixed(3) : null,
+    _note: "Two rates, deliberately not combined. detection_recall is of the interventions ground truth says were warranted; restraint_rate is of the claims ground truth says warranted none. A run that improves one by sacrificing the other is not an improvement.",
+  };
+
   results.falsification = {
-    F1_manufactures_problems: { manufactured_in_sound_cases: manufactured, sound_cases_clean: `${soundKeep.length} of ${sound.length}`, threshold: "kill if fewer than 8 of 10 sound claims-sets come back with no manufactured intervention", },
-    F2_context_matters: { pairs, threshold: "kill if a pair shows 0 changed verdicts, or any wrong_direction > 0" },
-    F3_discrimination: { planted_found: plantedFound, planted_total: plantedTotal, false_positive_P4_unexpected_claims: falsePosP4, threshold: "kill if fewer than 3 of 4 planted gaps found, or more than 2 manufactured gaps across the sound cases" },
-    F4_minimality: { over_verified_interventions: v1 ? v1.claims.filter((c) => c.intervention).length : null, over_verified_note_given: v1 ? v1.over_verified_note.length > 0 : null, menu_violations: Object.values(results.cases).flatMap((v) => v.violations.filter((x) => x.code === "MENU_NOT_MOVE")).length, feed_forward_violations: Object.values(results.cases).flatMap((v) => v.violations.filter((x) => x.code === "FEED_FORWARD")).length, threshold: "kill if any intervention is proposed on the over-verified case, or median proposals per gap exceeds one" },
+    F1_manufactures_problems: {
+      sound_cases: sound.length, sound_claims: soundClaims.length,
+      manufactured, sound_cases_clean: `${soundCasesClean} of ${sound.length}`,
+      clean_rate: soundCleanRate,
+      threshold: "kill if clean_rate < 0.80 (the original 8-of-10 rate, against the case set actually built)",
+      verdict: soundCleanRate === null ? "n/a" : soundCleanRate < 0.8 ? "FAIL" : "PASS",
+    },
+    F2_context_matters: {
+      pairs,
+      threshold: "kill if any pair shows 0 changed verdicts, or any wrong_direction > 0",
+      verdict: pairs.some((p) => p.comparable === false || p.changed === 0 || p.wrong_direction > 0) ? "FAIL" : "PASS",
+    },
+    F3_discrimination: {
+      planted_gaps: plantedRows.length, planted_found: plantedFound, found_rate: plantedFoundRate,
+      manufactured_in_sound: manufactured.length, false_positive_P4_unexpected_claims: falsePosP4,
+      threshold: "kill if found_rate < 0.75 (the original 3-of-4 rate), or manufactured_in_sound > 2, or P4 returns any unexpected claim",
+      verdict: (plantedFoundRate !== null && plantedFoundRate < 0.75) || manufactured.length > 2 || (falsePosP4 || 0) > 0 ? "FAIL" : "PASS",
+    },
+    F4_minimality: {
+      over_verified_interventions: v1 ? v1.claims.filter((c) => c.intervention).length : null,
+      over_verified_note_given: v1 ? v1.over_verified_note.length > 0 : null,
+      menu_violations: Object.values(results.cases).flatMap((v) => v.violations.filter((x) => x.code === "MENU_NOT_MOVE")).length,
+      feed_forward_violations: Object.values(results.cases).flatMap((v) => v.violations.filter((x) => x.code === "FEED_FORWARD")).length,
+      threshold: "kill if any intervention is proposed on the over-verified case, or any menu or feed-forward violation",
+      verdict: v1 && v1.claims.filter((c) => c.intervention).length > 0 ? "FAIL" : "PASS",
+    },
     F5_reconstruction: { status: "not scored automatically — see reconstruction._scoring_note" },
-    F6_stability: { cases_with_repeats: stability.length, stable: stability.filter((v) => v.stable).length, threshold: "hold to the baseline's bar: identical verdicts across repeats" },
+    F6_stability: {
+      cases_with_repeats: stability.length, stable: stability.filter((v) => v.stable).length,
+      threshold: "identical verdicts and intervention decisions across repeats",
+      verdict: stability.length && stability.every((v) => v.stable) ? "PASS" : "FAIL",
+    },
     all_violations_by_code: Object.values(results.cases).flatMap((v) => v.violations).reduce((a, x) => { a[x.code] = (a[x.code] || 0) + 1; return a; }, {}),
   };
 
   writeFileSync(join(dir, "results.json"), JSON.stringify(results, null, 1));
-  console.log(JSON.stringify(results.falsification, null, 1));
+  console.log(JSON.stringify({ confusion: results.confusion, falsification: results.falsification }, null, 1));
   console.log(`\nresults → ${join(dir, "results.json")}`);
   if (results.missing.length) console.log(`MISSING replies: ${results.missing.join(", ")}`);
 }
