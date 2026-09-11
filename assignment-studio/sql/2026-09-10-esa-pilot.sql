@@ -86,13 +86,18 @@ create table if not exists esa_feedback (
   review_id            uuid not null references esa_reviews(id) on delete cascade,
   invite_token         text not null,
   was_useful           boolean,
-  would_bring_another  boolean,
+  -- Asked only AFTER a teacher has actually submitted a second assessment. We deliberately do not
+  -- ask anyone whether they intend to come back: a stated intention is not the pilot's signal, and
+  -- asking for one invites a polite answer that means nothing.
+  return_reason        text,
   wants_upload         boolean not null default false,   -- product evidence, only if a teacher asks unprompted
   comment              text
 );
 
 create index if not exists esa_feedback_invite_idx on esa_feedback (invite_token, created_at desc);
 
+comment on column esa_feedback.return_reason is
+  'Why she came back, in her words. Collected only from the second submission onward. The fact of a second submission is the signal; this says what drove it.';
 comment on column esa_feedback.wants_upload is
   'Set only when a teacher asks for file upload themselves. The pilot is paste-only on purpose; this is how upload would earn its way in.';
 

@@ -67,7 +67,7 @@
         "<td>" + esc(when(f.created_at)) + "</td>" +
         "<td>" + esc(label[f.invite_token] || f.invite_token.slice(0, 8)) + "</td>" +
         "<td>" + esc(yn(f.was_useful)) + "</td>" +
-        "<td>" + esc(yn(f.would_bring_another)) + "</td>" +
+        "<td>" + esc(f.return_reason || "—") + "</td>" +
         "<td>" + esc(f.wants_upload ? "yes" : "—") + "</td>" +
         "<td>" + esc(f.comment || "—") + "</td>" +
         "</tr>";

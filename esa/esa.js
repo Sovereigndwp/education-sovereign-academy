@@ -19,7 +19,7 @@
     });
   };
 
-  var state = { invite: "", t: "", claims: [], review: null, fb: { useful: null, again: null } };
+  var state = { invite: "", t: "", claims: [], review: null, fb: { useful: null } };
 
   function api(body) {
     return fetch(API, {
@@ -189,75 +189,152 @@
     }).catch(function () { sessionStorage.removeItem("esa_t"); state.t = ""; begin(); });
   }
 
-  /* ── 4 · the review ────────────────────────────────────────────────────
-     Three findings, said in three different ways. The derived verdict word never appears — a good
-     take-home with full coverage derives to NOT_SUPPORTED, which is not what is true about it. */
-  var LABEL = {
-    strong: "Good evidence",
-    coverage_limited: "Does not ask for one part of it",
-    conditions_limited: "Asks the right thing · the conditions limit what it proves",
-  };
+  /* ══ 4 · the review ═══════════════════════════════════════════════════════
+     Answer first, then what I would do, then the evidence, then the usable item.
+     A teacher should know where she stands on a claim in about five seconds and be able to stop
+     reading there. Everything the engine worked out is still on the page — it sits under a summary
+     she opens if she wants it. Nothing is softened; only the order and the wording change.
+     Engine terms (coverage, conditions, components, limitation_type, the derived verdict) never
+     appear in anything below. They are how ESA thinks, not how a teacher talks. */
 
-  function headline(c) {
-    if (c.finding === "strong") return "This gives you evidence for what you want to know here. I would not change it.";
-    if (c.finding === "coverage_limited") return "The assessment does not actually ask students to demonstrate one part of this.";
-    return "The assessment asks for the right thing. Under these conditions the results cannot establish that each student can do it independently.";
+  /* Plain English for the conditions the teacher herself declared. Built here from her own answers,
+     not from model prose, so the sentence is always short and always in her words. */
+  function plainSetting(c) {
+    if (!c) return "the way students complete it";
+    var where = { proctored_in_class: "in class, with you there",
+                  observed_live: "in front of you",
+                  partly_supervised: "partly in class and partly somewhere else",
+                  unsupervised: "at home" }[c.supervision] || "outside class";
+    var extras = [];
+    if (c.ai_policy === "permitted" || c.ai_policy === "permitted_with_disclosure") extras.push("AI");
+    if ((c.resources || []).indexOf("the internet") >= 0) extras.push("the internet");
+    if ((c.resources || []).indexOf("notes") >= 0) extras.push("their notes");
+    if ((c.resources || []).indexOf("calculator") >= 0) extras.push("a calculator");
+    if (c.ai_policy === "prohibited_not_enforced" && !extras.length) extras.push("whatever they have to hand");
+    if (c.collaboration === "pairs") extras.push("a partner");
+    if (c.collaboration === "small_group") extras.push("their group");
+    var tail = extras.length
+      ? " with " + (extras.length === 1 ? extras[0]
+        : extras.slice(0, -1).join(", ") + " and " + extras[extras.length - 1]) + " available"
+      : "";
+    return where + tail;
   }
 
-  function componentsHtml(c) {
-    if (!c.coverage.components.length) return "";
-    return '<ul class="esa-comp">' + c.coverage.components.map(function (x) {
-      var word = x.status === "present" ? "Asked for" : x.status === "absent" ? "Not asked" : "Out of scope";
-      return '<li data-status="' + esc(x.status) + '"><span class="esa-comp__state">' + esc(word) + "</span>" +
-        '<span class="esa-comp__what">' + esc(x.component) +
-        (x.items && x.items.length ? '<span class="esa-comp__where">item ' + esc(x.items.join(", ")) + "</span>" : "") +
-        "</span></li>";
-    }).join("") + "</ul>";
+  /* A · the plain-language finding: one heading, and one to three sentences. */
+  function headingOf(c) {
+    if (c.finding === "strong") return "This is doing its job.";
+    if (c.finding === "coverage_limited") return "One part of this never actually gets asked.";
+    return "The questions are right. The setting is what limits you.";
   }
 
-  function recHtml(c) {
-    var r = c.recommendation;
+  function plainOf(c, conditions) {
+    var out = [];
     if (c.finding === "strong") {
-      return '<div class="esa-rec"><p class="esa-rec__none"><strong>No change.</strong> ' +
-        esc(c.supports || "") + "</p>" +
-        (c.over_verified_note ? '<p class="ast-note" style="margin-top:.7rem">' + esc(c.over_verified_note) + "</p>" : "") +
-        "</div>";
-    }
-    if (!r) return "";
-    var h = '<div class="esa-rec">';
-
-    if (c.finding === "conditions_limited") {
-      h += '<p class="esa-rec__none"><strong>The assessment does not change.</strong> ' +
-        esc(r.inference_boundary || c.conditions_support.supports || "") + "</p>";
-      if (r.verification === "short_supervised_observation" && r.add) {
-        h += '<p class="ast-p" style="margin-top:1rem"><strong>If you need to be able to say each student can do it:</strong> one short check in the room, alongside this assignment, which stays exactly as it is.</p>' +
-          '<div class="esa-item">' + esc(r.add.item_text) + "</div>" +
-          '<p class="ast-note" style="margin-top:.7rem">' + esc(r.add.sufficiency_line || "") + "</p>" +
-          (r.add.variant_rule ? '<p class="ast-note" style="margin-top:.5rem"><em>To make a fresh version each period:</em> ' + esc(r.add.variant_rule) + "</p>" : "") +
-          '<p class="esa-cost">' + esc(r.student_minutes || "?") + " min for students · about " + esc(r.scoring_seconds || "?") + " sec each to read · in the room, " + esc((r.add.conditions || "").replace(/_/g, " ")) + "</p>";
-      } else if (r.verification === "no_cheap_check") {
-        h += '<p class="ast-p" style="margin-top:1rem"><strong>There is no short check that reaches this.</strong> ' + esc(r.no_short_check_reason || "") + " The boundary above is the honest answer.</p>";
+      out.push(c.supports || "");
+      if ((c.does_not_support || []).length) {
+        out.push("Worth knowing: " + c.does_not_support[0]);
       }
-      return h + "</div>";
+      return out;
     }
+    if (c.finding === "coverage_limited") {
+      out.push(c.supports || "");
+      if (c.coverage && c.coverage.missing_component) {
+        out.push("What it never asks for is this: " + c.coverage.missing_component + ". So the results cannot tell you whether students can do that part.");
+      } else if (c.gap_statement) { out.push(c.gap_statement); }
+      return out;
+    }
+    // conditions
+    out.push("The assignment asks students to do the thinking you care about.");
+    out.push("Because they do it " + plainSetting(conditions) + ", the work that comes back does not show whether each student can do it on their own.");
+    if (c.conditions_support && c.conditions_support.supports) {
+      out.push("What it does show: " + c.conditions_support.supports);
+    }
+    return out;
+  }
 
-    // coverage_limited
-    if (r.tier === "modify_item" && r.modify) {
-      h += '<p class="ast-p"><strong>One item, changed.</strong> Same page, same item count, same minutes.</p>' +
+  /* B · what I would do — the practical conclusion, before any evidence. */
+  function actionOf(c) {
+    var r = c.recommendation;
+    if (c.finding === "strong") return { verb: "Leave it alone.", line: "I would not change anything here." };
+    if (c.finding === "conditions_limited") {
+      if (r && r.verification === "short_supervised_observation") {
+        return { verb: "Keep the assignment. Add one short check in class.",
+                 line: "The assignment itself does not change. A few minutes in the room is what turns these results into evidence about each student." };
+      }
+      if (r && r.verification === "no_cheap_check") {
+        return { verb: "No small change would answer this honestly.",
+                 line: r.no_short_check_reason || "There is no short check in class that reaches this claim." };
+      }
+      return { verb: "Leave it alone — just know what the results mean.",
+               line: "Nothing here needs changing. Read the results as what students can produce with help available, not as what each one can do alone." };
+    }
+    // coverage
+    if (r && r.tier === "modify_item") {
+      return { verb: "Change one item.", line: "Same page, same number of questions, same minutes. One item does different work." };
+    }
+    if (r && r.tier === "no_cheap_check") {
+      return { verb: "No small change would answer this honestly.", line: r.no_short_check_reason || "" };
+    }
+    if (r && r.add) {
+      return { verb: "Keep the assessment. Add one short question.",
+               line: (r.why_not_tier_1 || "No existing item could be changed to cover this without giving up something it already does.") };
+    }
+    return { verb: "Nothing small would fix this.", line: "" };
+  }
+
+  /* C · the evidence, under a summary. Nothing is removed; it simply is not first. */
+  function evidenceHtml(c) {
+    var parts = [];
+    if (c.coverage && c.coverage.components && c.coverage.components.length) {
+      parts.push('<p class="ast-mono">What this assessment asks for</p><ul class="esa-comp">' +
+        c.coverage.components.map(function (x) {
+          var word = x.status === "present" ? "Asked for" : x.status === "absent" ? "Not asked" : "Out of scope";
+          return '<li data-status="' + esc(x.status) + '"><span class="esa-comp__state">' + esc(word) + "</span>" +
+            '<span class="esa-comp__what">' + esc(x.component) +
+            (x.items && x.items.length ? '<span class="esa-comp__where">item ' + esc(x.items.join(", ")) + "</span>" : "") +
+            "</span></li>";
+        }).join("") + "</ul>");
+    }
+    if (c.supports) parts.push('<p class="ast-mono" style="margin-top:1.4rem">What the results support</p><p class="ast-p">' + esc(c.supports) + "</p>");
+    if ((c.does_not_support || []).length) {
+      parts.push('<p class="ast-mono" style="margin-top:1.4rem">What the results do not reach</p><ul class="ast-list">' +
+        c.does_not_support.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>");
+    }
+    if (c.conditions_support && c.conditions_support.reason) {
+      parts.push('<p class="ast-mono" style="margin-top:1.4rem">Why the setting matters here</p><p class="ast-p">' + esc(c.conditions_support.reason) + "</p>");
+    }
+    if (c.coverage && c.coverage.why) {
+      parts.push('<p class="ast-mono" style="margin-top:1.4rem">The reasoning</p><p class="ast-p">' + esc(c.coverage.why) + "</p>");
+    }
+    if (c.over_verified_note) {
+      parts.push('<p class="ast-mono" style="margin-top:1.4rem">One more thing</p><p class="ast-p">' + esc(c.over_verified_note) + "</p>");
+    }
+    if (!parts.length) return "";
+    return '<details class="esa-details"><summary>Show the evidence behind this</summary><div class="esa-details__body">' +
+      parts.join("") + "</div></details>";
+  }
+
+  /* D · the exact item, after she already knows why it is needed. */
+  function interventionHtml(c) {
+    var r = c.recommendation;
+    if (!r) return "";
+    if (c.finding === "coverage_limited" && r.tier === "modify_item" && r.modify) {
+      return '<div class="esa-do"><p class="ast-mono">The change</p>' +
         '<div class="esa-swap"><div><strong>Item ' + esc(r.modify.item_ref) + " now</strong><code>" + esc(r.modify.current_text) + "</code></div>" +
         "<div><strong>Instead</strong><code>" + esc(r.modify.replacement_text) + "</code></div></div>" +
-        '<p class="ast-p" style="margin-top:.8rem">' + esc(r.modify.what_it_now_forces) + "</p>";
-    } else if (r.add) {
-      h += '<p class="ast-p"><strong>One short item, added.</strong> No existing item could be changed to cover this without giving up something it already carries.</p>' +
-        (r.why_not_tier_1 ? '<p class="ast-note">' + esc(r.why_not_tier_1) + "</p>" : "") +
-        '<div class="esa-item">' + esc(r.add.item_text) + "</div>" +
-        '<p class="ast-note" style="margin-top:.7rem">' + esc(r.add.sufficiency_line || "") + "</p>" +
-        (r.add.variant_rule ? '<p class="ast-note" style="margin-top:.5rem"><em>To make a fresh version each period:</em> ' + esc(r.add.variant_rule) + "</p>" : "") +
-        '<p class="esa-cost">' + esc(r.student_minutes || "?") + " min for students · about " + esc(r.scoring_seconds || "?") + " sec each to read</p>";
-    } else if (r.tier === "no_cheap_check") {
-      h += '<p class="ast-p"><strong>There is no short check that reaches this.</strong> ' + esc(r.no_short_check_reason || "") + "</p>";
+        '<p class="ast-p" style="margin-top:.8rem">' + esc(r.modify.what_it_now_forces) + "</p></div>";
     }
-    return h + "</div>";
+    if (r.add && (r.tier === "add_observation" || r.tier === "longer_observation" || r.verification === "short_supervised_observation")) {
+      var inClass = c.finding === "conditions_limited";
+      return '<div class="esa-do"><p class="ast-mono">' + (inClass ? "The check, word for word" : "The question, word for word") + "</p>" +
+        '<div class="esa-item">' + esc(r.add.item_text) + "</div>" +
+        (r.add.sufficiency_line ? '<p class="ast-note" style="margin-top:.7rem"><strong>What counts as an answer:</strong> ' + esc(r.add.sufficiency_line) + "</p>" : "") +
+        (r.add.variant_rule ? '<p class="ast-note" style="margin-top:.5rem"><strong>A fresh version each period:</strong> ' + esc(r.add.variant_rule) + "</p>" : "") +
+        '<p class="esa-cost">' + esc(r.student_minutes == null ? "?" : r.student_minutes) + " min for students · about " +
+        esc(r.scoring_seconds == null ? "?" : r.scoring_seconds) + " sec each to read" +
+        (inClass ? " · in class, with you there" : "") + "</p></div>";
+    }
+    return "";
   }
 
   function renderReview(r) {
@@ -267,47 +344,58 @@
     var claims = r.claims || [];
     var strong = claims.filter(function (c) { return c.finding === "strong"; }).length;
     $("r-lede").textContent = strong === claims.length
-      ? "Every claim you named is carried by this assessment under the conditions you described. There is nothing here I would change."
-      : strong + " of " + claims.length + " claims are carried as they stand. Here is each one, and what to do about the rest.";
+      ? "Everything you said you wanted to know, this assessment tells you — under the conditions you described. There is nothing here I would change."
+      : strong + " of " + claims.length + " are fine as they stand. Here is each one, what I would do about it, and why.";
 
     $("r-claims").innerHTML = claims.map(function (c) {
       var statement = "";
       (r.claims_confirmed || []).forEach(function (x) { if (x.id === c.claim_id) statement = x.statement; });
+      var act = actionOf(c);
       return '<section class="esa-finding" data-finding="' + esc(c.finding) + '">' +
-        '<span class="esa-finding__label">' + esc(c.claim_id) + " · " + esc(LABEL[c.finding]) + "</span>" +
         '<p class="esa-finding__claim">' + esc(statement) + "</p>" +
-        '<p class="esa-finding__headline">' + esc(headline(c)) + "</p>" +
-        '<p class="esa-finding__body">' + esc(c.supports || "") + "</p>" +
-        (c.finding === "conditions_limited" ? '<p class="esa-finding__body">' + esc(c.conditions_support.reason || "") + "</p>" : "") +
-        componentsHtml(c) +
-        (c.does_not_support && c.does_not_support.length
-          ? '<p class="ast-mono" style="margin-top:1.4rem">What these results do not reach</p><ul class="ast-list">' +
-            c.does_not_support.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>"
-          : "") +
-        recHtml(c) +
+        // A
+        '<h3 class="esa-finding__headline">' + esc(headingOf(c)) + "</h3>" +
+        plainOf(c, r.conditions).filter(Boolean).map(function (p) {
+          return '<p class="esa-finding__body">' + esc(p) + "</p>";
+        }).join("") +
+        // B
+        '<div class="esa-action"><span class="esa-action__label">What I would do</span>' +
+        '<p class="esa-action__verb">' + esc(act.verb) + "</p>" +
+        (act.line ? '<p class="esa-action__line">' + esc(act.line) + "</p>" : "") +
+        "</div>" +
+        // C
+        evidenceHtml(c) +
+        // D
+        interventionHtml(c) +
         "</section>";
     }).join("");
+    renderFeedback(r);
     show("s-4");
   }
 
-  /* ── feedback ──────────────────────────────────────────────────────────── */
-  function yesno(wrapId, key) {
-    $(wrapId).addEventListener("click", function (ev) {
-      var b = ev.target.closest("button"); if (!b) return;
-      Array.prototype.forEach.call($(wrapId).querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-      state.fb[key] = b.dataset.v === "1";
-    });
+  /* ── feedback ──────────────────────────────────────────────────────────
+     One question. We do not ask whether she intends to come back — intention is not the signal, a
+     second assessment is. The return question is asked only once she has actually submitted one. */
+  function renderFeedback(r) {
+    var isReturn = Number(r.submission_index || 1) >= 2;
+    $("fb-return-wrap").classList.toggle("esa-hide", !isReturn);
   }
-  yesno("fb-useful", "useful");
-  yesno("fb-again", "again");
+
+  $("fb-useful").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button"); if (!b) return;
+    Array.prototype.forEach.call($("fb-useful").querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    state.fb.useful = b.dataset.v === "1";
+  });
 
   $("btn-fb").addEventListener("click", function () {
     var comment = $("fb-comment").value;
     busy($("btn-fb"), true, "Sending…");
     api({
       t: state.t, action: "feedback",
-      was_useful: state.fb.useful, would_bring_another: state.fb.again, comment: comment,
-      // Only true when a teacher asks for it themselves. The pilot is paste-only on purpose.
+      was_useful: state.fb.useful,
+      return_reason: $("fb-return").value,
+      comment: comment,
+      // Only true when a teacher asks for it herself. The pilot is paste-only on purpose.
       wants_upload: /\bupload|attach|pdf|docx|word doc|photo|scan\b/i.test(comment),
     }).then(function () {
       $("fb-thanks").textContent = "Thank you — that goes straight to Dalia.";

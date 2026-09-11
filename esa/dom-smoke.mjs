@@ -1,13 +1,19 @@
 // DOM smoke test — loads the SHIPPED esa/index.html + esa/esa.js, stubs fetch with a real review
 // payload from the verified run, and checks that a teacher actually sees the right thing.
+//
+//   node esa/dom-smoke.mjs        (needs jsdom: npm i jsdom)
+//
+// Order is part of the contract now: answer first, what I would do second, evidence third, the
+// usable item last. Several assertions below check POSITION, not just presence.
 import { readFileSync } from "node:fs";
-import { JSDOM } from "/tmp/node_modules/jsdom/lib/api.js";
+import { JSDOM } from "jsdom";
 
-const payload = JSON.parse(readFileSync("/tmp/review.json", "utf8"));
+const payload = JSON.parse(readFileSync(new URL("./fixtures/review.json", import.meta.url), "utf8"));
 let fails = 0;
 const ok = (n, c, extra = "") => { if (!c) fails++; console.log(`  ${c ? "PASS" : "FAIL"}  ${n}${extra ? "   " + extra : ""}`); };
 
-const dom = new JSDOM(readFileSync("/tmp/index.html", "utf8"), {
+const base = new URL("./", import.meta.url);
+const dom = new JSDOM(readFileSync(new URL("./index.html", base), "utf8"), {
   url: "https://thesovereign.academy/esa/?t=" + "a".repeat(32),
   runScripts: "outside-only", pretendToBeVisual: true,
 });
@@ -19,12 +25,13 @@ w.fetch = async (_u, init) => {
   return { ok: true, json: async () => ({ ok: true }) };
 };
 w.scrollTo = () => {};
-w.eval(readFileSync("/tmp/esa.js", "utf8"));
+w.eval(readFileSync(new URL("./esa.js", base), "utf8"));
 
 await new Promise((r) => setTimeout(r, 400));
 const d = w.document;
 const html = d.getElementById("r-claims").innerHTML;
 const visible = (id) => !d.getElementById(id).classList.contains("esa-hide");
+const section = (finding) => (html.split(`data-finding="${finding}"`)[1] || "").split("</section>")[0];
 
 console.log("\n1 · the flow lands on the review");
 ok("screen 4 is showing", visible("s-4"));
@@ -35,29 +42,72 @@ console.log("\n2 · three findings, said three different ways");
 ok("a strong finding rendered", html.includes('data-finding="strong"'));
 ok("a coverage limitation rendered", html.includes('data-finding="coverage_limited"'));
 ok("a conditions limitation rendered", html.includes('data-finding="conditions_limited"'));
-ok("the strong one says leave it alone", html.includes("I would not change it"));
-ok("the conditions one says the assessment does not change", html.includes("The assessment does not change"));
-ok("the coverage one offers a single changed item", html.includes("One item, changed"));
 
-console.log("\n3 · the verdict word never reaches the teacher");
+console.log("\n3 · answer first → action second → evidence third → item last");
+for (const f of ["strong", "coverage_limited", "conditions_limited"]) {
+  const s = section(f);
+  const iHead = s.indexOf("esa-finding__headline");
+  const iAct = s.indexOf("esa-action");
+  const iEv = s.indexOf("esa-details");
+  const iDo = s.indexOf("esa-do");
+  ok(`${f}: heading comes first`, iHead >= 0 && (iAct < 0 || iHead < iAct));
+  ok(`${f}: "What I would do" precedes the evidence`, iAct >= 0 && (iEv < 0 || iAct < iEv));
+  if (iDo >= 0) ok(`${f}: the usable item comes after the reasoning`, iDo > iAct);
+}
+ok("the evidence is collapsed behind a summary", html.includes("<details") && html.includes("Show the evidence behind this"));
+ok("the detailed reasoning is still on the page", /The reasoning|Why the setting matters|do not reach/.test(html));
+
+console.log("\n4 · the plain-language finding is plain");
+ok("strong says it is doing its job", section("strong").includes("This is doing its job"));
+ok("coverage names the part never asked for", section("coverage_limited").includes("never actually gets asked"));
+ok("conditions separates the questions from the setting", section("conditions_limited").includes("The questions are right"));
+ok("conditions explains the setting in the teacher's own terms",
+  /they do it at home/.test(section("conditions_limited")) && /on their own/.test(section("conditions_limited")));
+
+console.log("\n5 · what I would do, in four shapes");
+ok("strong → leave it alone", section("strong").includes("Leave it alone"));
+ok("coverage → change one item", section("coverage_limited").includes("Change one item"));
+ok("conditions → keep it, add a short check", section("conditions_limited").includes("Keep the assignment"));
+ok("the conditions branch never offers an item swap", section("conditions_limited").indexOf("esa-swap") === -1);
+
+console.log("\n6 · no-change is earned, not empty");
+const s0 = section("strong");
+ok("a strong claim gives a concrete reason", s0.replace(/<[^>]+>/g, "").length > 400, `${s0.replace(/<[^>]+>/g, "").length} chars`);
+ok("a strong claim still states one boundary", s0.includes("Worth knowing:"));
+
+console.log("\n7 · engine vocabulary never reaches the teacher");
 const body = d.body.textContent;
-for (const w2 of ["NOT_SUPPORTED", "NOT SUPPORTED", "LIMITED ", "KEEP", "NO_CHEAP_CHECK"]) {
-  ok(`"${w2.trim()}" is absent from the page`, !body.includes(w2));
+for (const t of ["NOT_SUPPORTED", "NOT SUPPORTED", "LIMITED ", "KEEP", "NO_CHEAP_CHECK",
+                 "coverage_limited", "conditions_limited", "limitation_type", "Stage A", "Stage B",
+                 "component map", "gate 1", "modify_item", "add_observation"]) {
+  ok(`"${t.trim()}" is absent from the page`, !body.includes(t));
 }
 
-console.log("\n4 · banned vocabulary is absent");
-for (const w2 of ["sufficient", "AI-proof", "AI-resistant", "cheat-proof", "confidence score"]) {
-  ok(`"${w2}" is absent`, !new RegExp(w2.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "i").test(body));
+console.log("\n8 · banned vocabulary is absent");
+for (const t of ["sufficient", "AI-proof", "AI-resistant", "cheat-proof", "confidence score"]) {
+  ok(`"${t}" is absent`, !new RegExp(t.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"), "i").test(body));
 }
 
-console.log("\n5 · the conditions branch shows the boundary, not a rewrite");
-ok("an inference boundary sentence is shown", /do not support|cannot|does not support/i.test(html));
-ok("no item-swap block on the conditions claim",
-  (html.split('data-finding="conditions_limited"')[1] || "").split("</section>")[0].indexOf("esa-swap") === -1);
+console.log("\n9 · the feedback block asks one question, not two");
+ok('"Would you bring another assessment?" is gone', !body.includes("Would you bring another"));
+ok('"Was this worth the five minutes?" stays', body.includes("Was this worth the five minutes"));
+ok("the return question is hidden on a first submission", !visible("fb-return-wrap"));
 
-console.log("\n6 · component maps render, verbless entries do not");
-ok("component rows rendered", (html.match(/class="esa-comp"/g) || []).length >= 1);
-ok("component states read as English, not schema", html.includes("Asked for") || html.includes("Not asked"));
+console.log("\n10 · the return question appears only after a real second submission");
+const dom2 = new JSDOM(readFileSync(new URL("./index.html", base), "utf8"), {
+  url: "https://thesovereign.academy/esa/?t=" + "b".repeat(32), runScripts: "outside-only", pretendToBeVisual: true,
+});
+const w2 = dom2.window;
+const second = JSON.parse(JSON.stringify(payload));
+second.review.submission_index = 2;
+w2.fetch = async () => ({ ok: true, json: async () => second });
+w2.scrollTo = () => {};
+w2.eval(readFileSync(new URL("./esa.js", base), "utf8"));
+await new Promise((r) => setTimeout(r, 400));
+ok("on the second submission it is shown",
+  !dom2.window.document.getElementById("fb-return-wrap").classList.contains("esa-hide"));
+ok("and it asks what made her come back",
+  dom2.window.document.body.textContent.includes("What made you want to check this one"));
 
 console.log(fails === 0 ? "\nALL DOM SMOKE TESTS PASS\n" : `\n${fails} FAILED\n`);
 process.exit(fails === 0 ? 0 : 1);

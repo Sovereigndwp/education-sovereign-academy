@@ -59,38 +59,74 @@
 .esa-steps li[data-state="current"] { color: var(--esa-solid); border-bottom-color: var(--esa-solid); }
 
 /* ── the three findings ───────────────────────────────────────────────────
-   Structure carries the meaning, not colour — a left rule and a label, the way
-   as.css does severity. The three are visually distinct because they ARE three
-   different findings, and a teacher must not read "conditions" as "you did
-   something wrong". */
+   Answer first, then what to do, then the evidence, then the item. Structure
+   carries the meaning, not colour — a left rule and a shape, the way as.css
+   does severity. The three are visually distinct because they ARE three
+   different findings, and a teacher must not read "the setting limits this"
+   as "you did something wrong". */
 .esa-finding {
   background: var(--tsa-surface); border: 1px solid var(--tsa-border);
   border-radius: var(--radius-md); padding: var(--space-6);
-  border-left: 3px solid var(--tsa-border-strong, #3C4047); margin-top: var(--space-6);
+  border-left: 3px solid var(--tsa-border-strong, #3C4047); margin-top: var(--space-8);
 }
 .esa-finding[data-finding="strong"]             { border-left-color: var(--esa-solid); }
 .esa-finding[data-finding="coverage_limited"]   { border-left-style: dashed; border-left-color: var(--esa-sky); }
 .esa-finding[data-finding="conditions_limited"] { border-left-style: double; border-left-width: 5px; border-left-color: var(--esa-indigo); }
 
-.esa-finding__label {
-  font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--tsa-muted); display: block; margin-bottom: 0.5rem;
+/* the claim, quiet — it is context for the finding, not the finding */
+.esa-finding__claim {
+  font-size: 0.92rem; line-height: 1.5; color: var(--tsa-muted);
+  margin: 0 0 var(--space-4); padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--tsa-border);
 }
-.esa-finding__claim { font-family: var(--font-serif); font-size: 1.18rem; line-height: 1.35; color: var(--tsa-ink-strong); margin: 0 0 var(--space-4); }
-.esa-finding__headline { font-size: 1.02rem; line-height: 1.55; color: var(--tsa-ink-strong); font-weight: 600; }
+/* A · the answer, in seconds */
+.esa-finding__headline {
+  font-family: var(--font-serif); font-weight: 700; font-size: 1.32rem; line-height: 1.25;
+  color: var(--tsa-ink-strong); margin: 0 0 var(--space-3);
+}
 .esa-finding__body { color: var(--tsa-ink); line-height: 1.6; margin-top: var(--space-3); }
 
+/* B · what I would do — visible before any evidence */
+.esa-action {
+  margin-top: var(--space-6); padding: var(--space-5);
+  background: var(--tsa-deepest); border: 1px solid var(--tsa-border); border-radius: var(--radius-sm);
+}
+.esa-action__label {
+  font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--tsa-muted); display: block; margin-bottom: 0.45rem;
+}
+.esa-action__verb {
+  font-size: 1.06rem; font-weight: 600; line-height: 1.4; color: var(--tsa-ink-strong); margin: 0;
+}
+.esa-action__line { color: var(--tsa-muted); line-height: 1.55; margin-top: 0.45rem; font-size: 0.95rem; }
+
+/* C · the evidence — all of it, one click away */
+.esa-details { margin-top: var(--space-5); border-top: 1px solid var(--tsa-border); }
+.esa-details > summary {
+  cursor: pointer; list-style: none; padding: var(--space-4) 0 0;
+  font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--tsa-muted); display: flex; align-items: center; gap: 0.5rem;
+}
+.esa-details > summary::-webkit-details-marker { display: none; }
+.esa-details > summary::after { content: "+"; font-size: 0.95rem; line-height: 1; color: var(--esa-solid); }
+.esa-details[open] > summary::after { content: "\2212"; }
+.esa-details > summary:hover { color: var(--tsa-ink-strong); }
+.esa-details__body { padding-top: var(--space-2); }
+.esa-details__body .ast-mono { display: block; margin-bottom: 0.35rem; }
+
+/* D · the usable item, once she knows why she wants it */
+.esa-do { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--tsa-border); }
+.esa-do .ast-mono { display: block; margin-bottom: 0.5rem; }
+
 /* ── component map ───────────────────────────────────────────────────────── */
-.esa-comp { list-style: none; padding: 0; margin: var(--space-4) 0 0; border-top: 1px solid var(--tsa-border); }
+.esa-comp { list-style: none; padding: 0; margin: var(--space-3) 0 0; border-top: 1px solid var(--tsa-border); }
 .esa-comp li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.75rem; padding: 0.7rem 0; border-bottom: 1px solid var(--tsa-border); align-items: start; }
 .esa-comp__state { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--tsa-muted); padding-top: 0.2rem; }
 .esa-comp li[data-status="absent"] .esa-comp__state { color: var(--esa-sky); }
 .esa-comp__what { color: var(--tsa-ink); line-height: 1.45; }
 .esa-comp__where { display: block; font-size: 0.85rem; color: var(--tsa-muted); margin-top: 0.2rem; }
 
-/* ── the recommendation, and the deliberate absence of one ───────────────── */
-.esa-rec { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--tsa-border); }
-.esa-rec__none { color: var(--tsa-ink); line-height: 1.6; }
+/* ── the item itself ─────────────────────────────────────────────────────── */
 .esa-item {
   font-family: var(--font-mono); font-size: 0.92rem; line-height: 1.5; white-space: pre-wrap;
   background: var(--tsa-deepest); border: 1px solid var(--tsa-border); border-radius: var(--radius-sm);

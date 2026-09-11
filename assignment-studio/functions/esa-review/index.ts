@@ -52,6 +52,13 @@ async function used(tok: string): Promise<number> {
   return rows?.length ?? 0;
 }
 
+/** Which submission this review is for its teacher, counting only reviews that got that far. */
+async function submissionIndex(r: Rec): Promise<number> {
+  const rows = await db<Rec[]>(`esa_reviews?invite_token=eq.${r.invite_token}&status=neq.failed&select=id,created_at&order=created_at.asc`);
+  const at = (rows ?? []).findIndex((x) => x.id === r.id);
+  return at >= 0 ? at + 1 : (rows?.length ?? 0) + 1;
+}
+
 /* ── what the teacher's browser is allowed to see ───────────────────────────
    Never the derived verdict word. A take-home assessment with sufficient coverage derives to
    NOT_SUPPORTED, which reads far harsher than the truth — the assignment is fine, the attribution is
@@ -94,10 +101,14 @@ function publicClaim(d: Rec, remedy: Rec | undefined) {
   };
 }
 
-function publicReview(r: Rec) {
+function publicReview(r: Rec, submissionIndex?: number) {
   const rem: Rec[] = (r.remedies ?? []) as Rec[];
   return {
     t: undefined,
+    // Which submission this is for this teacher. The page asks "what made you want to check another
+    // one?" only from the second onward — we never ask anyone whether they INTEND to come back,
+    // because coming back is the signal and a stated intention is not.
+    submission_index: submissionIndex ?? null,
     created_at: r.created_at, title: r.title, subject: r.subject, grade: r.grade,
     status: r.status, stage: r.stage, error: r.error,
     claims_inferred: r.claims_inferred ?? null,
@@ -166,7 +177,7 @@ async function create(body: Rec): Promise<Response> {
   }
 
   const r = await loadByToken(t);
-  return json({ t, review: publicReview(r!) });
+  return json({ t, review: publicReview(r!, (await used(inv.token))) });
 }
 
 /* ── confirm: claims + conditions, then run ───────────────────────────────── */
@@ -215,7 +226,7 @@ async function confirm(r: Rec, body: Rec): Promise<Response> {
   else runReview(id).catch(() => {});
 
   const fresh = await db<Rec[]>(`esa_reviews?id=eq.${id}&select=${R_SELECT}`);
-  return json({ review: publicReview(fresh[0]) });
+  return json({ review: publicReview(fresh[0], await submissionIndex(r)) });
 }
 
 /* ── feedback: two questions, deliberately short ──────────────────────────── */
@@ -225,7 +236,8 @@ async function feedback(r: Rec, body: Rec): Promise<Response> {
     body: {
       review_id: r.id, invite_token: r.invite_token,
       was_useful: typeof body.was_useful === "boolean" ? body.was_useful : null,
-      would_bring_another: typeof body.would_bring_another === "boolean" ? body.would_bring_another : null,
+      // Only meaningful from the second submission onward; the page shows the question only then.
+      return_reason: str(body.return_reason, 1000) || null,
       wants_upload: body.wants_upload === true,
       comment: str(body.comment, 2000) || null,
     },
@@ -241,7 +253,7 @@ async function admin(body: Rec): Promise<Response> {
 
   const invites = await db<Rec[]>("esa_invites?select=token,teacher_label,reviews_allowed,revoked,note,created_at&order=created_at.asc");
   const reviews = await db<Rec[]>("esa_reviews?select=id,created_at,invite_token,title,subject,grade,status,stage,claims_corrected,conditions,arch_version,span_violations,arch_violations,error&order=created_at.desc&limit=100");
-  const fb = await db<Rec[]>("esa_feedback?select=review_id,invite_token,was_useful,would_bring_another,wants_upload,comment,created_at&order=created_at.desc&limit=100");
+  const fb = await db<Rec[]>("esa_feedback?select=review_id,invite_token,was_useful,return_reason,wants_upload,comment,created_at&order=created_at.desc&limit=100");
 
   const perInvite = invites.map((i) => {
     const mine = reviews.filter((x) => x.invite_token === i.token);
@@ -289,7 +301,7 @@ Deno.serve(async (req: Request) => {
 
     if (action === "confirm") return await confirm(r, body);
     if (action === "feedback") return await feedback(r, body);
-    if (action === "get" || !action) return json({ review: publicReview(r) });
+    if (action === "get" || !action) return json({ review: publicReview(r, await submissionIndex(r)) });
     return json({ error: `Unknown action "${action}".` }, 400);
   } catch (e) {
     return json({ error: String((e as Error).message ?? e).slice(0, 600) }, 500);
