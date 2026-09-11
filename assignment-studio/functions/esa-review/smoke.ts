@@ -3,6 +3,7 @@
 // they behaved in the harness.
 import { assertNoRemedyLeak, validateSpans, mergeRemedy, isRealComponent, canonical, sha256 } from "../_shared/esa.ts";
 import { DIAGNOSIS_SYSTEM, REMEDY_SYSTEM_CONDITIONS, REMEDY_SYSTEM_COVERAGE, PROMPT_SHA } from "../_shared/esa-prompts.ts";
+import { isTransient, safeError, retryOnce } from "../_shared/safe.ts";
 
 let fails = 0;
 const ok = (name: string, cond: boolean, extra = "") => {
@@ -83,6 +84,53 @@ ok("a rewrite on a conditions limitation is recorded AND forced back to none",
 const dis = await mergeRemedy({ claimRecord: record, diagnosis_hash: hash, limitationType: "coverage",
   remedyRaw: { tier: "modify_item", disagreement: "None." } });
 ok('"None." is not treated as a disagreement', !dis.violations.some((v) => v.code === "STAGE_B_DISAGREED"));
+
+console.log("\n5 · failing safely — the 2026-09-11 production 504, verbatim");
+
+// The exact string that reached a teacher's screen. Token redacted here; shape identical.
+const PROD_504 =
+  'db GET esa_reviews?access_token=eq.74fd9b42eb2ddd249da295913b59d7b3&select=id,created_at,invite_token,title' +
+  ' \u2192 504: {"message":"Gateway Timeout"}';
+
+ok("the production 504 is classified transient", isTransient(PROD_504));
+const s504 = safeError(PROD_504);
+ok("it answers 503, not 500", s504.status === 503);
+ok("it is marked retryable", s504.retryable === true);
+ok("the teacher is told nothing was saved", /nothing was saved/i.test(s504.error));
+ok("no access token reaches the teacher", !s504.error.includes("74fd9b42eb2ddd249da295913b59d7b3"));
+ok("no request URL reaches the teacher",
+  !/esa_reviews|access_token|select=|db GET|rest\/v1/i.test(s504.error));
+ok("no status code or raw payload reaches the teacher",
+  !/504|Gateway Timeout|\{"message"/i.test(s504.error));
+
+const s500 = safeError("TypeError: Cannot read properties of undefined (reading 'claims')");
+ok("a genuine bug is NOT called transient", !isTransient("TypeError: Cannot read properties of undefined"));
+ok("a genuine bug answers 500 and is not retryable", s500.status === 500 && s500.retryable === false);
+ok("a genuine bug leaks no internals either",
+  !/TypeError|undefined|claims/.test(s500.error) && /nothing was saved/i.test(s500.error));
+
+console.log("\n6 · the bounded retry — one more attempt, never a loop");
+let calls = 0;
+const flaky = await retryOnce(() => {
+  calls++;
+  if (calls === 1) return Promise.reject(new Error(PROD_504));
+  return Promise.resolve("row");
+}, 1);
+ok("a read lost to a gateway timeout succeeds on the second attempt", flaky === "row" && calls === 2);
+
+calls = 0;
+let rethrown = "";
+try {
+  await retryOnce(() => { calls++; return Promise.reject(new Error("db GET esa_reviews \u2192 400: bad filter")); }, 1);
+} catch (e) { rethrown = String((e as Error).message); }
+ok("a real error is not retried and surfaces unchanged", calls === 1 && rethrown.includes("400: bad filter"));
+
+calls = 0;
+let gaveUp = false;
+try {
+  await retryOnce(() => { calls++; return Promise.reject(new Error(PROD_504)); }, 1);
+} catch { gaveUp = true; }
+ok("a persistent outage gives up after exactly two attempts", gaveUp && calls === 2);
 
 console.log(`\nprompt sha  diagnosis ${PROMPT_SHA.diagnosis}  coverage ${PROMPT_SHA.coverage}  conditions ${PROMPT_SHA.conditions}`);
 console.log(fails === 0 ? "\nALL SMOKE TESTS PASS\n" : `\n${fails} FAILED\n`);

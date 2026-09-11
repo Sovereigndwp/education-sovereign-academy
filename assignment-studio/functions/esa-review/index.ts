@@ -10,6 +10,7 @@
 // Paste-only. No file upload, no extraction: the pilot is not spending its five teachers on parsing.
 // Never accepts student work or student PII — assessments only, and the teacher confirms that.
 import { db, json, preflight, EMAIL_RE, nowIso } from "../_shared/lib.ts";
+import { safeError, retryOnce } from "../_shared/safe.ts";
 import { callModel } from "../_shared/engine.ts";
 import {
   claimInferenceSystem, claimInferenceUser, extractJson, runReview, reapIfStale,
@@ -295,7 +296,7 @@ Deno.serve(async (req: Request) => {
     if (action === "create") return await create(body);
 
     const t = str(body.t, 64);
-    let r = await loadByToken(t);
+    let r = await retryOnce(() => loadByToken(t));
     if (!r) return json({ error: "That link is not valid." }, 404);
     r = await reapIfStale(r);
 
@@ -304,6 +305,9 @@ Deno.serve(async (req: Request) => {
     if (action === "get" || !action) return json({ review: publicReview(r, await submissionIndex(r)) });
     return json({ error: `Unknown action "${action}".` }, 400);
   } catch (e) {
-    return json({ error: String((e as Error).message ?? e).slice(0, 600) }, 500);
+    const detail = String((e as Error)?.message ?? e);
+    console.error("esa-review: unhandled —", detail);
+    const safe = safeError(detail);
+    return json({ error: safe.error, retryable: safe.retryable }, safe.status);
   }
 });
