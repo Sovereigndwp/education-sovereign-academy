@@ -252,6 +252,40 @@
     return "";
   }
 
+  /* Joins a fragment onto a following sentence without doubling its punctuation. The engine's fields
+     sometimes end in a full stop and sometimes do not; that is the engine's business, and it is fixed
+     here rather than by touching what it stores. */
+  function sentence(head, tail) {
+    var h = String(head || "").trim().replace(/[.\u2026]+$/, "");
+    if (!h) return String(tail || "").trim();
+    return tail ? h + ". " + String(tail).trim() : h + ".";
+  }
+
+  /* The opening sentence of a claim, in ordinary language.
+
+     The stored `supports` field is written in the engine's register — several real records open with
+     "Independent evidence that …", which is how the engine talks about attribution, not how a teacher
+     talks about her own assessment. This strips a known lead-in and says "This shows that …" instead.
+
+     Deliberately small. It removes a prefix and nothing else: no synonyms, no re-ordering, no
+     softening. The words after the lead-in are the engine's and they stay exactly as written, because
+     substituting them would be a new judgment about the claim rather than a way of showing one. If the
+     remainder still carries engine register, the sentence is omitted and the verbatim field stays in
+     the evidence disclosure, same rule as boundaryOf. */
+  var SUPPORTS_LEAD_IN = /^(?:independent\s+|direct\s+)?evidence\s+that\s+|^this\s+assessment\s+supports\s+the\s+conclusion\s+that\s+|^the\s+assessment\s+supports\s+the\s+conclusion\s+that\s+|^that\s+/i;
+
+  function supportsOf(c) {
+    var raw = String(c.supports || "").trim();
+    if (!raw) return "";
+    if (!SUPPORTS_LEAD_IN.test(raw)) {
+      // Already a plain sentence. Show it as written unless it carries engine register.
+      return ENGINE_REGISTER.test(raw) ? "" : raw;
+    }
+    var rest = raw.replace(SUPPORTS_LEAD_IN, "").trim();
+    if (!rest || ENGINE_REGISTER.test(rest)) return "";
+    return sentence("This shows that " + rest.charAt(0).toLowerCase() + rest.slice(1));
+  }
+
   /* A · the plain-language finding: one heading, and one to three sentences. */
   function headingOf(c) {
     if (c.finding === "strong") return "This is doing its job.";
@@ -262,15 +296,16 @@
   function plainOf(c, conditions) {
     var out = [];
     if (c.finding === "strong") {
-      out.push(c.supports || "");
+      out.push(supportsOf(c));
       var boundary = boundaryOf(c);
       if (boundary) out.push("Worth knowing: " + boundary);
       return out;
     }
     if (c.finding === "coverage_limited") {
-      out.push(c.supports || "");
+      out.push(supportsOf(c));
       if (c.coverage && c.coverage.missing_component) {
-        out.push("What it never asks for is this: " + c.coverage.missing_component + ". So the results cannot tell you whether students can do that part.");
+        out.push(sentence("What it never asks for is this: " + c.coverage.missing_component,
+                          "So the results cannot tell you whether students can do that part."));
       } else if (c.gap_statement) { out.push(c.gap_statement); }
       return out;
     }
@@ -278,7 +313,7 @@
     out.push("The assignment asks students to do the thinking you care about.");
     out.push("Because they do it " + plainSetting(conditions) + ", the work that comes back does not show whether each student can do it on their own.");
     if (c.conditions_support && c.conditions_support.supports) {
-      out.push("What it does show: " + c.conditions_support.supports);
+      out.push(sentence("What it does show: " + c.conditions_support.supports));
     }
     return out;
   }

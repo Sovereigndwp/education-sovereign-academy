@@ -128,6 +128,19 @@ for (const t of ["does not support", "independent evidence", "claim component", 
   ok(`"${t}" never reaches the boundary sentence`, !new RegExp(t, "i").test(boundarySentence));
 }
 
+console.log("\n11b · the opening sentence is plain, and prose never doubles its punctuation");
+ok("the strong claim opens with 'This shows that'", /This shows that/.test(strongCollapsed));
+ok("the engine's lead-in is gone", !/Independent evidence that/i.test(strongCollapsed));
+// Every string the page COMPOSES, as opposed to the assessment text it quotes verbatim.
+const composed = Array.prototype.map.call(
+  d.querySelectorAll(".esa-finding__headline, .esa-finding__body, .esa-action__verb, .esa-action__line, .esa-details__body .ast-p, .esa-details__body li"),
+  (el) => el.textContent,
+);
+const doubled = composed.filter((t) => /\.\./.test(t));
+ok("no doubled full stop anywhere in composed prose", doubled.length === 0, doubled[0] || "");
+ok("the coverage claim reads cleanly across the join",
+  /selected\. So the results/.test(section("coverage_limited")), (section("coverage_limited").match(/selected[^<]{0,24}/) || [""])[0]);
+
 console.log("\n12 · when no clean boundary exists, the line is omitted — never fudged");
 const dom3 = new JSDOM(readFileSync(new URL("./index.html", base), "utf8"),
   { url: "https://thesovereign.academy/esa/?t=" + "c".repeat(32), runScripts: "outside-only", pretendToBeVisual: true });
