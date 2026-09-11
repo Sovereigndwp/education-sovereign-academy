@@ -220,6 +220,38 @@
     return where + tail;
   }
 
+  /* The one boundary shown in the collapsed view of a claim that needs nothing.
+     The engine's stored does_not_support entries are written as clauses continuing an implied
+     "this does not support…" — accurate, but they read as engine prose. This selects one and
+     renders it as a plain sentence answering the only question a teacher has here: what should I
+     be careful NOT to conclude from these results?
+
+     Presentation only. It reads the stored record and never rewrites it, makes no model call, adds
+     no inference, and drops only the engine's justification tail — which stays, in full and
+     verbatim, inside the evidence disclosure. If no entry survives cleanly, the line is omitted
+     rather than fudged: a boundary that has to be bent to fit is not worth showing. */
+  var ENGINE_REGISTER = /does not support|independent evidence|claim[- ]component|narrower inference|adjacent claim|guess[- ]rate|selected[- ]response|verdict|elicits|delegab|feed[- ]forward|primitive|variant rule|sufficiency line/i;
+
+  function boundaryOf(c) {
+    var entries = c.does_not_support || [];
+    for (var i = 0; i < entries.length; i++) {
+      var raw = String(entries[i] || "").trim();
+      if (!raw || ENGINE_REGISTER.test(raw)) continue;
+      // "Anything about X" / "A judgment about X" are scope notes about the instrument, not
+      // conclusions a teacher might wrongly draw. They do not transform into a sentence.
+      if (/^(anything\b|a\b|an\b|the\b)/i.test(raw)) continue;
+      var negated = /^does not\s/i.test(raw);
+      var s = raw.replace(/^That\s+/i, "").replace(/^Does not\s+/i, "");
+      // The engine's reason for the boundary is the part that reads as engine prose. The boundary
+      // itself is the head clause, and it stands on its own.
+      s = s.split(/,\s+(?:since|because|as)\s/i)[0].split(/\s*[;\u2014]\s+/)[0].trim().replace(/\.+$/, "");
+      if (!s || s.length > 150) continue;
+      s = s.charAt(0).toLowerCase() + s.slice(1);
+      return negated ? "It does not " + s + "." : "It does not show that " + s + ".";
+    }
+    return "";
+  }
+
   /* A · the plain-language finding: one heading, and one to three sentences. */
   function headingOf(c) {
     if (c.finding === "strong") return "This is doing its job.";
@@ -231,9 +263,8 @@
     var out = [];
     if (c.finding === "strong") {
       out.push(c.supports || "");
-      if ((c.does_not_support || []).length) {
-        out.push("Worth knowing: " + c.does_not_support[0]);
-      }
+      var boundary = boundaryOf(c);
+      if (boundary) out.push("Worth knowing: " + boundary);
       return out;
     }
     if (c.finding === "coverage_limited") {

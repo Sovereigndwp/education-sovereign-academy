@@ -109,5 +109,42 @@ ok("on the second submission it is shown",
 ok("and it asks what made her come back",
   dom2.window.document.body.textContent.includes("What made you want to check this one"));
 
+console.log("\n11 · the strong-claim boundary is rendered, not dumped");
+// The part a teacher reads without clicking anything.
+const strongCollapsed = section("strong").split("<details")[0];
+const strongDetails = (section("strong").split("<details")[1] || "");
+const rawFirst = (payload.review.claims.find((c) => c.finding === "strong").does_not_support || [])[0] || "";
+ok("a boundary sentence is shown", /Worth knowing: It does not/.test(strongCollapsed), strongCollapsed.match(/Worth knowing:[^<]*/)?.[0] || "");
+ok("it is one short sentence", (strongCollapsed.match(/Worth knowing: ([^<]*)/) || ["", ""])[1].length <= 170);
+ok("the raw stored entry is NOT dumped verbatim into the collapsed view", !strongCollapsed.includes(rawFirst));
+ok("the engine's justification tail stays out of the collapsed view", !/since item 9 names the error/.test(strongCollapsed));
+ok("but the full stored entry survives inside the evidence", strongDetails.includes(rawFirst));
+// Scoped to the boundary sentence, which is what this renderer is responsible for. The paragraph
+// above it is the engine's own `supports` field, rendered verbatim by design — see the note in
+// plainOf(). It is NOT covered here, and at least one real record opens it with "Independent
+// evidence that…", which is engine phrasing. That is a separate sentence and a separate decision.
+const boundarySentence = (strongCollapsed.match(/Worth knowing: ([^<]*)/) || ["", ""])[1];
+for (const t of ["does not support", "independent evidence", "claim component", "narrower inference", "adjacent claim", "verdict", "elicits"]) {
+  ok(`"${t}" never reaches the boundary sentence`, !new RegExp(t, "i").test(boundarySentence));
+}
+
+console.log("\n12 · when no clean boundary exists, the line is omitted — never fudged");
+const dom3 = new JSDOM(readFileSync(new URL("./index.html", base), "utf8"),
+  { url: "https://thesovereign.academy/esa/?t=" + "c".repeat(32), runScripts: "outside-only", pretendToBeVisual: true });
+const noBoundary = JSON.parse(JSON.stringify(payload));
+const sc = noBoundary.review.claims.find((c) => c.finding === "strong");
+sc.does_not_support = [
+  "Does not support an independent evidence claim about that component.",
+  "Adjacent claim it could be mistaken for: the weighting required in H4.",
+];
+dom3.window.fetch = async () => ({ ok: true, json: async () => noBoundary });
+dom3.window.scrollTo = () => {};
+dom3.window.eval(readFileSync(new URL("./esa.js", base), "utf8"));
+await new Promise((r) => setTimeout(r, 400));
+const h3 = dom3.window.document.getElementById("r-claims").innerHTML;
+const s3 = (h3.split('data-finding="strong"')[1] || "").split("</section>")[0];
+ok("no boundary line is rendered", !s3.split("<details")[0].includes("Worth knowing"));
+ok("and the stored entries are still there in full", s3.split("<details")[1].includes("Adjacent claim it could be mistaken for"));
+
 console.log(fails === 0 ? "\nALL DOM SMOKE TESTS PASS\n" : `\n${fails} FAILED\n`);
 process.exit(fails === 0 ? 0 : 1);
