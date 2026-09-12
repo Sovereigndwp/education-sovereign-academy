@@ -105,27 +105,6 @@
     }
     .nav-link:hover { color: var(--tsa-ink-strong); background: rgba(88,166,245,0.10); }
     .nav-link[aria-current="page"] { color: var(--tsa-ink-strong); }
-    .nav-item { position: relative; }
-    .nav-toggle {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: none; border: none; cursor: pointer; font-family: var(--font-sans);
-      color: var(--tsa-muted); font-size: 0.9rem; font-weight: 500;
-      padding: 0.5rem 0.85rem; border-radius: var(--radius-md);
-      transition: var(--transition-base); white-space: nowrap;
-    }
-    .nav-toggle:hover, .nav-toggle[aria-expanded="true"] { color: var(--tsa-ink-strong); background: rgba(88,166,245,0.10); }
-    .nav-toggle .caret { font-size: 8px; transition: transform 0.2s ease; }
-    .nav-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
-    .nav-menu {
-      position: absolute; top: calc(100% + 8px); left: 0; min-width: 250px;
-      background: var(--tsa-elevated); border: 1px solid var(--tsa-border);
-      border-radius: var(--radius-lg); box-shadow: 0 14px 40px rgba(0,0,0,0.5);
-      padding: 0.5rem; display: none; z-index: 1200;
-    }
-    .nav-menu.open { display: block; }
-    .nav-menu a { display: block; color: var(--tsa-muted); font-size: 0.88rem; font-weight: 500; padding: 0.55rem 0.75rem; border-radius: var(--radius-md); transition: var(--transition-base); }
-    .nav-menu a:hover { color: var(--tsa-ink-strong); background: rgba(88,166,245,0.10); }
-    .nav-menu .menu-note { display: block; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tsa-faint); margin-top: 3px; }
     .nav-burger { display: none; background: none; border: 1px solid var(--tsa-border); border-radius: var(--radius-md); color: var(--tsa-ink); padding: 0.45rem 0.7rem; font-size: 1rem; line-height: 1; cursor: pointer; }
     @media (max-width: 900px) {
       .nav-burger { display: inline-flex; }
@@ -136,10 +115,7 @@
         max-height: calc(100vh - 70px); overflow-y: auto;
       }
       .header-nav.open { display: flex; }
-      .nav-item { width: 100%; }
-      .nav-toggle { width: 100%; justify-content: space-between; padding: 0.75rem 0.5rem; }
       .nav-link { padding: 0.75rem 0.5rem; }
-      .nav-menu { position: static; min-width: 0; box-shadow: none; border: none; background: transparent; padding: 0 0 0 0.9rem; }
     }
 
     /* ---------- Page hero ---------- */
@@ -278,7 +254,7 @@
 
     /* ---------- Footer ---------- */
     .footer { padding: 3.5rem 0 2.5rem; background: var(--tsa-bg); }
-    .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2.5rem; align-items: start; }
+    .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; align-items: start; }
     @media (max-width: 900px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 560px) { .footer-inner { grid-template-columns: 1fr; } }
     .footer-brand { font-family: var(--font-serif); font-weight: 700; color: var(--tsa-ink-strong); font-size: 1rem; }
@@ -314,21 +290,13 @@
     <div class="header-content">
       <a href="/" class="logo" aria-label="The Sovereign Academy home">
         <span class="logo-mark">S</span>
-        <span class="logo-text">The Sovereign Academy<span>Education Sovereign Academy</span></span>
+        <span class="logo-text">The Sovereign Academy<span>Understand more &middot; depend less</span></span>
       </a>
       <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">&#9776;</button>
       <nav class="header-nav" id="primaryNav" aria-label="Primary">
-        <div class="nav-item">
-          <button class="nav-toggle" aria-expanded="false" aria-controls="menu-academies">The Academies <span class="caret" aria-hidden="true">&#9660;</span></button>
-          <div class="nav-menu" id="menu-academies">
-            <a href="https://bitcoinsovereign.academy">Bitcoin Sovereign Academy</a>
-            <a href="https://financiallysovereign.academy">Financially Sovereign Academy</a>
-            <a href="/esa/">Education Sovereign Academy</a>
-          </div>
-        </div>
-        <a class="nav-link" href="#how">How it works</a>
-        <a class="nav-link" href="#building">What we're building</a>
-        <a class="nav-link" href="/about/">About The Academy</a>
+        <a class="nav-link" href="/#work">Current work</a>
+        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="/institutional/">For organizations</a>
         <a class="nav-link" href="mailto:dalia@thesovereign.academy">Contact</a>
       </nav>
     </div>
@@ -675,37 +643,29 @@
       <div class="footer-inner">
         <div>
           <div class="footer-brand">
-            Education Sovereign Academy
-            <span>A Sovereign Academy property</span>
+            The Sovereign Academy
+            <span>thesovereign.academy</span>
           </div>
           <p class="footer-desc">
-            Systems that help teachers and parents understand what educational evidence
-            may be showing and decide what is worth doing next.
+            Education, tools, and practical resources around personal sovereignty.
+            Built and run by Dalia Platt.
           </p>
         </div>
-        <nav class="footer-col" aria-label="The Academy">
-          <h5>The Academy</h5>
+        <nav class="footer-col" aria-label="Academies">
+          <h5>Academies</h5>
           <ul>
-            <li><a href="/">The Sovereign Academy</a></li>
-            <li><a href="/about/">About The Academy</a></li>
-            <li><a href="mailto:dalia@thesovereign.academy">Contact</a></li>
-          </ul>
-        </nav>
-        <nav class="footer-col" aria-label="The Sovereign Academies">
-          <h5>The Academies</h5>
-          <ul>
-            <li><a href="https://bitcoinsovereign.academy">Bitcoin Sovereign Academy</a></li>
             <li><a href="https://financiallysovereign.academy">Financially Sovereign Academy</a></li>
+            <li><a href="https://bitcoinsovereign.academy">Bitcoin Sovereign Academy</a></li>
             <li><a href="/esa/">Education Sovereign Academy</a></li>
           </ul>
         </nav>
-        <nav class="footer-col" aria-label="On this page">
-          <h5>This Academy</h5>
+        <nav class="footer-col" aria-label="The Academy">
+          <h5>The Academy</h5>
           <ul>
-            <li><a href="#how">How it works</a></li>
-            <li><a href="#who">Teachers and parents</a></li>
-            <li><a href="#building">What we're building</a></li>
-            <li><a href="#principle">Our principle</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/institutional/">For organizations</a></li>
+            <li><a href="https://meetings.hubspot.com/dalia-platt" target="_blank" rel="noopener noreferrer">Book a conversation</a></li>
+            <li><a href="mailto:dalia@thesovereign.academy">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -720,28 +680,6 @@
   </footer>
 
   <script>
-    // Dropdown menus — same behaviour as / and /about/
-    const toggles = document.querySelectorAll('.nav-toggle');
-    const closeAllMenus = (except) => {
-      toggles.forEach(t => {
-        if (t !== except) {
-          t.setAttribute('aria-expanded', 'false');
-          document.getElementById(t.getAttribute('aria-controls')).classList.remove('open');
-        }
-      });
-    };
-    toggles.forEach(t => {
-      t.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const menu = document.getElementById(t.getAttribute('aria-controls'));
-        const isOpen = t.getAttribute('aria-expanded') === 'true';
-        closeAllMenus(t);
-        t.setAttribute('aria-expanded', String(!isOpen));
-        menu.classList.toggle('open', !isOpen);
-      });
-    });
-    document.addEventListener('click', () => closeAllMenus());
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAllMenus(); });
 
     // Mobile menu
     const burger = document.getElementById('navBurger');
