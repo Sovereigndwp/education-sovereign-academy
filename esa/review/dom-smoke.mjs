@@ -14,7 +14,7 @@ const ok = (n, c, extra = "") => { if (!c) fails++; console.log(`  ${c ? "PASS" 
 
 const base = new URL("./", import.meta.url);
 const dom = new JSDOM(readFileSync(new URL("./index.html", base), "utf8"), {
-  url: "https://thesovereign.academy/esa/?t=" + "a".repeat(32),
+  url: "https://thesovereign.academy/esa/review/?t=" + "a".repeat(32),
   runScripts: "outside-only", pretendToBeVisual: true,
 });
 const w = dom.window;
@@ -97,7 +97,7 @@ ok("the return question is hidden on a first submission", !visible("fb-return-wr
 
 console.log("\n10 · the return question appears only after a real second submission");
 const dom2 = new JSDOM(readFileSync(new URL("./index.html", base), "utf8"), {
-  url: "https://thesovereign.academy/esa/?t=" + "b".repeat(32), runScripts: "outside-only", pretendToBeVisual: true,
+  url: "https://thesovereign.academy/esa/review/?t=" + "b".repeat(32), runScripts: "outside-only", pretendToBeVisual: true,
 });
 const w2 = dom2.window;
 const second = JSON.parse(JSON.stringify(payload));
@@ -145,7 +145,7 @@ ok("the coverage claim reads cleanly across the join",
 
 console.log("\n12 · when no clean boundary exists, the line is omitted — never fudged");
 const dom3 = new JSDOM(readFileSync(new URL("./index.html", base), "utf8"),
-  { url: "https://thesovereign.academy/esa/?t=" + "c".repeat(32), runScripts: "outside-only", pretendToBeVisual: true });
+  { url: "https://thesovereign.academy/esa/review/?t=" + "c".repeat(32), runScripts: "outside-only", pretendToBeVisual: true });
 const noBoundary = JSON.parse(JSON.stringify(payload));
 const sc = noBoundary.review.claims.find((c) => c.finding === "strong");
 sc.does_not_support = [

@@ -40,7 +40,7 @@
         "<td>" + esc(back) + "</td>" +
         "<td>" + esc(when(i.first_at)) + "</td>" +
         "<td>" + esc(when(i.last_at)) + "</td>" +
-        '<td><code style="font-size:.8rem">' + esc(origin) + "/esa/?i=" + esc(i.token) + "</code></td>" +
+        '<td><code style="font-size:.8rem">' + esc(origin) + "/esa/review/?i=" + esc(i.token) + "</code></td>" +
         "</tr>";
     }).join("") || '<tr><td colspan="7">No invites yet. Insert a row into esa_invites.</td></tr>');
 

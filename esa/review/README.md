@@ -173,7 +173,7 @@ insert into esa_invites (token, teacher_label, reviews_allowed) values
   (encode(gen_random_bytes(16), 'hex'), 'Teacher 5', 3);
 ```
 
-The links are `https://thesovereign.academy/esa/?i=<token>` and the admin view lists them.
+The links are `https://thesovereign.academy/esa/review/?i=<token>` and the admin view lists them.
 
-Static hosting is Vercel with explicit rewrites; `vercel.json` gains `/esa` and `/esa/` only.
+Static hosting is Vercel with explicit rewrites; `vercel.json` gains `/esa/review` and `/esa/review/`; `/esa` and `/esa/` belong to the public ESA homepage.
 No TSA, BSA, FSA or Assignment Studio route is changed.
