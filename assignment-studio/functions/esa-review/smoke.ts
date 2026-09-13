@@ -22,10 +22,13 @@ threw = false;
 try { assertNoRemedyLeak("test", "the student must repair the error in item 9", ["the student must repair the error in item 9"]); } catch { threw = true; }
 ok("teacher's own words are scanned out, not flagged", !threw);
 
-console.log("\n2 · the conditions remedy has no modify_item — absence, not instruction");
+console.log("\n2 · neither remedy offers modify_item — the tier is out of pilot scope (H1, 2026-09-10)");
 ok("conditions prompt has no 'modify_item'", !REMEDY_SYSTEM_CONDITIONS.includes("modify_item"));
 ok("conditions prompt has no tier hierarchy", !REMEDY_SYSTEM_CONDITIONS.includes("TIER 1"));
-ok("coverage prompt DOES offer modify_item", REMEDY_SYSTEM_COVERAGE.includes("modify_item"));
+ok("coverage prompt does NOT offer modify_item", !REMEDY_SYSTEM_COVERAGE.includes("modify_item"));
+ok("coverage prompt does NOT offer a longer observation", !REMEDY_SYSTEM_COVERAGE.includes("longer_observation"));
+ok("coverage prompt ships exactly two remedy tiers", REMEDY_SYSTEM_COVERAGE.includes("TIER 1 — ADD ONE SHORT INDEPENDENT OBSERVATION") && REMEDY_SYSTEM_COVERAGE.includes("TIER 2 — NO CHEAP CHECK") && !REMEDY_SYSTEM_COVERAGE.includes("TIER 3"));
+ok("coverage prompt forbids editing an existing item", REMEDY_SYSTEM_COVERAGE.includes("YOU MAY NOT REWRITE"));
 
 console.log("\n3 · span anchoring — the two release-check failures, verbatim");
 const E1 = "Infers the author's unstated position on replacing the Mill Street bridge from the text's choices rather than from any sentence that states it.";
@@ -65,24 +68,32 @@ console.log("\n4 · the merge — Stage B cannot write back");
 const record = { claim_id: "G5C1", coverage: { coverage_status: "sufficient" }, supports: "x" };
 const hash = await sha256(canonical(record));
 const clean = await mergeRemedy({ claimRecord: record, diagnosis_hash: hash, limitationType: "coverage",
-  remedyRaw: { tier: "modify_item", assessment_change: "modify_one_item", modify: { item_ref: "3" }, disagreement: "" } });
+  remedyRaw: { tier: "add_observation", assessment_change: "none", add: { primitive: "Perturb" }, disagreement: "" } });
 ok("a clean merge produces no violations", clean.violations.length === 0, clean.violations.map((v) => v.code).join(","));
+
+const mod = await mergeRemedy({ claimRecord: record, diagnosis_hash: hash, limitationType: "coverage",
+  remedyRaw: { tier: "modify_item", assessment_change: "modify_one_item", modify: { item_ref: "3" }, disagreement: "" } });
+ok("a modify on a COVERAGE gap is recorded AND dropped",
+  mod.violations.some((v) => v.code === "MODIFY_OUT_OF_PILOT_SCOPE") && mod.merged.stage_b.modify === null);
+ok("the out-of-scope tier itself is recorded", mod.violations.some((v) => v.code === "TIER_OUT_OF_PILOT_SCOPE"));
+ok("a rewrite on a coverage gap is forced back to none",
+  mod.violations.some((v) => v.code === "ASSESSMENT_REWRITTEN") && mod.merged.stage_b.assessment_change === "none");
 ok("the Stage A half is untouched", clean.merged.coverage.coverage_status === "sufficient");
 
 const over = await mergeRemedy({ claimRecord: record, diagnosis_hash: hash, limitationType: "coverage",
-  remedyRaw: { tier: "modify_item", coverage: { coverage_status: "limited" }, supports: "REWRITTEN" } });
+  remedyRaw: { tier: "add_observation", coverage: { coverage_status: "limited" }, supports: "REWRITTEN" } });
 ok("Stage B fields outside the whitelist are dropped", over.violations.some((v) => v.code === "STAGE_B_OVERREACH"));
 ok("Stage B could not overwrite the diagnosis", over.merged.supports === "x" && over.merged.coverage.coverage_status === "sufficient");
 
 const cond = await mergeRemedy({ claimRecord: record, diagnosis_hash: hash, limitationType: "conditions",
   remedyRaw: { assessment_change: "modify_one_item", modify: { item_ref: "4" }, verification: "none" } });
 ok("an item modification on a conditions limitation is recorded AND dropped",
-  cond.violations.some((v) => v.code === "MODIFY_ON_CONDITIONS_GAP") && cond.merged.stage_b.modify === null);
+  cond.violations.some((v) => v.code === "MODIFY_OUT_OF_PILOT_SCOPE") && cond.merged.stage_b.modify === null);
 ok("a rewrite on a conditions limitation is recorded AND forced back to none",
-  cond.violations.some((v) => v.code === "ASSESSMENT_REWRITTEN_FOR_CONDITIONS") && cond.merged.stage_b.assessment_change === "none");
+  cond.violations.some((v) => v.code === "ASSESSMENT_REWRITTEN") && cond.merged.stage_b.assessment_change === "none");
 
 const dis = await mergeRemedy({ claimRecord: record, diagnosis_hash: hash, limitationType: "coverage",
-  remedyRaw: { tier: "modify_item", disagreement: "None." } });
+  remedyRaw: { tier: "add_observation", disagreement: "None." } });
 ok('"None." is not treated as a disagreement', !dis.violations.some((v) => v.code === "STAGE_B_DISAGREED"));
 
 console.log("\n5 · failing safely — the 2026-09-11 production 504, verbatim");

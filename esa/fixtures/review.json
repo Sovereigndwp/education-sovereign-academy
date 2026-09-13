@@ -84,21 +84,22 @@
     },
     "over_verified_note": "Three separate unlike-denominator pairs exercise the choosing and executing components, which is more instances than the claim requires for those two parts.",
     "recommendation": {
-     "assessment_change": "modify_one_item",
-     "tier": "modify_item",
+     "assessment_change": "none",
+     "tier": "add_observation",
      "inference_boundary": null,
      "verification": null,
-     "modify": {
-      "item_ref": "Part A, item 3",
-      "current_text": "Part A - Compare. Circle the correct symbol. Do not show work.\n3. 5/6  ( < )  ( > )  ( = )  8/9",
-      "replacement_text": "Part A - Compare. Circle the correct symbol. Items 1 and 2: do not show work. Item 3: circle the symbol, then finish the sentence on the line under it.\n3. 5/6  ( < )  ( > )  ( = )  8/9\n   I know because ________________________________________________ (one line: name the two numbers you compared after renaming, OR the benchmark you compared each fraction to, OR what your picture showed - then say which fraction that made larger).",
-      "what_it_now_forces": "The student must leave a written trace of the strategy that produced the symbol - the renamed pair (45/54 and 48/54), the distance of each fraction from 1 or from one half, or what a drawn model showed - so the circled symbol is no longer the only thing on the page; item 3 keeps the same number pair and the same comparison it already tested, and gives up only the roughly one minute of pure answer-speed that the 'do not show work' instruction was buying on this one item, while items 1 and 2 continue to supply the no-work comparisons unchanged."
+     "modify": null,
+     "add": {
+      "primitive": "Represent",
+      "item_text": "Compare 5/6 and 8/9. Circle the correct symbol, then on the line below show OR describe the one thing that convinced you - the renamed pair, the distance of each fraction from 1, or a quick sketch.\n5/6  ( < )  ( > )  ( = )  8/9\nBecause ______________________________________________",
+      "variant_rule": "Swap the pair each period from 3/4 vs 5/7, 7/8 vs 9/10, 2/3 vs 5/8 - both fractions unlike, neither comparison decidable by numerator alone.",
+      "conditions": "In the room, on paper, three minutes, no resources. The existing assessment is not altered in any way.",
+      "sufficiency_line": "A renamed pair, a named benchmark, or a labelled sketch - any one of the three, in the student's own hand. A restated answer with no reason does not count.",
+      "why_this_primitive": "The gap is that the strategy behind a circled symbol is invisible, not that the comparison is wrong. Represent asks for the trace directly and nothing else, so it reaches exactly the missing component without re-testing what Part A already evidences."
      },
-     "add": null,
      "no_short_check_reason": "",
-     "why_not_tier_1": "",
-     "student_minutes": 1,
-     "scoring_seconds": 15
+     "student_minutes": 3,
+     "scoring_seconds": 20
     }
    },
    {
@@ -181,7 +182,6 @@
       "why_this_primitive": "Reverse gives the outcome and withholds one input, so the student cannot copy a forward procedure onto the page - the common denominator must be built, the parts combined and the mixed number unpacked to recover the missing fraction."
      },
      "no_short_check_reason": "",
-     "why_not_tier_1": "",
      "student_minutes": 3,
      "scoring_seconds": 20
     }

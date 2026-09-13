@@ -335,15 +335,12 @@
                line: "Nothing here needs changing. Read the results as what students can produce with help available, not as what each one can do alone." };
     }
     // coverage
-    if (r && r.tier === "modify_item") {
-      return { verb: "Change one item.", line: "Same page, same number of questions, same minutes. One item does different work." };
-    }
     if (r && r.tier === "no_cheap_check") {
       return { verb: "No small change would answer this honestly.", line: r.no_short_check_reason || "" };
     }
     if (r && r.add) {
       return { verb: "Keep the assessment. Add one short question.",
-               line: (r.why_not_tier_1 || "No existing item could be changed to cover this without giving up something it already does.") };
+               line: "Nothing already on the page is changed. One short, separate question covers what the rest cannot." };
     }
     return { verb: "Nothing small would fix this.", line: "" };
   }
@@ -384,13 +381,7 @@
   function interventionHtml(c) {
     var r = c.recommendation;
     if (!r) return "";
-    if (c.finding === "coverage_limited" && r.tier === "modify_item" && r.modify) {
-      return '<div class="esa-do"><p class="ast-mono">The change</p>' +
-        '<div class="esa-swap"><div><strong>Item ' + esc(r.modify.item_ref) + " now</strong><code>" + esc(r.modify.current_text) + "</code></div>" +
-        "<div><strong>Instead</strong><code>" + esc(r.modify.replacement_text) + "</code></div></div>" +
-        '<p class="ast-p" style="margin-top:.8rem">' + esc(r.modify.what_it_now_forces) + "</p></div>";
-    }
-    if (r.add && (r.tier === "add_observation" || r.tier === "longer_observation" || r.verification === "short_supervised_observation")) {
+    if (r.add && (r.tier === "add_observation" || r.verification === "short_supervised_observation")) {
       var inClass = c.finding === "conditions_limited";
       return '<div class="esa-do"><p class="ast-mono">' + (inClass ? "The check, word for word" : "The question, word for word") + "</p>" +
         '<div class="esa-item">' + esc(r.add.item_text) + "</div>" +

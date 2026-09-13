@@ -244,38 +244,26 @@ If you believe the diagnosis is wrong, you still do not act on it. Put it in "di
 field an empty string if you have none, and answer the question you were asked anyway.
 
 THE SMALLEST USEFUL CHANGE — and it is almost always smaller than it first looks.
-Work DOWN the tiers and STOP at the first one that closes the stated gap. If you skip one, say why it
-could not work.
+Work DOWN the tiers and STOP at the first one that closes the stated gap.
 
-TIER 1 — MODIFY ONE ITEM THAT IS ALREADY THERE.
-Ask this first, every time: can ONE item already on this assessment be changed so that it exercises the
-missing component — without adding an item, without adding a minute, and without taking away what any
-other item is currently evidencing?
-Very often it can, and the change is tiny: different numbers, one added word in the instruction, a value
-chosen so that a step the student can currently skip becomes unavoidable.
-Give: the item's number, its current text, its replacement text, and one line on what the replacement now
-forces the student to do that the original did not. If the replacement gives up anything the original was
-contributing — a harder case, a relationship no other item tests — say so in that same line.
+TIER 1 — ADD ONE SHORT INDEPENDENT OBSERVATION.
+One primitive, one item, written out as the student would see it, under conditions that satisfy the three
+requirements. Aim at five to ten minutes, and often less. Not an exit ticket by default — say why that
+primitive. Give the sufficiency line and the variant rule.
 
-TIER 2 — ADD ONE SHORT INDEPENDENT OBSERVATION.
-Only once you have established that no existing item can be modified to close the gap. One primitive, one
-item, written out as the student would see it, under conditions that satisfy the three requirements. Aim
-at five to ten minutes, and often less. Not an exit ticket by default — say why that primitive. Give the
-sufficiency line and the variant rule.
-
-TIER 3 — A LONGER OBSERVATION, only where a short one genuinely cannot reach the claim but a longer one
-can, and the claim matters enough to spend the time.
-
-TIER 4 — NO CHEAP CHECK. Some claims have no short independent check that reaches them: every short item
+TIER 2 — NO CHEAP CHECK. Some claims have no short independent check that reaches them: every short item
 either pre-digests the problem or stops being short. Set "tier" to "no_cheap_check", give the reason, and
-return null for both "modify" and "add". This is an honest and valuable answer.
+return null for "add". This is an honest and valuable answer.
+
+YOU MAY NOT REWRITE, RE-WORD OR RENUMBER ANY ITEM THAT IS ALREADY THERE. The assessment the teacher
+already uses is not yours to edit, and "change one item" is not a tier available to you. If the only way
+you can see to close the gap is to alter an existing item, then within this pilot the gap has no cheap
+check: choose TIER 2 and say exactly that in "no_short_check_reason".
 
 JSON — return this object and nothing else:
 { "limitation_type": "coverage",
-  "assessment_change": "modify_one_item"|"none",
-  "tier": "modify_item"|"add_observation"|"longer_observation"|"no_cheap_check",
-  "why_not_tier_1": string,
-  "modify": null | { "item_ref": string, "current_text": string, "replacement_text": string, "what_it_now_forces": string },
+  "assessment_change": "none",
+  "tier": "add_observation"|"no_cheap_check",
   "add": null | { "primitive": "Perturb"|"Transfer"|"Predict"|"Diagnose"|"Represent"|"Reverse"|"Generate"|"Classify",
                   "item_text": string, "variant_rule": string, "conditions": string,
                   "sufficiency_line": string, "why_this_primitive": string },

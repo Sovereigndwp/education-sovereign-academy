@@ -244,7 +244,7 @@ export function remedyUser(a: {
 
 /* ── the merge — the only place Stage B may touch a Stage A record ────────── */
 export const STAGE_B_ALLOWED_KEYS = [
-  "limitation_type", "assessment_change", "tier", "why_not_tier_1", "modify", "add",
+  "limitation_type", "assessment_change", "tier", "modify", "add",
   "inference_boundary", "verification", "why_this_verification",
   "no_short_check_reason", "student_minutes", "scoring_seconds", "disagreement",
 ];
@@ -259,13 +259,19 @@ export async function mergeRemedy(a: {
   for (const k of STAGE_B_ALLOWED_KEYS) if (a.remedyRaw && k in a.remedyRaw) clean[k] = a.remedyRaw[k];
   const dis = String(clean.disagreement ?? "").trim().replace(/^["']|["'.]$/g, "").toLowerCase();
   if (dis && dis !== "none" && dis !== "n/a") violations.push({ code: "STAGE_B_DISAGREED", detail: String(clean.disagreement).slice(0, 200) });
-  if (a.limitationType === "conditions" && clean.assessment_change !== "none") {
-    violations.push({ code: "ASSESSMENT_REWRITTEN_FOR_CONDITIONS", detail: `assessment_change="${clean.assessment_change}" on a conditions limitation.` });
+  if (clean.assessment_change !== undefined && clean.assessment_change !== "none") {
+    violations.push({ code: "ASSESSMENT_REWRITTEN", detail: `assessment_change="${clean.assessment_change}". The assessment is never rewritten in this pilot.` });
     clean.assessment_change = "none";
   }
-  if (a.limitationType === "conditions" && clean.modify) {
-    violations.push({ code: "MODIFY_ON_CONDITIONS_GAP", detail: "An item modification was returned for a conditions limitation and was dropped." });
+  // MODIFY ONE EXISTING ITEM is out of pilot scope (H1 failed its gate, 2026-09-10). The prompt no
+  // longer offers the tier; this is defence in depth for a model that proposes one anyway. Dropping
+  // it here is what keeps the cost of finding an absence high — see ESA-SHIP-INVENTORY-2026-09-13.
+  if (clean.modify) {
+    violations.push({ code: "MODIFY_OUT_OF_PILOT_SCOPE", detail: "An item modification was returned and was dropped: the modify-one-item tier is out of pilot scope." });
     clean.modify = null;
+  }
+  if (clean.tier === "modify_item" || clean.tier === "longer_observation") {
+    violations.push({ code: "TIER_OUT_OF_PILOT_SCOPE", detail: `tier="${clean.tier}" is not one of the two remedy tiers this pilot ships.` });
   }
   const merged: Rec = { ...JSON.parse(JSON.stringify(a.claimRecord)), stage_b: clean };
   const back: Rec = { ...merged }; delete back.stage_b;

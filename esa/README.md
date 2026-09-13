@@ -44,9 +44,17 @@ A conditions limitation is **never** recorded as a missing component. An earlier
 through gate 1 by inventing a component called *"independent production"* — the independence condition
 wearing a component's clothes — which is also what produced every name-matching violation in that run.
 
-Stage B has **two prompts**. The conditions prompt contains no tier hierarchy and the string
-`modify_item` does not appear in it: rewriting a worksheet cannot repair the room, so the option is
-absent rather than forbidden.
+Stage B has **two prompts**, and **neither** offers `modify_item`. The conditions prompt never did:
+rewriting a worksheet cannot repair the room, so the option is absent rather than forbidden. The
+coverage prompt lost it on 2026-09-13, when the hierarchy was pinned to A4.
+
+The shipped hierarchy is exactly three tiers — **no change → add one short independent check → no
+cheap check**. `MODIFY ONE EXISTING ITEM` is out of pilot scope. It is not omitted because it is a
+bad idea; H1 showed it is a *load-bearing* one. When the cheapest available remedy was a five-minute
+added item, finding an absence was expensive and the engine was conservative. Once "change one word"
+became available, the price of an absence collapsed and gate 1 began decomposing claims more finely
+to find absences it had previously let stand — restraint 0.968 → 0.871, stability failed. The cost of
+the remedy had been doing the restraint work. Restraint is structural, not dispositional.
 
 ### Conditions matter only relative to the intended inference
 

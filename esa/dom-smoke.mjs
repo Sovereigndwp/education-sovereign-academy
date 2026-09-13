@@ -64,11 +64,13 @@ ok("conditions separates the questions from the setting", section("conditions_li
 ok("conditions explains the setting in the teacher's own terms",
   /they do it at home/.test(section("conditions_limited")) && /on their own/.test(section("conditions_limited")));
 
-console.log("\n5 · what I would do, in four shapes");
+console.log("\n5 · what I would do — three tiers, pinned to A4 (2026-09-13)");
 ok("strong → leave it alone", section("strong").includes("Leave it alone"));
-ok("coverage → change one item", section("coverage_limited").includes("Change one item"));
+ok("coverage → keep it, add one short question", section("coverage_limited").includes("Keep the assessment. Add one short question"));
 ok("conditions → keep it, add a short check", section("conditions_limited").includes("Keep the assignment"));
-ok("the conditions branch never offers an item swap", section("conditions_limited").indexOf("esa-swap") === -1);
+ok("NO branch offers an item swap — modify-one-item is out of pilot scope",
+  d.body.innerHTML.indexOf("esa-swap") === -1);
+ok("the teacher is never told to change an existing item", !d.body.textContent.includes("Change one item"));
 
 console.log("\n6 · no-change is earned, not empty");
 const s0 = section("strong");
