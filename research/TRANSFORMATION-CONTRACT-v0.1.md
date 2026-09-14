@@ -2,7 +2,7 @@
 
 **Issued by the owner (Dalia) · 2026-09-05 · status: GOVERNING**
 Supersedes the machine-drafted contract of the same date (now `references/TRANSFORMATION-CONTRACT-machine-draft-SUPERSEDED-2026-09-05.md`) and the uniform seven-invariant scheme in `ASSIGNMENT-STUDIO-MIGRATION-PLAN.md`.
-Implementation: `~/projects/sovereign-academy-hub/assignment-studio/` (contract-as-code in `functions/_shared/contract.ts`).
+Implementation: `assignment-studio/` in this repository (contract-as-code in `assignment-studio/functions/_shared/contract.ts`). Until 2026-09-14 this lived at `~/projects/sovereign-academy-hub/assignment-studio/`.
 
 Posture: avoid unnecessary governance, research and infrastructure work before there is something credible to demonstrate and sell. Challenge this contract only on a concrete implementation or instructional-validity problem.
 

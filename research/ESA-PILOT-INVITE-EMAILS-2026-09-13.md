@@ -90,9 +90,13 @@ non-return — see `PILOT-PRE-REGISTRATION.md`.
 None of this can be done from the Claude session: there is no GitHub push credential in the
 tooling VM (SSH has no known_hosts, HTTPS has no helper, no `gh`). Every step below is Dalia's.
 
-1. **Push the pilot branch.** `cd ~/projects/sovereign-academy-hub && git push origin feat/esa-pilot`
-   — four commits: the A4 hierarchy pin, the `/esa/review/` relocation, the falsification
-   pre-registration, and the earlier error-handling fix.
+> **Updated 2026-09-14.** ESA now has its own repository. The pilot code is on `main` of
+> `Sovereigndwp/education-sovereign-academy`; the hub no longer needs a push for it. Step 1 below
+> is updated to the new repository. The rest of this document is left as written on 2026-09-13.
+
+1. **Confirm the pilot code is published.** `cd ~/projects/education-sovereign-academy && git status`
+   — the A4 hierarchy pin, the `/esa/review/` relocation, the falsification pre-registration and
+   the earlier error-handling fix are all on `main`.
 2. **Apply the SQL before deploying.** `sql/2026-09-09-stale-generation.sql` from
    `fix/as-stale-generation` must be applied to Supabase `rdqwoqdvqpedlsbaghtr` *before* the
    function that depends on it goes out. This is the one ordering mistake that is expensive.

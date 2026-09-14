@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher Demand Discovery — Sovereign Classrooms · The Sovereign Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#121316;--surface:#191B1F;--s2:#1F2228;--border:#2C2F36;--muted:#A7ABB3;--ink:#ECECE6;
+  --brand:#FF7A00;--brandhi:#FF9A00;--gold:#FFD400;--deep:#B45400;
+  --em:#34D399;--emd:#10B981;--silver:#C7CCD1;--warn:#F87171;--shadow:0 10px 40px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.62 Inter,system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:#fff;line-height:1.15}
+h1{font-size:clamp(2.1rem,5vw,3.3rem);font-weight:800;margin:.2em 0 .1em}
+h2{font-size:clamp(1.5rem,3vw,2rem);margin:1.7em 0 .5em;border-top:1px solid var(--border);padding-top:.6em}
+h3{font-size:1.25rem;color:var(--brandhi);margin:1.4em 0 .4em}
+p{margin:.6em 0}
+a{color:var(--brandhi);text-decoration:none}
+strong{color:#fff}em{color:var(--gold);font-style:normal}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.85em;background:var(--s2);border:1px solid var(--border);border-radius:5px;padding:.05em .35em;color:var(--em)}
+.hero{padding:70px 0 30px;background:radial-gradient(1100px 380px at 18% -10%,rgba(255,122,0,.16),transparent 60%),radial-gradient(800px 340px at 92% 0,rgba(52,211,153,.08),transparent 55%);border-bottom:1px solid var(--border)}
+.kicker{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);border:1px solid var(--deep);border-radius:999px;padding:.35em .9em;margin-bottom:12px;background:rgba(255,122,0,.06)}
+.lede{font-size:1.2rem;color:var(--muted);max-width:800px}
+.meta{color:#70747c;font-size:.82rem;margin-top:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px 24px;margin:16px 0;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}
+@media(max-width:820px){.g3,.g4,.g2{grid-template-columns:1fr}}
+.kpi{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:16px}
+.kpi .v{font-family:'Playfair Display';font-size:1.85rem;color:var(--brandhi);line-height:1}
+.kpi .l{color:var(--muted);font-size:.8rem;margin-top:6px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--brandhi);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+tr:hover td{background:rgba(255,255,255,.015)}
+.num{text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap}
+.score{font-weight:700;font-family:'Playfair Display'}
+.s5{color:#34D399}.s4{color:#8fe6bf}.s3{color:#FFD400}.s2{color:#FF9A00}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;padding:.15em .55em;border-radius:6px;border:1px solid}
+.t-gap{color:var(--warn);border-color:rgba(248,113,113,.4);background:rgba(248,113,113,.08)}
+.t-win{color:var(--em);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.08)}
+.callout{border-left:3px solid var(--brand);background:rgba(255,122,0,.05);padding:12px 18px;border-radius:0 10px 10px 0;margin:16px 0}
+.callout.em{border-color:var(--em);background:rgba(52,211,153,.05)}
+.callout.warn{border-color:var(--warn);background:rgba(248,113,113,.05)}
+.rank{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border)}
+.rank .badge{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:'Playfair Display';font-weight:800;color:#141414;background:linear-gradient(135deg,var(--brand),var(--gold));flex-shrink:0}
+.rank h4{font-size:1.08rem;color:#fff;margin:0 0 3px}
+.rank .why{font-size:.9rem;color:var(--muted)}
+.rank .sc{margin-left:auto;text-align:right;font-size:.78rem;color:var(--muted);white-space:nowrap}
+.pill{font-size:.7rem;color:var(--muted);background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:.12em .5em;margin:0 4px 4px 0;display:inline-block}
+.assume{color:var(--gold);font-size:.85rem}
+.assume::before{content:"⚑ ";font-weight:700}
+ul{margin:.4em 0;padding-left:1.2em}li{margin:.3em 0}
+footer{border-top:1px solid var(--border);margin-top:44px;padding:26px 0 60px;color:#70747c;font-size:.84rem}
+.src{font-size:.82rem;color:#70747c}
+</style>
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="kicker">The Sovereign Academy · Demand Discovery</span>
+  <h1>Sovereign Classrooms — Who's Buying, and the Gap We Can Own</h1>
+  <p class="lede">Agentic market scan of the Pre-K–12 teacher population: who is searching for and supplying content, what they already pay for, and the one gap the whole market leaves open — the gap the tyb-engine was built for.</p>
+  <p class="meta">Demand ledger + competitive map + willingness-to-pay · 2026-08-27 · input to the cross-subject transformation demo</p>
+</div></div>
+
+<div class="wrap">
+
+<div class="callout em"><strong>The finding in one line.</strong> Every major tool <em>generates</em> content (MagicSchool, Diffit, Eduaide) or <em>drills</em> it (Boom, Kahoot, IXL), and two of them now <em>transform</em> your material into interactive activities (Curipod, NOLEJ). <strong>None of them diagnose <em>why</em> a specific student is wrong</strong> — and 2025–26 research shows generic LLMs actively <em>misdiagnose</em> struggling-student errors. That diagnosis — misconception-first, with validated detection signals and telemetry — is exactly what the tyb-engine already does. The wedge is not "make it interactive." It is <strong>"make it interactive <em>and</em> diagnostic."</strong></div>
+
+<h2>Market snapshot</h2>
+<div class="grid g4">
+  <div class="kpi"><div class="v">~3.7M</div><div class="l">US K-12 teachers; MagicSchool alone claims 6M+ educators</div></div>
+  <div class="kpi"><div class="v">$253M</div><div class="l">paid to TPT sellers in 2024 · 2.6M+ active users</div></div>
+  <div class="kpi"><div class="v">$895–1,021</div><div class="l">teacher out-of-pocket / yr on resources (~$3.2B total)</div></div>
+  <div class="kpi"><div class="v">5.9 hrs</div><div class="l">saved per week by teachers who use AI weekly</div></div>
+</div>
+<p>Two teacher populations, both live: <strong>suppliers</strong> (2.6M on TPT, a $253M payout economy) and <strong>the AI-shy majority</strong> (49-hr weeks, 44% burned out, already spending ~$1k/yr of their own money). The demand for "AI without having to learn it" is proven — <strong>850+ districts bought $5M+ of AI tools in the last six months</strong> — but it is fragmented and, critically, thin on diagnosis.</p>
+
+<h2>Ranked demand ledger — where to point the engine</h2>
+<p>Scored 2–5 on four axes: <strong>Demand</strong> (search + purchase volume), <strong>Underserved</strong> (gap left by incumbents), <strong>WTP</strong> (teacher + district willingness to pay), <strong>Engine-fit</strong> (how misconception-shaped the subject is — how well tyb's diagnosis applies).</p>
+
+<div class="card">
+  <div class="rank"><div class="badge">1</div><div><h4>Elementary math · Grades 3–5 (fractions, number sense) <span class="tag t-win">DEMO PICK</span></h4>
+    <div class="why">Largest TPT volume (K-5); fractions has a famous, well-documented misconception set (equal-parts, larger-denominator-larger-fraction, number-line placement) — a perfect match for tyb's classifier. It parallels your unit-circle asset, and it's your home turf as a math teacher, so the demo is authentic.</div>
+    <div style="margin-top:6px"><span class="pill">Demand 5</span><span class="pill">Underserved 3</span><span class="pill">WTP 4</span><span class="pill">Fit 5</span></div></div>
+    <div class="sc"><span class="score s5">17</span>/20</div></div>
+
+  <div class="rank"><div class="badge">2</div><div><h4>Special education / ELL differentiation · K-12 <span class="tag t-win">HIGHEST-VALUE EXPANSION</span></h4>
+    <div class="why">Most underserved: SPED teachers use tech <em>less</em>, got little PD, yet their work (modify curriculum, IEP progress, differentiate) is exactly what AI+telemetry serves. District-funded, so highest WTP. Telemetry doubles as IEP progress evidence — a wedge nobody owns.</div>
+    <div style="margin-top:6px"><span class="pill">Demand 4</span><span class="pill">Underserved 5</span><span class="pill">WTP 5</span><span class="pill">Fit 4</span></div></div>
+    <div class="sc"><span class="score s5">18</span>/20</div></div>
+
+  <div class="rank"><div class="badge">3</div><div><h4>Early literacy / phonics · K-2 (science of reading)</h4>
+    <div class="why">Enormous, structured, standards-driven demand; explicit systematic phonics with clear error types (decoding, blending, segmenting). Interactive + diagnostic fits, though the misconception model differs from math. Second beachhead after math.</div>
+    <div style="margin-top:6px"><span class="pill">Demand 5</span><span class="pill">Underserved 3</span><span class="pill">WTP 4</span><span class="pill">Fit 4</span></div></div>
+    <div class="sc"><span class="score s4">16</span>/20</div></div>
+
+  <div class="rank"><div class="badge">4</div><div><h4>Middle / High-school science (forces, evolution, chemistry, energy)</h4>
+    <div class="why">The most misconception-rich subject in all of education (the research literature is built on science misconceptions). Perfect engine-fit; WTP moderate at the teacher level, strong at district for lab-scarce schools.</div>
+    <div style="margin-top:6px"><span class="pill">Demand 4</span><span class="pill">Underserved 4</span><span class="pill">WTP 3</span><span class="pill">Fit 5</span></div></div>
+    <div class="sc"><span class="score s4">16</span>/20</div></div>
+
+  <div class="rank"><div class="badge">5</div><div><h4>HS math / AP (unit circle, functions, calculus)</h4>
+    <div class="why">You already have shipped assets here (unit circle, Orbital Drift). Lower buyer volume than elementary, but zero build cost for a proof point and a natural bridge from your existing tyb games.</div>
+    <div style="margin-top:6px"><span class="pill">Demand 3</span><span class="pill">Underserved 3</span><span class="pill">WTP 3</span><span class="pill">Fit 5</span></div></div>
+    <div class="sc"><span class="score s3">14</span>/20</div></div>
+
+  <div class="rank"><div class="badge">6</div><div><h4>SEL / behavior / classroom management</h4>
+    <div class="why">Fastest-rising TPT demand (student behavior is teachers' #1 stressor), but it is the <em>least</em> misconception-shaped — weak engine-fit. A content lane, not a diagnosis lane. Serve later via partnership, not the wedge.</div>
+    <div style="margin-top:6px"><span class="pill">Demand 5</span><span class="pill">Underserved 3</span><span class="pill">WTP 3</span><span class="pill">Fit 2</span></div></div>
+    <div class="sc"><span class="score s3">13</span>/20</div></div>
+</div>
+<p class="assume">Scores are founding hypotheses from this scan, to be sharpened by talking to 5–10 teachers per top segment.</p>
+
+<h2>Competitive landscape — what exists, and the gap each leaves</h2>
+<table>
+<thead><tr><th>Tool</th><th>What it does</th><th>Price</th><th>The gap it leaves</th></tr></thead>
+<tbody>
+<tr><td><strong>MagicSchool</strong></td><td>80+ generators: lesson plans, rubrics, IEPs, texts. 6M+ educators.</td><td>$12.99/mo · district custom</td><td class="t-gap">Generates text. No misconception diagnosis, no adaptive interactive, no telemetry back to the teacher.</td></tr>
+<tr><td><strong>Diffit</strong></td><td>Differentiation: leveled passages, vocab, questions around a source.</td><td>$14.99/mo · district</td><td class="t-gap">Static outputs. Levels the text; never detects <em>why</em> a student misses.</td></tr>
+<tr><td><strong>Curipod</strong></td><td>Prompt → interactive slides (polls, quizzes, drawings, games); can upload slides.</td><td>Freemium</td><td class="t-gap">Engagement, not diagnosis. Right/wrong polls; no misconception classifier or per-error signal.</td></tr>
+<tr><td><strong>NOLEJ</strong></td><td>Converts any material → interactive modules, quizzes, videos, flashcards, games.</td><td>Freemium / license</td><td class="t-gap">Auto-transforms, but produces generic quiz items — no validated misconception detection or remediation loop.</td></tr>
+<tr><td><strong>Nearpod</strong></td><td>Multimedia interactive lessons + formative checks; large library.</td><td>~$159/yr · district</td><td class="t-gap">Authored library + delivery; not auto-built from <em>your</em> lesson, and checks are right/wrong.</td></tr>
+<tr><td><strong>Brisk</strong></td><td>Chrome extension inside Google Classroom; feedback, inspection, gen.</td><td>Free + paywall</td><td class="t-gap">Lives on the doc; no interactive experience, no diagnosis.</td></tr>
+<tr><td><strong>Boom Cards / Kahoot / IXL</strong></td><td>Self-checking decks / game quizzes / adaptive skill practice.</td><td>$48–159/yr · per-student</td><td class="t-gap">Drill and engagement. IXL adapts but on <em>its</em> content — teachers can't transform their own lesson; none explain the error.</td></tr>
+<tr><td><strong>SchoolAI</strong></td><td>Student-facing AI chat + real-time formative monitoring.</td><td>District quote</td><td class="t-gap">Chat-based monitoring, not misconception-classified interactives from teacher content.</td></tr>
+</tbody>
+</table>
+
+<div class="callout warn"><strong>The research backs the wedge.</strong> 2025–26 work (the DrawEduMath study; the EDGE misconception-aware framework) finds that general vision-language / LLM tools <em>underperform with struggling students and misdiagnose their errors.</em> So the crowded part of the market (generation) is exactly where the incumbents are weakest at the thing that matters — knowing what the student actually got wrong. The tyb-engine's hand-built, validated misconception classifiers (e.g. unit-circle: axis-swap vs. impulsive vs. near-miss, each with a detection signal) are the direct answer.</div>
+
+<h2>The wedge, stated as a product</h2>
+<p><strong>"Upload your own lesson. Get back an interactive that teaches it, tells you which misconception each student hit, and runs itself in class — and you never had to learn AI."</strong> The teacher stays sovereign: the AI proposes and delivers; they rule. Everyone else stops at "here's an activity"; we continue to "here's <em>why</em> Diego missed, and here's the re-teach."</p>
+<div class="grid g3">
+  <div class="card"><h3>Teacher layer</h3><p>Transform → interactive + misconception map + delivery. The Sunday-night worksheet becomes a Monday-morning experience. Saves the 5.9 hrs/week the data already promises.</p></div>
+  <div class="card"><h3>Classroom layer</h3><p>Live telemetry: which misconception, which student, right now. The re-teach the incumbents can't produce because they never diagnosed.</p></div>
+  <div class="card"><h3>School layer</h3><p>Aggregate misconception heatmaps for admins — a district-sellable data product nobody owns. "Sovereign classrooms → sovereign schools."</p></div>
+</div>
+
+<h2>Willingness to pay — pricing hypotheses</h2>
+<table>
+<thead><tr><th>Buyer</th><th>Benchmark (what they pay now)</th><th>TSA hypothesis</th></tr></thead>
+<tbody>
+<tr><td>Individual teacher</td><td>MagicSchool $12.99/mo · Diffit $14.99/mo · Nearpod $159/yr · plus ~$1k/yr out of pocket on resources</td><td><strong>$8–12/mo or ~$99/yr</strong>, free tier to acquire</td></tr>
+<tr><td>School site license</td><td>AI tools $8–30 / teacher / mo at institutional scale; integrated platforms $20–25</td><td><strong>$15–20 / teacher / mo</strong>, priced as one integrated tool vs. five point tools</td></tr>
+<tr><td>District</td><td>850+ districts spent $5M+ in 6 months; custom quotes; SPED separately funded</td><td><strong>Enrollment-based quote</strong>; lead with SPED/differentiation where budget is protected</td></tr>
+</tbody>
+</table>
+<p class="assume">Not free-core. The TSA free-core doctrine governs TSA's own Bitcoin/FSA mission content; the classroom SaaS is a paid teacher/school product. A teacher's students use their lessons free — the <em>tool</em> is paid.</p>
+
+<h2>Other gaps I spotted (you asked me to flag these)</h2>
+<div class="grid g2">
+  <div class="card"><h3>1 · The misconception dashboard for schools</h3><p>The single most defensible, district-sellable asset: aggregate the telemetry into a live misconception heatmap by class/grade/standard. Incumbents can't build it because they never diagnose at the item level. This is a data product, not a content product — higher margin, stickier, harder to copy.</p></div>
+  <div class="card"><h3>2 · "Assessment of real learning" in the AI era</h3><p>Teachers' #1 AI fear is that they can no longer tell what a student actually knows. A misconception-diagnosing interactive <em>is</em> an authentic-assessment tool. Reframing the product this way turns the biggest objection to AI into our headline benefit.</p></div>
+  <div class="card"><h3>3 · Special-ed / IEP evidence engine</h3><p>SPED teachers are the most underserved and the best funded. Telemetry auto-generates IEP progress evidence and differentiation on demand. A vertical product on its own.</p></div>
+  <div class="card"><h3>4 · The AI-shy onboarding wedge</h3><p>The scared-of-AI segment is the largest and least served. "AI without learning it" as a guided, zero-prompt onboarding (you upload, it does the rest) is a distinct acquisition wedge — and a natural fit for a teacher-PD / whole-school rollout offer.</p></div>
+</div>
+
+<h2>Recommendation for the demo</h2>
+<p>Build the cross-subject transformation demo on <strong>Grade 3–5 fractions</strong>: largest buyer volume, richest and best-documented misconception set, visually interactive, your authentic subject, and a direct parallel to the unit-circle asset so the diagnosis story is undeniable. Show the full loop — upload a plain fractions worksheet → interactive placement/partition game → live misconception detection (equal-parts error, larger-denominator error, number-line misplacement) → teacher dashboard. Hold <strong>special-ed differentiation</strong> as the on-stage "and here's how the same engine serves your hardest-to-reach students," because that's where the district money and the moral weight both are.</p>
+
+</div>
+
+<footer><div class="wrap">
+Teacher Demand Discovery · Sovereign Classrooms · The Sovereign Academy · 2026-08-27<br>
+<span class="src">Sources: MagicSchool Wrapped 2025 · RAND State of the American Teacher 2025 · 19th News (AI &amp; burnout) · TPT seller data (SEOLumina, Wikipedia) · Nearpod/Kahoot/IXL/Boom pricing (Capterra, ClassPoint) · MagicSchool/Diffit/Curipod/NOLEJ/Eduaide (Forasoft, monsha, Google Workspace Marketplace) · GovSpend K-12 AI procurement · CoSN State of EdTech 2026 · AdoptAClassroom 2025 Teacher Spending · arXiv: DrawEduMath (2603.00925), EDGE misconception-aware framework (2508.07224).</span>
+</div></footer>
+</body>
+</html>

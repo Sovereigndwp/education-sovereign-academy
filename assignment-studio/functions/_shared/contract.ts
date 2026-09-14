@@ -1,6 +1,6 @@
 // Assignment Studio — Transformation Contract v0.1 as code.
 //
-// Source of truth (prose): ~/Documents/Claude/Projects/TSA/projects/teach-back-flywheel/TRANSFORMATION-CONTRACT-v0.1.md
+// Source of truth (prose): research/TRANSFORMATION-CONTRACT-v0.1.md (in this repository)
 // Everything the engine is allowed to do comes from this file. Prompts are BUILT from these
 // tables, not written beside them, so a change to the contract is a change here and nowhere else.
 

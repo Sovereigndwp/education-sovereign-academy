@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thesovereign.academy/schemas/evidence-architecture/v0.1",
+  "title": "Composable Evidence Architecture — record schema v0.1",
+  "description": "One record = one Learning Claim with the existing activities that touch it, the evidence gap, and the verification items that close part of that gap. Records nest upward through concept → standard → course → subject so they can be aggregated into a unit, course or department map. No renderer is implied; the same record should be able to render as a student page, a teacher key, a question-bank entry, an LMS item, or a curriculum map row. Fields removed from the kickoff candidate list and why: estimated_class_minutes (derivable from student_minutes + handling), novelty_requirement (subsumed by variant_rule), observable (definitional), limited_external_assistance (folded into supervision_condition + tools_allowed). Fields added: variant_rule, claim_type, cost_status, feed_forward_risk, no_short_check_reason, review.",
+  "type": "object",
+  "required": ["record_id", "subject", "course", "standard", "concept", "learning_claim", "existing_activities", "evidence_gap", "verification_items", "review"],
+  "additionalProperties": false,
+  "properties": {
+    "record_id": { "type": "string", "pattern": "^EA-[A-Z0-9]+-[0-9]{3}$", "description": "Stable id, e.g. EA-ALG1-004" },
+    "schema_version": { "type": "string", "const": "0.1" },
+    "subject": { "type": "string", "enum": ["mathematics"] },
+    "course": { "type": "string", "description": "e.g. Algebra I" },
+    "standard": {
+      "type": "array", "minItems": 1,
+      "items": { "type": "object", "required": ["framework", "code"], "additionalProperties": false,
+        "properties": { "framework": { "type": "string", "enum": ["CCSS-M", "state", "other"] }, "code": { "type": "string" }, "short_text": { "type": "string" } } }
+    },
+    "concept": { "type": "string", "description": "Course-level topic the claim belongs to, e.g. Linear functions" },
+    "learning_claim": {
+      "type": "object", "required": ["id", "statement", "claim_type"], "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "statement": { "type": "string", "description": "Observable, with condition: 'computes the slope of a line from two points (integer coordinates, no context)'" },
+        "claim_type": { "type": "string", "enum": ["procedural", "conceptual", "representational", "diagnostic", "application"] },
+        "prerequisite_claim_ids": { "type": "array", "items": { "type": "string" } },
+        "misconception_targets": { "type": "array", "items": { "type": "string" }, "description": "Named wrong models the claim is in tension with, e.g. 'slope = run/rise'" }
+      }
+    },
+    "existing_activities": {
+      "type": "array",
+      "description": "Activities the teacher already assigns that touch this claim. May be empty for a proposed claim.",
+      "items": {
+        "type": "object", "required": ["name", "roles", "delegability", "delegability_reason"], "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "roles": { "type": "array", "minItems": 1, "items": { "type": "string", "enum": ["practice", "production", "evidence"] } },
+          "supervision_condition": { "$ref": "#/$defs/supervision" },
+          "delegability": { "type": "string", "enum": ["full", "partial", "low"], "description": "Professional judgment: could a capable AI produce the observable artifact without the target understanding? Never numeric." },
+          "delegability_reason": { "type": "string", "description": "Required. Names the task feature that drives the judgment." },
+          "feed_forward_risk": { "type": "boolean", "description": "True if the artifact, once produced, could be supplied to an AI as context for later work (Track-2 falsification). Defaults true for any artifact that leaves the room." },
+          "what_it_supports": { "type": "string", "description": "What a teacher can reasonably infer from this activity under its own conditions" }
+        }
+      }
+    },
+    "evidence_gap": { "type": "string", "description": "'We cannot tell from [activity] whether the student …'. One sentence." },
+    "no_short_check_reason": { "type": "string", "description": "Present only when no short independent item reaches the claim. Names where the evidence must come from instead (e.g. supervised extended task)." },
+    "verification_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item_id", "primitive", "supervision_condition", "stem", "response_type", "key", "scoring_rule", "variant_rule", "evidence_supported", "evidence_not_supported", "cost"],
+        "additionalProperties": false,
+        "properties": {
+          "item_id": { "type": "string" },
+          "primitive": { "type": "string", "enum": ["perturb", "transfer", "predict", "diagnose", "represent", "reverse", "generate", "classify"] },
+          "transfer_distance": {
+            "type": "object", "description": "Only for transfer items. Barnett & Ceci (2002) dimensions that changed relative to practice.",
+            "additionalProperties": false,
+            "properties": { "knowledge_domain": { "type": "boolean" }, "physical_context": { "type": "boolean" }, "modality": { "type": "boolean" }, "information_form": { "type": "boolean" }, "summary": { "type": "string", "enum": ["near", "moderate", "far"] } }
+          },
+          "supervision_condition": { "$ref": "#/$defs/supervision" },
+          "administration": { "type": "string", "enum": ["simultaneous_whole_class", "individual", "small_group"], "default": "simultaneous_whole_class" },
+          "tools_allowed": { "type": "array", "items": { "type": "string" } },
+          "stem": { "type": "string", "description": "Student-facing text of the base form. Markdown; no images required." },
+          "stimulus": { "type": "string", "description": "Optional table/graph/flawed solution shown with the stem, as text." },
+          "options": { "type": "array", "items": { "type": "string" }, "description": "Selected-response options if any. Must include 'Not sure'. Keyed position must vary across a set." },
+          "response_type": { "type": "string", "enum": ["number", "equation", "selection", "selection_plus_reason", "circle_and_correct", "short_construction", "sketch", "table"] },
+          "key": { "type": "string", "description": "Correct answer(s). For generate items, the constraint checklist." },
+          "distractor_rationale": { "type": "array", "items": { "type": "string" }, "description": "For each non-keyed option, the error it corresponds to." },
+          "scoring_rule": { "type": "string", "description": "What counts as evidence / does not yet / flag. Two-level by default." },
+          "misconception_target": { "type": "string" },
+          "variant_rule": {
+            "type": "object", "required": ["vary", "fix", "key_change"], "additionalProperties": false,
+            "properties": { "vary": { "type": "string" }, "fix": { "type": "string" }, "key_change": { "type": "string" }, "avoid": { "type": "string" } },
+            "description": "The item model: what may change for a fresh form, what must stay fixed to preserve the claim, how the key changes. Operationalises the novelty condition."
+          },
+          "parallel_forms": { "type": "array", "items": { "type": "object", "required": ["form", "stem_delta", "key"], "properties": { "form": { "type": "string" }, "stem_delta": { "type": "string" }, "key": { "type": "string" } } } },
+          "evidence_supported": { "type": "string", "description": "'Evidence this item can support:' — one sentence, scoped to the claim and conditions." },
+          "evidence_not_supported": { "type": "string", "description": "'Evidence this item cannot support:' — must name adjacent claims not reached and any guess-rate caveat." },
+          "cost": {
+            "type": "object", "required": ["student_minutes", "scoring_seconds_per_response", "cost_status"], "additionalProperties": false,
+            "properties": { "student_minutes": { "type": "number" }, "scoring_seconds_per_response": { "type": "number" }, "cost_status": { "type": "string", "enum": ["modeled", "reported"] }, "reported_by_n_teachers": { "type": "integer" } }
+          },
+          "accessibility_notes": { "type": "string" }
+        }
+      }
+    },
+    "review": {
+      "type": "object", "required": ["status"], "additionalProperties": false,
+      "properties": {
+        "status": { "type": "string", "enum": ["draft", "key_verified", "teacher_reviewed", "classroom_reported"] },
+        "key_verified_method": { "type": "string", "description": "e.g. 'computed programmatically 2026-09-04'" },
+        "reviewed_by": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "supervision": { "type": "string", "enum": ["proctored_in_class", "observed_live", "unsupervised"], "description": "Only proctored_in_class and observed_live satisfy the 'independent' condition." }
+  }
+}

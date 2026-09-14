@@ -1,6 +1,6 @@
 # Assignment Studio — MVP (2026-09-06)
 
-**Governing document:** `~/Documents/Claude/Projects/TSA/projects/teach-back-flywheel/TRANSFORMATION-CONTRACT-v0.1.md` (owner-issued).
+**Governing document:** `research/TRANSFORMATION-CONTRACT-v0.1.md` (owner-issued; moved into this repository from TSA Core on 2026-09-14).
 **Promise:** Bring an assignment you already trust. Assignment Studio adapts it for the students in front of you while protecting what you intended them to learn.
 
 Additive to the hub. Deleting `assignment-studio/`, the `as-studio` edge function, and the `as_*` tables returns the hub to its prior state. The Stress Test (`/stress-test/`) is untouched and stays unpublished as a customer proposition.
@@ -99,7 +99,7 @@ PASS releases. REVIEW releases with its findings in *Check this*. BLOCK gets the
 ## Launch checklist (minimum)
 
 1. Supabase → Edge Functions → Secrets → `ANTHROPIC_API_KEY`. (Everything else is deployed and waiting on this.)
-2. On the Mac: `cd ~/projects/sovereign-academy-hub && node assignment-studio/harness/run.mjs --fixtures` → read `harness/runs/<stamp>/FIXTURES.md` (expected vs actual for the four planted cases). Then `node assignment-studio/harness/run.mjs` for the 12 live cases → `REVIEW.md`, `INFERENCE.md`.
+2. On the Mac: `cd ~/projects/education-sovereign-academy && node assignment-studio/harness/run.mjs --fixtures` → read `harness/runs/<stamp>/FIXTURES.md` (expected vs actual for the four planted cases). Then `node assignment-studio/harness/run.mjs` for the 12 live cases → `REVIEW.md`, `INFERENCE.md`.
 3. Commit and deploy: `git add assignment-studio vercel.json && git commit -m "feat(assignment-studio): MVP, audits, gold harness" && git checkout master && git merge feat/assessment-stress-test && git push` (Vercel deploys master). The pilot link for a school is `https://thesovereign.academy/assignment-studio/studio/?pilot=<code>`.
 4. Walk one of your own assignments through `/assignment-studio/studio/` once before sending the link to anyone.
 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher Work Map — Secondary Math · The Sovereign Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#121316;--surface:#191B1F;--s2:#1F2228;--border:#2C2F36;--muted:#A7ABB3;--ink:#ECECE6;
+  --brand:#FF7A00;--brandhi:#FF9A00;--gold:#FFD400;--deep:#B45400;
+  --em:#34D399;--emd:#10B981;--silver:#C7CCD1;--warn:#F87171;--shadow:0 10px 40px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:#fff;line-height:1.15}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:800;margin:.2em 0 .1em}
+h2{font-size:clamp(1.45rem,3vw,2rem);margin:1.7em 0 .5em;border-top:1px solid var(--border);padding-top:.6em}
+h3{font-size:1.2rem;color:var(--brandhi);margin:1.3em 0 .35em}
+p{margin:.55em 0}strong{color:#fff}em{color:var(--gold);font-style:normal}
+a{color:var(--brandhi);text-decoration:none}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.85em;background:var(--s2);border:1px solid var(--border);border-radius:5px;padding:.05em .35em;color:var(--em)}
+.hero{padding:64px 0 26px;background:radial-gradient(1000px 360px at 18% -10%,rgba(255,122,0,.15),transparent 60%);border-bottom:1px solid var(--border)}
+.kicker{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);border:1px solid var(--deep);border-radius:999px;padding:.35em .9em;margin-bottom:12px;background:rgba(255,122,0,.06)}
+.lede{font-size:1.16rem;color:var(--muted);max-width:840px}
+.meta{color:#70747c;font-size:.82rem;margin-top:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:14px 0;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.84rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--brandhi);font-size:.68rem;text-transform:uppercase;letter-spacing:.04em}
+tr:hover td{background:rgba(255,255,255,.015)}
+.tbl-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px}
+.tbl-scroll table{margin:0}
+.num{text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap}
+.role{font-size:.7rem;font-weight:700;padding:.12em .5em;border-radius:5px;border:1px solid;white-space:nowrap}
+.r-exec{color:var(--em);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.08)}
+.r-draft{color:var(--brandhi);border-color:rgba(255,154,0,.4);background:rgba(255,154,0,.08)}
+.r-analyze{color:#8ab4f8;border-color:rgba(138,180,248,.4);background:rgba(138,180,248,.08)}
+.r-no{color:var(--warn);border-color:rgba(248,113,113,.4);background:rgba(248,113,113,.08)}
+.risk-lo{color:var(--em)}.risk-md{color:var(--gold)}.risk-hi{color:var(--warn)}
+.callout{border-left:3px solid var(--brand);background:rgba(255,122,0,.05);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+.callout.em{border-color:var(--em);background:rgba(52,211,153,.05)}
+.callout.warn{border-color:var(--warn);background:rgba(248,113,113,.05)}
+.src{color:#70747c;font-size:.8rem}
+.tag{display:inline-block;font-size:.68rem;font-weight:700;padding:.1em .5em;border-radius:5px;border:1px solid var(--border);color:var(--muted);margin-right:4px}
+.tag.s{color:var(--em);border-color:rgba(52,211,153,.35)}
+.tag.a{color:var(--gold);border-color:rgba(255,212,0,.35)}
+.score{font-weight:700;text-align:center}
+.sc5{color:#34D399}.sc4{color:#8fe6bf}.sc3{color:#FFD400}.sc2{color:#FF9A00}.sc1{color:#F87171}
+.pick{background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.3)}
+.defer{background:rgba(248,113,113,.05);border:1px solid rgba(248,113,113,.25)}
+ul,ol{margin:.4em 0;padding-left:1.2em}li{margin:.3em 0}
+footer{border-top:1px solid var(--border);margin-top:40px;padding:24px 0 56px;color:#70747c;font-size:.83rem}
+.total{font-family:'Playfair Display';font-weight:700}
+</style>
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="kicker">The Sovereign Academy · "Teacher Time Back" (working promise)</span>
+  <h1>Teacher Work Map — Secondary Math</h1>
+  <p class="lede">Before deciding what to automate, inventory the work. One modeled middle/high-school math teacher, every recurring task classified on eight dimensions, then the candidate workflows ranked seven ways — to find the smallest three that prove <em>measurable time back without giving AI uncontrolled authority</em>.</p>
+  <p class="meta">Analysis only — nothing built · 2026-08-28 · sourced numbers tagged <span class="tag s">S</span>, modeled assumptions tagged <span class="tag a">A</span></p>
+</div></div>
+
+<div class="wrap">
+
+<section>
+<h2>The modeled teacher, and how to read the numbers</h2>
+<p>A full-time secondary math teacher: <strong>5 sections, ~140 students, a ~54-hour actual work week</strong> of which roughly <strong>46% is spent teaching</strong> <span class="tag s">S</span>. The rest — planning, grading, differentiation, communication, documentation — is the surface we're mapping. Hour figures are per teacher per week. Sourced ranges carry <span class="tag s">S</span>; where no clean study exists I model a conservative point estimate and tag it <span class="tag a">A</span>. The point is not decimal precision; it's the <em>shape</em> of the week and which slabs are both large and safely reducible.</p>
+<div class="callout"><strong>Reliability caveat, stated up front.</strong> Self-reported teacher time is noisy and studies disagree (grading alone is reported anywhere from ~5 to ~10 hrs/week). Every recommendation below is therefore built to be re-measured with a real baseline time-diary in the pilot, not taken from these figures. A number you can defend beats a number that impresses.</p>
+</section>
+
+<section>
+<h2>The Work Map — 11 recurring tasks × 8 dimensions</h2>
+<p><strong>AI role legend:</strong> <span class="role r-exec">EXECUTE</span> do it, teacher spot-checks · <span class="role r-draft">DRAFT</span> produce a first version for review · <span class="role r-analyze">ANALYZE</span> surface patterns, teacher interprets · <span class="role r-no">DON'T TOUCH</span> human only.</p>
+<div class="tbl-scroll"><table>
+<thead><tr>
+<th>Task</th><th class="num">Hrs/wk</th><th class="num">Freq</th><th>AI role</th><th>Stays teacher authority</th><th>Privacy risk</th><th>Cog-demand risk</th><th class="num">Recoverable (cons.)</th><th>Existing asset</th>
+</tr></thead>
+<tbody>
+<tr><td><strong>Direct instruction</strong></td><td class="num">~25 <span class="tag s">S</span></td><td class="num">daily</td><td><span class="role r-no">DON'T TOUCH</span></td><td>All of it — teaching is the job</td><td class="risk-lo">low</td><td class="risk-hi">n/a</td><td class="num">0</td><td>—</td></tr>
+<tr><td><strong>Lesson planning &amp; prep</strong></td><td class="num">~6–8 <span class="tag s">S</span></td><td class="num">daily</td><td><span class="role r-draft">DRAFT</span></td><td>Objectives, sequence, what to emphasize</td><td class="risk-lo">low</td><td class="risk-hi">high</td><td class="num">1.0–1.5</td><td>build-curriculum</td></tr>
+<tr><td><strong>Differentiation &amp; accommodations</strong></td><td class="num">~1.5–2 <span class="tag a">A</span></td><td class="num">daily/weekly</td><td><span class="role r-draft">DRAFT</span></td><td>Which student needs which version; final call</td><td class="risk-md">med</td><td class="risk-hi">high</td><td class="num">1.0–1.3</td><td>build-curriculum (cog-demand gate)</td></tr>
+<tr><td><strong>Assessment creation</strong> (quizzes, exit tickets, tests)</td><td class="num">~1.5–2 <span class="tag a">A</span></td><td class="num">weekly</td><td><span class="role r-draft">DRAFT</span></td><td>What to assess, rigor, alignment</td><td class="risk-lo">low</td><td class="risk-md">med</td><td class="num">0.8–1.2</td><td>build-curriculum (item/key gate)</td></tr>
+<tr><td><strong>Grading — objective items</strong></td><td class="num">~2–3 <span class="tag s">S</span></td><td class="num">daily</td><td><span class="role r-exec">EXECUTE</span></td><td>Grade policy, edge cases</td><td class="risk-hi">high</td><td class="risk-md">med</td><td class="num">1.5–2.0</td><td>(commodity auto-grade)</td></tr>
+<tr><td><strong>Grading — open response + feedback</strong></td><td class="num">~3–6 <span class="tag s">S</span></td><td class="num">daily</td><td><span class="role r-analyze">ANALYZE</span></td><td>The grade itself; the judgment of understanding</td><td class="risk-hi">high</td><td class="risk-hi">high</td><td class="num">1.5–2.5</td><td><strong>misconception-intelligence</strong></td></tr>
+<tr><td><strong>Reteach / intervention design</strong></td><td class="num">~1–1.5 <span class="tag a">A</span></td><td class="num">weekly</td><td><span class="role r-draft">DRAFT</span></td><td>The instructional move; whether to reteach</td><td class="risk-md">med</td><td class="risk-hi">high</td><td class="num">0.6–1.0</td><td><strong>misconception-intelligence</strong></td></tr>
+<tr><td><strong>Parent / guardian communication</strong></td><td class="num">~1–2 <span class="tag s">S</span></td><td class="num">weekly</td><td><span class="role r-draft">DRAFT</span></td><td>Tone, what to disclose, the relationship</td><td class="risk-hi">high</td><td class="risk-lo">low</td><td class="num">0.4–0.8</td><td>owner-approval (voice/tone gate)</td></tr>
+<tr><td><strong>Documentation &amp; compliance</strong> (IEP notes, MTSS, gradebook admin)</td><td class="num">~3–5 <span class="tag s">S</span></td><td class="num">weekly</td><td><span class="role r-draft">DRAFT</span></td><td>Every factual/legal claim; the sign-off</td><td class="risk-hi">very high</td><td class="risk-md">med</td><td class="num">1.0–2.0</td><td>Ariadna (provenance/tiers)</td></tr>
+<tr><td><strong>Formatting / logistics</strong> (reformat, print, LMS post)</td><td class="num">~1–2 <span class="tag a">A</span></td><td class="num">daily</td><td><span class="role r-exec">EXECUTE</span></td><td>Final look; what goes live</td><td class="risk-lo">low</td><td class="risk-lo">low</td><td class="num">0.5–1.0</td><td>(commodity)</td></tr>
+<tr><td><strong>Meetings / PLC / duty / relational</strong></td><td class="num">~4–6 <span class="tag s">S</span></td><td class="num">weekly</td><td><span class="role r-no">DON'T TOUCH</span></td><td>All of it — human work</td><td class="risk-md">med</td><td class="risk-lo">n/a</td><td class="num">0–0.3</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="src">Sourced: 54-hr week &amp; 46% teaching (TASB/EdWeek); planning ~450 hr/yr, grading ~300 hr/yr out-of-class (EdWeek); grading 5–10 hr/wk with 95% taking it home (Learnosity 2025); "high-quality personalized feedback would need 43–58 extra hr/wk" for 140 students (Solved Consulting) — i.e. real feedback is <em>impossible by hand at scale</em>; IEP/paperwork &gt;10% of working time, up to 7 weeks/yr (Frontline/Amplio). Differentiation, assessment-creation, reteach, and formatting hours are modeled point estimates <span class="tag a">A</span> within the planning/grading envelopes above.</p>
+<div class="callout em"><strong>The single most important line in the map:</strong> real, personalized open-response feedback for 140 students would take <strong>43–58 extra hours a week</strong> <span class="tag s">S</span> — so it simply isn't happening. That isn't time to <em>recover</em>; it's a capability that <em>doesn't exist today</em> and could. Hold that thought — it's the strongest argument against my own recommendation, below.</p>
+</section>
+
+<section>
+<h2>From tasks to candidate workflows</h2>
+<p>Seven automatable slices fall out of the map. Each is scored 1–5 on your seven criteria (higher is always better — so "difficulty" is scored as <em>Ease</em> and "governance risk" as <em>Safety</em>, to keep the total meaningful). Scores are my judgement from the evidence; the reasoning is in the next section.</p>
+<div class="tbl-scroll"><table>
+<thead><tr>
+<th>Candidate workflow</th><th class="num">Recov. hrs</th><th class="num">Pain</th><th class="num">Ease</th><th class="num">Gov. safety</th><th class="num">Measur.</th><th class="num">WTP</th><th class="num">Assets</th><th class="num">Total</th>
+</tr></thead>
+<tbody>
+<tr class="pick"><td><strong>A · Differentiate-this</strong> (objective-preserving versions)</td><td class="score sc4">4</td><td class="score sc4">4</td><td class="score sc3">3</td><td class="score sc4">4</td><td class="score sc4">4</td><td class="score sc5">5</td><td class="score sc5">5</td><td class="score total">29</td></tr>
+<tr class="pick"><td><strong>C′ · Targeted reteach from teacher-reported misconception</strong> (no student PII)</td><td class="score sc3">3</td><td class="score sc4">4</td><td class="score sc4">4</td><td class="score sc5">5</td><td class="score sc4">4</td><td class="score sc4">4</td><td class="score sc5">5</td><td class="score total">29</td></tr>
+<tr class="pick"><td><strong>B · Assessment + answer-key builder</strong> (aligned to the lesson)</td><td class="score sc3">3</td><td class="score sc3">3</td><td class="score sc5">5</td><td class="score sc5">5</td><td class="score sc5">5</td><td class="score sc3">3</td><td class="score sc4">4</td><td class="score total">28</td></tr>
+<tr class="defer"><td>C · Grade real open-response → cluster → reteach <span class="tag">student work</span></td><td class="score sc5">5</td><td class="score sc5">5</td><td class="score sc2">2</td><td class="score sc2">2</td><td class="score sc3">3</td><td class="score sc5">5</td><td class="score sc5">5</td><td class="score total">27</td></tr>
+<tr><td>D · Build-tomorrow (full, from a curriculum knowledge base)</td><td class="score sc4">4</td><td class="score sc4">4</td><td class="score sc2">2</td><td class="score sc4">4</td><td class="score sc3">3</td><td class="score sc4">4</td><td class="score sc3">3</td><td class="score total">24</td></tr>
+<tr class="defer"><td>F · Documentation / IEP compliance drafting</td><td class="score sc4">4</td><td class="score sc5">5</td><td class="score sc2">2</td><td class="score sc1">1</td><td class="score sc4">4</td><td class="score sc5">5</td><td class="score sc3">3</td><td class="score total">24</td></tr>
+<tr><td>G · Formatting / logistics (reformat, level, LMS-ready)</td><td class="score sc2">2</td><td class="score sc2">2</td><td class="score sc5">5</td><td class="score sc5">5</td><td class="score sc3">3</td><td class="score sc2">2</td><td class="score sc3">3</td><td class="score total">22</td></tr>
+<tr><td>E · Parent-communication drafts</td><td class="score sc2">2</td><td class="score sc3">3</td><td class="score sc4">4</td><td class="score sc3">3</td><td class="score sc4">4</td><td class="score sc3">3</td><td class="score sc2">2</td><td class="score total">21</td></tr>
+</tbody>
+</table></div>
+<p class="src">Scoring direction: Ease = inverse of implementation difficulty; Gov. safety = inverse of governance/privacy risk. All seven columns therefore run "higher = better," so the total is a fair composite. Ties (A and C′ at 29) are broken in the recommendation on strategic grounds, not arithmetic.</p>
+</section>
+
+<section>
+<h2>Recommended pilot — the smallest three that prove the thesis</h2>
+<div class="callout em"><strong>A · Differentiate-this &nbsp;+&nbsp; B · Assessment &amp; key builder &nbsp;+&nbsp; C′ · Targeted reteach from teacher-reported misconception.</strong></div>
+<p>These three share the one property the pilot's thesis demands: they operate on the <strong>teacher's own materials and a teacher-supplied signal — never on raw student records</strong>. That makes "we didn't give AI uncontrolled authority" trivially true and provable: no student PII ingested in v1, every output reviewed, nothing student-facing auto-ships. They are also the three highest composites, the three most cleanly measurable, and the three best matched to assets you already own.</p>
+<div class="card">
+<h3>Why each earns its place</h3>
+<ul>
+<li><strong>A · Differentiate-this</strong> — your strongest asset advantage. The "same objective, same cognitive demand, different access" guarantee is <code>build-curriculum</code>'s conceptual-model gate applied to differentiation, and <em>no generator has it</em>. High pain (IEP/ELL every day), highest WTP (equity budgets), low data risk. This is the headline.</li>
+<li><strong>B · Assessment + key builder</strong> — the credibility floor. Easiest to build, essentially zero privacy risk (no student data), the cleanest before/after minutes of anything on the map. It pairs with A (same lesson → aligned quiz + key) so the pilot feels like one coherent package, not three gadgets.</li>
+<li><strong>C′ · Targeted reteach from teacher-reported misconception</strong> — the moat, minus the risk. The teacher tells it, or picks from a menu, <em>"9 students confused denominator size with fraction size,"</em> and the agent produces the 8-minute opener + practice that targets it. This puts your <strong>misconception-intelligence engine</strong> — your real differentiator — into the pilot, while the evidence is teacher-supplied, so there is no student-record ingestion and the teacher stays the authority on what was misunderstood.</li>
+</ul>
+</div>
+<p><strong>Conservative recoverable total: ~3–4 teacher-hours/week</strong> across the three, mostly from differentiation and reteach/assessment prep — enough to clear a "100 hours across a department in a term" floor, without touching grading authority or student data in v1.</p>
+<div class="callout"><strong>What this decides, per your instruction.</strong> The <em>fractions diagnostic is deliberately NOT one of the first three</em> — the misconception engine enters as a teacher-facing reteach generator (C′), not a student-facing diagnostic. And the <em>School AI Constitution is not designed first</em>: this map tells us it only needs to govern four things in v1 — the cognitive-demand invariant (A), assessment integrity (B), the "teacher-reported signal, no PII" data boundary (C′), and "nothing student-facing auto-ships." Scope the Constitution to exactly that, once the pilot confirms it.</p>
+</section>
+
+<section>
+<h2>Evidence and assumptions behind the ranking</h2>
+<table>
+<thead><tr><th>Claim driving a score</th><th>Basis</th></tr></thead>
+<tbody>
+<tr><td>Grading (esp. open-response) is the biggest pain and hour-sink</td><td><span class="tag s">S</span> Learnosity 2025 (62% call grading among the worst parts; ⅓ considered leaving over it); 5–10 hr/wk.</td></tr>
+<tr><td>Real personalized feedback is not happening today (43–58 hr/wk to do by hand)</td><td><span class="tag s">S</span> Solved Consulting math model, 140 students.</td></tr>
+<tr><td>Differentiation carries the highest cognitive-demand risk</td><td><span class="tag a">A</span> Reasoning: simplifying reading silently simplifies thinking; this is the failure build-curriculum's gate exists to catch.</td></tr>
+<tr><td>Assessment-gen is lowest-risk / most measurable</td><td><span class="tag a">A</span> No student data; discrete artifact; clear before/after minutes.</td></tr>
+<tr><td>Documentation/IEP has the highest governance risk</td><td><span class="tag s">S</span> IEP = protected under FERPA/IDEA; Frontline/Amplio show it's &gt;10% of time and a top burden — high value, wrong first bet.</td></tr>
+<tr><td>Differentiation &amp; equity carry the highest WTP</td><td><span class="tag s">S</span> SPED/ELL budgets are protected district money (earlier demand scan).</td></tr>
+<tr><td>Misconception engine is the strongest owned asset</td><td><span class="tag a">A</span> Your misconception-intelligence + build-curriculum work; but note it's an established method (FCI, 1992) and commercialised in math (Eedi) — the edge is applying it inside a governed workflow, not the method itself.</td></tr>
+</tbody>
+</table>
+<p style="color:var(--gold);font-size:.85rem">⚑ Biggest assumption to test in the pilot: that differentiation and reteach hours are <em>actually being spent today</em>. You cannot "save" time on versions a teacher never made. The baseline time-diary must confirm the work exists before the guarantee counts it.</p>
+</section>
+
+<section>
+<h2>The strongest argument against my recommendation</h2>
+<div class="callout warn">
+<p><strong>The steelman: I picked the safe basket and benched the moat.</strong> The one workflow that hurts most, recovers the most hours, and is most uniquely <em>yours</em> is <strong>C — grading real student open-response and clustering the actual misconceptions</strong>. By excluding raw student work from v1, I:</p>
+<ul>
+<li><strong>Dodge the biggest pain and the biggest hours.</strong> Grading is what makes teachers quit (⅓ considered leaving over it). A pilot that leaves it untouched may recover ~3 hours of prep-side time that teachers experience as "nice," not "life-changing."</li>
+<li><strong>Bench the actual differentiator.</strong> Differentiation and assessment-generation (A, B) are exactly what MagicSchool and Diffit already do. Running the misconception engine on <em>teacher-reported</em> signals (C′) is a pale version of running it on <em>real student responses</em> (C) — the latter is the thing no competitor can match and the reason a school would pay you rather than them. I may be leading with commodity and hiding the crown jewel in v2.</li>
+<li><strong>Lead with the most fragile guarantee.</strong> "Preserve cognitive demand under differentiation" (A) is the hardest promise to keep and fails invisibly, while the most defensible capability (misconception diagnosis on real work) sits benched. I've front-loaded technical fragility and back-loaded technical strength.</li>
+<li><strong>Risk an underwhelming number.</strong> If the honest recoverable hours from A+B+C′ come in at 2–3/week and much of it is "work they weren't doing before," the guarantee is thin — whereas grading time is unambiguously real and large.</li>
+</ul>
+<p>A serious person could conclude: <strong>make C the centerpiece</strong>, solve the data-governance properly up front (that's your Ariadna strength anyway), and lead the pilot with the one capability that is both the deepest pain and the deepest moat.</p>
+</div>
+<h3>My measured response — why I still lead with A + B + C′</h3>
+<p>The steelman is right about the prize and wrong about the sequence. Three reasons I still defer C to v2:</p>
+<ul>
+<li><strong>The pilot's job is to prove the thesis, not to show the fanciest trick.</strong> The promise is "measurable time back <em>without uncontrolled authority</em>." Nothing tests "authority" harder than letting AI evaluate real student work — and nothing risks a trust-ending privacy incident faster. Winning the safe pilot <em>earns</em> the data-sharing agreement that makes C safe. Losing a student-data incident in month one ends the relationship before any hours are booked.</li>
+<li><strong>C′ already carries the moat into the room.</strong> The misconception engine is <em>in</em> the pilot; it just runs on a teacher-supplied signal instead of raw PII. Teachers see the differentiator; you don't take the risk. C then becomes the obvious, pre-sold v2 upgrade once the Constitution and data agreements exist — which this very map says to scope from what v1 reveals.</li>
+<li><strong>Governance is your unlock, but it isn't free or instant.</strong> Doing C right needs data-processing agreements, no-training guarantees, residency, and audit trails. Those take weeks and legal review. Gating the <em>whole</em> pilot on them means no pilot this term. A+B+C′ can start now and generate the number that funds the harder build.</li>
+</ul>
+<p>So: <strong>lead safe, prove the number, earn the trust, then make C the headline of v2</strong> — with the honest caveat that if a friendly school will sign a data agreement <em>up front</em>, promoting C into the first three becomes the stronger play, and I'd change the recommendation.</p>
+</section>
+
+<section>
+<h2>What I'd want from you before anything is built</h2>
+<ul>
+<li>Is there a friendly department that would sign a student-data agreement <em>up front</em>? If yes, C moves into the first three and the recommendation flips toward the moat.</li>
+<li>Confirm the modeled teacher matches reality in your network (5 sections / ~140 students / ~54-hr week), or correct it — the whole map keys off it.</li>
+<li>Agree the pilot's success metric is a baseline-verified hours number, not a satisfaction score.</li>
+</ul>
+<p class="src">Next artifact when you're ready (still not built): the 4-week time-diary instrument that turns this map into a defensible baseline, so the guarantee rests on measured minutes rather than these estimates.</p>
+</section>
+
+</div>
+<footer><div class="wrap">
+Teacher Work Map — Secondary Math · "Teacher Time Back" (working promise) · The Sovereign Academy · 2026-08-28<br>
+Sourced: TASB/EdWeek (54-hr week, 46% teaching, planning/grading annual hours) · Learnosity 2025 (grading pain) · Solved Consulting (math feedback model) · Frontline/Amplio (IEP paperwork burden). Assumptions modeled and tagged <span class="tag a">A</span>. No product built; analysis only.
+</div></footer>
+</body>
+</html>

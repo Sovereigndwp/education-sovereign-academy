@@ -18,7 +18,7 @@ What the gold record is for:
 
 1. **Inference accuracy.** The engine's inferred Learning Contract is compared to the gold contract (`INFERENCE.md` in each run). Disagreement on *learning target* or *required thinking* is the finding that matters; wording differences are not.
 2. **Transformation validity.** Each mode's output is judged against `mode_boundaries` by a human (`REVIEW.md`: ship / edit / reject + which boundary). The automatic columns (statuses within expected range, count of `REVIEW_REQUIRED`, item counts) are telemetry, never proof.
-3. **Contract soundness.** If a case cannot be transformed within its boundaries by any reasonable output — i.e. the boundary itself is wrong — that is a contract problem and goes back to `TRANSFORMATION-CONTRACT-v0.1.md` before anything else is built.
+3. **Contract soundness.** If a case cannot be transformed within its boundaries by any reasonable output — i.e. the boundary itself is wrong — that is a contract problem and goes back to `research/TRANSFORMATION-CONTRACT-v0.1.md` before anything else is built.
 
 Each case also carries **expected audit behaviour** (`mode_boundaries.<mode>.expected_audits`) for the live transforms, and one **planted fixture** (`fixtures/`, expectations in `gold.json.fixtures`) that tests the audits themselves rather than the transformer:
 
