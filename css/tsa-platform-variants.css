@@ -1,0 +1,103 @@
+/* ============================================================================
+   tsa-platform-variants.css  —  platform accent themes + print + reduced motion
+   PR1 staging. Loads AFTER tsa-design-tokens.css. Not yet live.
+
+   Usage: set the platform on <html> or a wrapper:
+       <html data-platform="bsa">   → orange/gold accent
+       <html data-platform="fsa">   → emerald/mint accent
+       <html data-platform="tsa">   → silver accent (also the default)
+   Only the ACCENT swaps. The neutral base, type, spacing, radii are shared.
+   ========================================================================== */
+
+/* ─── TSA parent (explicit; identical to token defaults) ─── */
+[data-platform="tsa"] {
+  --brand:        var(--tsa-silver);
+  --accent:       var(--tsa-platinum);
+  --brand-fade:   var(--tsa-fade);
+  --brand-fade-h: var(--tsa-fade-h);
+  --brand-solid:  var(--tsa-solid);
+}
+
+/* ─── BSA child — orange/gold ─── */
+[data-platform="bsa"] {
+  --brand:        var(--bsa-orange);
+  --accent:       var(--bsa-orange-hot);
+  --brand-fade:   var(--bsa-fade);
+  --brand-fade-h: var(--bsa-fade-h);
+  --brand-solid:  var(--bsa-solid);
+}
+
+/* ─── FSA child — emerald/mint ─── */
+[data-platform="fsa"] {
+  --brand:        var(--fsa-emerald);
+  --accent:       var(--fsa-mint);
+  --brand-fade:   var(--fsa-fade);
+  --brand-fade-h: var(--fsa-fade-h);
+  --brand-solid:  var(--fsa-solid);
+}
+
+/* ============================================================================
+   WORD-ACCENT HELPERS
+   Color attaches only to the word that names a child (gradient text, solid
+   fallback so unsupported renderers never show an invisible rectangle).
+   ========================================================================== */
+.fade-brand, .fade-b, .fade-f {
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fade-brand { color: var(--brand-solid); background-image: var(--brand-fade); }
+.fade-b     { color: var(--bsa-solid);   background-image: var(--bsa-fade); }   /* BSA word */
+.fade-f     { color: var(--fsa-solid);   background-image: var(--fsa-fade); }   /* FSA word */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .fade-brand { color: var(--brand-solid); }
+  .fade-b     { color: var(--bsa-solid); }
+  .fade-f     { color: var(--fsa-solid); }
+}
+
+/* ============================================================================
+   REDUCED MOTION  —  inherited by every page that loads this file
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   PRINT / DOCUMENT TWIN
+   Canonical print skin: switch the graphite web scale to the PAPER scale,
+   drop shadows, and hide screen-only chrome. Print twins (certificates,
+   checklists, workbooks) inherit this; they add only page-size specifics.
+   Screen-only elements opt out with class .screen-only; print-only with
+   .print-only.
+   ========================================================================== */
+@media print {
+  :root {
+    --bg:            var(--p-bg);
+    --surface:       var(--p-surface);
+    --elevated:      var(--p-bg);
+    --deepest:       var(--p-surface);
+    --border:        var(--p-border);
+    --border-strong: var(--p-border-strong);
+    --ink:           var(--p-ink);
+    --ink-strong:    var(--p-ink);
+    --muted:         var(--p-muted);
+    --faint:         var(--p-faint);
+    /* accents fall back to solid ink on paper — no gradient text on print */
+    --brand-solid:   var(--p-ink);
+  }
+  html, body { background: #FFFFFF !important; color: var(--p-ink) !important; }
+  .screen-only, nav, .nav, .cta-band, .reflect-widget, .bitcoin-context { display: none !important; }
+  .print-only { display: revert !important; }
+  * { box-shadow: none !important; text-shadow: none !important; }
+  .fade-brand, .fade-b, .fade-f {
+    -webkit-text-fill-color: currentColor; color: var(--p-ink); background: none;
+  }
+  a[href]::after { content: ""; }              /* no URL spam in print */
+  h1, h2, h3, tr, li { break-inside: avoid; }
+}
