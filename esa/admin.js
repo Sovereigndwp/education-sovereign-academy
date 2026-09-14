@@ -3,7 +3,7 @@
    nothing here computes one: it shows who came back, with what, and what they said. */
 (function () {
   "use strict";
-  var API = "https://rdqwoqdvqpedlsbaghtr.supabase.co/functions/v1/esa-review";
+  var API = "https://svrbfpjoufhhxdshwlvt.supabase.co/functions/v1/esa-review";
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {

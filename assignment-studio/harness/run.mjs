@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const GOLD = join(here, "..", "gold");
-const FN = process.env.AS_FN || "https://rdqwoqdvqpedlsbaghtr.supabase.co/functions/v1/as-studio";
+const FN = process.env.AS_FN || "https://svrbfpjoufhhxdshwlvt.supabase.co/functions/v1/as-studio";
 const MODES = ["support", "advanced", "visible"];
 const args = process.argv.slice(2);
 const onlyInfer = args.includes("--only-infer");

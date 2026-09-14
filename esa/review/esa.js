@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var API = "https://rdqwoqdvqpedlsbaghtr.supabase.co/functions/v1/esa-review";
+  var API = "https://svrbfpjoufhhxdshwlvt.supabase.co/functions/v1/esa-review";
   var $ = function (id) { return document.getElementById(id); };
   var show = function (id) {
     ["s-gate", "s-1", "s-2", "s-3", "s-wait", "s-4", "s-error"].forEach(function (s) {

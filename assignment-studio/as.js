@@ -1,8 +1,8 @@
 /* Assignment Studio — shared client. No frameworks, no cookies, no PII in events. */
 (function () {
-  const SUPABASE_URL = "https://rdqwoqdvqpedlsbaghtr.supabase.co";
+  const SUPABASE_URL = "https://svrbfpjoufhhxdshwlvt.supabase.co";
   // Publishable key: insert-only on ast_events under RLS (same contract as the Stress Test).
-  const PUB_KEY = "sb_publishable_wppmprcDhDQ34qdO2Aqk4Q_dQQiejBq";
+  const PUB_KEY = "sb_publishable_lNNL2C_mTN2JooWsLld_Aw_oQ3B2Gya";
   const FN = SUPABASE_URL + "/functions/v1/as-studio";
 
   const params = new URLSearchParams(location.search);

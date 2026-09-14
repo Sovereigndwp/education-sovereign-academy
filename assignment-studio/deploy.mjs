@@ -22,7 +22,7 @@ import { fileURLToPath } from "node:url";
 const here = dirname(fileURLToPath(import.meta.url));
 const SHARED = join(here, "functions", "_shared");
 const ENTRY = join(here, "functions", "as-studio", "index.ts");
-const PROJECT = process.env.AS_PROJECT_REF || "rdqwoqdvqpedlsbaghtr";
+const PROJECT = process.env.AS_PROJECT_REF || "svrbfpjoufhhxdshwlvt";
 const SLUG = "as-studio";
 const TOKEN = process.env.SUPABASE_ACCESS_TOKEN;
 const checkOnly = process.argv.includes("--check");
