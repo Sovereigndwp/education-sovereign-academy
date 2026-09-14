@@ -113,6 +113,45 @@ if (!DRY) {
   if (invSrc.h !== inv.h) process.exit(1);
 }
 
+// ---- storage: copy objects bucket-for-bucket, byte-exact ----
+// Needs the service-role key of each project. Those are fetched from the Management API at
+// runtime using the access token already in hand, used in memory, and never printed.
+console.log("\nstorage:");
+async function serviceKey(ref) {
+  const keys = await api(`/v1/projects/${ref}/api-keys?reveal=true`);
+  const k = keys.find((x) => x.name === "service_role" || x.type === "secret");
+  if (!k) throw new Error(`no service_role key returned for ${ref}`);
+  return k.api_key;
+}
+const srcKey = await serviceKey(SRC), dstKey = await serviceKey(DST);
+const objects = await q(SRC, "select b.id as bucket, o.name, (o.metadata->>'size')::bigint as bytes from storage.objects o join storage.buckets b on b.id = o.bucket_id order by b.id, o.name");
+if (!objects.length) console.log("  (no objects in source)");
+for (const o of objects) {
+  const get = await fetch(`https://${SRC}.supabase.co/storage/v1/object/${o.bucket}/${o.name}`, {
+    headers: { apikey: srcKey, Authorization: `Bearer ${srcKey}` },
+  });
+  if (!get.ok) { console.log(`  FAIL download ${o.bucket}/${o.name} -> ${get.status}`); process.exitCode = 1; continue; }
+  const buf = Buffer.from(await get.arrayBuffer());
+  const digest = createHash("sha256").update(buf).digest("hex");
+  const mime = get.headers.get("content-type") || "application/octet-stream";
+  if (DRY) { console.log(`  would copy ${o.bucket}/${o.name}  ${buf.length} bytes  sha256 ${digest.slice(0, 16)}`); continue; }
+  const put = await fetch(`https://${DST}.supabase.co/storage/v1/object/${o.bucket}/${o.name}`, {
+    method: "POST",
+    headers: { apikey: dstKey, Authorization: `Bearer ${dstKey}`, "content-type": mime, "x-upsert": "true" },
+    body: buf,
+  });
+  if (!put.ok) { console.log(`  FAIL upload ${o.bucket}/${o.name} -> ${put.status}: ${(await put.text()).slice(0, 200)}`); process.exitCode = 1; continue; }
+  // read it back from the destination and compare bytes
+  const back = await fetch(`https://${DST}.supabase.co/storage/v1/object/${o.bucket}/${o.name}`, {
+    headers: { apikey: dstKey, Authorization: `Bearer ${dstKey}` },
+  });
+  const backBuf = Buffer.from(await back.arrayBuffer());
+  const backDigest = createHash("sha256").update(backBuf).digest("hex");
+  const ok = backBuf.length === buf.length && backDigest === digest;
+  if (!ok) process.exitCode = 1;
+  console.log(`  ${ok ? "OK  " : "FAIL"} ${o.bucket}/${o.name}  ${buf.length} bytes  sha256 ${digest.slice(0, 16)} ${ok ? "identical" : "MISMATCH"}`);
+}
+
 // ---- function secrets: copy from BSA to ESA without ever printing a value ----
 console.log("\nfunction secrets:");
 const NEEDED = ["ANTHROPIC_API_KEY", "ESA_ADMIN_KEY"];
