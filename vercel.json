@@ -1,0 +1,35 @@
+{
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/esa/index.html" },
+    { "source": "/review", "destination": "/esa/review/index.html" },
+    { "source": "/review/", "destination": "/esa/review/index.html" },
+    { "source": "/esa", "destination": "/esa/index.html" },
+    { "source": "/esa/", "destination": "/esa/index.html" },
+    { "source": "/esa/review", "destination": "/esa/review/index.html" },
+    { "source": "/esa/review/", "destination": "/esa/review/index.html" },
+    { "source": "/assignment-studio", "destination": "/assignment-studio/index.html" },
+    { "source": "/assignment-studio/", "destination": "/assignment-studio/index.html" },
+    { "source": "/assignment-studio/studio", "destination": "/assignment-studio/studio/index.html" },
+    { "source": "/assignment-studio/studio/", "destination": "/assignment-studio/studio/index.html" }
+  ]
+}
