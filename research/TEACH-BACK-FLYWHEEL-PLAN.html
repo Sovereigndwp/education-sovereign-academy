@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Teach-Back Flywheel — System Design & Plan · The Sovereign Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* TSA Token Sheet v0.1 — Graphite web skin */
+  --bg:#121316; --surface:#191B1F; --surface-2:#1F2228; --border:#2C2F36;
+  --muted:#A7ABB3; --ink:#ECECE6;
+  /* BSA ember (brand) */
+  --brand:#FF7A00; --brand-hi:#FF9A00; --brand-gold:#FFD400; --brand-deep:#B45400;
+  /* FSA emerald (graphite-safe) / TSA silver */
+  --emerald:#34D399; --emerald-deep:#10B981; --silver:#C7CCD1;
+  --pass:#34D399; --repair:#FF9A00; --escalate:#F87171;
+  --shadow:0 10px 40px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:Inter,system-ui,sans-serif;line-height:1.62;font-size:16.5px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.15;color:#fff}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;letter-spacing:-.01em;margin:.2em 0 .1em}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;margin:1.9em 0 .5em;
+   padding-top:.6em;border-top:1px solid var(--border)}
+h3{font-size:1.28rem;font-weight:700;margin:1.5em 0 .4em;color:var(--brand-hi)}
+h4{font-size:1.05rem;margin:1.1em 0 .3em;color:var(--silver);font-family:Inter;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem}
+p{margin:.6em 0}
+a{color:var(--brand-hi);text-decoration:none}
+strong{color:#fff;font-weight:600}
+em{color:var(--brand-gold);font-style:normal}
+code{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.86em;
+  background:var(--surface-2);border:1px solid var(--border);border-radius:5px;padding:.08em .38em;color:var(--emerald)}
+.hero{padding:76px 0 34px;background:
+  radial-gradient(1200px 400px at 20% -10%,rgba(255,122,0,.16),transparent 60%),
+  radial-gradient(900px 380px at 90% 0%,rgba(52,211,153,.09),transparent 55%);
+  border-bottom:1px solid var(--border)}
+.kicker{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brand);border:1px solid var(--brand-deep);
+  padding:.35em .9em;border-radius:999px;margin-bottom:14px;background:rgba(255,122,0,.06)}
+.lede{font-size:1.24rem;color:var(--muted);max-width:760px;margin-top:.6em}
+.seal{display:inline-flex;align-items:center;gap:9px;margin-top:22px;font-size:.9rem;
+  color:var(--silver);background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:9px 15px}
+.seal b{color:var(--brand-hi)}
+.meta{color:#70747c;font-size:.82rem;margin-top:20px}
+section{padding:6px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  padding:24px 26px;margin:16px 0;box-shadow:var(--shadow)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.g2,.g3{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
+th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--brand-hi);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em}
+tr:hover td{background:rgba(255,255,255,.015)}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:.2em .6em;border-radius:6px;
+  letter-spacing:.03em;white-space:nowrap}
+.t-pass{background:rgba(52,211,153,.14);color:var(--pass);border:1px solid rgba(52,211,153,.3)}
+.t-repair{background:rgba(255,154,0,.14);color:var(--repair);border:1px solid rgba(255,154,0,.3)}
+.t-esc{background:rgba(248,113,113,.14);color:var(--escalate);border:1px solid rgba(248,113,113,.3)}
+.t-reuse{background:rgba(199,204,209,.1);color:var(--silver);border:1px solid var(--border)}
+ul,ol{margin:.5em 0;padding-left:1.3em}
+li{margin:.32em 0}
+.flow{display:flex;flex-direction:column;gap:0;margin:20px 0}
+.stage{display:grid;grid-template-columns:44px 1fr;gap:16px;position:relative}
+.stage:not(:last-child)::before{content:"";position:absolute;left:21px;top:44px;bottom:-6px;width:2px;
+  background:linear-gradient(var(--brand-deep),var(--border))}
+.snum{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  font-family:'Playfair Display';font-weight:700;font-size:1.15rem;color:#111;
+  background:linear-gradient(135deg,var(--brand),var(--brand-gold));z-index:1}
+.sbody{padding-bottom:22px}
+.sbody h3{margin-top:2px}
+.pill{font-size:.72rem;color:var(--muted);background:var(--surface-2);border:1px solid var(--border);
+  border-radius:6px;padding:.15em .5em;margin:0 4px 4px 0;display:inline-block}
+.callout{border-left:3px solid var(--brand);background:rgba(255,122,0,.05);
+  padding:12px 18px;border-radius:0 10px 10px 0;margin:16px 0}
+.callout.emerald{border-color:var(--emerald);background:rgba(52,211,153,.05)}
+.callout.warn{border-color:var(--escalate);background:rgba(248,113,113,.05)}
+.assume{font-size:.85rem;color:var(--brand-gold)}
+.assume::before{content:"⚑ ASSUMPTION TO CONFIRM — ";font-weight:700;letter-spacing:.03em;font-size:.74rem}
+.kpi{font-family:'Playfair Display';font-size:2rem;font-weight:700;color:var(--brand-hi);line-height:1}
+.kpi small{font-family:Inter;font-size:.8rem;color:var(--muted);display:block;margin-top:4px;font-weight:400;text-transform:none;letter-spacing:0}
+.money td:last-child,.money th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+nav.toc{position:sticky;top:0;background:rgba(18,19,22,.9);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);padding:10px 0;z-index:20;font-size:.82rem}
+nav.toc a{color:var(--muted);margin-right:16px;white-space:nowrap}
+nav.toc a:hover{color:var(--brand-hi)}
+.toc-inner{max-width:1060px;margin:0 auto;padding:0 26px;overflow-x:auto;white-space:nowrap}
+footer{border-top:1px solid var(--border);margin-top:50px;padding:30px 0 60px;color:#70747c;font-size:.85rem}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:6px 0 2px;font-size:.8rem;color:var(--muted)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">The Sovereign Academy · System Design</span>
+    <h1>The Teach-Back Flywheel</h1>
+    <p class="lede">The agentic version of <em>teachers teach teachers</em>. A teacher submits their own lesson or game; an agent pipeline audits it against Dalia's own curriculum standards and prior rulings, upgrades it with a tyb-engine interactive, and publishes it under a revenue-share — so Dalia stops being the sole author and becomes the <strong>factory and the seal of quality</strong> other teachers build on.</p>
+    <div class="seal">🛡 <span>Published units carry the mark: <b>Verified by The Sovereign Academy</b></span></div>
+    <p class="meta">Design + monetization spec · built on existing TSA/BSA/FSA assets · 2026-08-27 · companion prototype: <code>TEACH-BACK-FLYWHEEL-PROTOTYPE.html</code></p>
+  </div>
+</div>
+
+<nav class="toc"><div class="toc-inner">
+  <a href="#thesis">Thesis</a>
+  <a href="#reuse">Reuse map</a>
+  <a href="#arch">Architecture</a>
+  <a href="#bar">Quality bar</a>
+  <a href="#money">Monetization</a>
+  <a href="#gtm">Go-to-market</a>
+  <a href="#risks">Risks</a>
+  <a href="#confirm">Confirm with Dalia</a>
+</div></nav>
+
+<div class="wrap">
+
+<section id="thesis">
+<h2>The thesis in one paragraph</h2>
+<p>Dalia has already built the hard parts as separate machines: a <strong>curriculum quality-gate pipeline</strong> (<code>build-curriculum</code>), an <strong>owner-decision-corpus delegation system</strong> (<code>owner-approval-delegation</code> / <code>evidence-based-owner-delegation</code>), a <strong>game/interactive engine with formal audit CLIs and telemetry</strong> (tyb-engine), a <strong>monetization skill set</strong> that enforces free-core (<code>sovereign-monetization</code>), and a <strong>bilingual EN/ES distribution edge</strong>. The Teach-Back Flywheel does not invent a new machine. It <em>wires these machines end-to-end and points the intake at other teachers instead of at Dalia.</em> Every submission that escalates to her becomes a new precedent in the corpus, which raises the auto-approval rate, which lowers her per-unit time toward zero. That compounding is the flywheel.</p>
+<div class="callout">
+<strong>Design stance.</strong> The owner moves <em>up a level, not out of governance</em> (the explicit rule inside <code>owner-approval-delegation</code>). Dalia decides new principles, genuinely new pedagogy, changes of direction, and disputed cases. The system handles application of established principles, routine review, repair, and verification. The flywheel is never presented as removing her from curriculum governance.
+</div>
+</section>
+
+<section id="reuse">
+<h2>Reuse map — what already exists powers each stage</h2>
+<p>This is the whole point: nothing below is built from scratch. Each flywheel stage is an orchestration of an asset Dalia already owns.</p>
+<table>
+<thead><tr><th>Flywheel stage</th><th>Existing asset reused</th><th>What it already does</th></tr></thead>
+<tbody>
+<tr><td><strong>1 · Teacher intake</strong></td><td class="tag t-reuse">tyb-engine <code>concept-inbox-form-spec.md</code> + <code>lesson-inject.js</code></td><td>A defined concept-submission form and an injection path for dropping a lesson/game into the pipeline.</td></tr>
+<tr><td><strong>2 · Pedagogy audit — gates</strong></td><td class="tag t-reuse">build-curriculum 7 gates</td><td>Factual, conceptual-model, developmental/age, interaction, teacher-key, boundary/safeguarding, brand/accessibility — already defined with PASS conditions.</td></tr>
+<tr><td><strong>2 · Pedagogy audit — factual</strong></td><td class="tag t-reuse">education-intelligence:audit-claims</td><td>Claim extraction, source classification, stale-data hunting (subsidy, halving, prices, statutes).</td></tr>
+<tr><td><strong>2 · Pedagogy audit — game/felt</strong></td><td class="tag t-reuse">tyb <code>kill-test-cli</code>, <code>brilliant-audit-cli</code>, <code>feel-audit-cli</code>, <code>standards-alignment-cli</code>, <code>portfolio-audit</code></td><td>Runnable audit CLIs: kill-test verdict, "brilliant standard" 9-point audit, difficulty-curve/feel audit, CCSS/AP alignment, portfolio-level sampling.</td></tr>
+<tr><td><strong>2 · Verdict routing</strong></td><td class="tag t-reuse">owner-approval-delegation Owner-Proxy</td><td>Scores a unit against the Owner Decision Corpus → recommendation, confidence, governing precedents, conflicts, novel decisions, escalation reasons.</td></tr>
+<tr><td><strong>2 · Felt-experience check</strong></td><td class="tag t-reuse">evidence-based-owner-delegation Experience Director</td><td>Separate evaluator for the student experience beyond accuracy/compliance.</td></tr>
+<tr><td><strong>3 · Auto-upgrade interactive</strong></td><td class="tag t-reuse">tyb <code>skills/</code> (juice · audio · dom-panels), <code>telemetry-shim.js</code>, <code>misconceptions.js</code></td><td>Drop-in interactive polish, telemetry hooks, and a wrong-answer misconception classifier.</td></tr>
+<tr><td><strong>3 · Build interaction (if none)</strong></td><td class="tag t-reuse">education-intelligence:build-interactive · build-demo-skeleton</td><td>Designs/scaffolds a calculator/simulator with server-rendered explanation and false-inference mitigation.</td></tr>
+<tr><td><strong>4 · Escalation → corpus growth</strong></td><td class="tag t-reuse">owner-decision-corpus (context→treatment→objection→principle→decision→evidence)</td><td>Dalia's ruling on an escalated unit is written back as a new precedent, tagged by evidence strength.</td></tr>
+<tr><td><strong>5 · Publish (free-core)</strong></td><td class="tag t-reuse">TSA Token Sheet v0.1 · bsa-brand-steward · content-inventory</td><td>Canonical brand tokens + the "seal" surface; content register for the growing library.</td></tr>
+<tr><td><strong>6 · Distribute</strong></td><td class="tag t-reuse">sovereign-monetization:distribution-run · capture-and-route</td><td>Multi-channel EN/ES packaging (Substack, X, LinkedIn, nostr) + capture point → nurture on the free tool.</td></tr>
+<tr><td><strong>7 · Revenue-share + measure</strong></td><td class="tag t-reuse">offer-design (free-core rule) · revenue-instrumentation · advisor-channel-motion · Stripe</td><td>Free-core offer shaping, the measurement layer/scorecard, the B2B licensing motion; Stripe already in use.</td></tr>
+<tr><td><strong>7 · Feedback loop</strong></td><td class="tag t-reuse">tyb telemetry + misconception maps</td><td>Live wrong-answer data from published interactives feeds misconception coverage back into the standards and the corpus.</td></tr>
+</tbody>
+</table>
+<p class="assume">The only genuinely <em>new</em> code the flywheel needs is the thin orchestration layer that runs these in sequence, the Teacher Desk UI, and the Stripe Connect revenue-share ledger. Everything else is wiring.</p>
+</section>
+
+<section id="arch">
+<h2>Architecture — the end-to-end loop</h2>
+<p>Seven stages. The arrow from Stage 4 back into the corpus, and from Stage 7 back into the standards, are what make it a flywheel rather than a conveyor belt.</p>
+
+<div class="legend">
+  <span><span class="dot" style="background:var(--pass)"></span>auto (no human)</span>
+  <span><span class="dot" style="background:var(--repair)"></span>agent repair</span>
+  <span><span class="dot" style="background:var(--escalate)"></span>owner only</span>
+</div>
+
+<div class="flow">
+  <div class="stage"><div class="snum">1</div><div class="sbody">
+    <h3>Teacher intake — the Teacher Desk</h3>
+    <p>A teacher submits their own lesson or HTML game through a Concept Inbox form. Captured: concept + one-line learning objective, target age band and standard, the artifact itself, and acceptance of the contributor license + revenue-share terms. <span class="pill">reuse: concept-inbox-form-spec.md</span><span class="pill">reuse: lesson-inject.js</span></p>
+  </div></div>
+
+  <div class="stage"><div class="snum">2</div><div class="sbody">
+    <h3>Automated pedagogy audit — the Owner-Proxy run</h3>
+    <p>One orchestrated pass runs the seven <code>build-curriculum</code> gates, the tyb audit CLIs for any interactive, <code>audit-claims</code> for facts, and the <strong>Owner-Proxy evaluator</strong> against the Owner Decision Corpus, plus the <strong>Experience Director</strong> for the felt experience. It emits a <strong>Gate Report</strong> and a single routing verdict.</p>
+    <p><span class="tag t-pass">AUTO-APPROVE</span> <span class="tag t-repair">AUTO-REPAIR</span> <span class="tag t-esc">ESCALATE</span></p>
+  </div></div>
+
+  <div class="stage"><div class="snum">3</div><div class="sbody">
+    <h3>Auto-upgrade with a tyb-engine interactive</h3>
+    <p>The unit is fitted with the tyb interactive layer: telemetry hooks, a misconception map/classifier, and juice/audio/panel polish. If the submitted lesson has no meaningful interaction, one is scaffolded via <code>build-interactive</code> with false-inference risk evaluated. Repairs (missing misconception map, weak interaction, stale data, brand/contrast drift) are applied here — <strong>bounded to 2 loops</strong>; still-failing units escalate. <span class="pill">reuse: tyb skills/ + telemetry + misconceptions.js</span></p>
+  </div></div>
+
+  <div class="stage"><div class="snum">4</div><div class="sbody">
+    <h3>Owner escalation — edge cases only</h3>
+    <p>Only novel pedagogical decisions, unrepaired conceptual-model misconceptions, boundary/safeguarding violations, low Owner-Proxy confidence, or precedent conflicts reach Dalia. She rules once. <strong>Her ruling is written back into the Owner Decision Corpus</strong> in the canonical form <code>context → proposed treatment → objection → governing principle → owner decision → accepted treatment → evidence</code>. This is the learning step of the loop.</p>
+  </div></div>
+
+  <div class="stage"><div class="snum">5</div><div class="sbody">
+    <h3>Publish — free-core, under the seal</h3>
+    <p>The student-facing lesson/game is published <strong>free</strong> on the teacher's desk page, on canonical TSA brand tokens, carrying <em>Verified by The Sovereign Academy</em> and teacher attribution. Free-core is non-negotiable (see monetization). <span class="pill">reuse: TSA Token Sheet · bsa-brand-steward</span></p>
+  </div></div>
+
+  <div class="stage"><div class="snum">6</div><div class="sbody">
+    <h3>Distribute — EN/ES, multi-channel</h3>
+    <p><code>distribution-run</code> packages the unit for Substack, X, LinkedIn, and nostr with Spanish/LATAM localization; <code>capture-and-route</code> places a capture point on the free interactive → email → nurture toward the paid kit. <span class="pill">reuse: distribution-run · capture-and-route</span></p>
+  </div></div>
+
+  <div class="stage"><div class="snum">7</div><div class="sbody">
+    <h3>Revenue-share accounting + feedback</h3>
+    <p>The paid <strong>Teacher Kit</strong> sells through Stripe Connect; the split posts automatically to a revenue-share ledger. Meanwhile the published interactive streams wrong-answer telemetry back through the misconception classifier, improving misconception coverage in the standards <em>and</em> feeding the corpus. Corpus grows → auto-approve rate rises → Stage 4 shrinks. <span class="pill">reuse: revenue-instrumentation · Stripe · tyb telemetry</span></p>
+  </div></div>
+</div>
+
+<div class="callout emerald"><strong>The compounding claim, stated plainly.</strong> Owner-minutes per published unit is the North-Star cost metric. At cold start it is high (everything escalates). Each escalation adds precedent. When the corpus crosses the maturity threshold for a unit type, AUTO-APPROVE switches on for that type and owner-minutes for it drop toward zero — while quality is held constant by the same gates.</div>
+</section>
+
+<section id="bar">
+<h2>The quality bar — built on the existing gates + corpus, not a new rubric</h2>
+<p>A submitted unit is scored on the seven <code>build-curriculum</code> gates plus the tyb audit dimension. Each gate returns <span class="tag t-pass">PASS</span>, <span class="tag t-repair">REPAIRABLE</span>, or <span class="tag t-esc">FAIL&nbsp;(P0)</span>. The routing verdict is a deterministic function of the gate results <em>and</em> the Owner-Proxy judgment.</p>
+
+<h3>The gates (verbatim from build-curriculum)</h3>
+<table>
+<thead><tr><th>Gate</th><th>Pass condition (existing)</th><th>Typical failure → route</th></tr></thead>
+<tbody>
+<tr><td><strong>Factual</strong></td><td>Every claim sourced, labeled interpretation, or flagged; no P0 errors; no stale data.</td><td>Stale subsidy/price → <span class="tag t-repair">repair</span>; unsupported core claim → <span class="tag t-esc">escalate</span></td></tr>
+<tr><td><strong>Conceptual model</strong></td><td>No unrepaired misconception from the standard list (blockchain≠Bitcoin, 21M≠magic, nodes-don't-vote…). "If every sentence were correct, what wrong model could a learner still leave with?"</td><td>Present+unrepaired → <span class="tag t-esc">escalate</span></td></tr>
+<tr><td><strong>Developmental / age</strong></td><td>Youth ships CORE (11–14) + GO DEEPER (15–18); GO DEEPER adds reasoning depth, not text.</td><td>Wrong band / thin depth → <span class="tag t-repair">repair</span></td></tr>
+<tr><td><strong>Interaction</strong></td><td>Learner acts → state changes visibly → change reveals the concept → false-inference risk mitigated.</td><td>No/weak interaction → <span class="tag t-repair">repair (tyb upgrade)</span></td></tr>
+<tr><td><strong>Teacher / answer key</strong></td><td>Keys audited independently; no nuance falsely reduced to one answer; teacher wording introduces no misconception. Non-expert can run it.</td><td>Key introduces misconception → <span class="tag t-esc">escalate</span></td></tr>
+<tr><td><strong>Boundary / safeguarding</strong></td><td>No personalized custody/legal/tax advice; youth: no price predictions, no real keys/seed phrases, no real-money exercises.</td><td>Any violation → <span class="tag t-esc">escalate (hard gate)</span></td></tr>
+<tr><td><strong>Brand · clarity · accessibility</strong></td><td>Canonical tokens; contrast, keyboard, target size, screen-reader — demos included.</td><td>Token/contrast drift → <span class="tag t-repair">repair</span></td></tr>
+<tr><td><strong>Interactive (tyb)</strong></td><td>kill-test PASS · brilliant-audit ≥ standard · feel-audit curve smooth · standards-alignment present · misconception map present.</td><td>Curve spike / missing map → <span class="tag t-repair">repair</span>; fails kill-test → <span class="tag t-esc">escalate</span></td></tr>
+</tbody>
+</table>
+
+<div class="grid g3" style="margin-top:18px">
+  <div class="card" style="border-color:rgba(52,211,153,.35)">
+    <span class="tag t-pass">AUTO-APPROVE</span>
+    <p style="margin-top:10px">Publishes with no human. Requires <strong>all</strong>:</p>
+    <ul>
+      <li>every gate PASS (zero P0, zero unrepaired misconception),</li>
+      <li>Owner-Proxy = approve at <strong>high</strong> confidence,</li>
+      <li>≥ 3 on-point governing precedents, <strong>zero</strong> novel decisions,</li>
+      <li>corpus mature for this unit type.</li>
+    </ul>
+  </div>
+  <div class="card" style="border-color:rgba(255,154,0,.35)">
+    <span class="tag t-repair">AUTO-REPAIR</span>
+    <p style="margin-top:10px">Agent fixes, re-runs gates, ≤ 2 loops. Handles the mechanical/known-pattern failures:</p>
+    <ul>
+      <li>missing misconception map or weak interaction (tyb upgrade),</li>
+      <li>stale data point, missing teacher-key nuance,</li>
+      <li>brand-token drift, accessibility contrast.</li>
+    </ul>
+    <p style="font-size:.85rem;color:var(--muted)">Still failing after 2 loops → escalate.</p>
+  </div>
+  <div class="card" style="border-color:rgba(248,113,113,.35)">
+    <span class="tag t-esc">ESCALATE</span>
+    <p style="margin-top:10px">Goes to Dalia. Triggered by any of:</p>
+    <ul>
+      <li>P0 factual error unresolved,</li>
+      <li>conceptual-model misconception unrepaired,</li>
+      <li>boundary/safeguarding violation,</li>
+      <li>a novel pedagogical choice,</li>
+      <li>Owner-Proxy low confidence or precedent conflict.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout warn"><strong>Honest cold-start (from owner-approval-delegation).</strong> As of 2026-08 the Owner Decision Corpus does not yet meet the maturity threshold (≥ 30 entries, ≥ 20 of them <em>rulings/inferred-from-correction</em> rather than encoded rules, ≥ 3 on-point per unit type). <strong>Until then, AUTO-APPROVE is disabled and every unit escalates</strong> — and the system says so out loud rather than quietly approving. Week 1 seeds the corpus from existing rulings (the retired membership page = a free-core precedent, the unit-circle pass records, doctrine, and repo corrections). The Owner-Proxy may infer from precedent but may never invent a preference and attribute it to Dalia.</div>
+</section>
+
+<section id="money">
+<h2>Monetization — free-core, contribution-weighted revenue-share</h2>
+
+<div class="callout"><strong>Free-core rule (hard, encoded as corpus precedent).</strong> The student-facing lesson or game is <em>always free</em>. TSA once sold a membership that gated core education; the owner ruled it a violation and retired it. The flywheel monetizes the <strong>teacher's supporting kit and desk</strong> and <strong>institutional licensing</strong> — never learner access to the core lesson.</p></div>
+
+<h3>What's free vs. paid</h3>
+<table>
+<thead><tr><th>Layer</th><th>Free-core</th><th>Paid</th></tr></thead>
+<tbody>
+<tr><td>Student lesson / interactive game</td><td>✔ always free, public</td><td>—</td></tr>
+<tr><td>Teacher Kit (facilitator guide, answer key, standards sheet, misconception-remediation deck, printable + slides, classroom telemetry dashboard)</td><td>—</td><td>✔ per-unit or desk subscription</td></tr>
+<tr><td>Teacher Desk (submit, track revenue, access peer kits)</td><td>✔ free to publish</td><td>✔ paid tier for peer-kit library + dashboard</td></tr>
+<tr><td>Institutional bundle license (school/RIA white-label of verified units)</td><td>—</td><td>✔ B2B</td></tr>
+</tbody>
+</table>
+
+<h3>Revenue-share — contribution-weighted</h3>
+<p>The split reflects who did the work. TSA brings the seal, the upgrade engine, distribution, and Stripe/infra; the teacher brings the raw lesson and their audience. The Gate Report makes the contribution visible, so the split is defensible.</p>
+<table class="money">
+<thead><tr><th>Contribution path</th><th>Teacher</th><th>TSA</th><th>Reserve*</th></tr></thead>
+<tbody>
+<tr><td>Baseline — auto-approve with light repair</td><td>50%</td><td>40%</td><td>10%</td></tr>
+<tr><td>Near-ready — teacher submits a strong unit, minimal upgrade</td><td>60%</td><td>30%</td><td>10%</td></tr>
+<tr><td>Heavy upgrade — TSA adds the entire tyb interactive</td><td>40%</td><td>50%</td><td>10%</td></tr>
+<tr><td>Institutional license royalty pool (all authors in bundle)</td><td>30% pool</td><td>70%</td><td>—</td></tr>
+</tbody>
+</table>
+<p style="font-size:.85rem;color:var(--muted)">*Reserve covers Stripe processing (~3%) + platform/hosting + a quality-assurance fund. <span class="assume">exact percentages are founding hypotheses.</span></p>
+
+<h3>Price points (founding hypotheses)</h3>
+<div class="grid g3">
+  <div class="card"><div class="kpi">$29<small>Teacher Kit — one-time per unit</small></div></div>
+  <div class="card"><div class="kpi">$9<small>/mo Teacher Desk — peer-kit library + dashboard</small></div></div>
+  <div class="card"><div class="kpi">$500–$5k<small>Institutional bundle license (by seat count)</small></div></div>
+</div>
+
+<h3>The math — Cohort 1 founding scenario</h3>
+<table class="money">
+<thead><tr><th>Line</th><th>Assumption</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Teachers in cohort 1</td><td>hand-picked founders</td><td>15</td></tr>
+<tr><td>Units published</td><td>2 each</td><td>30</td></tr>
+<tr><td>Kit sales / unit / yr</td><td>20 copies @ $29</td><td>$580</td></tr>
+<tr><td>Gross kit revenue (yr 1)</td><td>30 × $580</td><td>$17,400</td></tr>
+<tr><td>→ Teachers (50%)</td><td>≈ $580 avg each</td><td>$8,700</td></tr>
+<tr><td>→ TSA (40%)</td><td></td><td>$6,960</td></tr>
+<tr><td>→ Reserve (10%)</td><td></td><td>$1,740</td></tr>
+<tr><td>Institutional licenses</td><td>3 × $2,000</td><td>$6,000</td></tr>
+<tr><td>→ TSA (70%) / author pool (30%)</td><td></td><td>$4,200 / $1,800</td></tr>
+<tr><td><strong>TSA net, yr 1, cohort 1</strong></td><td>kits + licenses</td><td><strong>≈ $11,160</strong></td></tr>
+</tbody>
+</table>
+<div class="callout emerald">The year-1 dollars are deliberately modest. <strong>The asset being built is the library + the seal + the auto-approve rate</strong> — marginal cost per additional unit trends toward zero as the corpus matures, so the model is a compounding library, not a services business. The right early metric is <em>units published per owner-hour</em>, not revenue.</div>
+
+<h3>How money actually flows</h3>
+<p><strong>Stripe Connect</strong> (Stripe is already in use). Each teacher onboards as a Connected Account. A kit purchase is a single charge that splits automatically via a Connect transfer at the contribution-weighted ratio; TSA is the platform account and keeps its share + reserve. The revenue-share ledger reconciles monthly and is visible to the teacher on their desk. Institutional licenses are invoiced by TSA, with the author-pool royalty distributed from the platform account. <span class="assume">Stripe Connect (vs. manual monthly payout) is the recommended mechanism — confirm it fits your current Stripe setup.</span></p>
+
+<div class="callout"><strong>Validate before you build (validation ladder).</strong> Per <code>offer-design</code>, pre-sell the Teacher Desk to cohort 1 at a founding price and collect LOIs <em>before</em> building full Stripe Connect + the kit generator. If founders won't commit to the desk, the split numbers are moot and cheap to change.</div>
+</section>
+
+<section id="gtm">
+<h2>Go-to-market + 8-week timetable</h2>
+
+<h3>Recruiting the first cohort</h3>
+<p>The first 10–15 authors are <strong>hand-picked founders</strong>, not an open call — the seal's credibility depends on the first units being excellent. Sourcing pools, in order: Dalia's own math-teacher network and the literal "teachers teach teachers" community the concept came from; the Colombia/LATAM <em>programa</em> teachers (bilingual edge); and the engaged tail of the Substack/BSA audience who already teach. Founding offer: free desk for life, higher revenue share (60/30/10 founder rate), co-marketing, and their name on the first verified units. <span class="pill">reuse: find-prospect-contacts</span></p>
+
+<h3>The roadmap</h3>
+<table>
+<thead><tr><th>Wk</th><th>Deliverable</th><th>Depends on</th><th>Metric</th><th>Owner vs auto</th></tr></thead>
+<tbody>
+<tr><td><strong>1</strong></td><td>Cold-start the Owner Decision Corpus; stand up intake form; define the seal.</td><td>existing rulings, doctrine, unit-circle records</td><td>≥ 15 real precedents seeded</td><td><span class="tag t-esc">owner: corpus seeding</span> · auto: form/scaffold</td></tr>
+<tr><td><strong>2</strong></td><td>Wire the gate runners + tyb CLIs + Owner-Proxy into one run; dry-run on unit circle + 2 existing units.</td><td>W1 corpus, tyb CLIs</td><td>3 dry-runs produce Gate Reports</td><td>auto, with owner spot-check</td></tr>
+<tr><td><strong>3</strong></td><td>Publish flow + free-core lesson page + Teacher Desk v1.</td><td>brand tokens</td><td>1 unit published end-to-end (test author = Dalia)</td><td>auto build · <span class="tag t-esc">owner approves seal design</span></td></tr>
+<tr><td><strong>4</strong></td><td>Monetization rails: Stripe Connect, kit generator, revenue-share ledger.</td><td>Stripe account</td><td>test transaction splits correctly</td><td>auto build · <span class="tag t-esc">owner confirms split %</span></td></tr>
+<tr><td><strong>5</strong></td><td>Recruit cohort: outreach to 15 founders, founding offer, LOIs.</td><td>W3 demo to show</td><td>≥ 10 LOIs / desk pre-sells</td><td><span class="tag t-esc">owner: relationships</span> · auto: outreach drafts</td></tr>
+<tr><td><strong>6</strong></td><td>First live submissions; run pipeline; escalations seed more corpus.</td><td>cohort signed</td><td>≥ 10 submissions; escalation rate logged</td><td>mixed — every escalation is owner time that pays down</td></tr>
+<tr><td><strong>7</strong></td><td>First publishes + distribution (EN/ES) + capture-and-route.</td><td>W6 approvals</td><td>≥ 6 units live, capture points firing</td><td>auto</td></tr>
+<tr><td><strong>8</strong></td><td>First kit sales; revenue-instrumentation scorecard; corpus-maturity check → flip AUTO-APPROVE on for the first unit type.</td><td>W4 rails, W7 traffic</td><td>first $ + auto-approve enabled for ≥ 1 type</td><td><span class="tag t-esc">owner reviews scorecard</span></td></tr>
+</tbody>
+</table>
+
+<h3>What runs autonomously vs. needs Dalia</h3>
+<div class="grid g2">
+  <div class="card"><h4 style="color:var(--pass)">Autonomous</h4><ul>
+    <li>The whole gate/audit pipeline and Gate Reports</li>
+    <li>Auto-repair loops and tyb interactive upgrades</li>
+    <li>Publishing, distribution (EN/ES), capture-and-route</li>
+    <li>Kit generation, Stripe split posting, ledger reconciliation</li>
+    <li>Outreach drafting, scorecard generation</li>
+  </ul></div>
+  <div class="card"><h4 style="color:var(--escalate)">Needs Dalia</h4><ul>
+    <li>Seeding + ruling on the corpus (the irreducible core)</li>
+    <li>Escalated edge cases and novel pedagogy</li>
+    <li>Seal design + free-core guardrail sign-off</li>
+    <li>Confirming split % and license terms</li>
+    <li>Founding-cohort relationships</li>
+  </ul></div>
+</div>
+</section>
+
+<section id="risks">
+<h2>Risks &amp; mitigations</h2>
+<table>
+<thead><tr><th>Risk</th><th>Why it bites</th><th>Design mitigation</th></tr></thead>
+<tbody>
+<tr><td><strong>Quality dilution</strong></td><td>The seal is worthless if weak units carry it.</td><td>Gates are hard PASS/FAIL; AUTO-APPROVE gated behind corpus maturity; <code>portfolio-audit</code> samples auto-approved units; seal is revocable; cold-start escalates everything.</td></tr>
+<tr><td><strong>IP / attribution</strong></td><td>Teacher's lesson vs. TSA's upgrade — who owns what.</td><td>Contributor license accepted at intake: teacher retains their raw lesson, grants TSA a license to publish + upgrade; TSA owns the interactive/seal. Every unit shows teacher attribution + verification. <span class="assume">license terms to confirm with counsel.</span></td></tr>
+<tr><td><strong>Revenue-share fairness</strong></td><td>Teachers feel the split is arbitrary.</td><td>Contribution-weighted split tied to the Gate Report (auto-approve vs heavy-upgrade); transparent ledger on the desk; teacher sees exactly what TSA added.</td></tr>
+<tr><td><strong>Boundary / safeguarding</strong></td><td>A teacher's unit could give investment/custody advice or expose youth to real keys.</td><td>Boundary gate is a hard escalate — no auto-path around it; youth rules (no price predictions, no real keys, no real-money) enforced pre-publish; no teacher override.</td></tr>
+<tr><td><strong>Owner-Proxy drift / corpus poisoning</strong></td><td>The proxy could invent a "Dalia preference" and compound it.</td><td>Every judgment traceable to a precedent; proxy may infer but never invent; novel decisions always escalate; entries tagged by evidence strength; Dalia audits a sample each cohort.</td></tr>
+<tr><td><strong>Free-core erosion</strong></td><td>Commercial pressure to paywall the good lessons.</td><td>Free-core encoded as a hard corpus precedent (the retired membership page); monetization confined to kits/desk/licensing; any paywall-core proposal auto-escalates and is denied by precedent.</td></tr>
+<tr><td><strong>Bitcoin/crypto blur</strong></td><td>A submitted unit conflates Bitcoin with "crypto".</td><td>build-curriculum BSA mode + audit-claims already enforce the non-blur; conceptual-model gate lists it explicitly.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="confirm">
+<h2>What I need Dalia to confirm</h2>
+<ol>
+<li><strong>Revenue-share numbers</strong> — the 50/40/10 baseline and the contribution-weighted tiers are founding hypotheses.</li>
+<li><strong>Price points</strong> — $29 kit / $9-mo desk / $500–$5k license.</li>
+<li><strong>Stripe Connect</strong> as the split mechanism vs. manual monthly payouts, given your current Stripe setup.</li>
+<li><strong>Contributor license terms</strong> — the teacher-retains-raw / TSA-licenses-and-upgrades split (needs a legal pass).</li>
+<li><strong>Seal wording + revocation policy</strong> — "Verified by The Sovereign Academy" and when it can be pulled.</li>
+<li><strong>Cohort-1 founder list</strong> — who the first 10–15 teachers are.</li>
+</ol>
+</section>
+
+</div>
+
+<footer><div class="wrap">
+The Teach-Back Flywheel · system design + monetization plan · The Sovereign Academy · 2026-08-27<br>
+Built entirely on existing assets: build-curriculum · owner-approval-delegation · evidence-based-owner-delegation · tyb-engine · sovereign-monetization · TSA Token Sheet v0.1. Companion working prototype: <code>TEACH-BACK-FLYWHEEL-PROTOTYPE.html</code>.
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment Stress Test — Demand Teardown &amp; Validation Plan · The Sovereign Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#121316;--surface:#191B1F;--s2:#1F2228;--border:#2C2F36;--muted:#A7ABB3;--ink:#ECECE6;
+--brand:#FF7A00;--brandhi:#FF9A00;--gold:#FFD400;--deep:#B45400;--em:#34D399;--silver:#C7CCD1;--warn:#F87171;--shadow:0 10px 40px rgba(0,0,0,.5);}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:#fff;line-height:1.15}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin:.2em 0 .1em}
+h2{font-size:clamp(1.4rem,3vw,1.95rem);margin:1.8em 0 .5em;border-top:1px solid var(--border);padding-top:.6em}
+h3{font-size:1.16rem;color:var(--brandhi);margin:1.3em 0 .35em}
+h4{font-family:Inter;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--silver);margin:1em 0 .3em}
+p{margin:.55em 0}strong{color:#fff}em{color:var(--gold);font-style:normal}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.85em;background:var(--s2);border:1px solid var(--border);border-radius:5px;padding:.05em .35em;color:var(--em)}
+.hero{padding:60px 0 24px;background:radial-gradient(1000px 340px at 18% -10%,rgba(255,122,0,.15),transparent 60%);border-bottom:1px solid var(--border)}
+.kicker{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);border:1px solid var(--deep);border-radius:999px;padding:.35em .9em;margin-bottom:12px;background:rgba(255,122,0,.06)}
+.lede{font-size:1.14rem;color:var(--muted);max-width:860px}
+.meta{color:#70747c;font-size:.82rem;margin-top:14px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.85rem}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--brandhi);font-size:.68rem;text-transform:uppercase;letter-spacing:.04em}
+tr:hover td{background:rgba(255,255,255,.015)}
+.tbl-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px}.tbl-scroll table{margin:0}
+.num{text-align:center;white-space:nowrap}
+.callout{border-left:3px solid var(--brand);background:rgba(255,122,0,.05);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}
+.callout.em{border-color:var(--em);background:rgba(52,211,153,.05)}
+.callout.warn{border-color:var(--warn);background:rgba(248,113,113,.05)}
+.src{color:#70747c;font-size:.8rem}
+.tag{display:inline-block;font-size:.68rem;font-weight:700;padding:.1em .5em;border-radius:5px;border:1px solid var(--border);color:var(--muted);margin-right:4px}
+.tag.s{color:var(--em);border-color:rgba(52,211,153,.35)}.tag.a{color:var(--gold);border-color:rgba(255,212,0,.35)}
+ul,ol{margin:.4em 0;padding-left:1.2em}li{margin:.3em 0}
+.gate{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:10px 14px;margin:8px 0;display:flex;gap:12px;align-items:flex-start}
+.gate .g{font-family:'Playfair Display';font-weight:700;color:var(--brandhi);min-width:64px}
+.kill{border-color:rgba(248,113,113,.35);background:rgba(248,113,113,.05)}
+.step{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.step .n{width:36px;height:36px;border-radius:9px;display:grid;place-items:center;font-family:'Playfair Display';font-weight:800;color:#141414;background:linear-gradient(135deg,var(--brand),var(--gold))}
+footer{border-top:1px solid var(--border);margin-top:40px;padding:24px 0 56px;color:#70747c;font-size:.83rem}
+nav.toc{position:sticky;top:0;background:rgba(18,19,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:9px 0;z-index:20;font-size:.79rem}
+nav.toc a{color:var(--muted);margin-right:14px;white-space:nowrap}nav.toc a:hover{color:var(--brandhi)}
+.toc-inner{max-width:1120px;margin:0 auto;padding:0 24px;overflow-x:auto;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="hero"><div class="wrap">
+  <span class="kicker">The Sovereign Academy · Tracks 1 &amp; 2</span>
+  <h1>Assessment Stress Test — Demand Teardown &amp; Validation Plan</h1>
+  <p class="lede">Following the money rather than the whitespace: what schools already pay for, who owns those budgets, what stays painful anyway — and a free-value-exchange funnel designed so that <em>teacher behavior</em>, not teacher opinion, is the validation.</p>
+  <p class="meta">Analysis and design only — no software built, no outreach sent · 2026-09-03</p>
+</div></div>
+
+<nav class="toc"><div class="toc-inner">
+<a href="#t1">Track 1 · Teardown</a><a href="#pain">What stays painful</a><a href="#improve">Product to improve</a><a href="#getpaid">Where we get paid</a>
+<a href="#deliverable">Free deliverable</a><a href="#exp">First-100 experiment</a><a href="#record">What we record</a>
+<a href="#thresholds">Pass/fail</a><a href="#ethics">Ethics &amp; copyright</a><a href="#path">Path to paid</a><a href="#fail">Why it may fail</a>
+</div></nav>
+
+<div class="wrap">
+
+<section id="t1">
+<h2>1 · Track 1 — the demand and spend teardown</h2>
+<p>You asked for evidence of spend, not evidence of emptiness. There is plenty, and it clusters in four budget lines that already exist.</p>
+<div class="tbl-scroll"><table>
+<thead><tr><th>What's bought</th><th>Who owns the budget</th><th>What they pay</th><th>What it actually solves</th></tr></thead>
+<tbody>
+<tr><td><strong>Academic integrity / AI detection</strong><br>Turnitin</td><td>Academic affairs / curriculum director; district-level license</td><td>~$1–7 per student/yr; a 2026 US public procurement schedule lists Feedback Studio Essential at <strong>$6.70/FTE</strong> incl. AI detection. Quote-based.</td><td>Detects likely AI text; increasingly reframed as "learning integrity" — process over product.</td></tr>
+<tr><td><strong>Teacher AI tools</strong><br>MagicSchool, Brisk</td><td>Curriculum &amp; instruction / IT; district契 contracts</td><td>MagicSchool $8.33/user/mo billed annually; <strong>Brisk school-wide $5–10 per teacher/month</strong> at 50+ teachers</td><td>Generation (80+ tools), and — new — Brisk <strong>Curriculum Intelligence</strong> grounds output in district standards, pacing and adopted materials.</td></tr>
+<tr><td><strong>Assessment platforms</strong><br>MasteryConnect, Edulastic, i-Ready</td><td>Assessment &amp; accountability office</td><td>MasteryConnect from $249/yr teacher tier; district pricing quote-based</td><td>Delivering, scoring, and tracking assessments against standards. <em>Not</em> whether the assessment still measures thinking.</td></tr>
+<tr><td><strong>PD &amp; curriculum consulting</strong></td><td><strong>Title II Part A</strong> + local PD budgets; PD coordinator / C&amp;I director</td><td>Consultants ~$150/hr; a district curriculum redesign example: 200 hrs ≈ <strong>$30,000</strong>. <strong>Title II FY2026 = $2.19B</strong>; 78% of districts use it for PD.</td><td>Generic workshops, curriculum audits, implementation coaching.</td></tr>
+</tbody>
+</table></div>
+<div class="callout em"><strong>The most important budget fact I found:</strong> <strong>4 in 10 district leaders expect PD spending to rise in 2026-27 — more than any other category, including devices and SEL</strong> — and districts are protecting Title II by <em>tying PD directly to measurable instructional outcomes</em>. That is a growing, protected, non-IT budget line whose buyers are actively looking for defensible outcome evidence. It is the single best door for a small entrant, and it requires no LMS, no student data, and no software procurement. <span class="src">(Caveat: the administration has again proposed eliminating Title II PD formula grants after 2026-27 — treat this window as real but not permanent.)</span></div>
+</section>
+
+<section id="pain">
+<h2>2 · What remains painful despite all of it</h2>
+<p>This is where the evidence is strongest — and notably it comes from teacher behavior, not vendor claims.</p>
+<ul>
+<li><strong>Teachers are already doing the redesign, manually and at scale.</strong> Over <strong>40% of secondary teachers already ask students for evidence of their process</strong>, and <strong>14% already require an oral defence</strong> of submitted work. That is not a hypothetical need — it's an existing, unsupported workflow.</li>
+<li><strong>The substitution is confirmed and specific.</strong> <strong>80% of lower-secondary and 73% of senior-secondary teachers</strong> who report student AI use say students use it <em>to complete assessment tasks</em>.</li>
+<li><strong>Teachers know they lack a method.</strong> About <strong>half of secondary teachers</strong> say they don't know how to prevent AI-related cheating.</li>
+<li><strong>The current workarounds are crude and equity-hostile.</strong> Blue-book sales up <strong>30%+ at Texas A&amp;M and ~50% at Florida</strong>; lockdown browsers; all writing moved in-class. But researchers note multilingual writers and students with disabilities are badly disadvantaged by timed handwritten conditions — and that the "AI-resistant classroom is a myth."</li>
+<li><strong>The measurement framing is now academic consensus.</strong> Stanford's Accelerator for Learning with ETS warns final-product assessments "may no longer capture the knowledge and skills they intend to measure"; a 2026 arXiv paper frames AI misuse explicitly as <em>a measurement problem</em>. A student who delegates to AI and one who learns through AI dialogue <strong>produce identical outputs</strong>.</li>
+</ul>
+<div class="callout"><strong>The gap, stated precisely.</strong> Detection tells you <em>whether</em> AI was used. Generation tools make more materials. Assessment platforms deliver and score. Consultants run generic workshops. <strong>Nobody hands a specific teacher a specific redesign of their specific assignment that preserves what they were trying to measure.</strong> The 40% already asking for process evidence are inventing it themselves, one assignment at a time, with no method and no time.</div>
+</section>
+
+<section id="improve">
+<h2>3 · The strongest existing product to improve rather than reinvent</h2>
+<p><strong>Assessment-design professional development.</strong> Not Turnitin, not Brisk — the PD/consulting product that Title II already funds at $2.19B/yr, that 78% of districts already buy, and whose spending is rising faster than any other category.</p>
+<div class="card">
+<h4>Why it's the right thing to improve</h4>
+<ul>
+<li><strong>It's already bought</strong>, by a known buyer, from a protected budget, with no procurement cycle for software.</li>
+<li><strong>It's weak in a specific, fixable way:</strong> today it's slideware and generic frameworks. A teacher leaves a workshop with principles and no changed assignment.</li>
+<li><strong>Our version substitutes an artifact for a slide deck:</strong> every participating teacher leaves with <em>their own</em> assessments audited and redesigned. That is a categorical quality improvement in a product schools already pay $150/hr for.</li>
+<li><strong>It satisfies the new buying condition</strong> — districts must tie PD to measurable instructional outcomes, and a before/after map of what each assessment now proves <em>is</em> that evidence.</li>
+</ul>
+</div>
+<p class="src">Runner-up worth noting: Turnitin's own "learning integrity" push is the closest competitive product, but it is higher-ed-rooted, detection-branded, and operates on <em>student submissions</em>. We operate on <em>the assignment</em> — no student data, no LMS. That difference is the wedge, and it should be stated in exactly those terms.</p>
+</section>
+
+<section id="getpaid">
+<h2>4 · Where a small entrant gets paid before LMS, student data, or district procurement</h2>
+<ol>
+<li><strong>Department-level PD sprint</strong> (Title II or building PD funds) — a department chair or C&amp;I director can often authorize this without board procurement. <em>Primary path.</em></li>
+<li><strong>Summer institutes and in-service days</strong> — existing calendar slots with existing budget.</li>
+<li><strong>Conference sessions / workshops</strong> — low revenue, high sourcing value; the room is the recruiting channel.</li>
+<li><strong>Individual teacher purchases</strong> — small, but validates willingness before any institution is involved.</li>
+<li><strong>Grants / foundation-funded pilots</strong> — plausible given the Stanford/ETS framing, slower.</li>
+</ol>
+<p>All five avoid the two things that would sink a small entrant: student-data agreements and IT procurement.</p>
+</section>
+
+<section id="deliverable">
+<h2>5 · Free deliverable specification — the Assessment Stress Test</h2>
+<p><strong>Input:</strong> one assignment, assessment, or task. <strong>Never</strong> student work, never student PII. <strong>Output:</strong> a single 2-page artifact, human-reviewed, returned in 48–72 hours.</p>
+<div class="card">
+<div class="step"><div class="n">1</div><div><strong>What this assignment is trying to measure.</strong> The intended learning and reasoning, reconstructed from the task itself and stated as observable claims ("distinguish long-term from immediate causes"; "justify a choice of representation"). Written so the teacher can say <em>yes, that's what I meant</em> — or correct us.</div></div>
+<div class="step"><div class="n">2</div><div><strong>Where AI can substitute for the evidence.</strong> Target by target, what a current model can produce without the student doing the thinking — quoting the assignment's own task verbs. Specific, not generic.</div></div>
+<div class="step"><div class="n">3</div><div><strong>What thinking must remain visible.</strong> The cognitive-demand invariant: the reasoning that, if it disappears, means the assessment no longer measures the objective.</div></div>
+<div class="step"><div class="n">4</div><div><strong>One redesigned version.</strong> Preserves the original learning objective <em>and</em> cognitive-demand band. Ships with an explicit <em>"what did not change"</em> statement — the preservation claim, auditable by the teacher.</div></div>
+<div class="step"><div class="n">5</div><div><strong>One verification mechanism.</strong> Exactly one, chosen to fit the teacher's constraints: a prediction checkpoint, a selected-evidence step, a worked-reasoning artifact, or 2–3 defense questions generated from the task. One, not a menu — a menu is a workshop, not a deliverable.</div></div>
+<div class="step"><div class="n">6</div><div><strong>Teacher-facing rationale, ≤200 words.</strong> Why the redesign is stronger, in plain professional language, addressed to a colleague — never to a novice.</div></div>
+</div>
+<div class="callout warn"><strong>No numerical AI-proof score.</strong> We cannot yet defend a number, so we will not invent one. Instead the substitution finding is a <strong>named qualitative judgment with its reason attached</strong>, in three bands: <em>"a current model can produce the whole artifact"</em> / <em>"can produce most of it, but not [named step]"</em> / <em>"can assist, but the evidence of thinking survives because [reason]."</em> Every band cites the specific task element that drives it, and the artifact says plainly that this is a professional judgment, not a measurement. If we later earn a defensible metric, it will come from the corpus — not from marketing.</div>
+<h4>Tone rule (this matters more than it looks)</h4>
+<p>The audit must never imply the teacher's assessment was bad. The framing is always <em>"this task was well designed for a world without these tools; here is what changed underneath it."</em> Telling a professional their assessment is invalid is the fastest way to lose them — and it's also untrue: the world moved, not their judgment.</p>
+</section>
+
+<section id="exp">
+<h2>6 · The exact first-100-teacher experiment</h2>
+<div class="card">
+<h4>Wedge subject</h4>
+<p><strong>Secondary math, as instructed — but with a deliberate 20-teacher contrast cell in ELA/history.</strong> My honest read of the evidence: the <em>acute</em> pain clusters in writing-heavy subjects (essays, blue books, oral defence all cluster there), so math may show <em>lower</em> baseline pain. That is exactly why the contrast cell exists — it costs little and tells us early whether math is the right beachhead or whether your credibility as a math teacher is pulling us toward the harder market. Math's compensating advantages are real: your network and credibility, cleaner objective/cognitive-demand structure that makes the preservation claim auditable, and far less crowded redesign advice.</p>
+</div>
+<table>
+<thead><tr><th>Phase</th><th>N</th><th>Purpose</th><th>Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>0 · Dry run</strong></td><td>5</td><td>Your own + friendly colleagues' assignments. Calibrate the artifact and your review time per audit.</td><td>1 week</td></tr>
+<tr><td><strong>1 · Signal</strong></td><td>15</td><td>Does the ask convert at all? Refine wording of the offer and the artifact.</td><td>2 weeks</td></tr>
+<tr><td><strong>2 · Measure</strong></td><td>50</td><td>The real test: run the thresholds in §8 against this cohort. Includes the ELA/history contrast cell.</td><td>3 weeks</td></tr>
+<tr><td><strong>3 · Channel test</strong></td><td>30</td><td>Which outreach channel produces submitters, not just clicks. Trigger the 3-assignment incentive.</td><td>2 weeks</td></tr>
+</tbody>
+</table>
+<p><strong>Capacity honesty:</strong> at ~45–60 minutes of your review per audit, 100 audits is 75–100 hours. That is the real constraint and it is the point — phase 1 is deliberately unscalable because its output is <em>discovery of the repeated work</em>, not revenue. Cap it at 100 and stop.</p>
+<h4>The second incentive</h4>
+<p><strong>"Contribute 3 assignments → receive the aggregate subject/grade assessment-pattern report."</strong> The report only ships when a subject/grade cell reaches <strong>N ≥ 20</strong> (see §9 re-identification rule). Promise it honestly: "when we have enough submissions in your subject and grade band to say something true — we'll tell you when that is."</p>
+<h4>The flywheel, and its honest weak link</h4>
+<p>free audit → assignment corpus → aggregate patterns → shareable report → more submissions → sharper audit → paid department sprint. <strong>It works only if the aggregate patterns are genuinely useful to a teacher who didn't submit</strong> — otherwise there's nothing to share and the loop is just a lead magnet. Test that explicitly: does anyone forward the pattern report unprompted?</p>
+</section>
+
+<section id="record">
+<h2>7 · What we must record from every interaction</h2>
+<p>Behavior over opinion. "Would you use this?" is worthless; what they <em>do</em> is the data.</p>
+<div class="tbl-scroll"><table>
+<thead><tr><th>Category</th><th>Recorded</th><th>Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Source</td><td>Channel, date, who referred, role, subject, grade band, school type</td><td>Which channel produces submitters</td></tr>
+<tr><td><strong>Friction</strong></td><td>Hours from ask → submission; whether a reminder was needed</td><td>Fast unprompted submission = acute pain</td></tr>
+<tr><td><strong>Their words</strong></td><td>Verbatim statement of what worries them about the assignment</td><td>The single most valuable artifact in the whole experiment — this is the language the product must speak</td></tr>
+<tr><td>Assignment metadata</td><td>Type, length, format, self-authored vs. department/publisher-mandated, subject, grade</td><td>Corpus structure + copyright routing (§9)</td></tr>
+<tr><td><strong>Our accuracy</strong></td><td>Did the teacher confirm or correct our reading of the intended objective? Correction logged verbatim</td><td>The engine's validity rate — our version of "required corrections"</td></tr>
+<tr><td><strong>Behavioral response</strong></td><td>Opened / replied / said they'd use it / <em>actually changed the assignment</em> / asked for more / submitted a 2nd and 3rd</td><td>The real validation ladder</td></tr>
+<tr><td><strong>Monetization signal</strong></td><td>Unprompted questions about cost, department, or school-wide use; introductions offered</td><td>The only evidence that the paid path exists</td></tr>
+<tr><td>Which section landed</td><td>Which of the 6 sections they quote back or react to</td><td>Tells us what to keep when we automate</td></tr>
+<tr><td>Refusals</td><td>Who declined and the stated reason</td><td>Negative evidence is evidence</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="thresholds">
+<h2>8 · Pass / fail thresholds — set before we start</h2>
+<p>Pre-registered so we can't rationalize afterwards. Measured on the Phase-2 cohort of 50.</p>
+<div class="gate"><div class="g">PASS</div><div><strong>Submission rate ≥ 30%</strong> of qualified teachers asked send an assignment within 7 days.</div></div>
+<div class="gate"><div class="g">PASS</div><div><strong>≥ 50% volunteer a written worry</strong> in their own words, unprompted, alongside the file.</div></div>
+<div class="gate"><div class="g">PASS</div><div><strong>≥ 60% reply</strong> after receiving the audit.</div></div>
+<div class="gate"><div class="g">PASS</div><div><strong>Objective-identification accuracy ≥ 75%</strong> — we correctly name what the teacher intended to measure in at least 3 of 4 cases, by their own confirmation.</div></div>
+<div class="gate"><div class="g">PASS</div><div><strong>≥ 40% report they used or adapted the redesign</strong> (behavioral, self-reported with specifics).</div></div>
+<div class="gate"><div class="g">PASS</div><div><strong>≥ 25% submit a second assignment; ≥ 15% reach three.</strong></div></div>
+<div class="gate"><div class="g">PASS</div><div><strong>≥ 10% refer another teacher unprompted.</strong></div></div>
+<div class="gate"><div class="g">PASS</div><div><strong>≥ 5 unprompted department/school inquiries</strong> across the 100 — or ≥ 3 introductions to a chair or administrator. <em>This is the monetization gate and the most important one.</em></div></div>
+<div class="gate kill"><div class="g">KILL</div><div>Submission rate &lt; 15% · <strong>or</strong> objective accuracy &lt; 60% · <strong>or</strong> zero department inquiries after 100 audits. Any one → stop and re-diagnose rather than scale.</div></div>
+<p class="src">Thresholds are judgment calls calibrated to be uncomfortable rather than flattering; the kill criteria matter more than the pass criteria.</p>
+</section>
+
+<section id="ethics">
+<h2>9 · Ethics, privacy and copyright for building an assignment corpus</h2>
+<div class="card">
+<h4>Hard rules</h4>
+<ul>
+<li><strong>No student work, ever.</strong> Stated in the offer, repeated at upload. If student work arrives: delete, confirm deletion in writing, do not analyze.</li>
+<li><strong>No student PII, ever.</strong> No names, no IDs, no rosters, no grades.</li>
+<li><strong>The audit belongs to the teacher.</strong> We never share an individual audit with their department or administration without written permission. An audit saying "this may not measure what you intended" could be used against a teacher in evaluation — that risk is ours to eliminate, and saying so plainly is also our best trust signal.</li>
+<li><strong>Right of withdrawal.</strong> Any teacher can have their assignment and audit deleted on request, at any time, no reason required.</li>
+<li><strong>No model training on submissions</strong> without separate, explicit, opt-in consent — never bundled into the submission click.</li>
+</ul>
+<h4>Copyright routing (the real legal exposure)</h4>
+<p>Submitted assignments fall into three buckets and must be handled differently:</p>
+<table>
+<thead><tr><th>Bucket</th><th>Handling</th></tr></thead>
+<tbody>
+<tr><td><strong>Teacher-authored</strong></td><td>Full use with consent: audit + corpus + aggregate patterns.</td></tr>
+<tr><td><strong>District- or department-mandated</strong></td><td>Audit for the teacher; corpus inclusion as <em>abstracted metadata only</em> (task type, verbs, demand band) — never the verbatim text.</td></tr>
+<tr><td><strong>Publisher / textbook-derived</strong></td><td>Audit for the teacher as fair-use analysis; <strong>excluded from corpus and aggregate outputs</strong>. Never reproduced or redistributed.</td></tr>
+</tbody>
+</table>
+<p>At submission the teacher confirms which bucket applies and that they have the right to share it. Aggregate reports contain <strong>patterns and de-identified paraphrase, never verbatim third-party assignments</strong>, and only publish a subject/grade cell at <strong>N ≥ 20</strong> to prevent re-identification of a teacher or school.</p>
+</div>
+</section>
+
+<section id="path">
+<h2>10 · Path from free teacher → paid department → paid school/district</h2>
+<table>
+<thead><tr><th>Stage</th><th>Offer</th><th>Buyer</th><th>Price</th><th>Budget line</th></tr></thead>
+<tbody>
+<tr><td>1 · Free</td><td>One Assessment Stress Test</td><td>Individual teacher</td><td>$0</td><td>none needed</td></tr>
+<tr><td>2 · Contributor</td><td>3 assignments → aggregate pattern report</td><td>Individual teacher</td><td>$0</td><td>none needed</td></tr>
+<tr><td>3 · <strong>Paid department sprint</strong></td><td>25–50 assignments audited + redesigned, per-assignment AI-use guidance, verification formats, before/after map, half-day department PD</td><td>Department chair / C&amp;I director</td><td><strong>$6,000–$15,000</strong></td><td><strong>Title II Part A / building PD</strong></td></tr>
+<tr><td>4 · School / district</td><td>Multi-department, baseline "share of assessments requiring observable reasoning," re-measured each term, teacher-facing policy set</td><td>C&amp;I director / principal</td><td>Multiples of the sprint</td><td>PD + curriculum services</td></tr>
+</tbody>
+</table>
+<p><strong>Why $6–15k is defensible rather than invented:</strong> education consultants bill ~$150/hr and a 200-hour district curriculum redesign runs ~$30,000. A 25–50 assignment sprint is roughly 40–80 hours of expert work — which lands squarely inside that band. This is a pricing <em>anchor</em> from comparable purchased services, not a market validation. <span class="tag a">A</span></p>
+<div class="callout em"><strong>The recurrence answer.</strong> Stage 3 alone is a one-off project. Stage 4 is what makes it recur: assignments change annually, staff turns over, and the "share of assessments requiring observable reasoning" metric has to be re-measured each term to mean anything. That metric — not hours saved — is the institutional number a principal can carry to a board, and it is inherently repeating.</div>
+</section>
+
+<section id="fail">
+<h2>11 · The strongest reason this whole idea may still fail</h2>
+<div class="callout warn">
+<p><strong>The redesigns add teacher work, and teachers have none to give.</strong></p>
+<p>Every verification mechanism that makes thinking visible — checkpoints, process evidence, oral defences, prediction steps — costs the teacher <em>more</em> time to run and more time to review. We already established that grading is 5–10 hrs/week, that teachers work ~54-hour weeks, and that genuinely personalized feedback at 140 students is arithmetically impossible. The 40% already asking for process evidence and the 14% doing oral defences are doing it for <em>some</em> assignments precisely because they cannot do it for all.</p>
+<p>So the honest risk is this: <strong>the audit is right, the redesign is pedagogically correct, and the teacher still cannot run it.</strong> An assessment that is more valid but unaffordable in teacher-minutes will be admired and not adopted — and the free substitute (ban AI, blue books, lockdown browsers, as NYC just chose for 600,000 students) will keep winning on cost even though everyone agrees it is worse pedagogy and worse for multilingual and disabled students.</p>
+<p><strong>What this implies — and it is the through-line of everything we've built:</strong> a redesign is only adoptable if it ships with the machinery that makes the new verification cheap to run. <em>Proof of Learning creates work; Teacher Time Back removes it.</em> They are not competing products. The assessment audit is the wedge that gets us paid and gets us the corpus; the work-package agent is what makes the redesign survivable in a real classroom. If we sell the redesign without the second half, we will get admiration, a signed pilot, and quiet non-adoption by week six.</p>
+<p><strong>The cheapest way to test this specific risk in the first 100:</strong> for every teacher who says they used the redesign, ask one follow-up — <em>"how long did it take you to run and review, compared to the original?"</em> If the honest answer is consistently "longer, and I couldn't keep it up," we have found the real product requirement before building anything.</p>
+</div>
+</section>
+
+<section>
+<h2>What I need from you before anything moves</h2>
+<ul>
+<li>Approve the wedge: secondary math with a 20-teacher ELA/history contrast cell — or overrule the contrast cell.</li>
+<li>Confirm you can personally review ~100 audits (75–100 hrs over ~8 weeks), since phase 1 is deliberately manual.</li>
+<li>Approve the three-band qualitative substitution judgment in place of any score.</li>
+<li>Approve the ethics rules, especially <em>"the audit belongs to the teacher"</em> and the publisher-material exclusion.</li>
+<li>Confirm the pass/fail thresholds — particularly the kill criteria — before we recruit anyone.</li>
+</ul>
+<p class="src">Nothing is built and nothing has been sent. The next artifact, on your word, would be the actual Stress Test template plus the outreach copy — not software.</p>
+</section>
+
+</div>
+<footer><div class="wrap">
+Assessment Stress Test — demand teardown &amp; validation plan · The Sovereign Academy · 2026-09-03 · analysis and design only.<br>
+<span class="src">Sources: Turnitin pricing/procurement schedules; Turnitin "learning integrity" framework; Brisk Curriculum Intelligence (BTS 2026) and district pricing; MagicSchool pricing; MasteryConnect pricing; Bipartisan Policy Center &amp; BetterLesson on Title II Part A (FY2026 $2.19B; 78% of districts; PD spending rising fastest of any category); Upwork/ConsultFees education-consultant benchmarks; Learning First (40% process evidence, 14% oral defence, 80%/73% assessment-task substitution, ~half of teachers unsure how to prevent cheating); Fox News / Axios (blue-book resurgence); eSchoolNews ("the AI-resistant classroom is a myth"); Stanford Accelerator for Learning + ETS white paper; arXiv 2603.07834 (AI misuse as a measurement problem).</span>
+</div></footer>
+</body>
+</html>
