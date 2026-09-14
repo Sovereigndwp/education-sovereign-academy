@@ -7,9 +7,9 @@ brings an assessment she already gives, says what she is trying to find out and 
 and ESA tells her what the results will and will not support — including, often, that it is already
 doing its job and she should change nothing.
 
-ESA is the fourth brand under The Sovereign Academy, beside BSA (individuals and families) and
-FSA (advisors and institutions). It inherits the TSA design system; the only difference is the accent,
-which is blue where BSA is orange/yellow and FSA is teal/emerald/mint.
+ESA is one of the three sibling academies under The Sovereign Academy, beside BSA (individuals and
+families) and FSA (households and everyday financial decisions). It inherits the TSA design system;
+the only difference is the accent, which is blue where BSA is orange/yellow and FSA is teal/emerald/mint.
 
 ---
 
