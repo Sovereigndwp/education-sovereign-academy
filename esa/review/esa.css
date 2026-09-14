@@ -1,0 +1,181 @@
+/* ============================================================================
+   esa.css — Education Sovereign Academy, pilot.
+
+   Inherits the TSA design system: same neutral base, same type, same spacing,
+   same gradient-outline button. ESA's identity is an ACCENT SWAP, exactly the
+   way BSA (orange/yellow) and FSA (teal/emerald/mint) are.
+
+   The ESA blue family is defined HERE rather than in css/tsa-design-tokens.css
+   so the pilot touches no shared file and no TSA/BSA/FSA surface. It is written
+   in the shared token model, so promoting it later is a copy-paste of the
+   --esa-* block plus one [data-platform="esa"] rule.
+
+   Loads AFTER /css/tsa-brand.css and /assignment-studio/as.css — the form,
+   paper-document and callout patterns carry over unchanged.
+   ========================================================================== */
+
+:root {
+  /* ─── ESA child — indigo → azure → sky ─── */
+  --esa-indigo: #3B5BDB;
+  --esa-blue:   #2F6FED;
+  --esa-azure:  #38A3F1;
+  --esa-sky:    #7DD3FC;
+  --esa-deep:   #1E3A8A;
+  --esa-fade:   linear-gradient(135deg, #3B5BDB 0%, #2F6FED 45%, #7DD3FC 100%);
+  --esa-fade-h: linear-gradient(90deg,  #3B5BDB 0%, #2F6FED 45%, #7DD3FC 100%);
+  --esa-solid:  #58A6F5;      /* the accessible one — used for any text or hairline */
+}
+
+/* The accent swap. Only the accent moves; neutrals, type, spacing, radii are shared. */
+[data-platform="esa"] {
+  --brand:        var(--esa-blue);
+  --accent:       var(--esa-azure);
+  --brand-fade:   var(--esa-fade);
+  --brand-fade-h: var(--esa-fade-h);
+  --brand-solid:  var(--esa-solid);
+  /* as.css and tsa-brand.css reach for --tsa-* directly in places; point those at ESA too
+     so nothing on this page has to hard-code a hex. */
+  --tsa-silver:   var(--esa-solid);
+  --tsa-platinum: var(--esa-sky);
+  --tsa-fade:     var(--esa-fade);
+  --tsa-pewter:   #6B7FA8;
+}
+
+.fade-e {
+  color: var(--esa-solid); background-image: var(--esa-fade);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .fade-e { color: var(--esa-solid); -webkit-text-fill-color: currentColor; }
+}
+
+/* ── flow chrome ─────────────────────────────────────────────────────────── */
+.esa-steps { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; list-style: none; padding: 0; margin: 0 0 var(--space-8); }
+.esa-steps li {
+  font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--tsa-faint, #6E727A); padding-bottom: 0.35rem; border-bottom: 2px solid transparent;
+}
+.esa-steps li[data-state="done"]    { color: var(--tsa-muted); border-bottom-color: var(--tsa-border-strong, #3C4047); }
+.esa-steps li[data-state="current"] { color: var(--esa-solid); border-bottom-color: var(--esa-solid); }
+
+/* ── the three findings ───────────────────────────────────────────────────
+   Answer first, then what to do, then the evidence, then the item. Structure
+   carries the meaning, not colour — a left rule and a shape, the way as.css
+   does severity. The three are visually distinct because they ARE three
+   different findings, and a teacher must not read "the setting limits this"
+   as "you did something wrong". */
+.esa-finding {
+  background: var(--tsa-surface); border: 1px solid var(--tsa-border);
+  border-radius: var(--radius-md); padding: var(--space-6);
+  border-left: 3px solid var(--tsa-border-strong, #3C4047); margin-top: var(--space-8);
+}
+.esa-finding[data-finding="strong"]             { border-left-color: var(--esa-solid); }
+.esa-finding[data-finding="coverage_limited"]   { border-left-style: dashed; border-left-color: var(--esa-sky); }
+.esa-finding[data-finding="conditions_limited"] { border-left-style: double; border-left-width: 5px; border-left-color: var(--esa-indigo); }
+
+/* the claim, quiet — it is context for the finding, not the finding */
+.esa-finding__claim {
+  font-size: 0.92rem; line-height: 1.5; color: var(--tsa-muted);
+  margin: 0 0 var(--space-4); padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--tsa-border);
+}
+/* A · the answer, in seconds */
+.esa-finding__headline {
+  font-family: var(--font-serif); font-weight: 700; font-size: 1.32rem; line-height: 1.25;
+  color: var(--tsa-ink-strong); margin: 0 0 var(--space-3);
+}
+.esa-finding__body { color: var(--tsa-ink); line-height: 1.6; margin-top: var(--space-3); }
+
+/* B · what I would do — visible before any evidence */
+.esa-action {
+  margin-top: var(--space-6); padding: var(--space-5);
+  background: var(--tsa-deepest); border: 1px solid var(--tsa-border); border-radius: var(--radius-sm);
+}
+.esa-action__label {
+  font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--tsa-muted); display: block; margin-bottom: 0.45rem;
+}
+.esa-action__verb {
+  font-size: 1.06rem; font-weight: 600; line-height: 1.4; color: var(--tsa-ink-strong); margin: 0;
+}
+.esa-action__line { color: var(--tsa-muted); line-height: 1.55; margin-top: 0.45rem; font-size: 0.95rem; }
+
+/* C · the evidence — all of it, one click away */
+.esa-details { margin-top: var(--space-5); border-top: 1px solid var(--tsa-border); }
+.esa-details > summary {
+  cursor: pointer; list-style: none; padding: var(--space-4) 0 0;
+  font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--tsa-muted); display: flex; align-items: center; gap: 0.5rem;
+}
+.esa-details > summary::-webkit-details-marker { display: none; }
+.esa-details > summary::after { content: "+"; font-size: 0.95rem; line-height: 1; color: var(--esa-solid); }
+.esa-details[open] > summary::after { content: "\2212"; }
+.esa-details > summary:hover { color: var(--tsa-ink-strong); }
+.esa-details__body { padding-top: var(--space-2); }
+.esa-details__body .ast-mono { display: block; margin-bottom: 0.35rem; }
+
+/* D · the usable item, once she knows why she wants it */
+.esa-do { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--tsa-border); }
+.esa-do .ast-mono { display: block; margin-bottom: 0.5rem; }
+
+/* ── component map ───────────────────────────────────────────────────────── */
+.esa-comp { list-style: none; padding: 0; margin: var(--space-3) 0 0; border-top: 1px solid var(--tsa-border); }
+.esa-comp li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.75rem; padding: 0.7rem 0; border-bottom: 1px solid var(--tsa-border); align-items: start; }
+.esa-comp__state { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--tsa-muted); padding-top: 0.2rem; }
+.esa-comp li[data-status="absent"] .esa-comp__state { color: var(--esa-sky); }
+.esa-comp__what { color: var(--tsa-ink); line-height: 1.45; }
+.esa-comp__where { display: block; font-size: 0.85rem; color: var(--tsa-muted); margin-top: 0.2rem; }
+
+/* ── the item itself ─────────────────────────────────────────────────────── */
+.esa-item {
+  font-family: var(--font-mono); font-size: 0.92rem; line-height: 1.5; white-space: pre-wrap;
+  background: var(--tsa-deepest); border: 1px solid var(--tsa-border); border-radius: var(--radius-sm);
+  padding: var(--space-4); margin-top: var(--space-3); color: var(--tsa-ink);
+}
+.esa-swap { display: grid; gap: var(--space-3); margin-top: var(--space-3); }
+@media (min-width: 720px) { .esa-swap { grid-template-columns: 1fr 1fr; } }
+.esa-swap > div { background: var(--tsa-deepest); border: 1px solid var(--tsa-border); border-radius: var(--radius-sm); padding: var(--space-4); }
+.esa-swap strong { display: block; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--tsa-muted); margin-bottom: 0.4rem; }
+.esa-swap code { font-family: var(--font-mono); font-size: 0.95rem; color: var(--tsa-ink); white-space: pre-wrap; }
+.esa-cost { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tsa-muted); margin-top: var(--space-3); }
+
+/* ── claim editor (screen 2) ─────────────────────────────────────────────── */
+.esa-claim { background: var(--tsa-surface); border: 1px solid var(--tsa-border); border-radius: var(--radius-md); padding: var(--space-5); margin-top: var(--space-4); }
+.esa-claim__meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin-bottom: 0.6rem; }
+.esa-claim__id { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; color: var(--esa-solid); }
+.esa-claim__quote { font-size: 0.86rem; color: var(--tsa-muted); }
+.esa-claim textarea { min-height: 76px; resize: vertical; }
+.esa-claim__drop { background: none; border: 0; padding: 0; margin-top: 0.5rem; font: inherit; font-size: 0.85rem; color: var(--tsa-muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.esa-claim__drop:hover { color: var(--tsa-ink-strong); }
+
+/* ── radio / checkbox groups (screen 3) ──────────────────────────────────── */
+.esa-choices { display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.esa-choice { display: grid; grid-template-columns: 1.15rem 1fr; gap: 0.65rem; align-items: start; padding: 0.7rem 0.85rem; background: var(--tsa-surface); border: 1px solid var(--tsa-border-strong, #3C4047); border-radius: var(--radius-sm); cursor: pointer; }
+.esa-choice:hover { border-color: var(--esa-solid); }
+.esa-choice input { margin-top: 0.2rem; accent-color: var(--esa-blue); width: 1.05rem; height: 1.05rem; }
+.esa-choice span { line-height: 1.45; color: var(--tsa-ink); }
+.esa-choice small { display: block; color: var(--tsa-muted); font-size: 0.86rem; margin-top: 0.15rem; }
+.esa-choice:has(input:checked) { border-color: var(--esa-solid); background: var(--tsa-elevated, #212429); }
+
+/* ── waiting ─────────────────────────────────────────────────────────────── */
+.esa-wait { text-align: center; padding: var(--space-16) 0; }
+.esa-wait__bar { height: 2px; background: var(--tsa-border); border-radius: 2px; overflow: hidden; max-width: 320px; margin: var(--space-6) auto 0; }
+.esa-wait__bar i { display: block; height: 100%; width: 40%; background: var(--esa-fade-h); animation: esa-slide 1.6s ease-in-out infinite; }
+@keyframes esa-slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
+@media (prefers-reduced-motion: reduce) { .esa-wait__bar i { animation: none; width: 100%; } }
+
+/* ── quota + feedback ────────────────────────────────────────────────────── */
+.esa-quota { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tsa-muted); }
+.esa-fb { margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--tsa-border); }
+.esa-yesno { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.esa-yesno button { font: inherit; font-size: 0.95rem; padding: 0.55rem 1.1rem; border-radius: var(--radius-sm); background: var(--tsa-surface); color: var(--tsa-ink); border: 1px solid var(--tsa-border-strong, #3C4047); cursor: pointer; }
+.esa-yesno button[aria-pressed="true"] { border-color: var(--esa-solid); color: var(--tsa-ink-strong); }
+
+/* ── admin ───────────────────────────────────────────────────────────────── */
+.esa-table { width: 100%; border-collapse: collapse; margin-top: var(--space-6); font-size: 0.92rem; }
+.esa-table th, .esa-table td { text-align: left; padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--tsa-border); vertical-align: top; }
+.esa-table th { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--tsa-muted); font-weight: 400; }
+.esa-table td.num { font-family: var(--font-mono); }
+.esa-scroll { overflow-x: auto; }
+
+.esa-hide { display: none !important; }

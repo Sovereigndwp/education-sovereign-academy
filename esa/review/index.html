@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-platform="esa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESA Assessment Review — Education Sovereign Academy</title>
+  <meta name="description" content="What can you legitimately learn from the results of this assessment? Bring one you already give. Pilot, by invitation.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+  <link rel="stylesheet" href="/assignment-studio/as.css">
+  <link rel="stylesheet" href="/esa/review/esa.css">
+</head>
+<body>
+<a class="tsa-skip-link" href="#main">Skip to content</a>
+
+<header class="ast-header">
+  <div class="ast-header__inner">
+    <a class="ast-brand" href="/esa/review/" aria-label="Education Sovereign Academy">
+      <span class="ast-brand__mark">E</span>
+      <span class="ast-brand__text"><strong>Assessment Review</strong><span>Education Sovereign Academy</span></span>
+    </a>
+    <div class="ast-header__right"><span class="esa-quota" id="quota"></span></div>
+  </div>
+</header>
+
+<main id="main" class="ast-main">
+
+  <!-- ══ gate: no invite ══════════════════════════════════════════════════ -->
+  <section id="s-gate" class="esa-hide">
+    <span class="tsa-section-tag">Pilot · by invitation</span>
+    <h1 class="ast-h1">This review is <em>open to five teachers</em>.</h1>
+    <p class="ast-lede">You need the link you were sent. It ends in <code>?i=</code> followed by a long code. If you have it and this page still says no, tell Dalia — that is a real bug and worth knowing about.</p>
+    <div class="ast-field">
+      <label class="ast-label" for="gate-token">Or paste your invite code</label>
+      <input class="ast-input" id="gate-token" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="ast-actions"><button class="tsa-btn tsa-btn--primary" id="gate-go">Continue</button></div>
+    <p class="ast-note" id="gate-err" role="alert"></p>
+  </section>
+
+  <!-- ══ 1 · submit ═══════════════════════════════════════════════════════ -->
+  <section id="s-1" class="esa-hide">
+    <ol class="esa-steps" data-step="1">
+      <li data-state="current">1 · Your assessment</li><li>2 · What you want to know</li>
+      <li>3 · How students take it</li><li>4 · The review</li>
+    </ol>
+    <h1 class="ast-h1">What can you <em>legitimately learn</em> from the results of this assessment?</h1>
+    <p class="ast-lede">Bring one you already give. ESA reads it against what you are trying to find out and tells you what its results will and will not support. Very often the answer is that it is already doing its job — that is a real finding, not a polite one.</p>
+
+    <div class="ast-callout ast-callout--caution" style="margin-top:1.5rem">
+      <span class="ast-mono">Before you paste</span>
+      <p class="ast-p ast-small">Paste the assessment itself — the items students see. No student names, no student work, no grades. ESA never needs them and the pilot will not store them.</p>
+    </div>
+
+    <form id="form-1" novalidate>
+      <div class="ast-field">
+        <label class="ast-label" for="f-title">Title <small>Optional. If you leave it blank we will name it from the page.</small></label>
+        <input class="ast-input" id="f-title" maxlength="200" autocomplete="off">
+      </div>
+      <div class="ast-field">
+        <label class="ast-label" for="f-subject">Subject</label>
+        <input class="ast-input" id="f-subject" maxlength="120" required autocomplete="off" placeholder="Mathematics">
+      </div>
+      <div class="ast-field">
+        <label class="ast-label" for="f-grade">Grade or course</label>
+        <input class="ast-input" id="f-grade" maxlength="120" required autocomplete="off" placeholder="Grade 5 · Honors Precalculus">
+      </div>
+      <div class="ast-field">
+        <label class="ast-label" for="f-text">The assessment <small>Paste the whole thing — every item, in order, with the instructions students read.</small></label>
+        <textarea class="ast-textarea" id="f-text" rows="16" required spellcheck="false"></textarea>
+      </div>
+      <div class="ast-field">
+        <label class="ast-label" for="f-notes">Anything you would tell a colleague about it <small>Optional. One or two sentences.</small></label>
+        <textarea class="ast-textarea" id="f-notes" rows="3" maxlength="2000"></textarea>
+      </div>
+      <div class="ast-field">
+        <label class="esa-choice" style="grid-template-columns:1.15rem 1fr">
+          <input type="checkbox" id="f-confirm" required>
+          <span>This contains no student names, no student work, and no grades.</span>
+        </label>
+      </div>
+      <input type="text" id="f-website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <div class="ast-actions">
+        <button class="tsa-btn tsa-btn--primary tsa-btn--lg" type="submit" id="btn-1">Read this assessment</button>
+        <span class="ast-note">About twenty seconds.</span>
+      </div>
+      <p class="ast-note" id="err-1" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- ══ 2 · what are you trying to know ══════════════════════════════════ -->
+  <section id="s-2" class="esa-hide">
+    <ol class="esa-steps">
+      <li data-state="done">1 · Your assessment</li><li data-state="current">2 · What you want to know</li>
+      <li>3 · How students take it</li><li>4 · The review</li>
+    </ol>
+    <h1 class="ast-h1">Is this what you are <em>trying to find out</em>?</h1>
+    <p class="ast-lede">Here is what the assessment appears to ask for, in its own words. Correct anything that is not what you meant — this is the part that governs everything after it, and a claim you rewrite is worth more than one you wave through.</p>
+
+    <div id="claims-list"></div>
+    <div class="ast-actions" style="margin-top:1rem">
+      <button class="tsa-btn" type="button" id="btn-add-claim">Add one I am missing</button>
+    </div>
+
+    <div class="ast-callout" id="left-out-wrap" style="margin-top:2rem">
+      <span class="ast-mono">One thing we left out</span>
+      <p class="ast-p ast-small" id="left-out"></p>
+    </div>
+
+    <div class="ast-actions">
+      <button class="tsa-btn tsa-btn--primary tsa-btn--lg" type="button" id="btn-2">These are right — next</button>
+    </div>
+    <p class="ast-note" id="err-2" role="alert"></p>
+  </section>
+
+  <!-- ══ 3 · how will students complete this ══════════════════════════════ -->
+  <section id="s-3" class="esa-hide">
+    <ol class="esa-steps">
+      <li data-state="done">1 · Your assessment</li><li data-state="done">2 · What you want to know</li>
+      <li data-state="current">3 · How students take it</li><li>4 · The review</li>
+    </ol>
+    <h1 class="ast-h1">The same task under <em>different conditions</em> is different evidence.</h1>
+    <p class="ast-lede">A problem set worked under supervision is an observation of a student. The same problem set sent home with AI permitted is a document whose author you cannot see. Neither is wrong — but they support different conclusions, and ESA cannot tell which you have unless you say.</p>
+
+    <form id="form-3" novalidate>
+      <fieldset class="ast-field" style="border:0;padding:0;margin-top:2rem">
+        <legend class="ast-label">Where do students do it?</legend>
+        <div class="esa-choices">
+          <label class="esa-choice"><input type="radio" name="supervision" value="proctored_in_class"><span>In class, supervised<small>You or another adult are in the room the whole time.</small></span></label>
+          <label class="esa-choice"><input type="radio" name="supervision" value="observed_live"><span>Live, watched<small>You see it happen — at the board, aloud, one to one.</small></span></label>
+          <label class="esa-choice"><input type="radio" name="supervision" value="partly_supervised"><span>Started in class, finished elsewhere</span></label>
+          <label class="esa-choice"><input type="radio" name="supervision" value="unsupervised"><span>At home, or otherwise unsupervised</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="ast-field" style="border:0;padding:0">
+        <legend class="ast-label">Alone or together?</legend>
+        <div class="esa-choices">
+          <label class="esa-choice"><input type="radio" name="collaboration" value="individual"><span>Individually</span></label>
+          <label class="esa-choice"><input type="radio" name="collaboration" value="pairs"><span>In pairs</span></label>
+          <label class="esa-choice"><input type="radio" name="collaboration" value="small_group"><span>In small groups</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="ast-field" style="border:0;padding:0">
+        <legend class="ast-label">AI</legend>
+        <div class="esa-choices">
+          <label class="esa-choice"><input type="radio" name="ai_policy" value="prohibited_and_enforced"><span>Not allowed, and the setting makes that stick<small>Phones away, no devices, you are in the room.</small></span></label>
+          <label class="esa-choice"><input type="radio" name="ai_policy" value="prohibited_not_enforced"><span>Not allowed, but I cannot actually prevent it</span></label>
+          <label class="esa-choice"><input type="radio" name="ai_policy" value="permitted_with_disclosure"><span>Allowed if they say how they used it</span></label>
+          <label class="esa-choice"><input type="radio" name="ai_policy" value="permitted"><span>Allowed</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="ast-field" style="border:0;padding:0">
+        <legend class="ast-label">What else can they use?</legend>
+        <div class="esa-choices">
+          <label class="esa-choice"><input type="checkbox" name="resources" value="paper and pencil"><span>Paper and pencil only</span></label>
+          <label class="esa-choice"><input type="checkbox" name="resources" value="notes"><span>Their notes</span></label>
+          <label class="esa-choice"><input type="checkbox" name="resources" value="textbook"><span>The textbook</span></label>
+          <label class="esa-choice"><input type="checkbox" name="resources" value="calculator"><span>A calculator</span></label>
+          <label class="esa-choice"><input type="checkbox" name="resources" value="the internet"><span>The internet</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="ast-field" style="border:0;padding:0">
+        <legend class="ast-label">What is it for?</legend>
+        <div class="esa-choices">
+          <label class="esa-choice"><input type="radio" name="purpose" value="summative"><span>A grade that counts</span></label>
+          <label class="esa-choice"><input type="radio" name="purpose" value="formative"><span>Finding out where they are, to decide what to teach next</span></label>
+          <label class="esa-choice"><input type="radio" name="purpose" value="practice"><span>Practice</span></label>
+          <label class="esa-choice"><input type="radio" name="purpose" value="placement"><span>Placement or readiness</span></label>
+        </div>
+      </fieldset>
+
+      <!-- The question that decides whether a conditions limitation matters at all. ESA does not
+           infer it: the same take-home is fine for one intention and not for the other. -->
+      <fieldset class="ast-field" style="border:0;padding:0">
+        <legend class="ast-label">When you read the results, what do you need to be able to conclude?<small>This changes the answer more than anything else on this page, so we ask rather than guess.</small></legend>
+        <div class="esa-choices">
+          <label class="esa-choice"><input type="radio" name="attribution" value="yes"><span>That <strong>each student individually</strong> can do this<small>You are judging the person, so the work has to be theirs.</small></span></label>
+          <label class="esa-choice"><input type="radio" name="attribution" value="no"><span>What students can <strong>produce with the resources they have</strong><small>You are judging the work, and outside help is part of the job.</small></span></label>
+        </div>
+      </fieldset>
+
+      <div class="ast-field">
+        <label class="ast-label" for="f-minutes">How long do they get? <small>Optional, in minutes.</small></label>
+        <input class="ast-input" id="f-minutes" type="number" min="1" max="600" inputmode="numeric" style="max-width:140px">
+      </div>
+      <div class="ast-field">
+        <label class="ast-label" for="f-novelty">Had students seen these particular items before? <small>Optional. "They have practised this kind of question but not these numbers" is exactly the useful answer.</small></label>
+        <textarea class="ast-textarea" id="f-novelty" rows="2" maxlength="600"></textarea>
+      </div>
+      <div class="ast-field">
+        <label class="ast-label" for="f-seq">Where does it sit in the unit? <small>Optional.</small></label>
+        <input class="ast-input" id="f-seq" maxlength="200" placeholder="End of Unit 4">
+      </div>
+
+      <div class="ast-actions">
+        <button class="tsa-btn tsa-btn--primary tsa-btn--lg" type="submit" id="btn-3">Review this assessment</button>
+      </div>
+      <p class="ast-note" id="err-3" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- ══ waiting ══════════════════════════════════════════════════════════ -->
+  <section id="s-wait" class="esa-hide">
+    <div class="esa-wait">
+      <p class="ast-mono" id="wait-stage">Reading</p>
+      <h2 class="ast-h2" style="margin-top:.6rem">Working through it claim by claim.</h2>
+      <p class="ast-note" style="margin-top:.8rem">A minute or two. You can leave this page open.</p>
+      <div class="esa-wait__bar"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ══ 4 · the review ═══════════════════════════════════════════════════ -->
+  <section id="s-4" class="esa-hide">
+    <ol class="esa-steps">
+      <li data-state="done">1 · Your assessment</li><li data-state="done">2 · What you want to know</li>
+      <li data-state="done">3 · How students take it</li><li data-state="current">4 · The review</li>
+    </ol>
+    <span class="tsa-section-tag" id="r-meta"></span>
+    <h1 class="ast-h1" id="r-title">Assessment Review</h1>
+    <p class="ast-lede" id="r-lede"></p>
+    <div id="r-claims"></div>
+
+    <div class="esa-fb">
+      <h2 class="ast-h2">One question, and then we will leave you alone</h2>
+      <div class="ast-field">
+        <span class="ast-label">Was this worth the five minutes?</span>
+        <div class="esa-yesno" id="fb-useful">
+          <button type="button" data-v="1" aria-pressed="false">Yes</button>
+          <button type="button" data-v="0" aria-pressed="false">No</button>
+        </div>
+      </div>
+      <!-- Asked only after a teacher has actually submitted a second assessment. We do not ask
+           anyone whether they intend to come back; coming back is the signal. -->
+      <div class="ast-field esa-hide" id="fb-return-wrap">
+        <label class="ast-label" for="fb-return">You came back with another one. What made you want to check this one?</label>
+        <textarea class="ast-textarea" id="fb-return" rows="2" maxlength="1000"></textarea>
+      </div>
+      <div class="ast-field">
+        <label class="ast-label" for="fb-comment">Anything else <small>Optional. The thing that annoyed you is the most useful sentence you can write here.</small></label>
+        <textarea class="ast-textarea" id="fb-comment" rows="3" maxlength="2000"></textarea>
+      </div>
+      <div class="ast-actions">
+        <button class="tsa-btn tsa-btn--primary" type="button" id="btn-fb">Send</button>
+        <span class="ast-note" id="fb-thanks"></span>
+      </div>
+    </div>
+
+    <div class="ast-actions" style="margin-top:2.5rem">
+      <a class="tsa-btn" href="/esa/review/" id="btn-another">Review another assessment</a>
+      <span class="ast-note esa-quota" id="quota-2"></span>
+    </div>
+  </section>
+
+  <section id="s-error" class="esa-hide">
+    <h1 class="ast-h1">That did not finish.</h1>
+    <p class="ast-lede" id="error-text"></p>
+    <div class="ast-actions"><a class="tsa-btn tsa-btn--primary" href="/esa/review/">Start again</a></div>
+  </section>
+
+</main>
+
+<script src="/esa/review/esa.js"></script>
+</body>
+</html>

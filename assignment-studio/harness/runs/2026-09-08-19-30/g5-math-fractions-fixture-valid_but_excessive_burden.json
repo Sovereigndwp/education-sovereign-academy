@@ -1,0 +1,148 @@
+{
+  "id": "g5-math-fractions",
+  "fixture": {
+    "file": "fixtures/visible-valid-excessive-burden.md",
+    "mode": "visible",
+    "kind": "valid_but_excessive_burden",
+    "why": "Every instructional invariant is preserved — all nine items keep their demand, students still choose their own method (box b), the reason in item 9 is still required, nothing is given away — but three boxes per item including a complete-sentence explanation of every step, a one-page reflection, and a five-minute conference per student make it unusable in practice. The point of this fixture is 'instructionally faithful but practically bad': usefulness must catch it; preservation should not be dragged into a BLOCK by generic burden. The only legitimate preservation flag is the explicit teacher constraint (25 minutes), which this version plainly cannot meet. (2026-09-08: an earlier draft also mandated a second method on every item and complete sentences only; both constrained routes the gold contract explicitly protects — strategy choice and 'a labelled picture' — and were removed so the fixture tests what it claims to. The audits read those constraints as route removal, consistently, which was a correct reading of the fixture, not an evaluator defect.)",
+    "expected": {
+      "preservation": [
+        "PASS",
+        "REVIEW"
+      ],
+      "usefulness": "NOT_USEFUL",
+      "adversarial": [
+        "SURVIVES",
+        "WEAKENED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "learning_target, required_thinking, required_evidence all 'held'. A REVIEW-severity finding on teacher_constraints (the 25-minute limit is an explicit contract constraint) is acceptable and correct. A BLOCK for 'grading burden' or 'workload' in general is a miss — v0.1 makes 'reasonable teacher workload' a must-preserve for the Visible mode, but the usefulness audit owns that judgment; the preservation audit should not convert practical burden into an instructional failure.",
+      "usefulness": "grading_burden = much more; feasibility 1; the conference and one-page reflection named in notes"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:32:03.927Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "REVIEW",
+      "findings": [
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Contract requires 'Items 1–3: the correct symbol plus visible reasoning in any valid form (equivalent fractions written out, a labelled picture, or an explicit benchmark comparison).' The transformed version adds mandatory prediction boxes (a) and mandatory complete-sentence explanations (c) 'Explain every step (words or a labelled picture)' for all nine items. While the core evidence (symbol + reasoning) is still required, the contract explicitly allowed 'visible reasoning in any valid form' including 'equivalent fractions written out' without mandating complete sentences. The transformation removes this flexibility by requiring 'complete sentences or with a labelled picture' for every explanation, eliminating the option to show reasoning through written-out equivalent fractions alone. Th",
+          "severity": "review",
+          "still_required": false,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Contract specifies '25 minutes; paper; students show all work; answers in simplest form; nine items across four parts.' The transformed version removes the '25 minutes' time constraint entirely (header shows only 'Show all work' without time), adds a mandatory one-page reflection ('Write one page describing how your thinking about fractions changed'), and adds a mandatory 'five minutes' teacher conference for each student. The removal of the 25-minute constraint and addition of substantial new requirements (one-page reflection + 5-minute conference per student) fundamentally changes the time structure specified in the contract.",
+          "severity": "review",
+          "still_required": false,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "must_not",
+          "rule": "create disproportionate grading burden",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "The transformation requires: (1) grading prediction boxes for all 9 items, (2) grading complete-sentence explanations for all 9 items (beyond the reasoning already required), (3) grading a one-page reflection with specific requirements ('Include at least one item where your prediction was wrong and explain why'), and (4) conducting and presumably documenting five-minute individual conferences with every student to hear oral explanations of items 6 and 9. For a class of 25 students, this adds: 9 predictions × 25 = 225 predictions, 9 explanations × 25 = 225 explanations (many requiring sentence-level feedback), 25 one-page reflections, and 125 minutes (2+ hours) of conferences. This is disproportionate to the original 9-item assignment's grading load.",
+          "severity": "review",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "must_not",
+          "rule": "turn everything into oral defense",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "The transformation adds: 'Teacher conference: After grading, each student meets with the teacher for five minutes to explain items 6 and 9 aloud.' This mandatory oral defense requirement is added on top of the written work, requiring every student to verbally explain their reasoning in a conference setting. While not turning 'everything' into oral defense, it adds oral defense as a mandatory verification layer for 2 of 9 items, moving toward the prohibited pattern.",
+          "severity": "review",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The learning target about requiring same-sized parts, reasoning with equivalent fractions, and valid comparison strategies is still fully required. All nine original items remain with their mathematical content unchanged. The additions (predictions, sentence explanations, reflection) wrap around but do not replace or weaken the core mathematical reasoning about fraction operations and comparisons.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All required thinking remains: Items 1-3 still require choosing and executing a valid comparison strategy; Items 4-8 still require constructing equivalent fractions, combining like-sized parts, and simplifying; Item 9 still requires diagnosing the error and stating the reason. The prediction and explanation boxes add metacognitive layers but do not remove, substitute, or supply any of the mathematical thinking specified in the contract.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All mathematical content (fractions, operations, word problem contexts) remains identical to the original. No numbers, denominators, or problem structures were altered.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "BLOCK verdict due to two must_not violations: (1) creates disproportionate grading burden through mandatory predictions for all 9 items, complete-sentence explanations for all 9 items, one-page reflections, and 5-minute individual conferences with every student; (2) turns items 6 and 9 into mandatory oral defense. Additionally, teacher_constraints exceeded by removing the 25-minute time limit and adding substantial new time requirements. The required_evidence finding is review-level: while core evidence is still required, the transformation narrows what counts as acceptable reasoning by mandating complete sentences or labelled pictures, removing the flexibility the contract explicitly granted for 'any valid form' including written-out equivalent fractions alone."
+    },
+    "usefulness": {
+      "verdict": "NOT_USEFUL",
+      "clarity": 2,
+      "feasibility": 1,
+      "editing_required": "substantial",
+      "grading_burden": "much more",
+      "improves_original": false,
+      "notes": [
+        "Time constraint violated: original specifies 25 minutes; this version removes that constraint entirely and adds a one-page reflection plus individual five-minute conferences for 25+ students.",
+        "Grading burden explodes: nine items × three boxes each = 27 responses per student, plus a one-page reflection, plus preparing for and conducting individual conferences. Original required checking nine answers and work shown; this requires reading ~28 written explanations per student.",
+        "Layout problem: each item now needs space for three responses but provides only a single blank line for part (c), which asks for 'complete sentences or a labelled picture' — physically impossible to fit.",
+        "The 'prediction' box for item 9 (find the mistake) is unclear: predict what? The mistake? The correct answer? This needs a rewritten direction.",
+        "Teacher conference requirement (five minutes per student) is not mentioned in constraints and would require 2+ hours of class time for a typical class, making this unworkable as written."
+      ],
+      "ignored_validity_notes": [
+        "The prediction-solution-explanation structure does make thinking visible and does not give away answers or remove cognitive demand.",
+        "The reflection prompt asking students to identify where predictions were wrong is pedagogically sound for metacognition."
+      ]
+    },
+    "adversarial": {
+      "verdict": "WEAKENED",
+      "cheapest_path": "The student photographs the worksheet, pastes it into an AI chat, and asks: 'I'm a 5th grader. For each problem, give me: (a) a simple prediction a kid would make, (b) the correct answer, (c) an explanation in a 5th grader's voice with all the steps. Then write a one-page reflection about how my thinking changed, mentioning that I got problem 3 wrong in my prediction.' The student copies all responses directly onto the worksheet. For the teacher conference on items 6 and 9, the student reads the AI's explanation the night before to memorize the key phrases ('find a common denominator of 12,' 'you can't add denominators because they name different-sized pieces'), then repeats these during the 5-minute meeting.",
+      "steps": [
+        "Photograph the worksheet",
+        "Paste into AI with prompt: 'I'm a 5th grader. For each problem give me: (a) a simple prediction, (b) correct answer, (c) explanation in 5th grader voice with all steps. Then write one-page reflection about how my thinking changed, mention I got problem 3 prediction wrong.'",
+        "Copy all AI responses into the three boxes for each item",
+        "Copy AI-generated reflection onto the reflection page",
+        "Night before conference: read AI explanations for items 6 and 9",
+        "During conference: repeat memorized phrases from AI explanations"
+      ],
+      "cost_to_student": "low",
+      "what_survives": "The teacher conference on items 6 and 9 creates an independent check that exposes whether the student can articulate the reasoning aloud. If the student cannot explain why 2 1/3 + 1 3/4 requires finding equivalent fractions with denominator 12, or why adding denominators produces wrong-sized parts, this becomes visible. However, this covers only 2 of 9 items, and a student can memorize AI explanations with low effort.",
+      "what_is_bypassed": "Items 1-5, 7-8: all predictions, solutions, and explanations can be AI-generated without the student doing any fraction reasoning. The prediction boxes do not function as intended because the AI generates plausible 'before' guesses. The reflection page is entirely AI-generated. The 'explain every step' requirement does not force thinking because AI produces step-by-step explanations that the student copies. The 'complete sentences or labelled picture' format does not prevent AI use. For items 6 and 9 covered in the conference, a student can memorize key phrases with low effort rather than developing the understanding.",
+      "repair_hint": "Make predictions binding: 'Before you begin any calculations, write your prediction for all nine items and bring the sheet to the teacher's desk for a signature and timestamp. You may not change these predictions.' This forces genuine predictions and makes the conference cover whether the student's own reasoning led to the solution, not whether they can repeat memorized phrases.",
+      "independent_check": true,
+      "independent_check_what": "After grading, each student meets with the teacher for five minutes to explain items 6 and 9 aloud."
+    }
+  },
+  "verdicts": {
+    "preservation": "REVIEW",
+    "usefulness": "NOT_USEFUL",
+    "adversarial": "WEAKENED"
+  }
+}

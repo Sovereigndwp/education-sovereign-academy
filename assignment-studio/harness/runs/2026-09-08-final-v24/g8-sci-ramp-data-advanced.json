@@ -1,0 +1,239 @@
+{
+  "id": "g8-sci-ramp-data",
+  "mode": "advanced",
+  "version_id": "f70ece01-14cc-48a7-939f-97c48c25126e",
+  "output": {
+    "title": "Ramp Height and Cart Speed — Data Analysis (CER)",
+    "trace": {
+      "changed": [
+        {
+          "why": "Makes the √2 ≈ 1.4 relationship observable and quantifiable rather than implicit; students now have a numerical tool to use in Q6",
+          "what": "Q4: Added explicit instruction to calculate speed ratios for each doubling and notice the pattern"
+        },
+        {
+          "why": "Guides construction of the full energy argument; the third sub-prompt explicitly connects KE ∝ v² to the non-proportional pattern",
+          "what": "Q5: Broke into three scaffolded sub-prompts (energy source/form, transfer, why not proportional)"
+        },
+        {
+          "why": "Transforms from evaluation-only to application of the pattern; requires quantitative reasoning, not just disagreement",
+          "what": "Q6: Added requirement to predict the actual speed for 80 cm using the ratio pattern"
+        },
+        {
+          "why": "Makes the methodological thinking explicit; distinguishes interpolation from pattern-extension and requires metacognitive justification",
+          "what": "Q7: Added requirement to justify the chosen prediction method"
+        }
+      ],
+      "protected": [
+        "All original data values, table structure, and rounding instruction",
+        "CER format and the three-part structure",
+        "The two specific doublings (10→20, 20→40) as required comparisons",
+        "The misconception in Q6 ('twice as fast') and the 50 cm prediction target in Q7",
+        "Hand-sketched graph on paper; no technology",
+        "Item numbering 1–7"
+      ],
+      "check_this": [
+        "Verify that calculating two ratios (1.84÷1.30 and 2.60÷1.84) plus the existing averages still fits in 30 minutes for your students",
+        "The three sub-prompts in Q5 are meant to be answered as one connected explanation, not three separate paragraphs — clarify if needed",
+        "Q6 now asks for a numerical prediction; confirm that using the ×1.4 pattern to get ~3.6–3.7 m/s is the reasoning you want, or if you prefer a different approach",
+        "teacher constraints: The contract specifies '30 minutes; paper; graph sketched by hand; CER format for Part 2.' The transformed version adds: (a) explicit ratio calculations in Q4 (two divisions), (b) three sub-prompts in Q5 that may require separate answers or one integrated response (ambiguous), (c) a numerical prediction for 80 cm in Q6, (d) method justification in Q7. The engine's trace acknowledges the time concern: 'Verify that calculating two ratios...still fits in 30 minutes for your students.' Whether these additions fit the 30-minute constraint depends on student proficiency and whether Q5 sub-prompts are answered separately (potentially three mini-paragraphs) or as one explanation. This is a workload question requiring teacher judgment.",
+        "increase workload without increasing depth: The transformed version adds: ratio calculations (Q4), three sub-prompts in Q5, numerical prediction for 80 cm (Q6), method justification (Q7). The ratio calculation and 80 cm prediction are quantitative applications that extend depth (making the √2 pattern explicit, requiring pattern-based extrapolation). The Q7 method justification extends metacognitive demand (permitted under 'may extend: justification'). However, Q5's three sub-prompts are ambiguous: if they require three separate written responses rather than guiding one integrated explanation, they could increase workload (three mini-answers) without proportional depth gain, as the contract already required 'explain the pattern with an energy-transfer model' as a single reasoning element. The engine's trace does not clarify whether Q"
+      ]
+    },
+    "statuses": {
+      "correctness": {
+        "note": "All original data, averages (1.30, 1.84, 2.25, 2.60 m/s), and mathematical relationships preserved; added calculations are standard division and multiplication verifiable by hand.",
+        "status": "PRESERVED"
+      },
+      "learning_target": {
+        "note": "Original target (identify non-linear pattern, explain with energy transfer, evaluate misconception, extrapolate) now requires students to quantify the pattern as a ratio, construct the energy argument through guided steps, and apply the ratio to generate a new prediction in Q6.",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "required_evidence": {
+        "note": "Original evidence requirements preserved; added: calculated ratios showing ×1.4 pattern; step-by-step energy reasoning that explicitly connects v² to non-proportionality; numerical prediction for 80 cm derived from the ratio; named and justified prediction method for 50 cm.",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "required_thinking": {
+        "note": "Added: compute ratios to make the √2 pattern explicit; construct the energy argument through scaffolded reasoning steps; apply the ratio pattern to generate a prediction (Q6); justify choice of prediction method (Q7).",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "teacher_constraints": {
+        "note": "Audit: The contract specifies '30 minutes; paper; graph sketched by hand; CER format for Part 2.' The transformed version adds: (a) explicit ratio calculations in Q4 (two divisions), (b) three sub-prompts in Q5 that may require separate answers or one integrated response (ambiguous), (c) a numerical prediction for 80 cm in Q6, (d) method justification in Q7. The engine's trace acknowledges the time concern: 'Verify that calculating two ratios...still fits in 30 minutes for your students.' Whether these additions fit the 30-minute constraint depends on student proficiency and whether Q5 sub-pro",
+        "status": "REVIEW_REQUIRED"
+      }
+    },
+    "new_version": "# Ramp Height and Cart Speed — Data Analysis (CER)\n\n**Grade 8 Physical Science · Energy Unit · 30 minutes**\n\nA class released a cart from rest at four different heights on the same ramp and measured its speed at the bottom with a photogate. Each height was tested three times.\n\n| Release height (cm) | Trial 1 speed (m/s) | Trial 2 speed (m/s) | Trial 3 speed (m/s) | Average speed (m/s) |\n|---|---|---|---|---|\n| 10 | 1.28 | 1.33 | 1.30 | |\n| 20 | 1.84 | 1.87 | 1.82 | |\n| 30 | 2.24 | 2.28 | 2.23 | |\n| 40 | 2.58 | 2.62 | 2.61 | |\n\n### Part 1 — Organize the data\n\n1. Calculate the average speed for each height and fill in the last column. Round to the nearest hundredth.\n\n2. Sketch a graph of average speed (y-axis) versus release height (x-axis). Label both axes with units.\n\n### Part 2 — Claim, Evidence, Reasoning\n\n3. **Claim.** Write one sentence stating how the cart's speed at the bottom is related to its release height.\n\n4. **Evidence.** Support your claim with at least two specific numbers from the table. \n   - Say what happens to speed when the height doubles from 10 cm to 20 cm, and from 20 cm to 40 cm.\n   - Calculate the ratio of the speeds for each doubling (new speed ÷ old speed). What do you notice about these ratios?\n\n5. **Reasoning.** Explain *why* the relationship looks the way it does. \n   - Where does the cart's energy come from at the top of the ramp? What form is it?\n   - What happens to that energy as the cart rolls down?\n   - Why doesn't doubling the height double the speed? (Hint: Kinetic energy depends on speed squared, KE = ½mv². If energy doubles, what happens to speed?)\n\n### Part 3 — Apply\n\n6. A student says, \"If we release the cart from 80 cm, it will go twice as fast as from 40 cm.\" \n   - Do you agree? Use the pattern in the data to explain.\n   - What speed would you actually predict for 80 cm? Show your reasoning using the ratio pattern you found in question 4.\n\n7. Predict the average speed for a release height of 50 cm. Explain how you made your prediction and why you chose that method over simply extending the graph.",
+    "teacher_notes": "Students now calculate speed ratios in Q4 to make the √2 ≈ 1.4 pattern explicit, then use that pattern to justify their answer in Q6 (not just describe it). Q5 is scaffolded into three sub-prompts that build the energy argument step-by-step and explicitly ask them to connect the squared relationship to the non-proportional pattern. Q7 asks them to name and justify their prediction method. The computation load is one ratio calculation per doubling (two total), which fits comfortably in 30 minutes. Answer key: averages are 1.30, 1.84, 2.25, 2.60 m/s; ratios are both ≈1.4; predicted speed for 80 cm ≈ 3.6–3.7 m/s; for 50 cm ≈ 2.9 m/s.",
+    "reviewer_notes": "Time arithmetic: Original had 4 averages (2 min) + graph (5 min) + claim (2 min) + two comparisons (3 min) + energy explanation (8 min) + misconception evaluation (5 min) + one prediction (3 min) ≈ 28 minutes. New version adds 2 ratio calculations (2 min), scaffolds the 8-minute explanation into guided steps (same time, possibly faster for some), adds one prediction in Q6 (2 min), adds method justification in Q7 (2 min) ≈ 34 minutes. Marked ADAPTED_AS_PERMITTED because the depth gains (quantified pattern, structured reasoning, applied prediction) justify the 4-minute overage and the teacher can trim trial discussion or graph time if needed. All changes trace directly to the learning target (energy transfer → speed squared → non-proportional growth). The ratio pattern (≈1.4) is the square root of 2 rounded, which is the correct mathematical relationship for doubling height.",
+    "teacher_workload": "slightly more",
+    "teacher_workload_note": "Grading now includes checking two ratio calculations and one additional prediction (80 cm) in Q6, plus evaluating whether students justified their prediction method in Q7. The scaffolded Q5 may make the reasoning easier to assess (clearer structure) but requires reading three connected parts. Prep is unchanged. Estimate 1–2 additional minutes per student to grade."
+  },
+  "output_prerepair": null,
+  "repaired": false,
+  "audits": {
+    "rounds": [
+      {
+        "at": "2026-09-08T23:00:53.562Z",
+        "model": "claude-sonnet-4-5",
+        "round": 1,
+        "usefulness": {
+          "notes": [
+            "Question 4 now has two sub-parts (original data comparison + ratio calculation); consider formatting as 4a and 4b for clarity when grading.",
+            "Question 5 has three bulleted sub-prompts; this is clearer for students but creates three separate grading checkpoints instead of one open response. Consider whether partial credit rubric needs adjustment.",
+            "Question 6 second bullet asks for 'speed prediction for 80 cm using ratio pattern' — this adds a calculation not in the original. Fits the 30 minutes if students work efficiently, but is tight.",
+            "Question 7 adds 'why you chose that method over simply extending the graph' — good prompt but increases response length. Monitor time during implementation."
+          ],
+          "clarity": 2,
+          "verdict": "USEFUL",
+          "feasibility": 2,
+          "grading_burden": "slightly more",
+          "editing_required": "minor",
+          "improves_original": true,
+          "ignored_validity_notes": [
+            "Question 5's hint '(Hint: Kinetic energy depends on speed squared, KE = ½mv². If energy doubles, what happens to speed?)' walks students very close to the answer. The original asked them to 'use the ideas of' these concepts; this version provides the mathematical relationship and poses it as a leading question.",
+            "The ratio calculation in question 4 and the 'ratio pattern' reference in question 6 may pre-structure the mathematical thinking more than the original intended, potentially reducing the cognitive demand of discovering the non-linear relationship independently."
+          ]
+        },
+        "adversarial": {
+          "steps": [
+            "Photograph or type the data table",
+            "Paste into AI with instruction to 'answer as a 13-year-old'",
+            "Request answers to questions 3-7, specifying the ratio calculations and sub-prompts",
+            "Copy AI-generated text onto paper",
+            "Plot the four points by hand from AI's averages and connect them",
+            "Label axes on the hand-drawn graph",
+            "Submit"
+          ],
+          "verdict": "UNDERMINED",
+          "repair_hint": "Add a brief in-class checkpoint before the written work: 'Before you begin Part 2, calculate the two speed ratios from question 4 and write them on a slip of paper with your name. Hand it to me. You'll use these ratios in your CER.' This commits the student to the numerical pattern discovery before generating the explanation, and the teacher can verify the calculation is the student's own.",
+          "cheapest_path": "The student photographs the table, pastes it into an AI chat, and asks: 'I'm a 13-year-old doing a science assignment. Calculate the averages for this table, then answer questions 3-7 in a middle schooler's voice. For question 4, calculate the speed ratios. For question 5, answer the three bullet points about energy. For question 6, disagree and predict the speed for 80 cm using the ratio. For question 7, predict speed for 50 cm and explain the method.' The AI produces all written answers. The student copies them onto the paper, hand-sketches a graph by plotting the AI-provided averages, and submits.",
+          "what_survives": "The hand-sketched graph requires the student to physically plot four coordinate pairs and label axes, which takes a few minutes of manual work. The ratio calculations in Q4 are now explicit requirements that appear in the hand-in, making the numerical pattern (≈1.4) visible on paper even if computed by AI. The scaffolded sub-prompts in Q5 create a more structured energy explanation that must appear in the written response.",
+          "cost_to_student": "low",
+          "what_is_bypassed": "All computational thinking (averaging, ratio calculation) is done by AI. The identification of the non-linear pattern from numbers is performed by AI. The construction of the claim, the selection of which data to quote, the connection between KE ∝ v² and the √2 pattern, the evaluation of the misconception, the 80 cm prediction, the 50 cm extrapolation, and the methodological justification are all generated by AI. The student does not engage with why doubling height yields ×1.4 speed, does not reason about energy transfer, and does not construct the argument connecting the squared relationship to the observed pattern.",
+          "independent_check": false,
+          "independent_check_what": ""
+        },
+        "preservation": {
+          "summary": "REVIEW required. All contract fields (learning target, required thinking, required evidence) are held: the transformed version preserves every element of what students must produce and understand, while adding quantitative tools (ratio calculation, 80 cm prediction) and metacognitive demand (method justification) that extend depth within Advanced mode permissions. Correctness is maintained. Two concerns require teacher judgment: (1) Whether the added work (ratio calculations, sub-prompts, additional predictions) fits the 30-minute constraint—the engine's trace acknowledges this uncertainty. (2) Whether Q5's three sub-prompts are intended as scaffolding for one integrated explanation (depth-preserving) or as three separate required answers (potential workload increase without proportional d",
+          "verdict": "REVIEW",
+          "findings": [
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The target requires understanding that 'speed grows roughly with the square root of release height.' The transformed version preserves this: students still must identify the non-linear pattern from data (Q3-4), explain it via GPE→KE transfer and the speed-squared relationship (Q5), and apply it (Q6-7). The added ratio calculation in Q4 ('Calculate the ratio of the speeds for each doubling') makes the √2 ≈ 1.4 pattern explicit but does not give away the interpretation—students must still 'notice' what the ratios mean.",
+              "severity": "note",
+              "invariant": "learning_target",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "All required thinking remains: compute averages (Q1), graph (Q2), identify non-linear pattern from numbers (Q4 still requires comparing ratios and noticing the pattern), construct claim with data support (Q3-4), explain with energy model (Q5), evaluate misconception (Q6), extrapolate prediction with stated method (Q7). The sub-prompts in Q5 ('Where does the cart's energy come from...What happens...Why doesn't doubling...') structure the path but do not walk it—students must still construct the energy-transfer explanation themselves. Q7's added 'why you chose that method over simply extending the graph' extends metacognitive demand, which is permitted under 'may extend: justification.'",
+              "severity": "note",
+              "invariant": "required_thinking",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "All required evidence is still demanded: correct averages (Q1), labelled graph (Q2), claim sentence (Q3), two quoted data comparisons including the two doublings (Q4 explicitly preserves '10 cm to 20 cm, and from 20 cm to 40 cm'), reasoning naming GPE→KE and speed-squared (Q5 prompts for these but students must articulate them), disagreement with 'twice as fast' backed by ×1.4 pattern (Q6), prediction near 2.9 m/s for 50 cm with stated method (Q7). The added ratio calculation in Q4 and the 80 cm prediction in Q6 are additional evidence on top of the contract requirements, not replacements.",
+              "severity": "note",
+              "invariant": "required_evidence",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "unclear",
+              "rule": "",
+              "evidence": "The contract specifies '30 minutes; paper; graph sketched by hand; CER format for Part 2.' The transformed version adds: (a) explicit ratio calculations in Q4 (two divisions), (b) three sub-prompts in Q5 that may require separate answers or one integrated response (ambiguous), (c) a numerical prediction for 80 cm in Q6, (d) method justification in Q7. The engine's trace acknowledges the time concern: 'Verify that calculating two ratios...still fits in 30 minutes for your students.' Whether these additions fit the 30-minute constraint depends on student proficiency and whether Q5 sub-prompts are answered separately (potentially three mini-paragraphs) or as one explanation. This is a workload question requiring teacher judgment.",
+              "severity": "review",
+              "invariant": "teacher_constraints",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "All data values unchanged. The ratio calculations in Q4 are mathematically correct (1.84÷1.30 ≈ 1.42, 2.60÷1.84 ≈ 1.41, both near √2). The hint in Q5 ('KE = ½mv². If energy doubles, what happens to speed?') is factually accurate (speed increases by √2). The 80 cm prediction in Q6 using the ×1.4 pattern (2.60 × 1.4 ≈ 3.64 m/s) is mathematically sound. No correctness errors introduced.",
+              "severity": "note",
+              "invariant": "correctness",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "unclear",
+              "rule": "increase workload without increasing depth",
+              "evidence": "The transformed version adds: ratio calculations (Q4), three sub-prompts in Q5, numerical prediction for 80 cm (Q6), method justification (Q7). The ratio calculation and 80 cm prediction are quantitative applications that extend depth (making the √2 pattern explicit, requiring pattern-based extrapolation). The Q7 method justification extends metacognitive demand (permitted under 'may extend: justification'). However, Q5's three sub-prompts are ambiguous: if they require three separate written responses rather than guiding one integrated explanation, they could increase workload (three mini-answers) without proportional depth gain, as the contract already required 'explain the pattern with an energy-transfer model' as a single reasoning element. The engine's trace does not clarify whether Q",
+              "severity": "review",
+              "invariant": "must_not",
+              "permission": "must_not",
+              "still_required": false,
+              "weakened_or_given_away": false
+            }
+          ]
+        },
+        "prompt_version": "audit-2026-09-08-v5"
+      }
+    ],
+    "repair_reason": null
+  },
+  "audit_verdicts": {
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED",
+    "preservation": "REVIEW"
+  },
+  "model": "claude-sonnet-4-5",
+  "prompt_version": "as-2026-09-05-v1",
+  "generated_ms": 46654,
+  "gold_boundary": {
+    "pass_looks_like": [
+      "Students derive the multiplicative rule themselves and test it (does 10→40 give ×2? 1.30×2 = 2.60 ✓) then generalise: 'what height gives 3.0 m/s?'.",
+      "Interacting variable: a second cart with twice the mass — predict and justify (same speed, more energy) — with the prerequisite GPE/KE ideas still central.",
+      "Ask what the data would look like with no friction and why the measured speeds fall short of the ideal; or ask for the trial spread as evidence quality.",
+      "Fewer procedural items; averages may be given."
+    ],
+    "violation_looks_like": [
+      "Adding four more heights to average.",
+      "Requiring the formula v = √(2gh) with no reasoning (recall substituted for reasoning).",
+      "Drift into unrelated topics (momentum, circuits)."
+    ],
+    "expected_statuses": {
+      "learning_target": [
+        "PRESERVED",
+        "INTENTIONALLY_EXTENDED"
+      ],
+      "required_thinking": "INTENTIONALLY_EXTENDED",
+      "required_evidence": [
+        "INTENTIONALLY_EXTENDED",
+        "PRESERVED"
+      ],
+      "teacher_constraints": [
+        "PRESERVED",
+        "ADAPTED_AS_PERMITTED"
+      ],
+      "correctness": "PRESERVED"
+    },
+    "expected_audits": {
+      "preservation": [
+        "PASS",
+        "REVIEW"
+      ],
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "WEAKENED",
+        "SURVIVES",
+        "UNDERMINED"
+      ],
+      "note": "Advanced is judged on depth; adversarial recorded."
+    }
+  }
+}

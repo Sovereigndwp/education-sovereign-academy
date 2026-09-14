@@ -1,0 +1,255 @@
+{
+  "id": "g10-ss-gilded-age",
+  "mode": "advanced",
+  "version_id": "b4e3bcf7-5c68-481d-b9d8-6d6e3ab54ddf",
+  "output": {
+    "title": "Two Views of Wealth in the Gilded Age — Document Analysis",
+    "trace": {
+      "changed": [
+        {
+          "why": "Moves from identification to analysis of how audience shapes content and omissions",
+          "what": "Question 1: added requirement to explain why the identified audience matters to understanding the source"
+        },
+        {
+          "why": "Requires inference about unstated premises that drive each causal explanation",
+          "what": "Question 2: added requirement to identify what each author assumes about who deserves wealth"
+        },
+        {
+          "why": "Deepens understanding of how rhetoric is tailored by requiring construction of alternative",
+          "what": "Question 3: added counterfactual transfer task (word choice for opposite audience)"
+        },
+        {
+          "why": "Extends purpose analysis from positive goal to strategic constraint",
+          "what": "Question 4: added requirement to identify what each author was trying to prevent"
+        },
+        {
+          "why": "Moves from describing difference to explaining its roots in position and interest",
+          "what": "Question 5 prompt: added requirement to explain *why* different groups reached opposite conclusions from same facts"
+        },
+        {
+          "why": "Clarifies the historian's weighing task: these are positioned claims, not neutral reports",
+          "what": "Question 5 prompt: specified that point of view analysis must address reliability *for understanding what groups thought*"
+        },
+        {
+          "why": "Connects contextualization to the argument rather than treating it as separate evidence",
+          "what": "Question 5 prompt: required explanation of how the outside development shaped each interpretation"
+        },
+        {
+          "why": "Alignment between prompt and assessment; bolded additions show what changed",
+          "what": "Rubric: adjusted criteria to match the deeper evidence now required in each component"
+        }
+      ],
+      "protected": [
+        "The two documents are unchanged as required by teacher constraints",
+        "Two-paragraph response format and 45-minute time limit preserved",
+        "6-point rubric structure maintained with same categories",
+        "Part A / Part B organization and question numbering kept exactly",
+        "Core sourcing tasks (author, date, audience, causal explanation, word choice, purpose) remain the foundation",
+        "Required evidence in Part B (position covering both, evidence from each, point of view weighting, outside development) all present"
+      ],
+      "check_this": [
+        "Verify that the added depth in Q1–4 is achievable in the time students have before Part B (original likely allocated ~15 min to Part A; this may need 18–20)",
+        "Confirm that the rubric adjustments (bolded language in Q5 scoring) match your grading priorities for explanation vs. identification",
+        "Check that 'why different groups reached opposite conclusions' is the kind of causal reasoning you want at this point in the unit",
+        "teacher constraints: The constraint '45 minutes' is preserved in the header, but the engine's own trace acknowledges 'original likely allocated ~15 min to Part A; this may need 18–20.' Each of the four Part A questions now requires additional sentences: Q1 adds 'why that audience matters,' Q2 adds assumptions about who deserves wealth, Q3 adds counterfactual word choice construction, Q4 adds what authors tried to prevent. Part B prompt adds explanation of why groups differed and how the development shaped interpretations. Whether this volume of additional writing and thinking fits in 45 minutes is unclear without piloting. The rubric has been adjusted but the time constraint may be exceeded.",
+        "increase workload without increasing depth: The version adds four additional explanatory sentences in Part A (one per question) and two additional explanatory requirements in Part B. The question is whether these constitute depth (abstraction, transfer, justification) or merely more work. Q1's 'why audience matters' extends sourcing to significance. Q2's assumptions about desert require inference of unstated premises. Q3's counterfactual word choice is transfer/construction. Q4's 'what authors tried to prevent' extends purpose analysis. Q5's 'why groups reached opposite conclusions' and 'how development shaped interpretations' deepen causal reasoning. These appear to be legitimate depth extensions under ADVANCED permissions, but the cumulative burden within 45 minutes creates uncertainty about whether the workload increase is propor"
+      ]
+    },
+    "statuses": {
+      "correctness": {
+        "note": "No factual claims, dates, or historical content altered; documents unchanged; all references to period developments (trusts, strikes, debt, depression) remain accurate examples from the original.",
+        "status": "PRESERVED"
+      },
+      "learning_target": {
+        "note": "Original target (sources are arguments; weigh by POV; construct argument accounting for conflict) is preserved and extended to require explanation of *why* position produces the argument and *how* the same facts yield opposite conclusions—still depends on sourcing and POV analysis, now demands causal reasoning about the relationship between position and interpretation.",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "required_evidence": {
+        "note": "Part A still produces four short answers with sourcing, contrast, word/phrase, and purpose; each now includes an explanatory sentence. Part B still produces two paragraphs with position, evidence from each, POV weighting, and outside development; position and contextualization now require explicit causal explanation rather than juxtaposition.",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "required_thinking": {
+        "note": "All original operations (source, extract/contrast explanation, read word choice, explain purpose, construct argument with POV weighting and context) are retained; each now requires one additional inferential step (audience significance, assumptions about desert, counterfactual rhetoric, preventive purpose, explanation of interpretive divergence from same facts).",
+        "status": "INTENTIONALLY_EXTENDED"
+      },
+      "teacher_constraints": {
+        "note": "45 minutes, paper, two-paragraph response, 6-point rubric structure, and unchanged documents all maintained; rubric criteria adjusted to match the deeper evidence but category structure and point allocation unchanged.",
+        "status": "PRESERVED"
+      }
+    },
+    "new_version": "# Two Views of Wealth in the Gilded Age — Document Analysis\n\n**Grade 10 U.S. History · Industrialization Unit · 45 minutes**\n\nRead both documents. Answer the questions in Part A, then write the response in Part B.\n\n---\n\n**Document 1 — Andrew Carnegie, \"Wealth,\" *North American Review*, June 1889 (excerpt)**\n\n> The problem of our age is the proper administration of wealth, so that the ties of brotherhood may still bind together the rich and poor in harmonious relationship. The conditions of human life have not only been changed, but revolutionized, within the past few hundred years. … The contrast between the palace of the millionaire and the cottage of the laborer with us to-day measures the change which has come with civilization. This change, however, is not to be deplored, but welcomed as highly beneficial. … Much better this great irregularity than universal squalor.\n\n**Document 2 — Preamble to the Omaha Platform of the People's (Populist) Party, July 1892 (excerpt)**\n\n> We meet in the midst of a nation brought to the verge of moral, political, and material ruin. Corruption dominates the ballot-box, the Legislatures, the Congress, and touches even the ermine of the bench. … The fruits of the toil of millions are boldly stolen to build up colossal fortunes for a few, unprecedented in the history of mankind; and the possessors of these, in turn, despise the Republic and endanger liberty. From the same prolific womb of governmental injustice we breed the two great classes — tramps and millionaires.\n\n---\n\n### Part A — Sourcing and close reading\n\n1. For each document, identify the **author**, the **year**, and the **audience** the author was most likely trying to reach. Then add one sentence explaining **why** that audience matters to understanding what the author chose to say or leave out.\n\n2. Both authors describe the same fact: a large gap between the very rich and everyone else. In one sentence each, state how **Document 1** explains where that gap came from, and how **Document 2** explains where it came from. Then write one additional sentence: **What does each author assume his audience already believes about who deserves wealth?**\n\n3. Choose one word or phrase from each document that shows the author's attitude toward great fortunes. Explain what the word choice reveals. Then: **If each author had been writing for the *other's* audience, what word might he have chosen instead, and why?**\n\n4. Why might Carnegie, of all people, have written Document 1? Why might a farmers' and workers' party have written Document 2? Use what you know about each author's position in 1889–1892. Then: **What might each author have been trying to prevent his audience from believing or doing?**\n\n### Part B — Argument\n\n5. **Question:** In the late nineteenth century, did Americans see the growing gap between rich and poor as the natural price of progress, or as evidence that the system had failed?\n\nWrite a response of two paragraphs that:\n- takes a position that accounts for **both** documents and explains **why different groups reached opposite conclusions from the same economic facts** (what interests, experiences, or beliefs led each to interpret wealth inequality as they did?);\n- uses at least one piece of evidence from **each** document;\n- explains how the **point of view** of each author affects how much weight a historian should give their claim **when trying to understand what most Americans in each group actually thought** (not just what leaders said);\n- connects the documents to at least one specific development from the period (for example: the growth of trusts, the Homestead or Pullman strikes, farm debt, the 1893 depression) and explains **how that development would have reinforced or challenged each author's explanation of the wealth gap**.\n\n**Scoring (6 points):** Sourcing accurate and audience significance explained (1) · Position explains why groups reached different conclusions (1) · Evidence from each document (1) · Point of view used to weigh reliability for understanding group beliefs (1) · Outside development connected accurately with explanation of how it shaped interpretations (1) · Organization and clarity (1).",
+    "teacher_notes": "This version asks the same sourcing and argument work but pushes each step one level deeper: audience now requires *why it matters*, causal explanations now require *what each assumes about desert*, word choice now requires *counterfactual audience transfer*, purpose now requires *what each feared*, and the argument now requires *why the same facts yielded opposite conclusions* and *how the outside development shaped those interpretations*. The rubric has been adjusted to reflect the deeper evidence required (bolded additions in the prompt). Grading will take slightly longer because you're assessing explanation of reasoning, not just identification. The two-paragraph constraint and 45-minute limit remain; depth replaces breadth.",
+    "reviewer_notes": "All extensions trace directly to the original learning target: if sources are arguments shaped by position, then *why* position shapes argument and *how* the same facts produce opposite claims are the next logical depth. No new content introduced. Time pressure is real: Part A may now take 18–20 minutes instead of 15; confirm this fits the class period structure. Rubric language was adjusted (bolded in new_version) to match the extended evidence; teacher should review those changes before printing. Documents unchanged per hard constraint.",
+    "teacher_workload": "slightly more",
+    "teacher_workload_note": "Prep is the same (no new documents or materials). Grading will take 2–3 additional minutes per paper because you are now assessing explanation of reasoning (why audience matters, what assumptions drive claims, how development shaped interpretation) rather than just identification and juxtaposition. The rubric guides this but requires closer reading of student logic. Total grading time for a class of 25 increases from ~90 minutes to ~105–115 minutes."
+  },
+  "output_prerepair": null,
+  "repaired": false,
+  "audits": {
+    "rounds": [
+      {
+        "at": "2026-09-08T19:54:45.724Z",
+        "model": "claude-sonnet-4-5",
+        "round": 1,
+        "usefulness": {
+          "notes": [
+            "Part A now requires 4 additional sub-questions beyond the original (audience significance, assumptions about who deserves wealth, counterfactual word choice, what authors tried to prevent). Each adds 2–4 sentences per student. Original Part A was ~6 sentences total; transformed is ~14–16 sentences.",
+            "Part B prompt has grown from 4 bullet points to 4 bullets with embedded sub-questions in bold. The second bullet now asks students to explain 'why different groups reached opposite conclusions from the same economic facts' — this is a full additional analytical move beyond taking a position.",
+            "The fourth bullet (outside development) now requires explaining 'how that development would have reinforced or challenged each author's explanation' — doubling the analytical work for that criterion.",
+            "Feasibility: The original was already a full 45-minute task (4 sourcing questions + 2-paragraph essay). Adding ~8 more sentences to Part A and two additional analytical layers to Part B cannot fit the same period without cutting the essay to one paragraph or eliminating questions.",
+            "Grading burden: Each Part A answer set grows from ~6 sentences to ~14–16 sentences with more complex reasoning to assess. Part B rubric criteria now require checking for explanations of 'why groups differed,' 'reliability for understanding group beliefs,' and 'how development shaped interpretations' — three new judgment calls per paper beyond the original 6 points. This is much more reading and evaluation per student.",
+            "The rubric has been rewritten but still claims 6 points while now assessing more complex criteria (e.g., 'audience significance explained,' 'why groups reached different conclusions'). A teacher would need to decide whether partial credit applies and how to weight the added dimensions."
+          ],
+          "clarity": 2,
+          "verdict": "NOT_USEFUL",
+          "feasibility": 1,
+          "grading_burden": "much more",
+          "editing_required": "substantial",
+          "improves_original": false,
+          "ignored_validity_notes": [
+            "The added sub-questions in Part A (especially 'what word might he have chosen for the other audience' and 'what was each trying to prevent') are sophisticated counterfactual and rhetorical analysis tasks that may be beyond Grade 10 in 45 minutes, but this is an instructional validity question, not a usability question.",
+            "The transformed Part B now asks students to explain 'why different groups reached opposite conclusions from the same economic facts' and 'how that development would have reinforced or challenged each author's explanation.' These are higher-order synthesis tasks that the original did not require. Whether this preserves or changes the learning target is a validity question, not assessed here."
+          ]
+        },
+        "adversarial": {
+          "steps": [
+            "Photograph or copy-paste the assignment sheet with both documents",
+            "Paste into ChatGPT/Claude with prompt: 'Answer all Part A questions and write the Part B essay. Make it sound like a high school student.'",
+            "Copy the AI's answers to questions 1-4 onto paper",
+            "Copy the AI's two-paragraph response for Part B onto paper",
+            "Hand in"
+          ],
+          "verdict": "UNDERMINED",
+          "repair_hint": "Add a 3-minute in-class checkpoint before students begin Part B: each student must show the teacher their handwritten answer to one randomly selected Part A question (announced at the checkpoint) and verbally explain their reasoning for 15-20 seconds. This forces engagement with at least one piece of the sourcing/analysis work and makes wholesale AI generation visible.",
+          "cheapest_path": "The student photographs the assignment sheet, pastes both documents and all questions into an AI chat, and asks: 'Answer all these questions about these two documents. For Part B write two paragraphs that hit all the rubric points. Make it sound like a 10th grader wrote it.' The AI produces complete answers to questions 1-4 with the added explanations (audience significance, assumptions about who deserves wealth, counterfactual word choices, what each author was trying to prevent) and generates two paragraphs for Part B that include a position, evidence from both documents, point-of-view weighting, and an outside development with explanation. The student copies this onto paper and hands it in.",
+          "what_survives": "Nothing from the required thinking survives. The hand-in will contain correct sourcing, contrasted causal explanations, word choice analysis, purpose statements, counterfactual word choices, audience significance explanations, and a two-paragraph argument with all required components—but all generated by AI without the student performing any of the required analysis, inference, or construction.",
+          "cost_to_student": "trivial",
+          "what_is_bypassed": "All required thinking is bypassed: sourcing documents as arguments from positioned authors; extracting and contrasting causal explanations; reading word choice for attitude; explaining why each author would write as they did; inferring unstated assumptions; constructing counterfactual rhetoric; identifying strategic constraints; explaining why different groups reached opposite conclusions from the same facts; weighing evidence by point of view; contextualizing with specific developments. The student never engages with the documents as historical sources or performs any of the historian's analytical work.",
+          "independent_check": false,
+          "independent_check_what": ""
+        },
+        "preservation": {
+          "summary": "The transformed version preserves all instructional invariants: the learning target (sources as positioned arguments requiring weighing), required thinking (sourcing, contrasting explanations, analyzing point of view, constructing argument), and required evidence (Part A sourcing/contrast/word choice/purpose; Part B position/evidence/POV weighting/outside development) remain fully demanded. The additions—explaining audience significance, identifying assumptions, constructing counterfactual rhetoric, analyzing preventive purpose, explaining why groups differed, connecting development to interpretations—are legitimate extensions of abstraction, transfer, and justification permitted in ADVANCED mode. However, two uncertainties require review: (1) whether the cumulative additions fit within th",
+          "verdict": "REVIEW",
+          "findings": [
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "The target 'Historical sources are arguments made by people with positions: the same fact (the wealth gap) is explained differently depending on the author's interests and audience, and a historian weighs evidence by sourcing and point of view before using it to answer a question about the period' remains fully intact. The version still requires students to source documents, contrast explanations, analyze point of view, and construct an argument accounting for conflicting sources. The additions (why audience matters, what authors assume, counterfactual word choice, what authors tried to prevent, why groups reached different conclusions) all deepen engagement with the same target rather than replacing it.",
+              "severity": "note",
+              "invariant": "learning_target",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "All original thinking remains: 'Source each document (author, date, audience, purpose); extract and contrast each author's causal explanation; read word choice for attitude; explain why each author would write as they did given their position; construct an argument that accounts for conflicting sources and contextualizes them with a specific development from the period.' The version adds: explaining why audience matters (Q1), identifying assumptions about who deserves wealth (Q2), constructing counterfactual word choices (Q3), identifying what authors tried to prevent (Q4), explaining why groups reached opposite conclusions (Q5), and how the outside development shaped interpretations (Q5). These are legitimate extensions of abstraction, transfer, and justification permitted in ADVANCED mod",
+              "severity": "note",
+              "invariant": "required_thinking",
+              "permission": "may_extend",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "Part A still requires 'four short answers with correct sourcing and a contrast of the two causal explanations, a word/phrase from each with explanation, and a purpose statement for each author'—all present, with additional explanation required on top. Part B still requires 'two paragraphs with a position covering both documents, at least one piece of evidence from each, explicit weighting by point of view, and one accurate outside development'—all present, with deeper explanation of why groups differed and how the development shaped interpretations. The core evidence is still demanded; the version wraps it in required explanatory depth.",
+              "severity": "note",
+              "invariant": "required_evidence",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "unclear",
+              "rule": "",
+              "evidence": "The constraint '45 minutes' is preserved in the header, but the engine's own trace acknowledges 'original likely allocated ~15 min to Part A; this may need 18–20.' Each of the four Part A questions now requires additional sentences: Q1 adds 'why that audience matters,' Q2 adds assumptions about who deserves wealth, Q3 adds counterfactual word choice construction, Q4 adds what authors tried to prevent. Part B prompt adds explanation of why groups differed and how the development shaped interpretations. Whether this volume of additional writing and thinking fits in 45 minutes is unclear without piloting. The rubric has been adjusted but the time constraint may be exceeded.",
+              "severity": "review",
+              "invariant": "teacher_constraints",
+              "permission": "preserve",
+              "still_required": false,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "held",
+              "rule": "",
+              "evidence": "Documents unchanged as required. Historical facts (Carnegie 1889, Populist Party 1892, wealth gap, trusts, strikes, farm debt, 1893 depression) remain accurate. No mathematical or factual errors introduced.",
+              "severity": "note",
+              "invariant": "correctness",
+              "permission": "preserve",
+              "still_required": true,
+              "weakened_or_given_away": false
+            },
+            {
+              "kind": "unclear",
+              "rule": "increase workload without increasing depth",
+              "evidence": "The version adds four additional explanatory sentences in Part A (one per question) and two additional explanatory requirements in Part B. The question is whether these constitute depth (abstraction, transfer, justification) or merely more work. Q1's 'why audience matters' extends sourcing to significance. Q2's assumptions about desert require inference of unstated premises. Q3's counterfactual word choice is transfer/construction. Q4's 'what authors tried to prevent' extends purpose analysis. Q5's 'why groups reached opposite conclusions' and 'how development shaped interpretations' deepen causal reasoning. These appear to be legitimate depth extensions under ADVANCED permissions, but the cumulative burden within 45 minutes creates uncertainty about whether the workload increase is propor",
+              "severity": "review",
+              "invariant": "must_not",
+              "permission": "must_not",
+              "still_required": false,
+              "weakened_or_given_away": false
+            }
+          ]
+        },
+        "prompt_version": "audit-2026-09-08-v5"
+      }
+    ],
+    "repair_reason": null
+  },
+  "audit_verdicts": {
+    "usefulness": "NOT_USEFUL",
+    "adversarial": "UNDERMINED",
+    "preservation": "REVIEW"
+  },
+  "model": "claude-sonnet-4-5",
+  "prompt_version": "as-2026-09-05-v1",
+  "generated_ms": 50943,
+  "gold_boundary": {
+    "pass_looks_like": [
+      "Ambiguity introduced: 'Carnegie and the Populists agree on more than they admit — argue for or against, using the documents.'",
+      "Reliability as an interacting variable: which document is better evidence of what ordinary Americans believed, and why is that a different question from which author is right?",
+      "Transfer: predict how each author would explain the Panic of 1893, and what in the text supports the prediction.",
+      "Same documents; may compress Part A into two questions and deepen Part B; rubric mapping stated."
+    ],
+    "violation_looks_like": [
+      "A third and fourth document added with the same questions.",
+      "Longer response requirement with no new intellectual demand.",
+      "Drift into a research essay or unrelated era."
+    ],
+    "expected_statuses": {
+      "learning_target": [
+        "PRESERVED",
+        "INTENTIONALLY_EXTENDED"
+      ],
+      "required_thinking": "INTENTIONALLY_EXTENDED",
+      "required_evidence": [
+        "INTENTIONALLY_EXTENDED",
+        "PRESERVED"
+      ],
+      "teacher_constraints": [
+        "PRESERVED",
+        "ADAPTED_AS_PERMITTED"
+      ],
+      "correctness": "PRESERVED"
+    },
+    "expected_audits": {
+      "preservation": [
+        "PASS",
+        "REVIEW"
+      ],
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "WEAKENED",
+        "SURVIVES",
+        "UNDERMINED"
+      ],
+      "note": "Advanced is judged on depth; adversarial recorded."
+    }
+  }
+}

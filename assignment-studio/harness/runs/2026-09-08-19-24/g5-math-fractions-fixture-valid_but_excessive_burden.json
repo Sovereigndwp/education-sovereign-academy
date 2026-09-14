@@ -1,0 +1,148 @@
+{
+  "id": "g5-math-fractions",
+  "fixture": {
+    "file": "fixtures/visible-valid-excessive-burden.md",
+    "mode": "visible",
+    "kind": "valid_but_excessive_burden",
+    "why": "Every instructional invariant is preserved — all nine items keep their demand, students still choose their own method (box b), the reason in item 9 is still required, nothing is given away — but three boxes per item including a complete-sentence explanation of every step, a one-page reflection, and a five-minute conference per student make it unusable in practice. The point of this fixture is 'instructionally faithful but practically bad': usefulness must catch it; preservation should not be dragged into a BLOCK by generic burden. The only legitimate preservation flag is the explicit teacher constraint (25 minutes), which this version plainly cannot meet. (2026-09-08: an earlier draft also mandated a second method on every item and complete sentences only; both constrained routes the gold contract explicitly protects — strategy choice and 'a labelled picture' — and were removed so the fixture tests what it claims to. The audits read those constraints as route removal, consistently, which was a correct reading of the fixture, not an evaluator defect.)",
+    "expected": {
+      "preservation": [
+        "PASS",
+        "REVIEW"
+      ],
+      "usefulness": "NOT_USEFUL",
+      "adversarial": [
+        "SURVIVES",
+        "WEAKENED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "learning_target, required_thinking, required_evidence all 'held'. A REVIEW-severity finding on teacher_constraints (the 25-minute limit is an explicit contract constraint) is acceptable and correct. A BLOCK for 'grading burden' or 'workload' in general is a miss — v0.1 makes 'reasonable teacher workload' a must-preserve for the Visible mode, but the usefulness audit owns that judgment; the preservation audit should not convert practical burden into an instructional failure.",
+      "usefulness": "grading_burden = much more; feasibility 1; the conference and one-page reflection named in notes"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:26:09.579Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "REVIEW",
+      "findings": [
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Contract requires 'Items 1–3: the correct symbol plus visible reasoning in any valid form (equivalent fractions written out, a labelled picture, or an explicit benchmark comparison).' The transformed version adds mandatory prediction boxes (a) and mandatory complete-sentence explanations (c) 'Explain every step (words or a labelled picture)' for every item. While the core evidence (symbol + reasoning) is still required, the contract explicitly allowed 'visible reasoning in any valid form' including 'equivalent fractions written out' — a student could show 3/4 = 6/8, 5/8 = 5/8, therefore 3/4 > 5/8 without complete sentences. The transformed version mandates 'complete sentences or with a labelled picture' for box (c), removing the option to show reasoning through written-out equivalent fract",
+          "severity": "review",
+          "still_required": false,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Contract specifies '25 minutes' as a constraint. The transformed version removes the time constraint entirely (header shows 'Grade 5 Mathematics · Unit 4 · Show all work' with no time), adds prediction boxes for all 9 items, mandates complete-sentence explanations for all 9 items, requires a one-page reflection, and requires a five-minute teacher conference for each student. This substantially exceeds the 25-minute constraint.",
+          "severity": "review",
+          "still_required": false,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "must_not",
+          "rule": "create disproportionate grading burden",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "The transformed version requires the teacher to: (1) grade 9 prediction boxes per student, (2) grade 9 complete-sentence explanations per student (the contract allowed equivalent fractions written out, which is faster to assess than prose), (3) grade a one-page reflection per student, and (4) conduct a five-minute oral conference with each student. For a class of 25 students, this is 125 minutes of conferences alone, plus reading 25 one-page reflections and 225 complete-sentence explanations. The original required grading 9 items with visible work; the transformation multiplies the burden by requiring prose explanations, reflections, and individual conferences.",
+          "severity": "review",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "must_not",
+          "rule": "turn everything into oral defense",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "The transformed version adds 'Teacher conference: After grading, each student meets with the teacher for five minutes to explain items 6 and 9 aloud.' This turns two items into mandatory oral defenses for every student. The contract required written evidence for all items; the mode permits 'brief verification' but a mandatory five-minute conference per student to re-explain already-graded work is not brief verification—it is turning assessment into oral defense.",
+          "severity": "review",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The learning target about common denominators, equivalent fractions, and valid comparison strategies is still required. All nine items remain unchanged in their mathematical content. The target is preserved.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "Items 1–3 still require choosing and executing a valid comparison strategy. Items 4–8 still require constructing equivalent fractions, combining like-sized parts, and simplifying. Item 9 still requires diagnosing the error and stating the reason. The prediction and explanation boxes wrap this thinking but do not remove or weaken it.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All mathematical content (fractions, operations, word problem contexts) remains identical and correct. No computational errors introduced.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "BLOCK. The transformation violates two must_not rules: (1) creates disproportionate grading burden by requiring complete-sentence explanations for all 9 items, a one-page reflection, and five-minute individual conferences with every student—multiplying assessment time far beyond the original nine-item assignment; (2) turns items 6 and 9 into mandatory oral defenses via required teacher conferences. Additionally, the 25-minute time constraint is removed and the format of required evidence is changed from 'any valid form' to mandatory complete sentences or labelled pictures, removing the option to show reasoning through written-out equivalent fractions alone. The core thinking is preserved but wrapped in a structure that violates workload and oral-defense prohibitions."
+    },
+    "usefulness": {
+      "verdict": "NOT_USEFUL",
+      "clarity": 2,
+      "feasibility": 1,
+      "editing_required": "substantial",
+      "grading_burden": "much more",
+      "improves_original": false,
+      "notes": [
+        "Time constraint violated: original specifies 25 minutes; this version removes that constraint entirely and adds a one-page reflection plus individual 5-minute conferences for 25+ students (2+ hours of conference time alone).",
+        "Grading burden explodes: 9 items × 3 responses each = 27 responses per student, plus a one-page reflection, plus preparing for and conducting individual conferences. Original required checking 9 answers and their work; this requires reading ~28 written pieces per student.",
+        "Layout problem: each item now needs space for three responses (prediction, solution, explanation). The blanks provided ('______') cannot hold complete sentences or labelled pictures. Substantial reformatting needed to make this physically workable on paper.",
+        "The teacher conference requirement at the end is a new assessment component not requested and not feasible within the stated constraints (paper format, 25 minutes, nine items).",
+        "Direction 'complete all three boxes' appears once at top but applies to all nine items; students may miss this. Each item should have visible (a)(b)(c) structure or the global direction needs emphasis."
+      ],
+      "ignored_validity_notes": [
+        "Prediction before solving may be pedagogically valuable for making estimation and number sense visible, but for item 9 (find the mistake), asking for a 'prediction' of what the student did wrong is awkward—students either know the error type or they don't; prediction doesn't fit the task structure.",
+        "The one-page reflection asking students to describe 'how your thinking about fractions changed' during a 25-minute practice assignment may be developmentally ambitious for grade 5 and assumes metacognitive growth happens within a single worksheet session."
+      ]
+    },
+    "adversarial": {
+      "verdict": "WEAKENED",
+      "cheapest_path": "The student photographs the sheet, pastes it to an AI assistant, and asks: 'Complete all parts (a), (b), and (c) for every problem. For predictions, just write reasonable guesses. For solutions, show all work step-by-step. For explanations, write in a 13-year-old's voice using complete sentences. Also write the one-page reflection about how my thinking changed, mentioning that my prediction for problem 3 was wrong.' The student copies all outputs onto the paper. Before the conference, the student reviews the AI's work for items 6 and 9 to prepare talking points.",
+      "steps": [
+        "Photograph the assignment sheet",
+        "Paste to AI with prompt: 'Complete all parts (a), (b), (c) for every problem. Predictions should be reasonable guesses. Solutions with full work. Explanations in 13-year-old voice with complete sentences. Write one-page reflection about thinking changes, mention prediction for #3 was wrong.'",
+        "Copy AI outputs for all nine items onto paper",
+        "Copy AI-generated reflection onto paper",
+        "Before conference: read AI's explanations for items 6 and 9, rehearse talking points",
+        "In conference: explain items 6 and 9 using memorized/understood points from AI output"
+      ],
+      "cost_to_student": "low",
+      "what_survives": "The teacher conference on items 6 and 9 creates an independent check that forces the student to at least understand and articulate the AI's reasoning for those two items. The student must be able to explain aloud (a) how to add mixed numbers with unlike denominators (item 6) and (b) why adding denominators is wrong (item 9). This covers approximately 2 of 9 items' worth of required evidence.",
+      "what_is_bypassed": "Items 1-5, 7-8: All predictions, solutions, and explanations can be AI-generated without the student doing the required thinking about comparison strategies, finding common denominators, or reasoning about word problem contexts. The prediction boxes do not function as an independent check because the AI generates them simultaneously with solutions—the student never commits to a prediction before seeing the answer. The reflection is entirely AI-generated and requires no genuine metacognition. The 'complete sentences' and 'labelled picture' requirements do not prevent AI generation.",
+      "repair_hint": "Make predictions a true independent check: 'Before beginning calculations, write your prediction for each item and bring this page to the teacher for a signature. You may then complete parts (b) and (c).' This forces students to commit to predictions before having solutions, making the thinking sequence genuine.",
+      "independent_check": true,
+      "independent_check_what": "Teacher conference: 'After grading, each student meets with the teacher for five minutes to explain items 6 and 9 aloud.' This live verification covers 2 of 9 items and would expose hollow understanding on those specific problems."
+    }
+  },
+  "verdicts": {
+    "preservation": "REVIEW",
+    "usefulness": "NOT_USEFUL",
+    "adversarial": "WEAKENED"
+  }
+}

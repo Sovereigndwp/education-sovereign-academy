@@ -1,0 +1,170 @@
+{
+  "id": "g8-ela-evidence",
+  "fixture": {
+    "file": "fixtures/support-polished-violation.md",
+    "mode": "support",
+    "kind": "polished_subtle_invariant_violation",
+    "why": "Clean, well-scaffolded, keeps the passage and the rubric — but Step 1 states the author's position for the student and Step 2 pre-selects candidate evidence (three of five options are the answer). The construct — inferring an unstated position from technique and selecting evidence that reveals it — is done by the worksheet. required_thinking and 'give away reasoning being assessed' are violated.",
+    "expected": {
+      "preservation": "BLOCK",
+      "usefulness": [
+        "USEFUL",
+        "USEFUL_WITH_EDITS"
+      ],
+      "adversarial": [
+        "UNDERMINED",
+        "WEAKENED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "finding on required_thinking (or learning_target) kind=exceeded severity=block quoting Step 1 'The author believes the town should think carefully…' and/or Step 2's evidence bank",
+      "usefulness": "should still look usable — this is the point: usefulness and validity must be judged separately"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:26:49.059Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "BLOCK",
+      "findings": [
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 1 states the author's position explicitly: 'The author believes the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out.' The contract requires students to 'Infer an unstated-but-signalled position from the text' — this inference is now given away in the directions.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 2 provides a multiple-choice list of five pre-selected quotations. The contract requires students to 'select evidence that reveals the position (not merely mentions the topic)' — the selection work is now done for them. The student chooses from a curated list rather than searching the full text.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "Step 4 states the engineer's case explicitly: 'The engineer's case for replacement is that the bridge is old and narrow, and a new bridge would last longer.' The contract requires students to identify and describe 'how the author treats the counter-case' — this identification is now provided in the prompt.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "must_not",
+          "rule": "give away reasoning being assessed",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "Step 1 gives away the inferential reasoning: the unstated position is stated in the directions before the student writes. Step 2 gives away the evidence-selection reasoning: the relevant quotations are pre-identified. Step 4 gives away the counter-case identification. All three are core reasoning tasks in the contract.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "must_not",
+          "rule": "substitute recall for analysis/application",
+          "permission": "must_not",
+          "kind": "exceeded",
+          "evidence": "Step 2 converts evidence selection (analysis of the full text to find revealing passages) into recall (choosing from five provided options). Step 1 converts inference (determining an unstated position from textual signals) into paraphrase (restating a position already given in the directions).",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "The contract requires 'an accurate, specific statement of the author's position in the student's words' — Step 1 provides the position ('the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out') and asks students only to paraphrase it. The evidence of independent inference is removed.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "exceeded",
+          "evidence": "The learning target includes 'An author's point of view in an informational text is revealed through choices — what is included and omitted, word choice, framing and selected details, contrast, and the order and placement of ideas.' Students no longer discover what is included/omitted or select revealing details — these are pre-selected in Step 2. The inferential work of 'revealed through choices' is replaced with recognition of provided examples.",
+          "severity": "block",
+          "still_required": false,
+          "weakened_or_given_away": true
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The passage text is unchanged. The vocabulary support in 'Before you read' defines terms accurately. No mathematical or factual errors introduced.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "One class period maintained. Final product is still 'one paragraph' (Step 5: 'Copy your five sentences from Steps 1–4 into one paragraph. Add a closing sentence'). The 4-point rubric is unchanged and stated identically. Format constraint met.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "BLOCK. The transformation violates multiple MUST PRESERVE and MUST NOT rules. It gives away the three core reasoning tasks: (1) inferring the author's unstated position (now stated in Step 1 directions), (2) selecting evidence from the full text (now choosing from five pre-selected quotations in Step 2), and (3) identifying the counter-case (now summarized in Step 4 directions). This substitutes recall and recognition for the analysis and inference the contract requires. The learning target — that point of view is 'revealed through choices' students must discover — is no longer met when the revealing choices are pre-identified. The scaffolding does not structure the path; it walks it."
+    },
+    "usefulness": {
+      "verdict": "USEFUL",
+      "clarity": 2,
+      "feasibility": 2,
+      "editing_required": "minor",
+      "grading_burden": "same",
+      "improves_original": true,
+      "notes": [
+        "Step 1 gives away the author's point of view in the prompt itself ('the author believes the town should think carefully...'), which makes the student task circular. Either remove that model sentence or make it a true blank.",
+        "Step 2 includes 'deplored' in the vocabulary list but the word never appears in the passage or assignment—remove it.",
+        "Step 3 asks students to 'finish the sentence' for TWO pieces of evidence but provides only ONE sentence frame. Add: 'Evidence 1: The author includes this because... Evidence 2: The author includes this because...'",
+        "The direction 'read it in full on the attached page' implies the passage is on a separate page, but a teacher would need to confirm whether to print it separately or keep it inline."
+      ],
+      "ignored_validity_notes": [
+        "Step 1 provides the author's position in the prompt ('the author believes the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out'), which removes the interpretive work the original required.",
+        "Step 2 pre-selects five evidence options, three of which are clearly relevant and two neutral/opposing, which narrows the evidence-selection task significantly compared to the open passage in the original.",
+        "Step 4 summarizes the engineer's case for the student ('the bridge is old and narrow, and a new bridge would last longer'), removing the work of identifying what the opposing case actually is."
+      ]
+    },
+    "adversarial": {
+      "verdict": "UNDERMINED",
+      "cheapest_path": "The student pastes the passage and the five fill-in-the-blank prompts into an AI chat, asks it to complete each sentence, copies the AI's answers into the boxes/blanks on the worksheet, then copies those five sentences plus an AI-generated closing sentence into paragraph form.",
+      "steps": [
+        "Paste the Mill Street bridge passage into ChatGPT/Claude",
+        "Paste Step 1 prompt: 'Complete this sentence: The author believes ______________'",
+        "Paste Step 2 prompt: 'Choose two of these sentences that show the author's point of view: [list]'",
+        "Paste Step 3 prompt: 'For each piece of evidence, finish: The author includes this because it shows ______________'",
+        "Paste Step 4 prompt: 'Finish: The author responds to the engineer's case by ______________'",
+        "Ask AI: 'Combine these five sentences into one paragraph and add a closing sentence'",
+        "Copy all AI outputs into the worksheet boxes",
+        "Copy the combined paragraph as the final hand-in"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing. The scaffolding that was meant to guide thinking instead creates perfect AI prompts. The student never infers the position (Step 1 gives it), never selects evidence (Step 2 provides a curated list), never explains the mechanism (Step 3's fill-in-the-blank accepts any plausible completion), and never analyzes the counter-case treatment (Step 4 is another fill-in-the-blank).",
+      "what_is_bypassed": "All required thinking: inferring an unstated position from the text; selecting evidence that reveals the position rather than merely mentions the topic; explaining the mechanism by which each piece signals the position (word choice, framing, contrast, inclusion/omission, placement); describing how the author treats the counter-case. The version tells the student the position in Step 1 ('the author believes the town should think carefully before replacing the bridge, because the bridge matters to the town in ways the engineer's report leaves out'), provides a curated list of five quotations in Step 2, and converts all explanation tasks into sentence-completion prompts that an AI can fill perfectly.",
+      "repair_hint": "Before Step 2, require students to meet briefly with the teacher (or write on a half-sheet collected immediately) to state in one sentence what they think the author's position is, using only their own words—no sentence starters, no examples. This commits them before the scaffolding begins. Alternatively, remove the explicit statement of the position from Step 1 and require students to infer it themselves, and make Step 2 an open selection from the full text rather than a curated list.",
+      "independent_check": false,
+      "independent_check_what": ""
+    }
+  },
+  "verdicts": {
+    "preservation": "BLOCK",
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED"
+  }
+}

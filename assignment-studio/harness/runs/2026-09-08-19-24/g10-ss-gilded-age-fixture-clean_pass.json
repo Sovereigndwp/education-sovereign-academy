@@ -1,0 +1,123 @@
+{
+  "id": "g10-ss-gilded-age",
+  "fixture": {
+    "file": "fixtures/support-clean-pass.md",
+    "mode": "support",
+    "kind": "clean_pass",
+    "why": "Documents untouched; vocabulary glossed beside the text; sourcing table and a planning table that structure but do not answer; item 2 and item 4 still require the student's own inference; POV weighting and the two-paragraph product kept; same six rubric points.",
+    "expected": {
+      "preservation": "PASS",
+      "usefulness": "USEFUL",
+      "adversarial": [
+        "WEAKENED",
+        "UNDERMINED"
+      ]
+    },
+    "expected_evidence": {
+      "preservation": "all findings kind=held; no block/review severity",
+      "usefulness": "editing none/minor; grading same; improves_original true",
+      "adversarial": "a Support version of a take-home document analysis is expected to be shortcut-able; the verdict is recorded to calibrate the adversarial audit, not to fail the fixture"
+    }
+  },
+  "audit": {
+    "round": 1,
+    "at": "2026-09-08T19:25:27.216Z",
+    "model": "claude-sonnet-4-5",
+    "prompt_version": "audit-2026-09-08-v4",
+    "preservation": {
+      "verdict": "PASS",
+      "findings": [
+        {
+          "invariant": "learning_target",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "The transformed version preserves the core learning target intact: students must still source documents (table in Q1), extract and contrast causal explanations (Q2), read word choice for attitude (Q3), explain why each author would write as they did given their position (Q4), and construct an argument accounting for conflicting sources with outside development (Q5 with planning table). The planning table structures the work but does not supply the sourcing, contrasts, or argument—students must still produce all required evidence.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_thinking",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "All required thinking remains: Q1 requires sourcing (author, date, audience); Q2 requires extracting and contrasting causal explanations; Q3 requires reading word choice for attitude with explanation; Q4 requires explaining why each author would write as they did given their position; Q5 requires constructing an argument that accounts for conflicting sources, weighs by point of view, and contextualizes with outside development. The planning table provides structure (boxes for 'my position,' 'evidence from Document 1,' etc.) but does not pre-answer any element—students must still generate the sourcing, contrasts, position, evidence selection, POV weighting, and outside connection themselves.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "required_evidence",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "Part A still requires: sourcing table with author/year/audience for both documents (Q1), one sentence per document contrasting causal explanations (Q2), word/phrase from each with explanation of what it reveals (Q3), purpose statement for each author given their position (Q4). Part B still requires: two paragraphs with position covering both documents, at least one piece of evidence from each, explicit weighting by point of view, and one accurate outside development. The planning table mandates the format (boxes) but every element of evidence the contract names is still demanded—the table does not fill itself.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "teacher_constraints",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "45 minutes preserved ('45 minutes' in header); paper format preserved (table and blanks imply paper); two-paragraph response preserved ('Now write two paragraphs'); 6-point rubric unchanged and quoted verbatim; documents unchanged (identical text, only vocabulary glosses added below each).",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        },
+        {
+          "invariant": "correctness",
+          "rule": "",
+          "permission": "preserve",
+          "kind": "held",
+          "evidence": "Documents are identical to original. Vocabulary glosses are accurate: 'administration of wealth' correctly glossed as 'how money is managed and used'; 'deplored' as 'regretted, disapproved of'; 'irregularity' as 'unevenness'; 'squalor' as 'dirty, miserable poverty'; 'preamble' as 'opening statement'; 'ermine of the bench' as 'robes of judges'; 'fruits of the toil' as 'what people's work produces'; 'colossal' as 'enormous'; 'despise' as 'look down on, hate'. No factual or mathematical errors introduced.",
+          "severity": "note",
+          "still_required": true,
+          "weakened_or_given_away": false
+        }
+      ],
+      "summary": "PASS. The transformed version holds all contract elements. Learning target, required thinking, and required evidence are preserved: students must still source both documents, extract and contrast causal explanations, analyze word choice, explain authorial purpose given position, and construct a two-paragraph argument weighing conflicting sources by point of view with outside development. The planning table and sourcing table structure the work (may_adapt: visual organization, scaffolds, response format when format is not assessed) but do not supply answers—every element the contract names is still demanded of the student. Vocabulary glosses reduce language burden (may_adapt: vocabulary support, irrelevant language burden) without altering documents or giving away reasoning. Teacher constra"
+    },
+    "usefulness": {
+      "verdict": "USEFUL",
+      "clarity": 3,
+      "feasibility": 3,
+      "editing_required": "none",
+      "grading_burden": "same",
+      "improves_original": true,
+      "notes": [
+        "The sourcing table in Part A.1 is clearer to complete than the original's 'one line each' instruction and produces identical information for grading.",
+        "The planning table before Part B gives students a concrete structure without adding grading burden — teacher can ignore it or glance at it; the rubric still scores only the two paragraphs.",
+        "Vocabulary glosses ('Words to know') after each document remove a barrier for struggling readers without changing what students must do with the text.",
+        "Blank lines for answers in questions 2 and 3 make the format more accessible; students know exactly where to write.",
+        "The opening sentence ('You will read two short documents...') orients students to the task flow, helpful for students who need procedural clarity."
+      ],
+      "ignored_validity_notes": []
+    },
+    "adversarial": {
+      "verdict": "UNDERMINED",
+      "cheapest_path": "The student photographs both documents and the assignment sheet, pastes them into an AI chat, and asks: 'Fill in the table in Part A, answer questions 2-4, then fill in the planning table and write the two paragraphs for Part B. Make it sound like a 10th grader wrote it.' The student copies the AI's responses into the blanks and tables, then hand-writes or types the two paragraphs onto the answer sheet. Total time: 5-8 minutes of copying.",
+      "steps": [
+        "Photograph or screenshot the two documents and all questions",
+        "Paste into ChatGPT/Claude with prompt: 'Fill in all the tables and answer all questions. Write the two paragraphs for Part B. Sound like a 10th grader.'",
+        "Copy AI's table entries into Part A blanks",
+        "Copy AI's short answers for questions 2-4",
+        "Copy AI's planning table entries",
+        "Copy AI's two paragraphs into Part B answer space"
+      ],
+      "cost_to_student": "trivial",
+      "what_survives": "Nothing. The planning table is visible on the hand-in but was filled by AI, not used to organize the student's own thinking. The vocabulary glosses make the documents more accessible but do not prevent AI from doing all the analysis. The table format in question 1 and the planning table simply give the AI a clear template to fill.",
+      "what_is_bypassed": "All required thinking: sourcing the documents (author/date/audience/purpose), extracting and contrasting causal explanations, reading word choice for attitude, explaining why each author would write as they did given their position, and constructing an argument that accounts for conflicting sources with explicit weighting by point of view and connection to outside developments. The student never identifies the authors' positions, never contrasts their explanations, never weighs evidence, and never constructs an argument—the AI does all of it.",
+      "repair_hint": "Add a 2-minute in-class checkpoint before students begin Part B: the teacher calls on 8-10 students at random to state aloud (1) their position in one sentence, and (2) which outside development they will use. Students write these down before leaving class or beginning Part B. This commits them to a choice they must justify from their own Part A work, and makes a hollow hand-in visible.",
+      "independent_check": false,
+      "independent_check_what": ""
+    }
+  },
+  "verdicts": {
+    "preservation": "PASS",
+    "usefulness": "USEFUL",
+    "adversarial": "UNDERMINED"
+  }
+}

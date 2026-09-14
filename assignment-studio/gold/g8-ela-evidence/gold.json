@@ -1,0 +1,177 @@
+{
+  "id": "g8-ela-evidence",
+  "cell": {
+    "grade": "Grade 8",
+    "subject": "English / Language Arts",
+    "archetype": "evidence paragraph on informational text (RI.8.6 / RI.8.1)"
+  },
+  "title": "Author's Point of View — Evidence Paragraph",
+  "license": "Original passage and task, written for this harness. CC-BY 4.0 The Sovereign Academy.",
+  "answer_key": {
+    "point_of_view": "The author favours keeping/repairing the bridge — or at least doubts that cost and engineering data alone should decide — because the bridge's civic and human uses are real but uncounted.",
+    "strong_evidence_examples": [
+      "'the only place in town where you can stand over moving water' — inclusion of what the engineer omitted",
+      "'inspection reports measure steel. They do not measure what a town does on a bridge' — contrast of measured vs unmeasured",
+      "'made it in eleven minutes' — framing / selected detail that minimises the opposing case",
+      "'I am not sure the numbers are the only thing that should be counted' — direct, hedged statement placed last",
+      "'a road that happens to cross a river' — diminishing description of the replacement"
+    ],
+    "handling_of_opposition": "The author fairly states the engineer's case (cost, lifespan, deck width) in one paragraph before answering it with what the report leaves out; concedes the numbers rather than disputing them ('The numbers are on one side')."
+  },
+  "contract": {
+    "learning_target": "An author's point of view in an informational text is revealed through choices — what is included and omitted, word choice, framing and selected details, contrast, and the order and placement of ideas — and a skilled author acknowledges the opposing case rather than ignoring it.",
+    "required_thinking": "Infer an unstated-but-signalled position from the text; select evidence that reveals the position (not merely mentions the topic); explain the mechanism by which each piece of evidence signals the position (word choice, framing/selected detail, contrast, inclusion/omission, placement); describe how the author treats the counter-case (acknowledge, concede, respond).",
+    "required_evidence": "One paragraph containing: an accurate, specific statement of the author's position in the student's words; two quotations/close paraphrases; an explanation for each that names a technique (word choice, framing/selected detail, contrast, inclusion/omission, placement); a sentence on how the engineer's case is acknowledged and answered.",
+    "teacher_constraints": "One class period; single paragraph of 8–12 sentences; graded with the stated 4-point rubric; the rubric is the same for every student."
+  },
+  "notes_for_reviewer": "The passage deliberately never says 'I think the bridge should be repaired' — the position must be inferred from technique. That inference is the construct. Any version that states the position for the student, or reduces the task to locating two quotes, has broken the contract. The single 8–12 sentence paragraph is an explicit teacher constraint (and the rubric is applied to it), so the paragraph is preserved as a constraint, not because the rubric requires a paragraph.",
+  "mode_boundaries": {
+    "support": {
+      "pass_looks_like": [
+        "Passage kept intact (or lightly glossed: 'span', 'inspection', 'commuters') — the text is the object of analysis and may not be simplified in a way that removes the techniques.",
+        "Task broken into labelled steps (position → evidence 1 + how → evidence 2 + how → opposing case), possibly with a planning table before the paragraph; the paragraph itself is still required.",
+        "A sentence-frame bank for the 'how it shows' move is acceptable if frames name techniques generically ('The author's choice to include ___ shows ___') and do not supply the specific evidence.",
+        "A model paragraph, if any, analyses a DIFFERENT short text, not this one."
+      ],
+      "violation_looks_like": [
+        "The author's position stated in the directions ('The author wants to keep the bridge. Find two quotes that show this.').",
+        "Evidence pre-selected, highlighted, or listed for the student to pick from.",
+        "Paragraph replaced by a fill-in graphic organiser as the final product — the teacher made a single 8–12 sentence paragraph an explicit constraint, so the format is not free to change here.",
+        "Passage rewritten so that the position becomes explicit."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": "PRESERVED",
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "UNDERMINED",
+          "SURVIVES"
+        ],
+        "note": "A Support version is not expected to resist AI; adversarial verdict is recorded, not judged, unless it triggers a repair that then breaks preservation."
+      }
+    },
+    "advanced": {
+      "pass_looks_like": [
+        "Same passage; deeper demand: e.g. evaluate whether the author's handling of the engineer's case is fair or a rhetorical move (the 'eleven minutes' detail); explain what the final hedged sentence does that a direct claim would not.",
+        "Transfer: predict how the passage would change if written by the engineer, and what evidence would disappear.",
+        "Comparison of two techniques: which does more work for the author's position, inclusion/omission or word choice, with justification.",
+        "Still one paragraph (or two if the teacher constraint is relaxed explicitly); rubric mapping stated."
+      ],
+      "violation_looks_like": [
+        "Two more paragraphs of the same task.",
+        "A new, unrelated passage added as 'extension'.",
+        "Turned into a persuasive essay about bridges (drift from analysis of author's craft)."
+      ],
+      "expected_statuses": {
+        "learning_target": [
+          "PRESERVED",
+          "INTENTIONALLY_EXTENDED"
+        ],
+        "required_thinking": "INTENTIONALLY_EXTENDED",
+        "required_evidence": [
+          "INTENTIONALLY_EXTENDED",
+          "PRESERVED"
+        ],
+        "teacher_constraints": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "WEAKENED",
+          "SURVIVES",
+          "UNDERMINED"
+        ],
+        "note": "Advanced is judged on depth; adversarial recorded."
+      }
+    },
+    "visible": {
+      "pass_looks_like": [
+        "A prediction line after the first paragraph of the passage ('Before reading on: which way do you expect the author to lean, and what made you think so?').",
+        "The student must name which of two candidate pieces of evidence they REJECTED and why (the choice, not the quote, is the visible thinking).",
+        "A brief self-check: 'Underline the sentence where you explain HOW, not WHAT.'",
+        "Grading stays on the same rubric; extra lines are read, not scored."
+      ],
+      "violation_looks_like": [
+        "Requiring a recorded oral explanation or in-class handwriting as verification.",
+        "A reflection paragraph longer than the analysis paragraph.",
+        "'Write in your own words so AI can't help' or any AI-proof claim.",
+        "Rubric changed so that the reflection carries points (teacher constraint broken)."
+      ],
+      "expected_statuses": {
+        "learning_target": "PRESERVED",
+        "required_thinking": "PRESERVED",
+        "required_evidence": [
+          "PRESERVED",
+          "ADAPTED_AS_PERMITTED"
+        ],
+        "teacher_constraints": "PRESERVED",
+        "correctness": "PRESERVED"
+      },
+      "expected_audits": {
+        "preservation": [
+          "PASS",
+          "REVIEW"
+        ],
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "SURVIVES",
+          "WEAKENED"
+        ],
+        "note": "Visible must not come back UNDERMINED after its one repair cycle; if it does, that is a finding about the mode, not the case."
+      }
+    }
+  },
+  "fixtures": [
+    {
+      "file": "fixtures/support-polished-violation.md",
+      "mode": "support",
+      "kind": "polished_subtle_invariant_violation",
+      "why": "Clean, well-scaffolded, keeps the passage and the rubric — but Step 1 states the author's position for the student and Step 2 pre-selects candidate evidence (three of five options are the answer). The construct — inferring an unstated position from technique and selecting evidence that reveals it — is done by the worksheet. required_thinking and 'give away reasoning being assessed' are violated.",
+      "expected": {
+        "preservation": "BLOCK",
+        "usefulness": [
+          "USEFUL",
+          "USEFUL_WITH_EDITS"
+        ],
+        "adversarial": [
+          "UNDERMINED",
+          "WEAKENED"
+        ]
+      },
+      "expected_evidence": {
+        "preservation": "finding on required_thinking (or learning_target) kind=exceeded severity=block quoting Step 1 'The author believes the town should think carefully…' and/or Step 2's evidence bank",
+        "usefulness": "should still look usable — this is the point: usefulness and validity must be judged separately"
+      }
+    }
+  ]
+}
