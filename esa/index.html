@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" data-platform="esa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Sovereign Academy | Better educational decisions, less guesswork</title>
+  <meta name="description" content="Education Sovereign Academy builds systems that help teachers and parents understand what educational evidence may be showing and decide what is worth doing next. One of the three Sovereign Academies.">
+  <link rel="canonical" href="https://thesovereign.academy/esa/">
+  <meta name="theme-color" content="#121316">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Education Sovereign Academy">
+  <meta property="og:description" content="Systems that help teachers and parents understand what they are seeing and decide what is worth doing next.">
+  <meta property="og:url" content="https://thesovereign.academy/esa/">
+  <meta property="og:image" content="https://thesovereign.academy/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Education Sovereign Academy — one of the three Sovereign Academies of The Sovereign Academy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Education Sovereign Academy">
+  <meta name="twitter:description" content="Systems that help teachers and parents understand what they are seeing and decide what is worth doing next.">
+  <meta name="twitter:image" content="https://thesovereign.academy/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Education Sovereign Academy",
+    "alternateName": "ESA",
+    "url": "https://thesovereign.academy/esa/",
+    "description": "Education Sovereign Academy develops decision-support systems for teachers and parents: tools and research that help an adult understand what a piece of educational evidence may be showing and decide what is worth doing next.",
+    "parentOrganization": {
+      "@type": "EducationalOrganization",
+      "name": "The Sovereign Academy",
+      "url": "https://thesovereign.academy"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="/css/tsa-brand.css">
+
+  <style>
+    /* ========================================================================
+       Education Sovereign Academy — public homepage.
+
+       TSA structure, ESA accent. Nothing here is a new design system: the
+       page is the /about/ scaffold with one swap, [data-platform="esa"],
+       which re-points the TSA silver accent tokens at the ESA blue already
+       defined in css/tsa-brand.css. Every component below then inherits the
+       blue without naming a hex — the same way the fade reaches the button
+       outline, the rule, the glyph and the italic display word everywhere
+       else on TSA.
+
+       Fade is structural, never decorative. It appears in exactly six
+       places: the logo mark, the italic word in a display heading, the
+       vertical spine of the four-step flow, the top rule of the principle
+       band, the primary button outline, and the ESA card in the academy
+       row. Everything else is neutral.
+       ======================================================================== */
+
+    [data-platform="esa"] {
+      --tsa-silver:   var(--esa-solid);
+      --tsa-platinum: var(--esa-sky);
+      --tsa-pewter:   #6B7FA8;
+      --tsa-fade:     var(--esa-fade);
+      --tsa-fade-h:   var(--esa-fade-h);
+      --esa-glow:     rgba(47, 111, 237, 0.10);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--tsa-bg); color: var(--tsa-ink); font-family: var(--font-sans); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    a { color: var(--tsa-silver); text-decoration: none; }
+    .container { max-width: var(--width-default); margin: 0 auto; padding: 0 2rem; }
+
+    /* ---------- Header (matches /about/ and the homepage) ---------- */
+    .header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      background: rgba(18, 19, 22, 0.88); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--tsa-border);
+    }
+    .header-content {
+      max-width: var(--width-wide); margin: 0 auto; padding: 1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 0.75rem; }
+    .logo-mark {
+      width: 38px; height: 38px; border-radius: 50%; background: var(--tsa-fade);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.2rem; color: var(--tsa-deepest); flex-shrink: 0;
+    }
+    .logo-text { font-family: var(--font-serif); font-weight: 700; font-size: 1.05rem; color: var(--tsa-ink-strong); line-height: 1; }
+    .logo-text span { color: var(--tsa-muted); font-family: var(--font-mono); font-weight: 500; display: block; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 3px; }
+    .header-nav { display: flex; align-items: center; gap: 0.4rem; }
+    .nav-link {
+      color: var(--tsa-muted); font-size: 0.9rem; font-weight: 500;
+      padding: 0.5rem 0.85rem; border-radius: var(--radius-md);
+      transition: var(--transition-base); white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--tsa-ink-strong); background: rgba(88,166,245,0.10); }
+    .nav-link[aria-current="page"] { color: var(--tsa-ink-strong); }
+    .nav-burger { display: none; background: none; border: 1px solid var(--tsa-border); border-radius: var(--radius-md); color: var(--tsa-ink); padding: 0.45rem 0.7rem; font-size: 1rem; line-height: 1; cursor: pointer; }
+    @media (max-width: 900px) {
+      .nav-burger { display: inline-flex; }
+      .header-nav {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; background: var(--tsa-deepest);
+        border-bottom: 1px solid var(--tsa-border); padding: 0.75rem 1.5rem 1.25rem;
+        max-height: calc(100vh - 70px); overflow-y: auto;
+      }
+      .header-nav.open { display: flex; }
+      .nav-link { padding: 0.75rem 0.5rem; }
+    }
+
+    /* ---------- Page hero ---------- */
+    .page-hero { padding: 9.5rem 0 4.5rem; border-bottom: 1px solid var(--tsa-border); position: relative; overflow: hidden; }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 74% 22%, var(--esa-glow) 0%, transparent 58%);
+      pointer-events: none;
+    }
+    .page-hero > * { position: relative; }
+    .eyebrow-row { display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem; }
+    .eyebrow-line { width: 40px; height: 1px; background: var(--tsa-fade-h); }
+    .eyebrow-text { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--tsa-silver); font-weight: 700; }
+    .page-hero h1 {
+      font-family: var(--font-serif); font-weight: 700;
+      font-size: clamp(2.2rem, 4.8vw, 3.7rem); line-height: 1.08; letter-spacing: -0.015em;
+      color: var(--tsa-ink-strong); max-width: 860px; margin-bottom: 1.5rem;
+    }
+    .page-hero h1 em {
+      font-style: italic; color: var(--tsa-silver);
+      background: var(--tsa-fade); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+      .page-hero h1 em { color: var(--esa-solid); -webkit-text-fill-color: currentColor; }
+    }
+    .page-hero .lede { font-size: 1.18rem; line-height: 1.65; color: var(--tsa-muted); max-width: 700px; margin-bottom: 1.1rem; }
+    .hero-note { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--tsa-faint); margin-top: 2.25rem; }
+    .hero-note a { color: var(--tsa-muted); }
+    .hero-note a:hover { color: var(--tsa-platinum); }
+
+    /* ---------- Sections ---------- */
+    .section { padding: 4.75rem 0; border-bottom: 1px solid var(--tsa-border); }
+    .section--alt { background: var(--tsa-surface); }
+    .section--deep { background: var(--tsa-deepest); }
+    .section-tag { display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--tsa-muted); margin-bottom: 1.25rem; }
+    .section-tag::before { content: '◆'; font-size: 7px; color: var(--tsa-silver); }
+    .section h2 { font-family: var(--font-serif); font-weight: 700; font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.14; letter-spacing: -0.01em; color: var(--tsa-ink-strong); margin-bottom: 1.25rem; max-width: 760px; }
+    .section h2 em { font-style: italic; color: var(--tsa-silver); background: var(--tsa-fade); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+      .section h2 em { color: var(--esa-solid); -webkit-text-fill-color: currentColor; }
+    }
+    .section .lede { font-size: 1.06rem; line-height: 1.7; color: var(--tsa-muted); max-width: 700px; margin-bottom: 1rem; }
+    .section .lede strong { color: var(--tsa-ink); font-weight: 600; }
+    .pull { font-family: var(--font-serif); font-size: clamp(1.25rem, 2.4vw, 1.7rem); line-height: 1.35; color: var(--tsa-ink-strong); max-width: 660px; margin: 2rem 0 0; padding-left: 1.5rem; border-left: 2px solid var(--tsa-silver); }
+
+    /* ---------- The four-step flow: the fade as a spine ---------- */
+    .flow { margin-top: 2.75rem; position: relative; max-width: 780px; }
+    .flow::before {
+      content: ''; position: absolute; left: 15px; top: 10px; bottom: 10px; width: 2px;
+      background: var(--esa-fade-v); border-radius: 2px; opacity: 0.75;
+    }
+    .flow-step { position: relative; padding: 0 0 2.25rem 3.25rem; }
+    .flow-step:last-child { padding-bottom: 0; }
+    .flow-dot {
+      position: absolute; left: 8px; top: 4px; width: 16px; height: 16px; border-radius: 50%;
+      background: var(--tsa-bg); border: 2px solid var(--esa-solid);
+    }
+    .section--alt .flow-dot { background: var(--tsa-surface); }
+    .flow-step:last-child .flow-dot { background: var(--esa-solid); border-color: var(--esa-sky); }
+    .flow-step h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--tsa-ink-strong); line-height: 1.25; margin-bottom: 0.4rem; }
+    .flow-step p { font-size: 1rem; line-height: 1.65; color: var(--tsa-muted); max-width: 600px; }
+
+    /* ---------- Two audiences ---------- */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.25rem; }
+    @media (max-width: 820px) { .two-col { grid-template-columns: 1fr; } }
+    .aud { padding: 1.9rem; background: var(--tsa-elevated); border: 1px solid var(--tsa-border); border-radius: var(--radius-lg); }
+    .section--alt .aud { background: var(--tsa-bg); }
+    .aud h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--tsa-ink-strong); margin-bottom: 0.3rem; }
+    .aud .role { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--tsa-faint); margin-bottom: 1.1rem; }
+    .aud p { font-size: 0.97rem; line-height: 1.65; color: var(--tsa-muted); margin-bottom: 1.1rem; }
+    .aud ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .aud li { font-size: 0.95rem; line-height: 1.5; color: var(--tsa-ink); padding-left: 1.1rem; position: relative; }
+    .aud li::before { content: '◆'; position: absolute; left: 0; top: 2px; font-size: 7px; color: var(--tsa-silver); }
+    .stage {
+      display: inline-block; font-family: var(--font-mono); font-size: 8.5px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 9px; border-radius: var(--radius-pill);
+      border: 1px solid var(--tsa-border-strong); color: var(--tsa-muted); margin-bottom: 1rem;
+    }
+    .stage--now { border-color: var(--esa-solid); color: var(--esa-solid); }
+
+    /* ---------- What we're building ---------- */
+    .build { display: grid; gap: 1.25rem; margin-top: 2.25rem; }
+    .build-item {
+      padding: 1.75rem 1.9rem; background: var(--tsa-elevated);
+      border: 1px solid var(--tsa-border); border-radius: var(--radius-lg);
+      border-left: 3px solid var(--tsa-border-strong);
+    }
+    .build-item:last-child { border-left-color: var(--esa-solid); }
+    .build-item h3 { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--tsa-ink-strong); margin-bottom: 0.45rem; }
+    .build-item p { font-size: 0.99rem; line-height: 1.65; color: var(--tsa-muted); max-width: 640px; }
+    .build-state { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--tsa-border); font-size: 0.9rem; line-height: 1.55; color: var(--tsa-muted); }
+    .build-state b { font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tsa-faint); display: block; margin-bottom: 0.35rem; }
+    .build-state em { font-style: normal; color: var(--tsa-ink); }
+
+    /* ---------- Principle band ---------- */
+    .principle { position: relative; }
+    .principle::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--esa-fade-h); }
+    .principle h2 { max-width: 820px; }
+    .exchange { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 2.5rem; border: 1px solid var(--tsa-border); border-radius: var(--radius-lg); overflow: hidden; }
+    @media (max-width: 820px) { .exchange { grid-template-columns: 1fr; } }
+    .exchange > div { padding: 1.9rem; }
+    .exchange > div + div { border-left: 1px solid var(--tsa-border); }
+    @media (max-width: 820px) { .exchange > div + div { border-left: none; border-top: 1px solid var(--tsa-border); } }
+    .exchange h4 { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tsa-silver); margin-bottom: 1.1rem; }
+    .exchange ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .exchange li { font-size: 1rem; line-height: 1.5; color: var(--tsa-ink); }
+    .exchange li::before { content: '—'; color: var(--tsa-faint); margin-right: 0.6rem; }
+    .exchange--adult { background: rgba(88,166,245,0.045); }
+
+    /* ---------- The three academies ---------- */
+    .academies { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; margin-top: 2.25rem; }
+    .ac-card { position: relative; display: flex; flex-direction: column; padding: 1.75rem; background: var(--tsa-elevated); border: 1px solid var(--tsa-border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition-base); }
+    .ac-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .ac-card.bsa::before { background: var(--bsa-fade); }
+    .ac-card.fsa::before { background: var(--fsa-fade); }
+    .ac-card.esa::before { background: var(--esa-fade); }
+    .ac-card:hover { border-color: var(--tsa-border-strong); transform: translateY(-3px); }
+    .ac-card[aria-current="page"] { border-color: var(--esa-solid); }
+    .ac-name { font-family: var(--font-serif); font-size: 1.12rem; font-weight: 700; color: var(--tsa-ink-strong); line-height: 1.2; }
+    .ac-domain { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; color: var(--tsa-faint); margin-top: 6px; }
+    .ac-desc { font-size: 0.92rem; line-height: 1.6; color: var(--tsa-muted); margin-top: 0.9rem; flex: 1; }
+    .ac-go { margin-top: 1.1rem; font-size: 0.88rem; font-weight: 600; color: var(--tsa-silver); }
+    .ac-card.bsa .ac-go { color: var(--bsa-solid); }
+    .ac-card.fsa .ac-go { color: var(--fsa-solid); }
+    .ac-here { margin-top: 1.1rem; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--tsa-faint); }
+
+    /* ---------- Buttons ---------- */
+    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 2rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.98rem; padding: 0.95rem 1.9rem; border-radius: var(--radius-sm); border: 1.6px solid transparent; min-height: 44px; transition: var(--transition-base); cursor: pointer; }
+    .btn-primary { background: linear-gradient(var(--tsa-bg), var(--tsa-bg)) padding-box, var(--tsa-fade) border-box; color: var(--tsa-ink-strong); }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-2); }
+    .btn-secondary { border: 1.5px solid var(--tsa-border-strong); color: var(--tsa-ink); }
+    .btn-secondary:hover { border-color: var(--tsa-silver); color: var(--tsa-platinum); }
+    .section--alt .btn-primary { background: linear-gradient(var(--tsa-surface), var(--tsa-surface)) padding-box, var(--tsa-fade) border-box; }
+    .section--deep .btn-primary { background: linear-gradient(var(--tsa-deepest), var(--tsa-deepest)) padding-box, var(--tsa-fade) border-box; }
+
+    /* ---------- Footer ---------- */
+    .footer { padding: 3.5rem 0 2.5rem; background: var(--tsa-bg); }
+    .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; align-items: start; }
+    @media (max-width: 900px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .footer-inner { grid-template-columns: 1fr; } }
+    .footer-brand { font-family: var(--font-serif); font-weight: 700; color: var(--tsa-ink-strong); font-size: 1rem; }
+    .footer-brand span { display: block; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tsa-muted); margin-top: 6px; font-weight: 500; }
+    .footer-desc { font-size: 0.88rem; line-height: 1.6; color: var(--tsa-muted); margin-top: 1rem; max-width: 320px; }
+    .footer-col h5 { font-family: var(--font-mono); font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tsa-ink); margin-bottom: 0.9rem; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+    .footer-col a { color: var(--tsa-muted); font-size: 0.85rem; }
+    .footer-col a:hover { color: var(--tsa-platinum); }
+    .footer-note { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; color: var(--tsa-faint); margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--tsa-border); line-height: 1.8; }
+
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--esa-solid); color: var(--tsa-deepest); padding: 8px 12px; z-index: 1100; font-weight: 600; }
+    .skip-link:focus { top: 0; }
+
+    @media (max-width: 900px) {
+      .container { padding: 0 1.5rem; }
+      .page-hero { padding: 7.5rem 0 3.25rem; }
+      .section { padding: 3.5rem 0; }
+      .cta-group .btn { width: 100%; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      html { scroll-behavior: auto; }
+      .ac-card:hover, .btn-primary:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-content">
+      <a href="/" class="logo" aria-label="The Sovereign Academy home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">The Sovereign Academy<span>Understand more &middot; depend less</span></span>
+      </a>
+      <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">&#9776;</button>
+      <nav class="header-nav" id="primaryNav" aria-label="Primary">
+        <a class="nav-link" href="/#work">Current work</a>
+        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="/institutional/">For organizations</a>
+        <a class="nav-link" href="mailto:dalia@thesovereign.academy">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ══ Hero ══════════════════════════════════════════════════════════ -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow-row">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Education Sovereign Academy</span>
+        </div>
+        <h1>Better educational decisions. <em>Less guesswork.</em></h1>
+        <p class="lede">
+          Teachers and parents are surrounded by information. Curriculum, assignments,
+          student work, test results, resources, and now an unlimited supply of
+          AI-generated material. What is scarce is the answer to a much harder
+          question: what does this tell me, and what should I do next?
+        </p>
+        <p class="lede">
+          Education Sovereign Academy builds systems that help a teacher or a parent
+          understand what they are looking at and decide what is actually worth doing
+          about it. Often the most useful answer is small. Sometimes it is nothing at all.
+        </p>
+        <p class="hero-note">
+          One of the three Sovereign Academies of <a href="/">The Sovereign Academy</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ The problem ═══════════════════════════════════════════════════ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-tag">The problem</div>
+        <h2>Education does not have a <em>content shortage.</em></h2>
+        <p class="lede">
+          There is no shortage of worksheets, lesson plans, activities, apps, websites,
+          or explanations. There never really was. AI has made that supply effectively
+          unlimited, and the cost of producing one more of anything has fallen to
+          roughly zero.
+        </p>
+        <p class="lede">
+          None of that answers the question a teacher has at 4pm with a stack of
+          student work in front of her, or the one a parent has at the kitchen table
+          looking at a page of homework that came back marked wrong.
+        </p>
+        <div class="pull">
+          What does this child need right now — and is it worth doing?
+        </div>
+        <p class="lede" style="margin-top:2rem">
+          That is the question ESA is interested in. Producing more material is not a
+          solution to it. In many cases producing more material is how the question
+          gets avoided.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ How ESA helps ═════════════════════════════════════════════════ -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-tag">How it works</div>
+        <h2>From something real to the <em>smallest useful next step.</em></h2>
+        <p class="lede">
+          Every ESA system runs the same four movements. The shape does not change
+          whether the person is a teacher looking at a class set or a parent looking
+          at one page.
+        </p>
+
+        <div class="flow">
+          <div class="flow-step">
+            <span class="flow-dot" aria-hidden="true"></span>
+            <h3>Bring something real</h3>
+            <p>
+              A piece of student work. An assignment you already give. A question your
+              child asked. A result you do not know how to read. Not a prompt, not a
+              topic — something that already exists.
+            </p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-dot" aria-hidden="true"></span>
+            <h3>Understand what it may mean</h3>
+            <p>
+              What might this be showing about what is understood, and what is not?
+              Where is the reading uncertain? One piece of work is thin evidence, and
+              a system that pretends otherwise is not helping you.
+            </p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-dot" aria-hidden="true"></span>
+            <h3>Decide what deserves attention</h3>
+            <p>
+              Is this one child or a pattern? Is it important or is it normal? Most of
+              what you could act on is not worth acting on, and knowing which is which
+              is most of the work.
+            </p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-dot" aria-hidden="true"></span>
+            <h3>Take the smallest useful next step</h3>
+            <p>
+              One question. One example. One changed item. A five-minute activity. A
+              conversation with the child. A question to ask the teacher. Or the
+              conclusion that this is already doing its job and should be left alone.
+            </p>
+          </div>
+        </div>
+
+        <p class="lede" style="margin-top:2.75rem">
+          <strong>Leave it alone is a real result.</strong> A system that always finds
+          something to improve is not measuring anything — it is just producing output.
+          ESA is built so that "no change" can be the answer, and so that it arrives
+          with reasons attached.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ Teachers and parents ══════════════════════════════════════════ -->
+    <section class="section section--alt" id="who">
+      <div class="container">
+        <div class="section-tag">Who this is for</div>
+        <h2>Two people, two roles, <em>the same hard question.</em></h2>
+        <p class="lede">
+          A teacher is an instructional professional. A parent knows things about
+          their child that no system will ever have. These are not the same job and
+          ESA does not treat them as one. What they share is the moment of looking at
+          something a child produced and not being sure what it means or what to do.
+        </p>
+        <p class="lede">
+          <strong>We are starting with teachers</strong>, because that is where our
+          research and testing currently live. The same problem exists at home, and
+          the parent side is a direction we are working toward rather than something
+          we have built and validated.
+        </p>
+
+        <div class="two-col">
+          <div class="aud">
+            <span class="stage stage--now">Where the work is now</span>
+            <h3>Teachers</h3>
+            <p class="role">Instructional decisions</p>
+            <p>Questions a teacher brings to a stack of work:</p>
+            <ul>
+              <li>What is this student work telling me?</li>
+              <li>Is there a misconception here, or a slip?</li>
+              <li>Is this one child or a pattern across the class?</li>
+              <li>What should I teach again, and what should I leave?</li>
+              <li>Does this assessment measure what I intended?</li>
+              <li>What is the smallest useful intervention?</li>
+              <li>What deserves my limited time?</li>
+            </ul>
+          </div>
+          <div class="aud">
+            <span class="stage">Where ESA is going</span>
+            <h3>Parents</h3>
+            <p class="role">Decisions at home</p>
+            <p>Different questions, the same shape:</p>
+            <ul>
+              <li>What does my child's work actually tell me?</li>
+              <li>Is this mistake important, or normal for this age?</li>
+              <li>Should I help, wait, practise, or ask the teacher?</li>
+              <li>How do I explain this without confusing them more?</li>
+              <li>What is one useful thing we could do at home?</li>
+              <li>What should I ask the teacher?</li>
+              <li>Am I solving this for my child instead of helping them understand it?</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="lede" style="margin-top:2rem">
+          The goal is not to turn parents into teachers. It is to help a parent
+          understand what they are seeing well enough to make one reasonable decision
+          about it.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ What we're building ═══════════════════════════════════════════ -->
+    <section class="section" id="building">
+      <div class="container">
+        <div class="section-tag">What we're building</div>
+        <h2>One kind of system, expressed through <em>four problems.</em></h2>
+        <p class="lede">
+          These are not four products. They are four places the same question shows
+          up, and they are at different stages of being figured out. We are saying
+          where each one actually stands rather than describing everything as if it
+          were finished.
+        </p>
+
+        <div class="build">
+          <div class="build-item">
+            <h3>Read the evidence</h3>
+            <p>
+              Help an adult understand what a piece of student work, an assignment, or
+              another piece of educational evidence may actually be showing — including
+              where the evidence is too thin to say.
+            </p>
+            <p class="build-state">
+              <b>Current direction</b>
+              <em>Read the Work</em> — an area we are developing to help teachers make
+              sense of student work, identify what may be understood or misunderstood,
+              and decide what is worth doing next. In design, not available.
+            </p>
+          </div>
+
+          <div class="build-item">
+            <h3>Improve what already exists</h3>
+            <p>
+              Help a teacher change only the parts of an assignment that need changing,
+              while protecting the learning the assignment was built to produce. Most
+              of a good assignment should survive being improved.
+            </p>
+            <p class="build-state">
+              <b>Current work</b>
+              <em>Assignment Studio</em> — an internal build governed by a transformation
+              contract that records what changed, what was protected, and why. Not open,
+              and held back deliberately: an early version changed assignments that were
+              already doing their job.
+            </p>
+          </div>
+
+          <div class="build-item">
+            <h3>Check whether the evidence can be trusted</h3>
+            <p>
+              Ask whether a task actually reveals the learning it was meant to reveal.
+              This has always mattered. It matters more now that a model can perform
+              parts of the work a task was using as its evidence.
+            </p>
+            <p class="build-state">
+              <b>Current work</b>
+              <em>Assessment Review</em> — a teacher brings an assessment she already
+              gives, says what she is trying to find out and how students take it, and
+              gets back what the results will and will not support. Running as a small
+              invited pilot; not open to the public.
+            </p>
+          </div>
+
+          <div class="build-item">
+            <h3>Decide what comes next</h3>
+            <p>
+              Move from an interpretation to the smallest action that would actually
+              help — or to the conclusion that no action is warranted. This is the part
+              the other three are really for, and the system all of them are working
+              toward.
+            </p>
+            <p class="build-state">
+              <b>The longer project</b>
+              <em>A shared decision layer</em> — one way of reasoning about evidence,
+              materiality and cost, sitting underneath every teacher- and parent-facing
+              tool rather than being rebuilt inside each one.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ The principle ═════════════════════════════════════════════════ -->
+    <section class="section section--deep principle" id="principle">
+      <div class="container">
+        <div class="section-tag">Our principle</div>
+        <h2>AI can help with the evidence. <em>The adult makes the decision.</em></h2>
+        <p class="lede">
+          We use AI because it is genuinely good at some of this: noticing what is and
+          is not there, comparing one thing against another, holding a lot of detail at
+          once, surfacing a possibility a tired person would miss, and taking repetitive
+          work off a desk. That is real help and we are not shy about using it.
+        </p>
+        <p class="lede">
+          What it cannot do is know a child. It has seen one artifact. You have seen
+          the child for a year, or their whole life. So the system's job is to make its
+          reasoning and its uncertainty visible enough for you to judge it — to say
+          <strong>this may suggest</strong> where the evidence is thin, rather than
+          <strong>this student has</strong>.
+        </p>
+
+        <div class="exchange">
+          <div>
+            <h4>The system can</h4>
+            <ul>
+              <li>Notice what is present and what is missing</li>
+              <li>Compare, and surface a pattern</li>
+              <li>Explain its reading, and show what it rests on</li>
+              <li>Ask a question it cannot answer alone</li>
+              <li>Propose a next step, with its cost attached</li>
+            </ul>
+          </div>
+          <div class="exchange--adult">
+            <h4>You do</h4>
+            <ul>
+              <li>Add the context it does not have</li>
+              <li>Confirm, correct, or reject the reading</li>
+              <li>Decide whether it matters here</li>
+              <li>Decide what happens next</li>
+              <li>Decide that nothing should</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Part of The Sovereign Academy ═════════════════════════════════ -->
+    <section class="section" id="academies">
+      <div class="container">
+        <div class="section-tag">Part of The Sovereign Academy</div>
+        <h2>One of the <em>three Sovereign Academies.</em></h2>
+        <p class="lede">
+          The Sovereign Academy builds education for decisions people actually have to
+          make. Each academy takes a different domain; the method underneath is the same.
+        </p>
+
+        <div class="academies">
+          <a class="ac-card bsa" href="https://bitcoinsovereign.academy">
+            <span class="ac-name">Bitcoin Sovereign Academy</span>
+            <span class="ac-domain">bitcoinsovereign.academy</span>
+            <span class="ac-desc">Understanding, owning, and protecting Bitcoin — custody, recovery, inheritance, and the tradeoffs of holding your own keys.</span>
+            <span class="ac-go">Explore BSA &rarr;</span>
+          </a>
+          <a class="ac-card fsa" href="https://financiallysovereign.academy">
+            <span class="ac-name">Financially Sovereign Academy</span>
+            <span class="ac-domain">financiallysovereign.academy</span>
+            <span class="ac-desc">Practical financial education for everyday life, plus programs for advisors, employers, schools, and community organizations.</span>
+            <span class="ac-go">Explore FSA &rarr;</span>
+          </a>
+          <div class="ac-card esa" aria-current="page">
+            <span class="ac-name">Education Sovereign Academy</span>
+            <span class="ac-domain">thesovereign.academy/esa</span>
+            <span class="ac-desc">Tools and research that help teachers and parents understand educational evidence and decide what is worth doing next.</span>
+            <span class="ac-here">You are here</span>
+          </div>
+        </div>
+
+        <div class="cta-group">
+          <a href="/" class="btn btn-primary">The Sovereign Academy</a>
+          <a href="mailto:dalia@thesovereign.academy?subject=Education%20Sovereign%20Academy" class="btn btn-secondary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">
+            The Sovereign Academy
+            <span>thesovereign.academy</span>
+          </div>
+          <p class="footer-desc">
+            Education, tools, and practical resources around personal sovereignty.
+            Built and run by Dalia Platt.
+          </p>
+        </div>
+        <nav class="footer-col" aria-label="Academies">
+          <h5>Academies</h5>
+          <ul>
+            <li><a href="https://financiallysovereign.academy">Financially Sovereign Academy</a></li>
+            <li><a href="https://bitcoinsovereign.academy">Bitcoin Sovereign Academy</a></li>
+            <li><a href="/esa/">Education Sovereign Academy</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="The Academy">
+          <h5>The Academy</h5>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/institutional/">For organizations</a></li>
+            <li><a href="https://meetings.hubspot.com/dalia-platt" target="_blank" rel="noopener noreferrer">Book a conversation</a></li>
+            <li><a href="mailto:dalia@thesovereign.academy">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-note">
+        The Sovereign Academy is not affiliated with the separately operated organization named "Sovereign Academy."
+      </p>
+      <p class="footer-note">
+        &copy; 2026 The Sovereign Academy LLC &middot; Educational content only &middot; Not individualized financial, investment, legal, or tax advice &middot;
+        <a href="https://thesovereign.academy/legal/disclaimer/">Disclaimer &amp; Limitations</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+
+    // Mobile menu
+    const burger = document.getElementById('navBurger');
+    const nav = document.getElementById('primaryNav');
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+  </script>
+</body>
+</html>
