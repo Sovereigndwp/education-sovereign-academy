@@ -65,3 +65,25 @@ down before the run. An experimental or pilot result never becomes a production 
 Before claiming something is shipped, verify the deployed backend and the live result — a local
 or unpushed branch is not production, and a front end pointing at a stale deployed function is
 not the code in this repository.
+
+## Publishing
+
+Nothing public ships without passing the **ESA publication gate**:
+
+```
+node publication-gate/check.mjs            # all surfaces
+node publication-gate/check.mjs <surface>  # one
+```
+
+The script proves identity wiring, navigation, routing, secrets and assets. It cannot prove a
+page looks right, so it does not try — `publication-gate/ESA-PUBLICATION-GATE.md` carries the
+visual review that has to be done by a person, on the deployed URL, before the word "published"
+is used. A green script is not a pass.
+
+New public surface? Add it to `SURFACES` in `check.mjs`. Anything reachable and not declared is
+reported as an orphan, because Vercel serves this whole repository — an unlinked page is still a
+public page.
+
+ESA identity is two lines, not a stylesheet rewrite: `data-platform="esa"` on `<html>`, and
+`/css/esa-platform.css` after `/css/tsa-brand.css`. Omit either and the page silently renders in
+TSA silver with nothing appearing to be broken.
