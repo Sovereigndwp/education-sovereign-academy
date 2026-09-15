@@ -4,3 +4,7 @@ node_modules/
 .vercel/
 .env
 .env.*
+
+# Migrated source folder — kept on disk for reference, never part of the repo.
+# Added 2026-09-15 after an unscoped `git add -A` swept it in once (fixed by 93f47c3).
+Education/
