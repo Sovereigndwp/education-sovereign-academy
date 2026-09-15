@@ -1,0 +1,68 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# What ESA DEPLOYS is a subset of what ESA KEEPS.
+#
+# Vercel serves this repository as a static site, so without this file every
+# committed .html becomes a public page the moment it is pushed. That is how
+# nine research documents ended up publicly readable and indexable: nobody
+# published them, the host did.
+#
+# This file is the serving boundary. Everything listed here STAYS in the
+# repository and in git history — it is simply not uploaded to the deployment,
+# so it has no URL. Nothing is deleted and nothing moves, so no reference or
+# history changes.
+#
+# Adding a file here is the correct way to keep research, prototypes, source
+# material and tooling in ESA without publishing it. Removing a file from here
+# is a publication decision and goes through publication-gate/.
+#
+# Verify after any deploy: the paths below must return 404.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Research, prototypes and source material ────────────────────────────────
+# Institutional and product research. Kept deliberately; not ESA publications.
+research/
+
+# ── Migrated source folder (also gitignored, listed for intent) ─────────────
+Education/
+
+# ── ESA pilot admin — owner ruling 2026-09-15 (Option A) ────────────────────
+# The admin UI is a client shell: the key is typed each visit, held in memory, and
+# verified server-side against ESA_ADMIN_KEY by the esa-review function. No pilot
+# data was ever exposed without the key — what was public was the surface itself.
+# Excluding it removes that surface. The source stays tracked here; administration
+# is local-only (serve the repo and open http://localhost:PORT/esa/admin.html —
+# the function's CORS is `*`).
+#
+# This does NOT remove the admin endpoint: anyone can POST {action:"admin", key}
+# to the function regardless. ESA_ADMIN_KEY is and remains the real security
+# boundary. See publication-gate/HARDENING-BACKLOG.md.
+esa/admin.html
+esa/admin.js
+
+# ── Tooling ─────────────────────────────────────────────────────────────────
+publication-gate/
+
+# ── Product source that is not the product ──────────────────────────────────
+# Edge-function source, the evaluation harness, gold fixtures, migrations and
+# the deploy/ops scripts. The product is the page and its client, not these.
+assignment-studio/functions/
+assignment-studio/harness/
+assignment-studio/gold/
+assignment-studio/sql/
+assignment-studio/deploy.mjs
+assignment-studio/deploy-esa.mjs
+assignment-studio/migrate-to-esa-project.mjs
+assignment-studio/esa-anthropic-key.mjs
+assignment-studio/esa-backend-smoke.mjs
+
+# Pilot test scaffolding — not part of the invited pilot surface.
+esa/review/dom-smoke.mjs
+esa/review/fixtures/
+esa/review/README.md
+esa/review/PILOT-PRE-REGISTRATION.md
+
+# ── Repository documentation ────────────────────────────────────────────────
+CLAUDE.md
+README.md
+assignment-studio/README.md
+css/README.md
