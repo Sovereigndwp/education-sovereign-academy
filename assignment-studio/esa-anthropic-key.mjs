@@ -2,7 +2,8 @@
 // Diagnose and repair the ANTHROPIC_API_KEY used by the Assignment Studio / ESA edge functions.
 //
 //   SUPABASE_ACCESS_TOKEN=sbp_... node assignment-studio/esa-anthropic-key.mjs            diagnose only
-//   SUPABASE_ACCESS_TOKEN=sbp_... node assignment-studio/esa-anthropic-key.mjs --set      diagnose, then set a new key
+//   SUPABASE_ACCESS_TOKEN=sbp_... node assignment-studio/esa-anthropic-key.mjs --set-from-local   set from .env.local (preferred)
+//   SUPABASE_ACCESS_TOKEN=sbp_... node assignment-studio/esa-anthropic-key.mjs --set              set from a hidden prompt
 //
 // --set prompts for the key on stdin with echo DISABLED. The value therefore never reaches your
 // shell history, never appears on a command line, never lands in a file, and is never printed.
@@ -20,6 +21,7 @@ const ESA = process.env.ESA_PROJECT_REF || "svrbfpjoufhhxdshwlvt";
 const BSA = process.env.BSA_PROJECT_REF || "rdqwoqdvqpedlsbaghtr";
 const TOKEN = process.env.SUPABASE_ACCESS_TOKEN;
 const DO_SET = process.argv.includes("--set");
+const SET_FROM_LOCAL = process.argv.includes("--set-from-local");
 
 if (!TOKEN) { console.error("SUPABASE_ACCESS_TOKEN is not set."); process.exit(2); }
 
@@ -90,11 +92,32 @@ console.log(`\n  migration fidelity: ${same ? "IDENTICAL — the copy is faithfu
 
 // A third candidate: the key checked into the BSA repo's gitignored .env.local, if any.
 const envPath = join(homedir(), "projects", "bitcoin-sovereign-academy", ".env.local");
-let envKey = null;
-if (existsSync(envPath)) {
-  const m = readFileSync(envPath, "utf8").match(/^\s*ANTHROPIC_API_KEY\s*=\s*["']?([^"'\s]+)/m);
-  if (m) { envKey = m[1]; console.log(`  local .env.local              ${fp(envKey)}  ${shape(envKey).note}`); }
+
+/**
+ * Read one variable out of a .env file without mangling the value.
+ *
+ * Strips ONLY the env-file representation: an optional `export `, whitespace around the `=`,
+ * a matched pair of surrounding quotes, and trailing whitespace. For an unquoted value it also
+ * drops a trailing ` #` comment, which cannot occur inside an Anthropic key. The credential
+ * itself is never altered - no case change, no unescaping, no character substitution.
+ */
+function readEnvVar(file, name) {
+  if (!existsSync(file)) return null;
+  for (const raw of readFileSync(file, "utf8").split(/\r?\n/)) {
+    const line = raw.replace(/^\s*export\s+/, "");
+    const eq = line.indexOf("=");
+    if (eq < 0 || line.slice(0, eq).trim() !== name) continue;
+    let v = line.slice(eq + 1).trim();
+    const q = v[0];
+    if ((q === '"' || q === "'") && v.length > 1 && v[v.length - 1] === q) v = v.slice(1, -1);
+    else v = v.split(/\s+#/)[0].trim();
+    return v;
+  }
+  return null;
 }
+
+const envKey = readEnvVar(envPath, "ANTHROPIC_API_KEY");
+if (envKey) console.log(`  local .env.local              ${fp(envKey)}  ${shape(envKey).note}`);
 
 console.log("\nlive probe (4 max_tokens, one call per DISTINCT key):");
 const probed = new Map();   // key value -> { label, result }
@@ -121,6 +144,57 @@ if (same) {
   console.log("  invalid, BSA's AI generation is equally broken right now. BSA has NOT been modified.");
 } else {
   console.log("  BSA holds a different key; its status is shown in the probe above. BSA has NOT been modified.");
+}
+
+/* ── --set-from-local: take the already-validated key straight from .env.local ──
+ *
+ * The interactive paste path produced a 111-character value where the file holds 108, so the
+ * terminal added three characters somewhere between the clipboard and the process. Reading the
+ * file removes that entire class of failure: no clipboard, no terminal, no raw mode, no retyping.
+ */
+if (SET_FROM_LOCAL) {
+  console.log("\n--set-from-local");
+  if (!envKey) { console.error(`  FAIL  no ANTHROPIC_API_KEY found in ${envPath}`); process.exit(1); }
+
+  const sh = shape(envKey);
+  console.log(`  parsed from ${envPath}`);
+  console.log(`         ${fp(envKey)}  ${sh.note}`);
+
+  const EXPECT_LEN = 108, EXPECT_SHA = "e1afa2901f6cdab7";
+  const lenOK = sh.len === EXPECT_LEN, shaOK = sha(envKey) === EXPECT_SHA, formOK = sh.skant && !sh.digest;
+  console.log(`  ${lenOK  ? "PASS" : "FAIL"}  length is ${EXPECT_LEN}${lenOK ? "" : ` (got ${sh.len})`}`);
+  console.log(`  ${shaOK  ? "PASS" : "FAIL"}  sha256 prefix is ${EXPECT_SHA}${shaOK ? "" : ` (got ${sha(envKey)})`}`);
+  console.log(`  ${formOK ? "PASS" : "FAIL"}  sk-ant- shape, not a digest`);
+  if (!(lenOK && shaOK && formOK)) {
+    console.error("\n  REFUSING to write: this is not the candidate that was validated. Nothing changed.");
+    process.exit(1);
+  }
+
+  console.log("\n  re-validating against the live API before writing…");
+  const v = await probe(envKey);
+  console.log(`  ${v.kind}${v.model ? `  [model ${v.model}]` : ""}${v.msg ? `  — ${v.msg}` : ""}`);
+  if (v.status !== 200) {
+    console.error("  REFUSING to write: the key did not complete a minimal request. Nothing changed.");
+    process.exit(1);
+  }
+
+  await api(`/v1/projects/${ESA}/secrets`, { method: "POST", body: JSON.stringify([{ name: "ANTHROPIC_API_KEY", value: envKey }]) });
+
+  // Verify WITHOUT reading the secret back: GET /secrets returns a digest, so compare that
+  // digest to sha256(local key). Matching proves the stored bytes are the bytes we sent.
+  const digest = (await api(`/v1/projects/${ESA}/secrets`)).find((x) => x.name === "ANTHROPIC_API_KEY")?.value ?? "";
+  const expected = createHash("sha256").update(envKey, "utf8").digest("hex");
+  const match = digest.toLowerCase() === expected.toLowerCase();
+  console.log(`\n  stored on ${ESA}`);
+  console.log(`  ${match ? "PASS" : "FAIL"}  Supabase digest === sha256(local key)   digest ${digest.slice(0, 16)}…  expected ${expected.slice(0, 16)}…`);
+  if (!match) {
+    console.log("  (a mismatch here can also mean Supabase digests differently than plain sha256 —");
+    console.log("   check the length and prefix above before assuming the write was wrong)");
+  }
+  console.log(`\n  ${match ? "PASS" : "CHECK"}  ANTHROPIC_API_KEY set on ESA — len ${sh.len}, sha256 ${sha(envKey)}`);
+  console.log("  BSA was not modified.");
+  console.log("\nNext:  node assignment-studio/esa-backend-smoke.mjs --no-set-key");
+  process.exit(match ? 0 : 1);
 }
 
 if (!DO_SET) {
