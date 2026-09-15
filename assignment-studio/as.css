@@ -17,6 +17,18 @@ body { font-size: 17px; }
 .ast-header__right a { color: var(--tsa-muted); }
 .ast-header__right a:hover { color: var(--tsa-platinum); }
 
+/* ── route back up to ESA ────────────────────────────────────────────────── */
+/* Every ESA product surface must offer a way back to the academy that owns it.
+   Long label where there is room, short one on a phone. */
+.ast-header__right { display: flex; align-items: center; gap: 1rem; }
+.ast-up { white-space: nowrap; }
+.ast-up__short { display: none; }
+@media (max-width: 620px) {
+  .ast-up__long  { display: none; }
+  .ast-up__short { display: inline; }
+  .ast-header__right { gap: 0.75rem; }
+}
+
 /* ── layout ──────────────────────────────────────────────────────────────── */
 .ast-main { max-width: var(--ast-max); margin: 0 auto; padding: var(--space-12) 1.6rem var(--space-16); }
 .ast-main--wide { max-width: var(--width-default); }

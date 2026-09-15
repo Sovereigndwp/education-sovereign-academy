@@ -5,7 +5,11 @@ foundation, taken from `Sovereigndwp/sovereign-academy-hub` at `css/` on 2026-09
 
 - `tsa-brand.css` — the brand layer ESA pages load; it `@import`s the other two
 - `tsa-design-tokens.css`
-- `tsa-platform-variants.css` — includes `[data-platform="esa"]`
+- `tsa-platform-variants.css` — defines `[data-platform="tsa"|"bsa"|"fsa"]`. It does **not**
+  define `[data-platform="esa"]`; ESA's accent swap lives in `css/esa-platform.css`,
+  which is ESA-owned and not part of the sync. (Corrected 2026-09-15: this line
+  previously claimed the ESA variant was included, which is why Assignment Studio set
+  `data-platform="esa"`-style expectations and still rendered in TSA silver.)
 
 **The hub remains the source of truth.** This copy exists so that ESA renders correctly from its
 own deployment without the hub having to be online. That independence is the point: a teacher

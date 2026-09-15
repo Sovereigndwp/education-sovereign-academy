@@ -1,0 +1,53 @@
+/* ============================================================================
+   esa-platform.css  —  the ESA accent swap.
+
+   WHY THIS FILE EXISTS
+   --------------------
+   `tsa-platform-variants.css` binds the raw child-brand stops to the generic
+   accent slots for BSA and FSA:
+
+       [data-platform="bsa"] { --brand: var(--bsa-orange); ... }
+       [data-platform="fsa"] { --brand: var(--fsa-emerald); ... }
+
+   It has never had the equivalent block for ESA, even though the raw --esa-*
+   stops are defined alongside --bsa-* and --fsa-*. The consequence was silent
+   and expensive: an ESA page that set data-platform="esa" and trusted the
+   shared foundation still rendered in TSA silver, because nothing bound the
+   blue to anything. Every ESA surface that did look right — the homepage, the
+   Assessment Review pilot — got there by hand-rolling its own copy of this
+   block. Assignment Studio did not, so it shipped looking like TSA.
+
+   This file is that missing block, written once. It lives in ESA's own CSS
+   rather than in the three vendored files, per `css/README.md`: the vendored
+   foundation is re-synced from the hub and must not be forked. When the hub
+   adds an ESA variant upstream, delete this file and re-sync.
+
+   USAGE — two lines on any ESA page:
+       <html lang="en" data-platform="esa">
+       <link rel="stylesheet" href="/css/esa-platform.css">   (after tsa-brand.css)
+
+   Only the ACCENT swaps. Neutral base, type, spacing and radii stay shared —
+   ESA is a child of TSA, not a separate design system.
+   ========================================================================== */
+
+[data-platform="esa"] {
+  /* The shared accent contract — same shape as the BSA and FSA blocks. */
+  --brand:        var(--esa-blue);
+  --accent:       var(--esa-sky);
+  --brand-fade:   var(--esa-fade);
+  --brand-fade-h: var(--esa-fade-h);
+  --brand-solid:  var(--esa-solid);
+
+  /* tsa-brand.css and as.css reach for the parent's --tsa-* accent names
+     directly — the primary button's gradient border, the ◆ section tag, list
+     bullets, focus rings, the italic word in a display heading. Re-point those
+     at ESA too, so no ESA page ever has to hard-code a hex to stay on brand.
+     The neutrals (--tsa-bg, --tsa-surface, --tsa-ink, --tsa-border) are
+     deliberately NOT touched: they are shared, and the family resemblance to
+     TSA is the point. */
+  --tsa-silver:   var(--esa-solid);   /* accent: rules, key lines, hover     */
+  --tsa-platinum: var(--esa-sky);     /* bright accent emphasis              */
+  --tsa-pewter:   #6B7FA8;            /* muted steel, blue-shifted           */
+  --tsa-fade:     var(--esa-fade);    /* the signature fade                  */
+  --tsa-fade-h:   var(--esa-fade-h);
+}
