@@ -53,11 +53,46 @@ async function api(path, init = {}) {
   return res;
 }
 
+/**
+ * Read the deployed bundle back.
+ *
+ * GET /functions/{slug}/body used to answer multipart/form-data, so this called res.formData().
+ * It now answers application/json shaped { ..., files: [{ name, content }] }, and undici throws
+ *   TypeError: Content-Type was not one of "multipart/form-data" or "application/x-www-form-urlencoded"
+ * when .formData() meets any other type. That is a checker bug, not a deployment failure: the
+ * deploy had already succeeded by the time this ran.
+ *
+ * Branch on what the server actually sent, and refuse to report success on anything unrecognised
+ * or empty — a verifier that cannot read the bundle must fail loudly, never quietly pass.
+ */
 async function deployed() {
-  const res = await api(`/v1/projects/${PROJECT}/functions/${SLUG}/body`);
-  const form = await res.formData();
+  const res = await api(`/v1/projects/${PROJECT}/functions/${SLUG}/body`, {
+    headers: { Accept: "application/json" },
+  });
+  const ct = (res.headers.get("content-type") || "").toLowerCase();
+  console.log(`  /body → ${res.status}, content-type: ${ct || "(none)"}`);
+
   const out = [];
-  for (const [, v] of form.entries()) if (typeof v !== "string") out.push({ name: v.name, content: await v.text() });
+  if (ct.includes("multipart/form-data") || ct.includes("application/x-www-form-urlencoded")) {
+    const form = await res.formData();
+    for (const [, v] of form.entries()) if (typeof v !== "string") out.push({ name: v.name, content: await v.text() });
+  } else if (ct.includes("application/json")) {
+    const body = await res.json();
+    const files = Array.isArray(body) ? body : body?.files;
+    if (!Array.isArray(files)) {
+      throw new Error(`/body JSON carried no files array (keys: ${Object.keys(body ?? {}).join(", ") || "none"})`);
+    }
+    for (const f of files) {
+      if (typeof f?.name !== "string" || typeof f?.content !== "string") {
+        throw new Error("/body JSON contained a file entry without a string name and content");
+      }
+      out.push({ name: f.name, content: f.content });
+    }
+  } else {
+    throw new Error(`/body returned content-type ${ct || "(none)"}, which this script cannot parse — not verifying.`);
+  }
+
+  if (!out.length) throw new Error("/body returned zero files — refusing to report a match against nothing.");
   return out.sort((a, b) => a.name.localeCompare(b.name));
 }
 
@@ -73,16 +108,32 @@ async function deploy(files) {
   return await res.json();
 }
 
+/**
+ * Compare deployed bytes against the repo.
+ *
+ * The bundle uploads every _shared/*.ts, but the deployed eszip only contains the modules
+ * reachable from the entrypoint. as-studio imports contract/engine/lib (and audits through them),
+ * so esa-prompts.ts, esa.ts and safe.ts are legitimately absent from its deployed set while
+ * esa-review carries all eight. Treating that as a difference produced a false "SOURCE DIFFERS".
+ *
+ * The rule that matters is unchanged and no weaker: EVERY file that is actually deployed must be
+ * byte-identical to the repo, and a deployed file with no local counterpart is a hard failure.
+ * A local file outside the deployed module graph is not executing, so it is reported, not failed.
+ */
 function diff(local, remote) {
-  const names = [...new Set([...local, ...remote].map((f) => f.name))].sort();
   const rows = [];
   let clean = true;
-  for (const n of names) {
-    const l = local.find((f) => f.name === n), r = remote.find((f) => f.name === n);
-    const ls = l ? sha(l.content) : "—", rs = r ? sha(r.content) : "—";
-    const ok = ls === rs;
+  for (const r of remote) {
+    const l = local.find((f) => f.name === r.name);
+    const rs = sha(r.content), ls = l ? sha(l.content) : "—";
+    const ok = Boolean(l) && ls === rs;
     if (!ok) clean = false;
-    rows.push(`  ${ok ? "=" : "≠"} ${n.padEnd(14)} repo ${ls}  live ${rs}`);
+    rows.push(`  ${ok ? "=" : "≠"} ${r.name.padEnd(16)} repo ${ls}  live ${rs}` +
+      (l ? "" : "   NOT IN REPO — deployed code with no source"));
+  }
+  for (const l of local) {
+    if (remote.find((f) => f.name === l.name)) continue;
+    rows.push(`  · ${l.name.padEnd(16)} repo ${sha(l.content)}  live —   uploaded, outside this function's module graph`);
   }
   return { rows, clean };
 }
