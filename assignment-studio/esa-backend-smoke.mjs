@@ -116,20 +116,57 @@ console.log("\n4 · as-studio endpoint");
   ok("answer is the function's own JSON, not an edge error", txt.trim().startsWith("{"), txt.slice(0, 80));
 }
 
-/* ── 5 · model access with the migrated ANTHROPIC_API_KEY ───────────────── */
-console.log("\n5 · model access (migrated ANTHROPIC_API_KEY)");
+/* ── 5 · the DEPLOYED function can use its own ANTHROPIC_API_KEY ─────────── */
+//
+// The previous version of this check took the `value` from GET /v1/projects/{ref}/secrets and
+// sent it to Anthropic as an x-api-key. That value is a SHA-256 DIGEST, not the secret, so the
+// check returned 401 no matter what was actually stored - including after a verified good write.
+// A secrets-listing digest is never a credential and must never be used as one.
+//
+// What we actually care about is whether the DEPLOYED edge function can reach the model with the
+// secret it holds. as-studio's `audit_text` action is the smallest safe route to that:
+//   auditText(assignmentId, mode, text) -> ctxFor() [SELECT only] + runAudits() [audits.ts makes
+//   zero database calls]. It returns verdicts and writes nothing. The PATCH calls in engine.ts
+//   all live in the transform path, which this does not enter, and its own comment says
+//   "No repair cycle".
+// So this exercises the real model path with no teacher review, no new row, and no invite used.
+console.log("\n5 · deployed function -> Anthropic (via as-studio audit_text, read-only)");
 {
-  const s = secrets.find((x) => x.name === "ANTHROPIC_API_KEY");
-  if (!s) ok("ANTHROPIC_API_KEY readable", false);
-  else {
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": s.value, "anthropic-version": "2023-06-01" },
-      body: JSON.stringify({ model: "claude-3-5-haiku-20241022", max_tokens: 4, messages: [{ role: "user", content: "hi" }] }),
-    });
-    const j = await res.json().catch(() => ({}));
-    ok("Anthropic accepts the migrated key", res.status === 200, `status ${res.status}${res.status !== 200 ? " " + JSON.stringify(j).slice(0, 160) : ""}`);
-    if (res.status === 200) console.log(`  model replied (${j?.usage?.output_tokens ?? "?"} output tokens) — key is live`);
+  ok("secret present by NAME only (never by value)", names.includes("ANTHROPIC_API_KEY"));
+
+  const before = (await q("select (select count(*) from public.as_assignments) a, (select count(*) from public.as_versions) v"))[0];
+  const row = (await q("select access_token from public.as_assignments where contract_confirmed is not null and coalesce(length(assignment_text),0) > 0 order by created_at asc limit 1"))[0];
+
+  if (!row) {
+    ok("a confirmed assignment exists to audit against", false, "none with a confirmed contract and inline text");
+  } else {
+    let r = null;
+    for (let i = 0; i < 3; i++) {
+      const res = await fetch(`${FN}/as-studio`, {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ action: "audit_text", t: row.access_token, mode: "support",
+          text: "Explain in two sentences why the answer changes when the order of the two steps is swapped." }),
+      });
+      let j = null; try { j = JSON.parse(await res.text()); } catch {}
+      r = { status: res.status, body: j };
+      if (res.status === 200) break;
+      if (i === 0) console.log("  retrying — a newly set secret can take a moment to reach warm instances…");
+      await new Promise((t) => setTimeout(t, 8000));
+    }
+
+    const pass = ok("deployed as-studio completed a model call", r.status === 200,
+      r.status === 200 ? "" : `status ${r.status} ${JSON.stringify(r.body ?? {}).slice(0, 180)}`);
+    if (pass) {
+      const v = r.body?.verdicts ?? {};
+      ok("audit returned all three verdicts", Boolean(v.preservation && v.usefulness && v.adversarial),
+        `preservation=${v.preservation} usefulness=${v.usefulness} adversarial=${v.adversarial}`);
+    } else if (/api[-_ ]?key|401|authentication/i.test(JSON.stringify(r.body ?? {}))) {
+      console.log("  The function reached Anthropic and was rejected — the stored secret is wrong.");
+    }
+
+    const after = (await q("select (select count(*) from public.as_assignments) a, (select count(*) from public.as_versions) v"))[0];
+    ok("no row was created or changed by the audit", before.a === after.a && before.v === after.v,
+      `as_assignments ${before.a}->${after.a}, as_versions ${before.v}->${after.v}`);
   }
 }
 
