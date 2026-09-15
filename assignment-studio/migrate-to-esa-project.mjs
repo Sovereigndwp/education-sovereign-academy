@@ -152,24 +152,29 @@ for (const o of objects) {
   console.log(`  ${ok ? "OK  " : "FAIL"} ${o.bucket}/${o.name}  ${buf.length} bytes  sha256 ${digest.slice(0, 16)} ${ok ? "identical" : "MISMATCH"}`);
 }
 
-// ---- function secrets: copy from BSA to ESA without ever printing a value ----
-console.log("\nfunction secrets:");
+// ---- function secrets: report only. DO NOT COPY. ----
+//
+// A previous version of this script copied secrets from BSA to ESA with
+//   toSet.push({ name, value: s.value })
+// using the value from GET /v1/projects/{ref}/secrets. That endpoint does NOT return the secret.
+// It returns a DIGEST of it - the same thing `supabase secrets list` prints under DIGEST. Copying
+// that digest wrote a 64-character hex string into ESA's ANTHROPIC_API_KEY, which Anthropic then
+// rejected with 401, and the script's own "sha ..." line hashed the digest and reported it as
+// though it were the key. Proven 2026-09-15: the real key in .env.local is 108 chars with an
+// sk-ant- prefix and authenticates against GET /v1/models; the API-read values do not.
+//
+// Secrets are write-only through this API. There is no faithful programmatic copy. Set them
+// explicitly instead:
+//   node assignment-studio/esa-anthropic-key.mjs --set     (hidden prompt, validates before writing)
+//   or the dashboard: Edge Functions -> Secrets
+console.log("\nfunction secrets — NOT copied (this API cannot read secret values back):");
 const NEEDED = ["ANTHROPIC_API_KEY", "ESA_ADMIN_KEY"];
-const srcSecrets = await api(`/v1/projects/${SRC}/secrets`);
 const dstSecrets = await api(`/v1/projects/${DST}/secrets`);
 const have = new Set(dstSecrets.map((s) => s.name));
-const toSet = [];
 for (const name of NEEDED) {
-  const s = srcSecrets.find((x) => x.name === name);
-  if (!s) { console.log(`  ${name.padEnd(20)} NOT FOUND in ${SRC} — set it by hand in the dashboard`); continue; }
-  if (have.has(name)) { console.log(`  ${name.padEnd(20)} already set on ${DST} — left alone`); continue; }
-  toSet.push({ name, value: s.value });
-  console.log(`  ${name.padEnd(20)} will copy (len ${String(s.value.length).padStart(3)}, sha ${sha(s.value)})`);
+  console.log(`  ${name.padEnd(20)} ${have.has(name) ? "present on " + DST + " (value not verifiable from here)" : "MISSING on " + DST + " — set it explicitly before use"}`);
 }
-if (toSet.length && !DRY) {
-  await api(`/v1/projects/${DST}/secrets`, { method: "POST", body: JSON.stringify(toSet) });
-  console.log(`  set ${toSet.length} secret(s) on ${DST}.`);
-}
+console.log("  Set or replace with: node assignment-studio/esa-anthropic-key.mjs --set");
 
 console.log(`\n${DRY ? "Dry run complete — nothing was written." : "Migration complete."}`);
 console.log(`Next:

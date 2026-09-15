@@ -37,28 +37,53 @@ async function api(path, init = {}) {
 }
 const secretOf = async (ref, name) => (await api(`/v1/projects/${ref}/secrets`)).find((s) => s.name === name)?.value ?? null;
 
-/** One 4-token call. Distinguishes 401 invalid key from 400 credit balance from 200 working. */
+/** Does this string even look like an Anthropic key, or is it a digest the API handed back? */
+function shape(v) {
+  const digest = /^[0-9a-f]{64}$/.test(v);
+  return { len: v.length, digest, skant: /^sk-ant-/.test(v),
+    note: digest ? "64-char hex — this is a DIGEST, not a key" : /^sk-ant-/.test(v) ? "sk-ant- prefixed" : "unrecognised shape" };
+}
+
+/**
+ * Probe a credential without assuming any model id.
+ *
+ * GET /v1/models authenticates, needs no model name and costs nothing, so it separates a bad
+ * credential from a bad model id. Only then do we spend one token on a model the account can
+ * actually see. A hardcoded model is exactly how the first probe produced a misleading 404:
+ * claude-3-5-haiku-20241022 no longer exists on this account.
+ */
 async function probe(key) {
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
+  const m = await fetch("https://api.anthropic.com/v1/models?limit=60", {
+    headers: { "x-api-key": key, "anthropic-version": "2023-06-01" },
+  });
+  if (m.status !== 200) {
+    let j = {}; try { j = await m.json(); } catch {}
+    return { kind: m.status === 401 ? "INVALID CREDENTIAL (401)" : `models endpoint HTTP ${m.status}`,
+      status: m.status, model: null, msg: String(j?.error?.message ?? "").slice(0, 140) };
+  }
+  const ids = ((await m.json()).data || []).map((x) => x.id);
+  const pick = ids.find((i) => /haiku/i.test(i)) || ids[ids.length - 1];
+  if (!pick) return { kind: "AUTHENTICATED, but the account can see no models", status: 200, model: null, msg: "" };
+
+  const r = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
-    body: JSON.stringify({ model: "claude-3-5-haiku-20241022", max_tokens: 4, messages: [{ role: "user", content: "hi" }] }),
+    body: JSON.stringify({ model: pick, max_tokens: 1, messages: [{ role: "user", content: "hi" }] }),
   });
-  let j = {}; try { j = await res.json(); } catch {}
-  const msg = String(j?.error?.message ?? "").slice(0, 120);
-  const kind = res.status === 200 ? "WORKING"
-    : res.status === 401 ? "INVALID KEY (401)"
-    : /credit balance/i.test(msg) ? "VALID KEY, NO CREDIT (400)"
-    : `HTTP ${res.status}`;
-  return { status: res.status, kind, msg };
+  let j = {}; try { j = await r.json(); } catch {}
+  const msg = String(j?.error?.message ?? "").slice(0, 140);
+  const kind = r.status === 200 ? "VALID + SUFFICIENT CREDIT"
+    : /credit balance/i.test(msg) ? "VALID CREDENTIAL, INSUFFICIENT CREDIT"
+    : `AUTHENTICATED, request HTTP ${r.status}`;
+  return { kind, status: r.status, model: pick, msg, models: ids.length };
 }
 
 console.log("ANTHROPIC_API_KEY — diagnosis\n");
 
 const esaKey = await secretOf(ESA, "ANTHROPIC_API_KEY");
 const bsaKey = await secretOf(BSA, "ANTHROPIC_API_KEY");
-console.log(`  ESA  ${ESA}   ${fp(esaKey)}`);
-console.log(`  BSA  ${BSA}   ${fp(bsaKey)}`);
+console.log(`  ESA  ${ESA}   ${fp(esaKey)}${esaKey ? "  " + shape(esaKey).note : ""}`);
+console.log(`  BSA  ${BSA}   ${fp(bsaKey)}${bsaKey ? "  " + shape(bsaKey).note : ""}`);
 const same = Boolean(esaKey && bsaKey && esaKey === bsaKey);
 console.log(`\n  migration fidelity: ${same ? "IDENTICAL — the copy is faithful, so any fault is in the source credential itself"
   : esaKey && bsaKey ? "DIFFERENT — the two projects hold different keys" : "cannot compare (one is absent)"}`);
@@ -68,7 +93,7 @@ const envPath = join(homedir(), "projects", "bitcoin-sovereign-academy", ".env.l
 let envKey = null;
 if (existsSync(envPath)) {
   const m = readFileSync(envPath, "utf8").match(/^\s*ANTHROPIC_API_KEY\s*=\s*["']?([^"'\s]+)/m);
-  if (m) { envKey = m[1]; console.log(`  local .env.local              ${fp(envKey)}`); }
+  if (m) { envKey = m[1]; console.log(`  local .env.local              ${fp(envKey)}  ${shape(envKey).note}`); }
 }
 
 console.log("\nlive probe (4 max_tokens, one call per DISTINCT key):");
@@ -82,7 +107,7 @@ for (const [label, key] of [["ESA secret", esaKey], ["BSA secret", bsaKey], ["re
   }
   const result = await probe(key);
   probed.set(key, { label, result });
-  console.log(`  ${label.padEnd(18)} ${result.kind}${result.msg ? `  — ${result.msg}` : ""}`);
+  console.log(`  ${label.padEnd(18)} ${result.kind}${result.model ? `  [model ${result.model}]` : ""}${result.msg ? `  — ${result.msg}` : ""}`);
 }
 
 const workingEntry = [...probed.values()].find((e) => e.result.status === 200);

@@ -58,9 +58,11 @@ let adminKey = null;
 let secrets = await api(`/v1/projects/${REF}/secrets`);
 const had = secrets.find((s) => s.name === "ESA_ADMIN_KEY");
 if (had) {
+  // NOTE: had.value is a DIGEST, not the secret - GET /secrets never returns secret values.
+  // It cannot be used to exercise the admin gate. Only a value generated in this process can.
   console.log("  ESA_ADMIN_KEY already exists on this project — NOT overwriting.");
-  adminKey = had.value;
-  ok("secret exists", true, `len ${String(adminKey.length)}, sha ${sha(adminKey)}`);
+  ok("secret exists", true, "value not readable back from this API, so the accept-path is skipped");
+  adminKey = null;
 } else if (!SET_KEY) {
   ok("secret exists", false, "absent and --no-set-key was passed");
 } else {
@@ -140,7 +142,9 @@ console.log("\n6 · admin gate");
   ok("missing admin key rejected with 403", none.status === 403, `status ${none.status}`);
 
   if (!adminKey) {
-    ok("correct admin key accepted", false, "no key available to test with");
+    console.log("  SKIP  correct admin key accepted — the secret exists but this API cannot read it");
+    console.log("        back, and a digest is not a key. Re-run without --no-set-key against a");
+    console.log("        project where the key was generated in-process to exercise this path.");
   } else {
     // Function instances may take a moment to see a newly set secret.
     let good = null;
