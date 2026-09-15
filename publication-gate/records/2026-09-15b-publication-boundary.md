@@ -97,3 +97,49 @@ produced the Assignment Studio problem. Gate check **A8** now catches exactly th
 
 Warnings, none blocking: Review and admin have no TSA parent link (B5); admin has a thin
 title/description (D5).
+
+---
+
+## Addendum — owner ruling and commit, 2026-09-15
+
+**ESA admin: Option A ruled.** `esa/admin.html` and `esa/admin.js` excluded from the deployment
+via `.vercelignore`; source stays tracked (verified: both still in `git ls-files`). Administration
+is local-only. `ESA_ADMIN_KEY` untouched and remains the server-side security boundary. No second
+authentication system added. Constant-time comparison and admin rate limiting recorded in
+`HARDENING-BACKLOG.md` as H-1 and H-2, deferred by ruling.
+
+The gate now carries two manifests. `INTERNAL` asserts each deliberately-unpublished surface is
+both excluded from the deployment AND still present in the repository — losing either is a FAIL,
+one meaning it leaked, the other meaning preservation failed. C9 cleared.
+
+**Pre-push gate: 56 pass · 1 warn · 0 fail.** The warning is B5, Assessment Review has no TSA
+parent link — cosmetic, and its chrome is not being changed mid-pilot.
+
+**Commits on `main` (local):**
+
+| Hash | Subject | Files |
+|---|---|---|
+| `ccc5798` | ESA identity for Assignment Studio | 5 changed, +86/−14 |
+| `e408f85` | ESA homepage/Review navigation | 3 changed, +33/−6 |
+| `7af0539` | ESA publication gate and serving boundary | 6 added, +724 |
+
+`git diff --name-status e51d56a..7af0539` contains **no deletions**. research/ still holds its 9
+HTML documents; `Education/` untouched; admin source intact.
+
+**PUSH FAILED — no GitHub credential in this environment.**
+`fatal: could not read Username for 'https://github.com'`. No `credential.helper`, no `gh`.
+`origin/main` is still `e51d56a`; local `main` is `7af0539`. Nothing has reached production.
+
+**Therefore C8 remains UNVERIFIED and the production gate run has not happened.** Steps still
+outstanding, all of which require the push first: production gate run; confirm the nine research
+URLs and `/esa/admin.html` return 404; confirm the four public surfaces return 200 and render;
+re-confirm ESA-only Supabase routing on the deployed bundle; desktop and mobile visual checks.
+
+**Git lock note (diagnosed, not blindly cleared).** Mid-sequence git reported
+`Unable to create '.git/index.lock': File exists`. Diagnosis: no git process running; all three
+lock files 0 bytes, owned by the sandbox user, created seconds earlier by this session's own
+commands; `HEAD.lock` empty (a real in-flight update carries a SHA); `git fsck
+--connectivity-only` clean; HEAD consistent at the expected commit. Cause is the mount permitting
+file creation but not unlink, so git leaves its own locks behind. They were **moved aside**, not
+deleted, as `*.leftover-<ns>` beside each original, and only after confirming no git process was
+running. Those files and the earlier `index.lock.stale-*` can be removed in a real terminal.
